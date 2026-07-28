@@ -81,7 +81,7 @@ function Index() {
       </section>
 
 
-      <section className="shell rule-t py-16 md:py-24" aria-labelledby="mission-titel">
+      <section className="shell py-16 md:py-24" aria-labelledby="mission-titel">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="mission-titel" className="eyebrow md:col-span-3">
             Mission
@@ -97,14 +97,17 @@ function Index() {
               über Multimedia und Engineering bis zur Architektur – zu fördern und der
               Öffentlichkeit nahezubringen.
             </p>
-            <Link to="/verein" className="mt-8 inline-flex items-center gap-2 text-sm link-brand">
-              Über den Verein <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
+            <div className="mt-8">
+              <Link to="/verein" className="btn-solid">
+                Informiere Dich über den Verein
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="theme-neuland border-y border-line bg-card" aria-labelledby="neuland-titel">
+      <section className="theme-neuland band-muted" aria-labelledby="neuland-titel">
+
         <div className="shell py-16 md:py-24">
           <p className="eyebrow" style={{ color: "var(--brand-deep)" }}>
             Nachwuchswettbewerb
