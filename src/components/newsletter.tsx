@@ -10,7 +10,7 @@ export function Newsletter() {
 
   if (done) {
     return (
-      <p role="status" className="mt-6 border border-line bg-card p-4 text-sm">
+      <p role="status" className="mt-6 border border-footer-line bg-footer-input-bg p-4 text-sm text-footer-text">
         Danke! Bitte bestätigen Sie die Anmeldung über den Link in der E-Mail.
       </p>
     );
@@ -19,29 +19,29 @@ export function Newsletter() {
   return (
     <form onSubmit={onSubmit} className="mt-6 grid gap-3 sm:grid-cols-2">
       <div className="sm:col-span-1">
-        <label htmlFor="nl-vorname" className="eyebrow">Vorname</label>
+        <label htmlFor="nl-vorname" className="eyebrow text-footer-muted">Vorname</label>
         <input
           id="nl-vorname"
           name="vorname"
           autoComplete="given-name"
           required
           maxLength={60}
-          className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm placeholder:text-muted-foreground"
+          className="mt-1 w-full border border-footer-input-border bg-footer-input-bg px-3 py-2.5 text-sm text-footer-text placeholder:text-footer-muted"
         />
       </div>
       <div className="sm:col-span-1">
-        <label htmlFor="nl-nachname" className="eyebrow">Nachname</label>
+        <label htmlFor="nl-nachname" className="eyebrow text-footer-muted">Nachname</label>
         <input
           id="nl-nachname"
           name="nachname"
           autoComplete="family-name"
           required
           maxLength={60}
-          className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+          className="mt-1 w-full border border-footer-input-border bg-footer-input-bg px-3 py-2.5 text-sm text-footer-text"
         />
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor="nl-email" className="eyebrow">E-Mail</label>
+        <label htmlFor="nl-email" className="eyebrow text-footer-muted">E-Mail</label>
         <input
           id="nl-email"
           name="email"
@@ -49,15 +49,18 @@ export function Newsletter() {
           autoComplete="email"
           required
           maxLength={255}
-          className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+          className="mt-1 w-full border border-footer-input-border bg-footer-input-bg px-3 py-2.5 text-sm text-footer-text"
         />
       </div>
-      <label className="flex items-start gap-2 text-sm sm:col-span-2">
-        <input type="checkbox" name="neuland" className="mt-1 size-4 accent-[var(--brand)]" />
+      <label className="flex items-start gap-2 text-sm text-footer-text sm:col-span-2">
+        <input type="checkbox" name="neuland" className="mt-1 size-4 accent-brand" />
         <span>Zusätzlich Infos zum Nachwuchswettbewerb neuland erhalten</span>
       </label>
       <div className="sm:col-span-2">
-        <button type="submit" className="btn-solid w-full sm:w-auto">
+        <button
+          type="submit"
+          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] px-6 font-display text-[0.9375rem] font-medium bg-footer-text text-footer-bg hover:bg-brand hover:text-brand-foreground transition-colors w-full sm:w-auto"
+        >
           Anmelden
         </button>
       </div>
