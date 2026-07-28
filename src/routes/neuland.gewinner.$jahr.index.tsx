@@ -1,12 +1,13 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { jahrgaenge, kategorien, projekte } from "@/data/neuland";
+import { jahrgaenge, kategorien, projekte, type Projekt } from "@/data/neuland";
 import { ProjektCard } from "@/components/projekt-card";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/neuland/gewinner/$jahr/")({
   loader: ({ params }) => {
     if (!jahrgaenge.includes(params.jahr)) throw notFound();
-    return { jahr: params.jahr, liste: projekte.filter((p) => p.jahr === params.jahr) };
+    const liste: Projekt[] = projekte.filter((p) => p.jahr === params.jahr);
+    return { jahr: params.jahr, liste };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {

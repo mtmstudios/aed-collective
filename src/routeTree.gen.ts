@@ -27,6 +27,11 @@ import { Route as VereinBeiratRouteImport } from './routes/verein.beirat'
 import { Route as ProgrammSlugRouteImport } from './routes/programm.$slug'
 import { Route as NeulandWettbewerbRouteImport } from './routes/neuland.wettbewerb'
 import { Route as NeulandTeilnahmeRouteImport } from './routes/neuland.teilnahme'
+import { Route as NeulandPresseRouteImport } from './routes/neuland.presse'
+import { Route as NeulandJuryRouteImport } from './routes/neuland.jury'
+import { Route as NeulandGewinnerIndexRouteImport } from './routes/neuland.gewinner.index'
+import { Route as NeulandGewinnerJahrIndexRouteImport } from './routes/neuland.gewinner.$jahr.index'
+import { Route as NeulandGewinnerJahrSlugRouteImport } from './routes/neuland.gewinner.$jahr.$slug'
 
 const ServiceRoute = ServiceRouteImport.update({
   id: '/service',
@@ -118,6 +123,32 @@ const NeulandTeilnahmeRoute = NeulandTeilnahmeRouteImport.update({
   path: '/teilnahme',
   getParentRoute: () => NeulandRoute,
 } as any)
+const NeulandPresseRoute = NeulandPresseRouteImport.update({
+  id: '/presse',
+  path: '/presse',
+  getParentRoute: () => NeulandRoute,
+} as any)
+const NeulandJuryRoute = NeulandJuryRouteImport.update({
+  id: '/jury',
+  path: '/jury',
+  getParentRoute: () => NeulandRoute,
+} as any)
+const NeulandGewinnerIndexRoute = NeulandGewinnerIndexRouteImport.update({
+  id: '/gewinner/',
+  path: '/gewinner/',
+  getParentRoute: () => NeulandRoute,
+} as any)
+const NeulandGewinnerJahrIndexRoute =
+  NeulandGewinnerJahrIndexRouteImport.update({
+    id: '/gewinner/$jahr/',
+    path: '/gewinner/$jahr/',
+    getParentRoute: () => NeulandRoute,
+  } as any)
+const NeulandGewinnerJahrSlugRoute = NeulandGewinnerJahrSlugRouteImport.update({
+  id: '/gewinner/$jahr/$slug',
+  path: '/gewinner/$jahr/$slug',
+  getParentRoute: () => NeulandRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -129,6 +160,8 @@ export interface FileRoutesByFullPath {
   '/neuland': typeof NeulandRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/neuland/jury': typeof NeulandJuryRoute
+  '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
@@ -138,6 +171,9 @@ export interface FileRoutesByFullPath {
   '/neuland/': typeof NeulandIndexRoute
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
+  '/neuland/gewinner/': typeof NeulandGewinnerIndexRoute
+  '/neuland/gewinner/$jahr/$slug': typeof NeulandGewinnerJahrSlugRoute
+  '/neuland/gewinner/$jahr/': typeof NeulandGewinnerJahrIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -148,6 +184,8 @@ export interface FileRoutesByTo {
   '/mitglieder': typeof MitgliederRoute
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/neuland/jury': typeof NeulandJuryRoute
+  '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
@@ -157,6 +195,9 @@ export interface FileRoutesByTo {
   '/neuland': typeof NeulandIndexRoute
   '/programm': typeof ProgrammIndexRoute
   '/verein': typeof VereinIndexRoute
+  '/neuland/gewinner': typeof NeulandGewinnerIndexRoute
+  '/neuland/gewinner/$jahr/$slug': typeof NeulandGewinnerJahrSlugRoute
+  '/neuland/gewinner/$jahr': typeof NeulandGewinnerJahrIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -169,6 +210,8 @@ export interface FileRoutesById {
   '/neuland': typeof NeulandRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/neuland/jury': typeof NeulandJuryRoute
+  '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
@@ -178,6 +221,9 @@ export interface FileRoutesById {
   '/neuland/': typeof NeulandIndexRoute
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
+  '/neuland/gewinner/': typeof NeulandGewinnerIndexRoute
+  '/neuland/gewinner/$jahr/$slug': typeof NeulandGewinnerJahrSlugRoute
+  '/neuland/gewinner/$jahr/': typeof NeulandGewinnerJahrIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -191,6 +237,8 @@ export interface FileRouteTypes {
     | '/neuland'
     | '/referenten'
     | '/service'
+    | '/neuland/jury'
+    | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
     | '/programm/$slug'
@@ -200,6 +248,9 @@ export interface FileRouteTypes {
     | '/neuland/'
     | '/programm/'
     | '/verein/'
+    | '/neuland/gewinner/'
+    | '/neuland/gewinner/$jahr/$slug'
+    | '/neuland/gewinner/$jahr/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -210,6 +261,8 @@ export interface FileRouteTypes {
     | '/mitglieder'
     | '/referenten'
     | '/service'
+    | '/neuland/jury'
+    | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
     | '/programm/$slug'
@@ -219,6 +272,9 @@ export interface FileRouteTypes {
     | '/neuland'
     | '/programm'
     | '/verein'
+    | '/neuland/gewinner'
+    | '/neuland/gewinner/$jahr/$slug'
+    | '/neuland/gewinner/$jahr'
   id:
     | '__root__'
     | '/'
@@ -230,6 +286,8 @@ export interface FileRouteTypes {
     | '/neuland'
     | '/referenten'
     | '/service'
+    | '/neuland/jury'
+    | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
     | '/programm/$slug'
@@ -239,6 +297,9 @@ export interface FileRouteTypes {
     | '/neuland/'
     | '/programm/'
     | '/verein/'
+    | '/neuland/gewinner/'
+    | '/neuland/gewinner/$jahr/$slug'
+    | '/neuland/gewinner/$jahr/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -387,19 +448,64 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NeulandTeilnahmeRouteImport
       parentRoute: typeof NeulandRoute
     }
+    '/neuland/presse': {
+      id: '/neuland/presse'
+      path: '/presse'
+      fullPath: '/neuland/presse'
+      preLoaderRoute: typeof NeulandPresseRouteImport
+      parentRoute: typeof NeulandRoute
+    }
+    '/neuland/jury': {
+      id: '/neuland/jury'
+      path: '/jury'
+      fullPath: '/neuland/jury'
+      preLoaderRoute: typeof NeulandJuryRouteImport
+      parentRoute: typeof NeulandRoute
+    }
+    '/neuland/gewinner/': {
+      id: '/neuland/gewinner/'
+      path: '/gewinner'
+      fullPath: '/neuland/gewinner/'
+      preLoaderRoute: typeof NeulandGewinnerIndexRouteImport
+      parentRoute: typeof NeulandRoute
+    }
+    '/neuland/gewinner/$jahr/': {
+      id: '/neuland/gewinner/$jahr/'
+      path: '/gewinner/$jahr'
+      fullPath: '/neuland/gewinner/$jahr/'
+      preLoaderRoute: typeof NeulandGewinnerJahrIndexRouteImport
+      parentRoute: typeof NeulandRoute
+    }
+    '/neuland/gewinner/$jahr/$slug': {
+      id: '/neuland/gewinner/$jahr/$slug'
+      path: '/gewinner/$jahr/$slug'
+      fullPath: '/neuland/gewinner/$jahr/$slug'
+      preLoaderRoute: typeof NeulandGewinnerJahrSlugRouteImport
+      parentRoute: typeof NeulandRoute
+    }
   }
 }
 
 interface NeulandRouteChildren {
+  NeulandJuryRoute: typeof NeulandJuryRoute
+  NeulandPresseRoute: typeof NeulandPresseRoute
   NeulandTeilnahmeRoute: typeof NeulandTeilnahmeRoute
   NeulandWettbewerbRoute: typeof NeulandWettbewerbRoute
   NeulandIndexRoute: typeof NeulandIndexRoute
+  NeulandGewinnerIndexRoute: typeof NeulandGewinnerIndexRoute
+  NeulandGewinnerJahrSlugRoute: typeof NeulandGewinnerJahrSlugRoute
+  NeulandGewinnerJahrIndexRoute: typeof NeulandGewinnerJahrIndexRoute
 }
 
 const NeulandRouteChildren: NeulandRouteChildren = {
+  NeulandJuryRoute: NeulandJuryRoute,
+  NeulandPresseRoute: NeulandPresseRoute,
   NeulandTeilnahmeRoute: NeulandTeilnahmeRoute,
   NeulandWettbewerbRoute: NeulandWettbewerbRoute,
   NeulandIndexRoute: NeulandIndexRoute,
+  NeulandGewinnerIndexRoute: NeulandGewinnerIndexRoute,
+  NeulandGewinnerJahrSlugRoute: NeulandGewinnerJahrSlugRoute,
+  NeulandGewinnerJahrIndexRoute: NeulandGewinnerJahrIndexRoute,
 }
 
 const NeulandRouteWithChildren =
