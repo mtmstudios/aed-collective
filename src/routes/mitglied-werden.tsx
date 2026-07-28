@@ -1,0 +1,167 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { useState, type FormEvent } from "react";
+import { Check } from "lucide-react";
+import { PageHeader } from "@/components/ui-bits";
+
+export const Route = createFileRoute("/mitglied-werden")({
+  head: () => ({
+    meta: [
+      { title: "Mitglied werden – aed e.V. Stuttgart" },
+      {
+        name: "description",
+        content:
+          "Mitglied im aed e.V. werden: Beiträge, Vorteile und Online-Beitrittsformular für Personen, Studierende und Fördermitglieder.",
+      },
+      { property: "og:title", content: "Mitglied werden – aed e.V. Stuttgart" },
+      { property: "og:description", content: "Beiträge, Vorteile und Online-Beitritt beim aed e.V." },
+      { property: "og:url", content: "/mitglied-werden" },
+    ],
+    links: [{ rel: "canonical", href: "/mitglied-werden" }],
+  }),
+  component: MitgliedWerdenPage,
+});
+
+const nutzen = [
+  "Freier Eintritt zu allen Veranstaltungen des Jahresprogramms",
+  "Zugang zu Exkursionen und Führungen mit begrenzter Teilnehmerzahl",
+  "Netzwerk aus über 400 Personen- und rund 80 Fördermitgliedern",
+  "Einladung zum Sommerfest und zur Preisverleihung neuland",
+  "Newsletter mit Terminen, Wettbewerben und Ausschreibungen",
+  "Unterstützung der Nachwuchsförderung in Baden-Württemberg",
+];
+
+const beitraege = [
+  { typ: "Personenmitglied", preis: "120 € / Jahr", text: "Für alle, die dem Verein persönlich verbunden sind." },
+  { typ: "Studierende", preis: "30 € / Jahr", text: "Mit Immatrikulationsbescheinigung, bis 30 Jahre." },
+  { typ: "Fördermitglied", preis: "ab 750 € / Jahr", text: "Für Büros, Unternehmen und Institutionen inkl. Nennung." },
+];
+
+function MitgliedWerdenPage() {
+  const [gesendet, setGesendet] = useState(false);
+  const [fehler, setFehler] = useState<string | null>(null);
+
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const daten = new FormData(e.currentTarget);
+    const email = String(daten.get("email") ?? "").trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || email.length > 255) {
+      setFehler("Bitte geben Sie eine gültige E-Mail-Adresse an.");
+      return;
+    }
+    setFehler(null);
+    setGesendet(true);
+  }
+
+  return (
+    <>
+      <PageHeader
+        eyebrow="Mitgliedschaft"
+        titel="Mitglied werden"
+        intro="Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares Netzwerk und die Förderung des gestalterischen Nachwuchses."
+      />
+
+      <section className="shell rule-t py-12" aria-labelledby="nutzen">
+        <h2 id="nutzen" className="display-md">
+          Was Sie davon haben
+        </h2>
+        <ul className="mt-8 grid gap-4 md:grid-cols-2">
+          {nutzen.map((n) => (
+            <li key={n} className="flex items-start gap-3 border-b border-line pb-4">
+              <Check className="mt-1 size-4 shrink-0 text-[var(--brand-deep)]" aria-hidden="true" />
+              <span>{n}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="shell rule-t py-12" aria-labelledby="beitraege">
+        <h2 id="beitraege" className="display-md">
+          Beiträge
+        </h2>
+        <ul className="mt-8 grid gap-6 md:grid-cols-3">
+          {beitraege.map((b) => (
+            <li key={b.typ} className="border border-line bg-card p-6">
+              <h3 className="font-display text-xl">{b.typ}</h3>
+              <p className="mt-2 font-display text-2xl text-[var(--brand-deep)]">{b.preis}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{b.text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="shell rule-t py-12 pb-24" aria-labelledby="formular">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-7">
+            <h2 id="formular" className="display-md">
+              Online beitreten
+            </h2>
+            {gesendet ? (
+              <p role="status" className="mt-8 border border-line bg-card p-6">
+                Vielen Dank für Ihren Antrag. Die Geschäftsstelle meldet sich innerhalb weniger Tage
+                bei Ihnen.
+              </p>
+            ) : (
+              <form onSubmit={onSubmit} noValidate className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="mw-vorname" className="eyebrow">Vorname</label>
+                  <input id="mw-vorname" name="vorname" required maxLength={60} autoComplete="given-name"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                </div>
+                <div>
+                  <label htmlFor="mw-nachname" className="eyebrow">Nachname</label>
+                  <input id="mw-nachname" name="nachname" required maxLength={60} autoComplete="family-name"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="mw-email" className="eyebrow">E-Mail</label>
+                  <input id="mw-email" name="email" type="email" required maxLength={255} autoComplete="email"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="mw-org" className="eyebrow">Büro / Unternehmen (optional)</label>
+                  <input id="mw-org" name="organisation" maxLength={120} autoComplete="organization"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="mw-typ" className="eyebrow">Art der Mitgliedschaft</label>
+                  <select id="mw-typ" name="typ" className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm">
+                    {beitraege.map((b) => (
+                      <option key={b.typ}>{b.typ}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="mw-nachricht" className="eyebrow">Nachricht (optional)</label>
+                  <textarea id="mw-nachricht" name="nachricht" rows={4} maxLength={1000}
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                </div>
+                <label className="flex items-start gap-2 text-sm sm:col-span-2">
+                  <input type="checkbox" name="datenschutz" required className="mt-1 size-4 accent-[var(--brand)]" />
+                  <span>Ich habe die Datenschutzhinweise gelesen und stimme der Verarbeitung meiner Daten zu.</span>
+                </label>
+                {fehler && (
+                  <p role="alert" className="sm:col-span-2 text-sm text-destructive">
+                    {fehler}
+                  </p>
+                )}
+                <div className="sm:col-span-2">
+                  <button type="submit" className="btn-solid">Antrag senden</button>
+                </div>
+              </form>
+            )}
+          </div>
+          <aside className="md:col-span-5">
+            <div className="border border-line bg-card p-6">
+              <h2 className="eyebrow">Lieber auf Papier?</h2>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Das Beitrittsformular gibt es weiterhin als PDF zum Ausdrucken und Zurücksenden an die
+                Geschäftsstelle.
+              </p>
+              <a href="#" className="btn-outline mt-4 w-full">Beitrittsformular (PDF)</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -9,38 +9,260 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServiceRouteImport } from './routes/service'
+import { Route as ReferentenRouteImport } from './routes/referenten'
+import { Route as MitgliederRouteImport } from './routes/mitglieder'
+import { Route as MitgliedWerdenRouteImport } from './routes/mitglied-werden'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as VereinIndexRouteImport } from './routes/verein.index'
+import { Route as ProgrammIndexRouteImport } from './routes/programm.index'
+import { Route as VereinVorstandRouteImport } from './routes/verein.vorstand'
+import { Route as VereinSatzungRouteImport } from './routes/verein.satzung'
+import { Route as VereinBeiratRouteImport } from './routes/verein.beirat'
+import { Route as ProgrammSlugRouteImport } from './routes/programm.$slug'
 
+const ServiceRoute = ServiceRouteImport.update({
+  id: '/service',
+  path: '/service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferentenRoute = ReferentenRouteImport.update({
+  id: '/referenten',
+  path: '/referenten',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MitgliederRoute = MitgliederRouteImport.update({
+  id: '/mitglieder',
+  path: '/mitglieder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MitgliedWerdenRoute = MitgliedWerdenRouteImport.update({
+  id: '/mitglied-werden',
+  path: '/mitglied-werden',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VereinIndexRoute = VereinIndexRouteImport.update({
+  id: '/verein/',
+  path: '/verein/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammIndexRoute = ProgrammIndexRouteImport.update({
+  id: '/programm/',
+  path: '/programm/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VereinVorstandRoute = VereinVorstandRouteImport.update({
+  id: '/verein/vorstand',
+  path: '/verein/vorstand',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VereinSatzungRoute = VereinSatzungRouteImport.update({
+  id: '/verein/satzung',
+  path: '/verein/satzung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VereinBeiratRoute = VereinBeiratRouteImport.update({
+  id: '/verein/beirat',
+  path: '/verein/beirat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammSlugRoute = ProgrammSlugRouteImport.update({
+  id: '/programm/$slug',
+  path: '/programm/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/mitglied-werden': typeof MitgliedWerdenRoute
+  '/mitglieder': typeof MitgliederRoute
+  '/referenten': typeof ReferentenRoute
+  '/service': typeof ServiceRoute
+  '/programm/$slug': typeof ProgrammSlugRoute
+  '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/satzung': typeof VereinSatzungRoute
+  '/verein/vorstand': typeof VereinVorstandRoute
+  '/programm/': typeof ProgrammIndexRoute
+  '/verein/': typeof VereinIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/mitglied-werden': typeof MitgliedWerdenRoute
+  '/mitglieder': typeof MitgliederRoute
+  '/referenten': typeof ReferentenRoute
+  '/service': typeof ServiceRoute
+  '/programm/$slug': typeof ProgrammSlugRoute
+  '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/satzung': typeof VereinSatzungRoute
+  '/verein/vorstand': typeof VereinVorstandRoute
+  '/programm': typeof ProgrammIndexRoute
+  '/verein': typeof VereinIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/mitglied-werden': typeof MitgliedWerdenRoute
+  '/mitglieder': typeof MitgliederRoute
+  '/referenten': typeof ReferentenRoute
+  '/service': typeof ServiceRoute
+  '/programm/$slug': typeof ProgrammSlugRoute
+  '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/satzung': typeof VereinSatzungRoute
+  '/verein/vorstand': typeof VereinVorstandRoute
+  '/programm/': typeof ProgrammIndexRoute
+  '/verein/': typeof VereinIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/mitglied-werden'
+    | '/mitglieder'
+    | '/referenten'
+    | '/service'
+    | '/programm/$slug'
+    | '/verein/beirat'
+    | '/verein/satzung'
+    | '/verein/vorstand'
+    | '/programm/'
+    | '/verein/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/mitglied-werden'
+    | '/mitglieder'
+    | '/referenten'
+    | '/service'
+    | '/programm/$slug'
+    | '/verein/beirat'
+    | '/verein/satzung'
+    | '/verein/vorstand'
+    | '/programm'
+    | '/verein'
+  id:
+    | '__root__'
+    | '/'
+    | '/datenschutz'
+    | '/impressum'
+    | '/kontakt'
+    | '/mitglied-werden'
+    | '/mitglieder'
+    | '/referenten'
+    | '/service'
+    | '/programm/$slug'
+    | '/verein/beirat'
+    | '/verein/satzung'
+    | '/verein/vorstand'
+    | '/programm/'
+    | '/verein/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KontaktRoute: typeof KontaktRoute
+  MitgliedWerdenRoute: typeof MitgliedWerdenRoute
+  MitgliederRoute: typeof MitgliederRoute
+  ReferentenRoute: typeof ReferentenRoute
+  ServiceRoute: typeof ServiceRoute
+  ProgrammSlugRoute: typeof ProgrammSlugRoute
+  VereinBeiratRoute: typeof VereinBeiratRoute
+  VereinSatzungRoute: typeof VereinSatzungRoute
+  VereinVorstandRoute: typeof VereinVorstandRoute
+  ProgrammIndexRoute: typeof ProgrammIndexRoute
+  VereinIndexRoute: typeof VereinIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/service': {
+      id: '/service'
+      path: '/service'
+      fullPath: '/service'
+      preLoaderRoute: typeof ServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referenten': {
+      id: '/referenten'
+      path: '/referenten'
+      fullPath: '/referenten'
+      preLoaderRoute: typeof ReferentenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mitglieder': {
+      id: '/mitglieder'
+      path: '/mitglieder'
+      fullPath: '/mitglieder'
+      preLoaderRoute: typeof MitgliederRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mitglied-werden': {
+      id: '/mitglied-werden'
+      path: '/mitglied-werden'
+      fullPath: '/mitglied-werden'
+      preLoaderRoute: typeof MitgliedWerdenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +270,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verein/': {
+      id: '/verein/'
+      path: '/verein'
+      fullPath: '/verein/'
+      preLoaderRoute: typeof VereinIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programm/': {
+      id: '/programm/'
+      path: '/programm'
+      fullPath: '/programm/'
+      preLoaderRoute: typeof ProgrammIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verein/vorstand': {
+      id: '/verein/vorstand'
+      path: '/verein/vorstand'
+      fullPath: '/verein/vorstand'
+      preLoaderRoute: typeof VereinVorstandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verein/satzung': {
+      id: '/verein/satzung'
+      path: '/verein/satzung'
+      fullPath: '/verein/satzung'
+      preLoaderRoute: typeof VereinSatzungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verein/beirat': {
+      id: '/verein/beirat'
+      path: '/verein/beirat'
+      fullPath: '/verein/beirat'
+      preLoaderRoute: typeof VereinBeiratRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programm/$slug': {
+      id: '/programm/$slug'
+      path: '/programm/$slug'
+      fullPath: '/programm/$slug'
+      preLoaderRoute: typeof ProgrammSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  ImpressumRoute: ImpressumRoute,
+  KontaktRoute: KontaktRoute,
+  MitgliedWerdenRoute: MitgliedWerdenRoute,
+  MitgliederRoute: MitgliederRoute,
+  ReferentenRoute: ReferentenRoute,
+  ServiceRoute: ServiceRoute,
+  ProgrammSlugRoute: ProgrammSlugRoute,
+  VereinBeiratRoute: VereinBeiratRoute,
+  VereinSatzungRoute: VereinSatzungRoute,
+  VereinVorstandRoute: VereinVorstandRoute,
+  ProgrammIndexRoute: ProgrammIndexRoute,
+  VereinIndexRoute: VereinIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
