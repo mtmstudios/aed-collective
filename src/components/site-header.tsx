@@ -15,8 +15,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
       <div className="shell flex h-16 items-center justify-between gap-6 md:h-20">
-        <Link to="/" className="font-display text-2xl font-semibold tracking-tight link-brand">
-          aed<span className="text-muted-foreground"> e.V.</span>
+        <Link to="/" className="inline-flex items-center gap-3">
+          <img
+            src="/aed-logo.png"
+            alt="aed e.V. – Architecture Engineering Design Stuttgart"
+            width={500}
+            height={276}
+            className="h-8 w-auto md:h-9"
+          />
+          <span className="sr-only">Startseite</span>
         </Link>
 
         <nav aria-label="Hauptnavigation" className="hidden items-center gap-8 lg:flex">

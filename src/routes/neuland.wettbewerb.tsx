@@ -26,7 +26,7 @@ function WettbewerbPage() {
       <PageHeader
         eyebrow="neuland"
         titel="Der Wettbewerb"
-        intro="Alle zwei Jahre suchen wir die stärksten Abschlussarbeiten aus Baden-Württemberg – fachlich breit, inhaltlich anspruchsvoll und gestalterisch mutig."
+        intro="Alle zwei Jahre zeichnet der aed die stärksten Arbeiten junger Gestalter:innen aus – disziplinübergreifend, bundesweit offen und ausschließlich dem Gemeinnutz verpflichtet."
       />
 
       <section className="shell rule-t py-12" aria-labelledby="konzept">
@@ -36,14 +36,16 @@ function WettbewerbPage() {
           </h2>
           <div className="md:col-span-9 max-w-3xl space-y-5 text-lg leading-relaxed">
             <p>
-              neuland macht sichtbar, was an den Hochschulen des Landes entsteht. Prämiert werden
-              Arbeiten, die über die eigene Disziplin hinausdenken und eine klare Haltung
-              formulieren.
+              Ziel ist es, innovative und nachhaltige Gestaltung zu fördern, die sich durch
+              größtmögliche ökonomische wie ökologische Qualität auszeichnet, funktional und
+              nutzerfreundlich ist und höchsten ästhetischen Anforderungen entspricht. Im
+              Mittelpunkt stehen immer der Mensch und der gesellschaftliche Nutzen des Entwurfs.
             </p>
             <p className="text-base text-muted-foreground">
-              Die ausgezeichneten Projekte werden in einer Ausstellung gezeigt, dokumentiert und über
-              das Netzwerk des aed in die Praxis vermittelt. Jede prämierte Arbeit bekommt eine
-              eigene, dauerhaft erreichbare Projektseite – auch für Bewerbungen.
+              Eine unabhängige Jury aus rund 20 Fachleuten entscheidet über die Vergabe. Jede
+              prämierte Arbeit wird mit Jurystatement auf einer eigenen, dauerhaft erreichbaren
+              Projektseite vorgestellt – Studierende können ihre Auszeichnung so direkt in
+              Bewerbungen und Portfolios verlinken.
             </p>
           </div>
         </div>
@@ -81,7 +83,7 @@ function WettbewerbPage() {
 
       <section className="shell rule-t py-12" aria-labelledby="termine">
         <h2 id="termine" className="display-md">
-          Termine
+          Termine des Jahrgangs 2025
         </h2>
         <ul className="mt-8 border-t border-line">
           {termine.map((t) => (
@@ -99,7 +101,7 @@ function WettbewerbPage() {
         <h2 id="preise" className="display-md">
           Preise
         </h2>
-        <ul className="mt-8 grid gap-6 md:grid-cols-3">
+        <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {preise.map((p) => (
             <li key={p.platz} className="border border-line bg-card p-6">
               <h3 className="font-display text-lg">{p.platz}</h3>

@@ -65,11 +65,20 @@ function ProjektDetail() {
         {projekt.autor} · {projekt.hochschule}
       </p>
 
-      <div
-        role="img"
-        aria-label={`Projektabbildung zu ${projekt.titel} von ${projekt.autor}`}
-        className="mt-10 aspect-16/9 w-full bg-muted"
-      />
+      <dl className="mt-10 grid gap-6 border-y border-line py-6 sm:grid-cols-2">
+        {projekt.art && (
+          <div>
+            <dt className="eyebrow">Art der Arbeit</dt>
+            <dd className="mt-1 text-sm leading-relaxed">{projekt.art}</dd>
+          </div>
+        )}
+        {projekt.betreuung && (
+          <div>
+            <dt className="eyebrow">Betreuung</dt>
+            <dd className="mt-1 text-sm leading-relaxed">{projekt.betreuung}</dd>
+          </div>
+        )}
+      </dl>
 
       <div className="mt-12 grid gap-10 md:grid-cols-12">
         <div className="md:col-span-7">

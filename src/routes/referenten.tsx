@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
-import { referenten } from "@/data/site";
+import { referenten, type Referent } from "@/data/referenten";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/referenten")({
@@ -31,12 +31,13 @@ function ReferentenPage() {
   const [suche, setSuche] = useState("");
 
   const gruppen = useMemo(() => {
+    const q = suche.trim().toLowerCase();
     const gefiltert = referenten
-      .filter((r) => r.toLowerCase().includes(suche.trim().toLowerCase()))
-      .sort((a, b) => nachname(a).localeCompare(nachname(b), "de"));
-    const map = new Map<string, string[]>();
+      .filter((r) => r.name.toLowerCase().includes(q) || r.org.toLowerCase().includes(q))
+      .sort((a, b) => nachname(a.name).localeCompare(nachname(b.name), "de"));
+    const map = new Map<string, Referent[]>();
     for (const r of gefiltert) {
-      const b = nachname(r)[0].toUpperCase();
+      const b = nachname(r.name)[0].toUpperCase();
       map.set(b, [...(map.get(b) ?? []), r]);
     }
     return [...map.entries()];
@@ -95,9 +96,16 @@ function ReferentenPage() {
             <div className="grid gap-6 md:grid-cols-12">
               <h2 className="display-md md:col-span-2">{buchstabe}</h2>
               <ul className="md:col-span-10 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
-                {namen.map((n) => (
-                  <li key={n} className="border-b border-line py-2">
-                    {n}
+                {namen.map((r) => (
+                  <li key={`${r.name}-${r.org}`} className="border-b border-line py-2">
+                    {r.url ? (
+                      <a href={r.url} target="_blank" rel="noreferrer" className="link-brand">
+                        {r.name}
+                      </a>
+                    ) : (
+                      r.name
+                    )}
+                    {r.org && <span className="block text-xs text-muted-foreground">{r.org}</span>}
                   </li>
                 ))}
               </ul>

@@ -95,8 +95,8 @@ function EventDetail() {
           </dd>
         </div>
         <div>
-          <dt className="eyebrow">Teilnahme</dt>
-          <dd className="mt-1">Mitglieder kostenfrei, Gäste willkommen</dd>
+          <dt className="eyebrow">Veranstalter</dt>
+          <dd className="mt-1">aed e.V.{event.anmeldung ? " · Anmeldung erforderlich" : ""}</dd>
         </div>
       </dl>
 

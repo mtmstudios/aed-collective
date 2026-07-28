@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { kontakt } from "@/data/site";
+import { presseKit } from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/neuland/presse")({
@@ -21,13 +22,6 @@ export const Route = createFileRoute("/neuland/presse")({
   component: PressePage,
 });
 
-const kit = [
-  { titel: "Pressemitteilung Jahrgang 2025", typ: "PDF, 0,4 MB" },
-  { titel: "Bildmaterial Preisträger:innen 2025", typ: "ZIP, 64 MB" },
-  { titel: "neuland Logo-Paket", typ: "ZIP, 3,1 MB" },
-  { titel: "Factsheet Wettbewerb", typ: "PDF, 0,2 MB" },
-];
-
 function PressePage() {
   return (
     <>
@@ -38,10 +32,10 @@ function PressePage() {
       />
       <section className="shell pb-16">
         <ul className="border-t border-line">
-          {kit.map((k) => (
+          {presseKit.map((k) => (
             <li key={k.titel}>
               <a
-                href="#"
+                href={k.url}
                 className="group flex flex-wrap items-center justify-between gap-4 border-b border-line py-6 transition-colors hover:bg-muted"
               >
                 <span className="font-display text-lg group-hover:text-[var(--brand-deep)]">{k.titel}</span>

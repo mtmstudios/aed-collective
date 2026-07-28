@@ -22,17 +22,16 @@ export const Route = createFileRoute("/programm/")({
   component: ProgrammPage,
 });
 
-const HEUTE = "2026-04-01";
-
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
   const [archivOffen, setArchivOffen] = useState(false);
 
   const { kommend, archiv } = useMemo(() => {
+    const heute = new Date().toISOString().slice(0, 10);
     const gefiltert = events.filter((e) => filter === "Alle" || e.format === filter);
     return {
-      kommend: gefiltert.filter((e) => e.datum >= HEUTE).sort((a, b) => a.datum.localeCompare(b.datum)),
-      archiv: gefiltert.filter((e) => e.datum < HEUTE).sort((a, b) => b.datum.localeCompare(a.datum)),
+      kommend: gefiltert.filter((e) => e.datum >= heute).sort((a, b) => a.datum.localeCompare(b.datum)),
+      archiv: gefiltert.filter((e) => e.datum < heute).sort((a, b) => b.datum.localeCompare(a.datum)),
     };
   }, [filter]);
 
@@ -41,7 +40,7 @@ function ProgrammPage() {
       <PageHeader
         eyebrow="Programm"
         titel="Veranstaltungen"
-        intro="Zwölfmal im Jahr laden wir zu Vorträgen, Führungen und Gesprächen ein. Die Teilnahme ist für Mitglieder kostenfrei, Gäste sind willkommen."
+        intro="Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden und Festen ein. Weitere Termine kündigen wir über Newsletter, Instagram und unsere WhatsApp-Gruppe an."
       />
 
       <section className="shell" aria-label="Filter nach Format">

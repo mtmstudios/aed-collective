@@ -44,7 +44,7 @@ function ImpressumPage() {
         <div className="rule-t pt-6">
           <h2 className="font-display text-xl">Registereintrag</h2>
           <p className="mt-3 leading-relaxed">
-            Eingetragen im Vereinsregister beim Amtsgericht Stuttgart.
+            Eingetragen im Vereinsregister beim Amtsgericht Stuttgart, VR-Nr. 7136.
           </p>
         </div>
         <div className="rule-t pt-6">

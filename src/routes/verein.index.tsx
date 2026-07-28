@@ -35,18 +35,20 @@ function VereinPage() {
           </h2>
           <div className="md:col-span-9 max-w-3xl space-y-6 text-lg leading-relaxed">
             <p>
-              Architektinnen, Ingenieure und Designerinnen arbeiten an denselben Fragen – meist
-              getrennt voneinander. Der aed e.V. schafft die Gelegenheiten, bei denen sie
-              aufeinandertreffen: in Vorträgen, auf Exkursionen, bei Werkstattgesprächen und Festen.
+              Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel
+              ist es, die große Gestaltungskompetenz in der Region Stuttgart – vom Produkt- und
+              Grafikdesign über Multimedia und Engineering bis hin zur Architektur – zu fördern und
+              der Öffentlichkeit nahezubringen. Architekt:innen, Grafiker:innen, Designer:innen und
+              Ingenieur:innen berichten und diskutieren auf Einladung des aed über aktuelle Projekte
+              ebenso wie über grundlegende Fragestellungen.
             </p>
             <p className="text-muted-foreground">
-              Wir fördern den gestalterischen Nachwuchs der Region, machen herausragende Arbeiten
-              sichtbar und geben jungen Gestalterinnen und Gestaltern eine Bühne – seit 2019 vor
-              allem über den Wettbewerb{" "}
+              Insbesondere der studentische Nachwuchs wird gefördert und zur Beschäftigung mit
+              anderen Disziplinen angeregt – vor allem über den Nachwuchswettbewerb{" "}
               <Link to="/neuland" className="underline link-brand">
                 neuland
               </Link>
-              .
+              , der 2025 bereits zum zehnten Mal ausgelobt wurde.
             </p>
           </div>
         </div>
@@ -57,8 +59,8 @@ function VereinPage() {
           Zitat
         </h2>
         <blockquote className="display-md max-w-4xl">
-          „Eine unglaubliche Menge Kreativität stammt aus Stuttgart – man muss sie nur sichtbar
-          machen.“
+          „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
+          unbedingt, weil niemand darüber spricht.“
         </blockquote>
       </section>
 
@@ -69,14 +71,17 @@ function VereinPage() {
           </h2>
           <div className="md:col-span-9 max-w-3xl space-y-6 leading-relaxed">
             <p>
-              Gegründet aus dem Gedanken heraus, dass die Region Stuttgart eine außergewöhnliche
-              Dichte an gestalterischer und ingenieurtechnischer Kompetenz besitzt, versammelt der
-              aed heute über 400 Personenmitglieder und rund 80 Fördermitglieder.
+              Der „Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.“
+              wurde 2004 gegründet – von Alexander Hafner, Dr. Frank Heinlein, Silvia Olp, Ralf
+              Schmitz, Prof. Werner Sobek, Prof. Andreas Uebele und Roberto Zwirn. Am 15. Dezember
+              2004 trat der Verein im damals noch nicht eröffneten Kunstmuseum Stuttgart erstmals an
+              die Öffentlichkeit – mit über 300 Gästen.
             </p>
             <p>
-              Aus einer Reihe von Abendveranstaltungen wurde ein ganzjähriges Programm, aus dem
-              Programm ein Netzwerk – und aus dem Netzwerk der Nachwuchswettbewerb neuland, der seit
-              2019 alle zwei Jahre Abschlussarbeiten aus Baden-Württemberg auszeichnet.
+              Aus einer Reihe von Abendveranstaltungen wurden Hunderte von Vorträgen, Exkursionen,
+              Baustellenbesuchen und Blicken hinter die Kulissen. Heute versammelt der aed über 400
+              Personenmitglieder und rund 80 Fördermitglieder – und mit neuland einen
+              Nachwuchswettbewerb, der alle zwei Jahre bundesweit junge Gestalter:innen auszeichnet.
             </p>
           </div>
         </div>
@@ -88,11 +93,10 @@ function VereinPage() {
             Auszeichnung
           </h2>
           <div className="md:col-span-9">
-            <p className="display-md max-w-3xl">German Brand Award</p>
+            <p className="display-md max-w-3xl">German Brand Award 2017</p>
             <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-              Für die Marken- und Kommunikationsarbeit des Vereins und des Wettbewerbs neuland wurde
-              der aed mit dem German Brand Award ausgezeichnet – eine Bestätigung dafür, dass ein
-              Design-Verein auch selbst gestalterisch überzeugen muss.
+              Der aed wurde mit dem German Brand Award 2017 für herausragende Kulturarbeit als
+              Non-Profit-Organisation ausgezeichnet.
             </p>
           </div>
         </div>
@@ -102,7 +106,7 @@ function VereinPage() {
         <ul className="grid gap-px border border-line bg-line sm:grid-cols-3">
           {[
             { to: "/verein/vorstand", titel: "Vorstand", text: "Fünf Personen, ein Ehrenvorsitzender" },
-            { to: "/verein/beirat", titel: "Beirat", text: "Elf Stimmen aus allen Disziplinen" },
+            { to: "/verein/beirat", titel: "Beirat", text: "Zehn Stimmen aus allen Disziplinen" },
             { to: "/verein/satzung", titel: "Satzung", text: "Rechtliche Grundlage des Vereins" },
           ].map((i) => (
             <li key={i.to} className="bg-background">

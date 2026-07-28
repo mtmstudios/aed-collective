@@ -27,10 +27,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const naechste = [...events]
-    .filter((e) => new Date(e.datum) >= new Date("2026-01-01"))
-    .sort((a, b) => a.datum.localeCompare(b.datum))
-    .slice(0, 3);
+  const heute = new Date().toISOString().slice(0, 10);
+  const kommende = events
+    .filter((e) => e.datum >= heute)
+    .sort((a, b) => a.datum.localeCompare(b.datum));
+  const naechste = (kommende.length > 0
+    ? kommende
+    : [...events].sort((a, b) => b.datum.localeCompare(a.datum))
+  ).slice(0, 3);
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
 
   return (
@@ -39,8 +43,9 @@ function Index() {
         <p className="eyebrow">Architecture · Engineering · Design · Stuttgart</p>
         <h1 className="display-xl mt-6 max-w-5xl">Veranstaltungen Austausch Förderung</h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl">
-          Der aed e.V. bringt seit über zwanzig Jahren Architektinnen, Ingenieure und Designerinnen
-          an einen Tisch – in Vorträgen, Exkursionen und Festen, und im Nachwuchswettbewerb neuland.
+          Der aed e.V. bringt seit 2004 Architekt:innen, Ingenieur:innen und Designer:innen an einen
+          Tisch – mit rund 20 Veranstaltungen im Jahr, einem Netzwerk aus über 400 Mitgliedern und
+          dem Nachwuchswettbewerb neuland.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link to="/programm" className="btn-solid">
@@ -75,14 +80,14 @@ function Index() {
           </h2>
           <div className="md:col-span-9">
             <p className="display-md max-w-4xl">
-              „Eine unglaubliche Menge Kreativität stammt aus Stuttgart – man muss sie nur sichtbar
-              machen.“
+              „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
+              unbedingt, weil niemand darüber spricht.“
             </p>
             <p className="mt-8 max-w-2xl leading-relaxed text-muted-foreground">
-              Wir schaffen Gelegenheiten für Gespräche zwischen Disziplinen, die sich sonst selten
-              begegnen. Wir fördern den gestalterischen Nachwuchs der Region und machen sichtbar,
-              welche Qualität hier entsteht. Und wir bringen Menschen zusammen, die Verantwortung
-              für die gebaute und gestaltete Umwelt übernehmen.
+              Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
+              die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
+              über Multimedia und Engineering bis zur Architektur – zu fördern und der
+              Öffentlichkeit nahezubringen.
             </p>
             <Link to="/verein" className="mt-8 inline-flex items-center gap-2 text-sm link-brand">
               Über den Verein <ArrowRight className="size-4" aria-hidden="true" />
@@ -100,9 +105,9 @@ function Index() {
             neuland
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed">
-            Der Wettbewerb für Abschlussarbeiten aus Architektur, Engineering, Produkt-,
-            Kommunikationsdesign und Szenografie in Baden-Württemberg. Jung &amp; hungrig – und
-            ausgezeichnet.
+            Der interdisziplinäre Nachwuchswettbewerb für Studierende und Absolvent:innen bis
+            28 Jahre – in fünf Kategorien von Architecture + Engineering bis Interaction Design,
+            gefördert von der Karl Schlecht Stiftung. 2025 bereits zum zehnten Mal ausgelobt.
           </p>
           <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-line pt-8 md:grid-cols-4">
             {kennzahlen.map((k) => (

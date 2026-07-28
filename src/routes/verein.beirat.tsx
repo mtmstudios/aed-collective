@@ -13,7 +13,7 @@ export const Route = createFileRoute("/verein/beirat")({
           "Der Beirat des aed e.V. mit Stimmen aus Architektur, Engineering, Design, Szenografie und Publizistik.",
       },
       { property: "og:title", content: "Beirat – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Elf Beiratsmitglieder aus allen Disziplinen." },
+      { property: "og:description", content: "Zehn Beiratsmitglieder aus allen Disziplinen." },
       { property: "og:url", content: "/verein/beirat" },
     ],
     links: [{ rel: "canonical", href: "/verein/beirat" }],

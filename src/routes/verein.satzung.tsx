@@ -5,7 +5,7 @@ export const Route = createFileRoute("/verein/satzung")({
   head: () => ({
     meta: [
       { title: "Satzung – aed e.V. Stuttgart" },
-      { name: "description", content: "Die Satzung des aed e.V. – Zweck, Mitgliedschaft, Organe und Beiträge." },
+      { name: "description", content: "Die Satzung des Vereins zur Förderung von Architektur, Engineering und Design in Stuttgart e.V." },
       { property: "og:title", content: "Satzung – aed e.V. Stuttgart" },
       { property: "og:description", content: "Die aktuelle Fassung der Vereinssatzung des aed e.V." },
       { property: "og:url", content: "/verein/satzung" },
@@ -15,46 +15,51 @@ export const Route = createFileRoute("/verein/satzung")({
   component: SatzungPage,
 });
 
+// Originalsatzung der Bestands-Website (beschlossen 16.02.2004, zuletzt geändert 09.12.2014)
 const paragraphen = [
   {
     titel: "§ 1 Name, Sitz, Geschäftsjahr",
-    text: "Der Verein führt den Namen „aed e.V.“ und hat seinen Sitz in Stuttgart. Er ist in das Vereinsregister eingetragen. Das Geschäftsjahr ist das Kalenderjahr.",
+    text: "Der Verein führt den Namen: Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V. Er hat seinen Sitz in Stuttgart und wird im Vereinsregister des Amtsgerichtes Stuttgart eingetragen. Das Kalenderjahr ist das Geschäftsjahr.",
   },
   {
     titel: "§ 2 Zweck des Vereins",
-    text: "Zweck des Vereins ist die Förderung von Kunst und Kultur sowie von Bildung im Bereich Architektur, Engineering und Design. Der Satzungszweck wird verwirklicht durch Veranstaltungen, Publikationen, Ausstellungen sowie durch die Förderung des gestalterischen Nachwuchses, insbesondere durch den Wettbewerb neuland.",
+    text: "Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des Abschnitts „Steuerbegünstigte Zwecke“ der Abgabenordnung. Dies sind insbesondere: die Unterstützung und Anregung der öffentlichen Wahrnehmung und Diskussion in den Themenbereichen Architektur, Engineering und Design; die Etablierung eines dauerhaften Ausstellungsraumes; die Organisation und Ausrichtung von Ausstellungen und Veranstaltungen; die Schaffung eines öffentlichen Raumes für die interdisziplinäre Diskussion; die Förderung des Nachwuchses durch Ausstellungsflächen und Nachwuchswettbewerbe; Kooperationen mit Organisationen vergleichbarer Zielsetzung. Der Verein ist selbstlos tätig; er verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke.",
   },
   {
-    titel: "§ 3 Gemeinnützigkeit",
-    text: "Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke. Er ist selbstlos tätig und verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke. Mittel des Vereins dürfen nur für satzungsmäßige Zwecke verwendet werden.",
+    titel: "§ 3 Mitgliedschaft",
+    text: "Mitglieder des Vereins können natürliche und juristische Personen werden, die die Ziele des Vereins unterstützen. Über die Aufnahme entscheidet der Vorstand endgültig. Der Beitritt wird per schriftlichem Antrag vollzogen. Von den Mitgliedern werden jährliche Mitgliedsbeiträge erhoben; über deren Höhe entscheidet die Mitgliederversammlung.",
   },
   {
-    titel: "§ 4 Mitgliedschaft",
-    text: "Mitglied können natürliche und juristische Personen werden, die den Vereinszweck unterstützen. Der Verein kennt Personenmitgliedschaften, ermäßigte Mitgliedschaften für Studierende sowie Fördermitgliedschaften für Unternehmen und Institutionen.",
+    titel: "§ 4 Erlöschen der Mitgliedschaft",
+    text: "Die Mitgliedschaft erlischt durch den Tod eines Mitgliedes oder die Auflösung der juristischen Person, durch schriftliche Austrittserklärung mit einer Kündigungsfrist von drei Monaten zum Ende des Geschäftsjahres oder durch Ausschluss, den der Vorstand mit Zustimmung des Beirates aus wichtigem Grund beschließen kann.",
   },
   {
-    titel: "§ 5 Beginn und Ende der Mitgliedschaft",
-    text: "Über den Aufnahmeantrag entscheidet der Vorstand. Die Mitgliedschaft endet durch Austritt, Ausschluss, Tod oder Auflösung der juristischen Person. Der Austritt ist mit einer Frist von drei Monaten zum Jahresende schriftlich zu erklären.",
+    titel: "§ 5 Aufbringung und Verwendung der Mittel",
+    text: "Die Mittel werden aufgebracht durch Spenden in Geld und anderen Zuwendungen sowie durch Mitgliedsbeiträge. Mittel des Vereins dürfen nur für die satzungsgemäßen Zwecke verwendet werden. Die Mitglieder erhalten keine Gewinnanteile oder sonstige Zuwendungen aus Mitteln des Vereins. Vereinsämter werden grundsätzlich ehrenamtlich ausgeübt.",
   },
   {
-    titel: "§ 6 Beiträge",
-    text: "Die Höhe der Mitgliedsbeiträge wird von der Mitgliederversammlung in einer Beitragsordnung festgelegt. Die Beiträge sind jährlich im Voraus zu entrichten.",
+    titel: "§ 6 Organe",
+    text: "Organe des Vereins sind der Vorstand, der Beirat und die Mitgliederversammlung.",
   },
   {
-    titel: "§ 7 Organe",
-    text: "Organe des Vereins sind die Mitgliederversammlung und der Vorstand. Zur inhaltlichen Beratung beruft der Vorstand einen Beirat.",
+    titel: "§ 7 Vorstand",
+    text: "Der Vorstand besteht aus dem Vorsitzenden, dem stellvertretenden Vorsitzenden, dem Schriftführer und dem Schatzmeister. Die Vorstandsmitglieder werden von der Mitgliederversammlung auf drei Geschäftsjahre gewählt; Wiederwahl ist zulässig. Dem Vorstand obliegt die Vereinsleitung, die Durchführung der Beschlüsse und die Verwaltung des Vermögens. Vorstand im Sinne des § 26 BGB sind der Vorsitzende, der stellvertretende Vorsitzende und der Schriftführer; jeder vertritt den Verein alleine.",
   },
   {
-    titel: "§ 8 Vorstand",
-    text: "Der Vorstand besteht aus der oder dem 1. Vorsitzenden, der oder dem 2. Vorsitzenden sowie weiteren Vorstandsmitgliedern für Kommunikation und Finanzen. Der Vorstand wird für zwei Jahre gewählt und bleibt bis zur Neuwahl im Amt.",
+    titel: "§ 8 Beirat",
+    text: "Der Beirat besteht aus mindestens 3 und höchstens 10 Mitgliedern, die von der Mitgliederversammlung auf die Dauer von drei Jahren gewählt werden. Wiederwahl ist zulässig. Der Beirat bestellt aus seiner Mitte seinen Vorsitzenden, unterstützt und berät den Vorstand.",
   },
   {
     titel: "§ 9 Mitgliederversammlung",
-    text: "Die ordentliche Mitgliederversammlung findet einmal jährlich statt. Sie beschließt über Jahresbericht, Entlastung des Vorstands, Wahlen, Beitragsordnung und Satzungsänderungen.",
+    text: "Die Mitgliederversammlung wird mindestens einmal jährlich mit vierwöchiger Einladungsfrist einberufen. Aufgaben: Entgegennahme des Verwaltungsberichtes und der Jahresrechnung, Bestellung und Entlastung des Vorstandes, Wahl der Beiratsmitglieder, Festlegung der Mitgliederbeiträge sowie Beschlussfassung über Satzungsänderungen (¾-Mehrheit) oder die Auflösung des Vereins.",
   },
   {
     titel: "§ 10 Auflösung",
-    text: "Bei Auflösung des Vereins oder Wegfall steuerbegünstigter Zwecke fällt das Vermögen an eine juristische Person des öffentlichen Rechts oder eine andere steuerbegünstigte Körperschaft zur Verwendung für die Förderung von Kunst, Kultur und Bildung.",
+    text: "Bei Auflösung oder Aufhebung der Körperschaft oder bei Wegfall steuerbegünstigter Zwecke fällt das Vermögen zu gleichen Teilen der Mia-Seeger-Stiftung in Stuttgart, der Architekturgalerie am Weißenhof, dem Verein zur Förderung des Leichtbaus e.V. und der Vereinigung von Freunden der Universität Stuttgart e.V. zu.",
+  },
+  {
+    titel: "§ 11 Schlussbestimmung",
+    text: "Der Verein ist nach Eintragung in das Vereinsregister beim Amtsgericht Stuttgart anzumelden. Dem Vorstand ist das Recht übertragen, etwaige Satzungsänderungen vorzunehmen, die der Registerrichter für erforderlich hält oder das Finanzamt bei der Anerkennung der Gemeinnützigkeit fordert.",
   },
 ];
 
@@ -64,7 +69,7 @@ function SatzungPage() {
       <PageHeader
         eyebrow="Verein"
         titel="Satzung"
-        intro="Die Satzung regelt Zweck, Mitgliedschaft und Organe des aed e.V. Maßgeblich ist die beim Vereinsregister hinterlegte Fassung."
+        intro="Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V. – beschlossen am 16. Februar 2004, zuletzt geändert am 9. Dezember 2014."
       />
       <div className="shell pb-24">
         <div className="grid gap-10 md:grid-cols-12">
@@ -78,13 +83,19 @@ function SatzungPage() {
           </div>
           <aside className="md:col-span-4">
             <div className="border border-line bg-card p-6">
-              <h2 className="eyebrow">Download</h2>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Satzung als PDF, aktuelle Fassung (0,3 MB).
+              <h2 className="eyebrow">Vereinsregister</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Amtsgericht Stuttgart, VR-Nr. 7136
+                <br />
+                Beschlossen am 16. Februar 2004
+                <br />
+                Geändert am 21. Dezember 2007 und 9. Dezember 2014
               </p>
-              <a href="#" className="btn-outline mt-4 w-full">
-                Satzung herunterladen
-              </a>
+              <h2 className="eyebrow mt-6">Gründungsmitglieder</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Alexander Hafner · Dr. Frank Heinlein · Silvia Olp · Ralf Schmitz · Prof. Werner
+                Sobek · Prof. Andreas Uebele · Roberto Zwirn
+              </p>
             </div>
           </aside>
         </div>

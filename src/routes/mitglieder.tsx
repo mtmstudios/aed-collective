@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { foerdermitglieder } from "@/data/site";
+import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { LogoGrid, PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/mitglieder")({
@@ -34,8 +34,8 @@ function MitgliederPage() {
       <section className="shell pb-24">
         <div className="rule-t grid gap-6 pt-8 md:grid-cols-2">
           <p className="text-lg leading-relaxed">
-            Dazu kommen über <strong>400 Personenmitglieder</strong> – Architektinnen, Ingenieure,
-            Designerinnen, Lehrende und Studierende aus der Region.
+            Dazu kommen mehr als <strong>400 Personenmitglieder</strong> – aus Datenschutzgründen
+            nennen wir sie nicht namentlich.
           </p>
           <div>
             <Link to="/mitglied-werden" className="btn-solid">

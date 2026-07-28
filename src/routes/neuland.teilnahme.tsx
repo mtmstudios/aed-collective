@@ -26,7 +26,7 @@ function TeilnahmePage() {
       <PageHeader
         eyebrow="neuland"
         titel="Teilnahme"
-        intro="Kostenfrei, digital und offen für alle Studierenden und Absolvent:innen baden-württembergischer Hochschulen."
+        intro="Kostenfrei, digital und offen für Studierende und Absolvent:innen aller Hochschulen, Akademien und Universitäten – bis 28 Jahre, disziplinübergreifend."
       />
       <div className="shell pb-24">
         <div className="grid gap-10 md:grid-cols-12">
@@ -43,18 +43,17 @@ function TeilnahmePage() {
               <p className="eyebrow">
                 {wettbewerbStatus.offen ? "Einreichung offen" : "Einreichung geschlossen"}
               </p>
-              <p className="mt-3 font-display text-2xl">
-                Einsendeschluss {wettbewerbStatus.einsendeschlussLabel}
-              </p>
+              <p className="mt-3 font-display text-2xl">Jahrgang {wettbewerbStatus.jahrgang}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{wettbewerbStatus.hinweis}</p>
               <p className="mt-3 text-sm text-muted-foreground">
-                Du brauchst: Projektbeschreibung (max. 2.000 Zeichen), bis zu zehn Abbildungen und
-                einen kurzen Lebenslauf.
+                Du brauchst: eine Darstellung der Arbeit auf max. zehn Seiten als PDF (max. 10 MB) –
+                mit Name, Anschrift, Hochschule, Titel und Kategorie auf der Titelseite.
               </p>
               <a
-                href="mailto:info@aed-stuttgart.de?subject=neuland%20Einreichung"
+                href="mailto:info@aed-stuttgart.de?subject=neuland%20Newsletter"
                 className="btn-solid mt-6 w-full"
               >
-                Arbeit einreichen
+                Zum nächsten Jahrgang informiert werden
               </a>
             </div>
           </aside>

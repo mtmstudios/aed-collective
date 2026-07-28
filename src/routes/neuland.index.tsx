@@ -9,10 +9,10 @@ export const Route = createFileRoute("/neuland/")({
       {
         name: "description",
         content:
-          "neuland zeichnet herausragende Abschlussarbeiten aus Architektur, Engineering, Produkt-, Kommunikationsdesign und Szenografie in Baden-Württemberg aus.",
+          "aed neuland – der interdisziplinäre Nachwuchswettbewerb für Studierende und Absolvent:innen bis 28 Jahre. Fünf Kategorien, 2.000 € je 1. Preis, gefördert von der Karl Schlecht Stiftung.",
       },
       { property: "og:title", content: "neuland – Nachwuchswettbewerb des aed e.V." },
-      { property: "og:description", content: "Der Nachwuchswettbewerb für Gestaltung in Baden-Württemberg." },
+      { property: "og:description", content: "Der interdisziplinäre Nachwuchswettbewerb für junge Gestalter:innen." },
       { property: "og:url", content: "/neuland" },
     ],
     links: [{ rel: "canonical", href: "/neuland" }],
@@ -20,14 +20,8 @@ export const Route = createFileRoute("/neuland/")({
   component: NeulandIndex,
 });
 
-function tageBis(iso: string) {
-  const diff = new Date(iso).getTime() - Date.now();
-  return Math.max(0, Math.ceil(diff / 86_400_000));
-}
-
 function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
-  const tage = tageBis(wettbewerbStatus.einsendeschluss);
 
   return (
     <>
@@ -40,22 +34,22 @@ function NeulandIndex() {
           }}
         >
           <span aria-hidden="true">●</span>
-          {wettbewerbStatus.offen
-            ? `Einreichung offen – noch ${tage} Tage bis ${wettbewerbStatus.einsendeschlussLabel}`
-            : "Einreichung derzeit geschlossen"}
+          {wettbewerbStatus.offen ? "Einreichung offen" : "Einreichung derzeit geschlossen"}
         </p>
         <h1 className="display-xl mt-8">neuland</h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl">
-          Du hast deine Abschlussarbeit fertig und findest, sie hat mehr verdient als einen Ordner
-          auf der Festplatte? neuland zeichnet die besten Arbeiten aus Baden-Württemberg aus – in
-          fünf Kategorien, mit 2.000 € je 1. Preis.
+          Du hast eine Abschluss-, Semester- oder freie Arbeit, die mehr verdient hat als einen
+          Ordner auf der Festplatte? neuland zeichnet die besten Arbeiten junger Gestalter:innen
+          aus – in fünf Kategorien, mit 2.000 € je 1. Preis. Teilnahmeberechtigt sind Studierende
+          und Absolvent:innen aller Hochschulen bis 28 Jahre.
         </p>
+        <p className="mt-4 max-w-2xl text-sm text-muted-foreground">{wettbewerbStatus.hinweis}</p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Link to="/neuland/teilnahme" className="btn-solid">
-            Jetzt einreichen
-          </Link>
-          <Link to="/neuland/wettbewerb" className="btn-outline">
+          <Link to="/neuland/wettbewerb" className="btn-solid">
             Wettbewerb im Detail
+          </Link>
+          <Link to="/neuland/teilnahme" className="btn-outline">
+            Teilnahmebedingungen
           </Link>
         </div>
       </section>
@@ -102,15 +96,16 @@ function NeulandIndex() {
           <div className="md:col-span-9 max-w-2xl">
             <p className="text-lg leading-relaxed">
               neuland ist ein Projekt des aed e.V. – und der Verein hat mehr zu bieten als einen
-              Wettbewerb: Vorträge, Exkursionen und Feste, bei denen du genau die Leute triffst, die
-              deine Arbeit interessiert. Für Studierende kostet die Mitgliedschaft 30 € im Jahr.
+              Wettbewerb: Vorträge, Führungen, Studiobesuche und Feste, bei denen du genau die Leute
+              triffst, die deine Arbeit interessiert. Mit der Reihe „jung &amp; hungrig“ besuchen
+              wir regelmäßig aufstrebende junge Studios.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/programm" className="btn-outline">
                 Vereinsprogramm ansehen
               </Link>
               <Link to="/mitglied-werden" className="btn-outline">
-                Studi-Mitgliedschaft
+                Mitglied werden
               </Link>
             </div>
           </div>

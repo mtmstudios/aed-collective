@@ -53,7 +53,10 @@ export function SiteFooter() {
 
       <div className="border-t border-line">
         <div className="shell flex flex-wrap items-center justify-between gap-4 py-6 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} aed e.V. – Architecture Engineering Design, Stuttgart</p>
+          <p className="flex items-center gap-3">
+            <img src="/aed-logo.png" alt="" width={500} height={276} className="h-5 w-auto opacity-80" />
+            © {new Date().getFullYear()} aed e.V. – Architecture Engineering Design, Stuttgart
+          </p>
           <div className="flex gap-6">
             <Link to="/impressum" className="link-brand">Impressum</Link>
             <Link to="/datenschutz" className="link-brand">Datenschutz</Link>

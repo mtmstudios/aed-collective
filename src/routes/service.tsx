@@ -34,7 +34,7 @@ function ServicePage() {
           {downloads.map((d) => (
             <li key={d.titel}>
               <a
-                href="#"
+                href={d.url}
                 className="group flex flex-wrap items-center justify-between gap-4 border-b border-line py-6 transition-colors hover:bg-muted"
               >
                 <span className="max-w-2xl">

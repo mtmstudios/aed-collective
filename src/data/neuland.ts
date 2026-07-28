@@ -1,309 +1,202 @@
+// Inhalte aus dem Crawl von aed-neuland.de (Stand 28.07.2026).
+// Kategorien, Kriterien, Preise, Jury und Teilnahmebedingungen sind Originalinhalte des Wettbewerbs 2025.
+
+export { projekte, type Projekt } from "./projekte";
+
 export const wettbewerbStatus = {
-  offen: true,
-  jahrgang: "2027",
-  einsendeschluss: "2027-01-31T23:59:00+01:00",
-  einsendeschlussLabel: "31. Januar 2027",
+  offen: false,
+  jahrgang: "2025",
+  hinweis:
+    "aed neuland 2025 ist abgeschlossen – über 250 Einreichungen, 25 Preisträger:innen. Der nächste Jahrgang wird über Newsletter und Instagram angekündigt.",
 };
 
+// Die fünf Kategorien des Wettbewerbs (Original)
 export const kategorien = [
-  { key: "architektur", name: "Architektur", text: "Entwürfe und Abschlussarbeiten aus Hochbau, Innenarchitektur und Stadtplanung." },
-  { key: "engineering", name: "Engineering", text: "Tragwerk, Bauphysik, Fassade, Nachhaltigkeit – Ingenieurleistungen mit gestalterischem Anspruch." },
-  { key: "produktdesign", name: "Produktdesign", text: "Objekte, Systeme und Serien vom Prototyp bis zur Serienreife." },
-  { key: "kommunikationsdesign", name: "Kommunikationsdesign", text: "Grafik, Typografie, Webdesign, Editorial und digitale Interfaces." },
-  { key: "szenografie", name: "Szenografie", text: "Ausstellungen, Bühnen, Markenräume und temporäre Architekturen." },
+  {
+    key: "architecture-engineering",
+    name: "Architecture + Engineering",
+    text: "Entwürfe und Abschlussarbeiten aus Architektur, Ingenieurwesen und Tragwerksplanung – vom Mikrohaus bis zur schwimmenden Infrastruktur.",
+  },
+  {
+    key: "exhibition-interior",
+    name: "Exhibition Design + Interior Design",
+    text: "Ausstellungsgestaltung und Innenarchitektur – Räume, die vermitteln, orientieren und Haltung zeigen.",
+  },
+  {
+    key: "product-design",
+    name: "Product Design",
+    text: "Objekte, Systeme und Serien vom Prototyp bis zur Serienreife – nachhaltig gedacht und nutzerzentriert gestaltet.",
+  },
+  {
+    key: "communication-design",
+    name: "Communication Design",
+    text: "Kampagnen, Publikationen, Leitsysteme und visuelle Identitäten – Kommunikation mit gesellschaftlicher Relevanz.",
+  },
+  {
+    key: "interaction-design",
+    name: "Interaction Design",
+    text: "Interfaces, Apps, AR/VR und interaktive Installationen – Gestaltung an der Schnittstelle von Mensch und Technologie.",
+  },
 ];
 
+// Die acht Auswahlkriterien (Original aus den Teilnahmebedingungen)
 export const kriterien = [
-  "Gestalterische Qualität und Eigenständigkeit der Arbeit",
-  "Konzeptionelle Klarheit und Nachvollziehbarkeit",
-  "Relevanz der Fragestellung für Gesellschaft und Disziplin",
-  "Innovationsgrad in Methode, Material oder Technologie",
-  "Nachhaltigkeit und Umgang mit Ressourcen",
-  "Handwerkliche und technische Umsetzung",
-  "Qualität der Präsentation und Vermittlung",
-  "Interdisziplinäres Denken über die eigene Fachgrenze hinaus",
+  "Idee",
+  "Funktion, Gebrauchswert und Benutzerführung",
+  "Technische Realisierbarkeit",
+  "Wirtschaftliche Verwertbarkeit",
+  "Interdisziplinärer Ansatz",
+  "Qualität der Präsentation",
+  "Technisch-funktionale Innovation",
+  "Berücksichtigung von Nachhaltigkeitsaspekten",
 ];
 
+// Echte Preisstruktur: je Kategorie ein 1. Preis (2.000 €) + bis zu vier Auszeichnungen
 export const preise = [
-  { platz: "1. Preis", dotierung: "2.000 €", info: "je Kategorie" },
-  { platz: "2. Preis", dotierung: "1.000 €", info: "je Kategorie" },
-  { platz: "Anerkennung", dotierung: "Urkunde", info: "nach Entscheidung der Jury" },
+  {
+    platz: "1. Preis",
+    dotierung: "2.000 €",
+    info: "je Kategorie – gespendet von Atelier Brückner, PHOENIX, Rat für Formgebung, studiokurbos und Werner Sobek",
+  },
+  {
+    platz: "Auszeichnung",
+    dotierung: "Urkunde",
+    info: "bis zu vier Auszeichnungen je Kategorie, mit Jurystatement und Projektseite",
+  },
 ];
 
 export const sponsoren = [
   { name: "Karl Schlecht Stiftung", rolle: "Hauptförderer" },
-  { name: "Atelier Brückner", rolle: "Kategorie Szenografie" },
-  { name: "PHOENIX", rolle: "Kategorie Produktdesign" },
-  { name: "Rat für Formgebung", rolle: "Kategorie Kommunikationsdesign" },
-  { name: "studiokurbos", rolle: "Kategorie Architektur" },
-  { name: "Werner Sobek", rolle: "Kategorie Engineering" },
+  { name: "Atelier Brückner", rolle: "Preisgeldsponsor" },
+  { name: "PHOENIX", rolle: "Preisgeldsponsor" },
+  { name: "Rat für Formgebung", rolle: "Preisgeldsponsor" },
+  { name: "studiokurbos", rolle: "Preisgeldsponsor" },
+  { name: "Werner Sobek", rolle: "Preisgeldsponsor" },
 ];
 
+// Termine des abgeschlossenen Jahrgangs 2025
 export const termine = [
-  { datum: "1. Oktober 2026", text: "Ausschreibung startet, Einreichung öffnet" },
-  { datum: "31. Januar 2027", text: "Einsendeschluss" },
-  { datum: "März 2027", text: "Jurysitzung in Stuttgart" },
-  { datum: "Mai 2027", text: "Preisverleihung und Ausstellungseröffnung" },
+  { datum: "31. März 2025", text: "Einsendeschluss" },
+  { datum: "Ende April 2025", text: "Jurysitzung in Stuttgart" },
+  { datum: "3. Juli 2025", text: "Preisverleihung in der Architektenkammer Baden-Württemberg" },
 ];
 
+// Teilnahmebedingungen 2025 (Original, redaktionell gekürzt)
 export const teilnahmebedingungen = [
   {
-    titel: "1. Veranstalter",
-    text: "Veranstalter des Nachwuchswettbewerbs neuland ist der aed e.V., Olgastraße 138, 70180 Stuttgart. Der Wettbewerb wird von der Karl Schlecht Stiftung sowie weiteren Förderern unterstützt.",
+    titel: "1. Allgemeines",
+    text: "Der aed lobt mit Unterstützung der Karl Schlecht Stiftung und weiterer Förder:innen den „neuland“-Förderpreis aus, einen Nachwuchswettbewerb für junge Gestalter:innen. Ziel ist es, innovative und nachhaltige Gestaltung zu fördern, die sich durch größtmögliche ökonomische wie ökologische Qualität auszeichnet, funktional und nutzerfreundlich ist und höchsten ästhetischen Anforderungen entspricht. Im Mittelpunkt stehen immer der Mensch und der gesellschaftliche Nutzen. Der Wettbewerb ist bewusst disziplinübergreifend und nicht auf bestimmte Fachgebiete oder Hochschulen beschränkt.",
   },
   {
-    titel: "2. Teilnahmeberechtigung",
-    text: "Teilnehmen können Studierende und Absolventinnen und Absolventen von Hochschulen in Baden-Württemberg. Die eingereichte Arbeit darf zum Einsendeschluss nicht älter als zwei Jahre sein.",
+    titel: "2. Preise",
+    text: "In jeder der fünf Kategorien gibt es eine:n Gold-Preisträger:in mit einem Preisgeld von 2.000 Euro, gespendet von Atelier Brückner, PHOENIX, Rat für Formgebung, studiokurbos und Werner Sobek. Außerdem gibt es bis zu vier Anerkennungen pro Kategorie. Alle Preisträger:innen werden mit Jurystatements auf der Website vorgestellt – so können Studierende ihre ausgezeichneten Arbeiten in Bewerbungen verlinken.",
   },
   {
     titel: "3. Kategorien",
-    text: "Eingereicht werden kann in den Kategorien Architektur, Engineering, Produktdesign, Kommunikationsdesign und Szenografie. Die Jury kann eine Arbeit in eine andere Kategorie verschieben, wenn dies der Arbeit besser entspricht.",
+    text: "Der Förderpreis wird in fünf Kategorien vergeben: Architecture + Engineering, Exhibition Design + Interior Design, Product Design, Communication Design und Interaction Design.",
   },
   {
-    titel: "4. Einreichung",
-    text: "Die Einreichung erfolgt ausschließlich digital über das Online-Formular. Erforderlich sind eine Projektbeschreibung (max. 2.000 Zeichen), bis zu zehn Abbildungen sowie ein kurzer Lebenslauf.",
+    titel: "4. Auswahlkriterien",
+    text: "Bewertet werden: Idee, Funktion/Gebrauchswert/Benutzerführung, technische Realisierbarkeit, wirtschaftliche Verwertbarkeit, interdisziplinärer Ansatz, Qualität der Präsentation, technisch-funktionale Innovation sowie die Berücksichtigung von Nachhaltigkeitsaspekten.",
   },
   {
-    titel: "5. Fristen",
-    text: "Maßgeblich ist der Eingang der vollständigen Unterlagen bis zum Einsendeschluss. Verspätet eingehende Einreichungen werden nicht berücksichtigt.",
+    titel: "5. Jury",
+    text: "Über die Vergabe entscheidet eine unabhängige Jury aus rund 20 anerkannten Fachleuten aus Architektur, Ingenieurwesen und Design. Die Beratungen sind nicht öffentlich, die Jury entscheidet mit einfacher Stimmenmehrheit. Ihre Entscheidung ist nicht anfechtbar; der Rechtsweg ist ausgeschlossen.",
   },
   {
-    titel: "6. Kosten",
-    text: "Die Teilnahme ist kostenfrei. Kosten für die Erstellung der Unterlagen tragen die Teilnehmenden selbst.",
+    titel: "6. Veranstalter und Förderer",
+    text: "Veranstalter ist der aed – Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V. Hauptförderer ist die Karl Schlecht Stiftung, eine gemeinnützige Stiftung mit Fokus auf „Good Leadership“, die rund 100 Projekte mit jährlich etwa 8 Millionen Euro fördert.",
   },
   {
-    titel: "7. Jury und Entscheidung",
-    text: "Die Jury besteht aus Fachleuten der fünf Kategorien. Sie entscheidet unabhängig und abschließend. Der Rechtsweg ist ausgeschlossen.",
+    titel: "7. Kosten",
+    text: "Für die Teilnahme am Nachwuchswettbewerb „neuland“ wird keine Gebühr erhoben.",
   },
   {
-    titel: "8. Preise",
-    text: "Je Kategorie werden ein 1. Preis (2.000 €) und ein 2. Preis (1.000 €) vergeben. Die Jury kann zusätzlich Anerkennungen aussprechen.",
+    titel: "8. Einzureichende Unterlagen",
+    text: "Jede Arbeit wird online registriert; für jede eingereichte Arbeit ist eine separate Anmeldung nötig. Die Bewerbung wird auf maximal zehn Seiten als PDF (max. 10 MB) erklärt. Auf der Titelseite: Name, Anschrift, Hochschule, Titel der Arbeit und Kategorie. Links zu Filmen oder Websites können eingearbeitet werden; Modelle oder weitere Unterlagen sind nicht erforderlich.",
   },
   {
-    titel: "9. Nutzungsrechte",
-    text: "Mit der Einreichung räumen die Teilnehmenden dem Veranstalter das einfache, zeitlich unbefristete Recht ein, die eingereichten Materialien zur Dokumentation, Ausstellung und Pressearbeit des Wettbewerbs zu nutzen. Das Urheberrecht verbleibt bei den Teilnehmenden.",
+    titel: "9. Teilnahmevoraussetzungen",
+    text: "Teilnahmeberechtigt sind Studierende und Absolvent:innen von Hochschulen, Akademien und Universitäten, die zum Einsendeschluss nicht älter als 28 Jahre sind. Eingereicht werden können Abschlussarbeiten ebenso wie Semesterarbeiten und freie Arbeiten.",
   },
   {
-    titel: "10. Datenschutz",
-    text: "Personenbezogene Daten werden ausschließlich zur Durchführung des Wettbewerbs verarbeitet und nicht an Dritte weitergegeben, die nicht an der Durchführung beteiligt sind.",
+    titel: "10. Termine",
+    text: "Jahrgang 2025: Einsendeschluss 31. März 2025, Jurysitzung Ende April 2025, Preisverleihung am 3. Juli 2025 in der Architektenkammer Baden-Württemberg.",
   },
   {
-    titel: "11. Schlussbestimmungen",
-    text: "Mit der Einreichung werden diese Teilnahmebedingungen anerkannt. Der Veranstalter behält sich vor, den Wettbewerb bei zu geringer Beteiligung abzusagen oder zu verschieben.",
+    titel: "11. Kontakt",
+    text: "aed e.V., Olgastraße 138, 70180 Stuttgart · +49 160 8894377 · info@aed-stuttgart.de",
   },
 ];
 
+// Die echte Jury 2025 (21 Mitglieder)
 export const jury2025 = [
-  { name: "Petra Kiedaisch", rolle: "av edition · Vorsitz Jury" },
-  { name: "Jörg Olp", rolle: "Szenografie" },
-  { name: "Nicole Kurbos", rolle: "studiokurbos" },
-  { name: "Uli Dietzold", rolle: "Design" },
-  { name: "Andreas Uebele", rolle: "büro uebele" },
-  { name: "Stefan Behnisch", rolle: "Behnisch Architekten" },
-  { name: "Christine Müller", rolle: "Engineering" },
-  { name: "Peter Milla", rolle: "Milla & Partner" },
-  { name: "Susanne Groos", rolle: "Kommunikation" },
-  { name: "Stephan Trüby", rolle: "IGmA, Universität Stuttgart" },
-  { name: "Johanna Neves Pimenta", rolle: "aed e.V." },
-  { name: "Sara Dahme", rolle: "aed e.V." },
-  { name: "Frank Heinlein", rolle: "Werner Sobek AG" },
-  { name: "Thomas Auer", rolle: "Transsolar" },
-  { name: "Sebastian Herkner", rolle: "Studio Sebastian Herkner" },
-  { name: "Ulrike Brandi", rolle: "Lichtplanung" },
-  { name: "Anna Heringer", rolle: "Architektur" },
-  { name: "Karin Schmid", rolle: "Stadtplanung" },
-  { name: "Robert Klanten", rolle: "gestalten" },
-  { name: "Verena Mörkl", rolle: "Szenografie" },
-  { name: "Jan Knikker", rolle: "MVRDV" },
+  { name: "Silvia Olp", rolle: "Initiatorin & Management aed neuland, aed Beirat" },
+  { name: "Olaf Barski", rolle: "Barski Design, Industriedesigner", link: "https://www.barskidesign.com" },
+  { name: "Kai Bierich", rolle: "Architekt" },
+  { name: "Prof. Lucio Blandini", rolle: "Bauingenieur / Architekt, ILEK Universität Stuttgart", link: "https://www.ilek.uni-stuttgart.de" },
+  { name: "Lutz Dietzold", rolle: "CEO, Rat für Formgebung", link: "https://www.gdc.de" },
+  { name: "Prof. Rahel Flechtner", rolle: "Design Research + Interaction Design, HfG Schwäbisch Gmünd" },
+  { name: "May-Britt Frank-Grosse", rolle: "Chefredakteurin, baunetz interior|design", link: "https://www.baunetz-id.de" },
+  { name: "Dina Gallo", rolle: "Industriedesignerin, TRUMPF Leitung Designmanagement" },
+  { name: "Ben Kauffmann", rolle: "Architekt, KTP Architekten", link: "https://www.ktp-architekten.de" },
+  { name: "Moritz Kemper", rolle: "UX/UI Principal Designer, PHOENIX", link: "https://www.phoenixdesign.com" },
+  { name: "Dr. Petra Kiedaisch", rolle: "Geschäftsführerin, avedition", link: "https://www.avedition.de" },
+  { name: "Andreas Kurbos", rolle: "Designer und Geschäftsführer, studiokurbos", link: "https://www.kurbos.com" },
+  { name: "Nils Holger Moormann", rolle: "Art Direction", link: "https://nhm-ad.de" },
+  { name: "Johanna Neves Pimenta", rolle: "Chefredakteurin, md", link: "https://www.md-mag.com" },
+  { name: "Peter Scheerer", rolle: "Kommunikationsdesigner, SEO, SEA", link: "https://www.peterscheerer.com" },
+  { name: "Dr. Katrin Schlecht", rolle: "Vorstandsvorsitzende, Karl Schlecht Stiftung", link: "https://www.karlschlechtstiftung.de" },
+  { name: "Prof. Jürgen Späth", rolle: "Interaction Designer" },
+  { name: "Petra Stephan", rolle: "Chefredakteurin, AIT", link: "https://ait-xia-dialog.de" },
+  { name: "Joachim Stumpp", rolle: "Geschäftsführer und Architekt, Material Bank Studio", link: "https://www.materialbank.eu" },
+  { name: "Prof. Andreas Uebele", rolle: "Kommunikationsdesigner, büro uebele", link: "https://www.uebele.com" },
+  { name: "Lisa Zech", rolle: "Kommunikationsdesignerin, STUDIO LZ", link: "https://studio-lz.de" },
 ];
-
-export type Projekt = {
-  slug: string;
-  titel: string;
-  autor: string;
-  hochschule: string;
-  kategorie: string;
-  preis: string;
-  jahr: string;
-  jurystatement: string;
-  beschreibung: string;
-};
 
 export const jahrgaenge = ["2025", "2023", "2021", "2019"];
 
-export const projekte: Projekt[] = [
-  {
-    slug: "sedimente",
-    titel: "Sedimente – Weiterbauen am Kesselrand",
-    autor: "Lena Aichele",
-    hochschule: "Universität Stuttgart",
-    kategorie: "Architektur",
-    preis: "1. Preis",
-    jahr: "2025",
-    jurystatement:
-      "Eine Arbeit, die den Bestand nicht als Hindernis, sondern als Ausgangsmaterial versteht. Die Jury überzeugte die präzise Lesart des Ortes und die Selbstverständlichkeit der baulichen Setzung.",
-    beschreibung:
-      "Die Arbeit untersucht die Hanglagen am Stuttgarter Kesselrand und entwickelt eine Strategie des Weiterbauens: additive Holzstrukturen, die bestehende Stützmauern und Terrassen aufnehmen und zu Wohnraum verdichten.",
-  },
-  {
-    slug: "kalter-beton",
-    titel: "Kalter Beton – Rezyklate im Tragwerk",
-    autor: "Jonas Wendland",
-    hochschule: "Hochschule für Technik Stuttgart",
-    kategorie: "Engineering",
-    preis: "1. Preis",
-    jahr: "2025",
-    jurystatement:
-      "Ingenieurarbeit, die nicht bei der Berechnung stehen bleibt: Der Entwurf macht Materialkreisläufe konstruktiv sichtbar und formuliert daraus eine eigene Ästhetik.",
-    beschreibung:
-      "Eine Untersuchung zu rezyklierten Zuschlagstoffen in weitgespannten Deckensystemen – inklusive Prüfkörperreihe, CO₂-Bilanz und einem gebauten Maßstabsmodell.",
-  },
-  {
-    slug: "tara",
-    titel: "TARA – Sitzmöbel aus Reststoffen",
-    autor: "Mira Özdemir",
-    hochschule: "HfG Schwäbisch Gmünd",
-    kategorie: "Produktdesign",
-    preis: "1. Preis",
-    jahr: "2025",
-    jurystatement:
-      "Ein Möbel, das seine Herkunft nicht kaschiert. Präzise Fügung, klare Sprache, produktionsreif gedacht.",
-    beschreibung:
-      "Ein Stapelstuhl aus Pressplatten industrieller Restfasern, ohne Klebstoff gefügt und vollständig demontierbar.",
-  },
-  {
-    slug: "randnotizen",
-    titel: "Randnotizen – Typografie am Bahnsteig",
-    autor: "Paul Reichert",
-    hochschule: "ABK Stuttgart",
-    kategorie: "Kommunikationsdesign",
-    preis: "1. Preis",
-    jahr: "2025",
-    jurystatement:
-      "Eine leise, aber konsequente Arbeit. Sie zeigt, wie viel Orientierung entsteht, wenn Typografie ernst genommen wird.",
-    beschreibung:
-      "Ein Leitsystem für Regionalbahnhöfe, das mit einer eigens gezeichneten Schrift und reduzierter Signaletik arbeitet.",
-  },
-  {
-    slug: "nachtschicht",
-    titel: "Nachtschicht – Szenografie einer Fabrik",
-    autor: "Ida Brunnbauer",
-    hochschule: "Universität Stuttgart",
-    kategorie: "Szenografie",
-    preis: "1. Preis",
-    jahr: "2025",
-    jurystatement:
-      "Die Arbeit inszeniert Industriegeschichte ohne Nostalgie und findet dafür einen überzeugenden räumlichen Rhythmus.",
-    beschreibung:
-      "Ein Ausstellungskonzept für eine stillgelegte Textilfabrik: Licht, Ton und Bewegung führen durch die Schichten der Nutzung.",
-  },
-  {
-    slug: "zwischenraum",
-    titel: "Zwischenraum – Wohnen über dem Parkdeck",
-    autor: "Tim Schaible",
-    hochschule: "Hochschule für Technik Stuttgart",
-    kategorie: "Architektur",
-    preis: "2. Preis",
-    jahr: "2025",
-    jurystatement: "Ein pragmatischer und zugleich mutiger Vorschlag zur Nachverdichtung.",
-    beschreibung: "Aufstockung innerstädtischer Parkhäuser mit leichten Wohnmodulen in Holzbauweise.",
-  },
-  {
-    slug: "faserleicht",
-    titel: "Faserleicht",
-    autor: "Sophie Kern",
-    hochschule: "Universität Stuttgart",
-    kategorie: "Engineering",
-    preis: "2. Preis",
-    jahr: "2025",
-    jurystatement: "Konsequente Leichtbauforschung mit sichtbarem Anwendungsbezug.",
-    beschreibung: "Naturfaserverstärkte Schalentragwerke für temporäre Bauten.",
-  },
-  {
-    slug: "stapelware",
-    titel: "Stapelware",
-    autor: "Nils Faber",
-    hochschule: "HfG Schwäbisch Gmünd",
-    kategorie: "Produktdesign",
-    preis: "2. Preis",
-    jahr: "2025",
-    jurystatement: "Sympathisch unaufgeregt und im Detail sehr sorgfältig.",
-    beschreibung: "Ein modulares Aufbewahrungssystem für kleine Wohnungen.",
-  },
-  {
-    slug: "leseordnung",
-    titel: "Leseordnung",
-    autor: "Hanna Vogt",
-    hochschule: "ABK Stuttgart",
-    kategorie: "Kommunikationsdesign",
-    preis: "2. Preis",
-    jahr: "2025",
-    jurystatement: "Ein editorisches Konzept mit klarer Handschrift.",
-    beschreibung: "Ein Zeitschriftenformat für Architekturkritik im regionalen Kontext.",
-  },
-  {
-    slug: "bodenprobe",
-    titel: "Bodenprobe",
-    autor: "Elias Traub",
-    hochschule: "Universität Stuttgart",
-    kategorie: "Szenografie",
-    preis: "2. Preis",
-    jahr: "2025",
-    jurystatement: "Eine Installation, die komplexe Daten körperlich erfahrbar macht.",
-    beschreibung: "Eine begehbare Installation über Bodenversiegelung in der Region Stuttgart.",
-  },
-  {
-    slug: "haltestelle",
-    titel: "Haltestelle – Öffentlicher Raum als Möbel",
-    autor: "Marie Lang",
-    hochschule: "HfG Schwäbisch Gmünd",
-    kategorie: "Produktdesign",
-    preis: "1. Preis",
-    jahr: "2023",
-    jurystatement: "Eine Arbeit, die Stadtmöblierung wieder als gestalterische Aufgabe begreift.",
-    beschreibung: "Ein Wartehäuschen-System aus wenigen, robusten Bauteilen.",
-  },
-  {
-    slug: "grundwasser",
-    titel: "Grundwasser",
-    autor: "Felix Baur",
-    hochschule: "Universität Stuttgart",
-    kategorie: "Architektur",
-    preis: "1. Preis",
-    jahr: "2023",
-    jurystatement: "Ein sensibler Umgang mit einer verletzlichen Landschaft.",
-    beschreibung: "Ein Wasserwerk als öffentlicher Ort.",
-  },
-  {
-    slug: "papierform",
-    titel: "Papierform",
-    autor: "Clara Wieland",
-    hochschule: "ABK Stuttgart",
-    kategorie: "Kommunikationsdesign",
-    preis: "1. Preis",
-    jahr: "2021",
-    jurystatement: "Handwerklich herausragend und konzeptionell stringent.",
-    beschreibung: "Eine Buchreihe über verschwundene Stuttgarter Bauten.",
-  },
-  {
-    slug: "tragluft",
-    titel: "Tragluft",
-    autor: "Simon Rall",
-    hochschule: "Hochschule für Technik Stuttgart",
-    kategorie: "Engineering",
-    preis: "1. Preis",
-    jahr: "2019",
-    jurystatement: "Eine überzeugende Verbindung von Berechnung und Experiment.",
-    beschreibung: "Pneumatische Tragwerke für Zwischennutzungen.",
-  },
-];
-
+// Echte Kennzahlen des Jahrgangs 2025
 export const kennzahlen = [
-  { wert: "250+", label: "Einreichungen seit 2019" },
+  { wert: "250+", label: "Einreichungen 2025" },
+  { wert: "25", label: "Preisträger:innen 2025" },
   { wert: "5", label: "Kategorien" },
   { wert: "2.000 €", label: "je 1. Preis" },
-  { wert: "21", label: "Jurymitglieder" },
 ];
 
 export const karlSchlechtText =
-  "Die Karl Schlecht Stiftung fördert neuland als Hauptförderer. Ihr Anliegen ist es, junge Menschen darin zu bestärken, Verantwortung zu übernehmen und ihre Fähigkeiten für eine gute Gesellschaft einzusetzen. Gestaltung ist dabei kein Selbstzweck, sondern ein Werkzeug: Wer Räume, Objekte und Botschaften entwirft, prägt, wie wir zusammenleben.";
+  "Die Karl Schlecht Stiftung ist eine gemeinnützige Stiftung mit Fokus auf „Good Leadership“. Ihre Leitidee ist die Verbesserung von Führung in Business und Gesellschaft durch humanistische Werte. Sie fördert die ganzheitliche, wertebasierte Persönlichkeitsentwicklung junger Menschen und angehender Führungskräfte – derzeit rund 100 Fremdprojekte sowie eigene Projekte mit jährlich etwa 8 Millionen Euro. Gegründet wurde die Stiftung 1998 von Dipl.-Ing. Karl Schlecht, dem Gründer des Betonpumpenherstellers Putzmeister. Mit ihrer Unterstützung wurde aed neuland 2025 bereits zum zehnten Mal ausgelobt.";
+
+// Echtes Pressekit (Dateien der Bestands-Website)
+export const presseKit = [
+  {
+    titel: "Pressemitteilung Preisverleihung 2025",
+    typ: "PDF, 0,4 MB",
+    url: "https://www.aed-neuland.de/app/download/6462715266/2025+PM+Preisverleihung+aed+neuland.pdf",
+  },
+  {
+    titel: "Banner quadratisch, Farbe (PNG, RGB)",
+    typ: "PNG, 42 KB",
+    url: "https://www.aed-neuland.de/app/download/6462716866/aed-neuland_square_color.png",
+  },
+  {
+    titel: "Banner quer mit Jahreszahl (JPG, RGB)",
+    typ: "JPG, 1,1 MB",
+    url: "https://www.aed-neuland.de/app/download/6462717666/aed-neuland-banner_2025_3_big_aed.jpg",
+  },
+  {
+    titel: "Anzeige DIN quer, schmal (PDF, CMYK)",
+    typ: "PDF, 0,9 MB",
+    url: "https://www.aed-neuland.de/app/download/6462718266/aed_neuland_anzeige_DINquer_rz_ps_2025-schmal.pdf",
+  },
+  {
+    titel: "Anzeige DIN quer (PDF, CMYK)",
+    typ: "PDF, 0,9 MB",
+    url: "https://www.aed-neuland.de/app/download/6462718866/aed_neuland_anzeige_DINquer_rz_ps_2025.pdf",
+  },
+  {
+    titel: "Anzeige groß, Hochformat (PDF, CMYK)",
+    typ: "PDF, 0,7 MB",
+    url: "https://www.aed-neuland.de/app/download/6462720066/aed_neuland_anzeige_form_gro%C3%9F_rz_ps_2025_RZ_var4_cradle.pdf",
+  },
+];

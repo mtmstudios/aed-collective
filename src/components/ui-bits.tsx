@@ -1,14 +1,34 @@
-export function LogoGrid({ items }: { items: readonly string[] }) {
+type LogoItem = string | { name: string; url?: string };
+
+export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
   return (
     <ul className="grid grid-cols-2 border-l border-t border-line sm:grid-cols-3 lg:grid-cols-4">
-      {items.map((name) => (
-        <li
-          key={name}
-          className="grayscale-hover flex min-h-24 items-center justify-center border-r border-b border-line px-4 py-6 text-center font-display text-sm hover:text-[var(--brand-deep)]"
-        >
-          {name}
-        </li>
-      ))}
+      {items.map((item) => {
+        const name = typeof item === "string" ? item : item.name;
+        const url = typeof item === "string" ? undefined : item.url;
+        const inner = (
+          <span className="font-display text-sm">{name}</span>
+        );
+        return (
+          <li
+            key={name}
+            className="grayscale-hover flex min-h-24 border-r border-b border-line text-center hover:text-[var(--brand-deep)]"
+          >
+            {url ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className="flex w-full items-center justify-center px-4 py-6"
+              >
+                {inner}
+              </a>
+            ) : (
+              <span className="flex w-full items-center justify-center px-4 py-6">{inner}</span>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

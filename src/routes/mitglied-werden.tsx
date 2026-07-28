@@ -22,18 +22,25 @@ export const Route = createFileRoute("/mitglied-werden")({
 });
 
 const nutzen = [
-  "Freier Eintritt zu allen Veranstaltungen des Jahresprogramms",
+  "Rund 20 Veranstaltungen im Jahr: Vorträge, Führungen, Studiobesuche, Filme und Feste",
   "Zugang zu Exkursionen und Führungen mit begrenzter Teilnehmerzahl",
   "Netzwerk aus über 400 Personen- und rund 80 Fördermitgliedern",
   "Einladung zum Sommerfest und zur Preisverleihung neuland",
   "Newsletter mit Terminen, Wettbewerben und Ausschreibungen",
-  "Unterstützung der Nachwuchsförderung in Baden-Württemberg",
+  "Unterstützung der Nachwuchsförderung – u.a. über den Wettbewerb neuland",
 ];
 
+const beitrittsPdf = "https://www.aed-stuttgart.de/app/download/8616515663/aed_Mitglied+werden+%282025%29.pdf";
+
 const beitraege = [
-  { typ: "Personenmitglied", preis: "120 € / Jahr", text: "Für alle, die dem Verein persönlich verbunden sind." },
-  { typ: "Studierende", preis: "30 € / Jahr", text: "Mit Immatrikulationsbescheinigung, bis 30 Jahre." },
-  { typ: "Fördermitglied", preis: "ab 750 € / Jahr", text: "Für Büros, Unternehmen und Institutionen inkl. Nennung." },
+  {
+    typ: "Einzelmitgliedschaft",
+    text: "Für alle, die Ideen teilen, Diskussionen anstoßen und Gestaltung aktiv mitprägen wollen.",
+  },
+  {
+    typ: "Fördermitgliedschaft",
+    text: "Für Büros, Unternehmen und Institutionen – inklusive Nennung auf der Mitgliederseite.",
+  },
 ];
 
 function MitgliedWerdenPage() {
@@ -76,17 +83,23 @@ function MitgliedWerdenPage() {
 
       <section className="shell rule-t py-12" aria-labelledby="beitraege">
         <h2 id="beitraege" className="display-md">
-          Beiträge
+          Mitgliedschaften
         </h2>
-        <ul className="mt-8 grid gap-6 md:grid-cols-3">
+        <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
               <h3 className="font-display text-xl">{b.typ}</h3>
-              <p className="mt-2 font-display text-2xl text-[var(--brand-deep)]">{b.preis}</p>
               <p className="mt-3 text-sm text-muted-foreground">{b.text}</p>
             </li>
           ))}
         </ul>
+        <p className="mt-6 text-sm text-muted-foreground">
+          Die aktuellen Mitgliedsbeiträge finden Sie in der{" "}
+          <a href={beitrittsPdf} className="underline link-brand">
+            Beitrittserklärung (PDF)
+          </a>
+          .
+        </p>
       </section>
 
       <section className="shell rule-t py-12 pb-24" aria-labelledby="formular">
@@ -157,7 +170,7 @@ function MitgliedWerdenPage() {
                 Das Beitrittsformular gibt es weiterhin als PDF zum Ausdrucken und Zurücksenden an die
                 Geschäftsstelle.
               </p>
-              <a href="#" className="btn-outline mt-4 w-full">Beitrittsformular (PDF)</a>
+              <a href={beitrittsPdf} className="btn-outline mt-4 w-full">Beitrittserklärung (PDF)</a>
             </div>
           </aside>
         </div>
