@@ -150,14 +150,11 @@ function Index() {
             ))}
           </ul>
           <div className="mt-12 flex flex-wrap gap-3">
-            <Link
-              to="/neuland"
-              className="inline-flex min-h-11 items-center rounded-full bg-brand px-6 font-display text-sm text-brand-foreground hover:opacity-85"
-            >
-              Zum Wettbewerb
+            <Link to="/neuland" className="btn-solid">
+              Hier geht es zum Wettbewerb
             </Link>
             <Link to="/neuland/gewinner" className="btn-outline">
-              Gewinner:innen
+              Gewinner:innen ansehen
             </Link>
           </div>
         </div>
@@ -171,12 +168,18 @@ function Index() {
           <LogoGrid items={partner} />
         </div>
         <p className="mt-8 text-sm text-muted-foreground">
-          Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.{" "}
-          <Link to="/mitglieder" className="underline link-brand">
-            Alle Mitglieder
-          </Link>
+          Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.
         </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link to="/mitglieder" className="btn-solid">
+            Alle Mitglieder ansehen
+          </Link>
+          <Link to="/mitglied-werden" className="btn-outline">
+            Jetzt Mitglied werden
+          </Link>
+        </div>
       </section>
+
     </>
   );
 }
