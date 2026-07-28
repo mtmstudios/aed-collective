@@ -79,19 +79,29 @@ function ProgrammPage() {
       </section>
 
       <section className="shell rule-t py-12" aria-labelledby="archiv-titel">
-        <button
-          type="button"
-          onClick={() => setArchivOffen((v) => !v)}
-          aria-expanded={archivOffen}
-          className="flex w-full items-center justify-between gap-4 py-4 text-left"
-        >
-          <h2 id="archiv-titel" className="display-md">
-            Archiv
-          </h2>
-          <span className="font-display text-sm">{archivOffen ? "schließen" : `${archiv.length} Termine`}</span>
-        </button>
+        <div className="flex flex-col items-start gap-6">
+          <div className="max-w-2xl">
+            <h2 id="archiv-titel" className="display-md">
+              Archiv
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              Vergangene Vorträge, Exkursionen und Feste zum Nachlesen.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setArchivOffen((v) => !v)}
+            aria-expanded={archivOffen}
+            className="btn-solid"
+          >
+            {archivOffen ? "Archiv schließen" : "Ins Archiv schauen"}
+            <span aria-hidden="true" className="font-display text-sm">
+              {archivOffen ? "−" : "+"}
+            </span>
+          </button>
+        </div>
         {archivOffen && (
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {archiv.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
