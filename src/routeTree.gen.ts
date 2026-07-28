@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServiceRouteImport } from './routes/service'
 import { Route as ReferentenRouteImport } from './routes/referenten'
+import { Route as NeulandRouteImport } from './routes/neuland'
 import { Route as MitgliederRouteImport } from './routes/mitglieder'
 import { Route as MitgliedWerdenRouteImport } from './routes/mitglied-werden'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -19,10 +20,13 @@ import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as VereinIndexRouteImport } from './routes/verein.index'
 import { Route as ProgrammIndexRouteImport } from './routes/programm.index'
+import { Route as NeulandIndexRouteImport } from './routes/neuland.index'
 import { Route as VereinVorstandRouteImport } from './routes/verein.vorstand'
 import { Route as VereinSatzungRouteImport } from './routes/verein.satzung'
 import { Route as VereinBeiratRouteImport } from './routes/verein.beirat'
 import { Route as ProgrammSlugRouteImport } from './routes/programm.$slug'
+import { Route as NeulandWettbewerbRouteImport } from './routes/neuland.wettbewerb'
+import { Route as NeulandTeilnahmeRouteImport } from './routes/neuland.teilnahme'
 
 const ServiceRoute = ServiceRouteImport.update({
   id: '/service',
@@ -32,6 +36,11 @@ const ServiceRoute = ServiceRouteImport.update({
 const ReferentenRoute = ReferentenRouteImport.update({
   id: '/referenten',
   path: '/referenten',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NeulandRoute = NeulandRouteImport.update({
+  id: '/neuland',
+  path: '/neuland',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MitgliederRoute = MitgliederRouteImport.update({
@@ -74,6 +83,11 @@ const ProgrammIndexRoute = ProgrammIndexRouteImport.update({
   path: '/programm/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NeulandIndexRoute = NeulandIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => NeulandRoute,
+} as any)
 const VereinVorstandRoute = VereinVorstandRouteImport.update({
   id: '/verein/vorstand',
   path: '/verein/vorstand',
@@ -94,6 +108,16 @@ const ProgrammSlugRoute = ProgrammSlugRouteImport.update({
   path: '/programm/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NeulandWettbewerbRoute = NeulandWettbewerbRouteImport.update({
+  id: '/wettbewerb',
+  path: '/wettbewerb',
+  getParentRoute: () => NeulandRoute,
+} as any)
+const NeulandTeilnahmeRoute = NeulandTeilnahmeRouteImport.update({
+  id: '/teilnahme',
+  path: '/teilnahme',
+  getParentRoute: () => NeulandRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -102,12 +126,16 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/mitglied-werden': typeof MitgliedWerdenRoute
   '/mitglieder': typeof MitgliederRoute
+  '/neuland': typeof NeulandRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
+  '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
   '/verein/beirat': typeof VereinBeiratRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
+  '/neuland/': typeof NeulandIndexRoute
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
 }
@@ -120,10 +148,13 @@ export interface FileRoutesByTo {
   '/mitglieder': typeof MitgliederRoute
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
+  '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
   '/verein/beirat': typeof VereinBeiratRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
+  '/neuland': typeof NeulandIndexRoute
   '/programm': typeof ProgrammIndexRoute
   '/verein': typeof VereinIndexRoute
 }
@@ -135,12 +166,16 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/mitglied-werden': typeof MitgliedWerdenRoute
   '/mitglieder': typeof MitgliederRoute
+  '/neuland': typeof NeulandRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
+  '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
   '/verein/beirat': typeof VereinBeiratRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
+  '/neuland/': typeof NeulandIndexRoute
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
 }
@@ -153,12 +188,16 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/mitglied-werden'
     | '/mitglieder'
+    | '/neuland'
     | '/referenten'
     | '/service'
+    | '/neuland/teilnahme'
+    | '/neuland/wettbewerb'
     | '/programm/$slug'
     | '/verein/beirat'
     | '/verein/satzung'
     | '/verein/vorstand'
+    | '/neuland/'
     | '/programm/'
     | '/verein/'
   fileRoutesByTo: FileRoutesByTo
@@ -171,10 +210,13 @@ export interface FileRouteTypes {
     | '/mitglieder'
     | '/referenten'
     | '/service'
+    | '/neuland/teilnahme'
+    | '/neuland/wettbewerb'
     | '/programm/$slug'
     | '/verein/beirat'
     | '/verein/satzung'
     | '/verein/vorstand'
+    | '/neuland'
     | '/programm'
     | '/verein'
   id:
@@ -185,12 +227,16 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/mitglied-werden'
     | '/mitglieder'
+    | '/neuland'
     | '/referenten'
     | '/service'
+    | '/neuland/teilnahme'
+    | '/neuland/wettbewerb'
     | '/programm/$slug'
     | '/verein/beirat'
     | '/verein/satzung'
     | '/verein/vorstand'
+    | '/neuland/'
     | '/programm/'
     | '/verein/'
   fileRoutesById: FileRoutesById
@@ -202,6 +248,7 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   MitgliedWerdenRoute: typeof MitgliedWerdenRoute
   MitgliederRoute: typeof MitgliederRoute
+  NeulandRoute: typeof NeulandRouteWithChildren
   ReferentenRoute: typeof ReferentenRoute
   ServiceRoute: typeof ServiceRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
@@ -226,6 +273,13 @@ declare module '@tanstack/react-router' {
       path: '/referenten'
       fullPath: '/referenten'
       preLoaderRoute: typeof ReferentenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/neuland': {
+      id: '/neuland'
+      path: '/neuland'
+      fullPath: '/neuland'
+      preLoaderRoute: typeof NeulandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mitglieder': {
@@ -284,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgrammIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/neuland/': {
+      id: '/neuland/'
+      path: '/'
+      fullPath: '/neuland/'
+      preLoaderRoute: typeof NeulandIndexRouteImport
+      parentRoute: typeof NeulandRoute
+    }
     '/verein/vorstand': {
       id: '/verein/vorstand'
       path: '/verein/vorstand'
@@ -312,8 +373,37 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgrammSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/neuland/wettbewerb': {
+      id: '/neuland/wettbewerb'
+      path: '/wettbewerb'
+      fullPath: '/neuland/wettbewerb'
+      preLoaderRoute: typeof NeulandWettbewerbRouteImport
+      parentRoute: typeof NeulandRoute
+    }
+    '/neuland/teilnahme': {
+      id: '/neuland/teilnahme'
+      path: '/teilnahme'
+      fullPath: '/neuland/teilnahme'
+      preLoaderRoute: typeof NeulandTeilnahmeRouteImport
+      parentRoute: typeof NeulandRoute
+    }
   }
 }
+
+interface NeulandRouteChildren {
+  NeulandTeilnahmeRoute: typeof NeulandTeilnahmeRoute
+  NeulandWettbewerbRoute: typeof NeulandWettbewerbRoute
+  NeulandIndexRoute: typeof NeulandIndexRoute
+}
+
+const NeulandRouteChildren: NeulandRouteChildren = {
+  NeulandTeilnahmeRoute: NeulandTeilnahmeRoute,
+  NeulandWettbewerbRoute: NeulandWettbewerbRoute,
+  NeulandIndexRoute: NeulandIndexRoute,
+}
+
+const NeulandRouteWithChildren =
+  NeulandRoute._addFileChildren(NeulandRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -322,6 +412,7 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   MitgliedWerdenRoute: MitgliedWerdenRoute,
   MitgliederRoute: MitgliederRoute,
+  NeulandRoute: NeulandRouteWithChildren,
   ReferentenRoute: ReferentenRoute,
   ServiceRoute: ServiceRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
