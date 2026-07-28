@@ -49,29 +49,37 @@ function Index() {
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link to="/programm" className="btn-solid">
-            Programm ansehen
+            Zum Veranstaltungsprogramm
           </Link>
           <Link to="/mitglied-werden" className="btn-outline">
-            Mitglied werden
+            Jetzt Mitglied werden
           </Link>
         </div>
       </section>
 
-      <section className="shell rule-t py-16" aria-labelledby="programm-titel">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="programm-titel" className="display-md">
-            Nächste Veranstaltungen
-          </h2>
-          <Link to="/programm" className="inline-flex items-center gap-2 text-sm link-brand">
-            Alle Termine <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {naechste.map((e) => (
-            <EventCard key={e.slug} event={e} />
-          ))}
+      <section className="band-muted" aria-labelledby="programm-titel">
+        <div className="shell py-16 md:py-24">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 id="programm-titel" className="display-md">
+              Nächste Veranstaltungen
+            </h2>
+            <Link to="/programm" className="inline-flex items-center gap-2 text-sm link-brand">
+              Alle Termine <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {naechste.map((e) => (
+              <EventCard key={e.slug} event={e} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/programm" className="btn-solid">
+              Alle Termine entdecken
+            </Link>
+          </div>
         </div>
       </section>
+
 
       <section className="shell rule-t py-16 md:py-24" aria-labelledby="mission-titel">
         <div className="grid gap-10 md:grid-cols-12">
