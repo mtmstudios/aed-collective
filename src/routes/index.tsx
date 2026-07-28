@@ -49,31 +49,39 @@ function Index() {
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link to="/programm" className="btn-solid">
-            Programm ansehen
+            Zum Veranstaltungsprogramm
           </Link>
           <Link to="/mitglied-werden" className="btn-outline">
-            Mitglied werden
+            Jetzt Mitglied werden
           </Link>
         </div>
       </section>
 
-      <section className="shell rule-t py-16" aria-labelledby="programm-titel">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="programm-titel" className="display-md">
-            Nächste Veranstaltungen
-          </h2>
-          <Link to="/programm" className="inline-flex items-center gap-2 text-sm link-brand">
-            Alle Termine <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {naechste.map((e) => (
-            <EventCard key={e.slug} event={e} />
-          ))}
+      <section className="band-muted" aria-labelledby="programm-titel">
+        <div className="shell py-16 md:py-24">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 id="programm-titel" className="display-md">
+              Nächste Veranstaltungen
+            </h2>
+            <Link to="/programm" className="inline-flex items-center gap-2 text-sm link-brand">
+              Alle Termine <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {naechste.map((e) => (
+              <EventCard key={e.slug} event={e} />
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/programm" className="btn-solid">
+              Alle Termine entdecken
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="shell rule-t py-16 md:py-24" aria-labelledby="mission-titel">
+
+      <section className="shell py-16 md:py-24" aria-labelledby="mission-titel">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="mission-titel" className="eyebrow md:col-span-3">
             Mission
@@ -89,14 +97,17 @@ function Index() {
               über Multimedia und Engineering bis zur Architektur – zu fördern und der
               Öffentlichkeit nahezubringen.
             </p>
-            <Link to="/verein" className="mt-8 inline-flex items-center gap-2 text-sm link-brand">
-              Über den Verein <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
+            <div className="mt-8">
+              <Link to="/verein" className="btn-solid">
+                Informiere Dich über den Verein
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="theme-neuland border-y border-line bg-card" aria-labelledby="neuland-titel">
+      <section className="theme-neuland band-muted" aria-labelledby="neuland-titel">
+
         <div className="shell py-16 md:py-24">
           <p className="eyebrow" style={{ color: "var(--brand-deep)" }}>
             Nachwuchswettbewerb
@@ -139,14 +150,11 @@ function Index() {
             ))}
           </ul>
           <div className="mt-12 flex flex-wrap gap-3">
-            <Link
-              to="/neuland"
-              className="inline-flex min-h-11 items-center rounded-full bg-brand px-6 font-display text-sm text-brand-foreground hover:opacity-85"
-            >
-              Zum Wettbewerb
+            <Link to="/neuland" className="btn-solid">
+              Hier geht es zum Wettbewerb
             </Link>
             <Link to="/neuland/gewinner" className="btn-outline">
-              Gewinner:innen
+              Gewinner:innen ansehen
             </Link>
           </div>
         </div>
@@ -160,12 +168,18 @@ function Index() {
           <LogoGrid items={partner} />
         </div>
         <p className="mt-8 text-sm text-muted-foreground">
-          Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.{" "}
-          <Link to="/mitglieder" className="underline link-brand">
-            Alle Mitglieder
-          </Link>
+          Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.
         </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link to="/mitglieder" className="btn-solid">
+            Alle Mitglieder ansehen
+          </Link>
+          <Link to="/mitglied-werden" className="btn-outline">
+            Jetzt Mitglied werden
+          </Link>
+        </div>
       </section>
+
     </>
   );
 }

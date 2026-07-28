@@ -273,17 +273,19 @@
   justify-content: center;
   gap: 0.5rem;
   min-height: 2.75rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid var(--footer-bg);
   font-family: var(--font-display);
   font-size: 0.9375rem;
   font-weight: 500;
-  background: var(--ink);
-  color: var(--background);
-  transition: background-color 150ms ease, color 150ms ease;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 
   &:hover {
-    background: var(--brand);
-    color: var(--brand-foreground);
+    background: transparent;
+    color: var(--footer-bg);
   }
 }
 
@@ -293,19 +295,27 @@
   justify-content: center;
   gap: 0.5rem;
   min-height: 2.75rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid var(--footer-bg);
   font-family: var(--font-display);
   font-size: 0.9375rem;
   font-weight: 500;
-  border: 1px solid var(--ink);
-  color: var(--ink);
+  color: var(--footer-bg);
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--ink);
-    color: var(--background);
+    background: var(--footer-bg);
+    color: var(--footer-text);
   }
 }
+
+@utility band-muted {
+  background: oklch(0.955 0.003 90);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 
 @utility grayscale-hover {
   filter: grayscale(1);
