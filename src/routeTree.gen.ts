@@ -9,12 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiceRouteImport } from './routes/service'
 import { Route as ReferentenRouteImport } from './routes/referenten'
 import { Route as NeulandRouteImport } from './routes/neuland'
 import { Route as MitgliederRouteImport } from './routes/mitglieder'
 import { Route as MitgliedWerdenRouteImport } from './routes/mitglied-werden'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as JuryRouteImport } from './routes/jury'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
@@ -23,16 +25,25 @@ import { Route as ProgrammIndexRouteImport } from './routes/programm.index'
 import { Route as NeulandIndexRouteImport } from './routes/neuland.index'
 import { Route as VereinVorstandRouteImport } from './routes/verein.vorstand'
 import { Route as VereinSatzungRouteImport } from './routes/verein.satzung'
+import { Route as VereinMitgliedWerdenRouteImport } from './routes/verein.mitglied-werden'
 import { Route as VereinBeiratRouteImport } from './routes/verein.beirat'
 import { Route as ProgrammSlugRouteImport } from './routes/programm.$slug'
 import { Route as NeulandWettbewerbRouteImport } from './routes/neuland.wettbewerb'
 import { Route as NeulandTeilnahmeRouteImport } from './routes/neuland.teilnahme'
 import { Route as NeulandPresseRouteImport } from './routes/neuland.presse'
 import { Route as NeulandJuryRouteImport } from './routes/neuland.jury'
+import { Route as NeulandGewinnerInnenJahrRouteImport } from './routes/neuland.gewinner-innen-$jahr'
+import { Route as Neuland1SplatRouteImport } from './routes/neuland-1.$'
+import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitglieder.foerdermitglieder'
 import { Route as NeulandGewinnerIndexRouteImport } from './routes/neuland.gewinner.index'
 import { Route as NeulandGewinnerJahrIndexRouteImport } from './routes/neuland.gewinner.$jahr.index'
 import { Route as NeulandGewinnerJahrSlugRouteImport } from './routes/neuland.gewinner.$jahr.$slug'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiceRoute = ServiceRouteImport.update({
   id: '/service',
   path: '/service',
@@ -61,6 +72,11 @@ const MitgliedWerdenRoute = MitgliedWerdenRouteImport.update({
 const KontaktRoute = KontaktRouteImport.update({
   id: '/kontakt',
   path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JuryRoute = JuryRouteImport.update({
+  id: '/jury',
+  path: '/jury',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ImpressumRoute = ImpressumRouteImport.update({
@@ -103,6 +119,11 @@ const VereinSatzungRoute = VereinSatzungRouteImport.update({
   path: '/verein/satzung',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VereinMitgliedWerdenRoute = VereinMitgliedWerdenRouteImport.update({
+  id: '/verein/mitglied-werden',
+  path: '/verein/mitglied-werden',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VereinBeiratRoute = VereinBeiratRouteImport.update({
   id: '/verein/beirat',
   path: '/verein/beirat',
@@ -133,6 +154,23 @@ const NeulandJuryRoute = NeulandJuryRouteImport.update({
   path: '/jury',
   getParentRoute: () => NeulandRoute,
 } as any)
+const NeulandGewinnerInnenJahrRoute =
+  NeulandGewinnerInnenJahrRouteImport.update({
+    id: '/gewinner-innen-$jahr',
+    path: '/gewinner-innen-$jahr',
+    getParentRoute: () => NeulandRoute,
+  } as any)
+const Neuland1SplatRoute = Neuland1SplatRouteImport.update({
+  id: '/neuland-1/$',
+  path: '/neuland-1/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MitgliederFoerdermitgliederRoute =
+  MitgliederFoerdermitgliederRouteImport.update({
+    id: '/foerdermitglieder',
+    path: '/foerdermitglieder',
+    getParentRoute: () => MitgliederRoute,
+  } as any)
 const NeulandGewinnerIndexRoute = NeulandGewinnerIndexRouteImport.update({
   id: '/gewinner/',
   path: '/gewinner/',
@@ -154,18 +192,24 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
+  '/jury': typeof JuryRoute
   '/kontakt': typeof KontaktRoute
   '/mitglied-werden': typeof MitgliedWerdenRoute
-  '/mitglieder': typeof MitgliederRoute
+  '/mitglieder': typeof MitgliederRouteWithChildren
   '/neuland': typeof NeulandRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
+  '/neuland-1/$': typeof Neuland1SplatRoute
+  '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
   '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
   '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/mitglied-werden': typeof VereinMitgliedWerdenRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
   '/neuland/': typeof NeulandIndexRoute
@@ -179,17 +223,23 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
+  '/jury': typeof JuryRoute
   '/kontakt': typeof KontaktRoute
   '/mitglied-werden': typeof MitgliedWerdenRoute
-  '/mitglieder': typeof MitgliederRoute
+  '/mitglieder': typeof MitgliederRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
+  '/neuland-1/$': typeof Neuland1SplatRoute
+  '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
   '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
   '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/mitglied-werden': typeof VereinMitgliedWerdenRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
   '/neuland': typeof NeulandIndexRoute
@@ -204,18 +254,24 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
+  '/jury': typeof JuryRoute
   '/kontakt': typeof KontaktRoute
   '/mitglied-werden': typeof MitgliedWerdenRoute
-  '/mitglieder': typeof MitgliederRoute
+  '/mitglieder': typeof MitgliederRouteWithChildren
   '/neuland': typeof NeulandRouteWithChildren
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
+  '/neuland-1/$': typeof Neuland1SplatRoute
+  '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
   '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
   '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/mitglied-werden': typeof VereinMitgliedWerdenRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
   '/neuland/': typeof NeulandIndexRoute
@@ -231,18 +287,24 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/impressum'
+    | '/jury'
     | '/kontakt'
     | '/mitglied-werden'
     | '/mitglieder'
     | '/neuland'
     | '/referenten'
     | '/service'
+    | '/sitemap.xml'
+    | '/mitglieder/foerdermitglieder'
+    | '/neuland-1/$'
+    | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
     | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
     | '/programm/$slug'
     | '/verein/beirat'
+    | '/verein/mitglied-werden'
     | '/verein/satzung'
     | '/verein/vorstand'
     | '/neuland/'
@@ -256,17 +318,23 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/impressum'
+    | '/jury'
     | '/kontakt'
     | '/mitglied-werden'
     | '/mitglieder'
     | '/referenten'
     | '/service'
+    | '/sitemap.xml'
+    | '/mitglieder/foerdermitglieder'
+    | '/neuland-1/$'
+    | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
     | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
     | '/programm/$slug'
     | '/verein/beirat'
+    | '/verein/mitglied-werden'
     | '/verein/satzung'
     | '/verein/vorstand'
     | '/neuland'
@@ -280,18 +348,24 @@ export interface FileRouteTypes {
     | '/'
     | '/datenschutz'
     | '/impressum'
+    | '/jury'
     | '/kontakt'
     | '/mitglied-werden'
     | '/mitglieder'
     | '/neuland'
     | '/referenten'
     | '/service'
+    | '/sitemap.xml'
+    | '/mitglieder/foerdermitglieder'
+    | '/neuland-1/$'
+    | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
     | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
     | '/programm/$slug'
     | '/verein/beirat'
+    | '/verein/mitglied-werden'
     | '/verein/satzung'
     | '/verein/vorstand'
     | '/neuland/'
@@ -306,14 +380,18 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ImpressumRoute: typeof ImpressumRoute
+  JuryRoute: typeof JuryRoute
   KontaktRoute: typeof KontaktRoute
   MitgliedWerdenRoute: typeof MitgliedWerdenRoute
-  MitgliederRoute: typeof MitgliederRoute
+  MitgliederRoute: typeof MitgliederRouteWithChildren
   NeulandRoute: typeof NeulandRouteWithChildren
   ReferentenRoute: typeof ReferentenRoute
   ServiceRoute: typeof ServiceRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  Neuland1SplatRoute: typeof Neuland1SplatRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
   VereinBeiratRoute: typeof VereinBeiratRoute
+  VereinMitgliedWerdenRoute: typeof VereinMitgliedWerdenRoute
   VereinSatzungRoute: typeof VereinSatzungRoute
   VereinVorstandRoute: typeof VereinVorstandRoute
   ProgrammIndexRoute: typeof ProgrammIndexRoute
@@ -322,6 +400,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/service': {
       id: '/service'
       path: '/service'
@@ -362,6 +447,13 @@ declare module '@tanstack/react-router' {
       path: '/kontakt'
       fullPath: '/kontakt'
       preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jury': {
+      id: '/jury'
+      path: '/jury'
+      fullPath: '/jury'
+      preLoaderRoute: typeof JuryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/impressum': {
@@ -420,6 +512,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VereinSatzungRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verein/mitglied-werden': {
+      id: '/verein/mitglied-werden'
+      path: '/verein/mitglied-werden'
+      fullPath: '/verein/mitglied-werden'
+      preLoaderRoute: typeof VereinMitgliedWerdenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/verein/beirat': {
       id: '/verein/beirat'
       path: '/verein/beirat'
@@ -462,6 +561,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NeulandJuryRouteImport
       parentRoute: typeof NeulandRoute
     }
+    '/neuland/gewinner-innen-$jahr': {
+      id: '/neuland/gewinner-innen-$jahr'
+      path: '/gewinner-innen-$jahr'
+      fullPath: '/neuland/gewinner-innen-$jahr'
+      preLoaderRoute: typeof NeulandGewinnerInnenJahrRouteImport
+      parentRoute: typeof NeulandRoute
+    }
+    '/neuland-1/$': {
+      id: '/neuland-1/$'
+      path: '/neuland-1/$'
+      fullPath: '/neuland-1/$'
+      preLoaderRoute: typeof Neuland1SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mitglieder/foerdermitglieder': {
+      id: '/mitglieder/foerdermitglieder'
+      path: '/foerdermitglieder'
+      fullPath: '/mitglieder/foerdermitglieder'
+      preLoaderRoute: typeof MitgliederFoerdermitgliederRouteImport
+      parentRoute: typeof MitgliederRoute
+    }
     '/neuland/gewinner/': {
       id: '/neuland/gewinner/'
       path: '/gewinner'
@@ -486,7 +606,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface MitgliederRouteChildren {
+  MitgliederFoerdermitgliederRoute: typeof MitgliederFoerdermitgliederRoute
+}
+
+const MitgliederRouteChildren: MitgliederRouteChildren = {
+  MitgliederFoerdermitgliederRoute: MitgliederFoerdermitgliederRoute,
+}
+
+const MitgliederRouteWithChildren = MitgliederRoute._addFileChildren(
+  MitgliederRouteChildren,
+)
+
 interface NeulandRouteChildren {
+  NeulandGewinnerInnenJahrRoute: typeof NeulandGewinnerInnenJahrRoute
   NeulandJuryRoute: typeof NeulandJuryRoute
   NeulandPresseRoute: typeof NeulandPresseRoute
   NeulandTeilnahmeRoute: typeof NeulandTeilnahmeRoute
@@ -498,6 +631,7 @@ interface NeulandRouteChildren {
 }
 
 const NeulandRouteChildren: NeulandRouteChildren = {
+  NeulandGewinnerInnenJahrRoute: NeulandGewinnerInnenJahrRoute,
   NeulandJuryRoute: NeulandJuryRoute,
   NeulandPresseRoute: NeulandPresseRoute,
   NeulandTeilnahmeRoute: NeulandTeilnahmeRoute,
@@ -515,14 +649,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DatenschutzRoute: DatenschutzRoute,
   ImpressumRoute: ImpressumRoute,
+  JuryRoute: JuryRoute,
   KontaktRoute: KontaktRoute,
   MitgliedWerdenRoute: MitgliedWerdenRoute,
-  MitgliederRoute: MitgliederRoute,
+  MitgliederRoute: MitgliederRouteWithChildren,
   NeulandRoute: NeulandRouteWithChildren,
   ReferentenRoute: ReferentenRoute,
   ServiceRoute: ServiceRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  Neuland1SplatRoute: Neuland1SplatRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
   VereinBeiratRoute: VereinBeiratRoute,
+  VereinMitgliedWerdenRoute: VereinMitgliedWerdenRoute,
   VereinSatzungRoute: VereinSatzungRoute,
   VereinVorstandRoute: VereinVorstandRoute,
   ProgrammIndexRoute: ProgrammIndexRoute,

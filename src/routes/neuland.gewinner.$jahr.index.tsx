@@ -31,7 +31,7 @@ export const Route = createFileRoute("/neuland/gewinner/$jahr/")({
 });
 
 function JahrgangPage() {
-  const { jahr, liste } = Route.useLoaderData();
+  const { jahr, liste } = Route.useLoaderData() as { jahr: string; liste: Projekt[] };
 
   return (
     <>
