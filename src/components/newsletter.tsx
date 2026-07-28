@@ -17,7 +17,7 @@ export function Newsletter() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="mt-6 grid gap-3 sm:grid-cols-2">
+    <form onSubmit={onSubmit} className="mt-6 grid gap-3 text-sm sm:grid-cols-2">
       <div className="sm:col-span-1">
         <label htmlFor="nl-vorname" className="eyebrow text-footer-muted">Vorname</label>
         <input
@@ -59,9 +59,9 @@ export function Newsletter() {
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] px-6 font-display text-[0.9375rem] font-medium bg-footer-text text-footer-bg hover:bg-brand hover:text-brand-foreground transition-colors w-full sm:w-auto"
+          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] rounded-full border border-footer-text bg-footer-text px-7 font-display text-[0.9375rem] font-medium text-footer-bg transition-colors hover:bg-transparent hover:text-footer-text w-full sm:w-auto"
         >
-          Anmelden
+          Jetzt anmelden
         </button>
       </div>
     </form>
