@@ -82,27 +82,21 @@ function Index() {
 
 
       <section className="shell py-16 md:py-24" aria-labelledby="mission-titel">
-        <div className="grid gap-10 md:grid-cols-12">
-          <h2 id="mission-titel" className="eyebrow md:col-span-3">
-            Mission
-          </h2>
-          <div className="md:col-span-9">
-            <p className="display-md max-w-4xl">
-              „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
-              unbedingt, weil niemand darüber spricht.“
-            </p>
-            <p className="mt-8 max-w-2xl leading-relaxed text-muted-foreground">
-              Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
-              die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
-              über Multimedia und Engineering bis zur Architektur – zu fördern und der
-              Öffentlichkeit nahezubringen.
-            </p>
-            <div className="mt-8">
-              <Link to="/verein" className="btn-solid">
-                Informiere Dich über den Verein
-              </Link>
-            </div>
-          </div>
+        <p className="eyebrow">Mission</p>
+        <p id="mission-titel" className="display-md mt-4 max-w-4xl">
+          „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
+          unbedingt, weil niemand darüber spricht.“
+        </p>
+        <p className="mt-8 max-w-2xl leading-relaxed text-muted-foreground">
+          Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
+          die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
+          über Multimedia und Engineering bis zur Architektur – zu fördern und der
+          Öffentlichkeit nahezubringen.
+        </p>
+        <div className="mt-8">
+          <Link to="/verein" className="btn-solid">
+            Informiere Dich über den Verein
+          </Link>
         </div>
       </section>
 
