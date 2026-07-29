@@ -64,7 +64,7 @@ function ProgrammPage() {
       </section>
 
       <section className="shell band-muted py-12" aria-labelledby="kommend-titel">
-        <h2 id="kommend-titel" className="display-md">
+        <h2 id="kommend-titel" className="display-lg">
           Kommende Termine
         </h2>
         {kommend.length === 0 ? (
