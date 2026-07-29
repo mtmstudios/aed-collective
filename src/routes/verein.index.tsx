@@ -23,8 +23,9 @@ function VereinPage() {
   return (
     <>
       <PageHeader
-        titel="AED e.V."
-        subtitle="Veranstaltungen. Austausch. Förderung."
+        titel="Veranstaltungen. Austausch. Förderung."
+        subtitle="AED e.V."
+        size="xl"
         intro="Der aed e.V. ist der Verein für Architecture, Engineering und Design in Stuttgart. Wir verbinden Disziplinen, die gemeinsam die gebaute und gestaltete Umwelt prägen."
       />
 
