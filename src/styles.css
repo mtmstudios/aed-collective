@@ -329,16 +329,16 @@
 }
 
 
-/* Abwechselnde Inhaltsbänder: jede zweite Sektion hellgrau, randlos über die volle Breite */
+/* Abwechselnde Inhaltsbänder: jede zweite Sektion hellgrau, über die volle Breite */
 main {
   overflow-x: clip;
 }
 
-main:where(main) > :where(section, nav, article, div):nth-child(even), main > div > :where(section, nav, article):nth-child(even) {
+:is(main, main > div) > :where(section, nav, article):nth-child(even) {
   position: relative;
 }
 
-main:where(main) > :where(section, nav, article, div):nth-child(even), main > div > :where(section, nav, article):nth-child(even)::before {
+:is(main, main > div) > :where(section, nav, article):nth-child(even)::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -352,6 +352,6 @@ main:where(main) > :where(section, nav, article, div):nth-child(even), main > di
   pointer-events: none;
 }
 
-main:where(main) > :where(section, nav, article, div):nth-child(even), main > div > :where(section, nav, article):nth-child(even) > * {
+:is(main, main > div) > :where(section, nav, article):nth-child(even) > * {
   position: relative;
 }
