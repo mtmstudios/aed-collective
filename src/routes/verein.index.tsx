@@ -166,7 +166,6 @@ function VereinPage() {
       <div role="navigation" className="shell rule-t pt-16 bg-background" aria-label="Weitere Seiten zum Verein">
         <ul className="grid gap-px border border-line bg-line sm:grid-cols-3">
           {[
-            { to: "/verein/vorstand", titel: "Vorstand", text: "Fünf Personen, ein Ehrenvorsitzender" },
             { to: "/verein/beirat", titel: "Beirat", text: "Zehn Stimmen aus allen Disziplinen" },
             { to: "/verein/satzung", titel: "Satzung", text: "Rechtliche Grundlage des Vereins" },
           ].map((i) => (
