@@ -164,7 +164,7 @@ function VereinPage() {
       </section>
 
       <div role="navigation" className="shell rule-t pt-16 bg-background" aria-label="Weitere Seiten zum Verein">
-        <ul className="grid gap-px border border-line bg-line sm:grid-cols-3">
+        <ul className="grid gap-px border border-line bg-line sm:grid-cols-2">
           {[
             { to: "/verein/beirat", titel: "Beirat", text: "Zehn Stimmen aus allen Disziplinen" },
             { to: "/verein/satzung", titel: "Satzung", text: "Rechtliche Grundlage des Vereins" },
