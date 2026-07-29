@@ -328,3 +328,30 @@
   }
 }
 
+
+/* Abwechselnde Inhaltsbänder: jede zweite Sektion hellgrau, über die volle Breite */
+main {
+  overflow-x: clip;
+}
+
+:is(main, main > div) > :where(section, nav, article):nth-child(even) {
+  position: relative;
+}
+
+:is(main, main > div) > :where(section, nav, article):nth-child(even)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: oklch(0.955 0.003 90);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  z-index: -1;
+  pointer-events: none;
+}
+
+:is(main, main > div) > :where(section, nav, article):nth-child(even) > * {
+  position: relative;
+}
