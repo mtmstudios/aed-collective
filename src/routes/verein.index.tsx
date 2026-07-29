@@ -222,21 +222,13 @@ function VereinPage() {
           </div>
         </div>
 
-        <div className="mt-12">
-          <Link to="/verein/satzung" className="group inline-block">
-            <article className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]">
-              <div
-                aria-hidden="true"
-                className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-              >
-                {"SZ"}
-              </div>
-              <div className="mt-4">
-                <h3 className="font-display text-lg leading-tight">Satzung des aed e.V.</h3>
-                <p className="mt-1 text-sm text-muted-foreground">PDF-Download</p>
-              </div>
-            </article>
+        <div className="mt-12 flex flex-wrap gap-3">
+          <Link to="/verein/satzung" className="btn-solid">
+            Satzung des AED durchlesen
           </Link>
+          <a href="/satzung-aed.pdf" download className="btn-outline">
+            Satzung als PDF herunterladen
+          </a>
         </div>
       </section>
     </>
