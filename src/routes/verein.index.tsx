@@ -147,13 +147,7 @@ function VereinPage() {
               aria-hidden="true"
               className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-muted-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
             >
-              {"Prof. Dr. Dr. E.h. Dr. h.c. Werner Sobek"
-                .replace(/^(Dr\.|Prof\.)\s+/i, "")
-                .split(" ")
-                .filter(Boolean)
-                .map((t) => t[0])
-                .slice(0, 2)
-                .join("")}
+              {"WS"}
             </div>
             <div className="mt-4">
               <h3 className="font-display text-lg leading-tight">Prof. Dr. Dr. E.h. Dr. h.c. Werner Sobek</h3>
