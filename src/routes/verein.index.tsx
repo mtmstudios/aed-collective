@@ -54,17 +54,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell rule-t py-16" aria-labelledby="zitat">
-        <h2 id="zitat" className="sr-only">
-          Zitat
-        </h2>
-        <blockquote className="display-md max-w-4xl">
-          „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
-          unbedingt, weil niemand darüber spricht.“
-        </blockquote>
-      </section>
-
-      <section className="shell rule-t py-16" aria-labelledby="geschichte">
+      <section className="shell rule-t py-16 band-muted" aria-labelledby="geschichte">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="geschichte" className="eyebrow md:col-span-3">
             Geschichte
@@ -102,7 +92,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <nav className="shell rule-t pt-16" aria-label="Weitere Seiten zum Verein">
+      <div role="navigation" className="shell rule-t pt-16 bg-background" aria-label="Weitere Seiten zum Verein">
         <ul className="grid gap-px border border-line bg-line sm:grid-cols-3">
           {[
             { to: "/verein/vorstand", titel: "Vorstand", text: "Fünf Personen, ein Ehrenvorsitzender" },
@@ -117,7 +107,7 @@ function VereinPage() {
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
     </>
   );
 }
