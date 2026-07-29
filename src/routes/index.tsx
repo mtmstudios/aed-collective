@@ -41,7 +41,10 @@ function Index() {
     <>
       <section className="shell pt-16 pb-20 md:pt-28 md:pb-28">
         <p className="eyebrow">Architecture · Engineering · Design · Stuttgart</p>
-        <h1 className="display-xl mt-6 max-w-5xl">Veranstaltungen. Austausch. Förderung.</h1>
+        <h1 className="display-xl mt-6 max-w-5xl">AED e.V.</h1>
+        <p className="display-lg mt-4 max-w-4xl">
+          Verein für Architecture, Engineering und Design
+        </p>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl">
           Der aed e.V. bringt seit 2004 Architekt:innen, Ingenieur:innen und Designer:innen an einen
           Tisch – mit rund 20 Veranstaltungen im Jahr, einem Netzwerk aus über 400 Mitgliedern und
