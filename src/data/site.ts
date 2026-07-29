@@ -2,15 +2,16 @@
 // Personen, Statements, Events und Partner sind Originalinhalte der Bestands-Website.
 
 export const kontakt = {
-  name: "aed e.V.",
-  strasse: "Olgastraße 138",
+  name: "aed stuttgart e.V.",
+  strasse: "Olgastraße 136",
   plz: "70180",
   ort: "Stuttgart",
   telefon: "+49 160 8894377",
   telefonHref: "+491608894377",
-  email: "info@aed-stuttgart.de",
+  email: "iris.enderle@aed-stuttgart.de",
   geschaeftsstelle: "Iris Enderle",
-  zeiten: "Montag bis Freitag, 9–18 Uhr (Besuche bitte anmelden)",
+  geschaeftsstelleRolle: "Office-Management",
+  zeiten: "Geschäftszeiten 09:00 bis 18:00 Uhr\nBesuche bitte anmelden.",
 };
 
 export const eventFormate = [
