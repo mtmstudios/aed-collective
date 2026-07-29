@@ -64,7 +64,7 @@ function ProgrammPage() {
       </section>
 
       <section className="shell band-muted py-12" aria-labelledby="kommend-titel">
-        <h2 id="kommend-titel" className="display-md">
+        <h2 id="kommend-titel" className="display-lg">
           Kommende Termine
         </h2>
         {kommend.length === 0 ? (
@@ -81,7 +81,7 @@ function ProgrammPage() {
       <section className="shell bg-background py-12" aria-labelledby="archiv-titel">
         <div className="flex flex-col items-start gap-6">
           <div className="max-w-2xl">
-            <h2 id="archiv-titel" className="display-md">
+            <h2 id="archiv-titel" className="display-lg">
               Archiv
             </h2>
             <p className="mt-2 text-muted-foreground">
