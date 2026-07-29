@@ -64,6 +64,7 @@ function MitgliedWerdenPage() {
       <PageHeader
         eyebrow="Mitgliedschaft"
         titel="Mitglied werden"
+        size="xl"
         intro="Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares Netzwerk und die Förderung des gestalterischen Nachwuchses."
       />
 
