@@ -3,10 +3,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const nav = [
-  { to: "/programm", label: "Programm" },
-  { to: "/verein", label: "Verein" },
-  { to: "/mitglied-werden", label: "Mitglied werden" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/programm", label: "Programm", isPill: false },
+  { to: "/verein", label: "Verein", isPill: false },
+  { to: "/mitglied-werden", label: "Mitglied werden", isPill: false },
+  { to: "/neuland", label: "neuland", isPill: true },
+  { to: "/kontakt", label: "Kontakt", isPill: false },
 ] as const;
 
 export function SiteHeader() {
@@ -27,22 +28,26 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Hauptnavigation" className="hidden items-center gap-8 lg:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="font-display text-sm link-brand"
-              activeProps={{ className: "underline decoration-2 underline-offset-8" }}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link
-            to="/neuland"
-            className="theme-neuland rounded-full bg-brand px-5 py-2 font-display text-sm text-brand-foreground transition-opacity hover:opacity-85"
-          >
-            neuland
-          </Link>
+          {nav.map((item) =>
+            item.isPill ? (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="rounded-full bg-footer-bg px-5 py-2 font-display text-sm text-footer-text transition-opacity hover:opacity-85"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="font-display text-sm link-brand"
+                activeProps={{ className: "underline decoration-2 underline-offset-8" }}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <button
@@ -59,23 +64,27 @@ export function SiteHeader() {
       {open && (
         <nav aria-label="Hauptnavigation mobil" className="border-t border-line lg:hidden">
           <div className="shell flex flex-col py-2">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="border-b border-line py-4 font-display text-lg link-brand"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              to="/neuland"
-              onClick={() => setOpen(false)}
-              className="theme-neuland my-4 inline-flex w-fit rounded-full bg-brand px-5 py-2 font-display text-sm text-brand-foreground"
-            >
-              neuland
-            </Link>
+            {nav.map((item) =>
+              item.isPill ? (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="my-4 inline-flex w-fit rounded-full bg-footer-bg px-5 py-2 font-display text-sm text-footer-text transition-opacity hover:opacity-85"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-line py-4 font-display text-lg link-brand"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
         </nav>
       )}
