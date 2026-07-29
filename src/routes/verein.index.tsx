@@ -140,6 +140,33 @@ function VereinPage() {
             </article>
           ))}
         </div>
+
+        <div className="mt-8">
+          <article className="group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]">
+            <div
+              aria-hidden="true"
+              className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-muted-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+            >
+              {"Prof. Dr. Dr. E.h. Dr. h.c. Werner Sobek"
+                .replace(/^(Dr\.|Prof\.)\s+/i, "")
+                .split(" ")
+                .filter(Boolean)
+                .map((t) => t[0])
+                .slice(0, 2)
+                .join("")}
+            </div>
+            <div className="mt-4">
+              <h3 className="font-display text-lg leading-tight">Prof. Dr. Dr. E.h. Dr. h.c. Werner Sobek</h3>
+              <p className="mt-1 text-sm text-muted-foreground">Ehrenvorsitzender</p>
+              <a
+                href="mailto:info@aed-stuttgart.de"
+                className="mt-1 inline-block text-sm underline link-brand"
+              >
+                info@aed-stuttgart.de
+              </a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <div role="navigation" className="shell rule-t pt-16 bg-background" aria-label="Weitere Seiten zum Verein">
