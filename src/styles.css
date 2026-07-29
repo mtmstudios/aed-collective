@@ -334,11 +334,11 @@ main {
   overflow-x: clip;
 }
 
-main > :where(section, nav, article, div):nth-child(even) {
+main:where(main) > :where(section, nav, article, div):nth-child(even), main > div > :where(section, nav, article):nth-child(even) {
   position: relative;
 }
 
-main > :where(section, nav, article, div):nth-child(even)::before {
+main:where(main) > :where(section, nav, article, div):nth-child(even), main > div > :where(section, nav, article):nth-child(even)::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -352,6 +352,6 @@ main > :where(section, nav, article, div):nth-child(even)::before {
   pointer-events: none;
 }
 
-main > :where(section, nav, article, div):nth-child(even) > * {
+main:where(main) > :where(section, nav, article, div):nth-child(even), main > div > :where(section, nav, article):nth-child(even) > * {
   position: relative;
 }
