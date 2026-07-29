@@ -15,7 +15,7 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-3 md:border-l md:border-footer-line md:pl-10">
-          <h2 className="eyebrow text-footer-muted">Kontakt</h2>
+          <h2 className="eyebrow text-footer-muted">Geschäftsstelle</h2>
           <address className="mt-4 not-italic text-sm leading-relaxed text-footer-text">
             {kontakt.name}
             <br />
@@ -23,6 +23,15 @@ export function SiteFooter() {
             <br />
             {kontakt.plz} {kontakt.ort}
           </address>
+          <p className="mt-4 text-sm leading-relaxed text-footer-text">
+            Geschäftszeiten 09:00 bis 18:00 Uhr
+            <br />
+            Besuche bitte anmelden.
+          </p>
+          <div className="mt-4 text-sm leading-relaxed text-footer-text">
+            <p className="font-medium">{kontakt.geschaeftsstelle}</p>
+            <p className="text-footer-muted">{kontakt.geschaeftsstelleRolle}</p>
+          </div>
           <div className="mt-4 grid gap-1 text-sm">
             <a
               href={`tel:${kontakt.telefonHref}`}
