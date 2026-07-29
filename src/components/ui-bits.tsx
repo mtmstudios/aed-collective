@@ -38,16 +38,18 @@ export function PageHeader({
   titel,
   subtitle,
   intro,
+  size = "lg",
 }: {
   eyebrow?: string;
   titel: string;
   subtitle?: string;
   intro?: string;
+  size?: "lg" | "xl";
 }) {
   return (
     <header className="shell pt-16 pb-12 md:pt-24 md:pb-16">
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h1 className="display-lg mt-4 max-w-4xl">{titel}</h1>
+      <h1 className={`${size === "xl" ? "display-xl" : "display-lg"} mt-4 max-w-4xl`}>{titel}</h1>
       {subtitle && <p className="display-md mt-3 max-w-4xl">{subtitle}</p>}
       {intro && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">{intro}</p>}
     </header>
