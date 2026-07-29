@@ -4,7 +4,7 @@ import { kontakt } from "@/data/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 bg-footer-bg text-footer-text">
+    <footer className="bg-footer-bg text-footer-text">
       <div className="shell grid gap-14 py-16 md:grid-cols-12 md:gap-x-10">
         <div className="md:col-span-5">
           <h2 className="eyebrow text-footer-muted">Newsletter</h2>
