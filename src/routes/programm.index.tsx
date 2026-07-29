@@ -41,6 +41,7 @@ function ProgrammPage() {
         eyebrow="Programm"
         titel="Veranstaltungen"
         intro="Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden und Festen ein. Weitere Termine kündigen wir über Newsletter, Instagram und unsere WhatsApp-Gruppe an."
+        size="xl"
       />
 
       <section className="shell bg-background" aria-label="Filter nach Format">
