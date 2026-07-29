@@ -57,7 +57,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="band-muted" aria-labelledby="programm-titel">
+      <section aria-labelledby="programm-titel">
         <div className="shell py-16 md:py-24">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 id="programm-titel" className="display-md">
@@ -106,7 +106,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="theme-neuland band-muted" aria-labelledby="neuland-titel">
+      <section className="theme-neuland" aria-labelledby="neuland-titel">
 
         <div className="shell py-16 md:py-24">
           <p className="eyebrow" style={{ color: "var(--brand-deep)" }}>
