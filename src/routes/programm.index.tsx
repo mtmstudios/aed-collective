@@ -78,7 +78,7 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section className="shell bg-background py-12" aria-labelledby="archiv-titel">
+      <section className="shell bg-background py-24" aria-labelledby="archiv-titel">
         <div className="flex flex-col items-start gap-6">
           <div className="max-w-2xl">
             <h2 id="archiv-titel" className="display-lg">
