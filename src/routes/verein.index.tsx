@@ -163,21 +163,82 @@ function VereinPage() {
         </div>
       </section>
 
-      <div role="navigation" className="shell rule-t pt-16 bg-background" aria-label="Weitere Seiten zum Verein">
-        <ul className="grid gap-px border border-line bg-line sm:grid-cols-2">
+      <section className="shell rule-t py-16 band-muted" aria-labelledby="beirat-preview">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-12">
+            <h2 id="beirat-preview" className="display-lg max-w-4xl">
+              Beirat
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Zehn Stimmen aus allen Disziplinen
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { to: "/verein/beirat", titel: "Beirat", text: "Zehn Stimmen aus allen Disziplinen" },
-            { to: "/verein/satzung", titel: "Satzung", text: "Rechtliche Grundlage des Vereins" },
-          ].map((i) => (
-            <li key={i.to} className="bg-background">
-              <Link to={i.to} className="flex min-h-[400px] h-full flex-col justify-start p-12 transition-colors hover:bg-muted">
-                <span className="font-display text-xl">{i.titel}</span>
-                <span className="mt-2 block text-sm text-muted-foreground">{i.text}</span>
-              </Link>
-            </li>
+            { name: "Stefan Behnisch", rolle: "Architekt, Behnisch Architekten" },
+            { name: "Lutz Dietzold", rolle: "CEO, Rat für Formgebung" },
+            { name: "Dr. Ulrike Groos", rolle: "Direktorin, Kunstmuseum Stuttgart" },
+            { name: "Dr. Petra Kiedaisch", rolle: "Geschäftsführerin, av edition" },
+            { name: "Andreas Kurbos", rolle: "Gründer und CEO, studiokurbos" },
+            { name: "Johannes Milla", rolle: "Creative Director, Milla & Partner" },
+            { name: "Markus Müller", rolle: "Architekt, Präsident AKBW" },
+            { name: "Silvia Olp", rolle: "Public Relations, Architecture & Design" },
+            { name: "Prof. Dr. phil. Stephan Trüby", rolle: "Direktor IGmA, Universität Stuttgart" },
+            { name: "Prof. Andreas Uebele", rolle: "Kommunikationsdesigner, büro uebele" },
+          ].map((person) => (
+            <article key={person.name} className="group">
+              <div
+                aria-hidden="true"
+                className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-muted-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+              >
+                {person.name
+                  .replace(/^(Dr\.|Prof\. Dr\. phil\.|Prof\.)\s+/i, "")
+                  .split(" ")
+                  .filter(Boolean)
+                  .map((t) => t[0])
+                  .slice(0, 2)
+                  .join("")}
+              </div>
+              <div className="mt-4">
+                <h3 className="font-display text-lg leading-tight">{person.name}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+              </div>
+            </article>
           ))}
-        </ul>
-      </div>
+        </div>
+      </section>
+
+      <section className="shell rule-t py-16" aria-labelledby="satzung-preview">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-12">
+            <h2 id="satzung-preview" className="display-lg max-w-4xl">
+              Satzung
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Rechtliche Grundlage des Vereins
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <Link to="/verein/satzung" className="group inline-block">
+            <article className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]">
+              <div
+                aria-hidden="true"
+                className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-muted-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+              >
+                {"SZ"}
+              </div>
+              <div className="mt-4">
+                <h3 className="font-display text-lg leading-tight">Satzung des aed e.V.</h3>
+                <p className="mt-1 text-sm text-muted-foreground">PDF-Download</p>
+              </div>
+            </article>
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
