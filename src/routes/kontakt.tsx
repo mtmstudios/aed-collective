@@ -29,7 +29,7 @@ function KontaktPage() {
         titel="Geschäftsstelle"
         intro="Fragen zu Mitgliedschaft, Programm oder zum Wettbewerb neuland? Die Geschäftsstelle hilft weiter."
       />
-      <section className="shell pb-24">
+      <section className="shell">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5 space-y-8">
             <div className="rule-t pt-6">

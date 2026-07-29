@@ -102,7 +102,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <nav className="shell rule-t py-16" aria-label="Weitere Seiten zum Verein">
+      <nav className="shell rule-t pt-16" aria-label="Weitere Seiten zum Verein">
         <ul className="grid gap-px border border-line bg-line sm:grid-cols-3">
           {[
             { to: "/verein/vorstand", titel: "Vorstand", text: "Fünf Personen, ein Ehrenvorsitzender" },

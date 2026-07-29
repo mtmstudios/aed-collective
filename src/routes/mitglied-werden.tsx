@@ -102,7 +102,7 @@ function MitgliedWerdenPage() {
         </p>
       </section>
 
-      <section className="shell rule-t py-12 pb-24" aria-labelledby="formular">
+      <section className="shell rule-t py-12" aria-labelledby="formular">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <h2 id="formular" className="display-md">
