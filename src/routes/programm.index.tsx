@@ -43,7 +43,7 @@ function ProgrammPage() {
         intro="Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden und Festen ein. Weitere Termine kündigen wir über Newsletter, Instagram und unsere WhatsApp-Gruppe an."
       />
 
-      <section className="shell" aria-label="Filter nach Format">
+      <section className="shell bg-background" aria-label="Filter nach Format">
         <div className="flex flex-wrap gap-2 border-y border-line py-4">
           {["Alle", ...eventFormate].map((f) => (
             <button
@@ -63,7 +63,7 @@ function ProgrammPage() {
         </div>
       </section>
 
-      <section className="shell py-12" aria-labelledby="kommend-titel">
+      <section className="shell band-muted py-12" aria-labelledby="kommend-titel">
         <h2 id="kommend-titel" className="display-md">
           Kommende Termine
         </h2>
@@ -78,7 +78,7 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section className="shell rule-t py-12" aria-labelledby="archiv-titel">
+      <section className="shell bg-background py-12" aria-labelledby="archiv-titel">
         <div className="flex flex-col items-start gap-6">
           <div className="max-w-2xl">
             <h2 id="archiv-titel" className="display-md">
