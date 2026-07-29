@@ -115,7 +115,7 @@ function VereinPage() {
             <article key={person.name} className="group">
               <div
                 aria-hidden="true"
-                className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-muted-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
               >
                 {person.name
                   .replace(/^(Dr\.|Prof\.)\s+/i, "")
