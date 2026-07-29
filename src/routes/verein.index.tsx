@@ -100,7 +100,7 @@ function VereinPage() {
             { to: "/verein/satzung", titel: "Satzung", text: "Rechtliche Grundlage des Vereins" },
           ].map((i) => (
             <li key={i.to} className="bg-background">
-              <Link to={i.to} className="block h-full p-8 transition-colors hover:bg-muted">
+              <Link to={i.to} className="flex min-h-[400px] h-full flex-col justify-start p-12 transition-colors hover:bg-muted">
                 <span className="font-display text-xl">{i.titel}</span>
                 <span className="mt-2 block text-sm text-muted-foreground">{i.text}</span>
               </Link>
