@@ -143,10 +143,10 @@ function VereinPage() {
 
         <div className="mt-8">
           <article className="group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]">
-            <div
-              aria-hidden="true"
-              className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-muted-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-            >
+              <div
+                aria-hidden="true"
+                className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+              >
               {"WS"}
             </div>
             <div className="mt-4">
