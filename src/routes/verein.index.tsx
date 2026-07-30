@@ -152,10 +152,10 @@ function VereinPage() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {beirat.map((person) => (
             <PersonDialog key={person.name} person={person}>
-              <article className="group block cursor-pointer bg-muted p-4" role="button" tabIndex={0}>
+              <article className="group block cursor-pointer" role="button" tabIndex={0}>
                 <div
                   aria-hidden="true"
-                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                  className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
                 >
                   {initialen(person.name)}
                 </div>
