@@ -1,26 +1,28 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { beirat } from "@/data/site";
+import { vorstand } from "@/data/site";
 import { ArrowLeft } from "lucide-react";
 
-export const Route = createFileRoute("/verein/beirat/$slug")({
+export const Route = createFileRoute("/verein/vorstand/$slug")({
   head: ({ params }) => {
-    const person = beirat.find((p) => p.slug === params.slug);
-    const title = person ? `${person.name} – Beirat` : "Beirat – aed e.V. Stuttgart";
+    const person = vorstand.find((p) => p.slug === params.slug);
+    const title = person ? `${person.name} – ${person.rolle}` : "Vorstand – aed e.V. Stuttgart";
     const description = person
-      ? `Statement und Vita von ${person.name}, ${person.rolle}, im Beirat des aed e.V. Stuttgart.`
-      : "Beirat des aed e.V. Stuttgart";
+      ? `Statement und Vita von ${person.name}, ${person.rolle} des aed e.V. Stuttgart.`
+      : "Vorstand des aed e.V. Stuttgart";
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
-        { property: "og:url", content: `/verein/beirat/${params.slug}` },
+        { property: "og:type", content: "profile" },
+        { name: "twitter:card", content: "summary" },
+        { property: "og:url", content: `/verein/vorstand/${params.slug}` },
       ],
-      links: [{ rel: "canonical", href: `/verein/beirat/${params.slug}` }],
+      links: [{ rel: "canonical", href: `/verein/vorstand/${params.slug}` }],
     };
   },
-  component: BeiratDetailPage,
+  component: VorstandDetailPage,
 });
 
 function initialen(name: string) {
@@ -33,9 +35,9 @@ function initialen(name: string) {
     .join("");
 }
 
-function BeiratDetailPage() {
+function VorstandDetailPage() {
   const { slug } = Route.useParams();
-  const person = beirat.find((p) => p.slug === slug);
+  const person = vorstand.find((p) => p.slug === slug);
 
   if (!person) {
     throw notFound();
@@ -56,9 +58,7 @@ function BeiratDetailPage() {
             <h1 className="font-display text-4xl font-bold uppercase tracking-tight md:text-6xl lg:text-7xl">
               {person.name}
             </h1>
-            <p className="mt-3 max-w-2xl text-lg font-medium md:text-xl">
-              {person.rolle}
-            </p>
+            <p className="mt-3 max-w-2xl text-lg font-medium md:text-xl">{person.rolle}</p>
           </div>
         </div>
       </section>
@@ -66,7 +66,10 @@ function BeiratDetailPage() {
       <section className="shell rule-t py-16" aria-labelledby="statement">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
-            <div className="flex aspect-4/5 items-center justify-center bg-muted font-display text-7xl text-muted-foreground md:text-9xl">
+            <div
+              aria-hidden="true"
+              className="flex aspect-4/5 items-center justify-center bg-card font-display text-7xl text-foreground md:text-9xl"
+            >
               {initialen(person.name)}
             </div>
           </div>
@@ -76,41 +79,38 @@ function BeiratDetailPage() {
             </h2>
             {person.statement ? (
               <div className="mt-6 space-y-6 text-lg leading-relaxed">
-                {person.statement.split("\n").filter(Boolean).map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
-                ))}
+                {person.statement
+                  .split("\n")
+                  .filter(Boolean)
+                  .map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
               </div>
             ) : (
               <p className="mt-6 text-muted-foreground">
-                Für dieses Beiratsmitglied liegt noch kein Statement vor.
+                Für dieses Vorstandsmitglied liegt noch kein Statement vor.
               </p>
             )}
-            {person.link && (
-              <a
-                href={person.link}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex text-sm underline link-brand"
-              >
-                Website besuchen
+            {person.email && (
+              <a href={`mailto:${person.email}`} className="mt-8 inline-flex text-sm underline link-brand">
+                {person.email}
               </a>
             )}
           </div>
         </div>
       </section>
 
-      <section className="shell rule-t pb-16" aria-labelledby="weitere-beiraete">
-        <h2 id="weitere-beiraete" className="eyebrow">
-          Weitere Beiräte
+      <section className="shell rule-t pb-16 band-muted" aria-labelledby="weitere-vorstaende">
+        <h2 id="weitere-vorstaende" className="eyebrow pt-16">
+          Weitere Personen
         </h2>
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {beirat
+          {vorstand
             .filter((p) => p.slug !== slug)
-            .slice(0, 4)
             .map((p) => (
               <li key={p.slug}>
                 <Link
-                  to="/verein/beirat/$slug" params={{ slug: p.slug! }}
+                  to="/verein/vorstand/$slug" params={{ slug: p.slug! }}
                   className="group block border border-line bg-card p-4 transition-colors hover:bg-brand hover:text-brand-foreground"
                 >
                   <span className="font-display text-lg leading-tight">{p.name}</span>
@@ -121,9 +121,9 @@ function BeiratDetailPage() {
               </li>
             ))}
         </ul>
-        <div className="mt-8">
-          <Link to="/verein/beirat" className="btn-outline">
-            Alle Beiräte
+        <div className="mt-8 pb-16">
+          <Link to="/verein/vorstand" className="btn-outline">
+            Alle Vorstände
           </Link>
         </div>
       </section>

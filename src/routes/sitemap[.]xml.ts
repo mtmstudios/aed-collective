@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { events, beirat } from "@/data/site";
+import { events, beirat, vorstand } from "@/data/site";
 import { jahrgaenge, projekte } from "@/data/neuland";
 
 // TODO: replace with your project URL once a project name or custom domain is set.
@@ -42,6 +42,11 @@ export const Route = createFileRoute("/sitemap.xml")({
             path: `/neuland/gewinner/${p.jahr}/${p.slug}`,
             changefreq: "yearly" as const,
             priority: "0.6",
+          })),
+          ...vorstand.map((p) => ({
+            path: `/verein/vorstand/${p.slug}`,
+            changefreq: "yearly" as const,
+            priority: "0.5",
           })),
           ...beirat.map((p) => ({
             path: `/verein/beirat/${p.slug}`,

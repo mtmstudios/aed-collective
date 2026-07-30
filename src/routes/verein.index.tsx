@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { beirat } from "@/data/site";
+import { beirat, vorstand } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/verein/")({
@@ -108,60 +108,61 @@ function VereinPage() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { name: "Dr. Frank Heinlein", rolle: "Erster Vorsitzender", email: "frank.heinlein@aed-stuttgart.de" },
-            { name: "Johanna Neves Pimenta", rolle: "Zweite Vorsitzende", email: undefined },
-            { name: "Sara Dahme", rolle: "Vorstand Kommunikation", email: undefined },
-            { name: "Frank Seeger", rolle: "Vorstand Finanzen", email: "info@aed-stuttgart.de" },
-          ].map((person) => (
-            <article key={person.name} className="group">
-              <div
-                aria-hidden="true"
-                className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-              >
-                {person.name
-                  .replace(/^(Dr\.|Prof\.)\s+/i, "")
-                  .split(" ")
-                  .filter(Boolean)
-                  .map((t) => t[0])
-                  .slice(0, 2)
-                  .join("")}
-              </div>
-              <div className="mt-4">
-                <h3 className="font-display text-lg leading-tight">{person.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
-                {person.email && (
-                  <a
-                    href={`mailto:${person.email}`}
-                    className="mt-1 inline-block text-sm underline link-brand"
-                  >
-                    {person.email}
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
+          {vorstand
+            .filter((p) => p.rolle !== "Ehrenvorsitzender")
+            .map((person) => (
+              <Link key={person.name} to="/verein/vorstand/$slug" params={{ slug: person.slug! }} className="group block">
+                <div
+                  aria-hidden="true"
+                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                >
+                  {person.name
+                    .replace(/^(Dr\.|Prof\.)\s+/i, "")
+                    .split(" ")
+                    .filter(Boolean)
+                    .map((t) => t[0])
+                    .slice(0, 2)
+                    .join("")}
+                </div>
+                <div className="mt-4">
+                  <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+                  {person.email && (
+                    <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
+                  )}
+                </div>
+              </Link>
+            ))}
         </div>
 
         <div className="mt-8">
-          <article className="group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]">
-              <div
-                aria-hidden="true"
-                className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+          {vorstand
+            .filter((p) => p.rolle === "Ehrenvorsitzender")
+            .map((person) => (
+              <Link
+                key={person.name}
+                to="/verein/vorstand/$slug" params={{ slug: person.slug! }}
+                className="group block w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
               >
-              {"WS"}
-            </div>
-            <div className="mt-4">
-              <h3 className="font-display text-lg leading-tight">Prof. Dr. Dr. E.h. Dr. h.c. Werner Sobek</h3>
-              <p className="mt-1 text-sm text-muted-foreground">Ehrenvorsitzender</p>
-              <a
-                href="mailto:info@aed-stuttgart.de"
-                className="mt-1 inline-block text-sm underline link-brand"
-              >
-                info@aed-stuttgart.de
-              </a>
-            </div>
-          </article>
+                <div
+                  aria-hidden="true"
+                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                >
+                  WS
+                </div>
+                <div className="mt-4">
+                  <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+                  {person.email && (
+                    <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
+                  )}
+                </div>
+              </Link>
+            ))}
         </div>
       </section>
 
@@ -181,7 +182,7 @@ function VereinPage() {
           {beirat.map((person) => (
             <Link
               key={person.name}
-              to={`/verein/beirat/${person.slug}`}
+              to="/verein/beirat/$slug" params={{ slug: person.slug! }}
               className="group block"
             >
               <article className="group">
