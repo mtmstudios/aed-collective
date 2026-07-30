@@ -38,6 +38,7 @@ import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitgli
 import { Route as VereinVorstandIndexRouteImport } from './routes/verein.vorstand.index'
 import { Route as VereinBeiratIndexRouteImport } from './routes/verein.beirat.index'
 import { Route as NeulandGewinnerIndexRouteImport } from './routes/neuland.gewinner.index'
+import { Route as VereinVorstandSlugRouteImport } from './routes/verein.vorstand.$slug'
 import { Route as VereinBeiratSlugRouteImport } from './routes/verein.beirat.$slug'
 import { Route as NeulandGewinnerJahrIndexRouteImport } from './routes/neuland.gewinner.$jahr.index'
 import { Route as NeulandGewinnerJahrSlugRouteImport } from './routes/neuland.gewinner.$jahr.$slug'
@@ -189,6 +190,11 @@ const NeulandGewinnerIndexRoute = NeulandGewinnerIndexRouteImport.update({
   path: '/gewinner/',
   getParentRoute: () => NeulandRoute,
 } as any)
+const VereinVorstandSlugRoute = VereinVorstandSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => VereinVorstandRoute,
+} as any)
 const VereinBeiratSlugRoute = VereinBeiratSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -234,6 +240,7 @@ export interface FileRoutesByFullPath {
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
   '/verein/beirat/$slug': typeof VereinBeiratSlugRoute
+  '/verein/vorstand/$slug': typeof VereinVorstandSlugRoute
   '/neuland/gewinner/': typeof NeulandGewinnerIndexRoute
   '/verein/beirat/': typeof VereinBeiratIndexRoute
   '/verein/vorstand/': typeof VereinVorstandIndexRoute
@@ -265,6 +272,7 @@ export interface FileRoutesByTo {
   '/programm': typeof ProgrammIndexRoute
   '/verein': typeof VereinIndexRoute
   '/verein/beirat/$slug': typeof VereinBeiratSlugRoute
+  '/verein/vorstand/$slug': typeof VereinVorstandSlugRoute
   '/neuland/gewinner': typeof NeulandGewinnerIndexRoute
   '/verein/beirat': typeof VereinBeiratIndexRoute
   '/verein/vorstand': typeof VereinVorstandIndexRoute
@@ -300,6 +308,7 @@ export interface FileRoutesById {
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
   '/verein/beirat/$slug': typeof VereinBeiratSlugRoute
+  '/verein/vorstand/$slug': typeof VereinVorstandSlugRoute
   '/neuland/gewinner/': typeof NeulandGewinnerIndexRoute
   '/verein/beirat/': typeof VereinBeiratIndexRoute
   '/verein/vorstand/': typeof VereinVorstandIndexRoute
@@ -336,6 +345,7 @@ export interface FileRouteTypes {
     | '/programm/'
     | '/verein/'
     | '/verein/beirat/$slug'
+    | '/verein/vorstand/$slug'
     | '/neuland/gewinner/'
     | '/verein/beirat/'
     | '/verein/vorstand/'
@@ -367,6 +377,7 @@ export interface FileRouteTypes {
     | '/programm'
     | '/verein'
     | '/verein/beirat/$slug'
+    | '/verein/vorstand/$slug'
     | '/neuland/gewinner'
     | '/verein/beirat'
     | '/verein/vorstand'
@@ -401,6 +412,7 @@ export interface FileRouteTypes {
     | '/programm/'
     | '/verein/'
     | '/verein/beirat/$slug'
+    | '/verein/vorstand/$slug'
     | '/neuland/gewinner/'
     | '/verein/beirat/'
     | '/verein/vorstand/'
@@ -635,6 +647,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NeulandGewinnerIndexRouteImport
       parentRoute: typeof NeulandRoute
     }
+    '/verein/vorstand/$slug': {
+      id: '/verein/vorstand/$slug'
+      path: '/$slug'
+      fullPath: '/verein/vorstand/$slug'
+      preLoaderRoute: typeof VereinVorstandSlugRouteImport
+      parentRoute: typeof VereinVorstandRoute
+    }
     '/verein/beirat/$slug': {
       id: '/verein/beirat/$slug'
       path: '/$slug'
@@ -713,10 +732,12 @@ const VereinBeiratRouteWithChildren = VereinBeiratRoute._addFileChildren(
 )
 
 interface VereinVorstandRouteChildren {
+  VereinVorstandSlugRoute: typeof VereinVorstandSlugRoute
   VereinVorstandIndexRoute: typeof VereinVorstandIndexRoute
 }
 
 const VereinVorstandRouteChildren: VereinVorstandRouteChildren = {
+  VereinVorstandSlugRoute: VereinVorstandSlugRoute,
   VereinVorstandIndexRoute: VereinVorstandIndexRoute,
 }
 
