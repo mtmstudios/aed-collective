@@ -155,7 +155,7 @@ function VereinPage() {
               <article className="group block cursor-pointer" role="button" tabIndex={0}>
                 <div
                   aria-hidden="true"
-                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                  className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
                 >
                   {initialen(person.name)}
                 </div>
