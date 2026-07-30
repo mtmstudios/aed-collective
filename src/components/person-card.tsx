@@ -36,8 +36,8 @@ export function PersonCard({ person }: { person: Person }) {
           Website
         </a>
       )}
-      {hasStatement && (
-        <>
+      <div className="mt-4 flex flex-col items-start gap-3">
+        {hasStatement && (
           <button
             type="button"
             onClick={(e) => {
@@ -45,20 +45,20 @@ export function PersonCard({ person }: { person: Person }) {
               setOpen((v) => !v);
             }}
             aria-expanded={open}
-            className="mt-4 inline-flex items-center gap-2 text-sm link-brand"
+            className="inline-flex items-center gap-2 text-sm link-brand"
           >
             {open ? <Minus className="size-4" aria-hidden="true" /> : <Plus className="size-4" aria-hidden="true" />}
             Statement
           </button>
-          {open && <p className="mt-3 border-t border-line pt-3 text-sm leading-relaxed">{person.statement}</p>}
-        </>
-      )}
-      {detailUrl && (
-        <span className="mt-4 inline-flex items-center gap-2 text-sm link-brand">
-          Mehr erfahren
-          <ArrowRight className="size-4" aria-hidden="true" />
-        </span>
-      )}
+        )}
+        {detailUrl && (
+          <span className="inline-flex items-center gap-2 text-sm link-brand">
+            Mehr erfahren
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </span>
+        )}
+      </div>
+      {open && <p className="mt-3 border-t border-line pt-3 text-sm leading-relaxed">{person.statement}</p>}
     </div>
   );
 
