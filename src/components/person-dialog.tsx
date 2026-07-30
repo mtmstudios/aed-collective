@@ -32,7 +32,7 @@ export function PersonDialog({
         <div className="grid gap-8">
           <div
             aria-hidden="true"
-            className="mx-auto flex aspect-4/5 w-full max-w-[440px] items-center justify-center bg-muted font-display text-6xl text-foreground sm:max-w-[520px]"
+            className="mx-auto flex aspect-4/5 w-full max-w-[300px] items-center justify-center bg-muted font-display text-5xl text-foreground sm:max-w-[360px]"
           >
             {initials ?? initialen(person.name)}
           </div>
