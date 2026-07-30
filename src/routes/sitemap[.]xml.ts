@@ -43,6 +43,11 @@ export const Route = createFileRoute("/sitemap.xml")({
             changefreq: "yearly" as const,
             priority: "0.6",
           })),
+          ...beirat.map((p) => ({
+            path: `/verein/beirat/${p.slug}`,
+            changefreq: "yearly" as const,
+            priority: "0.5",
+          })),
         ];
 
         const urls = entries.map((e) =>
