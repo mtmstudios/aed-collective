@@ -35,12 +35,8 @@ const beitrittsPdf = "https://www.aed-stuttgart.de/app/download/8616515663/aed_M
 
 const beitraege = [
   {
-    typ: "Einzelmitgliedschaft",
-    text: "Für alle, die Ideen teilen, Diskussionen anstoßen und Gestaltung aktiv mitprägen wollen.",
-  },
-  {
-    typ: "Fördermitgliedschaft",
-    text: "Für Büros, Unternehmen und Institutionen – inklusive Nennung auf der Mitgliederseite.",
+    typ: "Personenmitgliedschaft",
+    text: "",
   },
 ];
 
@@ -109,10 +105,9 @@ function MitgliedWerdenPage() {
 
 
         <div className="mt-8 border border-line bg-card p-6 md:p-8">
-          <h3 className="font-display text-xl">Fördermitglieder</h3>
+          <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-            Rund 80 Unternehmen, Büros und Institutionen unterstützen den aed e.V. als
-            Fördermitglieder – und damit Programm, Netzwerk und den Nachwuchswettbewerb neuland.
+            Für Büros, Unternehmen und Institutionen – inklusive Nennung auf der Mitgliederseite.
           </p>
           <Link to="/mitglieder" className="btn-solid mt-6 inline-flex">
             Alle Fördermitglieder anschauen
