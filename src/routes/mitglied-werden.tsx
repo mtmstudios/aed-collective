@@ -88,10 +88,8 @@ function MitgliedWerdenPage() {
           nicht denkbar wären. Neben dem ehrenamtlichen Vorstand und Beirat wird der aed vor allem
           getragen und finanziert durch Förder- und Personenmitglieder. Das Netzwerk des aed ist
           branchenübergreifend, mit dem Ziel, den Austausch über Disziplinen hinweg zu ermöglichen und
-          zu fördern. Markenunternehmen, Architektur- und Designbüros sowie designrelevante
-          Organisationen sind wichtige Mitglieder im aed und unterstützen unsere Aktivitäten. Aus
-          Datenschutzgründen nennen wir unsere mehr als 400 Personenmitglieder nicht. Wir bitten um
-          Verständnis.
+          zu fördern. Aus Datenschutzgründen nennen wir unsere mehr als 400 Personenmitglieder nicht.
+          Wir bitten um Verständnis.
         </p>
         <ul className="mt-8 grid gap-6">
           {beitraege.map((b) => (
@@ -118,8 +116,10 @@ function MitgliedWerdenPage() {
 
         <div className="mt-8 border border-line bg-card p-6 md:p-8">
           <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
-          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground whitespace-pre-line">
             Für Büros, Unternehmen und Institutionen – inklusive Nennung auf der Mitgliederseite.
+            {"\n"}Markenunternehmen, Architektur- und Designbüros sowie designrelevante Organisationen sind wichtige Mitglieder im aed und unterstützen unsere Aktivitäten.
+            {"\n"}
           </p>
           <Link to="/mitglieder" className="btn-solid mt-6 inline-flex">
             Alle Fördermitglieder anschauen
