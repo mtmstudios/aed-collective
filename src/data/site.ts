@@ -254,36 +254,45 @@ export type Person = {
   statement?: string;
   link?: string;
   slug?: string;
+  email?: string;
 };
 
 // Statements: Originalzitate von den Statement-Seiten der Bestands-Website
 export const vorstand: Person[] = [
   {
     name: "Dr. Frank Heinlein",
+    slug: "frank-heinlein",
+    email: "frank.heinlein@aed-stuttgart.de",
     rolle: "Erster Vorsitzender",
     statement:
       "„Die Arbeit im aed ermöglicht das Kennenlernen von und den Umgang mit zahllosen interessanten Themen und Personen. Das ehrenamtliche Engagement, das für Konzeption und Vorbereitung von 20 Veranstaltungen im Jahr erforderlich ist, ist beachtlich – es eröffnet aber einen unerschöpflichen Vorrat an Erfahrungen mit der menschlichen Kreativität, der seinesgleichen sucht.“ – Dr. Frank Heinlein studierte Geschichte in Berlin, Straßburg, Edinburgh, Freiburg und Florenz und ist seit vielen Jahren für die Unternehmenskommunikation der Werner Sobek Gruppe verantwortlich.",
   },
   {
     name: "Johanna Neves Pimenta",
+    slug: "johanna-neves-pimenta",
     rolle: "Zweite Vorsitzende",
     statement:
       "„Kreativschaffende bauen von Berufs wegen Brücken: Der Austausch untereinander stärkt uns dabei. Mit dem aed bieten wir eine Plattform für einen offenen Dialog. Hier begegnen sich die verschiedenen Disziplinen auf Augenhöhe, unabhängig von der Karriereebene – von neuland-Newcomern bis zu Lebenswege-Legenden.“ – Johanna Neves Pimenta ist Chefredakteurin von md INTERIOR DESIGN ARCHITECTURE.",
   },
   {
     name: "Sara Dahme",
+    slug: "sara-dahme",
     rolle: "Vorstand Kommunikation",
     statement:
       "„Ein Leben ohne gute Gestaltung ist möglich, aber sinnlos! Ich liebe es, Menschen zusammenzubringen und einen offenen Austausch anzuregen, Ungewohntes miteinander zu verknüpfen und neue Netzwerke zu etablieren – für mich ist der aed ein echter Inkubator und der Beweis dafür, dass es im Stuttgarter Kessel nur so vor Kreativität brodelt.“ – Sara Dahme ist Kunst- und Kulturvermittlerin und freie Kuratorin.",
   },
   {
     name: "Frank Seeger",
+    slug: "frank-seeger",
+    email: "info@aed-stuttgart.de",
     rolle: "Vorstand Finanzen",
     statement:
       "„Selbst für mich als Steuerberater geben die Veranstaltungen des aed immer wieder neue Einblicke in die Welt von Architektur und Design. Vor allem der Nachwuchswettbewerb aed neuland, gefördert von der Karl Schlecht Stiftung – immer ein toller Einblick in die Ideen junger Gestalter.“ – Frank Seeger ist Steuerberater mit eigener Kanzlei und hat den aed-Vorstand Finanzen 2014 übernommen.",
   },
   {
     name: "Prof. Dr. Dr. E.h. Dr. h.c. Werner Sobek",
+    slug: "werner-sobek",
+    email: "info@aed-stuttgart.de",
     rolle: "Ehrenvorsitzender",
     statement:
       "„Wo sonst, wenn nicht in Stuttgart, hätten wir den aed gründen sollen? In dieser Stadt, in dieser Region, in der man eine anderswo in der Welt kaum erreichte technisch-wissenschaftliche Kompetenz vorfindet, in der führende Persönlichkeiten aus Graphik, Schmuck, Industrial Design, Automobildesign und anderen Bereichen des Gestaltens auf absolutem Spitzenniveau lehren und arbeiten.“",
