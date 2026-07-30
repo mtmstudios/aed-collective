@@ -38,6 +38,10 @@ const beitraege = [
     typ: "Personenmitgliedschaft",
     text: "",
   },
+  {
+    typ: "Fördermitgliedschaft",
+    text: "",
+  },
 ];
 
 function MitgliedWerdenPage() {
@@ -83,34 +87,28 @@ function MitgliedWerdenPage() {
         <h2 id="beitraege" className="display-md">
           Mitgliedschaften
         </h2>
-        <p className="mt-6 max-w-3xl text-muted-foreground">
-          Der aed lebt von seinen Mitgliedern: Förder- und Personenmitglieder ermöglichen Programm,
-          Netzwerk und Nachwuchsförderung. Aus Datenschutzgründen nennen wir unsere mehr als 400
-          Personenmitglieder nicht öffentlich.
-        </p>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
+
+        <ul className="mt-8 grid gap-6">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
               <h3 className="font-display text-xl">{b.typ}</h3>
-              <p className="mt-3 text-muted-foreground">
-                Mit einer Personenmitgliedschaft werden Sie Teil des aed-Netzwerks und ermöglichen ein
-                vielfältiges Programm aus Vorträgen, Ausstellungen und Exkursionen.
-              </p>
+              {b.typ === "Personenmitgliedschaft" && (
+                <p className="mt-3 text-muted-foreground">
+                  Mit einer Personenmitgliedschaft werden Sie Teil des aed-Netzwerks und ermöglichen ein
+                  vielfältiges Programm aus Vorträgen, Ausstellungen und Exkursionen.
+                </p>
+              )}
+              {b.typ === "Fördermitgliedschaft" && (
+                <p className="mt-3 text-muted-foreground">
+                  Für Büros, Unternehmen und Institutionen – mit Nennung auf der Mitgliederseite.
+                  Unterstützen Sie den aed und seine Nachwuchsförderung.
+                </p>
+              )}
               <a href="#formular" className="btn-solid mt-6 inline-flex">
-                Eine Personenmitgliedschaft beantragen
+                Eine {b.typ} beantragen
               </a>
             </li>
           ))}
-          <li className="border border-line bg-card p-6">
-            <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
-            <p className="mt-3 text-muted-foreground">
-              Für Büros, Unternehmen und Institutionen – mit Nennung auf der Mitgliederseite.
-              Unterstützen Sie den aed und seine Nachwuchsförderung.
-            </p>
-            <a href="#formular" className="btn-solid mt-6 inline-flex">
-              Eine Fördermitgliedschaft beantragen
-            </a>
-          </li>
         </ul>
 
         <p className="mt-6 text-muted-foreground">
@@ -120,6 +118,19 @@ function MitgliedWerdenPage() {
           </a>
           .
         </p>
+      </section>
+
+      <section className="shell rule-t py-12" aria-labelledby="foerderer">
+        <h2 id="foerderer" className="display-md">
+          Fördermitglieder
+        </h2>
+        <p className="mt-6 max-w-3xl text-muted-foreground">
+          Rund 80 Unternehmen, Büros und Institutionen unterstützen den aed e.V. als Fördermitglieder –
+          und damit Programm, Netzwerk und den Nachwuchswettbewerb neuland.
+        </p>
+        <a href="/verein" className="btn-solid mt-6 inline-flex">
+          Alle Fördermitglieder ansehen
+        </a>
       </section>
 
 
