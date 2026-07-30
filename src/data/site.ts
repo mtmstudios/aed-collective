@@ -253,6 +253,7 @@ export type Person = {
   rolle: string;
   statement?: string;
   link?: string;
+  slug?: string;
 };
 
 // Statements: Originalzitate von den Statement-Seiten der Bestands-Website
@@ -292,6 +293,7 @@ export const vorstand: Person[] = [
 export const beirat: Person[] = [
   {
     name: "Stefan Behnisch",
+    slug: "stefan-behnisch",
     rolle: "Architekt, Behnisch Architekten",
     link: "https://behnisch.com",
     statement:
@@ -299,6 +301,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Lutz Dietzold",
+    slug: "lutz-dietzold",
     rolle: "CEO, Rat für Formgebung",
     link: "https://www.gdc.de",
     statement:
@@ -306,6 +309,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Dr. Ulrike Groos",
+    slug: "ulrike-groos",
     rolle: "Direktorin, Kunstmuseum Stuttgart",
     link: "https://www.kunstmuseum-stuttgart.de",
     statement:
@@ -313,6 +317,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Dr. Petra Kiedaisch",
+    slug: "petra-kiedaisch",
     rolle: "Geschäftsführerin, av edition",
     link: "https://www.avedition.de",
     statement:
@@ -320,6 +325,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Andreas Kurbos",
+    slug: "andreas-kurbos",
     rolle: "Gründer und CEO, studiokurbos",
     link: "https://www.kurbos.com",
     statement:
@@ -327,6 +333,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Johannes Milla",
+    slug: "johannes-milla",
     rolle: "Creative Director, Milla & Partner",
     link: "https://www.milla.de",
     statement:
@@ -334,6 +341,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Markus Müller",
+    slug: "markus-mueller",
     rolle: "Architekt, Präsident AKBW",
     link: "https://www.akbw.de",
     statement:
@@ -341,12 +349,14 @@ export const beirat: Person[] = [
   },
   {
     name: "Silvia Olp",
+    slug: "silvia-olp",
     rolle: "Public Relations, Architecture & Design",
     statement:
       "„Der aed ist akzeptiert und wächst noch immer – die Veranstaltungen sind regelmäßig ausgebucht.“ – Silvia Olp begleitet den aed seit dem ersten öffentlichen Auftritt im Kunstmuseum Stuttgart 2004 und ist Initiatorin des Nachwuchswettbewerbs neuland.",
   },
   {
     name: "Prof. Dr. phil. Stephan Trüby",
+    slug: "stephan-trueby",
     rolle: "Direktor IGmA, Universität Stuttgart",
     link: "https://www.igma.uni-stuttgart.de",
     statement:
@@ -354,6 +364,7 @@ export const beirat: Person[] = [
   },
   {
     name: "Prof. Andreas Uebele",
+    slug: "andreas-uebele",
     rolle: "Kommunikationsdesigner, büro uebele",
     link: "https://www.uebele.com",
     statement:

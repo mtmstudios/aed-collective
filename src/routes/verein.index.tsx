@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { beirat } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/verein/")({
@@ -177,36 +178,31 @@ function VereinPage() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { name: "Stefan Behnisch", rolle: "Architekt, Behnisch Architekten" },
-            { name: "Lutz Dietzold", rolle: "CEO, Rat für Formgebung" },
-            { name: "Dr. Ulrike Groos", rolle: "Direktorin, Kunstmuseum Stuttgart" },
-            { name: "Dr. Petra Kiedaisch", rolle: "Geschäftsführerin, av edition" },
-            { name: "Andreas Kurbos", rolle: "Gründer und CEO, studiokurbos" },
-            { name: "Johannes Milla", rolle: "Creative Director, Milla & Partner" },
-            { name: "Markus Müller", rolle: "Architekt, Präsident AKBW" },
-            { name: "Silvia Olp", rolle: "Public Relations, Architecture & Design" },
-            { name: "Prof. Dr. phil. Stephan Trüby", rolle: "Direktor IGmA, Universität Stuttgart" },
-            { name: "Prof. Andreas Uebele", rolle: "Kommunikationsdesigner, büro uebele" },
-          ].map((person) => (
-            <article key={person.name} className="group">
-              <div
-                aria-hidden="true"
-                className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-              >
-                {person.name
-                  .replace(/^(Dr\.|Prof\. Dr\. phil\.|Prof\.)\s+/i, "")
-                  .split(" ")
-                  .filter(Boolean)
-                  .map((t) => t[0])
-                  .slice(0, 2)
-                  .join("")}
-              </div>
-              <div className="mt-4">
-                <h3 className="font-display text-lg leading-tight">{person.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
-              </div>
-            </article>
+          {beirat.map((person) => (
+            <Link
+              key={person.name}
+              to={`/verein/beirat/${person.slug}`}
+              className="group block"
+            >
+              <article className="group">
+                <div
+                  aria-hidden="true"
+                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                >
+                  {person.name
+                    .replace(/^(Prof\. Dr\. phil\.|Prof\. Dr\. Dr\. E\.h\. Dr\. h\.c\.|Prof\. Dr\.|Dr\. Dr\.|Prof\.|Dr\.)\s+/i, "")
+                    .split(" ")
+                    .filter(Boolean)
+                    .map((t) => t[0])
+                    .slice(0, 2)
+                    .join("")}
+                </div>
+                <div className="mt-4">
+                  <h3 className="font-display text-lg leading-tight">{person.name}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
       </section>
