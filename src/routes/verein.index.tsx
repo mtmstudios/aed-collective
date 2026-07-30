@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { beirat } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/verein/")({
