@@ -63,7 +63,7 @@ function MitgliedWerdenPage() {
     <>
       <PageHeader
         eyebrow="Mitgliedschaft"
-        titel="Mitglied werden"
+        titel="Sei ein Teil des Netzwerks"
         size="xl"
         intro="Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares Netzwerk und die Förderung des gestalterischen Nachwuchses."
       />
