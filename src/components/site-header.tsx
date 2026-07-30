@@ -15,14 +15,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background/90 backdrop-blur">
-      <div className="shell flex h-16 items-center justify-between gap-6 md:h-20">
+      <div className="shell flex h-20 items-center justify-between gap-6 md:h-24">
         <Link to="/" className="inline-flex items-center gap-3">
           <img
             src="/aed-logo.png"
             alt="aed e.V. – Architecture Engineering Design Stuttgart"
             width={500}
             height={276}
-            className="h-8 w-auto md:h-9"
+            className="h-10 w-auto md:h-11"
           />
           <span className="sr-only">Startseite</span>
         </Link>
@@ -33,7 +33,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="rounded-full bg-footer-bg px-5 py-2 font-display text-sm text-footer-text transition-opacity hover:opacity-85"
+                className="rounded-full bg-footer-bg px-5 py-2 font-display text-base text-footer-text transition-opacity hover:opacity-85"
               >
                 {item.label}
               </Link>
@@ -41,7 +41,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="font-display text-sm link-brand"
+                className="font-display text-base link-brand"
                 activeProps={{ className: "underline decoration-2 underline-offset-8" }}
               >
                 {item.label}
