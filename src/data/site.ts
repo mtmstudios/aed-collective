@@ -253,6 +253,7 @@ export type Person = {
   rolle: string;
   statement?: string;
   link?: string;
+  slug?: string;
 };
 
 // Statements: Originalzitate von den Statement-Seiten der Bestands-Website
