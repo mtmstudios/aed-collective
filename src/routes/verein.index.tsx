@@ -117,7 +117,7 @@ function VereinPage() {
                 <div className="group block cursor-pointer" role="button" tabIndex={0}>
                   <div
                     aria-hidden="true"
-                    className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                    className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
                   >
                     {isEhren ? "WS" : initialen(person.name)}
                   </div>
@@ -155,7 +155,7 @@ function VereinPage() {
               <article className="group block cursor-pointer" role="button" tabIndex={0}>
                 <div
                   aria-hidden="true"
-                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                  className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
                 >
                   {initialen(person.name)}
                 </div>
@@ -186,7 +186,7 @@ function VereinPage() {
           {foerdermitglieder.map((m) => (
             <li
               key={m.name}
-              className="border border-line bg-card p-4 text-sm leading-snug transition-colors duration-300 hover:bg-brand hover:text-brand-foreground"
+              className="border border-line bg-muted p-4 text-sm leading-snug transition-colors duration-300 hover:bg-brand hover:text-brand-foreground"
             >
               {m.url ? (
                 <a href={m.url} target="_blank" rel="noopener noreferrer" className="block">
