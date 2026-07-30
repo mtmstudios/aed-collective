@@ -24,22 +24,25 @@ export function PersonDialog({
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-h-[90vh] overflow-y-auto p-8 sm:max-w-3xl sm:p-10">
-        <DialogHeader>
-          <DialogTitle className="font-display text-2xl leading-tight">{person.name}</DialogTitle>
-          <DialogDescription className="text-base">{person.rolle}</DialogDescription>
+      <DialogContent className="max-h-[90vh] overflow-y-auto p-0 max-w-[375px] sm:max-w-[450px]">
+        <DialogHeader className="sr-only">
+          <DialogTitle>{person.name}</DialogTitle>
+          <DialogDescription>{person.rolle}</DialogDescription>
         </DialogHeader>
-        <div className="grid gap-10">
-          <div className="flex justify-center p-6 sm:p-8">
+        <div className="flex flex-col">
+          <div className="relative w-full">
             <div
               aria-hidden="true"
-              className="flex aspect-4/5 w-full max-w-[300px] items-center justify-center bg-muted font-display text-5xl text-foreground sm:max-w-[360px]"
+              className="flex aspect-4/5 w-full items-center justify-center bg-muted font-display text-5xl text-foreground"
             >
               {initials ?? initialen(person.name)}
             </div>
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-6">
+              <h2 className="font-display text-xl text-white sm:text-2xl">{person.name}</h2>
+              <p className="text-sm text-white/90 sm:text-base">{person.rolle}</p>
+            </div>
           </div>
-          <div>
-
+          <div className="w-full p-6 sm:p-8">
             {person.statement ? (
               <div className="space-y-4 text-sm leading-relaxed">
                 {person.statement
