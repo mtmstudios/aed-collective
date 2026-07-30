@@ -87,22 +87,6 @@ function MitgliedWerdenPage() {
         <h2 id="beitraege" className="display-md">
           Mitgliedschaften
         </h2>
-        <div className="mt-6 max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
-          <p>
-            Der aed wird von vielen Personen getragen, ohne die die zahlreichen Aktivitäten des
-            Vereins nicht denkbar wären. Neben dem ehrenamtlichen Vorstand und Beirat wird der aed
-            vor allem getragen und finanziert durch Förder- und Personenmitglieder. Das Netzwerk des
-            aed ist branchenübergreifend, mit dem Ziel, den Austausch über Disziplinen hinweg zu
-            ermöglichen und zu fördern. Markenunternehmen, Architektur- und Designbüros sowie
-            designrelevante Organisationen sind wichtige Mitglieder im aed und unterstützen unsere
-            Aktivitäten. Aus Datenschutzgründen nennen wir unsere mehr als 400 Personenmitglieder
-            nicht. Wir bitten um Verständnis.
-          </p>
-          <p>
-            Jedoch können Sie hier einsehen, welche Unternehmen und Institutionen die Aktivitäten des
-            aed durch eine Fördermitgliedschaft unterstützen.
-          </p>
-        </div>
         <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
@@ -111,6 +95,7 @@ function MitgliedWerdenPage() {
             </li>
           ))}
         </ul>
+
 
 
         <div className="mt-8 border border-line bg-card p-6 md:p-8">
