@@ -88,7 +88,7 @@ function MitgliedWerdenPage() {
           Netzwerk und Nachwuchsförderung. Aus Datenschutzgründen nennen wir unsere mehr als 400
           Personenmitglieder nicht öffentlich.
         </p>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        <ul className="mt-8 grid gap-6">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
               <h3 className="font-display text-xl">{b.typ}</h3>
