@@ -38,6 +38,10 @@ const beitraege = [
     typ: "Personenmitgliedschaft",
     text: "",
   },
+  {
+    typ: "Fördermitgliedschaft",
+    text: "",
+  },
 ];
 
 function MitgliedWerdenPage() {
