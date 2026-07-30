@@ -107,9 +107,14 @@ function MitgliedWerdenPage() {
               Für Büros, Unternehmen und Institutionen – mit Nennung auf der Mitgliederseite.
               Unterstützen Sie den aed und seine Nachwuchsförderung.
             </p>
-            <a href="#formular" className="btn-solid mt-6 inline-flex">
-              Eine Fördermitgliedschaft beantragen
-            </a>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a href="#formular" className="btn-solid inline-flex">
+                Eine Fördermitgliedschaft beantragen
+              </a>
+              <a href="/mitglieder/foerdermitglieder" className="btn-outline inline-flex">
+                Alle Fördermitglieder ansehen
+              </a>
+            </div>
           </li>
         </ul>
 
