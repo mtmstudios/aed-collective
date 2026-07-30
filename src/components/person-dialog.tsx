@@ -29,14 +29,15 @@ export function PersonDialog({
           <DialogTitle className="font-display text-2xl leading-tight">{person.name}</DialogTitle>
           <DialogDescription className="text-base">{person.rolle}</DialogDescription>
         </DialogHeader>
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="grid gap-8">
           <div
             aria-hidden="true"
-            className="flex aspect-4/5 items-center justify-center bg-muted font-display text-4xl text-foreground"
+            className="mx-auto flex aspect-4/5 w-full max-w-[440px] items-center justify-center bg-muted font-display text-6xl text-foreground sm:max-w-[520px]"
           >
             {initials ?? initialen(person.name)}
           </div>
-          <div className="sm:col-span-2">
+          <div>
+
             {person.statement ? (
               <div className="space-y-4 text-sm leading-relaxed">
                 {person.statement
