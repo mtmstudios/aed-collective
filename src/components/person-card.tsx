@@ -13,10 +13,10 @@ function initialen(name: string) {
     .join("");
 }
 
-export function PersonCard({ person }: { person: Person }) {
+export function PersonCard({ person, basePath = "/verein/beirat" }: { person: Person; basePath?: string }) {
   const [open, setOpen] = useState(false);
   const hasStatement = Boolean(person.statement);
-  const detailUrl = person.slug ? `/verein/beirat/${person.slug}` : undefined;
+  const detailUrl = person.slug ? `${basePath}/${person.slug}` : undefined;
 
   const placeholder = (
     <div
