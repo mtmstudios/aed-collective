@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Check } from "lucide-react";
 import { PageHeader } from "@/components/ui-bits";
@@ -158,11 +158,10 @@ function MitgliedWerdenPage() {
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="mw-typ" className="eyebrow">Art der Mitgliedschaft</label>
-                  <select id="mw-typ" name="typ" className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm">
-                    {beitraege.map((b) => (
-                      <option key={b.typ}>{b.typ}</option>
-                    ))}
-                  </select>
+                <select id="mw-typ" name="typ" className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm">
+                  <option>Personenmitgliedschaft</option>
+                  <option>Fördermitgliedschaft</option>
+                </select>
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="mw-nachricht" className="eyebrow">Nachricht (optional)</label>
