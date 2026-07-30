@@ -186,7 +186,7 @@ function VereinPage() {
           {foerdermitglieder.map((m) => (
             <li
               key={m.name}
-              className="border border-line bg-card p-4 text-sm leading-snug transition-colors duration-300 hover:bg-brand hover:text-brand-foreground"
+              className="border border-line bg-muted p-4 text-sm leading-snug transition-colors duration-300 hover:bg-brand hover:text-brand-foreground"
             >
               {m.url ? (
                 <a href={m.url} target="_blank" rel="noopener noreferrer" className="block">
