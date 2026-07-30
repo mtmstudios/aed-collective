@@ -84,50 +84,37 @@ function MitgliedWerdenPage() {
           Mitgliedschaften
         </h2>
         <p className="mt-6 max-w-3xl text-muted-foreground">
-          Der aed wird von vielen Personen getragen, ohne die die zahlreichen Aktivitäten des Vereins
-          nicht denkbar wären. Neben dem ehrenamtlichen Vorstand und Beirat wird der aed vor allem
-          getragen und finanziert durch Förder- und Personenmitglieder. Das Netzwerk des aed ist
-          branchenübergreifend, mit dem Ziel, den Austausch über Disziplinen hinweg zu ermöglichen und
-          zu fördern. Aus Datenschutzgründen nennen wir unsere mehr als 400 Personenmitglieder nicht.
-          Wir bitten um Verständnis.
+          Der aed lebt von seinen Mitgliedern: Förder- und Personenmitglieder ermöglichen Programm,
+          Netzwerk und Nachwuchsförderung. Aus Datenschutzgründen nennen wir unsere mehr als 400
+          Personenmitglieder nicht öffentlich.
         </p>
-        <ul className="mt-8 grid gap-6">
+        <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
               <h3 className="font-display text-xl">{b.typ}</h3>
               <p className="mt-3 text-muted-foreground">
-                Der aed lebt von Menschen, die Ideen teilen, Diskussionen anstoßen und Gestaltung
-                aktiv mitprägen. Mit einer Mitgliedschaft werden Sie Teil dieses Netzwerks und
-                ermöglichen zugleich ein vielseitiges Programm aus Vorträgen, Ausstellungen,
-                Exkursionen und Begegnungen.
+                Mit einer Personenmitgliedschaft werden Sie Teil des aed-Netzwerks und ermöglichen ein
+                vielfältiges Programm aus Vorträgen, Ausstellungen und Exkursionen.
               </p>
-              <p className="mt-3 text-muted-foreground">
-                Ihr Beitrag hilft dabei, unsere Geschäftsstelle zu sichern, inspirierende Referenten
-                nach Stuttgart einzuladen und neue Formate auf den Weg zu bringen. Kurz: Sie schaffen
-                die Grundlage dafür, dass der aed auch in Zukunft ein lebendiger Ort für Architektur,
-                Design und kreativen Austausch bleibt.
-              </p>
-              <p className="mt-3 text-muted-foreground">Werden Sie Teil des aed – wir freuen uns auf Sie!</p>
+              <a href="#formular" className="btn-solid mt-6 inline-flex">
+                Eine Personenmitgliedschaft beantragen
+              </a>
             </li>
           ))}
+          <li className="border border-line bg-card p-6">
+            <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
+            <p className="mt-3 text-muted-foreground">
+              Für Büros, Unternehmen und Institutionen – mit Nennung auf der Mitgliederseite.
+              Unterstützen Sie den aed und seine Nachwuchsförderung.
+            </p>
+            <a href="#formular" className="btn-solid mt-6 inline-flex">
+              Eine Fördermitgliedschaft beantragen
+            </a>
+          </li>
         </ul>
 
-
-
-        <div className="mt-8 border border-line bg-card p-6 md:p-8">
-          <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
-          <p className="mt-3 max-w-2xl text-muted-foreground whitespace-pre-line">
-            Für Büros, Unternehmen und Institutionen – inklusive Nennung auf der Mitgliederseite.
-            {"\n"}Markenunternehmen, Architektur- und Designbüros sowie designrelevante Organisationen sind wichtige Mitglieder im aed und unterstützen unsere Aktivitäten.
-            {"\n"}
-          </p>
-          <Link to="/mitglieder" className="btn-solid mt-6 inline-flex">
-            Alle Fördermitglieder anschauen
-          </Link>
-        </div>
-
         <p className="mt-6 text-muted-foreground">
-          Die aktuellen Mitgliedsbeiträge finden Sie in der{" "}
+          Die aktuellen Beiträge finden Sie in der{" "}
           <a href={beitrittsPdf} className="underline link-brand">
             Beitrittserklärung (PDF)
           </a>
