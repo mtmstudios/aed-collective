@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { events, beirat, vorstand } from "@/data/site";
+import { events } from "@/data/site";
 import { jahrgaenge, projekte } from "@/data/neuland";
 
 // TODO: replace with your project URL once a project name or custom domain is set.
