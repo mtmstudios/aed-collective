@@ -24,17 +24,19 @@ export function PersonDialog({
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-2xl">
+      <DialogContent className="max-h-[90vh] overflow-y-auto p-8 sm:max-w-3xl sm:p-10">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl leading-tight">{person.name}</DialogTitle>
           <DialogDescription className="text-base">{person.rolle}</DialogDescription>
         </DialogHeader>
-        <div className="grid gap-8">
-          <div
-            aria-hidden="true"
-            className="mx-auto flex aspect-4/5 w-full max-w-[300px] items-center justify-center bg-muted font-display text-5xl text-foreground sm:max-w-[360px]"
-          >
-            {initials ?? initialen(person.name)}
+        <div className="grid gap-10">
+          <div className="flex justify-center p-6 sm:p-8">
+            <div
+              aria-hidden="true"
+              className="flex aspect-4/5 w-full max-w-[300px] items-center justify-center bg-muted font-display text-5xl text-foreground sm:max-w-[360px]"
+            >
+              {initials ?? initialen(person.name)}
+            </div>
           </div>
           <div>
 
