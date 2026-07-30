@@ -109,7 +109,7 @@ function VereinPage() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {vorstand
             .filter((p) => p.rolle !== "Ehrenvorsitzender")
             .map((person) => (
@@ -141,7 +141,7 @@ function VereinPage() {
             .map((person) => (
               <PersonDialog key={person.name} person={person} initials="WS">
                 <div
-                  className="group block w-full cursor-pointer sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
+                  className="group block w-full cursor-pointer sm:w-[calc(50%-0.5rem)] lg:w-[calc(20%-0.8rem)]"
                   role="button"
                   tabIndex={0}
                 >
@@ -178,7 +178,7 @@ function VereinPage() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {beirat.map((person) => (
             <PersonDialog key={person.name} person={person}>
               <article className="group block cursor-pointer" role="button" tabIndex={0}>
