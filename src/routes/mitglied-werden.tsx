@@ -116,7 +116,7 @@ function MitgliedWerdenPage() {
 
         <div className="mt-8 border border-line bg-card p-6 md:p-8">
           <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
-          <p className="mt-3 max-w-2xl text-sm text-muted-foreground whitespace-pre-line">
+          <p className="mt-3 max-w-2xl text-muted-foreground whitespace-pre-line">
             Für Büros, Unternehmen und Institutionen – inklusive Nennung auf der Mitgliederseite.
             {"\n"}Markenunternehmen, Architektur- und Designbüros sowie designrelevante Organisationen sind wichtige Mitglieder im aed und unterstützen unsere Aktivitäten.
             {"\n"}
@@ -126,7 +126,7 @@ function MitgliedWerdenPage() {
           </Link>
         </div>
 
-        <p className="mt-6 text-sm text-muted-foreground">
+        <p className="mt-6 text-muted-foreground">
           Die aktuellen Mitgliedsbeiträge finden Sie in der{" "}
           <a href={beitrittsPdf} className="underline link-brand">
             Beitrittserklärung (PDF)
