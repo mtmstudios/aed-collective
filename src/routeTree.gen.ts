@@ -36,6 +36,7 @@ import { Route as NeulandGewinnerInnenJahrRouteImport } from './routes/neuland.g
 import { Route as Neuland1SplatRouteImport } from './routes/neuland-1.$'
 import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitglieder.foerdermitglieder'
 import { Route as NeulandGewinnerIndexRouteImport } from './routes/neuland.gewinner.index'
+import { Route as VereinBeiratSlugRouteImport } from './routes/verein.beirat.$slug'
 import { Route as NeulandGewinnerJahrIndexRouteImport } from './routes/neuland.gewinner.$jahr.index'
 import { Route as NeulandGewinnerJahrSlugRouteImport } from './routes/neuland.gewinner.$jahr.$slug'
 
@@ -176,6 +177,11 @@ const NeulandGewinnerIndexRoute = NeulandGewinnerIndexRouteImport.update({
   path: '/gewinner/',
   getParentRoute: () => NeulandRoute,
 } as any)
+const VereinBeiratSlugRoute = VereinBeiratSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => VereinBeiratRoute,
+} as any)
 const NeulandGewinnerJahrIndexRoute =
   NeulandGewinnerJahrIndexRouteImport.update({
     id: '/gewinner/$jahr/',
@@ -208,13 +214,14 @@ export interface FileRoutesByFullPath {
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
-  '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/beirat': typeof VereinBeiratRouteWithChildren
   '/verein/mitglied-werden': typeof VereinMitgliedWerdenRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
   '/neuland/': typeof NeulandIndexRoute
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
+  '/verein/beirat/$slug': typeof VereinBeiratSlugRoute
   '/neuland/gewinner/': typeof NeulandGewinnerIndexRoute
   '/neuland/gewinner/$jahr/$slug': typeof NeulandGewinnerJahrSlugRoute
   '/neuland/gewinner/$jahr/': typeof NeulandGewinnerJahrIndexRoute
@@ -238,13 +245,14 @@ export interface FileRoutesByTo {
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
-  '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/beirat': typeof VereinBeiratRouteWithChildren
   '/verein/mitglied-werden': typeof VereinMitgliedWerdenRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
   '/neuland': typeof NeulandIndexRoute
   '/programm': typeof ProgrammIndexRoute
   '/verein': typeof VereinIndexRoute
+  '/verein/beirat/$slug': typeof VereinBeiratSlugRoute
   '/neuland/gewinner': typeof NeulandGewinnerIndexRoute
   '/neuland/gewinner/$jahr/$slug': typeof NeulandGewinnerJahrSlugRoute
   '/neuland/gewinner/$jahr': typeof NeulandGewinnerJahrIndexRoute
@@ -270,13 +278,14 @@ export interface FileRoutesById {
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
   '/programm/$slug': typeof ProgrammSlugRoute
-  '/verein/beirat': typeof VereinBeiratRoute
+  '/verein/beirat': typeof VereinBeiratRouteWithChildren
   '/verein/mitglied-werden': typeof VereinMitgliedWerdenRoute
   '/verein/satzung': typeof VereinSatzungRoute
   '/verein/vorstand': typeof VereinVorstandRoute
   '/neuland/': typeof NeulandIndexRoute
   '/programm/': typeof ProgrammIndexRoute
   '/verein/': typeof VereinIndexRoute
+  '/verein/beirat/$slug': typeof VereinBeiratSlugRoute
   '/neuland/gewinner/': typeof NeulandGewinnerIndexRoute
   '/neuland/gewinner/$jahr/$slug': typeof NeulandGewinnerJahrSlugRoute
   '/neuland/gewinner/$jahr/': typeof NeulandGewinnerJahrIndexRoute
@@ -310,6 +319,7 @@ export interface FileRouteTypes {
     | '/neuland/'
     | '/programm/'
     | '/verein/'
+    | '/verein/beirat/$slug'
     | '/neuland/gewinner/'
     | '/neuland/gewinner/$jahr/$slug'
     | '/neuland/gewinner/$jahr/'
@@ -340,6 +350,7 @@ export interface FileRouteTypes {
     | '/neuland'
     | '/programm'
     | '/verein'
+    | '/verein/beirat/$slug'
     | '/neuland/gewinner'
     | '/neuland/gewinner/$jahr/$slug'
     | '/neuland/gewinner/$jahr'
@@ -371,6 +382,7 @@ export interface FileRouteTypes {
     | '/neuland/'
     | '/programm/'
     | '/verein/'
+    | '/verein/beirat/$slug'
     | '/neuland/gewinner/'
     | '/neuland/gewinner/$jahr/$slug'
     | '/neuland/gewinner/$jahr/'
@@ -390,7 +402,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Neuland1SplatRoute: typeof Neuland1SplatRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
-  VereinBeiratRoute: typeof VereinBeiratRoute
+  VereinBeiratRoute: typeof VereinBeiratRouteWithChildren
   VereinMitgliedWerdenRoute: typeof VereinMitgliedWerdenRoute
   VereinSatzungRoute: typeof VereinSatzungRoute
   VereinVorstandRoute: typeof VereinVorstandRoute
@@ -589,6 +601,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NeulandGewinnerIndexRouteImport
       parentRoute: typeof NeulandRoute
     }
+    '/verein/beirat/$slug': {
+      id: '/verein/beirat/$slug'
+      path: '/$slug'
+      fullPath: '/verein/beirat/$slug'
+      preLoaderRoute: typeof VereinBeiratSlugRouteImport
+      parentRoute: typeof VereinBeiratRoute
+    }
     '/neuland/gewinner/$jahr/': {
       id: '/neuland/gewinner/$jahr/'
       path: '/gewinner/$jahr'
@@ -645,6 +664,18 @@ const NeulandRouteChildren: NeulandRouteChildren = {
 const NeulandRouteWithChildren =
   NeulandRoute._addFileChildren(NeulandRouteChildren)
 
+interface VereinBeiratRouteChildren {
+  VereinBeiratSlugRoute: typeof VereinBeiratSlugRoute
+}
+
+const VereinBeiratRouteChildren: VereinBeiratRouteChildren = {
+  VereinBeiratSlugRoute: VereinBeiratSlugRoute,
+}
+
+const VereinBeiratRouteWithChildren = VereinBeiratRoute._addFileChildren(
+  VereinBeiratRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DatenschutzRoute: DatenschutzRoute,
@@ -659,7 +690,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   Neuland1SplatRoute: Neuland1SplatRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
-  VereinBeiratRoute: VereinBeiratRoute,
+  VereinBeiratRoute: VereinBeiratRouteWithChildren,
   VereinMitgliedWerdenRoute: VereinMitgliedWerdenRoute,
   VereinSatzungRoute: VereinSatzungRoute,
   VereinVorstandRoute: VereinVorstandRoute,
