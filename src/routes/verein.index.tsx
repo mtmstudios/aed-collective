@@ -110,16 +110,16 @@ function VereinPage() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {vorstand
-            .filter((p) => p.rolle !== "Ehrenvorsitzender")
-            .map((person) => (
-              <PersonDialog key={person.name} person={person}>
+          {vorstand.map((person) => {
+            const isEhren = person.rolle === "Ehrenvorsitzender";
+            return (
+              <PersonDialog key={person.name} person={person} initials={isEhren ? "WS" : undefined}>
                 <div className="group block cursor-pointer" role="button" tabIndex={0}>
                   <div
                     aria-hidden="true"
                     className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
                   >
-                    {initialen(person.name)}
+                    {isEhren ? "WS" : initialen(person.name)}
                   </div>
                   <div className="mt-4">
                     <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
@@ -132,37 +132,8 @@ function VereinPage() {
                   </div>
                 </div>
               </PersonDialog>
-            ))}
-        </div>
-
-        <div className="mt-8">
-          {vorstand
-            .filter((p) => p.rolle === "Ehrenvorsitzender")
-            .map((person) => (
-              <PersonDialog key={person.name} person={person} initials="WS">
-                <div
-                  className="group block w-full cursor-pointer sm:w-[calc(50%-0.5rem)] lg:w-[calc(20%-0.8rem)]"
-                  role="button"
-                  tabIndex={0}
-                >
-                  <div
-                    aria-hidden="true"
-                    className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-                  >
-                    WS
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
-                      {person.name}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
-                    {person.email && (
-                      <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
-                    )}
-                  </div>
-                </div>
-              </PersonDialog>
-            ))}
+            );
+          })}
         </div>
       </section>
 
