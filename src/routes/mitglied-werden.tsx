@@ -93,11 +93,23 @@ function MitgliedWerdenPage() {
           Datenschutzgründen nennen wir unsere mehr als 400 Personenmitglieder nicht. Wir bitten um
           Verständnis.
         </p>
-        <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        <ul className="mt-8 grid gap-6">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
               <h3 className="font-display text-xl">{b.typ}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{b.text}</p>
+              <p className="mt-3 text-muted-foreground">
+                Der aed lebt von Menschen, die Ideen teilen, Diskussionen anstoßen und Gestaltung
+                aktiv mitprägen. Mit einer Mitgliedschaft werden Sie Teil dieses Netzwerks und
+                ermöglichen zugleich ein vielseitiges Programm aus Vorträgen, Ausstellungen,
+                Exkursionen und Begegnungen.
+              </p>
+              <p className="mt-3 text-muted-foreground">
+                Ihr Beitrag hilft dabei, unsere Geschäftsstelle zu sichern, inspirierende Referenten
+                nach Stuttgart einzuladen und neue Formate auf den Weg zu bringen. Kurz: Sie schaffen
+                die Grundlage dafür, dass der aed auch in Zukunft ein lebendiger Ort für Architektur,
+                Design und kreativen Austausch bleibt.
+              </p>
+              <p className="mt-3 text-muted-foreground">Werden Sie Teil des aed – wir freuen uns auf Sie!</p>
             </li>
           ))}
         </ul>
