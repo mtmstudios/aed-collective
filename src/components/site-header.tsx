@@ -70,7 +70,7 @@ export function SiteHeader() {
                   key={item.to}
                   to={item.to}
                   onClick={() => setOpen(false)}
-                  className="my-4 inline-flex w-fit rounded-full bg-footer-bg px-5 py-2 font-display text-sm text-footer-text transition-opacity hover:opacity-85"
+                  className="my-4 inline-flex w-fit rounded-full bg-footer-bg px-5 py-2 font-display text-base text-footer-text transition-opacity hover:opacity-85"
                 >
                   {item.label}
                 </Link>
