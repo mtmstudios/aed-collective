@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Check } from "lucide-react";
 import { PageHeader } from "@/components/ui-bits";
+
 
 export const Route = createFileRoute("/mitglied-werden")({
   head: () => ({
@@ -94,6 +95,18 @@ function MitgliedWerdenPage() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-8 border border-line bg-card p-6 md:p-8">
+          <h3 className="font-display text-xl">Fördermitglieder</h3>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+            Rund 80 Unternehmen, Büros und Institutionen unterstützen den aed e.V. als
+            Fördermitglieder – und damit Programm, Netzwerk und den Nachwuchswettbewerb neuland.
+          </p>
+          <Link to="/mitglieder" className="btn-solid mt-6 inline-flex">
+            Alle Fördermitglieder anschauen
+          </Link>
+        </div>
+
         <p className="mt-6 text-sm text-muted-foreground">
           Die aktuellen Mitgliedsbeiträge finden Sie in der{" "}
           <a href={beitrittsPdf} className="underline link-brand">
@@ -102,6 +115,7 @@ function MitgliedWerdenPage() {
           .
         </p>
       </section>
+
 
       <section className="shell rule-t py-12" aria-labelledby="formular">
         <div className="grid gap-10 md:grid-cols-12">
