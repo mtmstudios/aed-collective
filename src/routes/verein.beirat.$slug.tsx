@@ -110,7 +110,7 @@ function BeiratDetailPage() {
             .map((p) => (
               <li key={p.slug}>
                 <Link
-                  to={`/verein/beirat/${p.slug}`}
+                  to="/verein/beirat/$slug" params={{ slug: p.slug! }}
                   className="group block border border-line bg-card p-4 transition-colors hover:bg-brand hover:text-brand-foreground"
                 >
                   <span className="font-display text-lg leading-tight">{p.name}</span>

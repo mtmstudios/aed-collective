@@ -111,7 +111,7 @@ function VereinPage() {
           {vorstand
             .filter((p) => p.rolle !== "Ehrenvorsitzender")
             .map((person) => (
-              <Link key={person.name} to={`/verein/vorstand/${person.slug}`} className="group block">
+              <Link key={person.name} to="/verein/vorstand/$slug" params={{ slug: person.slug! }} className="group block">
                 <div
                   aria-hidden="true"
                   className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
@@ -143,7 +143,7 @@ function VereinPage() {
             .map((person) => (
               <Link
                 key={person.name}
-                to={`/verein/vorstand/${person.slug}`}
+                to="/verein/vorstand/$slug" params={{ slug: person.slug! }}
                 className="group block w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
               >
                 <div
@@ -182,7 +182,7 @@ function VereinPage() {
           {beirat.map((person) => (
             <Link
               key={person.name}
-              to={`/verein/beirat/${person.slug}`}
+              to="/verein/beirat/$slug" params={{ slug: person.slug! }}
               className="group block"
             >
               <article className="group">
