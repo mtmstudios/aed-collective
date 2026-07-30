@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, vorstand } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
+import { PersonDialog, initialen } from "@/components/person-dialog";
 
 export const Route = createFileRoute("/verein/")({
   head: () => ({
@@ -111,29 +112,25 @@ function VereinPage() {
           {vorstand
             .filter((p) => p.rolle !== "Ehrenvorsitzender")
             .map((person) => (
-              <Link key={person.name} to="/verein/vorstand/$slug" params={{ slug: person.slug! }} className="group block">
-                <div
-                  aria-hidden="true"
-                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-                >
-                  {person.name
-                    .replace(/^(Dr\.|Prof\.)\s+/i, "")
-                    .split(" ")
-                    .filter(Boolean)
-                    .map((t) => t[0])
-                    .slice(0, 2)
-                    .join("")}
+              <PersonDialog key={person.name} person={person}>
+                <div className="group block cursor-pointer" role="button" tabIndex={0}>
+                  <div
+                    aria-hidden="true"
+                    className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                  >
+                    {initialen(person.name)}
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
+                      {person.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+                    {person.email && (
+                      <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
+                    )}
+                  </div>
                 </div>
-                <div className="mt-4">
-                  <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
-                    {person.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
-                  {person.email && (
-                    <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
-                  )}
-                </div>
-              </Link>
+              </PersonDialog>
             ))}
         </div>
 
@@ -141,27 +138,29 @@ function VereinPage() {
           {vorstand
             .filter((p) => p.rolle === "Ehrenvorsitzender")
             .map((person) => (
-              <Link
-                key={person.name}
-                to="/verein/vorstand/$slug" params={{ slug: person.slug! }}
-                className="group block w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
-              >
+              <PersonDialog key={person.name} person={person} initials="WS">
                 <div
-                  aria-hidden="true"
-                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                  className="group block w-full cursor-pointer sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)]"
+                  role="button"
+                  tabIndex={0}
                 >
-                  WS
+                  <div
+                    aria-hidden="true"
+                    className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                  >
+                    WS
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
+                      {person.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+                    {person.email && (
+                      <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
+                    )}
+                  </div>
                 </div>
-                <div className="mt-4">
-                  <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
-                    {person.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
-                  {person.email && (
-                    <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
-                  )}
-                </div>
-              </Link>
+              </PersonDialog>
             ))}
         </div>
       </section>
@@ -180,33 +179,24 @@ function VereinPage() {
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {beirat.map((person) => (
-            <Link
-              key={person.name}
-              to="/verein/beirat/$slug" params={{ slug: person.slug! }}
-              className="group block"
-            >
-              <article className="group">
+            <PersonDialog key={person.name} person={person}>
+              <article className="group block cursor-pointer" role="button" tabIndex={0}>
                 <div
                   aria-hidden="true"
                   className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
                 >
-                  {person.name
-                    .replace(/^(Prof\. Dr\. phil\.|Prof\. Dr\. Dr\. E\.h\. Dr\. h\.c\.|Prof\. Dr\.|Dr\. Dr\.|Prof\.|Dr\.)\s+/i, "")
-                    .split(" ")
-                    .filter(Boolean)
-                    .map((t) => t[0])
-                    .slice(0, 2)
-                    .join("")}
+                  {initialen(person.name)}
                 </div>
                 <div className="mt-4">
                   <h3 className="font-display text-lg leading-tight">{person.name}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
                 </div>
               </article>
-            </Link>
+            </PersonDialog>
           ))}
         </div>
       </section>
+
 
       <section className="shell rule-t py-16" aria-labelledby="satzung-preview">
         <div className="grid gap-10 md:grid-cols-12">
