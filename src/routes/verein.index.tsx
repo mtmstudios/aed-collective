@@ -198,7 +198,37 @@ function VereinPage() {
       </section>
 
 
-      <section className="shell rule-t py-16" aria-labelledby="satzung-preview">
+      <section className="shell rule-t py-16" aria-labelledby="foerdermitglieder-preview">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-12">
+            <h2 id="foerdermitglieder-preview" className="display-lg max-w-4xl">
+              Fördermitglieder
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              Firmen, Körperschaften &amp; Institutionen
+            </p>
+          </div>
+        </div>
+
+        <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {foerdermitglieder.map((m) => (
+            <li
+              key={m.name}
+              className="border border-line bg-card p-4 text-sm leading-snug transition-colors duration-300 hover:bg-brand hover:text-brand-foreground"
+            >
+              {m.url ? (
+                <a href={m.url} target="_blank" rel="noopener noreferrer" className="block">
+                  {m.name}
+                </a>
+              ) : (
+                m.name
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="shell rule-t py-16 band-muted" aria-labelledby="satzung-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="satzung-preview" className="display-lg max-w-4xl">
