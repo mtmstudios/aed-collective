@@ -3,7 +3,7 @@
 
 export const kontakt = {
   name: "aed stuttgart e.V.",
-  strasse: "Olgastraße 136",
+  strasse: "Olgastraße 138",
   plz: "70180",
   ort: "Stuttgart",
   telefon: "+49 160 8894377",
