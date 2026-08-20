@@ -1,28 +1,44 @@
 import { Link } from "@tanstack/react-router";
 import type { Projekt } from "@/data/neuland";
+import { projektBilder } from "@/data/bilder";
 
-export function ProjektCard({ projekt }: { projekt: Projekt }) {
+export function projektBild(p: Projekt) {
+  return projektBilder[`${p.jahr}/${p.slug}`]?.[0];
+}
+
+export function ProjektCard({ projekt, gross = false }: { projekt: Projekt; gross?: boolean }) {
+  const bild = projektBild(projekt);
+
   return (
-    <article className="group border border-line bg-card">
+    <article className="group">
       <Link
         to="/neuland/gewinner/$jahr/$slug"
         params={{ jahr: projekt.jahr, slug: projekt.slug }}
-        className="flex h-full flex-col"
+        className="block"
       >
-        <div
-          aria-hidden="true"
-          className="aspect-4/3 bg-muted transition-colors duration-300 group-hover:bg-brand"
-        />
-        <div className="flex flex-1 flex-col p-6">
-          <div className="flex items-center justify-between gap-3">
-            <span className="eyebrow">{projekt.kategorie}</span>
-            <span className="text-xs font-medium">{projekt.preis}</span>
-          </div>
-          <h3 className="mt-4 font-display text-xl leading-tight">{projekt.titel}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {projekt.autor} · {projekt.hochschule}
-          </p>
+        <div className={`img-zoom bg-muted ${gross ? "aspect-3/2" : "aspect-4/3"}`}>
+          {bild ? (
+            <img
+              src={bild}
+              alt={`${projekt.titel} von ${projekt.autor}`}
+              loading="lazy"
+              decoding="async"
+              className="grayscale-hover h-full w-full object-cover"
+            />
+          ) : (
+            <div className="h-full w-full bg-muted" aria-hidden="true" />
+          )}
         </div>
+
+        <p className="eyebrow mt-4">
+          {projekt.preis} · {projekt.jahr}
+        </p>
+        <h3 className={`mt-2 ${gross ? "display-md" : "display-sm"}`}>{projekt.titel}</h3>
+        <p className="meta mt-2">
+          {projekt.autor}
+          {projekt.hochschule ? ` · ${projekt.hochschule}` : ""}
+        </p>
+        <p className="meta mt-1 italic">{projekt.kategorie}</p>
       </Link>
     </article>
   );

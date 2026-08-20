@@ -19,18 +19,14 @@
  */
 
 @theme inline {
-  --font-display: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-sans: "Jost", "Helvetica Neue", system-ui, sans-serif;
+  --color-serif: var(--serif);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-line: var(--line);
   --color-ink: var(--ink);
-  --color-footer-bg: var(--footer-bg);
-  --color-footer-text: var(--footer-text);
-  --color-footer-muted: var(--footer-muted);
-  --color-footer-line: var(--footer-line);
-  --color-footer-input-bg: var(--footer-input-bg);
-  --color-footer-input-border: var(--footer-input-border);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -77,38 +73,31 @@
 :root {
   --radius: 0px;
   /* Off-White / Ink */
-  --background: oklch(0.985 0.003 90);
-  --foreground: oklch(0.17 0 0);
-  --ink: oklch(0.17 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0 0 0);
+  --ink: oklch(0 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.17 0 0);
+  --card-foreground: oklch(0 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.17 0 0);
-  --primary: oklch(0.17 0 0);
-  --primary-foreground: oklch(0.985 0.003 90);
-  --secondary: oklch(0.955 0.003 90);
-  --secondary-foreground: oklch(0.17 0 0);
-  --muted: oklch(0.955 0.003 90);
-  --muted-foreground: oklch(0.46 0.005 90);
-  --accent: oklch(0.955 0.003 90);
-  --accent-foreground: oklch(0.17 0 0);
+  --popover-foreground: oklch(0 0 0);
+  --primary: oklch(0 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.968 0 0);
+  --secondary-foreground: oklch(0 0 0);
+  --muted: oklch(0.968 0 0);
+  --muted-foreground: oklch(0.44 0 0);
+  --accent: oklch(0.968 0 0);
+  --accent-foreground: oklch(0 0 0);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.985 0 0);
-  --line: oklch(0.914 0 0); /* #e5e5e5 */
-  --border: oklch(0.914 0 0);
-  --input: oklch(0.914 0 0);
-  --ring: oklch(0.17 0 0);
+  --line: oklch(0.898 0 0); /* #e0e0e0 – Vogue-Hairline */
+  --border: oklch(0.898 0 0);
+  --input: oklch(0.898 0 0);
+  --ring: oklch(0 0 0);
   /* Bereichsfarbe: Verein = Pink #fe7fff */
   --brand: oklch(0.775 0.207 320.5);
-  --brand-foreground: oklch(0.17 0 0);
+  --brand-foreground: oklch(0 0 0);
   --brand-deep: oklch(0.5 0.22 322);
-  /* Footer: dunkelgrau mit weißer Typografie */
-  --footer-bg: oklch(0.24 0 0);
-  --footer-text: oklch(0.99 0 0);
-  --footer-muted: oklch(0.7 0 0);
-  --footer-line: oklch(0.4 0 0);
-  --footer-input-bg: oklch(0.3 0 0);
-  --footer-input-border: oklch(0.45 0 0);
   --chart-1: oklch(0.775 0.207 320.5);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
@@ -180,7 +169,9 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -189,8 +180,8 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-weight: 400;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
 
@@ -211,56 +202,133 @@
 
 @utility shell {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin-inline: auto;
   padding-inline: 1.25rem;
 
   @media (min-width: 768px) {
-    padding-inline: 2.5rem;
+    padding-inline: 2rem;
   }
 }
 
+/* Schmalere Spalte für Lesetext (Editorial-Maß) */
+@utility shell-narrow {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Magazin-Cover-Headline */
 @utility display-xl {
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 7.4vw, 5.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-  font-weight: 700;
+  font-size: clamp(3.25rem, 9vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+  font-weight: 400;
 }
 
 @utility display-lg {
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
-  line-height: 1.04;
-  letter-spacing: -0.03em;
-  font-weight: 700;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  font-weight: 400;
 }
 
 @utility display-md {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.4vw, 2.05rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  font-weight: 400;
 }
 
-@utility eyebrow {
+@utility display-sm {
   font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+/* Kicker/Ressort – exakt Vogue: uppercase, geometrische Sans, weit gesperrt */
+@utility eyebrow {
+  font-family: var(--font-sans);
   font-size: 0.75rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+@utility eyebrow-muted {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
   color: var(--muted-foreground);
+}
+
+/* Meta-Zeile (Autor, Datum, Ort) */
+@utility meta {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  color: var(--muted-foreground);
+}
+
+/* Editorial-Lauftext */
+@utility prose-editorial {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.65;
+
+  & p + p {
+    margin-top: 1.25em;
+  }
+}
+
+/* Lead / Vorspann */
+@utility lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.9vw, 1.6rem);
+  line-height: 1.45;
+  font-style: italic;
 }
 
 @utility rule-t {
   border-top: 1px solid var(--line);
 }
 
+/* Ressort-Überschrift mit durchgehender Linie – Vogue-Sektionsmarke */
+@utility section-rule {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border-top: 1px solid var(--ink);
+  padding-top: 0.75rem;
+}
+
 @utility link-brand {
-  transition:
-    color 150ms ease,
-    background-color 150ms ease;
+  transition: color 150ms ease, background-color 150ms ease;
+
+  &:hover {
+    color: var(--brand-deep);
+  }
+}
+
+/* Unterstrichener Textlink im Fließtext */
+@utility link-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 150ms ease;
 
   &:hover {
     color: var(--brand-deep);
@@ -272,20 +340,20 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 2.75rem;
+  min-height: 2.875rem;
   padding: 0.75rem 1.75rem;
-  border-radius: 9999px;
-  border: 1px solid var(--footer-bg);
-  font-family: var(--font-display);
-  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
   font-weight: 500;
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--background);
+  transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: transparent;
-    color: var(--footer-bg);
+    background: var(--brand);
+    color: var(--brand-foreground);
   }
 }
 
@@ -294,33 +362,28 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 2.75rem;
+  min-height: 2.875rem;
   padding: 0.75rem 1.75rem;
-  border-radius: 9999px;
-  border: 1px solid var(--footer-bg);
-  font-family: var(--font-display);
-  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
   font-weight: 500;
-  color: var(--footer-bg);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--ink);
+  color: var(--ink);
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--footer-bg);
-    color: var(--footer-text);
+    background: var(--ink);
+    color: var(--background);
   }
 }
 
-@utility band-muted {
-  background: oklch(0.955 0.003 90);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-
+/* Bild: Schwarzweiß, Farbe beim Hover – Magazin-Handschrift */
 @utility grayscale-hover {
   filter: grayscale(1);
-  transition: filter 250ms ease, opacity 250ms ease;
-  opacity: 0.75;
+  transition: filter 400ms ease, opacity 400ms ease;
+  opacity: 0.92;
 
   &:hover {
     filter: grayscale(0);
@@ -328,30 +391,29 @@
   }
 }
 
+/* Sanftes Zoomen des Bildes in Karten */
+@utility img-zoom {
+  overflow: hidden;
 
-/* Abwechselnde Inhaltsbänder: jede zweite Sektion hellgrau, über die volle Breite */
-main {
-  overflow-x: clip;
+  & img {
+    transition: transform 700ms cubic-bezier(0.2, 0, 0.2, 1), filter 400ms ease;
+  }
+
+  &:hover img,
+  a:hover & img {
+    transform: scale(1.04);
+  }
 }
 
-:is(main, main > div) > :where(section, nav, article):nth-child(even) {
-  position: relative;
-}
-
-:is(main, main > div) > :where(section, nav, article):nth-child(even)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  left: 50%;
+/* Randabfallende Sektion innerhalb des Shells */
+@utility bleed {
   width: 100vw;
-  transform: translateX(-50%);
-  background: oklch(0.955 0.003 90);
+  margin-inline: calc(50% - 50vw);
+}
+
+/* Farbig abgesetztes Band (aus dem Lovable-Stand uebernommen) */
+@utility band-muted {
+  background: oklch(0.968 0 0);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  z-index: -1;
-  pointer-events: none;
-}
-
-:is(main, main > div) > :where(section, nav, article):nth-child(even) > * {
-  position: relative;
 }

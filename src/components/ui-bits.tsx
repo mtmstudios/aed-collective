@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 type LogoItem = string | { name: string; url?: string };
 
 export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
@@ -6,13 +8,11 @@ export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
       {items.map((item) => {
         const name = typeof item === "string" ? item : item.name;
         const url = typeof item === "string" ? undefined : item.url;
-        const inner = (
-          <span className="font-display text-sm">{name}</span>
-        );
+        const inner = <span className="font-sans text-xs uppercase tracking-[0.1em]">{name}</span>;
         return (
           <li
             key={name}
-            className="grayscale-hover flex min-h-24 border-r border-b border-line text-center hover:text-[var(--brand-deep)]"
+            className="flex min-h-24 border-r border-b border-line text-center text-muted-foreground transition-colors hover:text-foreground"
           >
             {url ? (
               <a
@@ -33,6 +33,38 @@ export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
   );
 }
 
+/** Ressort-Marke: schwarze Oberlinie, Titel links, optionaler Link rechts. */
+export function SectionTitle({
+  id,
+  titel,
+  kicker,
+  href,
+  linkText,
+}: {
+  id?: string;
+  titel: string;
+  kicker?: string;
+  href?: string;
+  linkText?: string;
+}) {
+  return (
+    <div className="section-rule flex-col items-start gap-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
+      <div>
+        {kicker && <p className="eyebrow-muted mb-2">{kicker}</p>}
+        <h2 id={id} className="display-md">
+          {titel}
+        </h2>
+      </div>
+      {href && linkText && (
+        <Link to={href} className="eyebrow shrink-0 link-underline">
+          {linkText}
+        </Link>
+      )}
+    </div>
+  );
+}
+
+/** Seitenkopf im Magazinstil: Kicker, große Didone-Zeile, kursiver Vorspann. */
 export function PageHeader({
   eyebrow,
   titel,
@@ -44,14 +76,15 @@ export function PageHeader({
   titel: string;
   subtitle?: string;
   intro?: string;
+  /** "xl" für Seiten, die wie ein Magazin-Aufmacher wirken sollen. */
   size?: "lg" | "xl";
 }) {
   return (
-    <header className="shell pt-16 pb-12 md:pt-24 md:pb-16">
+    <header className="shell border-b border-line pt-12 pb-10 md:pt-20 md:pb-14">
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <h1 className={`${size === "xl" ? "display-xl" : "display-lg"} mt-4 max-w-4xl`}>{titel}</h1>
-      {subtitle && <p className="display-md mt-3 max-w-4xl">{subtitle}</p>}
-      {intro && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">{intro}</p>}
+      {subtitle && <p className="display-md mt-3 max-w-4xl text-muted-foreground">{subtitle}</p>}
+      {intro && <p className="lead mt-6 max-w-2xl text-muted-foreground">{intro}</p>}
     </header>
   );
 }

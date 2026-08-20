@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
 import { events, partner } from "@/data/site";
 import { kennzahlen, projekte } from "@/data/neuland";
-import { EventCard } from "@/components/event-card";
-import { LogoGrid } from "@/components/ui-bits";
+import { editorialBilder } from "@/data/bilder";
+import { EventCard, formatDatum } from "@/components/event-card";
+import { ProjektCard } from "@/components/projekt-card";
+import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,152 +32,166 @@ function Index() {
   const kommende = events
     .filter((e) => e.datum >= heute)
     .sort((a, b) => a.datum.localeCompare(b.datum));
-  const naechste = (kommende.length > 0
-    ? kommende
-    : [...events].sort((a, b) => b.datum.localeCompare(a.datum))
-  ).slice(0, 3);
-  const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
+  const vergangene = events
+    .filter((e) => e.datum < heute)
+    .sort((a, b) => b.datum.localeCompare(a.datum));
+  // Erst die anstehenden Termine, danach mit den jüngsten Rückblicken auffüllen
+  const liste = [...kommende, ...vergangene];
+  const [aufmacher, ...weitere] = liste;
+  const nebenan = weitere.slice(0, 2);
+  const reihe = weitere.slice(2, 5);
+  const preistraeger = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
+  // Luftaufnahme einer Menschengruppe – viel ruhige Fläche für die Titelzeile
+  const coverBild = editorialBilder[6] ?? editorialBilder[0];
 
   return (
     <>
-      <section className="shell pt-16 pb-20 md:pt-28 md:pb-28">
-        <p className="eyebrow">Architecture · Engineering · Design · Stuttgart</p>
-        <h1 className="display-xl mt-6 max-w-5xl">AED e.V.</h1>
-        <p className="display-lg mt-4 max-w-4xl">
-          Verein für Architecture, Engineering und Design
-        </p>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl">
-          Der aed e.V. bringt seit 2004 Architekt:innen, Ingenieur:innen und Designer:innen an einen
-          Tisch – mit rund 20 Veranstaltungen im Jahr, einem Netzwerk aus über 400 Mitgliedern und
-          dem Nachwuchswettbewerb neuland.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <Link to="/programm" className="btn-solid">
-            Zum Veranstaltungsprogramm
-          </Link>
-          <Link to="/mitglied-werden" className="btn-outline">
-            Jetzt Mitglied werden
-          </Link>
+      {/* Titelseite: randabfallendes Bild mit Didone-Zeile */}
+      <section className="bleed relative border-b border-line" aria-labelledby="cover-titel">
+        <div className="relative h-[clamp(420px,62vh,760px)] w-full overflow-hidden bg-muted md:h-[clamp(520px,78vh,860px)]">
+          {coverBild && (
+            <img
+              src={coverBild}
+              alt="Publikum bei einer Veranstaltung des aed e.V. in Stuttgart"
+              className="h-full w-full object-cover"
+              fetchPriority="high"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/10 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="shell pb-10 md:pb-16">
+              <p className="eyebrow text-white/85">Architecture · Engineering · Design</p>
+              <h1 id="cover-titel" className="display-lg mt-4 max-w-3xl text-white">
+                Veranstaltungen, Austausch, Förderung
+              </h1>
+              <p className="lead mt-5 max-w-xl text-white/90">
+                Seit 2004 bringt der aed in Stuttgart zusammen, was sonst getrennt entwirft.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link to="/programm" className="btn-solid !bg-white !text-black hover:!bg-[var(--brand)]">
+                  Programm
+                </Link>
+                <Link to="/mitglied-werden" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-black">
+                  Mitglied werden
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section aria-labelledby="programm-titel">
-        <div className="shell py-16 md:py-24">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 id="programm-titel" className="display-md">
-              Nächste Veranstaltungen
-            </h2>
-            <Link to="/programm" className="inline-flex items-center gap-2 text-sm link-brand">
-              Alle Termine <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {naechste.map((e) => (
+      {/* Aufmacher-Raster: ein großer Termin, zwei begleitende */}
+      <section className="shell py-14 md:py-20" aria-labelledby="programm-titel">
+        <SectionTitle
+          id="programm-titel"
+          titel="Im Programm"
+          kicker={kommende.length > 0 ? `Nächster Termin: ${formatDatum(kommende[0].datum)}` : undefined}
+          href="/programm"
+          linkText="Alle Termine"
+        />
+        <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-12">
+          {aufmacher && (
+            <div className="md:col-span-7">
+              <EventCard event={aufmacher} gross />
+            </div>
+          )}
+          <div className="grid gap-10 md:col-span-5">
+            {nebenan.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
           </div>
-          <div className="mt-10">
-            <Link to="/programm" className="btn-solid">
-              Alle Termine entdecken
+        </div>
+
+        {reihe.length > 0 && (
+          <div className="mt-14 grid gap-x-8 gap-y-12 border-t border-line pt-10 md:grid-cols-3">
+            {reihe.map((e) => (
+              <EventCard key={e.slug} event={e} />
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* Manifest: Zitat als Doppelseite */}
+      <section className="bleed border-y border-line bg-[oklch(0.968_0_0)]" aria-labelledby="mission-titel">
+        <div className="shell grid gap-10 py-16 md:grid-cols-12 md:py-24">
+          <h2 id="mission-titel" className="eyebrow-muted md:col-span-3">
+            Der Verein
+          </h2>
+          <div className="md:col-span-9">
+            <blockquote className="display-md max-w-4xl">
+              „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
+              unbedingt, weil niemand darüber spricht.“
+            </blockquote>
+            <p className="prose-editorial mt-8 max-w-2xl text-muted-foreground">
+              Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
+              die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
+              über Multimedia und Engineering bis zur Architektur – zu fördern und der Öffentlichkeit
+              nahezubringen.
+            </p>
+            <Link to="/verein" className="eyebrow mt-8 inline-block link-underline">
+              Über den Verein
             </Link>
           </div>
         </div>
       </section>
 
+      {/* neuland als eigenes Ressort */}
+      <section className="theme-neuland shell py-14 md:py-20" aria-labelledby="neuland-titel">
+        <SectionTitle
+          id="neuland-titel"
+          titel="neuland"
+          kicker="Nachwuchswettbewerb"
+          href="/neuland/gewinner"
+          linkText="Alle Gewinner:innen"
+        />
 
-      <section className="shell py-16 md:py-24" aria-labelledby="mission-titel">
-        <p className="eyebrow">Mission</p>
-        <p id="mission-titel" className="display-md mt-4 max-w-4xl">
-          „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
-          unbedingt, weil niemand darüber spricht.“
+        <p className="lead mt-8 max-w-3xl">
+          Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
+          Kategorien, gefördert von der Karl Schlecht Stiftung, 2025 zum zehnten Mal ausgelobt.
         </p>
-        <p className="mt-8 max-w-2xl leading-relaxed text-muted-foreground">
-          Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
-          die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
-          über Multimedia und Engineering bis zur Architektur – zu fördern und der
-          Öffentlichkeit nahezubringen.
-        </p>
-        <div className="mt-8">
-          <Link to="/verein" className="btn-solid">
-            Informiere Dich über den Verein
+
+        <dl className="mt-10 grid grid-cols-2 gap-6 border-y border-line py-8 md:grid-cols-4">
+          {kennzahlen.map((k) => (
+            <div key={k.label}>
+              <dt className="sr-only">{k.label}</dt>
+              <dd>
+                <span className="block font-display text-5xl leading-none">{k.wert}</span>
+                <span className="eyebrow-muted mt-3 block">{k.label}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-3">
+          {preistraeger.map((p) => (
+            <ProjektCard key={`${p.jahr}-${p.slug}`} projekt={p} />
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-wrap gap-3">
+          <Link to="/neuland" className="btn-solid">
+            Zum Wettbewerb
+          </Link>
+          <Link to="/neuland/jury" className="btn-outline">
+            Die Jury
           </Link>
         </div>
       </section>
 
-      <section className="theme-neuland" aria-labelledby="neuland-titel">
-
-        <div className="shell py-16 md:py-24">
-          <p className="eyebrow" style={{ color: "var(--brand-deep)" }}>
-            Nachwuchswettbewerb
-          </p>
-          <h2 id="neuland-titel" className="display-lg mt-4">
-            neuland
-          </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed">
-            Der interdisziplinäre Nachwuchswettbewerb für Studierende und Absolvent:innen bis
-            28 Jahre – in fünf Kategorien von Architecture + Engineering bis Interaction Design,
-            gefördert von der Karl Schlecht Stiftung. 2025 bereits zum zehnten Mal ausgelobt.
-          </p>
-          <dl className="mt-12 grid grid-cols-2 gap-8 border-t border-line pt-8 md:grid-cols-4">
-            {kennzahlen.map((k) => (
-              <div key={k.label}>
-                <dt className="sr-only">{k.label}</dt>
-                <dd>
-                  <span className="block font-display text-4xl" style={{ color: "var(--brand-deep)" }}>
-                    {k.wert}
-                  </span>
-                  <span className="mt-2 block text-sm text-muted-foreground">{k.label}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
-          <ul className="mt-12 grid gap-6 md:grid-cols-3">
-            {highlights.map((p) => (
-              <li key={p.slug} className="border border-line bg-background p-6">
-                <span className="eyebrow">{p.kategorie} · 1. Preis 2025</span>
-                <h3 className="mt-3 font-display text-lg leading-tight">{p.titel}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.autor}</p>
-                <Link
-                  to="/neuland/gewinner/$jahr/$slug"
-                  params={{ jahr: p.jahr, slug: p.slug }}
-                  className="mt-4 inline-block text-sm underline link-brand"
-                >
-                  Projekt ansehen
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-12 flex flex-wrap gap-3">
-            <Link to="/neuland" className="btn-solid">
-              Hier geht es zum Wettbewerb
-            </Link>
-            <Link to="/neuland/gewinner" className="btn-outline">
-              Gewinner:innen ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="shell py-16 md:py-24" aria-labelledby="partner-titel">
-        <h2 id="partner-titel" className="display-md">
-          Kooperationspartner
-        </h2>
+      {/* Partner */}
+      <section className="shell border-t border-line py-14 md:py-20" aria-labelledby="partner-titel">
+        <SectionTitle id="partner-titel" titel="Kooperationspartner" />
         <div className="mt-10">
           <LogoGrid items={partner} />
         </div>
-        <p className="mt-8 text-sm text-muted-foreground">
-          Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.
+        <p className="meta mt-8">
+          Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.{" "}
+          <Link to="/mitglieder" className="link-underline">
+            Alle Mitglieder
+          </Link>
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/mitglieder" className="btn-solid">
-            Alle Mitglieder ansehen
-          </Link>
-          <Link to="/mitglied-werden" className="btn-outline">
-            Jetzt Mitglied werden
-          </Link>
-        </div>
       </section>
-
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import type { EventItem } from "@/data/site";
+import { eventBilder } from "@/data/bilder";
 
 export function formatDatum(iso: string) {
   return new Date(`${iso}T12:00:00`).toLocaleDateString("de-DE", {
@@ -10,28 +10,40 @@ export function formatDatum(iso: string) {
   });
 }
 
-export function EventCard({ event }: { event: EventItem }) {
+export function EventCard({
+  event,
+  gross = false,
+}: {
+  event: EventItem;
+  gross?: boolean;
+}) {
+  const bild = eventBilder[event.slug];
+
   return (
-    <article className="group border border-line bg-card">
-      <Link
-        to="/programm/$slug"
-        params={{ slug: event.slug }}
-        className="flex h-full flex-col p-6 transition-colors group-hover:bg-muted"
-      >
-        <div className="flex items-center justify-between gap-4">
-          <time dateTime={event.datum} className="eyebrow">
-            {formatDatum(event.datum)}
-          </time>
-          <span className="rounded-full border border-line px-3 py-1 text-xs">{event.format}</span>
+    <article className="group">
+      <Link to="/programm/$slug" params={{ slug: event.slug }} className="block">
+        <div className={`img-zoom bg-muted ${gross ? "aspect-4/3" : "aspect-3/2"}`}>
+          {bild ? (
+            <img
+              src={bild}
+              alt={`${event.titel} – ${event.ort}`}
+              loading="lazy"
+              decoding="async"
+              className="grayscale-hover h-full w-full object-cover"
+            />
+          ) : (
+            <div className="h-full w-full bg-muted" aria-hidden="true" />
+          )}
         </div>
-        <h3 className="mt-5 font-display text-xl leading-tight transition-colors group-hover:text-[var(--brand-deep)]">
-          {event.titel}
-        </h3>
-        <p className="mt-3 text-sm text-muted-foreground">{event.ort}</p>
-        <p className="mt-4 text-sm leading-relaxed">{event.teaser}</p>
-        <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium">
-          Details <ArrowUpRight className="size-4" aria-hidden="true" />
-        </span>
+
+        <p className="eyebrow mt-4">{event.format}</p>
+        <h3 className={`mt-2 ${gross ? "display-md" : "display-sm"}`}>{event.titel}</h3>
+        <p className="meta mt-2">
+          <time dateTime={event.datum}>{formatDatum(event.datum)}</time>
+          {" · "}
+          {event.ort}
+        </p>
+        <p className={`mt-3 leading-relaxed ${gross ? "text-lg" : "text-base"}`}>{event.teaser}</p>
       </Link>
     </article>
   );

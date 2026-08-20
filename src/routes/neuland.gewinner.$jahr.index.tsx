@@ -45,15 +45,15 @@ function JahrgangPage() {
           const projekteDerKategorie = liste.filter((p) => p.kategorie === k.name);
           if (projekteDerKategorie.length === 0) return null;
           return (
-            <section key={k.key} className="rule-t py-10">
-              <h2 className="display-md">{k.name}</h2>
-              <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <section key={k.key} className="py-12">
+              <div className="section-rule">
+                <h2 className="display-md">{k.name}</h2>
+              </div>
+              <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                 {projekteDerKategorie.map((p) => (
-                  <li key={p.slug}>
-                    <ProjektCard projekt={p} />
-                  </li>
+                  <ProjektCard key={p.slug} projekt={p} />
                 ))}
-              </ul>
+              </div>
             </section>
           );
         })}

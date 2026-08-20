@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, CalendarPlus, MapPin } from "lucide-react";
+import { ArrowLeft, CalendarPlus } from "lucide-react";
 import { events } from "@/data/site";
+import { eventBilder } from "@/data/bilder";
 import { formatDatum } from "@/components/event-card";
 
 function findEvent(slug: string) {
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/programm/$slug")({
       return { meta: [{ title: "Veranstaltung nicht gefunden – aed e.V." }, { name: "robots", content: "noindex" }] };
     }
     const { event } = loaderData;
+    const bild = eventBilder[event.slug];
     return {
       meta: [
         { title: `${event.titel} – aed e.V.` },
@@ -26,6 +28,7 @@ export const Route = createFileRoute("/programm/$slug")({
         { property: "og:description", content: event.teaser },
         { property: "og:type", content: "article" },
         { property: "og:url", content: `/programm/${params.slug}` },
+        ...(bild ? [{ property: "og:image", content: bild }] : []),
       ],
       links: [{ rel: "canonical", href: `/programm/${params.slug}` }],
       scripts: [
@@ -40,6 +43,7 @@ export const Route = createFileRoute("/programm/$slug")({
             location: { "@type": "Place", name: event.ort },
             description: event.teaser,
             organizer: { "@type": "Organization", name: "aed e.V." },
+            ...(bild ? { image: bild } : {}),
           }),
         },
       ],
@@ -70,51 +74,55 @@ function icalHref(slug: string) {
 
 function EventDetail() {
   const { event } = Route.useLoaderData();
+  const bild = eventBilder[event.slug];
 
   return (
-    <article className="shell py-16 md:py-24">
-      <Link to="/programm" className="inline-flex items-center gap-2 text-sm link-brand">
-        <ArrowLeft className="size-4" aria-hidden="true" /> Programm
-      </Link>
-      <p className="eyebrow mt-8">{event.format}</p>
-      <h1 className="display-lg mt-4 max-w-4xl">{event.titel}</h1>
+    <article>
+      <header className="shell pt-10 pb-8 text-center md:pt-16">
+        <p className="eyebrow">{event.format}</p>
+        <h1 className="display-lg mx-auto mt-5 max-w-4xl">{event.titel}</h1>
+        <p className="meta mt-5">
+          <time dateTime={event.datum}>{formatDatum(event.datum)}</time>
+          {event.uhrzeit && `, ${event.uhrzeit} Uhr`}
+          {" · "}
+          {event.ort}
+        </p>
+      </header>
 
-      <dl className="mt-10 grid gap-6 border-y border-line py-6 sm:grid-cols-3">
-        <div>
-          <dt className="eyebrow">Datum</dt>
-          <dd className="mt-1">
-            <time dateTime={event.datum}>{formatDatum(event.datum)}</time>
-            {event.uhrzeit && `, ${event.uhrzeit} Uhr`}
-          </dd>
-        </div>
-        <div>
-          <dt className="eyebrow">Ort</dt>
-          <dd className="mt-1 flex items-start gap-2">
-            <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-            {event.ort}
-          </dd>
-        </div>
-        <div>
-          <dt className="eyebrow">Veranstalter</dt>
-          <dd className="mt-1">aed e.V.{event.anmeldung ? " · Anmeldung erforderlich" : ""}</dd>
-        </div>
-      </dl>
+      {bild && (
+        <figure className="bleed">
+          <img
+            src={bild}
+            alt={`${event.titel} – ${event.ort}`}
+            className="max-h-[70vh] w-full object-cover"
+            fetchPriority="high"
+          />
+        </figure>
+      )}
 
-      <div className="mt-10 max-w-2xl text-lg leading-relaxed">
-        <p>{event.teaser}</p>
-        <p className="mt-6 text-base text-muted-foreground">{event.text}</p>
-      </div>
+      <div className="shell-narrow py-14 md:py-20">
+        <p className="lead">{event.teaser}</p>
+        <div className="prose-editorial mt-8 text-muted-foreground">
+          <p>{event.text}</p>
+        </div>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        {event.anmeldung && (
-          <a href={event.anmeldung} className="btn-solid">
-            Anmelden
+        <div className="mt-12 flex flex-wrap gap-3 border-t border-line pt-8">
+          {event.anmeldung && (
+            <a href={event.anmeldung} target="_blank" rel="noreferrer" className="btn-solid">
+              Anmelden
+            </a>
+          )}
+          <a href={icalHref(event.slug)} download={`${event.slug}.ics`} className="btn-outline">
+            <CalendarPlus className="size-4" aria-hidden="true" /> Termin speichern
           </a>
-        )}
-        <a href={icalHref(event.slug)} download={`${event.slug}.ics`} className="btn-outline">
-          <CalendarPlus className="size-4" aria-hidden="true" /> Termin speichern (iCal)
-        </a>
+        </div>
       </div>
+
+      <nav className="shell border-t border-line py-10" aria-label="Zurück zum Programm">
+        <Link to="/programm" className="eyebrow inline-flex items-center gap-2 link-underline">
+          <ArrowLeft className="size-3.5" aria-hidden="true" /> Alle Termine
+        </Link>
+      </nav>
     </article>
   );
 }

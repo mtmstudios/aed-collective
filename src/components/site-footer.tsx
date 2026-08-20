@@ -2,110 +2,113 @@ import { Link } from "@tanstack/react-router";
 import { Newsletter } from "./newsletter";
 import { kontakt } from "@/data/site";
 
+const spalten = [
+  {
+    titel: "Verein",
+    links: [
+      { to: "/verein", label: "Über den aed" },
+      { to: "/verein/vorstand", label: "Vorstand" },
+      { to: "/verein/beirat", label: "Beirat" },
+      { to: "/verein/satzung", label: "Satzung" },
+    ],
+  },
+  {
+    titel: "Programm",
+    links: [
+      { to: "/programm", label: "Veranstaltungen" },
+      { to: "/referenten", label: "Referent:innen" },
+      { to: "/service", label: "Downloads" },
+    ],
+  },
+  {
+    titel: "neuland",
+    links: [
+      { to: "/neuland", label: "Wettbewerb" },
+      { to: "/neuland/gewinner", label: "Gewinner:innen" },
+      { to: "/neuland/jury", label: "Jury" },
+      { to: "/neuland/presse", label: "Presse" },
+    ],
+  },
+  {
+    titel: "Mitglieder",
+    links: [
+      { to: "/mitglied-werden", label: "Mitglied werden" },
+      { to: "/mitglieder", label: "Fördermitglieder" },
+      { to: "/kontakt", label: "Kontakt" },
+    ],
+  },
+] as const;
+
 export function SiteFooter() {
   return (
-    <footer className="bg-footer-bg text-footer-text">
-      <div className="shell grid gap-14 py-16 md:grid-cols-12 md:gap-x-10">
-        <div className="md:col-span-5">
-          <h2 className="eyebrow text-footer-muted">Newsletter</h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-footer-text">
-            Veranstaltungen, Wettbewerbstermine und Neuigkeiten aus dem Verein – etwa einmal im Monat.
-          </p>
-          <Newsletter />
+    <footer className="mt-20 border-t border-line">
+      {/* Newsletter als Magazin-Abobalken */}
+      <div className="border-b border-line bg-[oklch(0.968_0_0)]">
+        <div className="shell grid gap-8 py-14 md:grid-cols-12 md:py-16">
+          <div className="md:col-span-5">
+            <p className="eyebrow-muted">Newsletter</p>
+            <h2 className="display-md mt-3">Nichts verpassen</h2>
+            <p className="mt-4 max-w-md text-muted-foreground">
+              Veranstaltungen, Wettbewerbstermine und Neuigkeiten aus dem Verein – etwa einmal im
+              Monat.
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <Newsletter />
+          </div>
         </div>
+      </div>
 
-        <div className="md:col-span-3 md:border-l md:border-footer-line md:pl-10">
-          <h2 className="eyebrow text-footer-muted">Geschäftsstelle</h2>
-          <address className="mt-4 not-italic text-sm leading-relaxed text-footer-text">
+      {/* Sitemap-Spalten */}
+      <div className="shell grid gap-10 py-14 md:grid-cols-12">
+        <div className="md:col-span-4">
+          <img src="/aed-logo.png" alt="" width={500} height={276} className="h-8 w-auto" />
+          <address className="mt-6 not-italic leading-relaxed text-muted-foreground">
             {kontakt.name}
             <br />
             {kontakt.strasse}
             <br />
             {kontakt.plz} {kontakt.ort}
           </address>
-          <p className="mt-4 text-sm leading-relaxed text-footer-text">
-            Geschäftszeiten 09:00 bis 18:00 Uhr
-            <br />
-            Besuche bitte anmelden.
-          </p>
-          <div className="mt-4 text-sm leading-relaxed text-footer-text">
-            <p className="font-medium">{kontakt.geschaeftsstelle}</p>
-            <p className="text-footer-muted">{kontakt.geschaeftsstelleRolle}</p>
-          </div>
-          <div className="mt-4 grid gap-1 text-sm">
-            <a
-              href={`tel:${kontakt.telefonHref}`}
-              className="w-fit py-1 underline underline-offset-4 transition-colors hover:text-brand"
-            >
+          <p className="mt-4">
+            <a href={`tel:${kontakt.telefonHref}`} className="link-underline">
               {kontakt.telefon}
             </a>
-            <a
-              href={`mailto:${kontakt.email}`}
-              className="w-fit py-1 underline underline-offset-4 transition-colors hover:text-brand"
-            >
+            <br />
+            <a href={`mailto:${kontakt.email}`} className="link-underline">
               {kontakt.email}
             </a>
-          </div>
+          </p>
         </div>
 
-        <div className="md:col-span-4 md:border-l md:border-footer-line md:pl-10">
-          <h2 className="eyebrow text-footer-muted">Navigation</h2>
-          <nav
-            aria-label="Footer"
-            className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-footer-text"
-          >
-            {[
-              { to: "/programm", label: "Programm" },
-              { to: "/neuland", label: "neuland" },
-              { to: "/verein", label: "Verein" },
-              { to: "/neuland/wettbewerb", label: "Wettbewerb" },
-              { to: "/verein/vorstand", label: "Vorstand" },
-              { to: "/neuland/gewinner", label: "Gewinner:innen" },
-              { to: "/verein/beirat", label: "Beirat" },
-              { to: "/neuland/jury", label: "Jury" },
-              { to: "/verein/satzung", label: "Satzung" },
-              { to: "/neuland/presse", label: "Pressekit neuland" },
-              { to: "/mitglieder", label: "Mitglieder" },
-              { to: "/referenten", label: "Referent:innen" },
-              { to: "/service", label: "Service" },
-              { to: "/mitglied-werden", label: "Mitglied werden" },
-            ].map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="w-fit py-1 underline underline-offset-4 transition-colors hover:text-brand"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
+        <nav aria-label="Footer" className="grid gap-8 sm:grid-cols-2 md:col-span-8 lg:grid-cols-4">
+          {spalten.map((s) => (
+            <div key={s.titel}>
+              <p className="eyebrow-muted">{s.titel}</p>
+              <ul className="mt-4 space-y-2">
+                {s.links.map((l) => (
+                  <li key={l.to}>
+                    <Link to={l.to} className="link-brand">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
       </div>
 
-      <div className="border-t border-footer-line">
-        <div className="shell flex flex-wrap items-center justify-between gap-4 py-6 text-xs text-footer-muted">
-          <p className="flex items-center gap-3">
-            <img
-              src="/aed-logo.png"
-              alt=""
-              width={500}
-              height={276}
-              className="h-5 w-auto brightness-0 invert"
-            />
+      <div className="border-t border-line">
+        <div className="shell flex flex-wrap items-center justify-between gap-4 py-6">
+          <p className="meta">
             © {new Date().getFullYear()} aed e.V. – Architecture Engineering Design, Stuttgart
           </p>
-
           <div className="flex gap-6">
-            <Link
-              to="/impressum"
-              className="py-1 underline underline-offset-4 transition-colors hover:text-brand"
-            >
+            <Link to="/impressum" className="meta link-underline">
               Impressum
             </Link>
-            <Link
-              to="/datenschutz"
-              className="py-1 underline underline-offset-4 transition-colors hover:text-brand"
-            >
+            <Link to="/datenschutz" className="meta link-underline">
               Datenschutz
             </Link>
           </div>

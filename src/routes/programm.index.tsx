@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { events, eventFormate } from "@/data/site";
 import { EventCard } from "@/components/event-card";
-import { PageHeader } from "@/components/ui-bits";
+import { PageHeader, SectionTitle } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -41,21 +41,20 @@ function ProgrammPage() {
         eyebrow="Programm"
         titel="Veranstaltungen"
         intro="Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden und Festen ein. Weitere Termine kündigen wir über Newsletter, Instagram und unsere WhatsApp-Gruppe an."
-        size="xl"
       />
 
-      <section className="shell bg-background" aria-label="Filter nach Format">
-        <div className="flex flex-wrap gap-2 border-y border-line py-4">
+      <section className="shell" aria-label="Filter nach Format">
+        <div className="flex flex-wrap items-center gap-x-7 gap-y-3 border-b border-line py-5">
           {["Alle", ...eventFormate].map((f) => (
             <button
               key={f}
               type="button"
               onClick={() => setFilter(f)}
               aria-pressed={filter === f}
-              className={`min-h-11 rounded-full border px-4 text-sm transition-colors ${
+              className={`font-sans text-xs font-medium uppercase tracking-[0.14em] transition-colors ${
                 filter === f
-                  ? "border-foreground bg-foreground text-background"
-                  : "border-line hover:border-foreground"
+                  ? "underline decoration-1 underline-offset-[6px]"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {f}
@@ -64,14 +63,14 @@ function ProgrammPage() {
         </div>
       </section>
 
-      <section className="shell band-muted py-12" aria-labelledby="kommend-titel">
-        <h2 id="kommend-titel" className="display-lg">
-          Kommende Termine
-        </h2>
+      <section className="shell py-12 md:py-16" aria-labelledby="kommend-titel">
+        <SectionTitle id="kommend-titel" titel="Kommende Termine" />
         {kommend.length === 0 ? (
-          <p className="mt-6 text-muted-foreground">Für dieses Format ist derzeit kein Termin geplant.</p>
+          <p className="lead mt-8 text-muted-foreground">
+            Für dieses Format ist derzeit kein Termin geplant.
+          </p>
         ) : (
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             {kommend.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
@@ -79,30 +78,22 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section className="shell bg-background py-44" aria-labelledby="archiv-titel">
-        <div className="flex flex-col items-start gap-6">
-          <div className="max-w-2xl">
-            <h2 id="archiv-titel" className="display-lg">
-              Archiv
-            </h2>
-            <p className="mt-2 text-muted-foreground">
-              Vergangene Vorträge, Exkursionen und Feste zum Nachlesen.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() => setArchivOffen((v) => !v)}
-            aria-expanded={archivOffen}
-            className="btn-solid"
-          >
-            {archivOffen ? "Archiv schließen" : "Ins Archiv schauen"}
-            <span aria-hidden="true" className="font-display text-sm">
-              {archivOffen ? "−" : "+"}
-            </span>
-          </button>
-        </div>
+      <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="archiv-titel">
+        <button
+          type="button"
+          onClick={() => setArchivOffen((v) => !v)}
+          aria-expanded={archivOffen}
+          className="flex w-full items-baseline justify-between gap-4 text-left"
+        >
+          <h2 id="archiv-titel" className="display-md">
+            Archiv
+          </h2>
+          <span className="eyebrow shrink-0">
+            {archivOffen ? "Schließen" : `${archiv.length} Termine`}
+          </span>
+        </button>
         {archivOffen && (
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             {archiv.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
