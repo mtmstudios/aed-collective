@@ -49,7 +49,7 @@ function ProgrammPage() {
             className="h-full w-full"
             itemClassName="w-[clamp(200px,22vw,340px)]"
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
               <p className="eyebrow text-white/85">Programm</p>
