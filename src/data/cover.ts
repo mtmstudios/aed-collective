@@ -24,6 +24,10 @@ import c2023_01 from "@/assets/cover/2023_01_aed.webp.asset.json";
 import c2023_02 from "@/assets/cover/2023_02_aed.webp.asset.json";
 import c2024_01 from "@/assets/cover/2024_01_aed.webp.asset.json";
 import c2024_02 from "@/assets/cover/2024_02_aed.png.asset.json";
+import c2025_01 from "@/assets/cover/2025_01_aed.png.asset.json";
+import c2025_02 from "@/assets/cover/2025_02_aed.png.asset.json";
+import c2026_01 from "@/assets/cover/2026_01_aed.webp.asset.json";
+import c2026_02 from "@/assets/cover/2026_02_aed.webp.asset.json";
 
 export type Cover = { url: string; titel: string };
 
@@ -52,6 +56,10 @@ export const cover: Cover[] = [
   { url: c2023_02.url, titel: "Juli – Dezember 2023" },
   { url: c2024_01.url, titel: "Januar – Juni 2024" },
   { url: c2024_02.url, titel: "Juli – Dezember 2024" },
+  { url: c2025_01.url, titel: "Januar – Juni 2025" },
+  { url: c2025_02.url, titel: "Juli – Dezember 2025" },
+  { url: c2026_01.url, titel: "Januar – Juni 2026" },
+  { url: c2026_02.url, titel: "Juli – Dezember 2026" },
 ];
 
 export const coverBilder: string[] = cover.map((c) => c.url);
