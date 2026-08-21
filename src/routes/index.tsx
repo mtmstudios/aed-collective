@@ -46,20 +46,19 @@ function Index() {
 
   return (
     <>
-      {/* Titelseite: randabfallendes Bild mit Didone-Zeile */}
+      {/* Titelseite: randabfallender Cover-Slider mit Didone-Zeile */}
       <section className="bleed relative border-b border-line" aria-labelledby="cover-titel">
         <div className="relative h-[clamp(420px,62vh,760px)] w-full overflow-hidden bg-muted md:h-[clamp(520px,78vh,860px)]">
-          {coverBild && (
-            <img
-              src={coverBild}
-              alt="Publikum bei einer Veranstaltung des aed e.V. in Stuttgart"
-              className="h-full w-full object-cover"
-              fetchPriority="high"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/10 to-transparent" />
+          <CoverSlider
+            bilder={editorialBilder}
+            alt="Impressionen von Veranstaltungen des aed e.V. in Stuttgart"
+            className="h-full w-full"
+            itemClassName="w-[clamp(280px,32vw,520px)]"
+          />
+          {/* möglichst schmaler vertikaler Verlauf – nur hinter der Schrift */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[38%] bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
+
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">Architecture · Engineering · Design</p>
               <h1 id="cover-titel" className="display-lg mt-4 max-w-3xl text-white">
