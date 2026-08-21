@@ -19,9 +19,9 @@
  */
 
 @theme inline {
-  --font-display: "Bodoni Moda", "Times New Roman", serif;
-  --font-serif: "EB Garamond", Georgia, serif;
-  --font-sans: "Jost", "Helvetica Neue", system-ui, sans-serif;
+  --font-display: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  --font-sans: "Arial", "Helvetica Neue", Helvetica, sans-serif;
   --color-serif: var(--serif);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
