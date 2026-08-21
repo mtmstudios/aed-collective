@@ -5,6 +5,7 @@ import { EventCard } from "@/components/event-card";
 import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
 import { eventBilder, editorialBilder } from "@/data/bilder";
+import { coverBilder } from "@/data/cover";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/programm/")({
   component: ProgrammPage,
 });
 
-const coverfotos = [...Object.values(eventBilder), ...editorialBilder];
+const coverfotos = [...coverBilder, ...Object.values(eventBilder), ...editorialBilder];
 
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
@@ -47,7 +48,7 @@ function ProgrammPage() {
             bilder={coverfotos}
             alt="Coverfotos vergangener Veranstaltungen des aed e.V."
             className="h-full w-full"
-            itemClassName="w-[clamp(200px,22vw,340px)]"
+            itemClassName="h-full w-auto aspect-[1/1.414]"
             hoverFaktor={14}
           />
 
