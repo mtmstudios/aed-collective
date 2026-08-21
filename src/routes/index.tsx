@@ -55,7 +55,7 @@ function Index() {
             itemClassName="w-[clamp(280px,32vw,520px)]"
           />
           {/* möglichst schmaler vertikaler Verlauf – nur hinter der Schrift */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[38%] bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
 
             <div className="shell pb-10 md:pb-16">
