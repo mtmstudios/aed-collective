@@ -48,7 +48,9 @@ function ProgrammPage() {
             alt="Coverfotos vergangener Veranstaltungen des aed e.V."
             className="h-full w-full"
             itemClassName="w-[clamp(200px,22vw,340px)]"
+            hoverFaktor={14}
           />
+
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">

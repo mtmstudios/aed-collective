@@ -52,8 +52,12 @@ function Index() {
             bilder={editorialBilder}
             alt="Impressionen von Veranstaltungen des aed e.V. in Stuttgart"
             className="h-full w-full"
-            itemClassName="w-[clamp(280px,32vw,520px)]"
+            itemClassName="w-full"
+            zufall={false}
+            tempo={0.9}
+            hoverFaktor={6}
           />
+
           {/* möglichst schmaler vertikaler Verlauf – nur hinter der Schrift */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
