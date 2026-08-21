@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { events, eventFormate } from "@/data/site";
 import { EventCard } from "@/components/event-card";
-import { PageHeader, SectionTitle } from "@/components/ui-bits";
+import { SectionTitle } from "@/components/ui-bits";
+import { CoverSlider } from "@/components/cover-slider";
+import { eventBilder, editorialBilder } from "@/data/bilder";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -22,6 +24,8 @@ export const Route = createFileRoute("/programm/")({
   component: ProgrammPage,
 });
 
+const coverfotos = [...Object.values(eventBilder), ...editorialBilder];
+
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
   const [archivOffen, setArchivOffen] = useState(false);
@@ -37,11 +41,31 @@ function ProgrammPage() {
 
   return (
     <>
-      <PageHeader
-        eyebrow="Programm"
-        titel="Veranstaltungen"
-        intro="Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden und Festen ein. Weitere Termine kündigen wir über Newsletter, Instagram und unsere WhatsApp-Gruppe an."
-      />
+      <section className="bleed relative border-b border-line" aria-labelledby="programm-titel-head">
+        <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
+          <CoverSlider
+            bilder={coverfotos}
+            alt="Coverfotos vergangener Veranstaltungen des aed e.V."
+            className="h-full w-full"
+            itemClassName="w-[clamp(200px,22vw,340px)]"
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="shell pb-10 md:pb-14">
+              <p className="eyebrow text-white/85">Programm</p>
+              <h1 id="programm-titel-head" className="display-xl mt-4 text-white">
+                Veranstaltungen
+              </h1>
+              <p className="lead mt-5 max-w-2xl text-white/90">
+                Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden
+                und Festen ein. Weitere Termine kündigen wir über Newsletter, Instagram und unsere
+                WhatsApp-Gruppe an.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section className="shell" aria-label="Filter nach Format">
         <div className="flex flex-wrap items-center gap-x-7 gap-y-3 border-b border-line py-5">
