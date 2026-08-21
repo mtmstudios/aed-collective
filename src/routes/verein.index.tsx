@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, vorstand } from "@/data/site";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { PageHeader } from "@/components/ui-bits";
-import { PersonDialog, initialen } from "@/components/person-dialog";
+import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
 
 export const Route = createFileRoute("/verein/")({
   head: () => ({
@@ -112,15 +112,26 @@ function VereinPage() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {vorstand.map((person) => {
             const isEhren = person.rolle === "Ehrenvorsitzender";
+            const bild = personenBild(person.name);
             return (
               <PersonDialog key={person.name} person={person} initials={isEhren ? "WS" : undefined}>
                 <div className="group block cursor-pointer" role="button" tabIndex={0}>
-                  <div
-                    aria-hidden="true"
-                    className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-                  >
-                    {isEhren ? "WS" : initialen(person.name)}
-                  </div>
+                  {bild ? (
+                    <img
+                      src={bild}
+                      alt={`Porträt ${person.name}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-4/5 w-full bg-muted object-cover"
+                    />
+                  ) : (
+                    <div
+                      aria-hidden="true"
+                      className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                    >
+                      {isEhren ? "WS" : initialen(person.name)}
+                    </div>
+                  )}
                   <div className="mt-4">
                     <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
                       {person.name}
@@ -134,6 +145,7 @@ function VereinPage() {
               </PersonDialog>
             );
           })}
+
         </div>
       </section>
 
@@ -150,22 +162,36 @@ function VereinPage() {
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {beirat.map((person) => (
-            <PersonDialog key={person.name} person={person}>
-              <article className="group block cursor-pointer" role="button" tabIndex={0}>
-                <div
-                  aria-hidden="true"
-                  className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-                >
-                  {initialen(person.name)}
-                </div>
-                <div className="mt-4">
-                  <h3 className="font-display text-lg leading-tight">{person.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
-                </div>
-              </article>
-            </PersonDialog>
-          ))}
+          {beirat.map((person) => {
+            const bild = personenBild(person.name);
+            return (
+              <PersonDialog key={person.name} person={person}>
+                <article className="group block cursor-pointer" role="button" tabIndex={0}>
+                  {bild ? (
+                    <img
+                      src={bild}
+                      alt={`Porträt ${person.name}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-4/5 w-full bg-card object-cover"
+                    />
+                  ) : (
+                    <div
+                      aria-hidden="true"
+                      className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                    >
+                      {initialen(person.name)}
+                    </div>
+                  )}
+                  <div className="mt-4">
+                    <h3 className="font-display text-lg leading-tight">{person.name}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
+                  </div>
+                </article>
+              </PersonDialog>
+            );
+          })}
+
         </div>
       </section>
 
