@@ -24,7 +24,7 @@ export const Route = createFileRoute("/programm/")({
   component: ProgrammPage,
 });
 
-const coverfotos = [...Object.values(eventBilder), ...editorialBilder];
+const coverfotos = [...coverBilder, ...Object.values(eventBilder), ...editorialBilder];
 
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
