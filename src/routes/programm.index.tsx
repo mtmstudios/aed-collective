@@ -4,7 +4,7 @@ import { events, eventFormate } from "@/data/site";
 import { EventCard } from "@/components/event-card";
 import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
-import { eventBilder, editorialBilder } from "@/data/bilder";
+
 import { coverBilder } from "@/data/cover";
 
 export const Route = createFileRoute("/programm/")({
