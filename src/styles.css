@@ -379,17 +379,12 @@
   }
 }
 
-/* Bild: Schwarzweiß, Farbe beim Hover – Magazin-Handschrift */
+/* Bilder generell in Farbe – kein Graustufen-Effekt */
 @utility grayscale-hover {
-  filter: grayscale(1);
-  transition: filter 400ms ease, opacity 400ms ease;
-  opacity: 0.92;
-
-  &:hover {
-    filter: grayscale(0);
-    opacity: 1;
-  }
+  filter: none;
+  opacity: 1;
 }
+
 
 /* Sanftes Zoomen des Bildes in Karten */
 @utility img-zoom {
