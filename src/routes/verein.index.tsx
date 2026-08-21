@@ -112,15 +112,26 @@ function VereinPage() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {vorstand.map((person) => {
             const isEhren = person.rolle === "Ehrenvorsitzender";
+            const bild = personenBild(person.name);
             return (
               <PersonDialog key={person.name} person={person} initials={isEhren ? "WS" : undefined}>
                 <div className="group block cursor-pointer" role="button" tabIndex={0}>
-                  <div
-                    aria-hidden="true"
-                    className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
-                  >
-                    {isEhren ? "WS" : initialen(person.name)}
-                  </div>
+                  {bild ? (
+                    <img
+                      src={bild}
+                      alt={`Porträt ${person.name}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-4/5 w-full bg-muted object-cover"
+                    />
+                  ) : (
+                    <div
+                      aria-hidden="true"
+                      className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                    >
+                      {isEhren ? "WS" : initialen(person.name)}
+                    </div>
+                  )}
                   <div className="mt-4">
                     <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
                       {person.name}
@@ -134,6 +145,7 @@ function VereinPage() {
               </PersonDialog>
             );
           })}
+
         </div>
       </section>
 
