@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, vorstand } from "@/data/site";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { PageHeader } from "@/components/ui-bits";
-import { PersonDialog, initialen } from "@/components/person-dialog";
+import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
 
 export const Route = createFileRoute("/verein/")({
   head: () => ({
