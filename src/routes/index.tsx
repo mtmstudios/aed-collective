@@ -5,6 +5,7 @@ import { editorialBilder } from "@/data/bilder";
 import { EventCard, formatDatum } from "@/components/event-card";
 import { ProjektCard } from "@/components/projekt-card";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
+import { CoverSlider } from "@/components/cover-slider";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,8 +42,6 @@ function Index() {
   const nebenan = weitere.slice(0, 2);
   const reihe = weitere.slice(2, 5);
   const preistraeger = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
-  // Luftaufnahme einer Menschengruppe – viel ruhige Fläche für die Titelzeile
-  const coverBild = editorialBilder[6] ?? editorialBilder[0];
 
   return (
     <>
