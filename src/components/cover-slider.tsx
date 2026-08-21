@@ -1,28 +1,40 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Horizontaler Cover-Slider: Bilder liegen direkt nebeneinander und driften
- * langsam in zufälliger Richtung. Per Mouseover (linke/rechte Hälfte) oder
- * Wischen/Ziehen lässt sich die Bewegung steuern.
+ * Horizontaler Cover-Slider: Bilder liegen direkt nebeneinander und laufen
+ * nach links. Per Mouseover (linke/rechte Hälfte), Wischen/Ziehen oder über
+ * die Pfeile lässt sich die Bewegung steuern.
  */
 export function CoverSlider({
   bilder,
   alt = "Cover",
   className = "",
   itemClassName = "w-[clamp(220px,26vw,380px)]",
+  zufall = true,
+  tempo = 0.35,
+  hoverFaktor = 4,
+  pfeile = true,
 }: {
   bilder: readonly string[];
   alt?: string;
   className?: string;
   itemClassName?: string;
+  /** zufällige Driftwechsel (sonst konstant nach links) */
+  zufall?: boolean;
+  /** Grundgeschwindigkeit in px pro Frame */
+  tempo?: number;
+  /** Beschleunigung bei Mouseover */
+  hoverFaktor?: number;
+  pfeile?: boolean;
 }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const offset = useRef(0);
-  const speed = useRef(0.35);
+  const speed = useRef(tempo);
   const hoverBoost = useRef(0);
   const dragging = useRef(false);
   const lastX = useRef(0);
+  const nudge = useRef(0);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -32,12 +44,19 @@ export function CoverSlider({
 
     const tick = () => {
       laufzeit += 1;
-      // alle ~4 Sekunden neue zufällige Driftgeschwindigkeit/-richtung
-      if (laufzeit % 240 === 0) {
+      if (zufall && laufzeit % 240 === 0) {
         speed.current = (Math.random() * 0.5 + 0.15) * (Math.random() < 0.5 ? -1 : 1);
       }
       if (!dragging.current) {
         offset.current -= speed.current + hoverBoost.current;
+      }
+      // sanftes Einlaufen der Pfeil-Sprünge
+      if (Math.abs(nudge.current) > 0.5) {
+        const schritt = nudge.current * 0.12;
+        offset.current += schritt;
+        nudge.current -= schritt;
+      } else {
+        nudge.current = 0;
       }
       const halb = track.scrollWidth / 2;
       if (halb > 0) {
@@ -49,7 +68,13 @@ export function CoverSlider({
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [zufall]);
+
+  const springe = (richtung: -1 | 1) => {
+    const track = trackRef.current;
+    const breite = (track?.firstElementChild as HTMLElement | null)?.offsetWidth ?? 320;
+    nudge.current += richtung * breite;
+  };
 
   const onPointerMove = (e: React.PointerEvent) => {
     const el = wrapRef.current;
@@ -61,7 +86,7 @@ export function CoverSlider({
     }
     const rect = el.getBoundingClientRect();
     const rel = (e.clientX - rect.left) / rect.width; // 0..1
-    hoverBoost.current = (rel - 0.5) * 4;
+    hoverBoost.current = (rel - 0.5) * hoverFaktor;
   };
 
   return (
@@ -95,6 +120,31 @@ export function CoverSlider({
           </div>
         ))}
       </div>
+
+      {pfeile && (
+        <>
+          <button
+            type="button"
+            aria-label="Vorheriges Bild"
+            onClick={() => springe(1)}
+            className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/60 bg-black/35 p-3 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Nächstes Bild"
+            onClick={() => springe(-1)}
+            className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/60 bg-black/35 p-3 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" />
+            </svg>
+          </button>
+        </>
+      )}
     </div>
   );
 }
