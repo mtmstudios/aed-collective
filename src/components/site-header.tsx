@@ -16,8 +16,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-background">
-      {/* Zeile 1: Menü – Wortmarke mittig – neuland */}
-      <div className="shell relative flex h-20 items-center justify-between gap-4 md:h-24">
+      <div className="shell flex h-20 items-center justify-between gap-4 md:h-24">
+        {/* Mobile Menü */}
         <button
           type="button"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
@@ -28,11 +28,10 @@ export function SiteHeader() {
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
 
-        <p className="eyebrow-muted hidden lg:block">Stuttgart</p>
-
+        {/* Logo links */}
         <Link
           to="/"
-          className="absolute left-1/2 -translate-x-1/2"
+          className="flex-shrink-0"
           aria-label="aed e.V. – zur Startseite"
         >
           <img
@@ -40,40 +39,46 @@ export function SiteHeader() {
             alt="aed e.V."
             width={500}
             height={276}
-            className="h-9 w-auto md:h-12"
+            className="h-10 w-auto md:h-12"
           />
         </Link>
 
+        {/* Desktop Navigation */}
+        <nav
+          aria-label="Hauptnavigation"
+          className="hidden items-center lg:flex"
+        >
+          <ul className="flex items-center gap-8">
+            {nav.map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className="font-sans text-base font-medium uppercase tracking-[0.14em] link-brand"
+                  activeProps={{
+                    className: "underline decoration-1 underline-offset-[6px]",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* neuland-Button schwarz */}
         <Link
           to="/neuland"
-          className="theme-neuland font-sans text-xs uppercase tracking-[0.14em] link-brand"
+          className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-xs font-medium uppercase tracking-[0.14em] text-background transition-colors hover:bg-foreground/90"
         >
           neuland
         </Link>
       </div>
 
-      {/* Zeile 2: Ressort-Navigation, gesperrte Kapitälchen */}
-      <nav
-        aria-label="Hauptnavigation"
-        className="hidden border-t border-line lg:block"
-      >
-        <ul className="shell flex items-center justify-center gap-10 py-3">
-          {nav.map((item) => (
-            <li key={item.to}>
-              <Link
-                to={item.to}
-                className="font-sans text-xs font-medium uppercase tracking-[0.14em] link-brand"
-                activeProps={{ className: "underline decoration-1 underline-offset-[6px]" }}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
       {open && (
-        <nav aria-label="Hauptnavigation mobil" className="border-t border-line lg:hidden">
+        <nav
+          aria-label="Hauptnavigation mobil"
+          className="border-t border-line lg:hidden"
+        >
           <div className="shell flex flex-col py-2">
             {nav.map((item) => (
               <Link
@@ -88,7 +93,7 @@ export function SiteHeader() {
             <Link
               to="/neuland"
               onClick={() => setOpen(false)}
-              className="theme-neuland py-4 font-sans text-sm font-medium uppercase tracking-[0.14em] text-[var(--brand-deep)]"
+              className="py-4 font-sans text-sm font-medium uppercase tracking-[0.14em] text-[var(--brand-deep)]"
             >
               neuland
             </Link>
