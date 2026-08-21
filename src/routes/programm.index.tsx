@@ -48,7 +48,7 @@ function ProgrammPage() {
             bilder={coverfotos}
             alt="Coverfotos vergangener Veranstaltungen des aed e.V."
             className="h-full w-full"
-            itemClassName="w-[clamp(200px,22vw,340px)]"
+            itemClassName="h-full w-auto aspect-[1/1.414]"
             hoverFaktor={14}
           />
 
