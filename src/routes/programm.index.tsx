@@ -2,7 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { events, eventFormate } from "@/data/site";
 import { EventCard } from "@/components/event-card";
-import { PageHeader, SectionTitle } from "@/components/ui-bits";
+import { SectionTitle } from "@/components/ui-bits";
+import { CoverSlider } from "@/components/cover-slider";
+import { eventBilder, editorialBilder } from "@/data/bilder";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -21,6 +23,8 @@ export const Route = createFileRoute("/programm/")({
   }),
   component: ProgrammPage,
 });
+
+const coverfotos = [...Object.values(eventBilder), ...editorialBilder];
 
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
