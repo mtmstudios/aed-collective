@@ -4,7 +4,7 @@ import { events, eventFormate } from "@/data/site";
 import { EventCard } from "@/components/event-card";
 import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
-import { eventBilder, editorialBilder } from "@/data/bilder";
+
 import { coverBilder } from "@/data/cover";
 
 export const Route = createFileRoute("/programm/")({
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/programm/")({
   component: ProgrammPage,
 });
 
-const coverfotos = [...coverBilder, ...Object.values(eventBilder), ...editorialBilder];
+const coverfotos = coverBilder;
 
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
