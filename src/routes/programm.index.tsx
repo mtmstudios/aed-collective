@@ -109,6 +109,20 @@ function ProgrammPage() {
           </p>
         ) : (
           <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+            <article className="group">
+              <div className="img-zoom aspect-3/2 bg-muted">
+                <div className="flex h-full w-full items-center justify-center bg-muted">
+                  <span className="eyebrow text-muted-foreground">Platzhalter</span>
+                </div>
+              </div>
+              <p className="eyebrow mt-4">Download</p>
+              <h3 className="display-sm mt-2">Aktueller Flyer</h3>
+              <p className="meta mt-2">Programmheft · aed e.V.</p>
+              <p className="mt-3 text-base leading-relaxed">
+                Das aktuelle Programmheft mit allen Terminen des Halbjahres – hier folgt in Kürze der
+                Download.
+              </p>
+            </article>
             {kommend.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
@@ -117,15 +131,16 @@ function ProgrammPage() {
       </section>
 
       <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="archiv-titel">
+        <p id="archiv-titel" className="eyebrow">
+          Archiv
+        </p>
         <button
           type="button"
           onClick={() => setArchivOffen((v) => !v)}
           aria-expanded={archivOffen}
-          className="flex w-full items-baseline justify-between gap-4 text-left"
+          className="mt-4 flex w-full items-baseline justify-between gap-4 text-left"
         >
-          <h2 id="archiv-titel" className="display-md">
-            Archiv
-          </h2>
+          <h2 className="display-md">Letzte Termine</h2>
           <span className="eyebrow shrink-0">
             {archivOffen ? "Schließen" : `${archiv.length} Termine`}
           </span>
