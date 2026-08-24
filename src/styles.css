@@ -27,6 +27,12 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-line: var(--line);
   --color-ink: var(--ink);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
+  --color-footer-muted: var(--footer-muted);
+  --color-footer-line: var(--footer-line);
+  --color-footer-input-bg: var(--footer-input-bg);
+  --color-footer-input-border: var(--footer-input-border);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
