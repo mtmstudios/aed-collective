@@ -3,6 +3,7 @@ import { events, partner } from "@/data/site";
 import { kennzahlen, projekte } from "@/data/neuland";
 import { editorialBilder } from "@/data/bilder";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
+import { logos } from "@/data/logos";
 import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
 import { ProjektCard } from "@/components/projekt-card";
@@ -129,7 +130,7 @@ function Index() {
             Alle Mitglieder
           </Link>
         </div>
-        <MitgliederSlider items={foerdermitglieder} />
+        <MitgliederSlider items={logos} />
         <div className="shell py-6">
           <p className="meta">
             Dazu über 400 Personenmitglieder – Architekt:innen, Ingenieur:innen, Designer:innen,
