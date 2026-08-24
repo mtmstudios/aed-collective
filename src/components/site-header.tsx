@@ -2,14 +2,17 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+/** Reduzierte Hauptnavigation – alles Weitere steht im Footer. */
 const nav = [
   { to: "/programm", label: "Programm" },
   { to: "/verein", label: "Verein" },
-  { to: "/mitglieder", label: "Mitglieder" },
-  { to: "/referenten", label: "Referent:innen" },
-  { to: "/service", label: "Service" },
-  { to: "/kontakt", label: "Kontakt" },
+  { to: "/mitglied-werden", label: "Mitglied werden" },
 ] as const;
+
+const navDanach = [{ to: "/kontakt", label: "Kontakt" }] as const;
+
+const linkKlasse = "font-sans text-base link-brand";
+const aktiv = { className: "underline decoration-1 underline-offset-[6px]" };
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -29,11 +32,7 @@ export function SiteHeader() {
         </button>
 
         {/* Logo links */}
-        <Link
-          to="/"
-          className="flex-shrink-0"
-          aria-label="aed e.V. – zur Startseite"
-        >
+        <Link to="/" className="flex-shrink-0" aria-label="aed e.V. – zur Startseite">
           <img
             src="/aed-logo.png"
             alt="aed e.V."
@@ -43,21 +42,27 @@ export function SiteHeader() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav
-          aria-label="Hauptnavigation"
-          className="hidden items-center lg:flex"
-        >
+        {/* Desktop-Navigation: neuland als Pill zwischen den Punkten */}
+        <nav aria-label="Hauptnavigation" className="hidden items-center lg:flex">
           <ul className="flex items-center gap-8">
             {nav.map((item) => (
               <li key={item.to}>
-                <Link
-                  to={item.to}
-                  className="font-sans text-base font-medium uppercase tracking-[0.14em] link-brand"
-                  activeProps={{
-                    className: "underline decoration-1 underline-offset-[6px]",
-                  }}
-                >
+                <Link to={item.to} className={linkKlasse} activeProps={aktiv}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                to="/neuland"
+                className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-base text-background transition-opacity hover:opacity-90"
+              >
+                neuland
+              </Link>
+            </li>
+            {navDanach.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to} className={linkKlasse} activeProps={aktiv}>
                   {item.label}
                 </Link>
               </li>
@@ -65,27 +70,19 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        {/* neuland-Button schwarz */}
-        <Link
-          to="/neuland"
-          className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-xs font-medium uppercase tracking-[0.14em] text-background transition-colors hover:bg-foreground/90"
-        >
-          neuland
-        </Link>
+        {/* Platzhalter, damit das Logo auf kleinen Schirmen mittig bleibt */}
+        <span className="w-11 lg:hidden" aria-hidden="true" />
       </div>
 
       {open && (
-        <nav
-          aria-label="Hauptnavigation mobil"
-          className="border-t border-line lg:hidden"
-        >
+        <nav aria-label="Hauptnavigation mobil" className="border-t border-line lg:hidden">
           <div className="shell flex flex-col py-2">
-            {nav.map((item) => (
+            {[...nav, ...navDanach].map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="border-b border-line py-4 font-sans text-sm font-medium uppercase tracking-[0.14em] link-brand"
+                className="border-b border-line py-4 font-sans text-base link-brand"
               >
                 {item.label}
               </Link>
@@ -93,7 +90,7 @@ export function SiteHeader() {
             <Link
               to="/neuland"
               onClick={() => setOpen(false)}
-              className="py-4 font-sans text-sm font-medium uppercase tracking-[0.14em] text-[var(--brand-deep)]"
+              className="mt-4 mb-2 inline-flex w-fit items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-base text-background"
             >
               neuland
             </Link>
