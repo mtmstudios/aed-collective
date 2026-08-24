@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { events, eventFormate } from "@/data/site";
+import { referenten } from "@/data/referenten";
 import { EventCard } from "@/components/event-card";
 import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
@@ -30,6 +31,16 @@ const coverfotos = coverBilder;
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
   const [archivOffen, setArchivOffen] = useState(false);
+  const [referentenOffen, setReferentenOffen] = useState(false);
+
+  const referentenSortiert = useMemo(
+    () =>
+      [...referenten].sort((a, b) => {
+        const nn = (n: string) => n.split(" ").slice(-1)[0];
+        return nn(a.name).localeCompare(nn(b.name), "de");
+      }),
+    [],
+  );
 
   const { kommend, archiv } = useMemo(() => {
     const heute = new Date().toISOString().slice(0, 10);
@@ -126,7 +137,47 @@ function ProgrammPage() {
             ))}
           </div>
         )}
+
+        <div className="mt-10 border-t border-line pt-6">
+          <button
+            type="button"
+            onClick={() => setReferentenOffen((v) => !v)}
+            aria-expanded={referentenOffen}
+            className="flex w-full items-baseline justify-between gap-4 text-left"
+          >
+            <h3 id="referenten-titel" className="display-md">
+              Referent:innen
+            </h3>
+            <span className="eyebrow shrink-0">
+              {referentenOffen ? "Schließen" : `${referenten.length} Personen`}
+            </span>
+          </button>
+          {referentenOffen && (
+            <>
+              <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+                {referentenSortiert.map((r) => (
+                  <li key={`${r.name}-${r.org}`} className="border-b border-line pb-2">
+                    <span className="block text-base">{r.name}</span>
+                    <span className="meta block">
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="noreferrer" className="link-underline">
+                          {r.org}
+                        </a>
+                      ) : (
+                        r.org
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/referenten" className="eyebrow link-underline mt-8 inline-block">
+                Zur vollständigen Referent:innen-Seite
+              </Link>
+            </>
+          )}
+        </div>
       </section>
+
     </>
   );
 }
