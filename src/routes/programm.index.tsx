@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { events, eventFormate } from "@/data/site";
+import { referenten } from "@/data/referenten";
 import { EventCard } from "@/components/event-card";
 import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
