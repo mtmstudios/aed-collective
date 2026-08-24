@@ -412,3 +412,43 @@
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+
+/* Laufband (Mitglieder-Slider): zwei Spuren, gegenlaeufig */
+@keyframes lauf-links {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes lauf-rechts {
+  from { transform: translate3d(-50%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@utility laufband {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: lauf-links var(--laufzeit, 90s) linear infinite;
+}
+
+@utility laufband-rueck {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: lauf-rechts var(--laufzeit, 90s) linear infinite;
+}
+
+/* Bewegung anhalten, solange das Band beruehrt wird */
+.laufband-halt:hover .laufband,
+.laufband-halt:hover .laufband-rueck,
+.laufband-halt:focus-within .laufband,
+.laufband-halt:focus-within .laufband-rueck {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .laufband,
+  .laufband-rueck {
+    animation: none;
+  }
+}

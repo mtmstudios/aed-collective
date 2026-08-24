@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { events, partner } from "@/data/site";
 import { kennzahlen, projekte } from "@/data/neuland";
 import { editorialBilder } from "@/data/bilder";
+import { foerdermitglieder } from "@/data/foerdermitglieder";
+import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
 import { ProjektCard } from "@/components/projekt-card";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
@@ -112,6 +114,31 @@ function Index() {
             ))}
           </div>
         )}
+      </section>
+
+      {/* Mitglieder als Laufband */}
+      <section className="bleed border-y border-line" aria-labelledby="mitglieder-titel">
+        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-12 pb-6">
+          <div>
+            <p className="eyebrow-muted">Getragen von</p>
+            <h2 id="mitglieder-titel" className="display-md mt-2">
+              {foerdermitglieder.length} Fördermitglieder
+            </h2>
+          </div>
+          <Link to="/mitglieder" className="eyebrow link-underline">
+            Alle Mitglieder
+          </Link>
+        </div>
+        <MitgliederSlider items={foerdermitglieder} />
+        <div className="shell py-6">
+          <p className="meta">
+            Dazu über 400 Personenmitglieder – Architekt:innen, Ingenieur:innen, Designer:innen,
+            Lehrende und Studierende.{" "}
+            <Link to="/mitglied-werden" className="link-underline">
+              Mitglied werden
+            </Link>
+          </p>
+        </div>
       </section>
 
       {/* Manifest: Zitat als Doppelseite */}
