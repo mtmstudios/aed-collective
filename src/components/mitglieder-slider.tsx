@@ -1,82 +1,62 @@
-import type { Logo } from "@/data/logos";
+import type { Person } from "@/data/site";
+import { PersonDialog, personenBild } from "@/components/person-dialog";
 
-/** "Blocher Partners GmbH, Stuttgart | Berlin" -> "Blocher Partners GmbH" */
-function firmenname(eintrag: string) {
-  const i = eintrag.indexOf(",");
-  return (i < 0 ? eintrag : eintrag.slice(0, i)).trim();
-}
+function Portraet({ person, kopie }: { person: Person; kopie: boolean }) {
+  const bild = personenBild(person.name);
 
-function Kachel({ logo, kopie }: { logo: Logo; kopie: boolean }) {
-  const name = firmenname(logo.name);
-  const inhalt = (
-    <img
-      src={logo.datei}
-      alt={kopie ? "" : name}
-      loading="lazy"
-      decoding="async"
-      draggable={false}
-      className="max-h-full max-w-full object-contain"
-    />
+  const karte = (
+    <>
+      <div className="img-zoom aspect-3/4 w-[168px] bg-muted md:w-[212px]">
+        {bild ? (
+          <img
+            src={bild}
+            alt={kopie ? "" : `Porträt ${person.name}`}
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+            className="grayscale-hover h-full w-full object-cover"
+          />
+        ) : (
+          <div className="h-full w-full bg-muted" aria-hidden="true" />
+        )}
+      </div>
+      <p className="mt-3 w-[168px] font-display text-base leading-tight md:w-[212px] md:text-lg">
+        {person.name}
+      </p>
+      <p className="meta mt-1 w-[168px] md:w-[212px]">{person.rolle}</p>
+    </>
   );
 
-  const kachel = `flex h-[104px] w-[220px] shrink-0 items-center justify-center px-7 py-6 md:h-[128px] md:w-[268px] ${
-    logo.hell ? "bg-[#111]" : "bg-white"
-  }`;
-
   return (
-    <div className="mr-4 md:mr-6" aria-hidden={kopie ? true : undefined}>
-      {logo.url && !kopie ? (
-        <a
-          href={logo.url}
-          target="_blank"
-          rel="noreferrer"
-          title={name}
-          className={`${kachel} transition-opacity hover:opacity-80`}
-        >
-          {inhalt}
-        </a>
+    <div className="mr-5 shrink-0 md:mr-7" aria-hidden={kopie ? true : undefined}>
+      {kopie ? (
+        <div>{karte}</div>
       ) : (
-        <div className={kachel}>{inhalt}</div>
+        <PersonDialog person={person}>
+          <div className="group cursor-pointer text-left" role="button" tabIndex={0}>
+            {karte}
+          </div>
+        </PersonDialog>
       )}
     </div>
   );
 }
 
-function Spur({
-  items,
-  rueckwaerts = false,
-  laufzeit,
-}: {
-  items: readonly Logo[];
-  rueckwaerts?: boolean;
-  laufzeit: string;
-}) {
+/**
+ * „Red Carpet“ der Köpfe des Vereins: Porträts laufen auf hellem Grund vorbei.
+ * Die Bewegung hält bei Hover und Tastaturfokus an; ein Klick öffnet das
+ * Statement der Person.
+ */
+export function MitgliederSlider({ items }: { items: readonly Person[] }) {
   // Liste doppelt rendern, damit der Umlauf nahtlos wirkt
   const doppelt = [...items, ...items];
-  return (
-    <div
-      className={rueckwaerts ? "laufband-rueck" : "laufband"}
-      style={{ "--laufzeit": laufzeit } as React.CSSProperties}
-    >
-      {doppelt.map((l, i) => (
-        <Kachel key={`${l.name}-${i}`} logo={l} kopie={i >= items.length} />
-      ))}
-    </div>
-  );
-}
 
-/**
- * Sponsorenwand der Fördermitglieder: zwei gegenläufige Spuren mit Logokacheln
- * auf dunklem Grund. Die Bewegung hält bei Hover und Tastaturfokus an, damit
- * die Links erreichbar bleiben.
- */
-export function MitgliederSlider({ items }: { items: readonly Logo[] }) {
-  const mitte = Math.ceil(items.length / 2);
   return (
-    <div className="laufband-halt overflow-hidden bg-[#0b0b0b] py-8 md:py-10">
-      <div className="flex flex-col gap-4 md:gap-6">
-        <Spur items={items.slice(0, mitte)} laufzeit="70s" />
-        <Spur items={items.slice(mitte)} laufzeit="85s" rueckwaerts />
+    <div className="laufband-halt overflow-hidden bg-[oklch(0.968_0_0)] py-10 md:py-12">
+      <div className="laufband" style={{ "--laufzeit": "95s" } as React.CSSProperties}>
+        {doppelt.map((p, i) => (
+          <Portraet key={`${p.name}-${i}`} person={p} kopie={i >= items.length} />
+        ))}
       </div>
     </div>
   );

@@ -1,9 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { events, partner } from "@/data/site";
+import { beirat, events, partner, vorstand } from "@/data/site";
 import { kennzahlen, projekte } from "@/data/neuland";
 import { editorialBilder } from "@/data/bilder";
-import { foerdermitglieder } from "@/data/foerdermitglieder";
-import { logos } from "@/data/logos";
 import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
 import { ProjektCard } from "@/components/projekt-card";
@@ -44,6 +42,10 @@ function Index() {
   const [aufmacher, ...weitere] = liste;
   const nebenan = weitere.slice(0, 2);
   const reihe = weitere.slice(2, 5);
+  // Vorstand und Beirat als Gesichter des Vereins, ohne Doppelungen
+  const koepfe = [...vorstand, ...beirat].filter(
+    (p, i, alle) => alle.findIndex((a) => a.name === p.name) === i,
+  );
   const preistraeger = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
 
   return (
@@ -117,26 +119,25 @@ function Index() {
         )}
       </section>
 
-      {/* Mitglieder als Laufband */}
+      {/* Die Köpfe des Vereins als Laufband */}
       <section className="bleed border-y border-line" aria-labelledby="mitglieder-titel">
         <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-12 pb-6">
           <div>
-            <p className="eyebrow-muted">Getragen von</p>
+            <p className="eyebrow-muted">Die Köpfe hinter dem aed</p>
             <h2 id="mitglieder-titel" className="display-md mt-2">
-              {foerdermitglieder.length} Fördermitglieder
+              Vorstand und Beirat
             </h2>
           </div>
-          <Link to="/mitglieder" className="eyebrow link-underline">
-            Alle Mitglieder
+          <Link to="/verein" className="eyebrow link-underline">
+            Zum Verein
           </Link>
         </div>
-        <MitgliederSlider items={logos} />
+        <MitgliederSlider items={koepfe} />
         <div className="shell py-6">
           <p className="meta">
-            Dazu über 400 Personenmitglieder – Architekt:innen, Ingenieur:innen, Designer:innen,
-            Lehrende und Studierende.{" "}
-            <Link to="/mitglied-werden" className="link-underline">
-              Mitglied werden
+            Getragen von rund 80 Fördermitgliedern und über 400 Personenmitgliedern.{" "}
+            <Link to="/mitglieder" className="link-underline">
+              Alle Mitglieder
             </Link>
           </p>
         </div>
