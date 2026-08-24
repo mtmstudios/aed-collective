@@ -31,6 +31,16 @@ const coverfotos = coverBilder;
 function ProgrammPage() {
   const [filter, setFilter] = useState<string>("Alle");
   const [archivOffen, setArchivOffen] = useState(false);
+  const [referentenOffen, setReferentenOffen] = useState(false);
+
+  const referentenSortiert = useMemo(
+    () =>
+      [...referenten].sort((a, b) => {
+        const nn = (n: string) => n.split(" ").slice(-1)[0];
+        return nn(a.name).localeCompare(nn(b.name), "de");
+      }),
+    [],
+  );
 
   const { kommend, archiv } = useMemo(() => {
     const heute = new Date().toISOString().slice(0, 10);
