@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
-import { LogoGrid, PageHeader } from "@/components/ui-bits";
+import { MitgliederListe } from "@/components/mitglieder-liste";
+import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/mitglieder")({
   head: () => ({
@@ -28,8 +29,9 @@ function MitgliederPage() {
         titel="Fördermitglieder"
         intro="Büros, Unternehmen und Institutionen, die den Verein und die Nachwuchsförderung tragen."
       />
-      <section className="shell pb-12">
-        <LogoGrid items={foerdermitglieder} />
+      <section className="shell py-12" aria-label="Verzeichnis der Fördermitglieder">
+        <p className="eyebrow-muted mb-6">{foerdermitglieder.length} Unternehmen und Institutionen</p>
+        <MitgliederListe items={foerdermitglieder} />
       </section>
       <section className="shell pb-24">
         <div className="rule-t grid gap-6 pt-8 md:grid-cols-2">
