@@ -12,7 +12,7 @@ export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
         return (
           <li
             key={name}
-            className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-brand"
+            className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
           >
             {url ? (
               <a
