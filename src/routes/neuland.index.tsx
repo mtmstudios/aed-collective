@@ -142,13 +142,16 @@ function NeulandIndex() {
           href="/neuland/jury"
           linkText="Ganze Jury ansehen"
         />
-        <ul className="mt-10 flex gap-5 overflow-x-auto pb-2">
+        <AutoSlider
+          className="mt-10"
+          itemClassName="w-36 pr-5 sm:w-44"
+          pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
+        >
           {jury2025.map((p) => (
-            <li key={p.name} className="w-36 shrink-0 sm:w-44">
-              <JuryKarte person={p} />
-            </li>
+            <JuryKarte key={p.name} person={p} />
           ))}
-        </ul>
+        </AutoSlider>
+
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
             Alle 21 Juroren:innen ansehen
