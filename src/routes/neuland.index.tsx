@@ -146,7 +146,7 @@ function NeulandIndex() {
         />
         <AutoSlider
           className="mt-10"
-          itemClassName="w-36 pr-5 sm:w-44"
+          itemClassName="w-[10.25rem] pr-5 sm:w-[12.25rem]"
           pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
         >
           {jury2025.map((p) => (
