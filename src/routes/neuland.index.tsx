@@ -57,8 +57,8 @@ function NeulandIndex() {
   return (
     <>
       {/* Titelseite des Ressorts */}
-      <section className="bleed">
-        <div className="relative h-[clamp(400px,54vh,680px)] w-full overflow-hidden bg-muted md:h-[clamp(460px,66vh,760px)]">
+      <section className="bleed relative" aria-labelledby="neuland-titel-head">
+        <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
           {titelbild && (
             <img
               src={titelbild}
@@ -67,14 +67,14 @@ function NeulandIndex() {
               fetchPriority="high"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
               <p className="eyebrow text-white/85">
                 {wettbewerbStatus.offen ? "Einreichung offen" : "Jahrgang 2025 abgeschlossen"}
               </p>
-              <h1 className="display-xl mt-4 text-white">neuland</h1>
-              <p className="lead mt-6 max-w-2xl text-white/90">
+              <h1 id="neuland-titel-head" className="display-xl mt-4 text-white">neuland</h1>
+              <p className="lead mt-5 max-w-2xl text-white/90">
                 Der interdisziplinäre Nachwuchswettbewerb des aed – für Studierende und
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
               </p>
@@ -82,6 +82,8 @@ function NeulandIndex() {
           </div>
         </div>
       </section>
+
+      <NeulandSubnav />
 
       <section className="shell py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-12">
