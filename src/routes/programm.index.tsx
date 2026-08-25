@@ -156,6 +156,7 @@ function ProgrammPage() {
           <Link to="/mitglied-werden" className="btn-solid mt-10">
             Mitglied werden
           </Link>
+          </>
         )}
       </section>
 
