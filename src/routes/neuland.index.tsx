@@ -113,11 +113,13 @@ function NeulandIndex() {
           href="/neuland/jury"
           linkText="Ganze Jury ansehen"
         />
-        <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {jury2025.slice(0, 8).map((p) => (
-            <PersonCard key={p.name} person={p} />
+        <ul className="mt-10 flex gap-4 overflow-x-auto pb-2">
+          {jury2025.map((p) => (
+            <li key={p.name} className="w-28 shrink-0 sm:w-32">
+              <PersonCard person={p} />
+            </li>
           ))}
-        </div>
+        </ul>
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
             Alle 21 Juroren:innen ansehen
