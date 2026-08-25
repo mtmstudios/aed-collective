@@ -208,21 +208,31 @@ function VereinPage() {
           </div>
         </div>
 
-        <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {foerdermitglieder.map((m) => (
-            <li
-              key={m.name}
-              className="border border-line bg-brand p-4 text-sm leading-snug text-brand-foreground transition-colors duration-300 hover:bg-[var(--brand-deep)]"
-            >
-              {m.url ? (
-                <a href={m.url} target="_blank" rel="noopener noreferrer" className="block">
-                  {m.name}
-                </a>
-              ) : (
-                m.name
-              )}
-            </li>
-          ))}
+        <ul className="mt-12 grid grid-cols-2 border-l border-t border-line sm:grid-cols-3 lg:grid-cols-4">
+          {foerdermitglieder.map((m) => {
+            const inner = (
+              <span className="font-sans text-xs uppercase tracking-[0.1em]">{m.name}</span>
+            );
+            return (
+              <li
+                key={m.name}
+                className="flex min-h-24 border-r border-b border-line bg-brand text-center text-brand-foreground transition-colors hover:bg-[var(--brand-deep)]"
+              >
+                {m.url ? (
+                  <a
+                    href={m.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center px-4 py-6"
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <span className="flex w-full items-center justify-center px-4 py-6">{inner}</span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </section>
 
