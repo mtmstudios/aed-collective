@@ -11,14 +11,14 @@ const nav = [
 
 const navDanach = [{ to: "/kontakt", label: "Kontakt" }] as const;
 
-const linkKlasse = "font-sans text-base link-brand";
+const linkKlasse = "font-sans text-base text-brand-foreground transition-colors hover:text-background";
 const aktiv = { className: "underline decoration-1 underline-offset-[6px]" };
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-background">
+    <header className="sticky top-0 z-50 border-b border-brand bg-brand">
       <div className="shell flex h-20 items-center justify-between gap-4 md:h-24">
         {/* Mobile Menü */}
         <button
@@ -26,7 +26,7 @@ export function SiteHeader() {
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex min-h-11 min-w-11 items-center justify-center lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center text-brand-foreground transition-colors hover:text-background lg:hidden"
         >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
@@ -75,14 +75,14 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav aria-label="Hauptnavigation mobil" className="border-t border-line lg:hidden">
+        <nav aria-label="Hauptnavigation mobil" className="border-t border-ink lg:hidden">
           <div className="shell flex flex-col py-2">
             {[...nav, ...navDanach].map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="border-b border-line py-4 font-sans text-base link-brand"
+                className="border-b border-ink py-4 font-sans text-base text-brand-foreground transition-colors hover:text-background"
               >
                 {item.label}
               </Link>
