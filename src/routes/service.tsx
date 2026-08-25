@@ -30,7 +30,7 @@ function ServicePage() {
         intro="Unterlagen zum Verein, zum Programm und zur Presse­arbeit – frei verwendbar unter Nennung der Quelle."
       />
       <section className="shell pb-24">
-        <ul className="border-t border-line">
+        <ul className="rule-t">
           {downloads.map((d) => (
             <li key={d.titel}>
               <a

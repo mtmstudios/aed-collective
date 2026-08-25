@@ -87,7 +87,7 @@ function ProjektDetail() {
           </div>
 
           {(projekt.art || projekt.betreuung) && (
-            <dl className="mt-10 border-t border-line pt-6">
+            <dl className="mt-10 rule-t pt-6">
               {projekt.art && (
                 <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-line py-3">
                   <dt className="eyebrow-muted w-32 shrink-0">Art der Arbeit</dt>
@@ -116,7 +116,7 @@ function ProjektDetail() {
 
       {/* Bildstrecke */}
       {galerie.length > 0 && (
-        <section className="shell border-t border-line py-12" aria-label="Bildstrecke zum Projekt">
+        <section className="shell topic-rule py-12" aria-label="Bildstrecke zum Projekt">
           <div className="grid gap-8 md:grid-cols-2">
             {galerie.map((b, i) => (
               <figure key={b} className={galerie.length === 3 && i === 0 ? "md:col-span-2" : ""}>
@@ -133,7 +133,7 @@ function ProjektDetail() {
         </section>
       )}
 
-      <nav className="shell border-t border-line py-10" aria-label="Zurück zur Übersicht">
+      <nav className="shell topic-rule py-10" aria-label="Zurück zur Übersicht">
         <Link
           to="/neuland/gewinner/$jahr"
           params={{ jahr: projekt.jahr }}

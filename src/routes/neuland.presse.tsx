@@ -31,7 +31,7 @@ function PressePage() {
         intro="Material zur Berichterstattung über den Wettbewerb und die ausgezeichneten Arbeiten. Bildrechte liegen bei den jeweiligen Urheber:innen, Nennung erforderlich."
       />
       <section className="shell pb-16">
-        <ul className="border-t border-line">
+        <ul className="rule-t">
           {presseKit.map((k) => (
             <li key={k.titel}>
               <a
