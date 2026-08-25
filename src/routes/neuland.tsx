@@ -15,7 +15,7 @@ const subnav = [
 
 export function NeulandSubnav() {
   return (
-    <nav aria-label="neuland-Navigation" className="border-b border-line bg-card">
+    <nav aria-label="neuland-Navigation" className="border-b border-ink bg-card">
       <div className="shell flex gap-6 overflow-x-auto py-4">
         {subnav.map((item) => (
           <Link
