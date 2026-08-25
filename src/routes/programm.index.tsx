@@ -160,7 +160,7 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section className="bleed bg-[var(--aed-hover)]" aria-labelledby="archiv-titel">
+      <section className="bleed programm-archiv bg-[var(--aed-hover)]" aria-labelledby="archiv-titel">
         <div className="shell py-14 md:py-20">
           <p id="archiv-titel" className="eyebrow-muted">
             Archiv
