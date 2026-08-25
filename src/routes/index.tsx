@@ -79,7 +79,7 @@ function Index() {
                 <Link to="/programm" className="btn-solid">
                   Programm
                 </Link>
-                <Link to="/mitglied-werden" className="btn-outline">
+                <Link to="/mitglied-werden" className="btn-outline btn-outline-on-dark">
                   Mitglied werden
                 </Link>
               </div>

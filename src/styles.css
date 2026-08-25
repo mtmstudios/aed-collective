@@ -107,6 +107,10 @@
   /* Festes aed-Pink für CTA-Buttons – wird vom neuland-Theme NICHT überschrieben */
   --aed-pink: oklch(0.775 0.207 320.5);
   --aed-pink-deep: oklch(0.5 0.22 322);
+  /* Schrift auf Pink: immer Schwarz (auch im neuland-Bereich) */
+  --aed-pink-foreground: oklch(0 0 0);
+  /* Outline-Button-Schrift: Schwarz auf hellem, Pink auf dunklem Hintergrund */
+  --aed-outline-fg: oklch(0 0 0);
   --chart-1: oklch(0.775 0.207 320.5);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
@@ -382,12 +386,12 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   background: var(--aed-pink);
-  color: var(--brand-foreground);
+  color: var(--aed-pink-foreground);
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
     background: var(--aed-pink-deep);
-    color: var(--brand-foreground);
+    color: var(--aed-pink-foreground);
   }
 }
 
@@ -405,13 +409,18 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   border: 1px solid var(--aed-pink);
-  color: var(--aed-pink);
+  color: var(--aed-outline-fg);
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
     background: var(--aed-pink);
-    color: var(--brand-foreground);
+    color: var(--aed-pink-foreground);
   }
+}
+
+/* Outline-Button auf dunklem Hintergrund (Hero, Footer): rosa Schrift */
+@utility btn-outline-on-dark {
+  --aed-outline-fg: var(--aed-pink);
 }
 
 /* Bilder generell in Farbe – kein Graustufen-Effekt */
