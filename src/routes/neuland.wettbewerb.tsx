@@ -122,11 +122,14 @@ function WettbewerbPage() {
           Förderer
         </h2>
         <p className="mt-6 max-w-3xl leading-relaxed text-foreground">{karlSchlechtText}</p>
-        <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-10 grid grid-cols-1 border-l border-t border-line sm:grid-cols-2 lg:grid-cols-3">
           {sponsoren.map((s) => (
-            <li key={s.name} className="bg-background p-6">
+            <li
+              key={s.name}
+              className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-[var(--aed-pink)]/50 p-6 text-[var(--aed-pink-foreground)] transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+            >
               <span className="block font-display text-lg">{s.name}</span>
-              <span className="mt-1 block text-sm text-foreground">{s.rolle}</span>
+              <span className="mt-1 block text-sm text-foreground/80">{s.rolle}</span>
             </li>
           ))}
         </ul>
