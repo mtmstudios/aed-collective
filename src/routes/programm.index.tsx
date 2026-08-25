@@ -160,66 +160,68 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="archiv-titel">
-        <p id="archiv-titel" className="eyebrow">
-          Archiv
-        </p>
-        <button
-          type="button"
-          onClick={() => setArchivOffen((v) => !v)}
-          aria-expanded={archivOffen}
-          className="mt-4 flex w-full items-baseline justify-between gap-4 text-left"
-        >
-          <h2 className="display-md">Letzte Termine</h2>
-          <span className="eyebrow shrink-0">
-            {archivOffen ? "Schließen" : `${archiv.length} Termine`}
-          </span>
-        </button>
-        {archivOffen && (
-          <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-            {archiv.map((e) => (
-              <EventCard key={e.slug} event={e} />
-            ))}
-          </div>
-        )}
-
-        <div className="mt-10 rule-t pt-6">
+      <section className="bleed bg-[var(--aed-hover)]" aria-labelledby="archiv-titel">
+        <div className="shell py-14 md:py-20">
+          <p id="archiv-titel" className="eyebrow-muted">
+            Archiv
+          </p>
           <button
             type="button"
-            onClick={() => setReferentenOffen((v) => !v)}
-            aria-expanded={referentenOffen}
-            className="flex w-full items-baseline justify-between gap-4 text-left"
+            onClick={() => setArchivOffen((v) => !v)}
+            aria-expanded={archivOffen}
+            className="mt-4 flex w-full items-baseline justify-between gap-4 text-left"
           >
-            <h3 id="referenten-titel" className="display-md">
-              Referent:innen
-            </h3>
+            <h2 className="display-md">Letzte Termine</h2>
             <span className="eyebrow shrink-0">
-              {referentenOffen ? "Schließen" : `${referenten.length} Personen`}
+              {archivOffen ? "Schließen" : `${archiv.length} Termine`}
             </span>
           </button>
-          {referentenOffen && (
-            <>
-              <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
-                {referentenSortiert.map((r) => (
-                  <li key={`${r.name}-${r.org}`} className="border-b border-line pb-2">
-                    <span className="block text-base">{r.name}</span>
-                    <span className="meta block">
-                      {r.url ? (
-                        <a href={r.url} target="_blank" rel="noreferrer" className="link-underline">
-                          {r.org}
-                        </a>
-                      ) : (
-                        r.org
-                      )}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/referenten" className="eyebrow link-underline mt-8 inline-block">
-                Zur vollständigen Referent:innen-Seite
-              </Link>
-            </>
+          {archivOffen && (
+            <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+              {archiv.map((e) => (
+                <EventCard key={e.slug} event={e} />
+              ))}
+            </div>
           )}
+
+          <div className="mt-10 pt-6">
+            <button
+              type="button"
+              onClick={() => setReferentenOffen((v) => !v)}
+              aria-expanded={referentenOffen}
+              className="flex w-full items-baseline justify-between gap-4 text-left"
+            >
+              <h3 id="referenten-titel" className="display-md">
+                Referent:innen
+              </h3>
+              <span className="eyebrow shrink-0">
+                {referentenOffen ? "Schließen" : `${referenten.length} Personen`}
+              </span>
+            </button>
+            {referentenOffen && (
+              <>
+                <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {referentenSortiert.map((r) => (
+                    <li key={`${r.name}-${r.org}`} className="pb-2">
+                      <span className="block text-base">{r.name}</span>
+                      <span className="meta block">
+                        {r.url ? (
+                          <a href={r.url} target="_blank" rel="noreferrer" className="link-underline">
+                            {r.org}
+                          </a>
+                        ) : (
+                          r.org
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/referenten" className="eyebrow link-underline mt-8 inline-block">
+                  Zur vollständigen Referent:innen-Seite
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </section>
 
