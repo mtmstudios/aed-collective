@@ -68,7 +68,7 @@ function ProgrammPage() {
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
               <p className="eyebrow text-white/85">Programm</p>
-              <h1 id="programm-titel-head" className="display-xl mt-4 text-white">
+              <h1 id="programm-titel-head" className="display-lg mt-4 text-white">
                 Wann sehen wir uns?
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
