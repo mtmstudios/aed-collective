@@ -104,6 +104,9 @@
   --brand: oklch(0.775 0.207 320.5);
   --brand-foreground: oklch(0 0 0);
   --brand-deep: oklch(0.5 0.22 322);
+  /* Festes aed-Pink für CTA-Buttons – wird vom neuland-Theme NICHT überschrieben */
+  --aed-pink: oklch(0.775 0.207 320.5);
+  --aed-pink-deep: oklch(0.5 0.22 322);
   --chart-1: oklch(0.775 0.207 320.5);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
