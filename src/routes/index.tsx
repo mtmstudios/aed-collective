@@ -145,17 +145,17 @@ function Index() {
       </section>
 
       {/* Manifest: Zitat als Doppelseite */}
-      <section className="bleed bg-muted" aria-labelledby="mission-titel">
+      <section className="bleed bg-brand text-brand-foreground" aria-labelledby="mission-titel">
         <div className="shell grid gap-10 py-14 md:grid-cols-12 md:py-20">
-          <h2 id="mission-titel" className="eyebrow-muted md:col-span-3">
+          <h2 id="mission-titel" className="eyebrow md:col-span-3">
             Der Verein
           </h2>
           <div className="md:col-span-9">
             <blockquote className="display-md max-w-4xl">
               „Eine unglaubliche Menge Kreativität stammt aus Stuttgart, aber das weiß man nicht
-              unbedingt, weil niemand darüber spricht.“
+              unbedingt, weil niemand darüber spricht."
             </blockquote>
-            <p className="prose-editorial mt-8 max-w-2xl text-muted-foreground">
+            <p className="prose-editorial mt-8 max-w-2xl">
               Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
               die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
               über Multimedia und Engineering bis zur Architektur – zu fördern und der Öffentlichkeit
