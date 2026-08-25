@@ -92,8 +92,8 @@ function NeulandIndex() {
       <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="gewinner-2025">
         <SectionTitle
           id="gewinner-2025"
-          titel="Die 1. Preise 2025"
-          kicker="Preisträger:innen"
+          titel="Die 1. Preise"
+          kicker="Preisträger:innen 2025"
           href="/neuland/gewinner"
           linkText="Alle Jahrgänge"
         />
@@ -109,27 +109,29 @@ function NeulandIndex() {
           <h2 id="archiv-neuland" className="eyebrow-muted">
             Archiv
           </h2>
-          <p className="display-lg mt-4">Preisträger:innen aller Jahrgänge</p>
-          <ul className="mt-10 border-t border-line">
-            {jahrgaenge.map((jahr) => {
-              const anzahl = projekte.filter((p) => p.jahr === jahr).length;
-              return (
-                <li key={jahr}>
-                  <Link
-                    to="/neuland/gewinner/$jahr"
-                    params={{ jahr }}
-                    className="group flex flex-wrap items-baseline justify-between gap-4 border-b border-line py-8 transition-colors hover:bg-background"
-                  >
-                    <span className="display-lg group-hover:text-[var(--brand-deep)]">{jahr}</span>
-                    <span className="text-sm text-muted-foreground">
-                      {anzahl} ausgezeichnete {anzahl === 1 ? "Arbeit" : "Arbeiten"}
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
+          <p className="display-md mt-4">Preisträger:innen vergangener Jahrgänge</p>
+          <ul className="mt-8 border-t border-line">
+            {jahrgaenge
+              .filter((jahr) => jahr !== "2025")
+              .map((jahr) => {
+                const anzahl = projekte.filter((p) => p.jahr === jahr).length;
+                return (
+                  <li key={jahr}>
+                    <Link
+                      to="/neuland/gewinner/$jahr"
+                      params={{ jahr }}
+                      className="group flex flex-wrap items-baseline justify-between gap-4 border-b border-line py-6 transition-colors hover:bg-background"
+                    >
+                      <span className="display-sm group-hover:text-[var(--brand-deep)]">{jahr}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {anzahl} ausgezeichnete {anzahl === 1 ? "Arbeit" : "Arbeiten"}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
           </ul>
-          <div className="mt-10">
+          <div className="mt-8">
             <Link to="/neuland/gewinner" className="btn-outline">
               Alle Jahrgänge
             </Link>
