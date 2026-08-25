@@ -58,7 +58,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell topic-rule bg-brand py-16 text-brand-foreground" aria-labelledby="geschichte">
+      <section className="shell bg-brand py-16 text-brand-foreground" aria-labelledby="geschichte">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="geschichte" className="eyebrow md:col-span-3">
             Geschichte
