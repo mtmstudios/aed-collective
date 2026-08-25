@@ -55,11 +55,14 @@ function WettbewerbPage() {
         <h2 id="kategorien" className="display-md">
           Fünf Kategorien
         </h2>
-        <ul className="mt-8 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid grid-cols-1 border-l border-t border-line sm:grid-cols-2 lg:grid-cols-3">
           {kategorien.map((k) => (
-            <li key={k.key} className="bg-background p-6">
+            <li
+              key={k.key}
+              className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-brand/50 p-6 text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+            >
               <h3 className="font-display text-xl">{k.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{k.text}</p>
+              <p className="mt-3 text-sm leading-relaxed text-brand-foreground/80">{k.text}</p>
             </li>
           ))}
         </ul>
