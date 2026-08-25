@@ -76,10 +76,10 @@ function Index() {
                 Seit 2004 bringt der aed in Stuttgart zusammen, was sonst getrennt entwirft.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/programm" className="btn-solid !bg-white !text-black hover:!bg-[var(--brand)]">
+                <Link to="/programm" className="btn-solid">
                   Programm
                 </Link>
-                <Link to="/mitglied-werden" className="btn-outline !border-white !text-white hover:!bg-white hover:!text-black">
+                <Link to="/mitglied-werden" className="btn-outline">
                   Mitglied werden
                 </Link>
               </div>
