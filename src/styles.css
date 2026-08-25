@@ -439,8 +439,6 @@
 /* Farbig abgesetztes Band (aus dem Lovable-Stand uebernommen) */
 @utility band-muted {
   background: oklch(0.968 0 0);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 /* Laufband (Mitglieder-Slider): zwei Spuren, gegenlaeufig */
