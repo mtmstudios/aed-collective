@@ -89,7 +89,7 @@ function Index() {
       </section>
 
       {/* Aufmacher-Raster: ein großer Termin, zwei begleitende */}
-      <section className="shell pt-16 md:pt-24 pb-14 md:pb-20" aria-labelledby="programm-titel">
+      <section className="shell py-14 md:py-20" aria-labelledby="programm-titel">
         <SectionTitle
           id="programm-titel"
           titel="Im Programm"
@@ -122,7 +122,7 @@ function Index() {
 
       {/* Die Köpfe des Vereins als Laufband */}
       <section className="bleed topic-rule" aria-labelledby="mitglieder-titel">
-        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-12 pb-6">
+        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-14 md:pt-20 pb-6">
           <div>
             <p className="eyebrow-muted">Die Köpfe hinter dem aed</p>
             <h2 id="mitglieder-titel" className="display-md mt-2">
@@ -134,7 +134,7 @@ function Index() {
           </Link>
         </div>
         <MitgliederSlider items={koepfe} />
-        <div className="shell py-6">
+        <div className="shell pt-6 pb-14 md:pb-20">
           <p className="meta">
             Getragen von rund 80 Fördermitgliedern und über 400 Personenmitgliedern.{" "}
             <Link to="/mitglieder" className="link-underline">
