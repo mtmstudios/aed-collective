@@ -41,7 +41,7 @@ function WettbewerbPage() {
               nutzerfreundlich ist und höchsten ästhetischen Anforderungen entspricht. Im
               Mittelpunkt stehen immer der Mensch und der gesellschaftliche Nutzen des Entwurfs.
             </p>
-            <p className="text-base text-muted-foreground">
+            <p className="text-base text-foreground">
               Eine unabhängige Jury aus rund 20 Fachleuten entscheidet über die Vergabe. Jede
               prämierte Arbeit wird mit Jurystatement auf einer eigenen, dauerhaft erreichbaren
               Projektseite vorgestellt – Studierende können ihre Auszeichnung so direkt in
@@ -62,7 +62,7 @@ function WettbewerbPage() {
               className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-[var(--aed-pink)]/50 p-6 text-[var(--aed-pink-foreground)] transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
             >
               <h3 className="font-display text-xl">{k.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-brand-foreground/80">{k.text}</p>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/80">{k.text}</p>
             </li>
           ))}
         </ul>
@@ -75,7 +75,7 @@ function WettbewerbPage() {
         <ol className="mt-8 grid gap-x-10 gap-y-3 md:grid-cols-2">
           {kriterien.map((k, i) => (
             <li key={k} className="flex gap-4 border-b border-line py-3">
-              <span className="font-display text-sm" style={{ color: "var(--brand-deep)" }}>
+              <span className="font-display text-sm" style={{ color: "var(--ink)" }}>
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span>{k}</span>
@@ -91,7 +91,7 @@ function WettbewerbPage() {
         <ul className="mt-8 rule-t">
           {termine.map((t) => (
             <li key={t.datum} className="flex flex-wrap gap-x-8 gap-y-1 border-b border-line py-4">
-              <span className="w-48 font-display" style={{ color: "var(--brand-deep)" }}>
+              <span className="w-48 font-display" style={{ color: "var(--ink)" }}>
                 {t.datum}
               </span>
               <span>{t.text}</span>
@@ -108,10 +108,10 @@ function WettbewerbPage() {
           {preise.map((p) => (
             <li key={p.platz} className="border border-line bg-card p-6">
               <h3 className="font-display text-lg">{p.platz}</h3>
-              <p className="mt-2 font-display text-3xl" style={{ color: "var(--brand-deep)" }}>
+              <p className="mt-2 font-display text-3xl" style={{ color: "var(--ink)" }}>
                 {p.dotierung}
               </p>
-              <p className="mt-2 text-sm text-muted-foreground">{p.info}</p>
+              <p className="mt-2 text-sm text-foreground">{p.info}</p>
             </li>
           ))}
         </ul>
@@ -121,12 +121,12 @@ function WettbewerbPage() {
         <h2 id="foerderer" className="display-md">
           Förderer
         </h2>
-        <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">{karlSchlechtText}</p>
+        <p className="mt-6 max-w-3xl leading-relaxed text-foreground">{karlSchlechtText}</p>
         <ul className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {sponsoren.map((s) => (
             <li key={s.name} className="bg-background p-6">
               <span className="block font-display text-lg">{s.name}</span>
-              <span className="mt-1 block text-sm text-muted-foreground">{s.rolle}</span>
+              <span className="mt-1 block text-sm text-foreground">{s.rolle}</span>
             </li>
           ))}
         </ul>
