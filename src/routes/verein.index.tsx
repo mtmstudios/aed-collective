@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, vorstand } from "@/data/site";
+import { eventBilder } from "@/data/bilder";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
-import { PageHeader } from "@/components/ui-bits";
+import { CoverSlider } from "@/components/cover-slider";
 import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
 
 export const Route = createFileRoute("/verein/")({
@@ -22,15 +23,38 @@ export const Route = createFileRoute("/verein/")({
   component: VereinPage,
 });
 
+const heroBilder = Object.values(eventBilder);
+
 function VereinPage() {
   return (
     <>
-      <PageHeader
-        titel="Veranstaltungen. Austausch. Förderung."
-        subtitle="AED e.V."
-        size="xl"
-        intro="Der aed e.V. ist der Verein für Architecture, Engineering und Design in Stuttgart. Wir verbinden Disziplinen, die gemeinsam die gebaute und gestaltete Umwelt prägen."
-      />
+      <section className="bleed relative" aria-labelledby="verein-titel-head">
+        <div className="relative h-[clamp(420px,62vh,760px)] w-full overflow-hidden bg-muted md:h-[clamp(520px,78vh,860px)]">
+          <CoverSlider
+            bilder={heroBilder}
+            alt="Impressionen von Veranstaltungen des aed e.V. in Stuttgart"
+            className="h-full w-full"
+            itemClassName="w-full"
+            zufall={false}
+            tempo={0.9}
+            hoverFaktor={6}
+          />
+
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="shell pb-10 md:pb-16">
+              <p className="eyebrow text-white/85">AED e.V.</p>
+              <h1 id="verein-titel-head" className="display-lg mt-4 max-w-3xl text-white">
+                Veranstaltungen. Austausch. Förderung.
+              </h1>
+              <p className="lead mt-5 max-w-2xl text-white/90">
+                Der aed e.V. ist der Verein für Architecture, Engineering und Design in Stuttgart.
+                Wir verbinden Disziplinen, die gemeinsam die gebaute und gestaltete Umwelt prägen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="shell topic-rule py-16" aria-labelledby="mission">
         <div className="grid gap-10 md:grid-cols-12">
