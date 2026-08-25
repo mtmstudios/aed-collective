@@ -179,7 +179,7 @@ function NeulandIndex() {
                       params={{ jahr }}
                       className="group flex flex-wrap items-baseline justify-between gap-4 rounded-full px-6 py-4 transition-colors hover:bg-white"
                     >
-                      <span className="display-sm group-hover:text-[var(--brand-deep)]">{jahr}</span>
+                      <span className="display-sm">{jahr}</span>
                       <span className="text-sm text-muted-foreground">
                         {anzahl} ausgezeichnete {anzahl === 1 ? "Arbeit" : "Arbeiten"}
                       </span>
@@ -189,7 +189,7 @@ function NeulandIndex() {
               })}
           </ul>
           <div className="mt-8">
-            <Link to="/neuland/gewinner" className="btn-outline">
+            <Link to="/neuland/gewinner" className="btn-outline btn-archiv-hover">
               Alle Jahrgänge
             </Link>
           </div>
