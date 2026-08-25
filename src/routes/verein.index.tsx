@@ -29,7 +29,7 @@ function VereinPage() {
   return (
     <>
       <section className="bleed relative" aria-labelledby="verein-titel-head">
-        <div className="relative h-[clamp(420px,62vh,760px)] w-full overflow-hidden bg-muted md:h-[clamp(520px,78vh,860px)]">
+        <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
           <CoverSlider
             bilder={heroBilder}
             alt="Impressionen von Veranstaltungen des aed e.V. in Stuttgart"
