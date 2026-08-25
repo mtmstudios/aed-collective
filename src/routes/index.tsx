@@ -112,7 +112,7 @@ function Index() {
         </div>
 
         {reihe.length > 0 && (
-          <div className="mt-14 grid gap-x-8 gap-y-12 rule-t pt-10 md:grid-cols-3">
+          <div className="mt-10 grid gap-x-8 gap-y-12 rule-t pt-10 md:grid-cols-3">
             {reihe.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
@@ -122,7 +122,7 @@ function Index() {
 
       {/* Die Köpfe des Vereins als Laufband */}
       <section className="bleed topic-rule" aria-labelledby="mitglieder-titel">
-        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-14 md:pt-20 pb-6">
+        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-14 pb-10 md:pt-20">
           <div>
             <p className="eyebrow-muted">Die Köpfe hinter dem aed</p>
             <h2 id="mitglieder-titel" className="display-md mt-2">
@@ -134,7 +134,7 @@ function Index() {
           </Link>
         </div>
         <MitgliederSlider items={koepfe} />
-        <div className="shell pt-6 pb-14 md:pb-20">
+        <div className="shell pt-10 pb-14 md:pb-20">
           <p className="meta">
             Getragen von rund 80 Fördermitgliedern und über 400 Personenmitgliedern.{" "}
             <Link to="/mitglieder" className="link-underline">
@@ -145,8 +145,8 @@ function Index() {
       </section>
 
       {/* Manifest: Zitat als Doppelseite */}
-      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="mission-titel">
-        <div className="shell grid gap-10 py-16 md:grid-cols-12 md:py-24">
+      <section className="bleed bg-muted" aria-labelledby="mission-titel">
+        <div className="shell grid gap-10 py-14 md:grid-cols-12 md:py-20">
           <h2 id="mission-titel" className="eyebrow-muted md:col-span-3">
             Der Verein
           </h2>
@@ -176,6 +176,7 @@ function Index() {
           kicker="Nachwuchswettbewerb"
           href="/neuland/gewinner"
           linkText="Alle Gewinner:innen"
+          noRule
         />
 
         <p className="lead mt-8 max-w-3xl">
