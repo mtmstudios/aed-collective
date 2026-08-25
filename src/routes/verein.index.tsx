@@ -44,7 +44,7 @@ function VereinPage() {
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">AED e.V.</p>
-              <h1 id="verein-titel-head" className="display-lg mt-4 max-w-3xl text-white">
+              <h1 id="verein-titel-head" className="display-lg mt-4 whitespace-nowrap text-white">
                 Veranstalten. Austauschen. Fördern.
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
@@ -177,7 +177,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell topic-rule py-16 band-muted" aria-labelledby="beirat-preview">
+      <section className="shell py-16" aria-labelledby="beirat-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="beirat-preview" className="display-lg max-w-4xl">
@@ -224,7 +224,7 @@ function VereinPage() {
       </section>
 
 
-      <section className="shell py-16" aria-labelledby="foerdermitglieder-preview">
+      <section className="shell topic-rule py-16" aria-labelledby="foerdermitglieder-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="foerdermitglieder-preview" className="display-lg max-w-4xl">
