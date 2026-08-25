@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { jahrgaenge, kennzahlen, projekte, wettbewerbStatus } from "@/data/neuland";
+import { jahrgaenge, jury2025, kennzahlen, projekte, wettbewerbStatus } from "@/data/neuland";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
+import { PersonCard } from "@/components/person-card";
 import { SectionTitle } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/neuland/")({
@@ -101,6 +102,26 @@ function NeulandIndex() {
           {highlights.map((p) => (
             <ProjektCard key={p.slug} projekt={p} />
           ))}
+        </div>
+      </section>
+
+      <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="jury-2025">
+        <SectionTitle
+          id="jury-2025"
+          titel="Jury 2025"
+          kicker="Unabhängige Fachjury"
+          href="/neuland/jury"
+          linkText="Ganze Jury ansehen"
+        />
+        <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {jury2025.slice(0, 8).map((p) => (
+            <PersonCard key={p.name} person={p} />
+          ))}
+        </div>
+        <div className="mt-10">
+          <Link to="/neuland/jury" className="btn-outline">
+            Alle 21 Juroren:innen ansehen
+          </Link>
         </div>
       </section>
 
