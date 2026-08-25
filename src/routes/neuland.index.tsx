@@ -139,10 +139,10 @@ function NeulandIndex() {
           href="/neuland/jury"
           linkText="Ganze Jury ansehen"
         />
-        <ul className="mt-10 flex gap-4 overflow-x-auto pb-2">
+        <ul className="mt-10 flex gap-5 overflow-x-auto pb-2">
           {jury2025.map((p) => (
-            <li key={p.name} className="w-28 shrink-0 sm:w-32">
-              <PersonCard person={p} />
+            <li key={p.name} className="w-36 shrink-0 sm:w-44">
+              <JuryKarte person={p} />
             </li>
           ))}
         </ul>
