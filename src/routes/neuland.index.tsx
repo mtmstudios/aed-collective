@@ -153,7 +153,7 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="archiv-neuland">
+      <section className="bleed bg-[oklch(0.968_0_0)]" aria-labelledby="archiv-neuland">
         <div className="shell py-14 md:py-20">
           <h2 id="archiv-neuland" className="eyebrow-muted">
             Archiv
