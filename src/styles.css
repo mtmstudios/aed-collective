@@ -480,3 +480,11 @@
     animation: none;
   }
 }
+
+/* Keine Doppelstriche: innerhalb eines Themas mit durchgezogener Themenlinie
+   entfaellt die zusaetzliche Linie ueber der Ressort-Ueberschrift. */
+.topic-rule > .section-rule:first-child,
+.topic-rule > *:first-child > .section-rule:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
