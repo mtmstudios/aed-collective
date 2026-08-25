@@ -315,8 +315,25 @@
   font-style: italic;
 }
 
+/* Linie innerhalb eines Themas: dunkel, schriftbündig (Satzspiegel) */
 @utility rule-t {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--ink);
+}
+
+/* Neues Thema: dunkle Linie über die komplette Bildschirmbreite */
+@utility topic-rule {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    border-top: 1px solid var(--ink);
+    pointer-events: none;
+  }
 }
 
 /* Ressort-Überschrift mit durchgehender Linie – Vogue-Sektionsmarke */
