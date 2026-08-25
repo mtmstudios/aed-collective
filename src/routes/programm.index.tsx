@@ -130,6 +130,30 @@ function ProgrammPage() {
         )}
       </section>
 
+      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="jung-hungrig">
+        <div className="shell grid gap-8 py-14 md:grid-cols-12 md:py-20">
+          <h2 id="jung-hungrig" className="eyebrow-muted md:col-span-3">
+            Jung & hungrig
+          </h2>
+          <div className="md:col-span-9 max-w-2xl">
+            <p className="prose-editorial">
+              Mit der Reihe „jung & hungrig“ besuchen wir regelmäßig aufstrebende junge Studios –
+              Vorträge, Führungen, Studiobesuche und Feste, bei denen du genau die Leute triffst, die
+              deine Arbeit interessieren. Ein Format des aed e.V. für die nächste Generation an
+              Gestalter:innen.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/mitglied-werden" className="btn-outline">
+                Mitglied werden
+              </Link>
+              <Link to="/neuland" className="btn-outline">
+                Zum Wettbewerb neuland
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="archiv-titel">
         <p id="archiv-titel" className="eyebrow">
           Archiv
@@ -190,30 +214,6 @@ function ProgrammPage() {
               </Link>
             </>
           )}
-        </div>
-      </section>
-
-      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="jung-hungrig">
-        <div className="shell grid gap-8 py-14 md:grid-cols-12 md:py-20">
-          <h2 id="jung-hungrig" className="eyebrow-muted md:col-span-3">
-            Jung & hungrig
-          </h2>
-          <div className="md:col-span-9 max-w-2xl">
-            <p className="prose-editorial">
-              Mit der Reihe „jung & hungrig“ besuchen wir regelmäßig aufstrebende junge Studios –
-              Vorträge, Führungen, Studiobesuche und Feste, bei denen du genau die Leute triffst, die
-              deine Arbeit interessieren. Ein Format des aed e.V. für die nächste Generation an
-              Gestalter:innen.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/mitglied-werden" className="btn-outline">
-                Mitglied werden
-              </Link>
-              <Link to="/neuland" className="btn-outline">
-                Zum Wettbewerb neuland
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
