@@ -4,6 +4,7 @@ import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { SectionTitle } from "@/components/ui-bits";
+import { NeulandSubnav } from "@/routes/neuland";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
