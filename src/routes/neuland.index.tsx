@@ -1,8 +1,34 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { jahrgaenge, jury2025, kennzahlen, projekte, wettbewerbStatus } from "@/data/neuland";
+import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
-import { PersonCard } from "@/components/person-card";
+import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { SectionTitle } from "@/components/ui-bits";
+
+function JuryKarte({ person }: { person: Person }) {
+  const bild = personenBild(person.name);
+  return (
+    <PersonDialog person={person}>
+      <article className="group w-full cursor-pointer text-left" role="button" tabIndex={0}>
+        <div className="img-zoom aspect-square bg-muted">
+          {bild ? (
+            <img
+              src={bild}
+              alt={`Porträt ${person.name}`}
+              loading="lazy"
+              decoding="async"
+              className="grayscale-hover h-full w-full object-cover"
+            />
+          ) : (
+            <div className="h-full w-full bg-muted" aria-hidden="true" />
+          )}
+        </div>
+        <h3 className="mt-3 line-clamp-2 text-sm font-medium leading-snug">{person.name}</h3>
+        <p className="meta mt-1 line-clamp-2 leading-snug">{person.rolle}</p>
+      </article>
+    </PersonDialog>
+  );
+}
 
 export const Route = createFileRoute("/neuland/")({
   head: () => ({
@@ -113,10 +139,10 @@ function NeulandIndex() {
           href="/neuland/jury"
           linkText="Ganze Jury ansehen"
         />
-        <ul className="mt-10 flex gap-4 overflow-x-auto pb-2">
+        <ul className="mt-10 flex gap-5 overflow-x-auto pb-2">
           {jury2025.map((p) => (
-            <li key={p.name} className="w-28 shrink-0 sm:w-32">
-              <PersonCard person={p} />
+            <li key={p.name} className="w-36 shrink-0 sm:w-44">
+              <JuryKarte person={p} />
             </li>
           ))}
         </ul>
