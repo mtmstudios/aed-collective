@@ -111,6 +111,9 @@
   --aed-pink-foreground: oklch(0 0 0);
   /* Outline-Button-Schrift: Schwarz auf hellem, Pink auf dunklem Hintergrund */
   --aed-outline-fg: oklch(0 0 0);
+  /* Hover-Zustand auf Pink-Flächen: 100 % RGB-Gelb (#FFFF00) */
+  --aed-hover: oklch(0.965 0.211 110);
+  --aed-hover-foreground: oklch(0 0 0);
   --chart-1: oklch(0.775 0.207 320.5);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
@@ -390,8 +393,8 @@
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--aed-pink-deep);
-    color: var(--aed-pink-foreground);
+    background: var(--aed-hover);
+    color: var(--aed-hover-foreground);
   }
 }
 
@@ -413,8 +416,8 @@
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--aed-pink);
-    color: var(--aed-pink-foreground);
+    background: var(--aed-hover);
+    color: var(--aed-hover-foreground);
   }
 }
 

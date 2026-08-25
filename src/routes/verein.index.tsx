@@ -151,7 +151,7 @@ function VereinPage() {
                   ) : (
                     <div
                       aria-hidden="true"
-                      className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                      className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-[var(--aed-hover)] group-hover:text-[var(--aed-hover-foreground)]"
                     >
                       {isEhren ? "WS" : initialen(person.name)}
                     </div>
@@ -202,7 +202,7 @@ function VereinPage() {
                   ) : (
                     <div
                       aria-hidden="true"
-                      className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-brand group-hover:text-brand-foreground"
+                      className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-[var(--aed-hover)] group-hover:text-[var(--aed-hover-foreground)]"
                     >
                       {initialen(person.name)}
                     </div>
@@ -240,7 +240,7 @@ function VereinPage() {
             return (
               <li
                 key={m.name}
-                className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-brand"
+                className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
               >
                 {m.url ? (
                   <a

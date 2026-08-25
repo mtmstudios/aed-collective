@@ -11,7 +11,7 @@ const nav = [
 
 const navDanach = [{ to: "/kontakt", label: "Kontakt" }] as const;
 
-const linkKlasse = "font-sans text-base text-brand-foreground transition-colors hover:text-background";
+const linkKlasse = "font-sans text-base text-brand-foreground transition-colors hover:text-[var(--aed-hover)]";
 const aktiv = { className: "underline decoration-1 underline-offset-[6px]" };
 
 export function SiteHeader() {
@@ -26,7 +26,7 @@ export function SiteHeader() {
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex min-h-11 min-w-11 items-center justify-center text-brand-foreground transition-colors hover:text-background lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center text-brand-foreground transition-colors hover:text-[var(--aed-hover)] lg:hidden"
         >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
@@ -82,7 +82,7 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="border-b border-ink py-4 font-sans text-base text-brand-foreground transition-colors hover:text-background"
+                className="border-b border-ink py-4 font-sans text-base text-brand-foreground transition-colors hover:text-[var(--aed-hover)]"
               >
                 {item.label}
               </Link>
