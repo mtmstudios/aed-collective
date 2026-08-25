@@ -45,7 +45,7 @@ function VereinPage() {
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">AED e.V.</p>
               <h1 id="verein-titel-head" className="display-lg mt-4 max-w-3xl text-white">
-                Veranstaltungen. Austausch. Förderung.
+                Veranstalten. Austauschen. Fördern.
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
                 Der aed e.V. ist der Verein für Architecture, Engineering und Design in Stuttgart.
@@ -125,7 +125,7 @@ function VereinPage() {
       </section>
 
 
-      <section className="shell topic-rule py-16" aria-labelledby="vorstand-preview">
+      <section className="shell py-16" aria-labelledby="vorstand-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="vorstand-preview" className="display-lg max-w-4xl">
