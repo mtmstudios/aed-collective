@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Check } from "lucide-react";
-import { PageHeader } from "@/components/ui-bits";
+import { eventBilder } from "@/data/bilder";
+import { CoverSlider } from "@/components/cover-slider";
 
 
 export const Route = createFileRoute("/mitglied-werden")({
@@ -32,6 +33,7 @@ const nutzen = [
 ];
 
 const beitrittsPdf = "https://www.aed-stuttgart.de/app/download/8616515663/aed_Mitglied+werden+%282025%29.pdf";
+const heroBilder = Object.values(eventBilder).reverse();
 
 const beitraege = [
   {
@@ -58,12 +60,33 @@ function MitgliedWerdenPage() {
 
   return (
     <>
-      <PageHeader
-        eyebrow="Mitgliedschaft"
-        titel="Sei ein Teil des Netzwerks"
-        size="xl"
-        intro="Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares Netzwerk und die Förderung des gestalterischen Nachwuchses."
-      />
+      <section className="bleed relative" aria-labelledby="mitglied-titel-head">
+        <div className="relative h-[clamp(420px,62vh,760px)] w-full overflow-hidden bg-muted md:h-[clamp(520px,78vh,860px)]">
+          <CoverSlider
+            bilder={heroBilder}
+            alt="Impressionen von Veranstaltungen und Mitgliedern des aed e.V. in Stuttgart"
+            className="h-full w-full"
+            itemClassName="w-full"
+            zufall={false}
+            tempo={0.9}
+            hoverFaktor={6}
+          />
+
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="shell pb-10 md:pb-16">
+              <p className="eyebrow text-white/85">Mitgliedschaft</p>
+              <h1 id="mitglied-titel-head" className="display-lg mt-4 max-w-3xl text-white">
+                Sei ein Teil des Netzwerks
+              </h1>
+              <p className="lead mt-5 max-w-2xl text-white/90">
+                Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares Netzwerk
+                und die Förderung des gestalterischen Nachwuchses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="shell rule-t py-12" aria-labelledby="nutzen">
         <h2 id="nutzen" className="display-md">
