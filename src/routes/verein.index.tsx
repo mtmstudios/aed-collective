@@ -81,7 +81,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell topic-rule py-16" aria-labelledby="award">
+      <section className="shell py-16" aria-labelledby="award">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="award" className="eyebrow md:col-span-3">
             Auszeichnung
@@ -196,7 +196,7 @@ function VereinPage() {
       </section>
 
 
-      <section className="shell topic-rule py-16" aria-labelledby="foerdermitglieder-preview">
+      <section className="shell py-16" aria-labelledby="foerdermitglieder-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="foerdermitglieder-preview" className="display-lg max-w-4xl">
