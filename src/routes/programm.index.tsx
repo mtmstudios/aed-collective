@@ -112,9 +112,13 @@ function ProgrammPage() {
           <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             <article className="group">
               <div className="img-zoom aspect-3/2 bg-muted">
-                <div className="flex h-full w-full items-center justify-center bg-muted">
-                  <span className="eyebrow text-muted-foreground">Platzhalter</span>
-                </div>
+                <img
+                  src={coverfotos[coverfotos.length - 1]}
+                  alt="Aktuelles Programmheft des aed e.V."
+                  loading="lazy"
+                  decoding="async"
+                  className="grayscale-hover h-full w-full object-cover"
+                />
               </div>
               <p className="eyebrow mt-4">Download</p>
               <h3 className="display-sm mt-2">Aktueller Flyer</h3>
@@ -127,6 +131,27 @@ function ProgrammPage() {
             {kommend.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
+            <article className="group">
+              <Link to="/mitglied-werden" className="block">
+                <div className="img-zoom aspect-3/2 bg-muted">
+                  <img
+                    src={eventBilder["jung-und-hungrig-haus-otto"]}
+                    alt="jung & hungrig – Studio-Besuch"
+                    loading="lazy"
+                    decoding="async"
+                    className="grayscale-hover h-full w-full object-cover"
+                  />
+                </div>
+                <p className="eyebrow mt-4">jung & hungrig</p>
+                <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>
+                <p className="mt-3 text-base leading-relaxed">
+                  Mit der Reihe „jung & hungrig“ besuchen wir regelmäßig aufstrebende junge
+                  Studios – Vorträge, Führungen und Studiobesuche, bei denen du genau die Leute
+                  triffst, die deine Arbeit interessieren.
+                </p>
+                <span className="btn-solid mt-5 inline-block">Mitglied werden</span>
+              </Link>
+            </article>
           </div>
         )}
       </section>
