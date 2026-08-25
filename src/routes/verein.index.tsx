@@ -58,7 +58,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell topic-rule py-16 band-muted" aria-labelledby="geschichte">
+      <section className="shell topic-rule bg-brand py-16 text-brand-foreground" aria-labelledby="geschichte">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="geschichte" className="eyebrow md:col-span-3">
             Geschichte
@@ -212,7 +212,7 @@ function VereinPage() {
           {foerdermitglieder.map((m) => (
             <li
               key={m.name}
-              className="border border-line bg-muted p-4 text-sm leading-snug transition-colors duration-300 hover:bg-brand hover:text-brand-foreground"
+              className="border border-line bg-brand p-4 text-sm leading-snug text-brand-foreground transition-colors duration-300 hover:bg-[var(--brand-deep)]"
             >
               {m.url ? (
                 <a href={m.url} target="_blank" rel="noopener noreferrer" className="block">

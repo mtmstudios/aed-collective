@@ -61,7 +61,7 @@ export function Newsletter() {
           type="submit"
           className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] rounded-full border border-brand bg-brand px-7 font-display text-[0.9375rem] font-medium text-brand-foreground transition-colors hover:bg-transparent hover:text-brand w-full sm:w-auto"
         >
-          Jetzt anmelden
+          JETZT ANMELDEN
         </button>
       </div>
     </form>

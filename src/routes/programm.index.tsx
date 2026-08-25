@@ -82,7 +82,7 @@ function ProgrammPage() {
 
 
       <section className="shell" aria-label="Filter nach Format">
-        <div className="flex flex-wrap items-center gap-x-7 gap-y-3 border-b border-line py-5">
+        <div className="flex flex-wrap items-center gap-x-7 gap-y-3 py-5">
           {["Alle", ...eventFormate].map((f) => (
             <button
               key={f}
@@ -101,7 +101,7 @@ function ProgrammPage() {
         </div>
       </section>
 
-      <section className="shell py-12 md:py-16" aria-labelledby="kommend-titel">
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="kommend-titel">
         <SectionTitle id="kommend-titel" titel="Kommende Termine" />
         {kommend.length === 0 ? (
           <p className="lead mt-8 text-muted-foreground">
