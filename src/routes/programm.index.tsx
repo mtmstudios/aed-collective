@@ -145,14 +145,16 @@ function ProgrammPage() {
                 <p className="eyebrow mt-4">jung & hungrig</p>
                 <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>
                 <p className="mt-3 text-base leading-relaxed">
-                  Mit der Reihe „jung & hungrig“ besuchen wir regelmäßig aufstrebende junge
+                  Mit der Reihe „jung & hungrig" besuchen wir regelmäßig aufstrebende junge
                   Studios – Vorträge, Führungen und Studiobesuche, bei denen du genau die Leute
                   triffst, die deine Arbeit interessieren.
                 </p>
-                <span className="btn-solid mt-5 inline-block">Mitglied werden</span>
               </Link>
             </article>
           </div>
+          <Link to="/mitglied-werden" className="btn-solid mt-10">
+            Mitglied werden
+          </Link>
         )}
       </section>
 
