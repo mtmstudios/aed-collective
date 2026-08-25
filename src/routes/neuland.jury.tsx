@@ -39,7 +39,7 @@ function JuryPage() {
       </section>
 
       {juryImpressionen.length > 0 && (
-        <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="impressionen">
+        <section className="shell topic-rule py-12 md:py-16" aria-labelledby="impressionen">
           <SectionTitle id="impressionen" titel="Impressionen der Jurysitzung" kicker="2025" />
           <div className="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>figure]:mb-6 [&>figure]:break-inside-avoid">
             {juryImpressionen.map((b, i) => (

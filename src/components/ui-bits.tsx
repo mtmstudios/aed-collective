@@ -80,7 +80,7 @@ export function PageHeader({
   size?: "lg" | "xl";
 }) {
   return (
-    <header className="shell border-b border-line pt-12 pb-10 md:pt-20 md:pb-14">
+    <header className="shell pt-12 pb-10 md:pt-20 md:pb-14">
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <h1 className={`${size === "xl" ? "display-xl" : "display-lg"} mt-4 max-w-4xl`}>{titel}</h1>
       {subtitle && <p className="display-md mt-3 max-w-4xl text-muted-foreground">{subtitle}</p>}

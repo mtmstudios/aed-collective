@@ -28,7 +28,7 @@ export function MitgliederListe({ items }: { items: readonly Foerdermitglied[] }
     .sort((a, b) => sortSchluessel(a.name).localeCompare(sortSchluessel(b.name), "de"));
 
   return (
-    <ul className="grid border-t border-line sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid rule-t sm:grid-cols-2 lg:grid-cols-3">
       {eintraege.map((e) => {
         const inhalt = (
           <>

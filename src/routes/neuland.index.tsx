@@ -56,7 +56,7 @@ function NeulandIndex() {
   return (
     <>
       {/* Titelseite des Ressorts */}
-      <section className="bleed border-b border-line">
+      <section className="bleed">
         <div className="relative h-[clamp(400px,54vh,680px)] w-full overflow-hidden bg-muted md:h-[clamp(460px,66vh,760px)]">
           {titelbild && (
             <img
@@ -116,7 +116,7 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="gewinner-2025">
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="gewinner-2025">
         <SectionTitle
           id="gewinner-2025"
           titel="Die 1. Preise"
@@ -131,7 +131,7 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="jury-2025">
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="jury-2025">
         <SectionTitle
           id="jury-2025"
           titel="Jury 2025"
@@ -153,13 +153,13 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="bleed border-t border-line bg-[oklch(0.968_0_0)]" aria-labelledby="archiv-neuland">
+      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="archiv-neuland">
         <div className="shell py-14 md:py-20">
           <h2 id="archiv-neuland" className="eyebrow-muted">
             Archiv
           </h2>
           <p className="display-md mt-4">Preisträger:innen vergangener Jahrgänge</p>
-          <ul className="mt-8 border-t border-line">
+          <ul className="mt-8 rule-t">
             {jahrgaenge
               .filter((jahr) => jahr !== "2025")
               .map((jahr) => {

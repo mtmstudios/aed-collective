@@ -106,7 +106,7 @@ function EventDetail() {
           <p>{event.text}</p>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-3 border-t border-line pt-8">
+        <div className="mt-12 flex flex-wrap gap-3 rule-t pt-8">
           {event.anmeldung && (
             <a href={event.anmeldung} target="_blank" rel="noreferrer" className="btn-solid">
               Anmelden
@@ -118,7 +118,7 @@ function EventDetail() {
         </div>
       </div>
 
-      <nav className="shell border-t border-line py-10" aria-label="Zurück zum Programm">
+      <nav className="shell topic-rule py-10" aria-label="Zurück zum Programm">
         <Link to="/programm" className="eyebrow inline-flex items-center gap-2 link-underline">
           <ArrowLeft className="size-3.5" aria-hidden="true" /> Alle Termine
         </Link>

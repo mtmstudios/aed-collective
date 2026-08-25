@@ -51,7 +51,7 @@ function Index() {
   return (
     <>
       {/* Titelseite: randabfallender Cover-Slider mit Didone-Zeile */}
-      <section className="bleed relative border-b border-line" aria-labelledby="cover-titel">
+      <section className="bleed relative" aria-labelledby="cover-titel">
         <div className="relative h-[clamp(420px,62vh,760px)] w-full overflow-hidden bg-muted md:h-[clamp(520px,78vh,860px)]">
           <CoverSlider
             bilder={editorialBilder}
@@ -111,7 +111,7 @@ function Index() {
         </div>
 
         {reihe.length > 0 && (
-          <div className="mt-14 grid gap-x-8 gap-y-12 border-t border-line pt-10 md:grid-cols-3">
+          <div className="mt-14 grid gap-x-8 gap-y-12 rule-t pt-10 md:grid-cols-3">
             {reihe.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
@@ -120,7 +120,7 @@ function Index() {
       </section>
 
       {/* Die Köpfe des Vereins als Laufband */}
-      <section className="bleed border-y border-line" aria-labelledby="mitglieder-titel">
+      <section className="bleed topic-rule" aria-labelledby="mitglieder-titel">
         <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-12 pb-6">
           <div>
             <p className="eyebrow-muted">Die Köpfe hinter dem aed</p>
@@ -144,7 +144,7 @@ function Index() {
       </section>
 
       {/* Manifest: Zitat als Doppelseite */}
-      <section className="bleed border-y border-line bg-[oklch(0.968_0_0)]" aria-labelledby="mission-titel">
+      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="mission-titel">
         <div className="shell grid gap-10 py-16 md:grid-cols-12 md:py-24">
           <h2 id="mission-titel" className="eyebrow-muted md:col-span-3">
             Der Verein
@@ -182,7 +182,7 @@ function Index() {
           Kategorien, gefördert von der Karl Schlecht Stiftung, 2025 zum zehnten Mal ausgelobt.
         </p>
 
-        <dl className="mt-10 grid grid-cols-2 gap-6 border-y border-line py-8 md:grid-cols-4">
+        <dl className="mt-10 grid grid-cols-2 gap-6 border-y border-ink py-8 md:grid-cols-4">
           {kennzahlen.map((k) => (
             <div key={k.label}>
               <dt className="sr-only">{k.label}</dt>
@@ -211,7 +211,7 @@ function Index() {
       </section>
 
       {/* Partner */}
-      <section className="shell border-t border-line py-14 md:py-20" aria-labelledby="partner-titel">
+      <section className="shell topic-rule py-14 md:py-20" aria-labelledby="partner-titel">
         <SectionTitle id="partner-titel" titel="Kooperationspartner" />
         <div className="mt-10">
           <LogoGrid items={partner} />

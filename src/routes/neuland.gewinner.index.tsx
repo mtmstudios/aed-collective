@@ -29,7 +29,7 @@ function GewinnerIndex() {
         intro="Jede prämierte Arbeit hat eine dauerhaft erreichbare Projektseite – ideal zum Verlinken in Bewerbung und Portfolio."
       />
       <section className="shell pb-24">
-        <ul className="border-t border-line">
+        <ul className="rule-t">
           {jahrgaenge.map((jahr) => {
             const anzahl = projekte.filter((p) => p.jahr === jahr).length;
             return (

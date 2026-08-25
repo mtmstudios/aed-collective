@@ -53,7 +53,7 @@ function ProgrammPage() {
 
   return (
     <>
-      <section className="bleed relative border-b border-line" aria-labelledby="programm-titel-head">
+      <section className="bleed relative" aria-labelledby="programm-titel-head">
         <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
           <CoverSlider
             bilder={coverfotos}
@@ -130,7 +130,7 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section className="shell border-t border-line py-12 md:py-16" aria-labelledby="archiv-titel">
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="archiv-titel">
         <p id="archiv-titel" className="eyebrow">
           Archiv
         </p>
@@ -153,7 +153,7 @@ function ProgrammPage() {
           </div>
         )}
 
-        <div className="mt-10 border-t border-line pt-6">
+        <div className="mt-10 rule-t pt-6">
           <button
             type="button"
             onClick={() => setReferentenOffen((v) => !v)}
@@ -193,7 +193,7 @@ function ProgrammPage() {
         </div>
       </section>
 
-      <section className="bleed border-t border-line bg-[oklch(0.968_0_0)]" aria-labelledby="jung-hungrig">
+      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="jung-hungrig">
         <div className="shell grid gap-8 py-14 md:grid-cols-12 md:py-20">
           <h2 id="jung-hungrig" className="eyebrow-muted md:col-span-3">
             Jung & hungrig

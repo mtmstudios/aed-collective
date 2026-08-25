@@ -85,7 +85,7 @@ function WettbewerbPage() {
         <h2 id="termine" className="display-md">
           Termine des Jahrgangs 2025
         </h2>
-        <ul className="mt-8 border-t border-line">
+        <ul className="mt-8 rule-t">
           {termine.map((t) => (
             <li key={t.datum} className="flex flex-wrap gap-x-8 gap-y-1 border-b border-line py-4">
               <span className="w-48 font-display" style={{ color: "var(--brand-deep)" }}>

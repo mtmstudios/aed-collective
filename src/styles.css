@@ -315,8 +315,25 @@
   font-style: italic;
 }
 
+/* Linie innerhalb eines Themas: dunkel, schriftbündig (Satzspiegel) */
 @utility rule-t {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--ink);
+}
+
+/* Neues Thema: dunkle Linie über die komplette Bildschirmbreite */
+@utility topic-rule {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    border-top: 1px solid var(--ink);
+    pointer-events: none;
+  }
 }
 
 /* Ressort-Überschrift mit durchgehender Linie – Vogue-Sektionsmarke */
@@ -422,8 +439,6 @@
 /* Farbig abgesetztes Band (aus dem Lovable-Stand uebernommen) */
 @utility band-muted {
   background: oklch(0.968 0 0);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
 /* Laufband (Mitglieder-Slider): zwei Spuren, gegenlaeufig */
@@ -464,4 +479,12 @@
   .laufband-rueck {
     animation: none;
   }
+}
+
+/* Keine Doppelstriche: innerhalb eines Themas mit durchgezogener Themenlinie
+   entfaellt die zusaetzliche Linie ueber der Ressort-Ueberschrift. */
+.topic-rule > .section-rule:first-child,
+.topic-rule > *:first-child > .section-rule:first-child {
+  border-top: 0;
+  padding-top: 0;
 }
