@@ -134,7 +134,7 @@ function Index() {
           </Link>
         </div>
         <MitgliederSlider items={koepfe} />
-        <div className="shell py-6">
+        <div className="shell pt-6 pb-14 md:pb-20">
           <p className="meta">
             Getragen von rund 80 Fördermitgliedern und über 400 Personenmitgliedern.{" "}
             <Link to="/mitglieder" className="link-underline">
