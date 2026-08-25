@@ -104,26 +104,35 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="bleed border-t border-line bg-[oklch(0.968_0_0)]" aria-labelledby="cross">
-        <div className="shell grid gap-8 py-14 md:grid-cols-12 md:py-20">
-          <h2 id="cross" className="eyebrow-muted md:col-span-3">
-            Jung &amp; hungrig
+      <section className="bleed border-t border-line bg-[oklch(0.968_0_0)]" aria-labelledby="archiv-neuland">
+        <div className="shell py-14 md:py-20">
+          <h2 id="archiv-neuland" className="eyebrow-muted">
+            Archiv
           </h2>
-          <div className="md:col-span-9 max-w-2xl">
-            <p className="prose-editorial">
-              neuland ist ein Projekt des aed e.V. – und der Verein hat mehr zu bieten als einen
-              Wettbewerb: Vorträge, Führungen, Studiobesuche und Feste, bei denen du genau die Leute
-              triffst, die deine Arbeit interessiert. Mit der Reihe „jung &amp; hungrig“ besuchen
-              wir regelmäßig aufstrebende junge Studios.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/programm" className="btn-outline">
-                Vereinsprogramm
-              </Link>
-              <Link to="/mitglied-werden" className="btn-outline">
-                Mitglied werden
-              </Link>
-            </div>
+          <p className="display-lg mt-4">Preisträger:innen aller Jahrgänge</p>
+          <ul className="mt-10 border-t border-line">
+            {jahrgaenge.map((jahr) => {
+              const anzahl = projekte.filter((p) => p.jahr === jahr).length;
+              return (
+                <li key={jahr}>
+                  <Link
+                    to="/neuland/gewinner/$jahr"
+                    params={{ jahr }}
+                    className="group flex flex-wrap items-baseline justify-between gap-4 border-b border-line py-8 transition-colors hover:bg-background"
+                  >
+                    <span className="display-lg group-hover:text-[var(--brand-deep)]">{jahr}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {anzahl} ausgezeichnete {anzahl === 1 ? "Arbeit" : "Arbeiten"}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="mt-10">
+            <Link to="/neuland/gewinner" className="btn-outline">
+              Alle Jahrgänge
+            </Link>
           </div>
         </div>
       </section>
