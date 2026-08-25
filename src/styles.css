@@ -505,3 +505,8 @@
   border-top: 0;
   padding-top: 0;
 }
+
+/* neuland-Startseite: Footer ohne weisse Luecke ans gelbe Archiv-Band ziehen. */
+main:has(.neuland-archiv) ~ footer {
+  margin-top: 0;
+}
