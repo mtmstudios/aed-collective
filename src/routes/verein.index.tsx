@@ -82,40 +82,44 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell bg-brand py-16 text-brand-foreground" aria-labelledby="geschichte">
-        <div className="grid gap-10 md:grid-cols-12">
-          <h2 id="geschichte" className="eyebrow md:col-span-3">
-            Geschichte
-          </h2>
-          <div className="md:col-span-9 max-w-3xl space-y-6 leading-relaxed">
-            <p>
-              Der „Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.“
-              wurde 2004 gegründet – von Alexander Hafner, Dr. Frank Heinlein, Silvia Olp, Ralf
-              Schmitz, Prof. Werner Sobek, Prof. Andreas Uebele und Roberto Zwirn. Am 15. Dezember
-              2004 trat der Verein im damals noch nicht eröffneten Kunstmuseum Stuttgart erstmals an
-              die Öffentlichkeit – mit über 300 Gästen.
-            </p>
-            <p>
-              Aus einer Reihe von Abendveranstaltungen wurden Hunderte von Vorträgen, Exkursionen,
-              Baustellenbesuchen und Blicken hinter die Kulissen. Heute versammelt der aed über 400
-              Personenmitglieder und rund 80 Fördermitglieder – und mit neuland einen
-              Nachwuchswettbewerb, der alle zwei Jahre bundesweit junge Gestalter:innen auszeichnet.
-            </p>
+      <section className="bleed bg-brand text-brand-foreground" aria-labelledby="geschichte">
+        <div className="shell py-16">
+          <div className="grid gap-10 md:grid-cols-12">
+            <h2 id="geschichte" className="eyebrow md:col-span-3">
+              Geschichte
+            </h2>
+            <div className="md:col-span-9 max-w-3xl space-y-6 leading-relaxed">
+              <p>
+                Der „Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.“
+                wurde 2004 gegründet – von Alexander Hafner, Dr. Frank Heinlein, Silvia Olp, Ralf
+                Schmitz, Prof. Werner Sobek, Prof. Andreas Uebele und Roberto Zwirn. Am 15. Dezember
+                2004 trat der Verein im damals noch nicht eröffneten Kunstmuseum Stuttgart erstmals an
+                die Öffentlichkeit – mit über 300 Gästen.
+              </p>
+              <p>
+                Aus einer Reihe von Abendveranstaltungen wurden Hunderte von Vorträgen, Exkursionen,
+                Baustellenbesuchen und Blicken hinter die Kulissen. Heute versammelt der aed über 400
+                Personenmitglieder und rund 80 Fördermitglieder – und mit neuland einen
+                Nachwuchswettbewerb, der alle zwei Jahre bundesweit junge Gestalter:innen auszeichnet.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="shell py-16" aria-labelledby="award">
-        <div className="grid gap-10 md:grid-cols-12">
-          <h2 id="award" className="eyebrow md:col-span-3">
-            Auszeichnung
-          </h2>
-          <div className="md:col-span-9">
-            <p className="display-md max-w-3xl">German Brand Award 2017</p>
-            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-              Der aed wurde mit dem German Brand Award 2017 für herausragende Kulturarbeit als
-              Non-Profit-Organisation ausgezeichnet.
-            </p>
+      <section className="bleed bg-[var(--aed-hover)] text-ink" aria-labelledby="award">
+        <div className="shell py-16">
+          <div className="grid gap-10 md:grid-cols-12">
+            <h2 id="award" className="eyebrow md:col-span-3">
+              Auszeichnung
+            </h2>
+            <div className="md:col-span-9">
+              <p className="display-md max-w-3xl">German Brand Award 2017</p>
+              <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+                Der aed wurde mit dem German Brand Award 2017 für herausragende Kulturarbeit als
+                Non-Profit-Organisation ausgezeichnet.
+              </p>
+            </div>
           </div>
         </div>
       </section>
