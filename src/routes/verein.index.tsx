@@ -32,7 +32,7 @@ function VereinPage() {
         intro="Der aed e.V. ist der Verein für Architecture, Engineering und Design in Stuttgart. Wir verbinden Disziplinen, die gemeinsam die gebaute und gestaltete Umwelt prägen."
       />
 
-      <section className="shell rule-t py-16" aria-labelledby="mission">
+      <section className="shell topic-rule py-16" aria-labelledby="mission">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="mission" className="eyebrow md:col-span-3">
             Mission
@@ -58,7 +58,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell rule-t py-16 band-muted" aria-labelledby="geschichte">
+      <section className="shell topic-rule py-16 band-muted" aria-labelledby="geschichte">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="geschichte" className="eyebrow md:col-span-3">
             Geschichte
@@ -81,7 +81,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell rule-t py-16" aria-labelledby="award">
+      <section className="shell topic-rule py-16" aria-labelledby="award">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="award" className="eyebrow md:col-span-3">
             Auszeichnung
@@ -97,7 +97,7 @@ function VereinPage() {
       </section>
 
 
-      <section className="shell rule-t py-16" aria-labelledby="vorstand-preview">
+      <section className="shell topic-rule py-16" aria-labelledby="vorstand-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="vorstand-preview" className="display-lg max-w-4xl">
@@ -149,7 +149,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell rule-t py-16 band-muted" aria-labelledby="beirat-preview">
+      <section className="shell topic-rule py-16 band-muted" aria-labelledby="beirat-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="beirat-preview" className="display-lg max-w-4xl">
@@ -196,7 +196,7 @@ function VereinPage() {
       </section>
 
 
-      <section className="shell rule-t py-16" aria-labelledby="foerdermitglieder-preview">
+      <section className="shell topic-rule py-16" aria-labelledby="foerdermitglieder-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="foerdermitglieder-preview" className="display-lg max-w-4xl">
@@ -226,7 +226,7 @@ function VereinPage() {
         </ul>
       </section>
 
-      <section className="shell rule-t py-16 band-muted" aria-labelledby="satzung-preview">
+      <section className="shell topic-rule py-16 band-muted" aria-labelledby="satzung-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="satzung-preview" className="display-lg max-w-4xl">
