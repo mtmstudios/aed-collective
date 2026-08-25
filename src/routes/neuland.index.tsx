@@ -4,6 +4,8 @@ import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { SectionTitle } from "@/components/ui-bits";
+import { AutoSlider } from "@/components/auto-slider";
+
 import { NeulandSubnav } from "@/routes/neuland";
 
 function JuryKarte({ person }: { person: Person }) {
@@ -142,13 +144,16 @@ function NeulandIndex() {
           href="/neuland/jury"
           linkText="Ganze Jury ansehen"
         />
-        <ul className="mt-10 flex gap-5 overflow-x-auto pb-2">
+        <AutoSlider
+          className="mt-10"
+          itemClassName="w-[10.25rem] pr-5 sm:w-[12.25rem]"
+          pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
+        >
           {jury2025.map((p) => (
-            <li key={p.name} className="w-36 shrink-0 sm:w-44">
-              <JuryKarte person={p} />
-            </li>
+            <JuryKarte key={p.name} person={p} />
           ))}
-        </ul>
+        </AutoSlider>
+
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
             Alle 21 Juroren:innen ansehen
