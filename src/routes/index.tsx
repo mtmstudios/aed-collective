@@ -122,7 +122,7 @@ function Index() {
 
       {/* Die Köpfe des Vereins als Laufband */}
       <section className="bleed topic-rule" aria-labelledby="mitglieder-titel">
-        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-12 pb-6">
+        <div className="shell flex flex-wrap items-baseline justify-between gap-3 pt-14 md:pt-20 pb-6">
           <div>
             <p className="eyebrow-muted">Die Köpfe hinter dem aed</p>
             <h2 id="mitglieder-titel" className="display-md mt-2">
