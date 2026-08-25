@@ -177,7 +177,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell py-16" aria-labelledby="beirat-preview">
+      <section className="shell topic-rule py-16" aria-labelledby="beirat-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
             <h2 id="beirat-preview" className="display-lg max-w-4xl">
