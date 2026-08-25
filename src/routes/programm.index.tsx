@@ -109,6 +109,7 @@ function ProgrammPage() {
             Für dieses Format ist derzeit kein Termin geplant.
           </p>
         ) : (
+          <>
           <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             <article className="group">
               <div className="img-zoom aspect-3/2 bg-muted">
