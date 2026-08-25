@@ -68,9 +68,9 @@ function Index() {
           <div className="absolute inset-x-0 bottom-0">
 
             <div className="shell pb-10 md:pb-16">
-              <p className="eyebrow text-white/85">Architecture · Engineering · Design</p>
+              <p className="eyebrow text-white/85">Herzlich Willkommen beim aed Stuttgart</p>
               <h1 id="cover-titel" className="display-lg mt-4 max-w-3xl text-white">
-                Veranstaltungen, Austausch, Förderung
+                Architecture – Engineering – Design
               </h1>
               <p className="lead mt-5 max-w-xl text-white/90">
                 Seit 2004 bringt der aed in Stuttgart zusammen, was sonst getrennt entwirft.
