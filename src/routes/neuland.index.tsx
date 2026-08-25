@@ -167,7 +167,7 @@ function NeulandIndex() {
             Archiv
           </h2>
           <p className="display-md mt-4">Preisträger:innen vergangener Jahrgänge</p>
-          <ul className="mt-8 rule-t">
+          <ul className="mt-8">
             {jahrgaenge
               .filter((jahr) => jahr !== "2025")
               .map((jahr) => {
@@ -177,7 +177,7 @@ function NeulandIndex() {
                     <Link
                       to="/neuland/gewinner/$jahr"
                       params={{ jahr }}
-                      className="group flex flex-wrap items-baseline justify-between gap-4 border-b border-line py-6 transition-colors hover:bg-background"
+                      className="group flex flex-wrap items-baseline justify-between gap-4 rounded-full px-6 py-4 transition-colors hover:bg-white"
                     >
                       <span className="display-sm group-hover:text-[var(--brand-deep)]">{jahr}</span>
                       <span className="text-sm text-muted-foreground">
