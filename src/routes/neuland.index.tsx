@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { kennzahlen, projekte, wettbewerbStatus } from "@/data/neuland";
+import { jahrgaenge, kennzahlen, projekte, wettbewerbStatus } from "@/data/neuland";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { SectionTitle } from "@/components/ui-bits";
 
