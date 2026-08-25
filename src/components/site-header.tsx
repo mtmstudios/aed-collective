@@ -38,7 +38,7 @@ export function SiteHeader() {
             alt="aed e.V."
             width={500}
             height={276}
-            className="h-[52px] w-auto md:h-[60px]"
+            className="h-[47px] w-auto md:h-[54px]"
           />
         </Link>
 
