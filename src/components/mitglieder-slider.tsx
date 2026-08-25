@@ -1,7 +1,8 @@
 import type { Person } from "@/data/site";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
+import { AutoSlider } from "@/components/auto-slider";
 
-function Portraet({ person, kopie }: { person: Person; kopie: boolean }) {
+function Portraet({ person }: { person: Person }) {
   const bild = personenBild(person.name);
 
   const karte = (
@@ -10,7 +11,7 @@ function Portraet({ person, kopie }: { person: Person; kopie: boolean }) {
         {bild ? (
           <img
             src={bild}
-            alt={kopie ? "" : `Porträt ${person.name}`}
+            alt={`Porträt ${person.name}`}
             loading="lazy"
             decoding="async"
             draggable={false}
@@ -28,36 +29,33 @@ function Portraet({ person, kopie }: { person: Person; kopie: boolean }) {
   );
 
   return (
-    <div className="mr-5 shrink-0 md:mr-7" aria-hidden={kopie ? true : undefined}>
-      {kopie ? (
-        <div>{karte}</div>
-      ) : (
-        <PersonDialog person={person}>
-          <div className="group cursor-pointer text-left" role="button" tabIndex={0}>
-            {karte}
-          </div>
-        </PersonDialog>
-      )}
-    </div>
+    <PersonDialog person={person}>
+      <article className="group cursor-pointer text-left" role="button" tabIndex={0}>
+        {karte}
+      </article>
+    </PersonDialog>
   );
 }
 
 /**
  * „Red Carpet“ der Köpfe des Vereins: Porträts laufen auf hellem Grund vorbei.
- * Die Bewegung hält bei Hover und Tastaturfokus an; ein Klick öffnet das
- * Statement der Person.
+ * Gleiche Mechanik wie der Jury-Slider: konstanter Drift, Mouseover-Steuerung,
+ * Ziehen/Wischen und Pfeile.
  */
 export function MitgliederSlider({ items }: { items: readonly Person[] }) {
-  // Liste doppelt rendern, damit der Umlauf nahtlos wirkt
-  const doppelt = [...items, ...items];
-
   return (
-    <div className="laufband-halt overflow-hidden bg-[oklch(0.968_0_0)] py-10 md:py-12">
-      <div className="laufband" style={{ "--laufzeit": "95s" } as React.CSSProperties}>
-        {doppelt.map((p, i) => (
-          <Portraet key={`${p.name}-${i}`} person={p} kopie={i >= items.length} />
+    <div className="bg-[oklch(0.968_0_0)] py-10 md:py-12">
+      <AutoSlider
+        className=""
+        itemClassName="w-[168px] pr-5 md:w-[212px] md:pr-7"
+        tempo={0.35}
+        hoverFaktor={4}
+        pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
+      >
+        {items.map((p) => (
+          <Portraet key={p.name} person={p} />
         ))}
-      </div>
+      </AutoSlider>
     </div>
   );
 }
