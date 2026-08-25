@@ -240,7 +240,7 @@ function VereinPage() {
             return (
               <li
                 key={m.name}
-                className="flex min-h-24 border-r border-b border-line bg-brand text-center text-brand-foreground transition-colors hover:bg-[var(--brand-deep)]"
+                className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-brand"
               >
                 {m.url ? (
                   <a
