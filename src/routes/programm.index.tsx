@@ -7,6 +7,7 @@ import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
 
 import { coverBilder } from "@/data/cover";
+import { eventBilder } from "@/data/bilder";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
