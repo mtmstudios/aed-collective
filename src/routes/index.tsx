@@ -69,11 +69,11 @@ function Index() {
 
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">Herzlich Willkommen beim aed Stuttgart</p>
-              <h1 id="cover-titel" className="display-lg mt-4 max-w-3xl text-white">
+              <h1 id="cover-titel" className="display-lg mt-4 whitespace-nowrap text-white">
                 Architecture – Engineering – Design
               </h1>
               <p className="lead mt-5 max-w-xl text-white/90">
-                Seit 2004 bringt der aed in Stuttgart zusammen, was sonst getrennt entwirft.
+                Seit 2004 bringt der aed zusammen, was sonst getrennt entwirft.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/programm" className="btn-solid">
