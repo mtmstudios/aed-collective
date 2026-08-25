@@ -89,7 +89,7 @@ function Index() {
       </section>
 
       {/* Aufmacher-Raster: ein großer Termin, zwei begleitende */}
-      <section className="shell topic-rule py-14 md:py-20" aria-labelledby="programm-titel">
+      <section className="shell py-14 md:py-20" aria-labelledby="programm-titel">
         <SectionTitle
           id="programm-titel"
           titel="Im Programm"
