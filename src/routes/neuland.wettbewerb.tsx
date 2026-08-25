@@ -59,7 +59,7 @@ function WettbewerbPage() {
           {kategorien.map((k) => (
             <li
               key={k.key}
-              className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-brand/50 p-6 text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+              className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-[var(--aed-pink)]/50 p-6 text-[var(--aed-pink-foreground)] transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
             >
               <h3 className="font-display text-xl">{k.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-brand-foreground/80">{k.text}</p>
