@@ -426,6 +426,14 @@
   --aed-outline-fg: var(--aed-pink);
 }
 
+/* Button auf gelbem Archiv-Band: weißer Hover statt gelb */
+@utility btn-archiv-hover {
+  &:hover {
+    background: #fff;
+    color: var(--ink);
+  }
+}
+
 /* Bilder generell in Farbe – kein Graustufen-Effekt */
 @utility grayscale-hover {
   filter: none;
