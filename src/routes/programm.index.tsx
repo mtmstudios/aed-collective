@@ -169,9 +169,9 @@ function ProgrammPage() {
             type="button"
             onClick={() => setArchivOffen((v) => !v)}
             aria-expanded={archivOffen}
-            className="mt-4 flex w-full items-baseline justify-between gap-4 text-left"
+            className="mt-4 flex w-full items-baseline justify-between gap-4 rounded-full px-6 py-4 text-left transition-colors hover:bg-white"
           >
-            <h2 className="display-md">Letzte Termine</h2>
+            <h2 className="display-sm">Letzte Termine</h2>
             <span className="eyebrow shrink-0">
               {archivOffen ? "Schließen" : `${archiv.length} Termine`}
             </span>
@@ -189,9 +189,9 @@ function ProgrammPage() {
               type="button"
               onClick={() => setReferentenOffen((v) => !v)}
               aria-expanded={referentenOffen}
-              className="flex w-full items-baseline justify-between gap-4 text-left"
+              className="flex w-full items-baseline justify-between gap-4 rounded-full px-6 py-4 text-left transition-colors hover:bg-white"
             >
-              <h3 id="referenten-titel" className="display-md">
+              <h3 id="referenten-titel" className="display-sm">
                 Referent:innen
               </h3>
               <span className="eyebrow shrink-0">
