@@ -7,6 +7,7 @@ import { SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
 
 import { coverBilder } from "@/data/cover";
+import { eventBilder } from "@/data/bilder";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -111,9 +112,13 @@ function ProgrammPage() {
           <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
             <article className="group">
               <div className="img-zoom aspect-3/2 bg-muted">
-                <div className="flex h-full w-full items-center justify-center bg-muted">
-                  <span className="eyebrow text-muted-foreground">Platzhalter</span>
-                </div>
+                <img
+                  src={coverfotos[coverfotos.length - 1]}
+                  alt="Aktuelles Programmheft des aed e.V."
+                  loading="lazy"
+                  decoding="async"
+                  className="grayscale-hover h-full w-full object-cover"
+                />
               </div>
               <p className="eyebrow mt-4">Download</p>
               <h3 className="display-sm mt-2">Aktueller Flyer</h3>
@@ -126,32 +131,29 @@ function ProgrammPage() {
             {kommend.map((e) => (
               <EventCard key={e.slug} event={e} />
             ))}
+            <article className="group">
+              <Link to="/mitglied-werden" className="block">
+                <div className="img-zoom aspect-3/2 bg-muted">
+                  <img
+                    src={eventBilder["jung-und-hungrig-haus-otto"]}
+                    alt="jung & hungrig – Studio-Besuch"
+                    loading="lazy"
+                    decoding="async"
+                    className="grayscale-hover h-full w-full object-cover"
+                  />
+                </div>
+                <p className="eyebrow mt-4">jung & hungrig</p>
+                <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>
+                <p className="mt-3 text-base leading-relaxed">
+                  Mit der Reihe „jung & hungrig“ besuchen wir regelmäßig aufstrebende junge
+                  Studios – Vorträge, Führungen und Studiobesuche, bei denen du genau die Leute
+                  triffst, die deine Arbeit interessieren.
+                </p>
+                <span className="btn-solid mt-5 inline-block">Mitglied werden</span>
+              </Link>
+            </article>
           </div>
         )}
-      </section>
-
-      <section className="bleed topic-rule bg-[oklch(0.968_0_0)]" aria-labelledby="jung-hungrig">
-        <div className="shell grid gap-8 py-14 md:grid-cols-12 md:py-20">
-          <h2 id="jung-hungrig" className="eyebrow-muted md:col-span-3">
-            Jung & hungrig
-          </h2>
-          <div className="md:col-span-9 max-w-2xl">
-            <p className="prose-editorial">
-              Mit der Reihe „jung & hungrig“ besuchen wir regelmäßig aufstrebende junge Studios –
-              Vorträge, Führungen, Studiobesuche und Feste, bei denen du genau die Leute triffst, die
-              deine Arbeit interessieren. Ein Format des aed e.V. für die nächste Generation an
-              Gestalter:innen.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/mitglied-werden" className="btn-outline">
-                Mitglied werden
-              </Link>
-              <Link to="/neuland" className="btn-outline">
-                Zum Wettbewerb neuland
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="archiv-titel">
