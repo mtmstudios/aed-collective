@@ -89,13 +89,14 @@ function Index() {
       </section>
 
       {/* Aufmacher-Raster: ein großer Termin, zwei begleitende */}
-      <section className="shell py-14 md:py-20" aria-labelledby="programm-titel">
+      <section className="shell pt-16 md:pt-24 pb-14 md:pb-20" aria-labelledby="programm-titel">
         <SectionTitle
           id="programm-titel"
           titel="Im Programm"
           kicker={kommende.length > 0 ? `Nächster Termin: ${formatDatum(kommende[0].datum)}` : undefined}
           href="/programm"
           linkText="Alle Termine"
+          noRule
         />
         <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-12">
           {aufmacher && (

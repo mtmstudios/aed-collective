@@ -40,15 +40,22 @@ export function SectionTitle({
   kicker,
   href,
   linkText,
+  noRule,
 }: {
   id?: string;
   titel: string;
   kicker?: string;
   href?: string;
   linkText?: string;
+  /** Oberlinie unterdrücken (z. B. direkt nach einem Bild-/Farbbanner). */
+  noRule?: boolean;
 }) {
   return (
-    <div className="section-rule flex-col items-start gap-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
+    <div
+      className={`flex flex-col items-start gap-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8${
+        noRule ? "" : " section-rule"
+      }`}
+    >
       <div>
         {kicker && <p className="eyebrow-muted mb-2">{kicker}</p>}
         <h2 id={id} className="display-md">
