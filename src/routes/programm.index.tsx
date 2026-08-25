@@ -69,7 +69,7 @@ function ProgrammPage() {
             <div className="shell pb-10 md:pb-14">
               <p className="eyebrow text-white/85">Programm</p>
               <h1 id="programm-titel-head" className="display-xl mt-4 text-white">
-                Veranstaltungen
+                Wann sehen wir uns?
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
                 Rund 20 Mal im Jahr laden wir zu Vorträgen, Führungen, Studiobesuchen, Filmabenden
