@@ -79,11 +79,7 @@ function Index() {
                 <Link to="/programm" className="btn-solid">
                   Programm
                 </Link>
-                <Link
-                  to="/mitglied-werden"
-                  className="btn-solid"
-                  style={{ background: "oklch(0.53 0.19 255)", color: "#fff" }}
-                >
+                <Link to="/mitglied-werden" className="btn-solid">
                   Mitglied werden
                 </Link>
               </div>
