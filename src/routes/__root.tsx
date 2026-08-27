@@ -6,7 +6,10 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  redirect,
+  useRouterState,
 } from "@tanstack/react-router";
+import { isUnlocked } from "@/lib/gate.functions";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
@@ -76,6 +79,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  beforeLoad: async ({ location }) => {
+    if (location.pathname.startsWith("/unlock")) return;
+    const { unlocked } = await isUnlocked();
+    if (!unlocked) throw redirect({ to: "/unlock" });
+  },
   head: () => ({
     meta: [
       { charSet: "utf-8" },

@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UnlockRouteImport } from './routes/unlock'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiceRouteImport } from './routes/service'
 import { Route as ReferentenRouteImport } from './routes/referenten'
@@ -41,6 +42,11 @@ import { Route as NeulandGewinnerIndexRouteImport } from './routes/neuland.gewin
 import { Route as NeulandGewinnerJahrIndexRouteImport } from './routes/neuland.gewinner.$jahr.index'
 import { Route as NeulandGewinnerJahrSlugRouteImport } from './routes/neuland.gewinner.$jahr.$slug'
 
+const UnlockRoute = UnlockRouteImport.update({
+  id: '/unlock',
+  path: '/unlock',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -212,6 +218,7 @@ export interface FileRoutesByFullPath {
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/unlock': typeof UnlockRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
@@ -244,6 +251,7 @@ export interface FileRoutesByTo {
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/unlock': typeof UnlockRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
@@ -276,6 +284,7 @@ export interface FileRoutesById {
   '/referenten': typeof ReferentenRoute
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/unlock': typeof UnlockRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
@@ -311,6 +320,7 @@ export interface FileRouteTypes {
     | '/referenten'
     | '/service'
     | '/sitemap.xml'
+    | '/unlock'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/gewinner-innen-$jahr'
@@ -343,6 +353,7 @@ export interface FileRouteTypes {
     | '/referenten'
     | '/service'
     | '/sitemap.xml'
+    | '/unlock'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/gewinner-innen-$jahr'
@@ -374,6 +385,7 @@ export interface FileRouteTypes {
     | '/referenten'
     | '/service'
     | '/sitemap.xml'
+    | '/unlock'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/gewinner-innen-$jahr'
@@ -408,6 +420,7 @@ export interface RootRouteChildren {
   ReferentenRoute: typeof ReferentenRoute
   ServiceRoute: typeof ServiceRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  UnlockRoute: typeof UnlockRoute
   Neuland1SplatRoute: typeof Neuland1SplatRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
   VereinBeiratRoute: typeof VereinBeiratRouteWithChildren
@@ -420,6 +433,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/unlock': {
+      id: '/unlock'
+      path: '/unlock'
+      fullPath: '/unlock'
+      preLoaderRoute: typeof UnlockRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -715,6 +735,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReferentenRoute: ReferentenRoute,
   ServiceRoute: ServiceRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  UnlockRoute: UnlockRoute,
   Neuland1SplatRoute: Neuland1SplatRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
   VereinBeiratRoute: VereinBeiratRouteWithChildren,
