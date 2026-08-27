@@ -148,6 +148,19 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const istGate = useRouterState({
+    select: (s) => s.location.pathname.startsWith("/unlock"),
+  });
+
+  if (istGate) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <main id="inhalt">
+          <Outlet />
+        </main>
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
