@@ -42,7 +42,7 @@ function restdauer(until: number): string {
 function Unlock() {
   const router = useRouter();
   const { token } = Route.useSearch();
-  const status = Route.useLoaderData();
+  const status = Route.useLoaderData() ?? { unlocked: false, until: 0 };
   const unlock = useServerFn(unlockSite);
   const redeem = useServerFn(redeemToken);
   const linkErzeugen = useServerFn(createPreviewLink);
