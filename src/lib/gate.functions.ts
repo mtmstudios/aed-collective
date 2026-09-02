@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
-import { useSession } from "@tanstack/react-start/server";
+import { useSession, getRequestHost } from "@tanstack/react-start/server";
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 
 type GateSession = { unlocked?: boolean; until?: number };
@@ -52,7 +52,24 @@ async function readSession() {
   return { session, unlocked, until };
 }
 
+/** Lovable-Editor-/Vorschau-Umgebungen umgehen die Passwort-Wall. */
+function isEditorHost(): boolean {
+  let host = "";
+  try {
+    host = (getRequestHost() ?? "").toLowerCase();
+  } catch {
+    return false;
+  }
+  return (
+    host.endsWith(".lovableproject.com") ||
+    host.startsWith("id-preview--") ||
+    host.includes("-dev.lovable.app") ||
+    host.startsWith("localhost")
+  );
+}
+
 export const isUnlocked = createServerFn({ method: "GET" }).handler(async () => {
+  if (isEditorHost()) return { unlocked: true };
   const { unlocked } = await readSession();
   return { unlocked };
 });
