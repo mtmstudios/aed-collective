@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { teilnahmebedingungen, wettbewerbStatus } from "@/data/neuland";
+import { teilnahmebedingungen } from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
 
 export const Route = createFileRoute("/neuland/teilnahme")({
