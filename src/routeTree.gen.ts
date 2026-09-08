@@ -34,6 +34,7 @@ import { Route as NeulandTeilnahmeRouteImport } from './routes/neuland.teilnahme
 import { Route as NeulandPresseRouteImport } from './routes/neuland.presse'
 import { Route as NeulandJuryRouteImport } from './routes/neuland.jury'
 import { Route as NeulandGewinnerInnenJahrRouteImport } from './routes/neuland.gewinner-innen-$jahr'
+import { Route as NeulandEinreichungRouteImport } from './routes/neuland.einreichung'
 import { Route as Neuland1SplatRouteImport } from './routes/neuland-1.$'
 import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitglieder.foerdermitglieder'
 import { Route as VereinVorstandIndexRouteImport } from './routes/verein.vorstand.index'
@@ -168,6 +169,11 @@ const NeulandGewinnerInnenJahrRoute =
     path: '/gewinner-innen-$jahr',
     getParentRoute: () => NeulandRoute,
   } as any)
+const NeulandEinreichungRoute = NeulandEinreichungRouteImport.update({
+  id: '/einreichung',
+  path: '/einreichung',
+  getParentRoute: () => NeulandRoute,
+} as any)
 const Neuland1SplatRoute = Neuland1SplatRouteImport.update({
   id: '/neuland-1/$',
   path: '/neuland-1/$',
@@ -221,6 +227,7 @@ export interface FileRoutesByFullPath {
   '/unlock': typeof UnlockRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
+  '/neuland/einreichung': typeof NeulandEinreichungRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
   '/neuland/presse': typeof NeulandPresseRoute
@@ -254,6 +261,7 @@ export interface FileRoutesByTo {
   '/unlock': typeof UnlockRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
+  '/neuland/einreichung': typeof NeulandEinreichungRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
   '/neuland/presse': typeof NeulandPresseRoute
@@ -287,6 +295,7 @@ export interface FileRoutesById {
   '/unlock': typeof UnlockRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
+  '/neuland/einreichung': typeof NeulandEinreichungRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
   '/neuland/presse': typeof NeulandPresseRoute
@@ -323,6 +332,7 @@ export interface FileRouteTypes {
     | '/unlock'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
+    | '/neuland/einreichung'
     | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
     | '/neuland/presse'
@@ -356,6 +366,7 @@ export interface FileRouteTypes {
     | '/unlock'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
+    | '/neuland/einreichung'
     | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
     | '/neuland/presse'
@@ -388,6 +399,7 @@ export interface FileRouteTypes {
     | '/unlock'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
+    | '/neuland/einreichung'
     | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
     | '/neuland/presse'
@@ -608,6 +620,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NeulandGewinnerInnenJahrRouteImport
       parentRoute: typeof NeulandRoute
     }
+    '/neuland/einreichung': {
+      id: '/neuland/einreichung'
+      path: '/einreichung'
+      fullPath: '/neuland/einreichung'
+      preLoaderRoute: typeof NeulandEinreichungRouteImport
+      parentRoute: typeof NeulandRoute
+    }
     '/neuland-1/$': {
       id: '/neuland-1/$'
       path: '/neuland-1/$'
@@ -673,6 +692,7 @@ const MitgliederRouteWithChildren = MitgliederRoute._addFileChildren(
 )
 
 interface NeulandRouteChildren {
+  NeulandEinreichungRoute: typeof NeulandEinreichungRoute
   NeulandGewinnerInnenJahrRoute: typeof NeulandGewinnerInnenJahrRoute
   NeulandJuryRoute: typeof NeulandJuryRoute
   NeulandPresseRoute: typeof NeulandPresseRoute
@@ -685,6 +705,7 @@ interface NeulandRouteChildren {
 }
 
 const NeulandRouteChildren: NeulandRouteChildren = {
+  NeulandEinreichungRoute: NeulandEinreichungRoute,
   NeulandGewinnerInnenJahrRoute: NeulandGewinnerInnenJahrRoute,
   NeulandJuryRoute: NeulandJuryRoute,
   NeulandPresseRoute: NeulandPresseRoute,
