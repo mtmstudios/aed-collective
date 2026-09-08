@@ -38,7 +38,7 @@ function ServicePage() {
                 className="group flex flex-wrap items-center justify-between gap-4 border-b border-line py-6 transition-colors hover:bg-muted"
               >
                 <span className="max-w-2xl">
-                  <span className="block font-display text-lg group-hover:text-[var(--brand-deep)]">
+                  <span className="block display-sm group-hover:text-[var(--brand-deep)]">
                     {d.titel}
                   </span>
                   <span className="mt-1 block text-sm text-muted-foreground">{d.beschreibung}</span>

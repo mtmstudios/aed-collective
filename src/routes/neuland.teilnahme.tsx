@@ -33,7 +33,7 @@ function TeilnahmePage() {
           <div className="md:col-span-8">
             {teilnahmebedingungen.map((a) => (
               <section key={a.titel} className="rule-t py-6">
-                <h2 className="font-display text-xl">{a.titel}</h2>
+                <h2 className="display-sm">{a.titel}</h2>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{a.text}</p>
               </section>
             ))}
@@ -43,7 +43,7 @@ function TeilnahmePage() {
               <p className="eyebrow">
                 {wettbewerbStatus.offen ? "Einreichung offen" : "Einreichung geschlossen"}
               </p>
-              <p className="mt-3 font-display text-2xl">Jahrgang {wettbewerbStatus.jahrgang}</p>
+              <p className="mt-3 display-sm">Jahrgang {wettbewerbStatus.jahrgang}</p>
               <p className="mt-3 text-sm text-muted-foreground">{wettbewerbStatus.hinweis}</p>
               <p className="mt-3 text-sm text-muted-foreground">
                 Du brauchst: eine Darstellung der Arbeit auf max. zehn Seiten als PDF (max. 10 MB) –

@@ -34,7 +34,7 @@ function WettbewerbPage() {
           <h2 id="konzept" className="eyebrow md:col-span-3">
             Konzept
           </h2>
-          <div className="md:col-span-9 max-w-3xl space-y-5 text-lg leading-relaxed">
+          <div className="md:col-span-9 max-w-3xl space-y-5 body-lg">
             <p>
               Ziel ist es, innovative und nachhaltige Gestaltung zu fördern, die sich durch
               größtmögliche ökonomische wie ökologische Qualität auszeichnet, funktional und
@@ -61,7 +61,7 @@ function WettbewerbPage() {
               key={k.key}
               className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-[var(--aed-pink)]/50 p-6 text-[var(--aed-pink-foreground)] transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
             >
-              <h3 className="font-display text-xl">{k.name}</h3>
+              <h3 className="display-sm">{k.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-foreground/80">{k.text}</p>
             </li>
           ))}
@@ -107,8 +107,8 @@ function WettbewerbPage() {
         <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {preise.map((p) => (
             <li key={p.platz} className="border border-line bg-card p-6">
-              <h3 className="font-display text-lg">{p.platz}</h3>
-              <p className="mt-2 font-display text-3xl" style={{ color: "var(--ink)" }}>
+              <h3 className="display-sm">{p.platz}</h3>
+              <p className="mt-2 display-sm" style={{ color: "var(--ink)" }}>
                 {p.dotierung}
               </p>
               <p className="mt-2 text-sm text-foreground">{p.info}</p>
@@ -128,7 +128,7 @@ function WettbewerbPage() {
               key={s.name}
               className="flex min-h-24 flex-col justify-center border-r border-b border-line bg-[var(--aed-pink)]/50 p-6 text-[var(--aed-pink-foreground)] transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
             >
-              <span className="block font-display text-lg">{s.name}</span>
+              <span className="block display-sm">{s.name}</span>
               <span className="mt-1 block text-sm text-foreground/80">{s.rolle}</span>
             </li>
           ))}

@@ -189,7 +189,7 @@ function Index() {
             <div key={k.label}>
               <dt className="sr-only">{k.label}</dt>
               <dd>
-                <span className="block font-display text-5xl leading-none">{k.wert}</span>
+                <span className="block display-md">{k.wert}</span>
                 <span className="eyebrow-muted mt-3 block">{k.label}</span>
               </dd>
             </div>

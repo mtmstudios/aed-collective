@@ -114,7 +114,7 @@ function MitgliedWerdenPage() {
         <ul className="mt-8 grid gap-6">
           {beitraege.map((b) => (
             <li key={b.typ} className="border border-line bg-card p-6">
-              <h3 className="font-display text-xl">{b.typ}</h3>
+              <h3 className="display-sm">{b.typ}</h3>
               <p className="mt-3 text-muted-foreground">
                 Mit einer Personenmitgliedschaft werden Sie Teil des aed-Netzwerks und ermöglichen ein
                 vielfältiges Programm aus Vorträgen, Ausstellungen und Exkursionen.
@@ -125,7 +125,7 @@ function MitgliedWerdenPage() {
             </li>
           ))}
           <li className="border border-line bg-card p-6">
-            <h3 className="font-display text-xl">Fördermitgliedschaft</h3>
+            <h3 className="display-sm">Fördermitgliedschaft</h3>
             <p className="mt-3 text-muted-foreground">
               Für Büros, Unternehmen und Institutionen – mit Nennung auf der Mitgliederseite.
               Unterstützen Sie den aed und seine Nachwuchsförderung.

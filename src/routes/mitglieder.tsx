@@ -35,7 +35,7 @@ function MitgliederPage() {
       </section>
       <section className="shell pb-24">
         <div className="rule-t grid gap-6 pt-8 md:grid-cols-2">
-          <p className="text-lg leading-relaxed">
+          <p className="body-lg">
             Dazu kommen mehr als <strong>400 Personenmitglieder</strong> – aus Datenschutzgründen
             nennen wir sie nicht namentlich.
           </p>

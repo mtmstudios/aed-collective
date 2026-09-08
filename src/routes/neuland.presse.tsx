@@ -38,7 +38,7 @@ function PressePage() {
                 href={k.url}
                 className="group flex flex-wrap items-center justify-between gap-4 border-b border-line py-6 transition-colors hover:bg-muted"
               >
-                <span className="font-display text-lg group-hover:text-[var(--brand-deep)]">{k.titel}</span>
+                <span className="display-sm group-hover:text-[var(--brand-deep)]">{k.titel}</span>
                 <span className="flex items-center gap-3 text-sm text-muted-foreground">
                   {k.typ}
                   <Download className="size-4" aria-hidden="true" />

@@ -56,7 +56,7 @@ export function PersonDialog({
             ) : (
               <div
                 aria-hidden="true"
-                className="flex aspect-4/5 w-full items-center justify-center bg-muted font-display text-5xl text-foreground"
+                className="flex aspect-4/5 w-full items-center justify-center bg-muted display-md text-foreground"
               >
                 {initials ?? initialen(person.name)}
               </div>
