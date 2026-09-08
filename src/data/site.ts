@@ -1044,6 +1044,6 @@ export const downloads = [
     titel: "aed Logo",
     beschreibung: "Das Vereinslogo für Presse und Partner.",
     typ: "JPG, 32 KB",
-    url: "https://www.aed-stuttgart.de/app/download/7925456963/aed_Logo.jpg",
+    url: "/bilder/presse/aed-logo-presse.jpg",
   },
 ];
