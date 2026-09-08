@@ -14,7 +14,81 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      neuland_einreichungen: {
+        Row: {
+          created_at: string
+          detailfotos: Json
+          eingereicht_am: string | null
+          einreichungs_id: string
+          email: string
+          id: string
+          idee: string | null
+          institution: string | null
+          kategorie: string | null
+          kurzbeschreibung: string | null
+          nachhaltigkeit: string | null
+          nachname: string | null
+          nutzen: string | null
+          projekttitel: string | null
+          rechte_bestaetigt: boolean
+          status: string
+          telefon: string | null
+          titelbild: Json | null
+          umsetzung: string | null
+          updated_at: string
+          video_link: string | null
+          vorname: string | null
+        }
+        Insert: {
+          created_at?: string
+          detailfotos?: Json
+          eingereicht_am?: string | null
+          einreichungs_id?: string
+          email: string
+          id?: string
+          idee?: string | null
+          institution?: string | null
+          kategorie?: string | null
+          kurzbeschreibung?: string | null
+          nachhaltigkeit?: string | null
+          nachname?: string | null
+          nutzen?: string | null
+          projekttitel?: string | null
+          rechte_bestaetigt?: boolean
+          status?: string
+          telefon?: string | null
+          titelbild?: Json | null
+          umsetzung?: string | null
+          updated_at?: string
+          video_link?: string | null
+          vorname?: string | null
+        }
+        Update: {
+          created_at?: string
+          detailfotos?: Json
+          eingereicht_am?: string | null
+          einreichungs_id?: string
+          email?: string
+          id?: string
+          idee?: string | null
+          institution?: string | null
+          kategorie?: string | null
+          kurzbeschreibung?: string | null
+          nachhaltigkeit?: string | null
+          nachname?: string | null
+          nutzen?: string | null
+          projekttitel?: string | null
+          rechte_bestaetigt?: boolean
+          status?: string
+          telefon?: string | null
+          titelbild?: Json | null
+          umsetzung?: string | null
+          updated_at?: string
+          video_link?: string | null
+          vorname?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
