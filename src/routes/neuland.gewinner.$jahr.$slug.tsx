@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { projekte } from "@/data/neuland";
 import { projektBilder } from "@/data/bilder";
+import { BildCredit } from "@/components/bild-credit";
 
 export const Route = createFileRoute("/neuland/gewinner/$jahr/$slug")({
   loader: ({ params }) => {
@@ -68,13 +69,14 @@ function ProjektDetail() {
       </header>
 
       {hero && (
-        <figure className="bleed">
+        <figure className="bleed relative">
           <img
             src={hero}
             alt={`${projekt.titel} von ${projekt.autor}`}
             className="max-h-[80vh] w-full object-contain"
             fetchPriority="high"
           />
+          <BildCredit src={hero} />
         </figure>
       )}
 
@@ -127,6 +129,7 @@ function ProjektDetail() {
                   decoding="async"
                   className="w-full bg-muted object-contain"
                 />
+                <BildCredit src={b} variant="caption" />
               </figure>
             ))}
           </div>

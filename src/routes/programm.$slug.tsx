@@ -3,6 +3,7 @@ import { ArrowLeft, CalendarPlus } from "lucide-react";
 import { events } from "@/data/site";
 import { eventBilder } from "@/data/bilder";
 import { formatDatum } from "@/components/event-card";
+import { BildCredit } from "@/components/bild-credit";
 
 function findEvent(slug: string) {
   return events.find((e) => e.slug === slug);
@@ -90,13 +91,14 @@ function EventDetail() {
       </header>
 
       {bild && (
-        <figure className="bleed">
+        <figure className="bleed relative">
           <img
             src={bild}
             alt={`${event.titel} – ${event.ort}`}
             className="max-h-[70vh] w-full object-cover"
             fetchPriority="high"
           />
+          <BildCredit src={bild} />
         </figure>
       )}
 
