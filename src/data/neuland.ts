@@ -177,12 +177,12 @@ export const presseKit = [
   {
     titel: "Banner quadratisch, Farbe (PNG, RGB)",
     typ: "PNG, 42 KB",
-    url: "https://www.aed-neuland.de/app/download/6462716866/aed-neuland_square_color.png",
+    url: "/bilder/presse/aed-neuland-square-color.png",
   },
   {
     titel: "Banner quer mit Jahreszahl (JPG, RGB)",
     typ: "JPG, 1,1 MB",
-    url: "https://www.aed-neuland.de/app/download/6462717666/aed-neuland-banner_2025_3_big_aed.jpg",
+    url: "/bilder/presse/aed-neuland-banner-2025.jpg",
   },
   {
     titel: "Anzeige DIN quer, schmal (PDF, CMYK)",
