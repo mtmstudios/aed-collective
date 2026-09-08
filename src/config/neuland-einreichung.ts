@@ -2,7 +2,13 @@
 // Bewerbungsschluss hier ändern (ISO-Zeitstempel, Zeitzone Berlin = +02:00 / +01:00).
 export const BEWERBUNGSSCHLUSS = "2026-10-31T23:59:59+01:00";
 
-export const KATEGORIEN = ["Kategorie A", "Kategorie B", "Kategorie C"] as const;
+export const KATEGORIEN = [
+  "Architecture + Engineering",
+  "Exhibition Design + Interior Design",
+  "Product Design",
+  "Communication Design",
+  "Interaction Design",
+] as const;
 
 export const MAX_DETAILFOTOS = 4;
 export const MAX_DATEIGROESSE_MB = 15;
