@@ -41,7 +41,7 @@ function WettbewerbPage() {
               nutzerfreundlich ist und höchsten ästhetischen Anforderungen entspricht. Im
               Mittelpunkt stehen immer der Mensch und der gesellschaftliche Nutzen des Entwurfs.
             </p>
-            <p className="text-base text-foreground">
+            <p className="body-base text-foreground">
               Eine unabhängige Jury aus rund 20 Fachleuten entscheidet über die Vergabe. Jede
               prämierte Arbeit wird mit Jurystatement auf einer eigenen, dauerhaft erreichbaren
               Projektseite vorgestellt – Studierende können ihre Auszeichnung so direkt in

@@ -38,7 +38,7 @@ export function ProjektCard({ projekt, gross = false }: { projekt: Projekt; gros
           {projekt.autor}
           {projekt.hochschule ? ` · ${projekt.hochschule}` : ""}
         </p>
-        <p className="meta mt-1 italic">{projekt.kategorie}</p>
+        <p className="meta mt-1">{projekt.kategorie}</p>
       </Link>
     </article>
   );
