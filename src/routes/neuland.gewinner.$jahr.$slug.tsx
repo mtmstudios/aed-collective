@@ -129,6 +129,7 @@ function ProjektDetail() {
                   decoding="async"
                   className="w-full bg-muted object-contain"
                 />
+                <BildCredit src={b} variant="caption" />
               </figure>
             ))}
           </div>
