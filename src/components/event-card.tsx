@@ -43,7 +43,7 @@ export function EventCard({
           {" · "}
           {event.ort}
         </p>
-        <p className={`mt-3 leading-relaxed ${gross ? "text-lg" : "text-base"}`}>{event.teaser}</p>
+        <p className={"mt-3 " + (gross ? "body-lg" : "body-base")}>{event.teaser}</p>
       </Link>
     </article>
   );

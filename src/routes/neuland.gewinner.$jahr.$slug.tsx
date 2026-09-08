@@ -91,13 +91,13 @@ function ProjektDetail() {
               {projekt.art && (
                 <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-line py-3">
                   <dt className="eyebrow-muted w-32 shrink-0">Art der Arbeit</dt>
-                  <dd className="flex-1 text-base">{projekt.art}</dd>
+                  <dd className="flex-1 body-base">{projekt.art}</dd>
                 </div>
               )}
               {projekt.betreuung && (
                 <div className="flex flex-wrap gap-x-6 gap-y-1 border-b border-line py-3">
                   <dt className="eyebrow-muted w-32 shrink-0">Betreuung</dt>
-                  <dd className="flex-1 text-base">{projekt.betreuung}</dd>
+                  <dd className="flex-1 body-base">{projekt.betreuung}</dd>
                 </div>
               )}
             </dl>

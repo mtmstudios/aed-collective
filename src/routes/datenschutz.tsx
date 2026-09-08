@@ -54,7 +54,7 @@ function DatenschutzPage() {
       <section className="shell max-w-3xl space-y-8 pb-24">
         {abschnitte.map((a) => (
           <div key={a.titel} className="rule-t pt-6">
-            <h2 className="font-display text-xl">{a.titel}</h2>
+            <h2 className="display-sm">{a.titel}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">{a.text}</p>
           </div>
         ))}

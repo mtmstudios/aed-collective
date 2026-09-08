@@ -22,7 +22,7 @@ function ImpressumPage() {
       <PageHeader eyebrow="Rechtliches" titel="Impressum" />
       <section className="shell max-w-3xl space-y-8 pb-24">
         <div className="rule-t pt-6">
-          <h2 className="font-display text-xl">Angaben gemäß § 5 DDG</h2>
+          <h2 className="display-sm">Angaben gemäß § 5 DDG</h2>
           <address className="mt-3 not-italic leading-relaxed">
             {kontakt.name}
             <br />
@@ -36,25 +36,25 @@ function ImpressumPage() {
           </address>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="font-display text-xl">Vertretungsberechtigter Vorstand</h2>
+          <h2 className="display-sm">Vertretungsberechtigter Vorstand</h2>
           <p className="mt-3 leading-relaxed">
             Dr. Frank Heinlein (1. Vorsitzender), Johanna Neves Pimenta (2. Vorsitzende)
           </p>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="font-display text-xl">Registereintrag</h2>
+          <h2 className="display-sm">Registereintrag</h2>
           <p className="mt-3 leading-relaxed">
             Eingetragen im Vereinsregister beim Amtsgericht Stuttgart, VR-Nr. 7136.
           </p>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="font-display text-xl">Verantwortlich für den Inhalt</h2>
+          <h2 className="display-sm">Verantwortlich für den Inhalt</h2>
           <p className="mt-3 leading-relaxed">
             Sara Dahme (Vorstand Kommunikation), Anschrift wie oben.
           </p>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="font-display text-xl">Haftung für Inhalte und Links</h2>
+          <h2 className="display-sm">Haftung für Inhalte und Links</h2>
           <p className="mt-3 leading-relaxed text-muted-foreground">
             Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten verantwortlich. Für
             Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt
@@ -62,7 +62,7 @@ function ImpressumPage() {
           </p>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="font-display text-xl">Urheberrecht</h2>
+          <h2 className="display-sm">Urheberrecht</h2>
           <p className="mt-3 leading-relaxed text-muted-foreground">
             Die Rechte an den gezeigten Projektarbeiten liegen bei den jeweiligen Urheberinnen und
             Urhebern. Eine Weiterverwendung bedarf deren Zustimmung.

@@ -61,7 +61,7 @@ function VereinPage() {
           <h2 id="mission" className="eyebrow md:col-span-3">
             Mission
           </h2>
-          <div className="md:col-span-9 max-w-3xl space-y-6 text-lg leading-relaxed">
+          <div className="md:col-span-9 max-w-3xl space-y-6 body-lg">
             <p>
               Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel
               ist es, die große Gestaltungskompetenz in der Region Stuttgart – vom Produkt- und
@@ -131,7 +131,7 @@ function VereinPage() {
             <h2 id="vorstand-preview" className="display-lg max-w-4xl">
               Vorstand und Ehrenvorsitzender
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-2xl body-lg text-muted-foreground">
               Die Köpfe hinter dem aed e.V.
             </p>
           </div>
@@ -155,13 +155,13 @@ function VereinPage() {
                   ) : (
                     <div
                       aria-hidden="true"
-                      className="flex aspect-4/5 items-center justify-center bg-muted font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-[var(--aed-hover)] group-hover:text-[var(--aed-hover-foreground)]"
+                      className="flex aspect-4/5 items-center justify-center bg-muted display-md text-foreground transition-colors duration-300 group-hover:bg-[var(--aed-hover)] group-hover:text-[var(--aed-hover-foreground)]"
                     >
                       {isEhren ? "WS" : initialen(person.name)}
                     </div>
                   )}
                   <div className="mt-4">
-                    <h3 className="font-display text-lg leading-tight underline-offset-4 group-hover:underline">
+                    <h3 className="display-sm leading-tight underline-offset-4 group-hover:underline">
                       {person.name}
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
@@ -183,7 +183,7 @@ function VereinPage() {
             <h2 id="beirat-preview" className="display-lg max-w-4xl">
               Beirat
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-2xl body-lg text-muted-foreground">
               Zehn Stimmen aus allen Disziplinen
             </p>
           </div>
@@ -206,13 +206,13 @@ function VereinPage() {
                   ) : (
                     <div
                       aria-hidden="true"
-                      className="flex aspect-4/5 items-center justify-center bg-card font-display text-5xl text-foreground transition-colors duration-300 group-hover:bg-[var(--aed-hover)] group-hover:text-[var(--aed-hover-foreground)]"
+                      className="flex aspect-4/5 items-center justify-center bg-card display-md text-foreground transition-colors duration-300 group-hover:bg-[var(--aed-hover)] group-hover:text-[var(--aed-hover-foreground)]"
                     >
                       {initialen(person.name)}
                     </div>
                   )}
                   <div className="mt-4">
-                    <h3 className="font-display text-lg leading-tight">{person.name}</h3>
+                    <h3 className="display-sm leading-tight">{person.name}</h3>
                     <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
                   </div>
                 </article>
@@ -230,7 +230,7 @@ function VereinPage() {
             <h2 id="foerdermitglieder-preview" className="display-lg max-w-4xl">
               Fördermitglieder
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-2xl body-lg text-muted-foreground">
               Firmen, Körperschaften &amp; Institutionen
             </p>
           </div>
@@ -270,7 +270,7 @@ function VereinPage() {
             <h2 id="satzung-preview" className="display-lg max-w-4xl">
               Satzung
             </h2>
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-2xl body-lg text-muted-foreground">
               Rechtliche Grundlage des Vereins
             </p>
           </div>

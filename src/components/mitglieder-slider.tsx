@@ -21,7 +21,7 @@ function Portraet({ person }: { person: Person }) {
           <div className="h-full w-full bg-muted" aria-hidden="true" />
         )}
       </div>
-      <p className="mt-3 w-[168px] font-display text-base leading-tight md:w-[212px] md:text-lg">
+      <p className="mt-3 w-[168px] display-sm leading-tight md:w-[212px]">
         {person.name}
       </p>
       <p className="meta mt-1 w-[168px] md:w-[212px]">{person.rolle}</p>

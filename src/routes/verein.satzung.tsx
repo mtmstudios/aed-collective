@@ -76,7 +76,7 @@ function SatzungPage() {
           <div className="md:col-span-8 space-y-8">
             {paragraphen.map((p) => (
               <section key={p.titel} className="rule-t pt-6">
-                <h2 className="font-display text-xl">{p.titel}</h2>
+                <h2 className="display-sm">{p.titel}</h2>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{p.text}</p>
               </section>
             ))}

@@ -124,7 +124,7 @@ function ProgrammPage() {
               <p className="eyebrow mt-4">Download</p>
               <h3 className="display-sm mt-2">Aktueller Flyer</h3>
               <p className="meta mt-2">Programmheft · aed e.V.</p>
-              <p className="mt-3 text-base leading-relaxed">
+              <p className="mt-3 body-base">
                 Das aktuelle Programmheft mit allen Terminen des Halbjahres – hier folgt in Kürze der
                 Download.
               </p>
@@ -145,7 +145,7 @@ function ProgrammPage() {
                 </div>
                 <p className="eyebrow mt-4">jung & hungrig</p>
                 <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>
-                <p className="mt-3 text-base leading-relaxed">
+                <p className="mt-3 body-base">
                   Mit der Reihe „jung & hungrig" besuchen wir regelmäßig aufstrebende junge
                   Studios – Vorträge, Führungen und Studiobesuche, bei denen du genau die Leute
                   triffst, die deine Arbeit interessieren.
@@ -203,7 +203,7 @@ function ProgrammPage() {
                 <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
                   {referentenSortiert.map((r) => (
                     <li key={`${r.name}-${r.org}`} className="pb-2">
-                      <span className="block text-base">{r.name}</span>
+                      <span className="block body-base">{r.name}</span>
                       <span className="meta block">
                         {r.url ? (
                           <a href={r.url} target="_blank" rel="noreferrer" className="link-underline">
