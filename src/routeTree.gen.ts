@@ -37,6 +37,7 @@ import { Route as NeulandGewinnerInnenJahrRouteImport } from './routes/neuland.g
 import { Route as NeulandEinreichungRouteImport } from './routes/neuland.einreichung'
 import { Route as Neuland1SplatRouteImport } from './routes/neuland-1.$'
 import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitglieder.foerdermitglieder'
+import { Route as AdminBildverzeichnisRouteImport } from './routes/admin.bildverzeichnis'
 import { Route as VereinVorstandIndexRouteImport } from './routes/verein.vorstand.index'
 import { Route as VereinBeiratIndexRouteImport } from './routes/verein.beirat.index'
 import { Route as NeulandGewinnerIndexRouteImport } from './routes/neuland.gewinner.index'
@@ -185,6 +186,11 @@ const MitgliederFoerdermitgliederRoute =
     path: '/foerdermitglieder',
     getParentRoute: () => MitgliederRoute,
   } as any)
+const AdminBildverzeichnisRoute = AdminBildverzeichnisRouteImport.update({
+  id: '/admin/bildverzeichnis',
+  path: '/admin/bildverzeichnis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VereinVorstandIndexRoute = VereinVorstandIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -225,6 +231,7 @@ export interface FileRoutesByFullPath {
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unlock': typeof UnlockRoute
+  '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -259,6 +266,7 @@ export interface FileRoutesByTo {
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unlock': typeof UnlockRoute
+  '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -293,6 +301,7 @@ export interface FileRoutesById {
   '/service': typeof ServiceRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unlock': typeof UnlockRoute
+  '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -330,6 +339,7 @@ export interface FileRouteTypes {
     | '/service'
     | '/sitemap.xml'
     | '/unlock'
+    | '/admin/bildverzeichnis'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -364,6 +374,7 @@ export interface FileRouteTypes {
     | '/service'
     | '/sitemap.xml'
     | '/unlock'
+    | '/admin/bildverzeichnis'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -397,6 +408,7 @@ export interface FileRouteTypes {
     | '/service'
     | '/sitemap.xml'
     | '/unlock'
+    | '/admin/bildverzeichnis'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -433,6 +445,7 @@ export interface RootRouteChildren {
   ServiceRoute: typeof ServiceRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UnlockRoute: typeof UnlockRoute
+  AdminBildverzeichnisRoute: typeof AdminBildverzeichnisRoute
   Neuland1SplatRoute: typeof Neuland1SplatRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
   VereinBeiratRoute: typeof VereinBeiratRouteWithChildren
@@ -641,6 +654,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MitgliederFoerdermitgliederRouteImport
       parentRoute: typeof MitgliederRoute
     }
+    '/admin/bildverzeichnis': {
+      id: '/admin/bildverzeichnis'
+      path: '/admin/bildverzeichnis'
+      fullPath: '/admin/bildverzeichnis'
+      preLoaderRoute: typeof AdminBildverzeichnisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/verein/vorstand/': {
       id: '/verein/vorstand/'
       path: '/'
@@ -757,6 +777,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServiceRoute: ServiceRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   UnlockRoute: UnlockRoute,
+  AdminBildverzeichnisRoute: AdminBildverzeichnisRoute,
   Neuland1SplatRoute: Neuland1SplatRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
   VereinBeiratRoute: VereinBeiratRouteWithChildren,
