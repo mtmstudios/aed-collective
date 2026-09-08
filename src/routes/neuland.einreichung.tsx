@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { cloneElement, isValidElement, useId, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { supabase } from "@/integrations/supabase/client";
@@ -629,10 +629,13 @@ function Feld({
   hinweis?: string;
   children: React.ReactNode;
 }) {
+  const id = useId();
   return (
     <div className="space-y-2">
-      <Label>{label}</Label>
-      {children}
+      <Label htmlFor={id}>{label}</Label>
+      {isValidElement(children)
+        ? cloneElement(children as React.ReactElement<{ id?: string }>, { id })
+        : children}
       {hinweis && <p className="text-xs text-muted-foreground">{hinweis}</p>}
     </div>
   );
@@ -649,15 +652,16 @@ function ZaehlFeld({
   max: number;
   onChange: (v: string) => void;
 }) {
+  const id = useId();
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-        <Label>{label}</Label>
+        <Label htmlFor={id}>{label}</Label>
         <span className="text-xs text-muted-foreground">
           {wert.length} / {max}
         </span>
       </div>
-      <Textarea rows={4} maxLength={max} value={wert} onChange={(e) => onChange(e.target.value.slice(0, max))} />
+      <Textarea id={id} rows={4} maxLength={max} value={wert} onChange={(e) => onChange(e.target.value.slice(0, max))} />
     </div>
   );
 }
