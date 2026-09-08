@@ -14,6 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
+      bildrechte: {
+        Row: {
+          created_at: string
+          dateiname: string
+          freigabedatum: string | null
+          id: string
+          jahrgang: string | null
+          kategorie: string
+          notiz: string
+          pfad: string
+          quelle: string
+          rechteart: string
+          status: string
+          updated_at: string
+          urheber: string
+        }
+        Insert: {
+          created_at?: string
+          dateiname: string
+          freigabedatum?: string | null
+          id?: string
+          jahrgang?: string | null
+          kategorie: string
+          notiz?: string
+          pfad: string
+          quelle?: string
+          rechteart?: string
+          status?: string
+          updated_at?: string
+          urheber?: string
+        }
+        Update: {
+          created_at?: string
+          dateiname?: string
+          freigabedatum?: string | null
+          id?: string
+          jahrgang?: string | null
+          kategorie?: string
+          notiz?: string
+          pfad?: string
+          quelle?: string
+          rechteart?: string
+          status?: string
+          updated_at?: string
+          urheber?: string
+        }
+        Relationships: []
+      }
       neuland_einreichungen: {
         Row: {
           created_at: string
