@@ -279,10 +279,11 @@
   font-weight: 400;
 }
 
-/* Kicker/Ressort – exakt Vogue: uppercase, geometrische Sans, weit gesperrt */
+/* Kicker/Ressort – uppercase, gesperrt. Eine einzige Kicker-Größe. */
 @utility eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
@@ -291,19 +292,34 @@
 
 @utility eyebrow-muted {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--muted-foreground);
 }
 
-/* Meta-Zeile (Autor, Datum, Ort) */
+/* Meta-Zeile (Autor, Datum, Ort) – gleiche Stufe wie der Kicker */
 @utility meta {
   font-family: var(--font-sans);
   font-size: 0.8125rem;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--muted-foreground);
+}
+
+/* Lauftext-Stufen: nur zwei (Standard 1,0625rem aus body + groß) */
+@utility body-lg {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.65;
+}
+
+@utility body-base {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
 }
 
 /* Editorial-Lauftext */
@@ -317,12 +333,12 @@
   }
 }
 
-/* Lead / Vorspann */
+/* Lead / Vorspann – aufrecht, nie kursiv */
 @utility lead {
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 1.9vw, 1.6rem);
-  line-height: 1.45;
-  font-style: italic;
+  font-size: clamp(1.1875rem, 1.4vw, 1.375rem);
+  line-height: 1.5;
+  font-style: normal;
 }
 
 /* Linie innerhalb eines Themas: dunkel, schriftbündig (Satzspiegel) */
