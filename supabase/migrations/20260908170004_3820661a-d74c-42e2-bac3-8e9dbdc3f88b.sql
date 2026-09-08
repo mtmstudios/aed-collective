@@ -1,0 +1,1 @@
+UPDATE public.bildrechte SET urheber = '' WHERE urheber = 'Testfoto Müller';
