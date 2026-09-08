@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { teilnahmebedingungen } from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
 
@@ -50,12 +50,9 @@ function TeilnahmePage() {
                 Um die Einreichung möglichst einfach zu gestalten, haben wir ein
                 Einreichungsformular vorbereitet.
               </p>
-              <a
-                href="mailto:info@aed-stuttgart.de?subject=neuland%202027%20Einreichung"
-                className="btn-solid mt-6 w-full"
-              >
+              <Link to="/neuland/einreichung" className="btn-solid mt-6 w-full">
                 Am Wettbewerb neuland 2027 teilnehmen
-              </a>
+              </Link>
             </div>
           </aside>
         </div>
