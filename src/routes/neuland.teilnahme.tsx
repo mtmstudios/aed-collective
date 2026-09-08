@@ -40,20 +40,21 @@ function TeilnahmePage() {
           </div>
           <aside className="md:col-span-4">
             <div className="sticky top-28 border border-line bg-card p-6">
-              <p className="eyebrow">
-                {wettbewerbStatus.offen ? "Einreichung offen" : "Einreichung geschlossen"}
-              </p>
-              <p className="mt-3 display-sm">Jahrgang {wettbewerbStatus.jahrgang}</p>
-              <p className="mt-3 text-sm text-muted-foreground">{wettbewerbStatus.hinweis}</p>
+              <p className="eyebrow">Teilnahme an der Ausschreibung 2026</p>
               <p className="mt-3 text-sm text-muted-foreground">
-                Du brauchst: eine Darstellung der Arbeit auf max. zehn Seiten als PDF (max. 10 MB) –
-                mit Name, Anschrift, Hochschule, Titel und Kategorie auf der Titelseite.
+                Für die Teilnahme am aed-Wettbewerb neuland für 2027 brauchst Du folgende
+                Unterlagen: Darstellungen Deiner Arbeit, Titel und Beschreibungen, Kategorie der
+                Einreichung und Deine persönlichen Daten.
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Um die Einreichung möglichst einfach zu gestalten, haben wir ein
+                Einreichungsformular vorbereitet.
               </p>
               <a
-                href="mailto:info@aed-stuttgart.de?subject=neuland%20Newsletter"
+                href="mailto:info@aed-stuttgart.de?subject=neuland%202027%20Einreichung"
                 className="btn-solid mt-6 w-full"
               >
-                Zum nächsten Jahrgang informiert werden
+                Am Wettbewerb neuland 2027 teilnehmen
               </a>
             </div>
           </aside>
