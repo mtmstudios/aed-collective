@@ -72,10 +72,8 @@ function NeulandIndex() {
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
-              <p className="eyebrow text-white/85">
-                {wettbewerbStatus.offen ? "Einreichung offen" : "Jahrgang 2025 abgeschlossen"}
-              </p>
-              <h1 id="neuland-titel-head" className="display-xl mt-4 text-white">neuland</h1>
+              <p className="eyebrow text-white/85">Neue Ausschreibung – jetzt bewerben</p>
+              <h1 id="neuland-titel-head" className="display-xl mt-4 text-white">neuland 2027</h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
                 Der interdisziplinäre Nachwuchswettbewerb des aed – für Studierende und
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
