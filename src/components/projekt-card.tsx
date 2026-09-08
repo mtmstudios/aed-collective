@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { Projekt } from "@/data/neuland";
 import { projektBilder } from "@/data/bilder";
+import { BildCredit } from "@/components/bild-credit";
 
 export function projektBild(p: Projekt) {
   return projektBilder[`${p.jahr}/${p.slug}`]?.[0];
@@ -16,7 +17,8 @@ export function ProjektCard({ projekt, gross = false }: { projekt: Projekt; gros
         params={{ jahr: projekt.jahr, slug: projekt.slug }}
         className="block"
       >
-        <div className={`img-zoom bg-muted ${gross ? "aspect-3/2" : "aspect-4/3"}`}>
+        <div className={`img-zoom relative bg-muted ${gross ? "aspect-3/2" : "aspect-4/3"}`}>
+          <BildCredit src={bild} />
           {bild ? (
             <img
               src={bild}
