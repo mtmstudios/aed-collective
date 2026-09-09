@@ -1,0 +1,1 @@
+ALTER TABLE public.bildrechte ADD COLUMN IF NOT EXISTS verwendungen text[] NOT NULL DEFAULT '{}'::text[];
