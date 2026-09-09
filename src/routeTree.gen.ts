@@ -37,6 +37,7 @@ import { Route as NeulandGewinnerInnenJahrRouteImport } from './routes/neuland.g
 import { Route as NeulandEinreichungRouteImport } from './routes/neuland.einreichung'
 import { Route as Neuland1SplatRouteImport } from './routes/neuland-1.$'
 import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitglieder.foerdermitglieder'
+import { Route as AdminBildzuordnungRouteImport } from './routes/admin.bildzuordnung'
 import { Route as AdminBildverzeichnisRouteImport } from './routes/admin.bildverzeichnis'
 import { Route as VereinVorstandIndexRouteImport } from './routes/verein.vorstand.index'
 import { Route as VereinBeiratIndexRouteImport } from './routes/verein.beirat.index'
@@ -186,6 +187,11 @@ const MitgliederFoerdermitgliederRoute =
     path: '/foerdermitglieder',
     getParentRoute: () => MitgliederRoute,
   } as any)
+const AdminBildzuordnungRoute = AdminBildzuordnungRouteImport.update({
+  id: '/admin/bildzuordnung',
+  path: '/admin/bildzuordnung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminBildverzeichnisRoute = AdminBildverzeichnisRouteImport.update({
   id: '/admin/bildverzeichnis',
   path: '/admin/bildverzeichnis',
@@ -232,6 +238,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unlock': typeof UnlockRoute
   '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
+  '/admin/bildzuordnung': typeof AdminBildzuordnungRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -267,6 +274,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unlock': typeof UnlockRoute
   '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
+  '/admin/bildzuordnung': typeof AdminBildzuordnungRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -302,6 +310,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/unlock': typeof UnlockRoute
   '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
+  '/admin/bildzuordnung': typeof AdminBildzuordnungRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -340,6 +349,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/unlock'
     | '/admin/bildverzeichnis'
+    | '/admin/bildzuordnung'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -375,6 +385,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/unlock'
     | '/admin/bildverzeichnis'
+    | '/admin/bildzuordnung'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -409,6 +420,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/unlock'
     | '/admin/bildverzeichnis'
+    | '/admin/bildzuordnung'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -446,6 +458,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UnlockRoute: typeof UnlockRoute
   AdminBildverzeichnisRoute: typeof AdminBildverzeichnisRoute
+  AdminBildzuordnungRoute: typeof AdminBildzuordnungRoute
   Neuland1SplatRoute: typeof Neuland1SplatRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
   VereinBeiratRoute: typeof VereinBeiratRouteWithChildren
@@ -654,6 +667,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MitgliederFoerdermitgliederRouteImport
       parentRoute: typeof MitgliederRoute
     }
+    '/admin/bildzuordnung': {
+      id: '/admin/bildzuordnung'
+      path: '/admin/bildzuordnung'
+      fullPath: '/admin/bildzuordnung'
+      preLoaderRoute: typeof AdminBildzuordnungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/bildverzeichnis': {
       id: '/admin/bildverzeichnis'
       path: '/admin/bildverzeichnis'
@@ -778,6 +798,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   UnlockRoute: UnlockRoute,
   AdminBildverzeichnisRoute: AdminBildverzeichnisRoute,
+  AdminBildzuordnungRoute: AdminBildzuordnungRoute,
   Neuland1SplatRoute: Neuland1SplatRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
   VereinBeiratRoute: VereinBeiratRouteWithChildren,
