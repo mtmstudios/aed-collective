@@ -41,6 +41,29 @@ const KAT_LABEL: Record<string, string> = {
 
 const urlNachPfad = new Map(BILD_MANIFEST.map((b) => [b.pfad, b.url]));
 
+/** Leitet aus Dateiname/Verwendung den inhaltlichen Zusammenhang (Artikel/Abschnitt) ab. */
+function gruppeVon(b: BildrechtRow): { key: string; titel: string; orte: string[] } {
+  const basis = b.dateiname.replace(/\.[a-z0-9]+$/i, "").replace(/-\d+$/, "");
+  const orte = b.verwendungen ?? [];
+  if (b.kategorie === "projekt") {
+    return {
+      key: `projekt:${b.jahrgang ?? "ohne"}:${basis}`,
+      titel: `${basis}${b.jahrgang ? ` · Jahrgang ${b.jahrgang}` : ""}`,
+      orte,
+    };
+  }
+  if (orte.length === 1) return { key: `ort:${orte[0]}`, titel: orte[0], orte };
+  if (orte.length > 1)
+    return {
+      key: `mehrfach:${[...orte].sort().join("|")}`,
+      titel: `Mehrfach verwendet: ${[...orte].sort().join(", ")}`,
+      orte,
+    };
+  return { key: "ohne", titel: "Aktuell nicht verwendet", orte };
+}
+
+type Gruppe = { key: string; titel: string; orte: string[]; bilder: BildrechtRow[] };
+
 function csvFeld(wert: string | null): string {
   return `"${(wert ?? "").replace(/"/g, '""')}"`;
 }
