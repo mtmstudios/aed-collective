@@ -1,4 +1,7 @@
 // Programmheft-Cover des aed e.V. (CDN-Assets), chronologisch sortiert
+import c2005_01 from "@/assets/cover/2005_01_aed.webp.asset.json";
+import c2005_02 from "@/assets/cover/2005_02_aed.webp.asset.json";
+import c2006_01 from "@/assets/cover/2006_01_aed.webp.asset.json";
 import c2006_02 from "@/assets/cover/2006_02_aed.png.asset.json";
 import c2007_01 from "@/assets/cover/2007_01_aed.png.asset.json";
 import c2007_02 from "@/assets/cover/2007_02_aed.png.asset.json";
