@@ -84,6 +84,7 @@ function Bildverzeichnis() {
   const pruefen = useServerFn(pruefeAdminPasswort);
   const laden = useServerFn(ladeBildverzeichnis);
   const speichern = useServerFn(speichereBildrecht);
+  const speichernGruppe = useServerFn(speichereBildrechteGruppe);
 
   useEffect(() => {
     const gespeichert = sessionStorage.getItem("aed-admin-pw");
