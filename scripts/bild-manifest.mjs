@@ -58,6 +58,96 @@ for (const datei of walk(join(ROOT, "src/assets/cover"))) {
 
 eintraege.sort((a, b) => a.pfad.localeCompare(b.pfad));
 
+/* ---------- Verwendungsorte im Quellcode ermitteln ---------- */
+
+const quellDateien = walk(join(ROOT, "src")).filter(
+  (f) => /\.(ts|tsx|js|jsx)$/.test(f) && !f.endsWith("src/data/bild-manifest.ts"),
+);
+const inhalt = new Map();
+for (const f of quellDateien) inhalt.set(f, readFileSync(f, "utf8"));
+
+function aufloesen(spez, vonDatei) {
+  let basis;
+  if (spez.startsWith("@/")) basis = join(ROOT, "src", spez.slice(2));
+  else if (spez.startsWith(".")) basis = join(vonDatei, "..", spez);
+  else return null;
+  const kandidaten = [
+    basis,
+    basis + ".ts",
+    basis + ".tsx",
+    join(basis, "index.ts"),
+    join(basis, "index.tsx"),
+  ];
+  return kandidaten.find((k) => inhalt.has(k)) ?? null;
+}
+
+// Wer importiert welche Datei?
+const importeure = new Map();
+for (const [datei, text] of inhalt) {
+  for (const m of text.matchAll(/from\s+["']([^"']+)["']/g)) {
+    const ziel = aufloesen(m[1], datei);
+    if (!ziel) continue;
+    if (!importeure.has(ziel)) importeure.set(ziel, new Set());
+    importeure.get(ziel).add(datei);
+  }
+}
+
+function routePfad(rel) {
+  const name = rel.slice("src/routes/".length).replace(/\.(tsx|ts)$/, "");
+  if (name === "index") return "/";
+  if (name === "__root") return "Layout (alle Seiten)";
+  return (
+    "/" +
+    name
+      .replace(/\[\.\]/g, ".")
+      .split(".")
+      .filter((t) => t !== "index")
+      .join("/")
+  );
+}
+
+function label(datei) {
+  const rel = datei.slice(ROOT.length + 1);
+  if (rel.startsWith("src/routes/")) return `Seite ${routePfad(rel)}`;
+  if (rel.startsWith("src/components/"))
+    return `Komponente ${basename(rel).replace(/\.(tsx|ts)$/, "")}`;
+  if (rel.startsWith("src/data/")) return `Daten ${basename(rel).replace(/\.(tsx|ts)$/, "")}`;
+  return rel;
+}
+
+for (const eintrag of eintraege) {
+  const treffer = new Set();
+  const begriffe = new Set([eintrag.url, eintrag.pfad, eintrag.dateiname].filter(Boolean));
+
+  for (const [datei, text] of inhalt) {
+    if ([...begriffe].some((s) => text.includes(s))) treffer.add(datei);
+  }
+
+  // Schlüssel aus Datenmodulen (z. B. "sammlung-amann": "/bilder/...") mitsuchen
+  for (const datei of treffer) {
+    if (!datei.includes("/src/data/")) continue;
+    for (const zeile of inhalt.get(datei).split("\n")) {
+      if (!zeile.includes(eintrag.url) && !zeile.includes(eintrag.dateiname)) continue;
+      for (const m of zeile.matchAll(/["']([A-Za-z0-9][\w-]{3,})["']/g)) {
+        const kandidat = m[1];
+        if (!kandidat.includes("/") && !kandidat.includes(".")) begriffe.add(`"${kandidat}"`);
+      }
+    }
+  }
+  for (const [datei, text] of inhalt) {
+    if ([...begriffe].some((s) => text.includes(s))) treffer.add(datei);
+  }
+
+  // Komponenten eine Ebene zu ihren Seiten hochlaufen
+  const alle = new Set(treffer);
+  for (const d of treffer) {
+    if (!d.includes("/src/components/")) continue;
+    for (const imp of importeure.get(d) ?? []) if (imp.includes("/src/routes/")) alle.add(imp);
+  }
+
+  eintrag.verwendungen = [...new Set([...alle].map(label))].sort();
+}
+
 const out = `// AUTOMATISCH ERZEUGT von scripts/bild-manifest.mjs – nicht manuell bearbeiten.
 export type BildManifestEintrag = {
   pfad: string;
@@ -65,6 +155,7 @@ export type BildManifestEintrag = {
   kategorie: "event" | "person" | "projekt" | "presse" | "cover";
   jahrgang: string | null;
   url: string;
+  verwendungen: string[];
 };
 
 export const BILD_MANIFEST: BildManifestEintrag[] = ${JSON.stringify(eintraege, null, 2)};

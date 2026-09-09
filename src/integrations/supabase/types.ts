@@ -29,6 +29,7 @@ export type Database = {
           status: string
           updated_at: string
           urheber: string
+          verwendungen: string[]
         }
         Insert: {
           created_at?: string
@@ -44,6 +45,7 @@ export type Database = {
           status?: string
           updated_at?: string
           urheber?: string
+          verwendungen?: string[]
         }
         Update: {
           created_at?: string
@@ -59,6 +61,7 @@ export type Database = {
           status?: string
           updated_at?: string
           urheber?: string
+          verwendungen?: string[]
         }
         Relationships: []
       }
