@@ -346,38 +346,162 @@ function Bildverzeichnis() {
         </Button>
       </div>
 
-      <p className="mt-3 text-xs text-muted-foreground">{gefiltert.length} Bilder angezeigt</p>
+      <p className="mt-3 text-xs text-muted-foreground">
+        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · pinker Gruppenrahmen =
+        vollständig geklärt oder an mehreren Stellen verwendet
+      </p>
 
-      <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {gefiltert.map((b) => (
-          <button
-            key={b.pfad}
-            onClick={() => setOffen(b.pfad)}
-            className={`rounded p-2 text-left hover:bg-muted ${
-              b.status === "geklaert"
-                ? "border-[5px] border-[#fe7fff]"
-                : "border-[5px] border-neutral-200"
-            }`}
-          >
-            <img
-              src={urlNachPfad.get(b.pfad) ?? ""}
-              alt={b.dateiname}
-              loading="lazy"
-              width={240}
-              height={160}
-              className="h-24 w-full bg-muted object-cover"
-            />
-            <p className="mt-2 break-all text-[11px] leading-tight">{b.dateiname}</p>
-            <p className="text-[11px] text-muted-foreground">
-              {KAT_LABEL[b.kategorie] ?? b.kategorie}
-              {b.jahrgang ? ` ${b.jahrgang}` : ""} · {STATUS_LABEL[b.status] ?? b.status}
-            </p>
-            {!(b.verwendungen ?? []).length && (
-              <p className="text-[11px] text-muted-foreground">aktuell nicht verwendet</p>
-            )}
-          </button>
-        ))}
+      <div className="mt-3 space-y-6">
+        {gruppen.map((g) => {
+          const alleGeklaert = g.bilder.every((b) => b.status === "geklaert");
+          const mehrfach = g.orte.length > 1;
+          return (
+            <section
+              key={g.key}
+              className={`rounded p-3 ${
+                alleGeklaert || mehrfach
+                  ? "border-[5px] border-[#fe7fff]"
+                  : "border-[5px] border-neutral-200"
+              }`}
+            >
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b pb-2">
+                <div>
+                  <h2 className="text-sm font-semibold">{g.titel}</h2>
+                  <p className="text-[11px] text-muted-foreground">
+                    {g.bilder.length} Bild{g.bilder.length === 1 ? "" : "er"}
+                    {mehrfach ? " · an mehreren Stellen verwendet" : ""}
+                    {g.bilder.length === 1 ? " · Einzelbild" : ""}
+                  </p>
+                </div>
+                <Button variant="outline" size="sm" onClick={() => setGruppeOffen(g.key)}>
+                  Angaben für ganze Gruppe
+                </Button>
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                {g.bilder.map((b) => (
+                  <button
+                    key={b.pfad}
+                    onClick={() => setOffen(b.pfad)}
+                    className={`rounded p-2 text-left hover:bg-muted ${
+                      b.status === "geklaert"
+                        ? "border-[5px] border-[#fe7fff]"
+                        : "border-[5px] border-neutral-200"
+                    }`}
+                  >
+                    <img
+                      src={urlNachPfad.get(b.pfad) ?? ""}
+                      alt={b.dateiname}
+                      loading="lazy"
+                      width={240}
+                      height={160}
+                      className="h-24 w-full bg-muted object-cover"
+                    />
+                    <p className="mt-2 break-all text-[11px] leading-tight">{b.dateiname}</p>
+                    <p className="text-[11px] text-muted-foreground">
+                      {KAT_LABEL[b.kategorie] ?? b.kategorie}
+                      {b.jahrgang ? ` ${b.jahrgang}` : ""} · {STATUS_LABEL[b.status] ?? b.status}
+                    </p>
+                  </button>
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </div>
+
+      <Dialog open={!!aktuelleGruppe} onOpenChange={(o) => !o && setGruppeOffen(null)}>
+        <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
+          {aktuelleGruppe && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-base">{aktuelleGruppe.titel}</DialogTitle>
+              </DialogHeader>
+              <p className="text-xs text-muted-foreground">
+                Angaben gelten für alle {aktuelleGruppe.bilder.length} Bilder dieser Gruppe und
+                werden sofort gespeichert.
+              </p>
+              <div className="grid gap-3">
+                <div>
+                  <Label className="text-xs">Status</Label>
+                  <select
+                    className="mt-1 block h-9 w-full rounded border px-2 text-sm"
+                    value={aktuelleGruppe.bilder[0]?.status ?? "ungeklaert"}
+                    onChange={(e) =>
+                      void gruppeUebernehmen(aktuelleGruppe, "status", e.target.value)
+                    }
+                  >
+                    {STATUS_OPTIONEN.map((s) => (
+                      <option key={s} value={s}>
+                        {STATUS_LABEL[s]}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <Label className="text-xs">Urheber:in / Fotograf:in</Label>
+                  <Input
+                    className="mt-1"
+                    defaultValue={aktuelleGruppe.bilder[0]?.urheber ?? ""}
+                    onBlur={(e) =>
+                      void gruppeUebernehmen(aktuelleGruppe, "urheber", e.target.value)
+                    }
+                  />
+                </div>
+                <div>
+                  <Label className="text-xs">Rechteart</Label>
+                  <select
+                    className="mt-1 block h-9 w-full rounded border px-2 text-sm"
+                    value={aktuelleGruppe.bilder[0]?.rechteart ?? ""}
+                    onChange={(e) =>
+                      void gruppeUebernehmen(aktuelleGruppe, "rechteart", e.target.value)
+                    }
+                  >
+                    <option value="">–</option>
+                    {RECHTEART_OPTIONEN.map((r) => (
+                      <option key={r} value={r}>
+                        {r}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <Label className="text-xs">Quelle / Herkunft</Label>
+                  <Input
+                    className="mt-1"
+                    defaultValue={aktuelleGruppe.bilder[0]?.quelle ?? ""}
+                    onBlur={(e) => void gruppeUebernehmen(aktuelleGruppe, "quelle", e.target.value)}
+                  />
+                </div>
+                <div>
+                  <Label className="text-xs">Freigabedatum</Label>
+                  <Input
+                    type="date"
+                    className="mt-1"
+                    defaultValue={aktuelleGruppe.bilder[0]?.freigabedatum ?? ""}
+                    onBlur={(e) =>
+                      void gruppeUebernehmen(
+                        aktuelleGruppe,
+                        "freigabedatum",
+                        e.target.value || null,
+                      )
+                    }
+                  />
+                </div>
+                <div>
+                  <Label className="text-xs">Recherche-Notiz</Label>
+                  <Textarea
+                    className="mt-1"
+                    rows={3}
+                    defaultValue={aktuelleGruppe.bilder[0]?.notiz ?? ""}
+                    onBlur={(e) => void gruppeUebernehmen(aktuelleGruppe, "notiz", e.target.value)}
+                  />
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+
 
       <Dialog open={!!aktuell} onOpenChange={(o) => !o && setOffen(null)}>
         <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
