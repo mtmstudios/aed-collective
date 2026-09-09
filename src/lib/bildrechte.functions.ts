@@ -79,9 +79,10 @@ export const ladeBildverzeichnis = createServerFn({ method: "POST" })
       if (error) throw new Error(error.message);
     }
 
-    // Verwendungsorte bei jedem Laden aus dem Manifest aktualisieren
+    // Verwendungsorte bei jedem Laden aus dem Manifest aktualisieren (nur bei Abweichung)
     for (const b of BILD_MANIFEST) {
-      if (!bekannt.has(b.pfad)) continue;
+      const alt = bekannt.get(b.pfad);
+      if (!alt || JSON.stringify(alt) === JSON.stringify(b.verwendungen)) continue;
       const { error } = await db
         .from("bildrechte")
         .update({ verwendungen: b.verwendungen })
