@@ -29,6 +29,7 @@ export type BildrechtRow = {
   quelle: string;
   freigabedatum: string | null;
   notiz: string;
+  verwendungen: string[];
 };
 
 function passwortOk(input: string): boolean {
@@ -45,7 +46,7 @@ async function admin() {
 }
 
 const SPALTEN =
-  "pfad, dateiname, kategorie, jahrgang, status, urheber, rechteart, quelle, freigabedatum, notiz";
+  "pfad, dateiname, kategorie, jahrgang, status, urheber, rechteart, quelle, freigabedatum, notiz, verwendungen";
 
 /** Prüft das interne Passwort. */
 export const pruefeAdminPasswort = createServerFn({ method: "POST" })
@@ -70,10 +71,21 @@ export const ladeBildverzeichnis = createServerFn({ method: "POST" })
       dateiname: b.dateiname,
       kategorie: b.kategorie,
       jahrgang: b.jahrgang,
+      verwendungen: b.verwendungen,
     }));
 
     for (let i = 0; i < neue.length; i += 200) {
       const { error } = await db.from("bildrechte").insert(neue.slice(i, i + 200));
+      if (error) throw new Error(error.message);
+    }
+
+    // Verwendungsorte bei jedem Laden aus dem Manifest aktualisieren
+    for (const b of BILD_MANIFEST) {
+      if (!bekannt.has(b.pfad)) continue;
+      const { error } = await db
+        .from("bildrechte")
+        .update({ verwendungen: b.verwendungen })
+        .eq("pfad", b.pfad);
       if (error) throw new Error(error.message);
     }
 
