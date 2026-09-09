@@ -5839,6 +5839,76 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "src/assets/cover/2011_02_aed.webp",
+    "dateiname": "2011_02_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/adfa0bdf-3e72-4388-b5e2-36633da26ced/2011_02_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2012_01_aed.webp",
+    "dateiname": "2012_01_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/a71b3f8a-ff21-44e0-a09f-000907e2de4a/2012_01_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2012_02_aed.webp",
+    "dateiname": "2012_02_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/b0f67f4d-0ed6-499a-8a9e-eab6b747cdf5/2012_02_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2013_01_aed.png",
+    "dateiname": "2013_01_aed.png",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/066559ad-e07a-4f3e-93d1-f0c5e721639f/2013_01_aed.png",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2013_02_aed.webp",
+    "dateiname": "2013_02_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/4f88d074-8f9f-4412-8d18-8a202055ef4d/2013_02_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2014_01_aed.webp",
+    "dateiname": "2014_01_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/d3be1219-52bc-426c-9e55-dbfe199d1ec3/2014_01_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2014_02_aed.webp",
+    "dateiname": "2014_02_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/9cd9aa4e-9952-4be8-ab60-f55ff79f450d/2014_02_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
     "pfad": "src/assets/cover/2017_01_aed.png",
     "dateiname": "2017_01_aed.png",
     "kategorie": "cover",
