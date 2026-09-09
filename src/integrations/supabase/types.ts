@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      articles: {
+        Row: {
+          created_at: string
+          id: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       bildrechte: {
         Row: {
           created_at: string
@@ -64,6 +85,54 @@ export type Database = {
           verwendungen?: string[]
         }
         Relationships: []
+      }
+      images: {
+        Row: {
+          article_id: string
+          created_at: string
+          id: string
+          image_url: string
+          order_in_section: number
+          section_id: string | null
+          source_url: string
+          updated_at: string
+        }
+        Insert: {
+          article_id: string
+          created_at?: string
+          id?: string
+          image_url: string
+          order_in_section?: number
+          section_id?: string | null
+          source_url?: string
+          updated_at?: string
+        }
+        Update: {
+          article_id?: string
+          created_at?: string
+          id?: string
+          image_url?: string
+          order_in_section?: number
+          section_id?: string | null
+          source_url?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "images_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "images_section_id_fkey"
+            columns: ["section_id"]
+            isOneToOne: false
+            referencedRelation: "sections"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       neuland_einreichungen: {
         Row: {
@@ -139,6 +208,41 @@ export type Database = {
           vorname?: string | null
         }
         Relationships: []
+      }
+      sections: {
+        Row: {
+          article_id: string
+          created_at: string
+          heading: string
+          id: string
+          order: number
+          updated_at: string
+        }
+        Insert: {
+          article_id: string
+          created_at?: string
+          heading: string
+          id?: string
+          order?: number
+          updated_at?: string
+        }
+        Update: {
+          article_id?: string
+          created_at?: string
+          heading?: string
+          id?: string
+          order?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "sections_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
