@@ -12,6 +12,13 @@ import c2009_02 from "@/assets/cover/2009_02_aed.webp.asset.json";
 import c2010_01 from "@/assets/cover/2010_01_aed.webp.asset.json";
 import c2010_02 from "@/assets/cover/2010_02_aed.webp.asset.json";
 import c2011_01 from "@/assets/cover/2011_01_aed.webp.asset.json";
+import c2011_02 from "@/assets/cover/2011_02_aed.webp.asset.json";
+import c2012_01 from "@/assets/cover/2012_01_aed.webp.asset.json";
+import c2012_02 from "@/assets/cover/2012_02_aed.webp.asset.json";
+import c2013_01 from "@/assets/cover/2013_01_aed.png.asset.json";
+import c2013_02 from "@/assets/cover/2013_02_aed.webp.asset.json";
+import c2014_01 from "@/assets/cover/2014_01_aed.webp.asset.json";
+import c2014_02 from "@/assets/cover/2014_02_aed.webp.asset.json";
 import c2017_01 from "@/assets/cover/2017_01_aed.png.asset.json";
 import c2017_02 from "@/assets/cover/2017_02_aed.png.asset.json";
 import c2018_01 from "@/assets/cover/2018_01_aed.png.asset.json";
@@ -48,6 +55,13 @@ export const cover: Cover[] = [
   { url: c2010_01.url, titel: "Januar – Juni 2010" },
   { url: c2010_02.url, titel: "Juli – Dezember 2010" },
   { url: c2011_01.url, titel: "Januar – Juni 2011" },
+  { url: c2011_02.url, titel: "Juli – Dezember 2011" },
+  { url: c2012_01.url, titel: "Januar – Juni 2012" },
+  { url: c2012_02.url, titel: "Juli – Dezember 2012" },
+  { url: c2013_01.url, titel: "Januar – Juni 2013" },
+  { url: c2013_02.url, titel: "Juli – Dezember 2013" },
+  { url: c2014_01.url, titel: "Januar – Juni 2014" },
+  { url: c2014_02.url, titel: "Juli – Dezember 2014" },
   { url: c2017_01.url, titel: "Januar – Juni 2017" },
   { url: c2017_02.url, titel: "Juli – Dezember 2017" },
   { url: c2018_01.url, titel: "Januar – Juni 2018" },
