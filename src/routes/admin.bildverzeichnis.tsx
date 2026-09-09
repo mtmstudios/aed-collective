@@ -350,7 +350,7 @@ function Bildverzeichnis() {
 
       <p className="mt-3 text-xs text-muted-foreground">
         {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · pinker Gruppenrahmen =
-        vollständig geklärt oder an mehreren Stellen verwendet
+        Bildrechte aller Bilder der Gruppe geklärt
       </p>
 
       <div className="mt-3 space-y-6">
@@ -361,7 +361,7 @@ function Bildverzeichnis() {
             <section
               key={g.key}
               className={`rounded p-3 ${
-                alleGeklaert || mehrfach
+                alleGeklaert
                   ? "border-[5px] border-[#fe7fff]"
                   : "border-[5px] border-neutral-200"
               }`}
