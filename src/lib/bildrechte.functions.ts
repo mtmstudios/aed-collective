@@ -109,6 +109,32 @@ const updateSchema = z.object({
   notiz: z.string().max(4000).optional(),
 });
 
+/** Speichert Rechte-Angaben für mehrere Bilder gleichzeitig (Gruppen-Übernahme). */
+export const speichereBildrechteGruppe = createServerFn({ method: "POST" })
+  .inputValidator((input: { passwort: string; pfade: string[]; werte: unknown }) => ({
+    passwort: input.passwort,
+    pfade: z.array(z.string()).max(2000).parse(input.pfade),
+    werte: updateSchema.parse(input.werte),
+  }))
+  .handler(async ({ data }) => {
+    if (!passwortOk(data.passwort)) throw new Error("Falsches Passwort");
+    const db = await admin();
+    const werte = {
+      ...data.werte,
+      ...(data.werte.freigabedatum !== undefined
+        ? { freigabedatum: data.werte.freigabedatum || null }
+        : {}),
+    };
+    for (let i = 0; i < data.pfade.length; i += 200) {
+      const { error } = await db
+        .from("bildrechte")
+        .update(werte)
+        .in("pfad", data.pfade.slice(i, i + 200));
+      if (error) throw new Error(error.message);
+    }
+    return { ok: true as const };
+  });
+
 /** Speichert Rechte-Angaben zu einem Bild (Autosave). */
 export const speichereBildrecht = createServerFn({ method: "POST" })
   .inputValidator((input: { passwort: string; pfad: string; werte: unknown }) => ({
