@@ -288,6 +288,7 @@ function Bildverzeichnis() {
   }
 
   const aktuell = bilder.find((b) => b.pfad === offen) ?? null;
+  const aktuelleGruppe = gruppen.find((g) => g.key === gruppeOffen) ?? null;
 
   return (
     <div className="mx-auto max-w-6xl p-6">
