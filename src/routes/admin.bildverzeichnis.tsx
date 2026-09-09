@@ -124,9 +124,37 @@ function Bildverzeichnis() {
 
   const geklaert = bilder.filter((b) => b.status === "geklaert").length;
 
+  const gruppen = useMemo<Gruppe[]>(() => {
+    const map = new Map<string, Gruppe>();
+    for (const b of gefiltert) {
+      const g = gruppeVon(b);
+      if (!map.has(g.key)) map.set(g.key, { ...g, bilder: [] });
+      map.get(g.key)!.bilder.push(b);
+    }
+    const liste = [...map.values()];
+    for (const g of liste) g.bilder.sort((a, b) => a.dateiname.localeCompare(b.dateiname));
+    return liste.sort((a, b) => {
+      if (a.key === "ohne") return 1;
+      if (b.key === "ohne") return -1;
+      return a.titel.localeCompare(b.titel, "de");
+    });
+  }, [gefiltert]);
+
   function aktualisieren(pfad: string, feld: keyof BildrechtRow, wert: string | null) {
     setBilder((alt) => alt.map((b) => (b.pfad === pfad ? { ...b, [feld]: wert } : b)));
     autosave(pfad, feld, wert);
+  }
+
+  async function gruppeUebernehmen(g: Gruppe, feld: keyof BildrechtRow, wert: string | null) {
+    const pfade = g.bilder.map((b) => b.pfad);
+    setBilder((alt) => alt.map((b) => (pfade.includes(b.pfad) ? { ...b, [feld]: wert } : b)));
+    setStatus("Speichert …");
+    try {
+      await speichernGruppe({ data: { passwort, pfade, werte: { [feld]: wert } } });
+      setStatus("Für Gruppe gespeichert");
+    } catch {
+      setStatus("Speichern fehlgeschlagen");
+    }
   }
 
   const timer = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
