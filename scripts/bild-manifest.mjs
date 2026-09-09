@@ -117,30 +117,35 @@ function label(datei) {
 
 for (const eintrag of eintraege) {
   const treffer = new Set();
-  const suchbegriffe = [eintrag.url, eintrag.pfad, eintrag.dateiname].filter(Boolean);
+  const begriffe = new Set([eintrag.url, eintrag.pfad, eintrag.dateiname].filter(Boolean));
+
   for (const [datei, text] of inhalt) {
-    if (suchbegriffe.some((s) => text.includes(s))) treffer.add(datei);
+    if ([...begriffe].some((s) => text.includes(s))) treffer.add(datei);
   }
 
-  // Über Importketten bis zu Seiten/Komponenten hochlaufen (max. 4 Ebenen)
-  const alle = new Set(treffer);
-  let welle = new Set(treffer);
-  for (let tiefe = 0; tiefe < 4 && welle.size; tiefe++) {
-    const naechste = new Set();
-    for (const d of welle) {
-      for (const imp of importeure.get(d) ?? []) {
-        if (!alle.has(imp)) {
-          alle.add(imp);
-          naechste.add(imp);
-        }
+  // Schlüssel aus Datenmodulen (z. B. "sammlung-amann": "/bilder/...") mitsuchen
+  for (const datei of treffer) {
+    if (!datei.includes("/src/data/")) continue;
+    for (const zeile of inhalt.get(datei).split("\n")) {
+      if (!zeile.includes(eintrag.url) && !zeile.includes(eintrag.dateiname)) continue;
+      for (const m of zeile.matchAll(/["']([A-Za-z0-9][\w-]{3,})["']/g)) {
+        const kandidat = m[1];
+        if (!kandidat.includes("/") && !kandidat.includes(".")) begriffe.add(`"${kandidat}"`);
       }
     }
-    welle = naechste;
+  }
+  for (const [datei, text] of inhalt) {
+    if ([...begriffe].some((s) => text.includes(s))) treffer.add(datei);
   }
 
-  const seiten = [...alle].filter((d) => d.includes("/src/routes/"));
-  const basisliste = seiten.length ? [...treffer, ...seiten] : [...treffer];
-  eintrag.verwendungen = [...new Set(basisliste.map(label))].sort();
+  // Komponenten eine Ebene zu ihren Seiten hochlaufen
+  const alle = new Set(treffer);
+  for (const d of treffer) {
+    if (!d.includes("/src/components/")) continue;
+    for (const imp of importeure.get(d) ?? []) if (imp.includes("/src/routes/")) alle.add(imp);
+  }
+
+  eintrag.verwendungen = [...new Set([...alle].map(label))].sort();
 }
 
 const out = `// AUTOMATISCH ERZEUGT von scripts/bild-manifest.mjs – nicht manuell bearbeiten.
