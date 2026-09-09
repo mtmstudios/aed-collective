@@ -5909,6 +5909,46 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "src/assets/cover/2015_01_aed.webp",
+    "dateiname": "2015_01_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/d93c6e7a-81ce-4a29-a8ff-9fd4f6a08402/2015_01_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2015_02_aed.png",
+    "dateiname": "2015_02_aed.png",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/a73ef347-9b1c-46e5-af36-4b5f97a4269e/2015_02_aed.png",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2016_01_aed.png",
+    "dateiname": "2016_01_aed.png",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/7b539f8f-f606-4178-ab38-344173b6607b/2016_01_aed.png",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2016_02_aed.png",
+    "dateiname": "2016_02_aed.png",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/d8728837-e0a9-4757-a041-2f85ec916e03/2016_02_aed.png",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
     "pfad": "src/assets/cover/2017_01_aed.png",
     "dateiname": "2017_01_aed.png",
     "kategorie": "cover",
