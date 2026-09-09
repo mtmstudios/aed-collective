@@ -133,6 +133,7 @@ function Bildverzeichnis() {
       "Quelle",
       "Freigabedatum",
       "Notiz",
+      "Verwendungsort",
     ];
     const zeilen = gefiltert.map((b) =>
       [
@@ -146,6 +147,7 @@ function Bildverzeichnis() {
         b.quelle,
         b.freigabedatum,
         b.notiz,
+        (b.verwendungen ?? []).join(" | ") || "aktuell nicht verwendet",
       ]
         .map(csvFeld)
         .join(";"),
@@ -187,7 +189,8 @@ function Bildverzeichnis() {
                 Rechteart: ${b.rechteart || "–"}<br/>
                 Quelle: ${b.quelle || "–"}<br/>
                 Freigabedatum: ${b.freigabedatum || "–"}<br/>
-                Notiz: ${b.notiz || "–"}
+                Notiz: ${b.notiz || "–"}<br/>
+                Verwendungsort: ${(b.verwendungen ?? []).join(", ") || "aktuell nicht verwendet"}
               </div>
             </div>`,
           )
@@ -297,7 +300,11 @@ function Bildverzeichnis() {
           <button
             key={b.pfad}
             onClick={() => setOffen(b.pfad)}
-            className="rounded border p-2 text-left hover:bg-muted"
+            className={`rounded p-2 text-left hover:bg-muted ${
+              b.status === "geklaert"
+                ? "border-[5px] border-[#fe7fff]"
+                : "border-[5px] border-neutral-200"
+            }`}
           >
             <img
               src={urlNachPfad.get(b.pfad) ?? ""}
@@ -312,6 +319,9 @@ function Bildverzeichnis() {
               {KAT_LABEL[b.kategorie] ?? b.kategorie}
               {b.jahrgang ? ` ${b.jahrgang}` : ""} · {STATUS_LABEL[b.status] ?? b.status}
             </p>
+            {!(b.verwendungen ?? []).length && (
+              <p className="text-[11px] text-muted-foreground">aktuell nicht verwendet</p>
+            )}
           </button>
         ))}
       </div>
@@ -329,6 +339,19 @@ function Bildverzeichnis() {
                 className="max-h-56 w-full bg-muted object-contain"
               />
               <p className="break-all text-xs text-muted-foreground">{aktuell.pfad}</p>
+
+              <div className="rounded border bg-muted/40 p-3">
+                <p className="text-xs font-medium">Verwendungsort (automatisch ermittelt)</p>
+                {(aktuell.verwendungen ?? []).length ? (
+                  <ul className="mt-1 list-disc pl-4 text-xs text-muted-foreground">
+                    {aktuell.verwendungen.map((v) => (
+                      <li key={v}>{v}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-1 text-xs text-muted-foreground">aktuell nicht verwendet</p>
+                )}
+              </div>
 
               <div className="grid gap-3">
                 <div>
