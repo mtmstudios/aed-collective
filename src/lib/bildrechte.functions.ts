@@ -62,10 +62,10 @@ export const ladeBildverzeichnis = createServerFn({ method: "POST" })
 
     const { data: vorhandene, error: leseFehler } = await db
       .from("bildrechte")
-      .select("pfad");
+      .select("pfad, verwendungen");
     if (leseFehler) throw new Error(leseFehler.message);
 
-    const bekannt = new Set((vorhandene ?? []).map((r) => r.pfad));
+    const bekannt = new Map((vorhandene ?? []).map((r) => [r.pfad, r.verwendungen ?? []]));
     const neue = BILD_MANIFEST.filter((b) => !bekannt.has(b.pfad)).map((b) => ({
       pfad: b.pfad,
       dateiname: b.dateiname,
