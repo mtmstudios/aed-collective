@@ -79,6 +79,7 @@ function Bildverzeichnis() {
   const [jahrgang, setJahrgang] = useState("alle");
   const [suche, setSuche] = useState("");
   const [offen, setOffen] = useState<string | null>(null);
+  const [gruppeOffen, setGruppeOffen] = useState<string | null>(null);
   const [status, setStatus] = useState("");
 
   const pruefen = useServerFn(pruefeAdminPasswort);
