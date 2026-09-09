@@ -6,6 +6,7 @@ import {
   ladeBildverzeichnis,
   pruefeAdminPasswort,
   speichereBildrecht,
+  speichereBildrechteGruppe,
   RECHTEART_OPTIONEN,
   STATUS_LABEL,
   STATUS_OPTIONEN,
