@@ -17,17 +17,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/100-jahre-frei-otto-vergangenheit-gegenwart-und-zukunft-des.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -38,17 +28,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/20-jahre-aed-ein-grund-zu-feiern.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -59,17 +39,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/3d-druck-wohin-geht-die-reise.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -80,17 +50,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-design-talk-was-ist-gut-the-power-of-design.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -101,17 +61,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-drinks-book-club-edition.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -122,17 +72,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-drinks-vins.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -143,17 +83,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-drinks-x-ecotrii.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -164,17 +94,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-eventreihe-jung-und-hungrig-zu-gast-bei-matter-of.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -185,17 +105,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-eventreihe-jung-und-hungrig-zu-gast-bei-studio-bovti-x-f.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -206,17 +116,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-eventreihe-jung-und-hungrig-zu-gast-bei-studio-creative.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -227,17 +127,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-expert-dinner.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -248,17 +138,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-lebenswege-gabriele-fischer-brand-eins.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -269,17 +149,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-neujahrsempfang-2024-in-kooperation-mit-literaturhaus-st.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -290,17 +160,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-on-tour-die-sammlung-froehlich.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -311,17 +171,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-on-tour-hamburg.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -332,17 +182,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/aed-on-tour-venedig-architekturbiennale-und-mehr.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -353,17 +193,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/ai-vs-creative-intelligence-die-zukunft-der-kreativbranche.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -374,17 +204,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/architektur-des-wassers.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -395,17 +215,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/architektur-und-ethik-klima-und-emissionen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -416,17 +226,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/architektur-und-ethik-materialien.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -437,17 +237,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/architektur-und-ethik-oeffentlicher-raum.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -458,17 +248,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/architektur-und-ethik-wohnen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -479,17 +259,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/areal-sued.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -500,17 +270,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/automotive-design-was-bringt-die-zukunft.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -521,17 +281,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/bauen-in-zeiten-des-klimawandels.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -542,17 +292,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/bello-e-possibile-die-villa-massimo-zu-gast.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -563,17 +303,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/biodiversitaet-begruenung-geometrien-nachhaltigkeit-im-staed.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -584,17 +314,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/brenzkirche-iba27.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -605,17 +325,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/circular-design-summit-rethinking-the-economy.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -626,17 +336,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/curious-career-club.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -647,17 +347,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/design-und-ethik-alles-fuer-die-tonne.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -668,17 +358,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/design-und-ethik-gesundheit-gestalten.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -689,17 +369,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/design-und-neue-arbeitskultur-zu-besuch-in-den-urban-spaces.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -710,17 +380,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/die-danneckerstrasse-gestern-und-heute.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -731,17 +391,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/die-macht-der-sprache-gestaltung-fuer-kunst-und-kultur.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -752,17 +402,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/e-1027-eileen-gray.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -773,17 +413,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/einladung-zum-trendlabor-mit-giulio-cappellini.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -794,17 +424,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/ende-des-dornroeschen-schlafs-die-zukunft-der-villa-berg.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -815,17 +435,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/experimentierfeld-der-moderne-der-uni-campus-in-stuttgart-va.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -836,17 +446,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/extremwetter-und-hitzerekorde-der-klimawandel-und-die-gebaut.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -857,17 +457,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/gdc-summit-2023-im-porsche-museum-stuttgart.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -878,17 +468,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/gebaute-firmenphilosophie-ein-besuch-bei-gustav-epple.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -899,17 +479,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/groundbreaking-future.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -920,17 +490,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/gruener-bauen-geht-doch.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -941,17 +501,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/grundlagen-der-architektur-das-igma.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -962,17 +512,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/haus-des-tourismus.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -983,17 +523,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/hinter-den-kulissen-das-literaturarchiv-marbach.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1004,17 +534,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/hinter-den-kulissen-der-neue-bonatz.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1025,17 +545,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/hinter-den-kulissen-die-neue-nikolauspflege.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1046,17 +556,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/hospitality-design-trends-und-entwicklungen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1067,17 +567,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/hospitality-design-wie-wohlfuehlorte-entstehen-das-emilu.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1088,17 +578,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/inklusives-design-gestaltung-ohne-barrieren.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1109,17 +589,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/japan-calling-stuttgarter-designer-auf-der-expo.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1130,17 +600,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/jung-und-hungrig-haus-otto.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site",
+      "Seite /programm"
     ]
   },
   {
@@ -1151,17 +612,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/jung-und-hungrig-johannes-breuer.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1172,17 +623,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/kalte-platte-der-kleine-schlossplatz-gestern-heute-morgen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1193,17 +634,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/komplexitaet-kommunizieren-das-non-nobis-projekt.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1214,17 +645,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/kreislauffaehiges-design-eine-utopie.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1235,17 +656,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/kultur-x-politik-kultursalon-mit-lisa-muehleisen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1256,17 +667,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/lebenswege-hans-sommer.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1277,17 +678,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/modulare-plusenergie-das-neue-stadtquartier-p18.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1298,17 +689,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/neue-lernorte-die-waldorf-schule-uhlandshoehe.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1319,17 +700,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/new-work-aufbruch-in-eine-neue-zeit-einmal-bitte-alles-ander.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1340,17 +711,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/papierkunst-preview-waiblingen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1361,17 +722,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/politisches-design-demokratie-gestalten.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1382,17 +733,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/preisverleihung-aed-neuland-2023.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1403,17 +744,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/quo-vadis-rosenstein-die-ausstellung.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1424,17 +755,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/recycling-karle.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1446,17 +767,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "verwendungen": [
       "Daten bilder",
       "Daten bildnachweise",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1467,17 +778,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/shift-kunst-und-kuenstliche-intelligenz.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1488,17 +789,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/sommerfest-2026.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1509,17 +800,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/stand-der-dinge-der-littmann-bau.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1530,17 +811,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/stuttgarts-gruene-mitte-die-neue-calwer-passage.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1551,17 +822,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/wein-und-design-ein-praxistest.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1572,17 +833,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/werner-sobek-die-randbedingungen-des-zukuenftigen.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1593,17 +844,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/young-professionals-other-ways-of-working-as-an-architect.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1614,17 +855,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/zero-riehle-koeth.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1635,17 +866,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/event/zukunft-stadt-die-iba-27-festivalzentrale.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1656,17 +877,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/andreas-kurbos.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1676,18 +887,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/ben-kauffmann.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1697,18 +897,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/dina-gallo.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1718,18 +907,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/dr-frank-heinlein.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1739,18 +917,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/dr-katrin-schlecht.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1760,18 +927,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/dr-petra-kiedaisch.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1781,18 +937,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/dr-ulrike-groos.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1803,17 +948,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/frank-seeger.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1823,18 +958,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/joachim-stumpp.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1845,17 +969,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/johanna-neves-pimenta.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1866,17 +980,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/johannes-milla.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1886,18 +990,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/kai-bierich.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1907,18 +1000,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/lisa-zech.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1929,17 +1011,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/lutz-dietzold.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1950,17 +1022,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/markus-mueller.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -1970,18 +1032,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/may-britt-frank-grosse.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -1991,18 +1042,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/moritz-kemper.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2012,18 +1052,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/nils-holger-moormann.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2033,18 +1062,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/olaf-barski.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2054,18 +1072,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/peter-scheerer.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2075,18 +1082,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/petra-stephan.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2096,18 +1092,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/prof-andreas-uebele.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2117,18 +1102,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/prof-dr-dr-e-h-dr-h-c-werner-sobek.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2138,18 +1112,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/prof-dr-phil-stephan-trueby.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2159,18 +1122,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/prof-juergen-spaeth.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2180,18 +1132,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/prof-lucio-blandini.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2201,18 +1142,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/person/prof-rahel-flechtner.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2223,17 +1153,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/sara-dahme.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -2244,17 +1164,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/silvia-olp.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -2265,17 +1175,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/stefan-behnisch.webp",
     "verwendungen": [
       "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten site"
     ]
   },
   {
@@ -2285,22 +1185,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/presse/aed-logo-presse.jpg",
     "verwendungen": [
-      "Daten site",
-      "Seite /",
-      "Seite /datenschutz",
-      "Seite /impressum",
-      "Seite /kontakt",
-      "Seite /neuland",
-      "Seite /neuland/jury",
-      "Seite /neuland/presse",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /service",
-      "Seite /sitemap/xml",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand",
-      "Seite Layout (alle Seiten)"
+      "Daten site"
     ]
   },
   {
@@ -2310,18 +1195,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/presse/aed-neuland-banner-2025.jpg",
     "verwendungen": [
-      "Daten neuland",
-      "Seite /",
-      "Seite /neuland",
-      "Seite /neuland/gewinner",
-      "Seite /neuland/gewinner-innen-$jahr",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /neuland/presse",
-      "Seite /neuland/teilnahme",
-      "Seite /neuland/wettbewerb",
-      "Seite /sitemap/xml"
+      "Daten neuland"
     ]
   },
   {
@@ -2331,18 +1205,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/bilder/presse/aed-neuland-square-color.png",
     "verwendungen": [
-      "Daten neuland",
-      "Seite /",
-      "Seite /neuland",
-      "Seite /neuland/gewinner",
-      "Seite /neuland/gewinner-innen-$jahr",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /neuland/presse",
-      "Seite /neuland/teilnahme",
-      "Seite /neuland/wettbewerb",
-      "Seite /sitemap/xml"
+      "Daten neuland"
     ]
   },
   {
@@ -2352,18 +1215,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/a-synaptic-trip-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2373,18 +1225,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/a-synaptic-trip-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2394,18 +1235,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/a-synaptic-trip-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2415,18 +1245,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/allreadymade-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2436,18 +1255,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/allreadymade-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2457,18 +1265,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/allreadymade-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2478,18 +1275,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2499,18 +1285,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2520,18 +1295,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2541,18 +1305,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2562,18 +1315,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/comero-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2583,18 +1325,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/comero-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2604,18 +1335,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/comero-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2625,18 +1345,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/companion-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2646,18 +1355,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/companion-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2667,18 +1365,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/companion-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2688,18 +1375,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/craft-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2709,18 +1385,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/craft-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2730,18 +1395,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/craft-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2751,18 +1405,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/creative-space-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2772,18 +1415,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/creative-space-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2793,18 +1425,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/creative-space-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2814,18 +1435,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/escher-walk-app-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2835,18 +1445,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/escher-walk-app-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2856,18 +1455,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/escher-walk-app-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2877,18 +1465,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/gruemen-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2898,18 +1475,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/kokoni-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2919,18 +1485,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/kokoni-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2940,18 +1495,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/kokoni-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2961,18 +1505,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/ky-bo-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -2982,18 +1515,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/lift-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3003,18 +1525,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/lift-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3024,18 +1535,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/lift-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3045,18 +1545,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3066,18 +1555,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3087,18 +1565,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3108,18 +1575,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3129,18 +1585,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3150,18 +1595,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3171,18 +1605,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3192,18 +1615,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3213,18 +1625,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/stgt-55-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3234,18 +1635,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/stgt-55-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3255,18 +1645,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/stgt-55-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3276,18 +1655,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3297,18 +1665,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3318,18 +1675,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3339,18 +1685,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3360,18 +1695,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3381,18 +1705,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3402,18 +1715,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3423,18 +1725,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3444,18 +1735,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/to-the-points-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3465,18 +1745,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/to-the-points-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3486,18 +1755,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/to-the-points-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3507,18 +1765,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/type-550-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3528,18 +1775,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/type-550-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3549,18 +1785,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/type-550-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3570,18 +1795,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/wbm-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3591,18 +1805,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/wbm-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3612,18 +1815,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/wbm-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3633,18 +1825,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/zero-contact-sustainpedal-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3654,18 +1835,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/zero-contact-sustainpedal-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3675,18 +1845,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/zero-contact-sustainpedal-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3696,18 +1855,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3717,18 +1865,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3738,18 +1875,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3759,18 +1885,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3780,18 +1895,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3801,18 +1905,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3822,18 +1915,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3843,18 +1925,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3864,18 +1935,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3885,18 +1945,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3906,18 +1955,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3927,18 +1965,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3948,18 +1975,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3969,18 +1985,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -3990,18 +1995,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4011,18 +2005,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4032,18 +2015,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4053,18 +2025,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4074,18 +2035,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4095,18 +2045,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4116,18 +2055,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4137,18 +2065,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4158,18 +2075,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4179,18 +2085,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4200,18 +2095,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4221,18 +2105,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4242,18 +2115,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4263,18 +2125,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4284,18 +2135,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/ava-augmented-auscultation-simulation-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4305,18 +2145,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/ava-augmented-auscultation-simulation-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4326,18 +2155,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/ava-augmented-auscultation-simulation-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4347,18 +2165,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4368,18 +2175,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4389,18 +2185,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4410,18 +2195,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4431,18 +2205,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4452,18 +2215,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4473,18 +2225,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4494,18 +2235,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4515,18 +2245,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4536,18 +2255,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4557,18 +2265,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4578,18 +2275,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4599,18 +2285,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4620,18 +2295,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4641,18 +2305,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4662,18 +2315,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4683,18 +2325,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bokashi-o2o-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4704,18 +2335,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bokashi-o2o-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4725,18 +2345,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bokashi-o2o-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4746,18 +2355,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4767,18 +2365,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4788,18 +2375,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4809,18 +2385,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4830,18 +2395,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4851,18 +2405,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4872,18 +2415,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4893,18 +2425,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4914,18 +2435,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4935,18 +2445,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4956,18 +2455,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4977,18 +2465,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -4998,18 +2475,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5019,18 +2485,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5040,18 +2495,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5061,18 +2505,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5082,18 +2515,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5103,18 +2525,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5124,18 +2535,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5145,18 +2545,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5166,18 +2555,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5187,18 +2565,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5208,18 +2575,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5229,18 +2585,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5250,18 +2595,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5271,18 +2605,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5292,18 +2615,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5313,18 +2625,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5334,18 +2635,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5355,18 +2645,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5376,18 +2655,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5397,18 +2665,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5418,18 +2675,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5439,18 +2685,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5460,18 +2695,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5481,18 +2705,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5502,18 +2715,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5523,18 +2725,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5544,18 +2735,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5565,18 +2745,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5586,18 +2755,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5607,18 +2765,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5628,18 +2775,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5649,18 +2785,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5670,18 +2795,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5691,18 +2805,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5712,18 +2815,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5733,18 +2825,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5754,18 +2835,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5775,18 +2845,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5796,18 +2855,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5817,18 +2865,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5838,18 +2875,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5859,18 +2885,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5880,18 +2895,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5901,18 +2905,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5922,18 +2915,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5943,18 +2925,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5964,18 +2935,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -5985,18 +2945,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6006,18 +2955,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6027,18 +2965,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6048,18 +2975,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6069,18 +2985,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6090,18 +2995,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6111,18 +3005,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6132,18 +3015,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6153,18 +3025,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6174,18 +3035,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6195,18 +3045,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6216,18 +3055,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6237,18 +3065,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6258,18 +3075,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6279,18 +3085,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6300,18 +3095,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6321,18 +3105,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6342,18 +3115,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6363,18 +3125,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6384,18 +3135,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6405,18 +3145,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6426,18 +3155,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6447,18 +3165,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6468,18 +3175,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6489,18 +3185,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6510,18 +3195,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/publikation-grundklasse-prof-gerwin-schmidt-17-18-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6531,18 +3205,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/publikation-grundklasse-prof-gerwin-schmidt-17-18-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6552,18 +3215,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6573,18 +3225,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6594,18 +3235,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6615,18 +3245,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6636,18 +3255,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/schlemmer-x-beats-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6657,18 +3265,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/schlemmer-x-beats-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6678,18 +3275,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/schlemmer-x-beats-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6699,18 +3285,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6720,18 +3295,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6741,18 +3305,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6762,18 +3315,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6783,18 +3325,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6804,18 +3335,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6825,18 +3345,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6846,18 +3355,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6867,18 +3365,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6888,18 +3375,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6909,18 +3385,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6930,18 +3395,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6951,18 +3405,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6972,18 +3415,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -6993,18 +3425,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7014,18 +3435,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7035,18 +3445,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/structures-of-the-future-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7056,18 +3455,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/structures-of-the-future-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7077,18 +3465,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/structures-of-the-future-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7098,18 +3475,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7119,18 +3485,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7140,18 +3495,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7161,18 +3505,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7182,18 +3515,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7203,18 +3525,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7224,18 +3535,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7245,18 +3545,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7266,18 +3555,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7287,18 +3565,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7308,18 +3575,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7329,18 +3585,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7350,18 +3595,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7371,18 +3605,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7392,18 +3615,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7413,18 +3625,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7434,18 +3635,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7455,18 +3645,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7476,18 +3655,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7497,18 +3665,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7518,18 +3675,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7539,18 +3685,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7560,18 +3695,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7581,18 +3705,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7602,18 +3715,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7623,18 +3725,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7644,18 +3735,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7665,18 +3745,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7686,18 +3755,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7707,18 +3765,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7728,18 +3775,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7749,18 +3785,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7770,18 +3795,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7791,18 +3805,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7812,18 +3815,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7833,18 +3825,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7854,18 +3835,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7875,18 +3845,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7896,18 +3855,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7917,18 +3865,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7938,18 +3875,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7959,18 +3885,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -7980,18 +3895,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8001,18 +3905,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8022,18 +3915,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8043,18 +3925,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8064,18 +3935,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8085,18 +3945,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8106,18 +3955,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8127,18 +3965,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8148,18 +3975,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8169,18 +3985,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8190,18 +3995,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8211,18 +4005,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8232,18 +4015,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8253,18 +4025,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8274,18 +4035,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8295,18 +4045,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8316,18 +4055,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8337,18 +4065,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8358,18 +4075,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8379,18 +4085,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8400,18 +4095,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8421,18 +4105,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8442,18 +4115,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8463,18 +4125,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8484,18 +4135,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8505,18 +4145,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8526,18 +4155,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8547,18 +4165,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8568,18 +4175,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8589,18 +4185,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8610,18 +4195,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8631,18 +4205,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8652,18 +4215,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8673,18 +4225,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8694,18 +4235,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8715,18 +4245,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8736,18 +4255,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8757,18 +4265,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8778,18 +4275,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8799,18 +4285,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8820,18 +4295,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8841,18 +4305,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8862,18 +4315,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8883,18 +4325,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8904,18 +4335,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8925,18 +4345,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8946,18 +4355,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8967,18 +4365,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -8988,18 +4375,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9009,18 +4385,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9030,18 +4395,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9051,18 +4405,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9072,18 +4415,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9093,18 +4425,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9114,18 +4435,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9135,18 +4445,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9156,18 +4455,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9177,18 +4465,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9198,18 +4475,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9219,18 +4485,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9240,18 +4495,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9261,18 +4505,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9282,18 +4515,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9303,18 +4525,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9324,18 +4535,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9345,18 +4545,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9366,18 +4555,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9387,18 +4565,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9408,18 +4575,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9429,18 +4585,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9450,18 +4595,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9471,18 +4605,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9492,18 +4615,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9513,18 +4625,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9534,18 +4635,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9555,18 +4645,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9576,18 +4655,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9597,18 +4665,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9618,18 +4675,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9639,18 +4685,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9660,18 +4695,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9681,18 +4705,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9702,18 +4715,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9723,18 +4725,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9744,18 +4735,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9765,18 +4745,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9786,18 +4755,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9807,18 +4765,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9828,18 +4775,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9849,18 +4785,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9870,18 +4795,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9891,18 +4805,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9912,18 +4815,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9933,18 +4825,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9954,18 +4835,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9975,18 +4845,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -9996,18 +4855,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10017,18 +4865,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10038,18 +4875,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10059,18 +4885,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10080,18 +4895,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10101,18 +4905,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10122,18 +4915,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10143,18 +4925,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10164,18 +4935,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10185,18 +4945,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10206,18 +4955,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10227,18 +4965,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10248,18 +4975,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10269,18 +4985,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10290,18 +4995,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10311,18 +5005,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10332,18 +5015,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10353,18 +5025,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10374,18 +5035,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10395,18 +5045,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10416,18 +5055,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10437,18 +5065,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10458,18 +5075,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10479,18 +5085,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10500,18 +5095,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10521,18 +5105,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10542,18 +5115,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10563,18 +5125,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10584,18 +5135,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10605,18 +5145,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10626,18 +5155,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10647,18 +5165,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10668,18 +5175,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10689,18 +5185,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10710,18 +5195,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10731,18 +5205,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10752,18 +5215,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10773,18 +5225,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10794,18 +5235,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10815,18 +5245,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10836,18 +5255,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10857,18 +5265,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10878,18 +5275,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10899,18 +5285,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10920,18 +5295,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10941,18 +5305,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10962,18 +5315,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -10983,18 +5325,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11004,18 +5335,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11025,18 +5345,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11046,18 +5355,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11067,18 +5365,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11088,18 +5375,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11109,18 +5385,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11130,18 +5395,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11151,18 +5405,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11172,18 +5415,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11193,18 +5425,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11214,18 +5435,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11235,18 +5445,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11256,18 +5455,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11277,18 +5465,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11298,18 +5475,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11319,18 +5485,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11340,18 +5495,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11361,18 +5505,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11382,18 +5515,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11403,18 +5525,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11424,18 +5535,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11445,18 +5545,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11466,18 +5555,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11487,18 +5565,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11508,18 +5575,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11529,18 +5585,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11550,18 +5595,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11571,18 +5605,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11592,18 +5615,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11613,18 +5625,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11634,18 +5635,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11655,18 +5645,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11676,18 +5655,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11697,18 +5665,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11718,18 +5675,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-0.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11739,18 +5685,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-1.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11760,18 +5695,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-2.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11781,18 +5705,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-3.webp",
     "verwendungen": [
-      "Daten bilder",
-      "Seite /",
-      "Seite /mitglied-werden",
-      "Seite /neuland",
-      "Seite /neuland/gewinner/$jahr",
-      "Seite /neuland/gewinner/$jahr/$slug",
-      "Seite /neuland/jury",
-      "Seite /programm",
-      "Seite /programm/$slug",
-      "Seite /verein",
-      "Seite /verein/beirat",
-      "Seite /verein/vorstand"
+      "Daten bilder"
     ]
   },
   {
@@ -11802,8 +5715,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/c02c941f-dd30-4412-af39-f067537ff992/2006_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11813,8 +5725,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/14c3aeb2-fd3d-46e3-82bf-c8db3207b447/2007_01_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11824,8 +5735,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/c0660100-ba20-436a-abb2-280c462250e7/2007_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11835,8 +5745,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/76d811a8-a9a3-4b47-b794-38cbcc015abd/2008_01_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11846,8 +5755,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/48a66506-c1bf-44f2-8a69-234b1240eac0/2008_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11857,8 +5765,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/4117358d-4e53-4155-bb98-e28c532f59d3/2009_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11868,8 +5775,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/9ebed07c-785d-47f8-95fc-1c0bac8f7aca/2009_02_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11879,8 +5785,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/576e2334-5676-4a5f-a3eb-f8b91d516e2b/2010_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11890,8 +5795,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/24611c0f-3edd-4165-ac8b-01afe27456db/2010_02_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11901,8 +5805,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/513a5bc6-a7f9-4435-9654-7bf09c874e75/2011_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11912,8 +5815,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/caacbdbf-5f2d-4af4-998e-d26bae0708b8/2017_01_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11923,8 +5825,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/09725818-cf7c-44e4-8816-79b1ca293fc3/2017_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11934,8 +5835,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/fb12fce3-3782-43a9-b962-873380ec67bf/2018_01_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11945,8 +5845,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/57fe23ab-98f2-45fd-8c47-ed260d98d6a2/2018_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11956,8 +5855,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/d4056820-da7e-4846-bced-d0ef56176d7e/2019_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11967,8 +5865,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/7cd6c9c5-be6b-47d5-831e-a714d0fca194/2019_02_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11978,8 +5875,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/ba9eb540-ccf3-4ad8-a631-657125e63ccc/2020_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -11989,8 +5885,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/ae78eeda-2e25-4848-bc60-5bb3ca6b8ed8/2020_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12000,8 +5895,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/c171c848-a1e2-43d2-9b46-f9b66c5e575d/2022_01_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12011,8 +5905,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/c8554dc3-8413-4318-a024-e49c2aa4b864/2022_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12022,8 +5915,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/c628a0a6-ccba-465b-9e4f-6e7c110b52a8/2023_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12033,8 +5925,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/a4cdc425-ee6b-41f9-9126-35b007282554/2023_02_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12044,8 +5935,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/e606101f-d0f4-4a6f-9502-3d0ddc1ef793/2024_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12055,8 +5945,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/33e62b6f-18c2-47c3-ac25-b4be76b4d226/2024_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12066,8 +5955,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/fd4c15d2-8a6a-4d09-b7fa-02cb77358669/2025_01_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12077,8 +5965,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/097888b1-0c12-4fa0-a018-58a6a7c3b3bc/2025_02_aed.png",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12088,8 +5975,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/a46f895a-51a5-4d13-95ed-72234feb8b82/2026_01_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   },
   {
@@ -12099,8 +5985,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "jahrgang": null,
     "url": "/__l5e/assets-v1/7c9cc7e6-b46f-405e-8f61-8ba155fd841d/2026_02_aed.webp",
     "verwendungen": [
-      "Daten cover",
-      "Seite /programm"
+      "Daten cover"
     ]
   }
 ];
