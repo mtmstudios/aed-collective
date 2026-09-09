@@ -1,4 +1,7 @@
 // Programmheft-Cover des aed e.V. (CDN-Assets), chronologisch sortiert
+import c2005_01 from "@/assets/cover/2005_01_aed.webp.asset.json";
+import c2005_02 from "@/assets/cover/2005_02_aed.webp.asset.json";
+import c2006_01 from "@/assets/cover/2006_01_aed.webp.asset.json";
 import c2006_02 from "@/assets/cover/2006_02_aed.png.asset.json";
 import c2007_01 from "@/assets/cover/2007_01_aed.png.asset.json";
 import c2007_02 from "@/assets/cover/2007_02_aed.png.asset.json";
@@ -32,6 +35,9 @@ import c2026_02 from "@/assets/cover/2026_02_aed.webp.asset.json";
 export type Cover = { url: string; titel: string };
 
 export const cover: Cover[] = [
+  { url: c2005_01.url, titel: "Januar – Juni 2005" },
+  { url: c2005_02.url, titel: "Juli – Dezember 2005" },
+  { url: c2006_01.url, titel: "Januar – Mai 2006" },
   { url: c2006_02.url, titel: "Juli – Dezember 2006" },
   { url: c2007_01.url, titel: "Januar – Juli 2007" },
   { url: c2007_02.url, titel: "September – Dezember 2007" },

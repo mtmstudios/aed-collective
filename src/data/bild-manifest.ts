@@ -5709,6 +5709,36 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "src/assets/cover/2005_01_aed.webp",
+    "dateiname": "2005_01_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/a4d996cb-7147-416b-a094-7b8dd8597ab0/2005_01_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2005_02_aed.webp",
+    "dateiname": "2005_02_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/da1bcc3d-6d97-4a54-b479-ebddaa461b27/2005_02_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
+    "pfad": "src/assets/cover/2006_01_aed.webp",
+    "dateiname": "2006_01_aed.webp",
+    "kategorie": "cover",
+    "jahrgang": null,
+    "url": "/__l5e/assets-v1/4034a962-f1b4-475a-a738-3ad59a777fae/2006_01_aed.webp",
+    "verwendungen": [
+      "Daten cover"
+    ]
+  },
+  {
     "pfad": "src/assets/cover/2006_02_aed.png",
     "dateiname": "2006_02_aed.png",
     "kategorie": "cover",
