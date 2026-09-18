@@ -7,6 +7,7 @@ import {
   pruefeAdminPasswort,
   speichereBildrecht,
   speichereBildrechteGruppe,
+  uebernehmeProjektangaben,
   RECHTEART_OPTIONEN,
   STATUS_LABEL,
   STATUS_OPTIONEN,
@@ -65,6 +66,94 @@ function gruppeVon(b: BildrechtRow): { key: string; titel: string; orte: string[
 
 type Gruppe = { key: string; titel: string; orte: string[]; bilder: BildrechtRow[] };
 
+/**
+ * Kompakte Tabelle: eine Zeile je Bild, Urheber:in und Status direkt editierbar.
+ * Für den Durchgang von oben nach unten – Details stecken weiter im Dialog.
+ */
+function ListenAnsicht({
+  zeilen,
+  urlNachPfad,
+  onAendern,
+  onOeffnen,
+}: {
+  zeilen: BildrechtRow[];
+  urlNachPfad: Map<string, string>;
+  onAendern: (pfad: string, feld: keyof BildrechtRow, wert: string | null) => void;
+  onOeffnen: (pfad: string) => void;
+}) {
+  return (
+    <div className="mt-3 overflow-x-auto rounded border">
+      <table className="w-full min-w-[820px] text-left text-xs">
+        <thead className="border-b bg-muted/50">
+          <tr>
+            <th className="w-16 p-2 font-medium">Bild</th>
+            <th className="p-2 font-medium">Datei / Verwendung</th>
+            <th className="w-[34%] p-2 font-medium">Urheber:in</th>
+            <th className="w-36 p-2 font-medium">Status</th>
+            <th className="w-16 p-2" />
+          </tr>
+        </thead>
+        <tbody>
+          {zeilen.map((b) => (
+            <tr
+              key={b.pfad}
+              className={`border-b last:border-0 ${
+                b.status === "geklaert" ? "bg-[#fe7fff]/10" : ""
+              }`}
+            >
+              <td className="p-2">
+                <img
+                  src={urlNachPfad.get(b.pfad) ?? ""}
+                  alt={b.dateiname}
+                  loading="lazy"
+                  width={96}
+                  height={64}
+                  className="h-10 w-14 bg-muted object-cover"
+                />
+              </td>
+              <td className="p-2 align-middle">
+                <p className="break-all leading-tight">{b.dateiname}</p>
+                <p className="text-[11px] text-muted-foreground">
+                  {(b.verwendungen ?? []).join(" · ") || "aktuell nicht verwendet"}
+                </p>
+              </td>
+              <td className="p-2">
+                <Input
+                  className="h-8 text-xs"
+                  value={b.urheber}
+                  placeholder="noch offen"
+                  onChange={(e) => onAendern(b.pfad, "urheber", e.target.value)}
+                />
+              </td>
+              <td className="p-2">
+                <select
+                  className="h-8 w-full rounded border px-1 text-xs"
+                  value={b.status}
+                  onChange={(e) => onAendern(b.pfad, "status", e.target.value)}
+                >
+                  {STATUS_OPTIONEN.map((s) => (
+                    <option key={s} value={s}>
+                      {STATUS_LABEL[s]}
+                    </option>
+                  ))}
+                </select>
+              </td>
+              <td className="p-2 text-right">
+                <Button variant="outline" size="sm" onClick={() => onOeffnen(b.pfad)}>
+                  Mehr
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {zeilen.length === 0 && (
+        <p className="p-4 text-xs text-muted-foreground">Keine Bilder für diese Auswahl.</p>
+      )}
+    </div>
+  );
+}
+
 function csvFeld(wert: string | null): string {
   return `"${(wert ?? "").replace(/"/g, '""')}"`;
 }
@@ -81,11 +170,14 @@ function Bildverzeichnis() {
   const [offen, setOffen] = useState<string | null>(null);
   const [gruppeOffen, setGruppeOffen] = useState<string | null>(null);
   const [status, setStatus] = useState("");
+  const [ansicht, setAnsicht] = useState<"liste" | "kacheln">("liste");
+  const [aufgeklappt, setAufgeklappt] = useState<Set<string>>(new Set());
 
   const pruefen = useServerFn(pruefeAdminPasswort);
   const laden = useServerFn(ladeBildverzeichnis);
   const speichern = useServerFn(speichereBildrecht);
   const speichernGruppe = useServerFn(speichereBildrechteGruppe);
+  const uebernehmen = useServerFn(uebernehmeProjektangaben);
 
   useEffect(() => {
     const gespeichert = sessionStorage.getItem("aed-admin-pw");
@@ -126,6 +218,45 @@ function Bildverzeichnis() {
   }, [bilder, kategorie, jahrgang, suche]);
 
   const geklaert = bilder.filter((b) => b.status === "geklaert").length;
+
+  // Wie weit ist jede Kategorie? Zeigt, wo noch Arbeit liegt.
+  const fortschritt = useMemo(
+    () =>
+      KATEGORIEN.map((k) => {
+        const alle = bilder.filter((b) => b.kategorie === k);
+        return {
+          kategorie: k,
+          gesamt: alle.length,
+          offen: alle.filter((b) => b.status === "ungeklaert").length,
+          benannt: alle.filter((b) => b.urheber.trim()).length,
+        };
+      }).filter((f) => f.gesamt > 0),
+    [bilder],
+  );
+
+  /** Trägt die Gewinner:innen als Urheber:innen der Projektbilder ein. */
+  async function projektangabenUebernehmen() {
+    const sicher = window.confirm(
+      "Für alle Bilder der Wettbewerbsbeiträge werden die auf der Website genannten " +
+        "Gewinner:innen als Urheber:innen eingetragen, Status „in Klärung“.\n\n" +
+        "Bereits ausgefüllte Felder bleiben unverändert. Fortfahren?",
+    );
+    if (!sicher) return;
+    setLaedt(true);
+    setStatus("Überträgt …");
+    try {
+      const res = await uebernehmen({ data: { passwort } });
+      setBilder(res.bilder);
+      setStatus(
+        `${res.geschrieben} Bilder übernommen` +
+          (res.uebersprungen > 0 ? `, ${res.uebersprungen} bereits ausgefüllt` : ""),
+      );
+    } catch {
+      setStatus("Übernahme fehlgeschlagen");
+    } finally {
+      setLaedt(false);
+    }
+  }
 
   const gruppen = useMemo<Gruppe[]>(() => {
     const map = new Map<string, Gruppe>();
@@ -340,76 +471,153 @@ function Bildverzeichnis() {
             placeholder="z. B. sammlung-amann"
           />
         </div>
+        <div>
+          <Label className="text-xs">Ansicht</Label>
+          <div className="mt-1 flex">
+            <Button
+              variant={ansicht === "liste" ? "default" : "outline"}
+              size="sm"
+              className="rounded-r-none"
+              onClick={() => setAnsicht("liste")}
+            >
+              Liste
+            </Button>
+            <Button
+              variant={ansicht === "kacheln" ? "default" : "outline"}
+              size="sm"
+              className="rounded-l-none"
+              onClick={() => setAnsicht("kacheln")}
+            >
+              Kacheln
+            </Button>
+          </div>
+        </div>
         <Button variant="outline" onClick={pdfExport}>
           PDF-Export
         </Button>
         <Button variant="outline" onClick={csvExport}>
           CSV-Export
         </Button>
+        <Button variant="outline" onClick={projektangabenUebernehmen} disabled={laedt}>
+          Gewinnerdaten übernehmen
+        </Button>
       </div>
 
-      <p className="mt-3 text-xs text-muted-foreground">
-        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · pinker Gruppenrahmen =
-        Bildrechte aller Bilder der Gruppe geklärt
+      <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-muted-foreground">
+        {fortschritt.map((f) => (
+          <span key={f.kategorie}>
+            <strong className="font-medium text-foreground">{KAT_LABEL[f.kategorie]}</strong>{" "}
+            {f.benannt}/{f.gesamt} benannt
+            {f.offen > 0 ? ` · ${f.offen} ungeklärt` : " · alle bearbeitet"}
+          </span>
+        ))}
+      </div>
+
+      <p className="mt-2 text-xs text-muted-foreground">
+        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · pinker Rahmen =
+        Bildrechte geklärt
       </p>
 
-      <div className="mt-3 space-y-6">
-        {gruppen.map((g) => {
-          const alleGeklaert = g.bilder.every((b) => b.status === "geklaert");
-          const mehrfach = g.orte.length > 1;
-          return (
-            <section
-              key={g.key}
-              className={`rounded p-3 ${
-                alleGeklaert
-                  ? "border-[5px] border-[#fe7fff]"
-                  : "border-[5px] border-neutral-200"
-              }`}
+      {ansicht === "liste" ? (
+        <ListenAnsicht
+          zeilen={gefiltert}
+          urlNachPfad={urlNachPfad}
+          onAendern={aktualisieren}
+          onOeffnen={setOffen}
+        />
+      ) : (
+        <div className="mt-3 space-y-3">
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setAufgeklappt(new Set(gruppen.map((g) => g.key)))}
             >
-              <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b pb-2">
-                <div>
-                  <h2 className="text-sm font-semibold">{g.titel}</h2>
-                  <p className="text-[11px] text-muted-foreground">
-                    {g.bilder.length} Bild{g.bilder.length === 1 ? "" : "er"}
-                    {mehrfach ? " · an mehreren Stellen verwendet" : ""}
-                    {g.bilder.length === 1 ? " · Einzelbild" : ""}
-                  </p>
-                </div>
-                <Button variant="outline" size="sm" onClick={() => setGruppeOffen(g.key)}>
-                  Angaben für ganze Gruppe
-                </Button>
-              </div>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                {g.bilder.map((b) => (
+              Alle aufklappen
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => setAufgeklappt(new Set())}>
+              Alle zuklappen
+            </Button>
+          </div>
+          {gruppen.map((g) => {
+            const alleGeklaert = g.bilder.every((b) => b.status === "geklaert");
+            const mehrfach = g.orte.length > 1;
+            const offenGruppe = aufgeklappt.has(g.key);
+            return (
+              <section
+                key={g.key}
+                className={`rounded p-3 ${
+                  alleGeklaert ? "border-[5px] border-[#fe7fff]" : "border-[5px] border-neutral-200"
+                }`}
+              >
+                <div
+                  className={`flex flex-wrap items-center justify-between gap-2 ${
+                    offenGruppe ? "mb-3 border-b pb-2" : ""
+                  }`}
+                >
                   <button
-                    key={b.pfad}
-                    onClick={() => setOffen(b.pfad)}
-                    className={`rounded p-2 text-left hover:bg-muted ${
-                      b.status === "geklaert"
-                        ? "border-[5px] border-[#fe7fff]"
-                        : "border-[5px] border-neutral-200"
-                    }`}
+                    type="button"
+                    className="flex-1 text-left"
+                    onClick={() =>
+                      setAufgeklappt((alt) => {
+                        const neu = new Set(alt);
+                        if (neu.has(g.key)) neu.delete(g.key);
+                        else neu.add(g.key);
+                        return neu;
+                      })
+                    }
                   >
-                    <img
-                      src={urlNachPfad.get(b.pfad) ?? ""}
-                      alt={b.dateiname}
-                      loading="lazy"
-                      width={240}
-                      height={160}
-                      className="h-24 w-full bg-muted object-cover"
-                    />
-                    <p className="mt-2 break-all text-[11px] leading-tight">{b.dateiname}</p>
-                    <p className="text-[11px] text-muted-foreground">
-                      {KAT_LABEL[b.kategorie] ?? b.kategorie}
-                      {b.jahrgang ? ` ${b.jahrgang}` : ""} · {STATUS_LABEL[b.status] ?? b.status}
+                    <h2 className="text-sm font-semibold">
+                      <span className="mr-1 inline-block w-3 text-muted-foreground">
+                        {offenGruppe ? "▾" : "▸"}
+                      </span>
+                      {g.titel}
+                    </h2>
+                    <p className="pl-4 text-[11px] text-muted-foreground">
+                      {g.bilder.length} Bild{g.bilder.length === 1 ? "" : "er"}
+                      {mehrfach ? " · an mehreren Stellen verwendet" : ""}
+                      {g.bilder.length === 1 ? " · Einzelbild" : ""}
+                      {g.bilder[0]?.urheber ? ` · ${g.bilder[0].urheber}` : ""}
                     </p>
                   </button>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+                  <Button variant="outline" size="sm" onClick={() => setGruppeOffen(g.key)}>
+                    Angaben für ganze Gruppe
+                  </Button>
+                </div>
+                <div
+                  hidden={!offenGruppe}
+                  className="grid grid-cols-3 gap-2 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9"
+                >
+                  {g.bilder.map((b) => (
+                    <button
+                      key={b.pfad}
+                      onClick={() => setOffen(b.pfad)}
+                      className={`rounded p-1 text-left hover:bg-muted ${
+                        b.status === "geklaert"
+                          ? "border-2 border-[#fe7fff]"
+                          : "border-2 border-neutral-200"
+                      }`}
+                      title={`${b.dateiname} · ${STATUS_LABEL[b.status] ?? b.status}`}
+                    >
+                      <img
+                        src={urlNachPfad.get(b.pfad) ?? ""}
+                        alt={b.dateiname}
+                        loading="lazy"
+                        width={160}
+                        height={112}
+                        className="h-14 w-full bg-muted object-cover"
+                      />
+                      <p className="mt-1 truncate text-[10px] leading-tight text-muted-foreground">
+                        {b.dateiname}
+                      </p>
+                    </button>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      )}
 
       <Dialog open={!!aktuelleGruppe} onOpenChange={(o) => !o && setGruppeOffen(null)}>
         <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
@@ -503,7 +711,6 @@ function Bildverzeichnis() {
           )}
         </DialogContent>
       </Dialog>
-
 
       <Dialog open={!!aktuell} onOpenChange={(o) => !o && setOffen(null)}>
         <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">

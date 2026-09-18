@@ -2,8 +2,15 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { createHash, timingSafeEqual } from "node:crypto";
 import { BILD_MANIFEST } from "@/data/bild-manifest";
+import { projektBilder } from "@/data/bilder";
+import { projekte } from "@/data/projekte";
 
-export const STATUS_OPTIONEN = ["ungeklaert", "in-klaerung", "geklaert", "nicht-verwendbar"] as const;
+export const STATUS_OPTIONEN = [
+  "ungeklaert",
+  "in-klaerung",
+  "geklaert",
+  "nicht-verwendbar",
+] as const;
 export const RECHTEART_OPTIONEN = [
   "Eigenes Werk",
   "Lizenziert",
@@ -35,7 +42,9 @@ export type BildrechtRow = {
 function passwortOk(input: string): boolean {
   const expected = process.env["SITE_PASSWORD"];
   if (!expected) throw new Error("SITE_PASSWORD ist nicht gesetzt");
-  const a = createHash("sha256").update(input ?? "", "utf8").digest();
+  const a = createHash("sha256")
+    .update(input ?? "", "utf8")
+    .digest();
   const b = createHash("sha256").update(expected, "utf8").digest();
   return timingSafeEqual(a, b);
 }
@@ -133,6 +142,109 @@ export const speichereBildrechteGruppe = createServerFn({ method: "POST" })
       if (error) throw new Error(error.message);
     }
     return { ok: true as const };
+  });
+
+/**
+ * Ordnet jedem Projektbild die Angaben seines Wettbewerbsbeitrags zu.
+ * Grundlage ist der Bildschlüssel `<Jahrgang>/<Projekt>` aus `projektBilder`.
+ */
+function projektAngaben(): Map<string, { urheber: string; quelle: string; rechteart: string }> {
+  const pfadNachUrl = new Map(BILD_MANIFEST.map((b) => [b.url, b.pfad]));
+  const angaben = new Map<string, { urheber: string; quelle: string; rechteart: string }>();
+
+  for (const [schluessel, urls] of Object.entries(projektBilder)) {
+    const [jahr, slug] = schluessel.split("/");
+    const projekt = projekte.find((p) => p.jahr === jahr && p.slug === slug);
+    if (!projekt) continue;
+
+    // Im Crawl hängt an manchen Autorenzeilen noch die Objektbeschreibung
+    const urheber = projekt.autor.split(/\s+Objekt:/)[0].trim();
+    if (!urheber) continue;
+
+    for (const url of urls) {
+      const pfad = pfadNachUrl.get(url);
+      if (!pfad) continue;
+      angaben.set(pfad, {
+        urheber,
+        quelle: `neuland ${jahr}, Einreichung „${projekt.titel}“`,
+        rechteart: "Einverständnis Dritter",
+      });
+    }
+  }
+  return angaben;
+}
+
+/**
+ * Trägt für die Bilder der Wettbewerbsbeiträge die namentlich genannten
+ * Gewinner:innen als Urheber:innen ein. Felder, in denen schon etwas steht,
+ * bleiben unberührt; der Status wird nur aus „ungeklärt“ heraus gesetzt.
+ */
+export const uebernehmeProjektangaben = createServerFn({ method: "POST" })
+  .inputValidator((input: { passwort: string }) => input)
+  .handler(async ({ data }) => {
+    if (!passwortOk(data.passwort)) throw new Error("Falsches Passwort");
+    const db = await admin();
+    const angaben = projektAngaben();
+
+    const { data: rows, error: leseFehler } = await db
+      .from("bildrechte")
+      .select("pfad, urheber, status")
+      .eq("kategorie", "projekt");
+    if (leseFehler) throw new Error(leseFehler.message);
+
+    const bestand = new Map((rows ?? []).map((r) => [r.pfad, r]));
+
+    // Bilder mit gleichen Angaben in einem Rutsch schreiben
+    type Uebernahme = {
+      urheber: string;
+      quelle: string;
+      rechteart: string;
+      status?: string;
+    };
+    const gruppen = new Map<string, { werte: Uebernahme; pfade: string[] }>();
+
+    let uebersprungen = 0;
+    for (const [pfad, werte] of angaben) {
+      const zeile = bestand.get(pfad);
+      if (!zeile) continue;
+      if ((zeile.urheber ?? "").trim()) {
+        uebersprungen++;
+        continue;
+      }
+      const statusSetzen = zeile.status === "ungeklaert";
+      const schluessel = `${werte.urheber}|${werte.quelle}|${statusSetzen}`;
+      if (!gruppen.has(schluessel)) {
+        gruppen.set(schluessel, {
+          werte: statusSetzen ? { ...werte, status: "in-klaerung" } : { ...werte },
+          pfade: [],
+        });
+      }
+      gruppen.get(schluessel)!.pfade.push(pfad);
+    }
+
+    let geschrieben = 0;
+    for (const gruppe of gruppen.values()) {
+      for (let i = 0; i < gruppe.pfade.length; i += 200) {
+        const teil = gruppe.pfade.slice(i, i + 200);
+        const { error } = await db.from("bildrechte").update(gruppe.werte).in("pfad", teil);
+        if (error) throw new Error(error.message);
+        geschrieben += teil.length;
+      }
+    }
+
+    const { data: neu, error } = await db
+      .from("bildrechte")
+      .select(SPALTEN)
+      .order("kategorie")
+      .order("dateiname");
+    if (error) throw new Error(error.message);
+
+    return {
+      geschrieben,
+      uebersprungen,
+      zuordenbar: angaben.size,
+      bilder: (neu ?? []) as BildrechtRow[],
+    };
   });
 
 /** Speichert Rechte-Angaben zu einem Bild (Autosave). */
