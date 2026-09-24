@@ -134,6 +134,87 @@ export type Database = {
           },
         ]
       }
+      jury_wertungen: {
+        Row: {
+          created_at: string
+          einreichung_id: string
+          id: string
+          juror_id: string
+          kommentar: string
+          punkte: number | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          einreichung_id: string
+          id?: string
+          juror_id: string
+          kommentar?: string
+          punkte?: number | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          einreichung_id?: string
+          id?: string
+          juror_id?: string
+          kommentar?: string
+          punkte?: number | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "jury_wertungen_einreichung_id_fkey"
+            columns: ["einreichung_id"]
+            isOneToOne: false
+            referencedRelation: "neuland_einreichungen"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "jury_wertungen_juror_id_fkey"
+            columns: ["juror_id"]
+            isOneToOne: false
+            referencedRelation: "jury_zugaenge"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      jury_zugaenge: {
+        Row: {
+          aktiv: boolean
+          created_at: string
+          email: string
+          id: string
+          letzter_login: string | null
+          name: string
+          passwort_hash: string
+          rolle: string
+          updated_at: string
+        }
+        Insert: {
+          aktiv?: boolean
+          created_at?: string
+          email: string
+          id?: string
+          letzter_login?: string | null
+          name: string
+          passwort_hash?: string
+          rolle?: string
+          updated_at?: string
+        }
+        Update: {
+          aktiv?: boolean
+          created_at?: string
+          email?: string
+          id?: string
+          letzter_login?: string | null
+          name?: string
+          passwort_hash?: string
+          rolle?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       neuland_einreichungen: {
         Row: {
           created_at: string
