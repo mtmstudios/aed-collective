@@ -233,6 +233,10 @@ function Jurybereich() {
         <p className="text-sm text-muted-foreground">
           Zugang erhalten Jurymitglieder von der Geschäftsstelle.
         </p>
+        <p className="text-xs text-muted-foreground">
+          Erste Einrichtung: E-Mail leer lassen und das Seitenpasswort eingeben. Sobald der erste
+          Zugang der Geschäftsstelle angelegt ist, gilt nur noch die persönliche Anmeldung.
+        </p>
         <div>
           <Label className="text-xs">E-Mail</Label>
           <Input
