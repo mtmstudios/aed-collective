@@ -315,7 +315,7 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
     // Bilder liegen in einem geschlossenen Bucket – kurzlebige Links erzeugen
     const dateien = [
       ...(z.titelbild ? [z.titelbild as { path: string; name: string }] : []),
-      ...(((z.detailfotos ?? []) as { path: string; name: string }[]) ?? []),
+      ...((z.detailfotos ?? []) as { path: string; name: string }[]),
     ];
     const bilder: { name: string; url: string }[] = [];
     for (const datei of dateien) {
