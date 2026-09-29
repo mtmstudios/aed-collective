@@ -24,21 +24,22 @@ function ImpressumPage() {
         <div className="rule-t pt-6">
           <h2 className="display-sm">Angaben gemäß § 5 DDG</h2>
           <address className="mt-3 not-italic leading-relaxed">
-            {kontakt.name}
+            aed Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.
             <br />
-            {kontakt.strasse}
+            Olgastraße 138
             <br />
-            {kontakt.plz} {kontakt.ort}
+            70180 Stuttgart
             <br />
-            Telefon: {kontakt.telefon}
+            Telefon: +49 160 8894377
             <br />
-            E-Mail: {kontakt.email}
+            E-Mail: info@aed-stuttgart.de
           </address>
         </div>
         <div className="rule-t pt-6">
           <h2 className="display-sm">Vertretungsberechtigter Vorstand</h2>
           <p className="mt-3 leading-relaxed">
-            Dr. Frank Heinlein (1. Vorsitzender), Johanna Neves Pimenta (2. Vorsitzende)
+            Dr. Frank Heinlein (1. Vorsitzender), Johanna Neves Pimenta (2. Vorsitzende), Sara
+            Dahme (Schriftführerin)
           </p>
         </div>
         <div className="rule-t pt-6">
@@ -50,22 +51,26 @@ function ImpressumPage() {
         <div className="rule-t pt-6">
           <h2 className="display-sm">Verantwortlich für den Inhalt</h2>
           <p className="mt-3 leading-relaxed">
-            Sara Dahme (Vorstand Kommunikation), Anschrift wie oben.
+            Sara Dahme, Frank Heinlein, Johanna Neves Pimenta (Anschrift wie oben).
           </p>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="display-sm">Haftung für Inhalte und Links</h2>
-          <p className="mt-3 leading-relaxed text-muted-foreground">
-            Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten verantwortlich. Für
-            Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt
-            der Verlinkung waren keine Rechtsverstöße erkennbar.
+          <p className="leading-relaxed text-muted-foreground">
+            Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung
+            für die Inhalte externer Links. Für den Inhalt von verlinkten Seiten sind ausschließlich
+            deren Betreiber verantwortlich.
           </p>
         </div>
         <div className="rule-t pt-6">
-          <h2 className="display-sm">Urheberrecht</h2>
+          <p className="leading-relaxed text-muted-foreground">
+            Alle Inhalte dieser Website einschließlich der Gestaltung und Programmierung unterliegen
+            dem Urheberrecht (Copyright). Alle Rechte vorbehalten, alle Angaben ohne Gewähr,
+            Änderungen vorbehalten. Die Verwendung von Text- und Bildmaterial ist nur mit
+            ausdrücklicher Genehmigung der jeweiligen Urheberinnen und Urheber gestattet. Eine
+            Weiterverwendung bedarf deren vorheriger schriftlicher Zustimmung.
+          </p>
           <p className="mt-3 leading-relaxed text-muted-foreground">
-            Die Rechte an den gezeigten Projektarbeiten liegen bei den jeweiligen Urheberinnen und
-            Urhebern. Eine Weiterverwendung bedarf deren Zustimmung.
+            Webdesign: B612 GmbH Konzeptionelles Gestalten
           </p>
         </div>
       </section>
