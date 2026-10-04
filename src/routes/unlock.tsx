@@ -14,6 +14,10 @@ type Suche = { token?: string };
 export const Route = createFileRoute("/unlock")({
   validateSearch: (search: Record<string, unknown>): Suche => ({
     token: typeof search["token"] === "string" ? search["token"] : undefined,
+    ziel:
+      typeof search["ziel"] === "string" && /^\/(?!\/)/.test(search["ziel"])
+        ? search["ziel"]
+        : undefined,
   }),
   loader: () => gateStatus(),
   head: () => ({
@@ -41,7 +45,7 @@ function restdauer(until: number): string {
 
 function Unlock() {
   const router = useRouter();
-  const { token } = Route.useSearch();
+  const { token, ziel } = Route.useSearch();
   const status = Route.useLoaderData() ?? { unlocked: false, until: 0 };
   const unlock = useServerFn(unlockSite);
   const redeem = useServerFn(redeemToken);
@@ -67,7 +71,7 @@ function Unlock() {
       const res = await redeem({ data: { token } });
       if (res.ok) {
         await router.invalidate();
-        await router.navigate({ to: "/" });
+        await router.history.push(ziel ?? "/");
       } else {
         setTokenFehler(true);
       }
@@ -84,7 +88,7 @@ function Unlock() {
       const res = await unlock({ data: { password } });
       if (res.ok) {
         await router.invalidate();
-        await router.navigate({ to: "/" });
+        await router.history.push(ziel ?? "/");
       } else {
         setFehler(true);
       }
