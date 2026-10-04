@@ -9,7 +9,7 @@ import {
   unlockSite,
 } from "@/lib/gate.functions";
 
-type Suche = { token?: string };
+type Suche = { token?: string; ziel?: string };
 
 export const Route = createFileRoute("/unlock")({
   validateSearch: (search: Record<string, unknown>): Suche => ({
