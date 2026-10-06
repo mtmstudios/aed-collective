@@ -389,7 +389,9 @@ export const speichereWertung = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const sitzung = pruefeSitzung(data.token);
     if (!sitzung.id) {
-      throw new Error("Die Geschäftsstelle wertet nicht mit – dafür braucht es einen Jurzugang");
+      throw new Error(
+        "Mit dem Einrichtungs-Passwort lässt sich nicht werten. Bitte unter „Zugänge“ einen eigenen Zugang anlegen und damit anmelden.",
+      );
     }
     const db = await admin();
     const { error } = await db.from("jury_wertungen").upsert(
@@ -500,7 +502,10 @@ export const ladeAuswertung = createServerFn({ method: "POST" })
     const namen = new Map(((personen ?? []) as PersonRow[]).map((p) => [p.id, p.name]));
 
     const alleBeitraege = (beitraege ?? []) as BeitragRow[];
-    const zeilen = ((wertungen ?? []) as WertungRow[]).map((w) => {
+    const alleWertungen = (wertungen ?? []) as WertungRow[];
+
+    // Lange Form: eine Zeile je abgegebener Wertung
+    const zeilen = alleWertungen.map((w) => {
       const b = alleBeitraege.find((x) => x.id === w.einreichung_id);
       return {
         einreichungsId: b?.einreichungs_id ?? "",
@@ -513,5 +518,41 @@ export const ladeAuswertung = createServerFn({ method: "POST" })
       };
     });
 
-    return { zeilen };
+    // Nur Jurymitglieder, die tatsächlich gewertet haben – in fester Reihenfolge
+    const juroren = [
+      ...new Set(alleWertungen.map((w) => namen.get(w.juror_id) ?? "unbekannt")),
+    ].sort((a, b) => a.localeCompare(b, "de"));
+
+    // Kreuztabelle: eine Zeile je Beitrag, eine Spalte je Jurymitglied
+    const uebersicht = alleBeitraege
+      .map((b) => {
+        const dazu = alleWertungen.filter((w) => w.einreichung_id === b.id);
+        const mitPunkten = dazu.filter((w) => typeof w.punkte === "number");
+        const punkte: Record<string, number | null> = {};
+        for (const juror of juroren) {
+          const treffer = dazu.find((w) => (namen.get(w.juror_id) ?? "unbekannt") === juror);
+          punkte[juror] = treffer?.punkte ?? null;
+        }
+        return {
+          einreichungsId: b.einreichungs_id,
+          projekttitel: b.projekttitel ?? "",
+          kategorie: b.kategorie ?? "",
+          institution: b.institution ?? "",
+          anzahl: mitPunkten.length,
+          schnitt: mitPunkten.length
+            ? Math.round(
+                (mitPunkten.reduce((s, w) => s + (w.punkte ?? 0), 0) / mitPunkten.length) * 100,
+              ) / 100
+            : null,
+          punkte,
+          kommentare: dazu
+            .filter((w) => (w.kommentar ?? "").trim())
+            .map((w) => `${namen.get(w.juror_id) ?? "unbekannt"}: ${w.kommentar}`)
+            .join(" | "),
+        };
+      })
+      // Beste zuerst, Unbewertete ans Ende
+      .sort((a, b) => (b.schnitt ?? -1) - (a.schnitt ?? -1));
+
+    return { zeilen, juroren, uebersicht };
   });

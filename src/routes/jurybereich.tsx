@@ -48,8 +48,18 @@ function datum(wert: string | null): string {
   });
 }
 
+/**
+ * Ein CSV-Feld für Excel: Anführungszeichen verdoppelt, Zeilenumbrüche flach.
+ * Umbrüche in Kommentaren würden sonst mitten in der Tabelle neue Zeilen erzeugen.
+ */
 function csvFeld(wert: string | number | null): string {
-  return `"${String(wert ?? "").replace(/"/g, '""')}"`;
+  const text = String(wert ?? "").replace(/\r?\n/g, " / ");
+  return `"${text.replace(/"/g, '""')}"`;
+}
+
+/** Zahlen mit Komma, damit Excel sie im deutschen Format als Zahl erkennt. */
+function zahl(wert: number | null): string {
+  return wert === null ? "" : String(wert).replace(".", ",");
 }
 
 function Jurybereich() {
@@ -182,30 +192,80 @@ function Jurybereich() {
     }
   }
 
-  async function csvExport() {
-    const res = await auswertungLaden({ data: { token } });
-    const kopf = [
-      "Nummer",
-      "Projekt",
-      "Kategorie",
-      "Hochschule",
-      "Jurymitglied",
-      "Punkte",
-      "Kommentar",
-    ];
-    const zeilen = res.zeilen.map((z) =>
-      [z.einreichungsId, z.projekttitel, z.kategorie, z.institution, z.juror, z.punkte, z.kommentar]
-        .map(csvFeld)
-        .join(";"),
-    );
-    const blob = new Blob(["﻿" + [kopf.join(";"), ...zeilen].join("\n")], {
-      type: "text/csv;charset=utf-8",
-    });
+  /** Lädt eine Tabelle als CSV herunter – mit BOM und Semikolon, damit Excel sie direkt öffnet. */
+  function csvDownload(name: string, kopf: string[], zeilen: (string | number | null)[][]) {
+    const inhalt = [
+      kopf.map(csvFeld).join(";"),
+      ...zeilen.map((z) => z.map(csvFeld).join(";")),
+    ].join("\r\n");
+    const blob = new Blob(["﻿" + inhalt], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "neuland-wertungen.csv";
+    a.download = `${name}-${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(a.href);
+  }
+
+  /** Kreuztabelle: eine Zeile je Beitrag, eine Spalte je Jurymitglied. */
+  async function exportUebersicht() {
+    setStatus("Erstellt Export …");
+    try {
+      const res = await auswertungLaden({ data: { token } });
+      const kopf = [
+        "Nummer",
+        "Projekt",
+        "Kategorie",
+        "Hochschule",
+        "Schnitt",
+        "Anzahl Wertungen",
+        ...res.juroren,
+        "Kommentare",
+      ];
+      const zeilen = res.uebersicht.map((u) => [
+        u.einreichungsId,
+        u.projekttitel,
+        u.kategorie,
+        u.institution,
+        zahl(u.schnitt),
+        u.anzahl,
+        ...res.juroren.map((j) => u.punkte[j] ?? ""),
+        u.kommentare,
+      ]);
+      csvDownload("neuland-auswertung", kopf, zeilen);
+      setStatus(`Export erstellt: ${zeilen.length} Beiträge, ${res.juroren.length} Jurymitglieder`);
+    } catch (e) {
+      setStatus(e instanceof Error ? e.message : "Export fehlgeschlagen");
+    }
+  }
+
+  /** Lange Form: eine Zeile je abgegebener Wertung. */
+  async function exportWertungen() {
+    setStatus("Erstellt Export …");
+    try {
+      const res = await auswertungLaden({ data: { token } });
+      const kopf = [
+        "Nummer",
+        "Projekt",
+        "Kategorie",
+        "Hochschule",
+        "Jurymitglied",
+        "Punkte",
+        "Kommentar",
+      ];
+      const zeilen = res.zeilen.map((z) => [
+        z.einreichungsId,
+        z.projekttitel,
+        z.kategorie,
+        z.institution,
+        z.juror,
+        z.punkte ?? "",
+        z.kommentar,
+      ]);
+      csvDownload("neuland-einzelwertungen", kopf, zeilen);
+      setStatus(`Export erstellt: ${zeilen.length} Wertungen`);
+    } catch (e) {
+      setStatus(e instanceof Error ? e.message : "Export fehlgeschlagen");
+    }
   }
 
   const kategorien = useMemo(
@@ -225,6 +285,28 @@ function Jurybereich() {
 
   const eigeneFertig = beitraege.filter((b) => b.eigene?.punkte).length;
   const istBuero = sitzung?.rolle === "geschaeftsstelle";
+  // Mit dem Einrichtungs-Passwort gibt es kein Konto, dem eine Wertung gehören könnte
+  const darfWerten = Boolean(sitzung?.id);
+
+  /** Wertung direkt aus der Liste heraus, ohne den Beitrag zu öffnen. */
+  async function werteDirekt(beitragId: string, punkte: number | null) {
+    const vorher = beitraege;
+    const kommentar = vorher.find((b) => b.id === beitragId)?.eigene?.kommentar ?? "";
+    setBeitraege((alt) =>
+      alt.map((b) => (b.id === beitragId ? { ...b, eigene: { punkte, kommentar } } : b)),
+    );
+    setStatus("Speichert …");
+    try {
+      await wertungSpeichern({
+        data: { token, einreichungId: beitragId, werte: { punkte, kommentar } },
+      });
+      setStatus("Gespeichert");
+      await listeHolen(token);
+    } catch (e) {
+      setBeitraege(vorher);
+      setStatus(e instanceof Error ? e.message : "Speichern fehlgeschlagen");
+    }
+  }
 
   if (!sitzung) {
     return (
@@ -273,7 +355,7 @@ function Jurybereich() {
           <h1 className="font-display text-2xl">Jurybereich neuland</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {sitzung.name} · {ROLLEN_LABEL[sitzung.rolle]}
-            {!istBuero && ` · ${eigeneFertig} von ${beitraege.length} bewertet`}
+            {darfWerten && ` · ${eigeneFertig} von ${beitraege.length} bewertet`}
             {status && <span className="ml-3">· {status}</span>}
           </p>
         </div>
@@ -294,8 +376,11 @@ function Jurybereich() {
               >
                 Zugänge
               </Button>
-              <Button variant="outline" size="sm" onClick={csvExport}>
-                CSV-Export
+              <Button variant="outline" size="sm" onClick={exportUebersicht}>
+                Auswertung (Excel)
+              </Button>
+              <Button variant="outline" size="sm" onClick={exportWertungen}>
+                Einzelwertungen
               </Button>
             </>
           )}
@@ -323,7 +408,7 @@ function Jurybereich() {
                 ))}
               </select>
             </div>
-            {!istBuero && (
+            {darfWerten && (
               <label className="flex items-center gap-2 text-sm">
                 <input
                   type="checkbox"
@@ -335,6 +420,14 @@ function Jurybereich() {
             )}
             <p className="ml-auto text-xs text-muted-foreground">{gefiltert.length} Beiträge</p>
           </div>
+
+          {!darfWerten && (
+            <p className="mt-3 rounded border border-[#fe7fff] p-3 text-xs">
+              Sie sind mit dem Einrichtungs-Passwort angemeldet. Damit lässt sich die Auswertung
+              ansehen, aber nicht werten – eine Wertung braucht eine Person, der sie gehört. Legen
+              Sie sich unter „Zugänge“ einen eigenen Zugang an und melden Sie sich damit an.
+            </p>
+          )}
 
           {beitraege.length === 0 && (
             <p className="mt-8 text-sm text-muted-foreground">
@@ -351,14 +444,13 @@ function Jurybereich() {
                   <th className="p-2 font-medium">Projekt</th>
                   <th className="w-56 p-2 font-medium">Kategorie</th>
                   <th className="w-28 p-2 font-medium">Eingereicht</th>
-                  {istBuero ? (
+                  {istBuero && (
                     <>
                       <th className="w-20 p-2 font-medium">Schnitt</th>
                       <th className="w-24 p-2 font-medium">Wertungen</th>
                     </>
-                  ) : (
-                    <th className="w-28 p-2 font-medium">Meine Wertung</th>
                   )}
+                  <th className="w-36 p-2 font-medium">Meine Wertung</th>
                   <th className="w-20 p-2" />
                 </tr>
               </thead>
@@ -372,20 +464,32 @@ function Jurybereich() {
                     </td>
                     <td className="p-2 text-xs">{b.kategorie}</td>
                     <td className="p-2 text-xs">{datum(b.eingereichtAm)}</td>
-                    {istBuero ? (
+                    {istBuero && (
                       <>
                         <td className="p-2">{b.schnitt ?? "–"}</td>
                         <td className="p-2">{b.anzahlWertungen ?? 0}</td>
                       </>
-                    ) : (
-                      <td className="p-2">
-                        {b.eigene?.punkte ? (
-                          <span className="font-medium">{b.eigene.punkte} / 10</span>
-                        ) : (
-                          <span className="text-muted-foreground">offen</span>
-                        )}
-                      </td>
                     )}
+                    <td className="p-2">
+                      {darfWerten ? (
+                        <select
+                          className="h-8 w-full rounded border px-1 text-sm"
+                          value={b.eigene?.punkte ?? ""}
+                          onChange={(e) =>
+                            werteDirekt(b.id, e.target.value ? Number(e.target.value) : null)
+                          }
+                        >
+                          <option value="">noch offen</option>
+                          {PUNKTE.map((p) => (
+                            <option key={p} value={p}>
+                              {p} von 10
+                            </option>
+                          ))}
+                        </select>
+                      ) : (
+                        <span className="text-xs text-muted-foreground">eigener Zugang nötig</span>
+                      )}
+                    </td>
                     <td className="p-2 text-right">
                       <Button variant="outline" size="sm" onClick={() => oeffne(b.id)}>
                         Ansehen
@@ -559,7 +663,7 @@ function Jurybereich() {
                 )}
               </div>
 
-              {istBuero ? (
+              {istBuero && (
                 <div className="rounded border bg-muted/40 p-3">
                   <p className="text-xs font-medium">
                     Wertungen der Jury · Schnitt {detail.schnitt ?? "–"} aus{" "}
@@ -586,7 +690,9 @@ function Jurybereich() {
                     {detail.telefon ? ` · ${detail.telefon}` : ""}
                   </p>
                 </div>
-              ) : (
+              )}
+
+              {darfWerten && (
                 <div className="rounded border p-3">
                   <Label className="text-xs">Meine Wertung</Label>
                   <div className="mt-2 flex flex-wrap gap-1">
