@@ -1,4 +1,4 @@
-import { bildnachweis } from "@/data/bildnachweise";
+import { useBildnachweis } from "@/data/bildnachweise";
 
 /**
  * Unaufdringlicher Fotonachweis: "© Name / Stadt".
@@ -17,7 +17,8 @@ export function BildCredit({
   variant?: "overlay" | "caption";
   className?: string;
 }) {
-  const nachweis = text ?? bildnachweis(src);
+  const ausVerzeichnis = useBildnachweis(src);
+  const nachweis = text ?? ausVerzeichnis;
   if (!nachweis) return null;
 
   if (variant === "caption") {

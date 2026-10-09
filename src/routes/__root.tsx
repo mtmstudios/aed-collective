@@ -11,13 +11,14 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import { isUnlocked } from "@/lib/gate.functions";
+import { ladeBildnachweise } from "@/lib/bildnachweise.functions";
+import { BildnachweisProvider } from "@/data/bildnachweise";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-
 
 function NotFoundComponent() {
   return (
@@ -127,6 +128,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
   }),
+  // Fotonachweise einmal je Seitenaufruf aus dem Bildverzeichnis holen
+  loader: () => ladeBildnachweise(),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -149,6 +152,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { nachweise } = Route.useLoaderData();
   const istGate = useRouterState({
     select: (s) => s.location.pathname.startsWith("/unlock"),
   });
@@ -165,19 +169,20 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <a
-        href="#inhalt"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-100 focus:bg-foreground focus:px-4 focus:py-2 focus:text-background"
-      >
-        Zum Inhalt springen
-      </a>
-      <SiteHeader />
-      <main id="inhalt">
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-      </main>
-      <SiteFooter />
+      <BildnachweisProvider werte={nachweise}>
+        <a
+          href="#inhalt"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-100 focus:bg-foreground focus:px-4 focus:py-2 focus:text-background"
+        >
+          Zum Inhalt springen
+        </a>
+        <SiteHeader />
+        <main id="inhalt">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <SiteFooter />
+      </BildnachweisProvider>
     </QueryClientProvider>
   );
 }
-
