@@ -1,6 +1,8 @@
 // Zentrale Konfiguration für das neuland-2027-Einreichungsformular.
 // Bewerbungsschluss hier ändern (ISO-Zeitstempel, Zeitzone Berlin = +02:00 / +01:00).
-export const BEWERBUNGSSCHLUSS = "2026-10-31T23:59:59+01:00";
+// Der 31.10.2026 ist der Starttermin der Seite, nicht der Einsendeschluss –
+// ausgeschrieben ist der Wettbewerb bis Ende März 2027 (Sommerzeit, daher +02:00).
+export const BEWERBUNGSSCHLUSS = "2027-03-31T23:59:59+02:00";
 
 export const KATEGORIEN = [
   "Architecture + Engineering",
