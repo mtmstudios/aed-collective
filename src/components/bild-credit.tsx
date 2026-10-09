@@ -29,9 +29,13 @@ export function BildCredit({
     );
   }
 
+  // Bei Wettbewerbsbeiträgen steht im Nachweis das ganze Team – teils über
+  // vierhundert Zeichen. Deshalb begrenzt auf zwei Zeilen, vollständig im
+  // Titel-Attribut.
   return (
     <span
-      className={`pointer-events-none absolute right-2 bottom-2 z-10 font-sans text-[10px] leading-none text-white/70 mix-blend-difference ${className}`}
+      title={nachweis}
+      className={`pointer-events-none absolute right-2 bottom-2 z-10 line-clamp-2 max-w-[70%] text-right font-sans text-[10px] leading-snug text-white/70 [overflow-wrap:anywhere] mix-blend-difference ${className}`}
     >
       © {nachweis}
     </span>
