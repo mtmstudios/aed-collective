@@ -21,7 +21,6 @@ export const Route = createFileRoute("/kontakt")({
 });
 
 function KontaktPage() {
-  const query = encodeURIComponent(`${kontakt.strasse}, ${kontakt.plz} ${kontakt.ort}`);
   return (
     <>
       <PageHeader
