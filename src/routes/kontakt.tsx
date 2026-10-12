@@ -28,9 +28,9 @@ function KontaktPage() {
         titel="Geschäftsstelle"
         intro="Fragen zu Mitgliedschaft, Programm oder zum Wettbewerb neuland? Die Geschäftsstelle hilft weiter."
       />
-      <section className="shell">
-        <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-5 space-y-8">
+      <section className="shell pb-16 md:pb-24">
+        <div>
+          <div className="grid gap-8 md:grid-cols-3 md:gap-10">
             <div className="rule-t pt-6">
               <h2 className="eyebrow">Adresse</h2>
               <address className="mt-3 not-italic leading-relaxed">
