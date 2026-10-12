@@ -61,24 +61,6 @@ function KontaktPage() {
               <p className="mt-3">{kontakt.zeiten}</p>
             </div>
           </div>
-          <div className="md:col-span-7">
-            <iframe
-              title={`Karte: Standort ${kontakt.name}, ${kontakt.strasse}, ${kontakt.ort}`}
-              src={`https://www.openstreetmap.org/export/embed.html?bbox=9.17%2C48.76%2C9.20%2C48.78&layer=mapnik&marker=48.7716%2C9.1855`}
-              loading="lazy"
-              className="h-[420px] w-full border border-line grayscale-hover"
-            />
-            <p className="mt-3 text-sm">
-              <a
-                href={`https://www.openstreetmap.org/search?query=${query}`}
-                target="_blank"
-                rel="noreferrer"
-                className="underline link-brand"
-              >
-                Route in OpenStreetMap öffnen
-              </a>
-            </p>
-          </div>
         </div>
       </section>
     </>
