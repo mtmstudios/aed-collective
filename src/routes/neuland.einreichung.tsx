@@ -1,4 +1,4 @@
-import { cloneElement, isValidElement, useId, useState } from "react";
+import { cloneElement, isValidElement, useEffect, useId, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { supabase } from "@/integrations/supabase/client";
@@ -110,6 +110,12 @@ function EinreichungPage() {
   const [nurLesen, setNurLesen] = useState(false);
   const [meldung, setMeldung] = useState<string | null>(null);
   const [fehler, setFehler] = useState<string | null>(null);
+  // Die Meldung steht oben auf der Seite, die Knöpfe weit darunter. Ohne diesen
+  // Sprung klickt man auf "Weiter" und es scheint nichts zu passieren.
+  const fehlerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (fehler) fehlerRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [fehler]);
   const [busy, setBusy] = useState(false);
   const [neuAngelegt, setNeuAngelegt] = useState(false);
 
@@ -228,7 +234,11 @@ function EinreichungPage() {
         )}
 
         {fehler && (
-          <div className="mt-6 border border-destructive/40 bg-destructive/10 p-4 text-sm text-destructive">
+          <div
+            ref={fehlerRef}
+            role="alert"
+            className="mt-6 border border-destructive/40 bg-destructive/10 p-4 text-sm text-destructive"
+          >
             {fehler}
           </div>
         )}
