@@ -49,6 +49,18 @@ export function useIstGesperrt(src?: string): boolean {
   return gesperrt.has(src);
 }
 
+/**
+ * Filtert gesperrte Bilder aus einer Liste.
+ * Für Bildreihen wie den Cover-Slider: Dort wäre ein Platzhalter mitten im
+ * Lauf ein Fremdkörper – die betroffenen Bilder werden einfach ausgelassen.
+ */
+export function useFreigegebeneBilder(bilder: readonly string[]): string[] {
+  const { gesperrt } = useContext(Kontext);
+  const frei = bilder.filter((b) => !gesperrt.has(b));
+  // Wäre am Ende nichts übrig, ist eine leere Fläche schlechter als die Bilder
+  return frei.length > 0 ? frei : [...bilder];
+}
+
 /** Variante ohne Hook, etwa für Exporte außerhalb der Komponenten. */
 export function bildnachweis(src?: string): string | undefined {
   if (!src) return undefined;

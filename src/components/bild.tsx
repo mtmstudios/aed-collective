@@ -28,8 +28,11 @@ export function Bild({
   if (gesperrt) {
     return (
       <div
-        role="img"
-        aria-label={`${alt} – Abbildung noch nicht freigegeben`}
+        // Ohne Alternativtext ist das Bild schmückendes Beiwerk, etwa eine
+        // Dublette im Laufband – dann bleibt auch der Platzhalter stumm.
+        role={alt ? "img" : undefined}
+        aria-label={alt ? `${alt} – Abbildung noch nicht freigegeben` : undefined}
+        aria-hidden={alt ? undefined : true}
         title="Für dieses Bild sind die Nutzungsrechte noch nicht geklärt."
         className={`${className} flex items-center justify-center bg-muted`}
       >

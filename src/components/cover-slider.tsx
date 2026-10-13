@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Bild } from "@/components/bild";
+import { useFreigegebeneBilder } from "@/data/bildnachweise";
 
 /**
  * Horizontaler Cover-Slider: Bilder liegen direkt nebeneinander und laufen
@@ -28,6 +29,10 @@ export function CoverSlider({
   hoverFaktor?: number;
   pfeile?: boolean;
 }) {
+  // Bilder ohne geklärte Rechte fallen hier ganz heraus: Ein Platzhalter
+  // mitten im laufenden Band sähe nach Fehler aus, nicht nach Absicht.
+  const zeigbar = useFreigegebeneBilder(bilder);
+
   const wrapRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const offset = useRef(0);
@@ -108,7 +113,7 @@ export function CoverSlider({
       }}
     >
       <div ref={trackRef} className="flex h-full will-change-transform">
-        {[...bilder, ...bilder].map((src, i) => (
+        {[...zeigbar, ...zeigbar].map((src, i) => (
           <div key={`${src}-${i}`} className={`h-full shrink-0 ${itemClassName}`}>
             <Bild
               src={src}
