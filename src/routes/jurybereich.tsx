@@ -144,6 +144,7 @@ function Jurybereich() {
     try {
       const res = await login({ data: { email, passwort } });
       sessionStorage.setItem(TOKEN_SCHLUESSEL, res.token);
+      zustandLeeren();
       setToken(res.token);
       setSitzung(res.sitzung);
       setPasswort("");
@@ -155,13 +156,29 @@ function Jurybereich() {
     }
   }
 
+  /**
+   * Setzt alles zurück, was zur vorigen Anmeldung gehört. Ohne das sieht die
+   * nächste Person noch die Ansicht und die Daten ihrer Vorgängerin – bei den
+   * Zugängen wären das Namen und E-Mail-Adressen.
+   */
+  function zustandLeeren() {
+    setBeitraege([]);
+    setDetail(null);
+    setZugaenge([]);
+    setAnsicht("beitraege");
+    setNeu({ name: "", email: "", rolle: "jury", passwort: "" });
+    setNeuesPasswort(null);
+    setStatus("");
+    setKategorie("alle");
+    setNurOffene(false);
+  }
+
   function abmelden() {
     sessionStorage.removeItem(TOKEN_SCHLUESSEL);
     setToken("");
     setSitzung(null);
-    setBeitraege([]);
-    setDetail(null);
     setFehler("");
+    zustandLeeren();
   }
 
   async function oeffne(id: string) {
@@ -483,7 +500,9 @@ function Jurybereich() {
         </p>
       )}
 
-      {ansicht === "beitraege" ? (
+      {/* Die Zugangsverwaltung bleibt der Geschäftsstelle vorbehalten, auch
+          wenn die Ansicht aus einer früheren Sitzung noch gesetzt wäre. */}
+      {ansicht === "beitraege" || !istBuero ? (
         <>
           <div className="mt-4 flex flex-wrap items-end gap-3 border-y py-3">
             <div>
@@ -796,8 +815,14 @@ function Jurybereich() {
                 <DialogTitle className="text-lg">{detail.projekttitel || "ohne Titel"}</DialogTitle>
               </DialogHeader>
               <p className="mt-1 text-xs text-muted-foreground">
-                {detail.einreichungsId} · {detail.kategorie} · {detail.institution} · eingereicht am{" "}
-                {datum(detail.eingereichtAm)}
+                {[
+                  detail.einreichungsId,
+                  detail.kategorie,
+                  detail.institution,
+                  `eingereicht am ${datum(detail.eingereichtAm)}`,
+                ]
+                  .filter(Boolean)
+                  .join(" · ")}
               </p>
 
               {detail.bilder.length > 0 && (
