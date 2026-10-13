@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { projekte } from "@/data/neuland";
 import { projektBilder } from "@/data/bilder";
 import { BildCredit } from "@/components/bild-credit";
+import { Bild } from "@/components/bild";
 
 export const Route = createFileRoute("/neuland/gewinner/$jahr/$slug")({
   loader: ({ params }) => {
@@ -12,7 +13,12 @@ export const Route = createFileRoute("/neuland/gewinner/$jahr/$slug")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Projekt nicht gefunden – neuland" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [
+          { title: "Projekt nicht gefunden – neuland" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     }
     const { projekt } = loaderData;
     const beschreibung = `${projekt.preis} ${projekt.kategorie} ${projekt.jahr}: ${projekt.titel} von ${projekt.autor}, ${projekt.hochschule}.`;
@@ -70,7 +76,7 @@ function ProjektDetail() {
 
       {hero && (
         <figure className="bleed relative">
-          <img
+          <Bild
             src={hero}
             alt={`${projekt.titel} von ${projekt.autor}`}
             className="max-h-[80vh] w-full object-contain"
@@ -122,7 +128,7 @@ function ProjektDetail() {
           <div className="grid gap-8 md:grid-cols-2">
             {galerie.map((b, i) => (
               <figure key={b} className={galerie.length === 3 && i === 0 ? "md:col-span-2" : ""}>
-                <img
+                <Bild
                   src={b}
                   alt={`${projekt.titel} – Abbildung ${i + 2}`}
                   loading="lazy"

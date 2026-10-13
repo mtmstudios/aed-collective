@@ -8,6 +8,7 @@ import { CoverSlider } from "@/components/cover-slider";
 
 import { coverBilder } from "@/data/cover";
 import { eventBilder } from "@/data/bilder";
+import { Bild } from "@/components/bild";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -47,8 +48,12 @@ function ProgrammPage() {
     const heute = new Date().toISOString().slice(0, 10);
     const gefiltert = events.filter((e) => filter === "Alle" || e.format === filter);
     return {
-      kommend: gefiltert.filter((e) => e.datum >= heute).sort((a, b) => a.datum.localeCompare(b.datum)),
-      archiv: gefiltert.filter((e) => e.datum < heute).sort((a, b) => b.datum.localeCompare(a.datum)),
+      kommend: gefiltert
+        .filter((e) => e.datum >= heute)
+        .sort((a, b) => a.datum.localeCompare(b.datum)),
+      archiv: gefiltert
+        .filter((e) => e.datum < heute)
+        .sort((a, b) => b.datum.localeCompare(a.datum)),
     };
   }, [filter]);
 
@@ -81,7 +86,6 @@ function ProgrammPage() {
         </div>
       </section>
 
-
       <section className="shell" aria-label="Filter nach Format">
         <div className="flex flex-wrap items-center gap-x-7 gap-y-3 py-5">
           {["Alle", ...eventFormate].map((f) => (
@@ -110,57 +114,60 @@ function ProgrammPage() {
           </p>
         ) : (
           <>
-          <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-            <article className="group">
-              <div className="img-zoom aspect-3/2 bg-muted">
-                <img
-                  src={coverfotos[coverfotos.length - 1]}
-                  alt="Aktuelles Programmheft des aed e.V."
-                  loading="lazy"
-                  decoding="async"
-                  className="grayscale-hover h-full w-full object-cover"
-                />
-              </div>
-              <p className="eyebrow mt-4">Download</p>
-              <h3 className="display-sm mt-2">Aktueller Flyer</h3>
-              <p className="meta mt-2">Programmheft · aed e.V.</p>
-              <p className="mt-3 body-base">
-                Das aktuelle Programmheft mit allen Terminen des Halbjahres – hier folgt in Kürze der
-                Download.
-              </p>
-            </article>
-            {kommend.map((e) => (
-              <EventCard key={e.slug} event={e} />
-            ))}
-            <article className="group">
-              <Link to="/mitglied-werden" className="block">
+            <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+              <article className="group">
                 <div className="img-zoom aspect-3/2 bg-muted">
-                  <img
-                    src={eventBilder["jung-und-hungrig-haus-otto"]}
-                    alt="jung & hungrig – Studio-Besuch"
+                  <Bild
+                    src={coverfotos[coverfotos.length - 1]}
+                    alt="Aktuelles Programmheft des aed e.V."
                     loading="lazy"
                     decoding="async"
                     className="grayscale-hover h-full w-full object-cover"
                   />
                 </div>
-                <p className="eyebrow mt-4">jung & hungrig</p>
-                <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>
+                <p className="eyebrow mt-4">Download</p>
+                <h3 className="display-sm mt-2">Aktueller Flyer</h3>
+                <p className="meta mt-2">Programmheft · aed e.V.</p>
                 <p className="mt-3 body-base">
-                  Mit der Reihe „jung & hungrig" besuchen wir regelmäßig aufstrebende junge
-                  Studios – Vorträge, Führungen und Studiobesuche, bei denen du genau die Leute
-                  triffst, die deine Arbeit interessieren.
+                  Das aktuelle Programmheft mit allen Terminen des Halbjahres – hier folgt in Kürze
+                  der Download.
                 </p>
-              </Link>
-            </article>
-          </div>
-          <Link to="/mitglied-werden" className="btn-solid mt-10">
-            Mitglied werden
-          </Link>
+              </article>
+              {kommend.map((e) => (
+                <EventCard key={e.slug} event={e} />
+              ))}
+              <article className="group">
+                <Link to="/mitglied-werden" className="block">
+                  <div className="img-zoom aspect-3/2 bg-muted">
+                    <Bild
+                      src={eventBilder["jung-und-hungrig-haus-otto"]}
+                      alt="jung & hungrig – Studio-Besuch"
+                      loading="lazy"
+                      decoding="async"
+                      className="grayscale-hover h-full w-full object-cover"
+                    />
+                  </div>
+                  <p className="eyebrow mt-4">jung & hungrig</p>
+                  <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>
+                  <p className="mt-3 body-base">
+                    Mit der Reihe „jung & hungrig" besuchen wir regelmäßig aufstrebende junge
+                    Studios – Vorträge, Führungen und Studiobesuche, bei denen du genau die Leute
+                    triffst, die deine Arbeit interessieren.
+                  </p>
+                </Link>
+              </article>
+            </div>
+            <Link to="/mitglied-werden" className="btn-solid mt-10">
+              Mitglied werden
+            </Link>
           </>
         )}
       </section>
 
-      <section className="bleed programm-archiv bg-[var(--aed-hover)]" aria-labelledby="archiv-titel">
+      <section
+        className="bleed programm-archiv bg-[var(--aed-hover)]"
+        aria-labelledby="archiv-titel"
+      >
         <div className="shell py-14 md:py-20">
           <p id="archiv-titel" className="eyebrow-muted">
             Archiv
@@ -206,7 +213,12 @@ function ProgrammPage() {
                       <span className="block body-base">{r.name}</span>
                       <span className="meta block">
                         {r.url ? (
-                          <a href={r.url} target="_blank" rel="noreferrer" className="link-underline">
+                          <a
+                            href={r.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="link-underline"
+                          >
                             {r.org}
                           </a>
                         ) : (
@@ -224,7 +236,6 @@ function ProgrammPage() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Bild } from "@/components/bild";
 
 /**
  * Horizontaler Cover-Slider: Bilder liegen direkt nebeneinander und laufen
@@ -109,7 +110,7 @@ export function CoverSlider({
       <div ref={trackRef} className="flex h-full will-change-transform">
         {[...bilder, ...bilder].map((src, i) => (
           <div key={`${src}-${i}`} className={`h-full shrink-0 ${itemClassName}`}>
-            <img
+            <Bild
               src={src}
               alt={i === 0 ? alt : ""}
               aria-hidden={i === 0 ? undefined : true}
@@ -129,7 +130,15 @@ export function CoverSlider({
             onClick={() => springe(1)}
             className="absolute left-4 top-[15%] z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70"
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+            >
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
@@ -139,7 +148,15 @@ export function CoverSlider({
             onClick={() => springe(-1)}
             className="absolute right-4 top-[15%] z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70"
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+            >
               <path d="M9 6l6 6-6 6" />
             </svg>
           </button>

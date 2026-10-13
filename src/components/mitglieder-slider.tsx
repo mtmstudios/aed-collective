@@ -1,6 +1,7 @@
 import type { Person } from "@/data/site";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { AutoSlider } from "@/components/auto-slider";
+import { Bild } from "@/components/bild";
 
 function Portraet({ person }: { person: Person }) {
   const bild = personenBild(person.name);
@@ -9,7 +10,7 @@ function Portraet({ person }: { person: Person }) {
     <>
       <div className="img-zoom aspect-3/4 w-[168px] bg-muted md:w-[212px]">
         {bild ? (
-          <img
+          <Bild
             src={bild}
             alt={`Porträt ${person.name}`}
             loading="lazy"
@@ -21,9 +22,7 @@ function Portraet({ person }: { person: Person }) {
           <div className="h-full w-full bg-muted" aria-hidden="true" />
         )}
       </div>
-      <p className="mt-3 w-[168px] display-sm leading-tight md:w-[212px]">
-        {person.name}
-      </p>
+      <p className="mt-3 w-[168px] display-sm leading-tight md:w-[212px]">{person.name}</p>
       <p className="meta mt-1 w-[168px] md:w-[212px]">{person.rolle}</p>
     </>
   );

@@ -152,7 +152,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const { nachweise } = Route.useLoaderData();
+  const { nachweise, gesperrt } = Route.useLoaderData();
   const istGate = useRouterState({
     select: (s) => s.location.pathname.startsWith("/unlock"),
   });
@@ -169,7 +169,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <BildnachweisProvider werte={nachweise}>
+      <BildnachweisProvider werte={nachweise} gesperrt={gesperrt}>
         <a
           href="#inhalt"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-100 focus:bg-foreground focus:px-4 focus:py-2 focus:text-background"

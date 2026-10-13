@@ -1,7 +1,15 @@
 import type { ReactNode } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import type { Person } from "@/data/site";
 import { personenBilder } from "@/data/bilder";
+import { Bild } from "@/components/bild";
 
 /** Porträt aus dem gesicherten Bildbestand der alten Website. */
 export function personenBild(name: string) {
@@ -18,7 +26,10 @@ export function personenBild(name: string) {
 
 export function initialen(name: string) {
   return name
-    .replace(/^(Prof\. Dr\. phil\.|Prof\. Dr\. Dr\. E\.h\. Dr\. h\.c\.|Prof\. Dr\.|Dr\. Dr\.|Prof\.|Dr\.)\s+/i, "")
+    .replace(
+      /^(Prof\. Dr\. phil\.|Prof\. Dr\. Dr\. E\.h\. Dr\. h\.c\.|Prof\. Dr\.|Dr\. Dr\.|Prof\.|Dr\.)\s+/i,
+      "",
+    )
     .split(" ")
     .filter(Boolean)
     .map((t) => t[0])
@@ -48,7 +59,7 @@ export function PersonDialog({
         <div className="flex flex-col">
           <div className="relative w-full">
             {bild ? (
-              <img
+              <Bild
                 src={bild}
                 alt={`Porträt ${person.name}`}
                 className="aspect-4/5 w-full bg-muted object-cover"
@@ -77,7 +88,9 @@ export function PersonDialog({
                   ))}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground">Für diese Person liegt noch kein Statement vor.</p>
+              <p className="text-sm text-muted-foreground">
+                Für diese Person liegt noch kein Statement vor.
+              </p>
             )}
             {person.email && (
               <a href={`mailto:${person.email}`} className="meta mt-6 inline-flex link-underline">

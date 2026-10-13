@@ -1,5 +1,6 @@
 import type { Person } from "@/data/site";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
+import { Bild } from "@/components/bild";
 
 export { personenBild };
 
@@ -11,7 +12,7 @@ export function PersonCard({ person }: { person: Person; basePath?: string }) {
       <article className="group w-full cursor-pointer text-left" role="button" tabIndex={0}>
         <div className="img-zoom aspect-3/4 bg-muted">
           {bild ? (
-            <img
+            <Bild
               src={bild}
               alt={`Porträt ${person.name}`}
               loading="lazy"

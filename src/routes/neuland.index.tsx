@@ -7,6 +7,7 @@ import { SectionTitle } from "@/components/ui-bits";
 import { AutoSlider } from "@/components/auto-slider";
 
 import { NeulandSubnav } from "@/routes/neuland";
+import { Bild } from "@/components/bild";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
@@ -15,7 +16,7 @@ function JuryKarte({ person }: { person: Person }) {
       <article className="group w-full cursor-pointer text-left" role="button" tabIndex={0}>
         <div className="img-zoom aspect-square bg-muted">
           {bild ? (
-            <img
+            <Bild
               src={bild}
               alt={`Porträt ${person.name}`}
               loading="lazy"
@@ -43,7 +44,10 @@ export const Route = createFileRoute("/neuland/")({
           "aed neuland – der interdisziplinäre Nachwuchswettbewerb für Studierende und Absolvent:innen bis 28 Jahre. Fünf Kategorien, 2.000 € je 1. Preis, gefördert von der Karl Schlecht Stiftung.",
       },
       { property: "og:title", content: "neuland – Nachwuchswettbewerb des aed e.V." },
-      { property: "og:description", content: "Der interdisziplinäre Nachwuchswettbewerb für junge Gestalter:innen." },
+      {
+        property: "og:description",
+        content: "Der interdisziplinäre Nachwuchswettbewerb für junge Gestalter:innen.",
+      },
       { property: "og:url", content: "/neuland" },
     ],
     links: [{ rel: "canonical", href: "/neuland" }],
@@ -62,7 +66,7 @@ function NeulandIndex() {
       <section className="bleed relative" aria-labelledby="neuland-titel-head">
         <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
           {titelbild && (
-            <img
+            <Bild
               src={titelbild}
               alt={`${titelprojekt?.titel} – 1. Preis neuland 2025`}
               className="h-full w-full object-cover"
@@ -73,7 +77,9 @@ function NeulandIndex() {
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
               <p className="eyebrow text-white/85">Neue Ausschreibung – jetzt bewerben</p>
-              <h1 id="neuland-titel-head" className="display-xl mt-4 text-white">neuland 2027</h1>
+              <h1 id="neuland-titel-head" className="display-xl mt-4 text-white">
+                neuland 2027
+              </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
                 Der interdisziplinäre Nachwuchswettbewerb des aed – für Studierende und
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
@@ -90,9 +96,9 @@ function NeulandIndex() {
           <div className="md:col-span-7">
             <p className="prose-editorial">
               Du hast eine Abschluss-, Semester- oder freie Arbeit, die mehr verdient hat als einen
-              Ordner auf der Festplatte? neuland zeichnet die besten Arbeiten junger
-              Gestalter:innen aus – in fünf Kategorien, mit 2.000 € je 1. Preis, gefördert von der
-              Karl Schlecht Stiftung.
+              Ordner auf der Festplatte? neuland zeichnet die besten Arbeiten junger Gestalter:innen
+              aus – in fünf Kategorien, mit 2.000 € je 1. Preis, gefördert von der Karl Schlecht
+              Stiftung.
             </p>
             <p className="meta mt-5">{wettbewerbStatus.hinweis}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -159,7 +165,10 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="bleed neuland-archiv bg-[var(--aed-hover)]" aria-labelledby="archiv-neuland">
+      <section
+        className="bleed neuland-archiv bg-[var(--aed-hover)]"
+        aria-labelledby="archiv-neuland"
+      >
         <div className="shell py-14 md:py-20">
           <h2 id="archiv-neuland" className="eyebrow-muted">
             Archiv

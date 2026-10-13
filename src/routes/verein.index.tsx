@@ -4,6 +4,7 @@ import { eventBilder } from "@/data/bilder";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { CoverSlider } from "@/components/cover-slider";
 import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
+import { Bild } from "@/components/bild";
 
 export const Route = createFileRoute("/verein/")({
   head: () => ({
@@ -15,7 +16,10 @@ export const Route = createFileRoute("/verein/")({
           "Mission, Geschichte und Auszeichnungen des aed e.V.: Veranstaltungen, Austausch und Förderung für Architektur, Engineering und Design.",
       },
       { property: "og:title", content: "Der Verein – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Mission, Geschichte und Auszeichnungen des aed e.V." },
+      {
+        property: "og:description",
+        content: "Mission, Geschichte und Auszeichnungen des aed e.V.",
+      },
       { property: "og:url", content: "/verein" },
     ],
     links: [{ rel: "canonical", href: "/verein" }],
@@ -93,14 +97,15 @@ function VereinPage() {
                 Der „Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.“
                 wurde 2004 gegründet – von Alexander Hafner, Dr. Frank Heinlein, Silvia Olp, Ralf
                 Schmitz, Prof. Werner Sobek, Prof. Andreas Uebele und Roberto Zwirn. Am 15. Dezember
-                2004 trat der Verein im damals noch nicht eröffneten Kunstmuseum Stuttgart erstmals an
-                die Öffentlichkeit – mit über 300 Gästen.
+                2004 trat der Verein im damals noch nicht eröffneten Kunstmuseum Stuttgart erstmals
+                an die Öffentlichkeit – mit über 300 Gästen.
               </p>
               <p>
                 Aus einer Reihe von Abendveranstaltungen wurden Hunderte von Vorträgen, Exkursionen,
-                Baustellenbesuchen und Blicken hinter die Kulissen. Heute versammelt der aed über 400
-                Personenmitglieder und rund 80 Fördermitglieder – und mit neuland einen
-                Nachwuchswettbewerb, der alle zwei Jahre bundesweit junge Gestalter:innen auszeichnet.
+                Baustellenbesuchen und Blicken hinter die Kulissen. Heute versammelt der aed über
+                400 Personenmitglieder und rund 80 Fördermitglieder – und mit neuland einen
+                Nachwuchswettbewerb, der alle zwei Jahre bundesweit junge Gestalter:innen
+                auszeichnet.
               </p>
             </div>
           </div>
@@ -124,7 +129,6 @@ function VereinPage() {
         </div>
       </section>
 
-
       <section className="shell py-16" aria-labelledby="vorstand-preview">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-12">
@@ -145,7 +149,7 @@ function VereinPage() {
               <PersonDialog key={person.name} person={person} initials={isEhren ? "WS" : undefined}>
                 <div className="group block cursor-pointer" role="button" tabIndex={0}>
                   {bild ? (
-                    <img
+                    <Bild
                       src={bild}
                       alt={`Porträt ${person.name}`}
                       loading="lazy"
@@ -166,14 +170,15 @@ function VereinPage() {
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">{person.rolle}</p>
                     {person.email && (
-                      <span className="mt-1 inline-block text-sm text-muted-foreground">{person.email}</span>
+                      <span className="mt-1 inline-block text-sm text-muted-foreground">
+                        {person.email}
+                      </span>
                     )}
                   </div>
                 </div>
               </PersonDialog>
             );
           })}
-
         </div>
       </section>
 
@@ -196,7 +201,7 @@ function VereinPage() {
               <PersonDialog key={person.name} person={person}>
                 <article className="group block cursor-pointer" role="button" tabIndex={0}>
                   {bild ? (
-                    <img
+                    <Bild
                       src={bild}
                       alt={`Porträt ${person.name}`}
                       loading="lazy"
@@ -219,10 +224,8 @@ function VereinPage() {
               </PersonDialog>
             );
           })}
-
         </div>
       </section>
-
 
       <section className="shell topic-rule py-16" aria-labelledby="foerdermitglieder-preview">
         <div className="grid gap-10 md:grid-cols-12">

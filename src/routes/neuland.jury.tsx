@@ -3,6 +3,7 @@ import { jury2025 } from "@/data/neuland";
 import { juryImpressionen } from "@/data/bilder";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader, SectionTitle } from "@/components/ui-bits";
+import { Bild } from "@/components/bild";
 
 export const Route = createFileRoute("/neuland/jury")({
   head: () => ({
@@ -14,7 +15,10 @@ export const Route = createFileRoute("/neuland/jury")({
           "Die 21-köpfige Jury des Nachwuchswettbewerbs neuland aus Architektur, Engineering, Design, Szenografie und Publizistik.",
       },
       { property: "og:title", content: "Jury – neuland | aed e.V." },
-      { property: "og:description", content: "21 Fachleute entscheiden über die Preise des Wettbewerbs." },
+      {
+        property: "og:description",
+        content: "21 Fachleute entscheiden über die Preise des Wettbewerbs.",
+      },
       { property: "og:url", content: "/neuland/jury" },
     ],
     links: [{ rel: "canonical", href: "/neuland/jury" }],
@@ -44,7 +48,7 @@ function JuryPage() {
           <div className="mt-10 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>figure]:mb-6 [&>figure]:break-inside-avoid">
             {juryImpressionen.map((b, i) => (
               <figure key={b}>
-                <img
+                <Bild
                   src={b}
                   alt={`Impression aus der Jurysitzung neuland 2025, Bild ${i + 1}`}
                   loading="lazy"

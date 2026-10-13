@@ -4,6 +4,7 @@ import { events } from "@/data/site";
 import { eventBilder } from "@/data/bilder";
 import { formatDatum } from "@/components/event-card";
 import { BildCredit } from "@/components/bild-credit";
+import { Bild } from "@/components/bild";
 
 function findEvent(slug: string) {
   return events.find((e) => e.slug === slug);
@@ -17,7 +18,12 @@ export const Route = createFileRoute("/programm/$slug")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Veranstaltung nicht gefunden – aed e.V." }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [
+          { title: "Veranstaltung nicht gefunden – aed e.V." },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     }
     const { event } = loaderData;
     const bild = eventBilder[event.slug];
@@ -92,7 +98,7 @@ function EventDetail() {
 
       {bild && (
         <figure className="bleed relative">
-          <img
+          <Bild
             src={bild}
             alt={`${event.titel} – ${event.ort}`}
             className="max-h-[70vh] w-full object-cover"

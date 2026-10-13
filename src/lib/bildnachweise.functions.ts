@@ -1,51 +1,64 @@
 import { createServerFn } from "@tanstack/react-start";
 
 /**
- * Liefert die Fotonachweise für die öffentliche Website.
- * Quelle ist das Bildverzeichnis: Was dort als Urheber:in eingetragen ist,
- * erscheint als Bildunterschrift. Gepflegt wird also nur an einer Stelle.
+ * Liefert dem öffentlichen Teil der Website zwei Dinge aus dem Bildverzeichnis:
+ *
+ * 1. die Fotonachweise – was dort als Urheber:in eingetragen ist, erscheint
+ *    als Bildunterschrift
+ * 2. die Liste der Bilder, deren Rechte noch nicht geklärt sind – die werden
+ *    auf der Seite durch das aed-Logo ersetzt, bis die Freigabe vorliegt
+ *
+ * Gepflegt wird dadurch nur an einer Stelle.
  */
 
 type Nachweise = Record<string, string>;
+export type Bildfreigaben = { nachweise: Nachweise; gesperrt: string[] };
 
 // Die Angaben ändern sich selten – ein kurzer Zwischenspeicher spart
 // eine Datenbankabfrage bei jedem Seitenaufruf.
 const GUELTIG_MS = 60_000;
-let zwischenspeicher: { stand: number; werte: Nachweise } | null = null;
+let zwischenspeicher: { stand: number; werte: Bildfreigaben } | null = null;
 let fehlerGemeldet = false;
 
+const LEER: Bildfreigaben = { nachweise: {}, gesperrt: [] };
+
 export const ladeBildnachweise = createServerFn({ method: "GET" }).handler(
-  async (): Promise<{ nachweise: Nachweise }> => {
+  async (): Promise<Bildfreigaben> => {
     if (zwischenspeicher && Date.now() - zwischenspeicher.stand < GUELTIG_MS) {
-      return { nachweise: zwischenspeicher.werte };
+      return zwischenspeicher.werte;
     }
 
     try {
       const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
       const { data, error } = await supabaseAdmin
         .from("bildrechte")
-        .select("pfad, urheber")
-        .neq("urheber", "");
+        .select("pfad, urheber, status");
       if (error) throw new Error(error.message);
 
-      const werte: Nachweise = {};
+      const nachweise: Nachweise = {};
+      const gesperrt: string[] = [];
+
       for (const zeile of data ?? []) {
-        const name = (zeile.urheber ?? "").trim();
-        if (!name) continue;
         // Im Verzeichnis steht "public/bilder/…", im Browser "/bilder/…"
-        werte[zeile.pfad.replace(/^public/, "")] = name;
+        const url = zeile.pfad.replace(/^public/, "");
+        const name = (zeile.urheber ?? "").trim();
+        if (name) nachweise[url] = name;
+        if (zeile.status === "ungeklaert" || zeile.status === "nicht-verwendbar") {
+          gesperrt.push(url);
+        }
       }
 
+      const werte = { nachweise, gesperrt };
       zwischenspeicher = { stand: Date.now(), werte };
-      return { nachweise: werte };
+      return werte;
     } catch (fehler) {
-      // Ohne Datenbank bleibt die Seite benutzbar, nur ohne Nachweise.
-      // Einmal melden genügt, sonst steht es bei jedem Seitenaufruf im Log.
+      // Ohne Datenbank bleibt die Seite benutzbar. Dann werden auch keine
+      // Bilder gesperrt – eine leere Seite wäre das schlechtere Ergebnis.
       if (!fehlerGemeldet) {
         console.error("[Bildnachweise] konnten nicht geladen werden:", fehler);
         fehlerGemeldet = true;
       }
-      return { nachweise: zwischenspeicher?.werte ?? {} };
+      return zwischenspeicher?.werte ?? LEER;
     }
   },
 );

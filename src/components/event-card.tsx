@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { EventItem } from "@/data/site";
 import { eventBilder } from "@/data/bilder";
 import { BildCredit } from "@/components/bild-credit";
+import { Bild } from "@/components/bild";
 
 export function formatDatum(iso: string) {
   return new Date(`${iso}T12:00:00`).toLocaleDateString("de-DE", {
@@ -11,13 +12,7 @@ export function formatDatum(iso: string) {
   });
 }
 
-export function EventCard({
-  event,
-  gross = false,
-}: {
-  event: EventItem;
-  gross?: boolean;
-}) {
+export function EventCard({ event, gross = false }: { event: EventItem; gross?: boolean }) {
   const bild = eventBilder[event.slug];
 
   return (
@@ -26,7 +21,7 @@ export function EventCard({
         <div className={`img-zoom relative bg-muted ${gross ? "aspect-4/3" : "aspect-3/2"}`}>
           <BildCredit src={bild} />
           {bild ? (
-            <img
+            <Bild
               src={bild}
               alt={`${event.titel} – ${event.ort}`}
               loading="lazy"
