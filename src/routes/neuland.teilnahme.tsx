@@ -12,7 +12,10 @@ export const Route = createFileRoute("/neuland/teilnahme")({
           "Teilnahmebedingungen des Nachwuchswettbewerbs neuland: Teilnahmeberechtigung, Einreichung, Fristen, Nutzungsrechte und Preise.",
       },
       { property: "og:title", content: "Teilnahmebedingungen – neuland | aed e.V." },
-      { property: "og:description", content: "Alle elf Abschnitte der Teilnahmebedingungen im Überblick." },
+      {
+        property: "og:description",
+        content: "Alle zwölf Abschnitte der Teilnahmebedingungen im Überblick.",
+      },
       { property: "og:url", content: "/neuland/teilnahme" },
     ],
     links: [{ rel: "canonical", href: "/neuland/teilnahme" }],
@@ -40,7 +43,7 @@ function TeilnahmePage() {
           </div>
           <aside className="md:col-span-4">
             <div className="sticky top-28 border border-line bg-card p-6">
-              <p className="eyebrow">Teilnahme an der Ausschreibung 2026</p>
+              <p className="eyebrow">Teilnahme an der Ausschreibung 2027</p>
               <p className="mt-3 text-sm text-muted-foreground">
                 Für die Teilnahme am aed-Wettbewerb neuland für 2027 brauchst Du folgende
                 Unterlagen: Darstellungen Deiner Arbeit, Titel und Beschreibungen, Kategorie der

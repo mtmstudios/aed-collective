@@ -1,5 +1,5 @@
 import { cloneElement, isValidElement, useId, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -42,7 +42,10 @@ export const Route = createFileRoute("/neuland/einreichung")({
           "Online-Einreichung für den Nachwuchswettbewerb neuland 2027: Bewerbung starten, zwischenspeichern und später mit Einreichungs-Nummer fortsetzen.",
       },
       { property: "og:title", content: "Einreichung neuland 2027 | aed e.V." },
-      { property: "og:description", content: "Formular für die Einreichung zum Wettbewerb neuland 2027." },
+      {
+        property: "og:description",
+        content: "Formular für die Einreichung zum Wettbewerb neuland 2027.",
+      },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -86,7 +89,8 @@ function istUrl(v: string) {
 }
 
 async function uploadDatei(file: File): Promise<Datei> {
-  if (!ERLAUBTE_TYPEN.includes(file.type)) throw new Error(`${file.name}: nur JPG oder PNG erlaubt.`);
+  if (!ERLAUBTE_TYPEN.includes(file.type))
+    throw new Error(`${file.name}: nur JPG oder PNG erlaubt.`);
   if (file.size > MAX_DATEIGROESSE_MB * 1024 * 1024)
     throw new Error(`${file.name}: größer als ${MAX_DATEIGROESSE_MB} MB.`);
   const endung = file.name.split(".").pop() ?? "jpg";
@@ -150,7 +154,12 @@ function EinreichungPage() {
       if (!form.kurzbeschreibung.trim()) return "Bitte eine Kurzbeschreibung angeben.";
     }
     if (i === 2) {
-      if (!form.idee.trim() || !form.umsetzung.trim() || !form.nutzen.trim() || !form.nachhaltigkeit.trim())
+      if (
+        !form.idee.trim() ||
+        !form.umsetzung.trim() ||
+        !form.nutzen.trim() ||
+        !form.nachhaltigkeit.trim()
+      )
         return "Bitte alle vier Kriterien-Felder ausfüllen.";
     }
     if (i === 3) {
@@ -188,7 +197,9 @@ function EinreichungPage() {
     }
     setBusy(true);
     try {
-      const id = einreichungsId ?? (await speichern({ data: { einreichungsId: null, daten: form } })).row.einreichungs_id;
+      const id =
+        einreichungsId ??
+        (await speichern({ data: { einreichungsId: null, daten: form } })).row.einreichungs_id;
       const res = await absenden({ data: { einreichungsId: id, email: form.email, daten: form } });
       setEinreichungsId(res.row.einreichungs_id);
       setStatus("eingereicht");
@@ -258,7 +269,10 @@ function EinreichungPage() {
                 setForm({
                   ...LEER,
                   ...Object.fromEntries(
-                    Object.keys(LEER).map((k) => [k, (r[k] ?? LEER[k as keyof EinreichungForm]) as unknown]),
+                    Object.keys(LEER).map((k) => [
+                      k,
+                      (r[k] ?? LEER[k as keyof EinreichungForm]) as unknown,
+                    ]),
                   ),
                 } as EinreichungForm);
                 setEinreichungsId(String(r["einreichungs_id"]));
@@ -303,9 +317,15 @@ function EinreichungPage() {
                     <Input value={form.vorname} onChange={(e) => set("vorname", e.target.value)} />
                   </Feld>
                   <Feld label="Nachname *">
-                    <Input value={form.nachname} onChange={(e) => set("nachname", e.target.value)} />
+                    <Input
+                      value={form.nachname}
+                      onChange={(e) => set("nachname", e.target.value)}
+                    />
                   </Feld>
-                  <Feld label="E-Mail-Adresse *" hinweis="Wird zusammen mit der Einreichungs-Nummer für die Rückkehr benötigt.">
+                  <Feld
+                    label="E-Mail-Adresse *"
+                    hinweis="Wird zusammen mit der Einreichungs-Nummer für die Rückkehr benötigt."
+                  >
                     <Input
                       type="email"
                       value={form.email}
@@ -317,10 +337,16 @@ function EinreichungPage() {
                     <Input value={form.telefon} onChange={(e) => set("telefon", e.target.value)} />
                   </Feld>
                   <Feld label="Institution / Hochschule / Organisation (optional)">
-                    <Input value={form.institution} onChange={(e) => set("institution", e.target.value)} />
+                    <Input
+                      value={form.institution}
+                      onChange={(e) => set("institution", e.target.value)}
+                    />
                   </Feld>
                   <Feld label="Kategorie *">
-                    <Select value={form.kategorie || undefined} onValueChange={(v) => set("kategorie", v)}>
+                    <Select
+                      value={form.kategorie || undefined}
+                      onValueChange={(v) => set("kategorie", v)}
+                    >
                       <SelectTrigger>
                         <SelectValue placeholder="Kategorie wählen" />
                       </SelectTrigger>
@@ -339,7 +365,10 @@ function EinreichungPage() {
               {schritt === 1 && (
                 <>
                   <Feld label="Projekttitel *">
-                    <Input value={form.projekttitel} onChange={(e) => set("projekttitel", e.target.value)} />
+                    <Input
+                      value={form.projekttitel}
+                      onChange={(e) => set("projekttitel", e.target.value)}
+                    />
                   </Feld>
                   <ZaehlFeld
                     label="Kurzbeschreibung *"
@@ -352,14 +381,24 @@ function EinreichungPage() {
 
               {schritt === 2 && (
                 <>
-                  <ZaehlFeld label="Idee / Ausgangsfrage *" wert={form.idee} max={LIMITS.idee} onChange={(v) => set("idee", v)} />
+                  <ZaehlFeld
+                    label="Idee / Ausgangsfrage *"
+                    wert={form.idee}
+                    max={LIMITS.idee}
+                    onChange={(v) => set("idee", v)}
+                  />
                   <ZaehlFeld
                     label="Umsetzung / Lösungsansatz *"
                     wert={form.umsetzung}
                     max={LIMITS.umsetzung}
                     onChange={(v) => set("umsetzung", v)}
                   />
-                  <ZaehlFeld label="Nutzen / Zielgruppe *" wert={form.nutzen} max={LIMITS.nutzen} onChange={(v) => set("nutzen", v)} />
+                  <ZaehlFeld
+                    label="Nutzen / Zielgruppe *"
+                    wert={form.nutzen}
+                    max={LIMITS.nutzen}
+                    onChange={(v) => set("nutzen", v)}
+                  />
                   <ZaehlFeld
                     label="Nachhaltigkeits- / Innovationsaspekt *"
                     wert={form.nachhaltigkeit}
@@ -371,7 +410,10 @@ function EinreichungPage() {
 
               {schritt === 3 && (
                 <>
-                  <Feld label="Titelbild *" hinweis={`Nur JPG oder PNG, max. ${MAX_DATEIGROESSE_MB} MB.`}>
+                  <Feld
+                    label="Titelbild *"
+                    hinweis={`Nur JPG oder PNG, max. ${MAX_DATEIGROESSE_MB} MB.`}
+                  >
                     <Input
                       type="file"
                       accept="image/jpeg,image/png"
@@ -390,7 +432,9 @@ function EinreichungPage() {
                       }}
                     />
                     {form.titelbild && (
-                      <p className="mt-2 text-sm text-muted-foreground">Hochgeladen: {form.titelbild.name}</p>
+                      <p className="mt-2 text-sm text-muted-foreground">
+                        Hochgeladen: {form.titelbild.name}
+                      </p>
                     )}
                   </Feld>
 
@@ -430,7 +474,12 @@ function EinreichungPage() {
                             <button
                               type="button"
                               className="underline"
-                              onClick={() => set("detailfotos", form.detailfotos.filter((x) => x.path !== d.path))}
+                              onClick={() =>
+                                set(
+                                  "detailfotos",
+                                  form.detailfotos.filter((x) => x.path !== d.path),
+                                )
+                              }
                             >
                               entfernen
                             </button>
@@ -461,11 +510,20 @@ function EinreichungPage() {
                       onCheckedChange={(v) => set("rechte_bestaetigt", v === true)}
                     />
                     <Label htmlFor="rechte" className="text-sm font-normal leading-relaxed">
-                      Ich bestätige die Nutzungs- und Veröffentlichungsrechte gemäß{" "}
-                      <a href="#" className="underline">
-                        Einverständniserklärung
-                      </a>{" "}
-                      (Platzhaltertext).
+                      Ich akzeptiere die{" "}
+                      <Link to="/neuland/teilnahme" className="underline">
+                        Teilnahmebedingungen
+                      </Link>{" "}
+                      und erkläre, dass die eingereichte Arbeit von den genannten Personen selbst
+                      und ohne fremde Hilfe entworfen wurde. Ich räume dem aed e.V. das Recht ein,
+                      die Arbeit und die hochgeladenen Abbildungen im Zusammenhang mit dem
+                      Wettbewerb zu zeigen – auf der Website, in der Presse- und
+                      Öffentlichkeitsarbeit sowie bei Ausstellungen des Vereins. Die Urheberrechte
+                      bleiben bei mir, mein Name wird bei jeder Veröffentlichung genannt. Die{" "}
+                      <Link to="/datenschutz" className="underline">
+                        Datenschutzerklärung
+                      </Link>{" "}
+                      habe ich zur Kenntnis genommen.
                     </Label>
                   </div>
                 </>
@@ -486,7 +544,11 @@ function EinreichungPage() {
                   Bewerbung einreichen
                 </Button>
               )}
-              <Button variant="secondary" onClick={() => zwischenspeichern(false)} disabled={busy || nurLesen}>
+              <Button
+                variant="secondary"
+                onClick={() => zwischenspeichern(false)}
+                disabled={busy || nurLesen}
+              >
                 Zwischenspeichern
               </Button>
               <Button variant="ghost" onClick={() => setAnsicht("start")} disabled={busy}>
@@ -500,8 +562,8 @@ function EinreichungPage() {
           <div className="mt-10 border border-line p-8">
             <h2 className="display-sm">Bewerbung eingereicht</h2>
             <p className="mt-3 text-muted-foreground">
-              Vielen Dank. Die Bewerbung wurde übermittelt und kann bis zum Bewerbungsschluss über die
-              Einreichungs-Nummer und die E-Mail-Adresse weiter bearbeitet werden.
+              Vielen Dank. Die Bewerbung wurde übermittelt und kann bis zum Bewerbungsschluss über
+              die Einreichungs-Nummer und die E-Mail-Adresse weiter bearbeitet werden.
             </p>
             <IdHinweis id={einreichungsId} status="eingereicht" hervorheben />
             <div className="mt-6 flex flex-wrap gap-3">
@@ -580,7 +642,10 @@ function FortsetzenAnsicht({
         </Feld>
       </div>
       <div className="mt-6 flex gap-3">
-        <Button onClick={() => onLaden(id, email)} disabled={busy || !id.trim() || !istEmail(email)}>
+        <Button
+          onClick={() => onLaden(id, email)}
+          disabled={busy || !id.trim() || !istEmail(email)}
+        >
           Bewerbung laden
         </Button>
         <Button variant="ghost" onClick={onAbbrechen} disabled={busy}>
@@ -591,7 +656,15 @@ function FortsetzenAnsicht({
   );
 }
 
-function IdHinweis({ id, status, hervorheben }: { id: string; status: string; hervorheben: boolean }) {
+function IdHinweis({
+  id,
+  status,
+  hervorheben,
+}: {
+  id: string;
+  status: string;
+  hervorheben: boolean;
+}) {
   const [kopiert, setKopiert] = useState(false);
   return (
     <div className="mt-6 border border-line bg-muted p-6">
@@ -612,8 +685,8 @@ function IdHinweis({ id, status, hervorheben }: { id: string; status: string; he
       </div>
       {hervorheben && (
         <p className="mt-3 text-sm font-medium">
-          Bitte notiert euch diese Einreichungs-Nummer – sie wird zusammen mit der E-Mail-Adresse zum
-          Fortsetzen der Bewerbung gebraucht.
+          Bitte notiert euch diese Einreichungs-Nummer – sie wird zusammen mit der E-Mail-Adresse
+          zum Fortsetzen der Bewerbung gebraucht.
         </p>
       )}
     </div>
@@ -661,7 +734,13 @@ function ZaehlFeld({
           {wert.length} / {max}
         </span>
       </div>
-      <Textarea id={id} rows={4} maxLength={max} value={wert} onChange={(e) => onChange(e.target.value.slice(0, max))} />
+      <Textarea
+        id={id}
+        rows={4}
+        maxLength={max}
+        value={wert}
+        onChange={(e) => onChange(e.target.value.slice(0, max))}
+      />
     </div>
   );
 }

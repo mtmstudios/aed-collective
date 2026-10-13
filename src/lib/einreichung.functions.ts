@@ -115,7 +115,8 @@ export const reicheEin = createServerFn({ method: "POST" })
     ];
     const fehlt = pflicht.filter(([, v]) => !v || (typeof v === "string" && !v.trim()));
     if (fehlt.length) throw new Error(`Bitte ausfüllen: ${fehlt.map(([k]) => k).join(", ")}`);
-    if (!data.daten.rechte_bestaetigt) throw new Error("Bitte die Einverständniserklärung bestätigen.");
+    if (!data.daten.rechte_bestaetigt)
+      throw new Error("Bitte die Einverständniserklärung bestätigen.");
 
     const db = await admin();
     const { data: row, error } = await db
@@ -127,5 +128,66 @@ export const reicheEin = createServerFn({ method: "POST" })
       .maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) throw new Error("Einreichung nicht gefunden.");
+
+    await benachrichtige(row as unknown as Record<string, unknown>);
+
     return { row };
   });
+
+/**
+ * Nach dem Absenden zwei Mails: eine Bestätigung an die einreichende Person und
+ * eine Benachrichtigung an die Geschäftsstelle. So hat der Verein wie zuvor
+ * einen laufenden Überblick, ohne in die Datenbank schauen zu müssen.
+ * Schlägt der Versand fehl, bleibt die Einreichung trotzdem gespeichert.
+ */
+async function benachrichtige(row: Record<string, unknown>) {
+  try {
+    const { sendeMail, empfaengerVerein } = await import("@/lib/mail.server");
+    const nummer = String(row["einreichungs_id"] ?? "");
+    const titel = String(row["projekttitel"] ?? "ohne Titel");
+    const name = [row["vorname"], row["nachname"]].filter(Boolean).join(" ");
+    const email = String(row["email"] ?? "");
+
+    if (email) {
+      await sendeMail(
+        email,
+        `Deine Einreichung bei neuland 2027 ist eingegangen (${nummer})`,
+        [
+          `Hallo ${name || "und herzlichen Dank"},`,
+          ``,
+          `wir haben Deine Einreichung erhalten.`,
+          ``,
+          `Nummer: ${nummer}`,
+          `Projekt: ${titel}`,
+          `Kategorie: ${String(row["kategorie"] ?? "")}`,
+          ``,
+          `Mit dieser Nummer und Deiner E-Mail-Adresse kannst Du Deine Bewerbung bis zum`,
+          `Einsendeschluss jederzeit wieder aufrufen.`,
+          ``,
+          `Viele Grüße`,
+          `aed e.V. – neuland`,
+        ].join("\n"),
+      );
+    }
+
+    const anVerein = empfaengerVerein();
+    if (anVerein) {
+      await sendeMail(
+        anVerein,
+        `Neue neuland-Einreichung: ${nummer} – ${titel}`,
+        [
+          `Nummer: ${nummer}`,
+          `Projekt: ${titel}`,
+          `Kategorie: ${String(row["kategorie"] ?? "")}`,
+          `Einreichende Person: ${name}`,
+          `E-Mail: ${email}`,
+          `Hochschule: ${String(row["institution"] ?? "")}`,
+          ``,
+          `Alle Angaben stehen im Jurybereich unter /jurybereich.`,
+        ].join("\n"),
+      );
+    }
+  } catch (fehler) {
+    console.error("[Einreichung] Benachrichtigung fehlgeschlagen:", fehler);
+  }
+}

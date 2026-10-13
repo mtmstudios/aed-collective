@@ -121,10 +121,14 @@ export const teilnahmebedingungen = [
   },
   {
     titel: "10. Termine",
-    text: "Jahrgang 2025: Einsendeschluss 31. März 2025, Jurysitzung Ende April 2025, Preisverleihung am 3. Juli 2025 in der Architektenkammer Baden-Württemberg.",
+    text: "Jahrgang 2027: Einsendeschluss 31. März 2027, Jurysitzung im Frühjahr 2027, Veröffentlichung der Preisträger:innen im Sommer 2027.",
   },
   {
-    titel: "11. Kontakt",
+    titel: "11. Nutzungsrechte",
+    text: "Die Urheberrechte an den eingereichten Arbeiten bleiben bei den Teilnehmenden. Mit der Einreichung räumen sie dem aed das Recht ein, die Arbeit und die hochgeladenen Abbildungen im Zusammenhang mit dem Wettbewerb zu zeigen – auf der Website, in der Presse- und Öffentlichkeitsarbeit sowie bei Ausstellungen des Vereins. Bei jeder Veröffentlichung werden die Urheberinnen und Urheber genannt. Wer Abbildungen einreicht, an denen Dritte Rechte halten, etwa Fotografinnen oder Fotografen, stellt sicher, dass diese der Veröffentlichung zugestimmt haben.",
+  },
+  {
+    titel: "12. Kontakt",
     text: "aed e.V., Olgastraße 138, 70180 Stuttgart · +49 160 8894377 · info@aed-stuttgart.de",
   },
 ];
@@ -132,25 +136,72 @@ export const teilnahmebedingungen = [
 // Die echte Jury 2025 (21 Mitglieder)
 export const jury2025 = [
   { name: "Silvia Olp", rolle: "Initiatorin & Management aed neuland, aed Beirat" },
-  { name: "Olaf Barski", rolle: "Barski Design, Industriedesigner", link: "https://www.barskidesign.com" },
+  {
+    name: "Olaf Barski",
+    rolle: "Barski Design, Industriedesigner",
+    link: "https://www.barskidesign.com",
+  },
   { name: "Kai Bierich", rolle: "Architekt" },
-  { name: "Prof. Lucio Blandini", rolle: "Bauingenieur / Architekt, ILEK Universität Stuttgart", link: "https://www.ilek.uni-stuttgart.de" },
+  {
+    name: "Prof. Lucio Blandini",
+    rolle: "Bauingenieur / Architekt, ILEK Universität Stuttgart",
+    link: "https://www.ilek.uni-stuttgart.de",
+  },
   { name: "Lutz Dietzold", rolle: "CEO, Rat für Formgebung", link: "https://www.gdc.de" },
-  { name: "Prof. Rahel Flechtner", rolle: "Design Research + Interaction Design, HfG Schwäbisch Gmünd" },
-  { name: "May-Britt Frank-Grosse", rolle: "Chefredakteurin, baunetz interior|design", link: "https://www.baunetz-id.de" },
+  {
+    name: "Prof. Rahel Flechtner",
+    rolle: "Design Research + Interaction Design, HfG Schwäbisch Gmünd",
+  },
+  {
+    name: "May-Britt Frank-Grosse",
+    rolle: "Chefredakteurin, baunetz interior|design",
+    link: "https://www.baunetz-id.de",
+  },
   { name: "Dina Gallo", rolle: "Industriedesignerin, TRUMPF Leitung Designmanagement" },
-  { name: "Ben Kauffmann", rolle: "Architekt, KTP Architekten", link: "https://www.ktp-architekten.de" },
-  { name: "Moritz Kemper", rolle: "UX/UI Principal Designer, PHOENIX", link: "https://www.phoenixdesign.com" },
-  { name: "Dr. Petra Kiedaisch", rolle: "Geschäftsführerin, avedition", link: "https://www.avedition.de" },
-  { name: "Andreas Kurbos", rolle: "Designer und Geschäftsführer, studiokurbos", link: "https://www.kurbos.com" },
+  {
+    name: "Ben Kauffmann",
+    rolle: "Architekt, KTP Architekten",
+    link: "https://www.ktp-architekten.de",
+  },
+  {
+    name: "Moritz Kemper",
+    rolle: "UX/UI Principal Designer, PHOENIX",
+    link: "https://www.phoenixdesign.com",
+  },
+  {
+    name: "Dr. Petra Kiedaisch",
+    rolle: "Geschäftsführerin, avedition",
+    link: "https://www.avedition.de",
+  },
+  {
+    name: "Andreas Kurbos",
+    rolle: "Designer und Geschäftsführer, studiokurbos",
+    link: "https://www.kurbos.com",
+  },
   { name: "Nils Holger Moormann", rolle: "Art Direction", link: "https://nhm-ad.de" },
   { name: "Johanna Neves Pimenta", rolle: "Chefredakteurin, md", link: "https://www.md-mag.com" },
-  { name: "Peter Scheerer", rolle: "Kommunikationsdesigner, SEO, SEA", link: "https://www.peterscheerer.com" },
-  { name: "Dr. Katrin Schlecht", rolle: "Vorstandsvorsitzende, Karl Schlecht Stiftung", link: "https://www.karlschlechtstiftung.de" },
+  {
+    name: "Peter Scheerer",
+    rolle: "Kommunikationsdesigner, SEO, SEA",
+    link: "https://www.peterscheerer.com",
+  },
+  {
+    name: "Dr. Katrin Schlecht",
+    rolle: "Vorstandsvorsitzende, Karl Schlecht Stiftung",
+    link: "https://www.karlschlechtstiftung.de",
+  },
   { name: "Prof. Jürgen Späth", rolle: "Interaction Designer" },
   { name: "Petra Stephan", rolle: "Chefredakteurin, AIT", link: "https://ait-xia-dialog.de" },
-  { name: "Joachim Stumpp", rolle: "Geschäftsführer und Architekt, Material Bank Studio", link: "https://www.materialbank.eu" },
-  { name: "Prof. Andreas Uebele", rolle: "Kommunikationsdesigner, büro uebele", link: "https://www.uebele.com" },
+  {
+    name: "Joachim Stumpp",
+    rolle: "Geschäftsführer und Architekt, Material Bank Studio",
+    link: "https://www.materialbank.eu",
+  },
+  {
+    name: "Prof. Andreas Uebele",
+    rolle: "Kommunikationsdesigner, büro uebele",
+    link: "https://www.uebele.com",
+  },
   { name: "Lisa Zech", rolle: "Kommunikationsdesignerin, STUDIO LZ", link: "https://studio-lz.de" },
 ];
 
