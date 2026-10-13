@@ -458,15 +458,21 @@ export const speichereZugang = createServerFn({ method: "POST" })
     };
     if (data.werte.passwort) werte["passwort_hash"] = hashPasswort(data.werte.passwort);
 
+    // Die Datenbank meldet eine doppelte Adresse technisch – hier in Klartext
+    const lesbar = (meldung: string) =>
+      meldung.includes("jury_zugaenge_email_idx") || meldung.includes("duplicate key")
+        ? "Für diese E-Mail-Adresse gibt es bereits einen Zugang."
+        : meldung;
+
     if (data.id) {
       const { error } = await db.from("jury_zugaenge").update(werte).eq("id", data.id);
-      if (error) throw new Error(error.message);
+      if (error) throw new Error(lesbar(error.message));
       return { ok: true as const };
     }
 
     if (!data.werte.passwort) throw new Error("Für einen neuen Zugang braucht es ein Passwort");
     const { error } = await db.from("jury_zugaenge").insert(werte);
-    if (error) throw new Error(error.message);
+    if (error) throw new Error(lesbar(error.message));
     return { ok: true as const };
   });
 

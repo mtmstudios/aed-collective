@@ -57,9 +57,15 @@ function csvFeld(wert: string | number | null): string {
   return `"${text.replace(/"/g, '""')}"`;
 }
 
-/** Zahlen mit Komma, damit Excel sie im deutschen Format als Zahl erkennt. */
-function zahl(wert: number | null): string {
-  return wert === null ? "" : String(wert).replace(".", ",");
+/** Zahlen mit Komma – im Export für Excel wie in der Anzeige. */
+function zahl(wert: number | null | undefined): string {
+  return wert === null || wert === undefined ? "" : String(wert).replace(".", ",");
+}
+
+/** Erkennt, ob eine Fehlermeldung vom abgelaufenen Zugang kommt. */
+function istAbgemeldet(fehler: unknown): boolean {
+  const text = fehler instanceof Error ? fehler.message : String(fehler);
+  return text.includes("Nicht angemeldet") || text.includes("Sitzung abgelaufen");
 }
 
 function Jurybereich() {
@@ -79,6 +85,7 @@ function Jurybereich() {
   const [ansicht, setAnsicht] = useState<"beitraege" | "zugaenge">("beitraege");
   const [zugaenge, setZugaenge] = useState<Zugang[]>([]);
   const [neu, setNeu] = useState({ name: "", email: "", rolle: "jury", passwort: "" });
+  const [neuesPasswort, setNeuesPasswort] = useState<{ id: string; wert: string } | null>(null);
 
   const login = useServerFn(anmelden);
   const pruefen = useServerFn(pruefeToken);
@@ -90,17 +97,36 @@ function Jurybereich() {
   const zugangLoeschen = useServerFn(loescheZugang);
   const auswertungLaden = useServerFn(ladeAuswertung);
 
+  /** Nach Ablauf der Sitzung zurück zur Anmeldung, statt stummer Fehler. */
+  function behandleFehler(e: unknown, ersatztext: string) {
+    if (istAbgemeldet(e)) {
+      sessionStorage.removeItem(TOKEN_SCHLUESSEL);
+      setToken("");
+      setSitzung(null);
+      setBeitraege([]);
+      setDetail(null);
+      setFehler("Die Sitzung ist abgelaufen. Bitte erneut anmelden.");
+      return;
+    }
+    setStatus(e instanceof Error ? e.message : ersatztext);
+  }
+
   useEffect(() => {
     const gespeichert = sessionStorage.getItem(TOKEN_SCHLUESSEL);
     if (!gespeichert) return;
     void (async () => {
-      const res = await pruefen({ data: { token: gespeichert } });
-      if (res.sitzung) {
+      try {
+        const res = await pruefen({ data: { token: gespeichert } });
+        if (!res.sitzung) {
+          sessionStorage.removeItem(TOKEN_SCHLUESSEL);
+          return;
+        }
         setToken(gespeichert);
         setSitzung(res.sitzung);
         await listeHolen(gespeichert);
-      } else {
+      } catch {
         sessionStorage.removeItem(TOKEN_SCHLUESSEL);
+        setFehler("Der gespeicherte Zugang ließ sich nicht prüfen. Bitte erneut anmelden.");
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -135,6 +161,7 @@ function Jurybereich() {
     setSitzung(null);
     setBeitraege([]);
     setDetail(null);
+    setFehler("");
   }
 
   async function oeffne(id: string) {
@@ -143,13 +170,19 @@ function Jurybereich() {
       const res = await detailLaden({ data: { token, id } });
       setDetail(res.beitrag);
       setStatus("");
-    } catch {
-      setStatus("Beitrag konnte nicht geladen werden");
+    } catch (e) {
+      behandleFehler(e, "Beitrag konnte nicht geladen werden");
     }
   }
 
+  /**
+   * Speichert Punkte und Kommentar gemeinsam. Beides kommt aus dem geöffneten
+   * Beitrag, damit ein gerade getippter Kommentar nicht verloren geht, wenn
+   * jemand direkt danach auf eine Punktzahl klickt.
+   */
   async function werte(punkte: number | null, kommentar: string) {
     if (!detail) return;
+    const vorher = detail;
     setDetail({ ...detail, eigene: { punkte, kommentar } });
     setStatus("Speichert …");
     try {
@@ -159,25 +192,56 @@ function Jurybereich() {
       setStatus("Gespeichert");
       await listeHolen(token);
     } catch (e) {
-      setStatus(e instanceof Error ? e.message : "Speichern fehlgeschlagen");
+      setDetail(vorher);
+      behandleFehler(e, "Speichern fehlgeschlagen");
+    }
+  }
+
+  /** Wertung direkt aus der Liste heraus, ohne den Beitrag zu öffnen. */
+  async function werteDirekt(beitragId: string, punkte: number | null) {
+    const vorher = beitraege;
+    const kommentar = vorher.find((b) => b.id === beitragId)?.eigene?.kommentar ?? "";
+    setBeitraege((alt) =>
+      alt.map((b) => (b.id === beitragId ? { ...b, eigene: { punkte, kommentar } } : b)),
+    );
+    setStatus("Speichert …");
+    try {
+      await wertungSpeichern({
+        data: { token, einreichungId: beitragId, werte: { punkte, kommentar } },
+      });
+      setStatus("Gespeichert");
+      await listeHolen(token);
+    } catch (e) {
+      setBeitraege(vorher);
+      behandleFehler(e, "Speichern fehlgeschlagen");
     }
   }
 
   async function zeigeZugaenge() {
     setAnsicht("zugaenge");
-    const res = await zugaengeLaden({ data: { token } });
-    setZugaenge(res.zugaenge);
+    try {
+      const res = await zugaengeLaden({ data: { token } });
+      setZugaenge(res.zugaenge);
+    } catch (e) {
+      behandleFehler(e, "Zugänge konnten nicht geladen werden");
+    }
   }
 
   async function zugangAnlegen() {
+    if (!neu.name.trim()) return setStatus("Bitte einen Namen eintragen.");
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(neu.email.trim()))
+      return setStatus("Bitte eine gültige E-Mail-Adresse eintragen.");
+    if (neu.passwort.trim().length < 8)
+      return setStatus("Das Passwort braucht mindestens acht Zeichen.");
+
     setStatus("Legt an …");
     try {
       await zugangSpeichern({
         data: {
           token,
           werte: {
-            name: neu.name,
-            email: neu.email,
+            name: neu.name.trim(),
+            email: neu.email.trim(),
             rolle: neu.rolle as (typeof ROLLEN)[number],
             aktiv: true,
             passwort: neu.passwort,
@@ -188,7 +252,31 @@ function Jurybereich() {
       setStatus("Zugang angelegt");
       await zeigeZugaenge();
     } catch (e) {
-      setStatus(e instanceof Error ? e.message : "Anlegen fehlgeschlagen");
+      behandleFehler(e, "Anlegen fehlgeschlagen");
+    }
+  }
+
+  /** Ändert einen bestehenden Zugang – Rolle, Freischaltung oder Passwort. */
+  async function zugangAendern(z: Zugang, aenderung: Partial<Zugang> & { passwort?: string }) {
+    setStatus("Speichert …");
+    try {
+      await zugangSpeichern({
+        data: {
+          token,
+          id: z.id,
+          werte: {
+            name: aenderung.name ?? z.name,
+            email: aenderung.email ?? z.email,
+            rolle: (aenderung.rolle ?? z.rolle) as (typeof ROLLEN)[number],
+            aktiv: aenderung.aktiv ?? z.aktiv,
+            ...(aenderung.passwort ? { passwort: aenderung.passwort } : {}),
+          },
+        },
+      });
+      setStatus("Gespeichert");
+      await zeigeZugaenge();
+    } catch (e) {
+      behandleFehler(e, "Speichern fehlgeschlagen");
     }
   }
 
@@ -234,7 +322,7 @@ function Jurybereich() {
       csvDownload("neuland-auswertung", kopf, zeilen);
       setStatus(`Export erstellt: ${zeilen.length} Beiträge, ${res.juroren.length} Jurymitglieder`);
     } catch (e) {
-      setStatus(e instanceof Error ? e.message : "Export fehlgeschlagen");
+      behandleFehler(e, "Export fehlgeschlagen");
     }
   }
 
@@ -264,7 +352,7 @@ function Jurybereich() {
       csvDownload("neuland-einzelwertungen", kopf, zeilen);
       setStatus(`Export erstellt: ${zeilen.length} Wertungen`);
     } catch (e) {
-      setStatus(e instanceof Error ? e.message : "Export fehlgeschlagen");
+      behandleFehler(e, "Export fehlgeschlagen");
     }
   }
 
@@ -273,77 +361,77 @@ function Jurybereich() {
     [beitraege],
   );
 
-  const gefiltert = useMemo(
-    () =>
-      beitraege.filter((b) => {
-        if (kategorie !== "alle" && b.kategorie !== kategorie) return false;
-        if (nurOffene && b.eigene?.punkte) return false;
-        return true;
-      }),
-    [beitraege, kategorie, nurOffene],
-  );
-
-  const eigeneFertig = beitraege.filter((b) => b.eigene?.punkte).length;
   const istBuero = sitzung?.rolle === "geschaeftsstelle";
   // Mit dem Einrichtungs-Passwort gibt es kein Konto, dem eine Wertung gehören könnte
   const darfWerten = Boolean(sitzung?.id);
 
-  /** Wertung direkt aus der Liste heraus, ohne den Beitrag zu öffnen. */
-  async function werteDirekt(beitragId: string, punkte: number | null) {
-    const vorher = beitraege;
-    const kommentar = vorher.find((b) => b.id === beitragId)?.eigene?.kommentar ?? "";
-    setBeitraege((alt) =>
-      alt.map((b) => (b.id === beitragId ? { ...b, eigene: { punkte, kommentar } } : b)),
-    );
-    setStatus("Speichert …");
-    try {
-      await wertungSpeichern({
-        data: { token, einreichungId: beitragId, werte: { punkte, kommentar } },
-      });
-      setStatus("Gespeichert");
-      await listeHolen(token);
-    } catch (e) {
-      setBeitraege(vorher);
-      setStatus(e instanceof Error ? e.message : "Speichern fehlgeschlagen");
-    }
-  }
+  const gefiltert = useMemo(() => {
+    const liste = beitraege.filter((b) => {
+      if (kategorie !== "alle" && b.kategorie !== kategorie) return false;
+      if (nurOffene && b.eigene?.punkte) return false;
+      return true;
+    });
+    // Die Geschäftsstelle braucht die Rangfolge, die Jury die Eingangsreihenfolge
+    return istBuero ? [...liste].sort((a, b) => (b.schnitt ?? -1) - (a.schnitt ?? -1)) : liste;
+  }, [beitraege, kategorie, nurOffene, istBuero]);
+
+  const eigeneFertig = beitraege.filter((b) => b.eigene?.punkte).length;
+
+  // Position des geöffneten Beitrags, um darin blättern zu können
+  const stelle = detail ? gefiltert.findIndex((b) => b.id === detail.id) : -1;
 
   if (!sitzung) {
     return (
-      <div className="mx-auto flex min-h-[60vh] max-w-sm flex-col justify-center gap-4 p-6">
+      <div className="mx-auto flex min-h-[60vh] max-w-sm flex-col justify-center p-6">
         <h1 className="font-display text-2xl">Jurybereich</h1>
-        <p className="text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-muted-foreground">
           Zugang erhalten Jurymitglieder von der Geschäftsstelle.
         </p>
-        <p className="text-xs text-muted-foreground">
-          Erste Einrichtung: E-Mail leer lassen und das Seitenpasswort eingeben. Sobald der erste
-          Zugang der Geschäftsstelle angelegt ist, gilt nur noch die persönliche Anmeldung.
+        <form
+          className="mt-4 flex flex-col gap-4"
+          onSubmit={(e) => {
+            e.preventDefault();
+            void anmeldung();
+          }}
+        >
+          <div>
+            <Label className="text-xs" htmlFor="jury-email">
+              E-Mail
+            </Label>
+            <Input
+              id="jury-email"
+              className="mt-1"
+              type="email"
+              autoComplete="username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div>
+            <Label className="text-xs" htmlFor="jury-passwort">
+              Passwort
+            </Label>
+            <Input
+              id="jury-passwort"
+              className="mt-1"
+              type="password"
+              autoComplete="current-password"
+              value={passwort}
+              onChange={(e) => setPasswort(e.target.value)}
+            />
+          </div>
+          {fehler && (
+            <p role="alert" className="text-sm text-red-600">
+              {fehler}
+            </p>
+          )}
+          <Button type="submit" disabled={laedt}>
+            {laedt ? "Prüft …" : "Anmelden"}
+          </Button>
+        </form>
+        <p className="mt-6 text-xs text-muted-foreground">
+          Passwort vergessen? Die Geschäftsstelle kann im Jurybereich ein neues setzen.
         </p>
-        <div>
-          <Label className="text-xs">E-Mail</Label>
-          <Input
-            className="mt-1"
-            type="email"
-            autoComplete="username"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <Label className="text-xs">Passwort</Label>
-          <Input
-            className="mt-1"
-            type="password"
-            autoComplete="current-password"
-            value={passwort}
-            onChange={(e) => setPasswort(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && anmeldung()}
-          />
-        </div>
-        {fehler && <p className="text-sm text-red-600">{fehler}</p>}
-        <Button onClick={anmeldung} disabled={laedt}>
-          {laedt ? "Prüft …" : "Anmelden"}
-        </Button>
       </div>
     );
   }
@@ -356,10 +444,9 @@ function Jurybereich() {
           <p className="mt-1 text-sm text-muted-foreground">
             {sitzung.name} · {ROLLEN_LABEL[sitzung.rolle]}
             {darfWerten && ` · ${eigeneFertig} von ${beitraege.length} bewertet`}
-            {status && <span className="ml-3">· {status}</span>}
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {istBuero && (
             <>
               <Button
@@ -390,12 +477,21 @@ function Jurybereich() {
         </div>
       </div>
 
+      {status && (
+        <p aria-live="polite" className="mt-2 text-xs text-muted-foreground">
+          {status}
+        </p>
+      )}
+
       {ansicht === "beitraege" ? (
         <>
           <div className="mt-4 flex flex-wrap items-end gap-3 border-y py-3">
             <div>
-              <Label className="text-xs">Kategorie</Label>
+              <Label className="text-xs" htmlFor="jury-kategorie">
+                Kategorie
+              </Label>
               <select
+                id="jury-kategorie"
                 className="mt-1 block h-9 rounded border px-2 text-sm"
                 value={kategorie}
                 onChange={(e) => setKategorie(e.target.value)}
@@ -418,7 +514,11 @@ function Jurybereich() {
                 Nur noch nicht bewertete
               </label>
             )}
-            <p className="ml-auto text-xs text-muted-foreground">{gefiltert.length} Beiträge</p>
+            <p className="ml-auto text-xs text-muted-foreground">
+              {gefiltert.length}
+              {gefiltert.length === 1 ? " Beitrag" : " Beiträge"}
+              {istBuero && gefiltert.length > 1 ? ", nach Schnitt sortiert" : ""}
+            </p>
           </div>
 
           {!darfWerten && (
@@ -429,77 +529,80 @@ function Jurybereich() {
             </p>
           )}
 
-          {beitraege.length === 0 && (
+          {beitraege.length === 0 ? (
             <p className="mt-8 text-sm text-muted-foreground">
               Es liegen noch keine eingereichten Beiträge vor. Entwürfe, an denen noch gearbeitet
               wird, erscheinen hier bewusst nicht.
             </p>
-          )}
-
-          <div className="mt-3 overflow-x-auto rounded border">
-            <table className="w-full min-w-[760px] text-left text-sm">
-              <thead className="border-b bg-muted/50 text-xs">
-                <tr>
-                  <th className="w-24 p-2 font-medium">Nummer</th>
-                  <th className="p-2 font-medium">Projekt</th>
-                  <th className="w-56 p-2 font-medium">Kategorie</th>
-                  <th className="w-28 p-2 font-medium">Eingereicht</th>
-                  {istBuero && (
-                    <>
-                      <th className="w-20 p-2 font-medium">Schnitt</th>
-                      <th className="w-24 p-2 font-medium">Wertungen</th>
-                    </>
-                  )}
-                  <th className="w-36 p-2 font-medium">Meine Wertung</th>
-                  <th className="w-20 p-2" />
-                </tr>
-              </thead>
-              <tbody>
-                {gefiltert.map((b) => (
-                  <tr key={b.id} className="border-b last:border-0">
-                    <td className="p-2 font-mono text-xs">{b.einreichungsId}</td>
-                    <td className="p-2">
-                      <p className="leading-tight">{b.projekttitel || "ohne Titel"}</p>
-                      <p className="text-xs text-muted-foreground">{b.institution}</p>
-                    </td>
-                    <td className="p-2 text-xs">{b.kategorie}</td>
-                    <td className="p-2 text-xs">{datum(b.eingereichtAm)}</td>
+          ) : (
+            <div className="mt-3 overflow-x-auto rounded border">
+              <table className="w-full min-w-[760px] text-left text-sm">
+                <thead className="border-b bg-muted/50 text-xs">
+                  <tr>
+                    <th className="w-24 p-2 font-medium">Nummer</th>
+                    <th className="p-2 font-medium">Projekt</th>
+                    <th className="w-56 p-2 font-medium">Kategorie</th>
+                    <th className="w-28 p-2 font-medium">Eingereicht</th>
                     {istBuero && (
                       <>
-                        <td className="p-2">{b.schnitt ?? "–"}</td>
-                        <td className="p-2">{b.anzahlWertungen ?? 0}</td>
+                        <th className="w-20 p-2 font-medium">Schnitt</th>
+                        <th className="w-24 p-2 font-medium">Wertungen</th>
                       </>
                     )}
-                    <td className="p-2">
-                      {darfWerten ? (
-                        <select
-                          className="h-8 w-full rounded border px-1 text-sm"
-                          value={b.eigene?.punkte ?? ""}
-                          onChange={(e) =>
-                            werteDirekt(b.id, e.target.value ? Number(e.target.value) : null)
-                          }
-                        >
-                          <option value="">noch offen</option>
-                          {PUNKTE.map((p) => (
-                            <option key={p} value={p}>
-                              {p} von 10
-                            </option>
-                          ))}
-                        </select>
-                      ) : (
-                        <span className="text-xs text-muted-foreground">eigener Zugang nötig</span>
-                      )}
-                    </td>
-                    <td className="p-2 text-right">
-                      <Button variant="outline" size="sm" onClick={() => oeffne(b.id)}>
-                        Ansehen
-                      </Button>
-                    </td>
+                    <th className="w-36 p-2 font-medium">Meine Wertung</th>
+                    <th className="w-20 p-2" />
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody>
+                  {gefiltert.map((b) => (
+                    <tr key={b.id} className="border-b last:border-0">
+                      <td className="p-2 font-mono text-xs">{b.einreichungsId}</td>
+                      <td className="p-2">
+                        <p className="leading-tight">{b.projekttitel || "ohne Titel"}</p>
+                        <p className="text-xs text-muted-foreground">{b.institution}</p>
+                      </td>
+                      <td className="p-2 text-xs">{b.kategorie}</td>
+                      <td className="p-2 text-xs">{datum(b.eingereichtAm)}</td>
+                      {istBuero && (
+                        <>
+                          <td className="p-2">{b.schnitt === null ? "–" : zahl(b.schnitt)}</td>
+                          <td className="p-2">{b.anzahlWertungen ?? 0}</td>
+                        </>
+                      )}
+                      <td className="p-2">
+                        {darfWerten ? (
+                          <select
+                            aria-label={`Meine Wertung für ${b.projekttitel || b.einreichungsId}`}
+                            className="h-8 w-full rounded border px-1 text-sm"
+                            value={b.eigene?.punkte ?? ""}
+                            onChange={(e) =>
+                              werteDirekt(b.id, e.target.value ? Number(e.target.value) : null)
+                            }
+                          >
+                            <option value="">noch offen</option>
+                            {PUNKTE.map((p) => (
+                              <option key={p} value={p}>
+                                {p} von 10
+                              </option>
+                            ))}
+                          </select>
+                        ) : (
+                          <span className="text-xs text-muted-foreground">
+                            eigener Zugang nötig
+                          </span>
+                        )}
+                      </td>
+                      <td className="p-2 text-right">
+                        <Button variant="outline" size="sm" onClick={() => oeffne(b.id)}>
+                          Ansehen
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </>
       ) : (
         <div className="mt-4">
@@ -565,35 +668,114 @@ function Jurybereich() {
           </div>
 
           <div className="mt-4 overflow-x-auto rounded border">
-            <table className="w-full min-w-[700px] text-left text-sm">
+            <table className="w-full min-w-[820px] text-left text-sm">
               <thead className="border-b bg-muted/50 text-xs">
                 <tr>
                   <th className="p-2 font-medium">Name</th>
                   <th className="p-2 font-medium">E-Mail</th>
                   <th className="w-36 p-2 font-medium">Rolle</th>
+                  <th className="w-28 p-2 font-medium">Status</th>
                   <th className="w-32 p-2 font-medium">Letzter Login</th>
-                  <th className="w-24 p-2" />
+                  <th className="w-64 p-2" />
                 </tr>
               </thead>
               <tbody>
                 {zugaenge.map((z) => (
-                  <tr key={z.id} className="border-b last:border-0">
+                  <tr key={z.id} className="border-b last:border-0 align-top">
                     <td className="p-2">{z.name}</td>
                     <td className="p-2 text-xs">{z.email}</td>
-                    <td className="p-2 text-xs">{ROLLEN_LABEL[z.rolle] ?? z.rolle}</td>
-                    <td className="p-2 text-xs">{datum(z.letzterLogin)}</td>
-                    <td className="p-2 text-right">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={async () => {
-                          if (!window.confirm(`Zugang von ${z.name} löschen?`)) return;
-                          await zugangLoeschen({ data: { token, id: z.id } });
-                          await zeigeZugaenge();
-                        }}
+                    <td className="p-2">
+                      <select
+                        aria-label={`Rolle von ${z.name}`}
+                        className="h-8 w-full rounded border px-1 text-xs"
+                        value={z.rolle}
+                        onChange={(e) => zugangAendern(z, { rolle: e.target.value })}
                       >
-                        Löschen
-                      </Button>
+                        {ROLLEN.map((r) => (
+                          <option key={r} value={r}>
+                            {ROLLEN_LABEL[r]}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
+                    <td className="p-2 text-xs">
+                      {z.aktiv ? "aktiv" : "gesperrt"}
+                      {!z.hatPasswort && (
+                        <span className="block text-muted-foreground">kein Passwort</span>
+                      )}
+                    </td>
+                    <td className="p-2 text-xs">{datum(z.letzterLogin)}</td>
+                    <td className="p-2">
+                      {neuesPasswort?.id === z.id ? (
+                        <div className="flex flex-wrap items-center gap-2">
+                          <Input
+                            className="h-8 w-40 text-xs"
+                            autoFocus
+                            placeholder="mind. 8 Zeichen"
+                            value={neuesPasswort.wert}
+                            onChange={(e) => setNeuesPasswort({ id: z.id, wert: e.target.value })}
+                          />
+                          <Button
+                            size="sm"
+                            onClick={async () => {
+                              if (neuesPasswort.wert.trim().length < 8) {
+                                setStatus("Das Passwort braucht mindestens acht Zeichen.");
+                                return;
+                              }
+                              await zugangAendern(z, { passwort: neuesPasswort.wert });
+                              setNeuesPasswort(null);
+                              setStatus(`Neues Passwort für ${z.name} gesetzt`);
+                            }}
+                          >
+                            Setzen
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setNeuesPasswort(null)}
+                          >
+                            Abbrechen
+                          </Button>
+                        </div>
+                      ) : (
+                        <div className="flex flex-wrap gap-2">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setNeuesPasswort({ id: z.id, wert: "" })}
+                          >
+                            Passwort
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => zugangAendern(z, { aktiv: !z.aktiv })}
+                          >
+                            {z.aktiv ? "Sperren" : "Freigeben"}
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={async () => {
+                              const sicher = window.confirm(
+                                `Zugang von ${z.name} endgültig löschen?\n\n` +
+                                  `Achtung: Damit verschwinden auch alle Wertungen, die ${z.name} ` +
+                                  `abgegeben hat. Wer nur nicht mehr hereinkommen soll, wird besser gesperrt.`,
+                              );
+                              if (!sicher) return;
+                              try {
+                                await zugangLoeschen({ data: { token, id: z.id } });
+                                setStatus(`Zugang von ${z.name} gelöscht`);
+                                await zeigeZugaenge();
+                              } catch (e) {
+                                behandleFehler(e, "Löschen fehlgeschlagen");
+                              }
+                            }}
+                          >
+                            Löschen
+                          </Button>
+                        </div>
+                      )}
                     </td>
                   </tr>
                 ))}
@@ -609,17 +791,17 @@ function Jurybereich() {
       <Dialog open={!!detail} onOpenChange={(o) => !o && setDetail(null)}>
         <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-3xl">
           {detail && (
-            <>
+            <div key={detail.id}>
               <DialogHeader>
                 <DialogTitle className="text-lg">{detail.projekttitel || "ohne Titel"}</DialogTitle>
               </DialogHeader>
-              <p className="text-xs text-muted-foreground">
+              <p className="mt-1 text-xs text-muted-foreground">
                 {detail.einreichungsId} · {detail.kategorie} · {detail.institution} · eingereicht am{" "}
                 {datum(detail.eingereichtAm)}
               </p>
 
               {detail.bilder.length > 0 && (
-                <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
+                <div className="mt-4 grid grid-cols-2 gap-2 md:grid-cols-3">
                   {detail.bilder.map((bild) => (
                     <a key={bild.url} href={bild.url} target="_blank" rel="noreferrer">
                       <img
@@ -633,7 +815,7 @@ function Jurybereich() {
                 </div>
               )}
 
-              <div className="grid gap-4 text-sm">
+              <div className="mt-4 grid gap-4 text-sm">
                 {[
                   ["Kurzbeschreibung", detail.kurzbeschreibung],
                   ["Idee", detail.idee],
@@ -664,9 +846,10 @@ function Jurybereich() {
               </div>
 
               {istBuero && (
-                <div className="rounded border bg-muted/40 p-3">
+                <div className="mt-4 rounded border bg-muted/40 p-3">
                   <p className="text-xs font-medium">
-                    Wertungen der Jury · Schnitt {detail.schnitt ?? "–"} aus{" "}
+                    Wertungen der Jury · Schnitt{" "}
+                    {detail.schnitt === null ? "–" : zahl(detail.schnitt)} aus{" "}
                     {detail.anzahlWertungen ?? 0}
                   </p>
                   {detail.fremde.length === 0 ? (
@@ -685,21 +868,23 @@ function Jurybereich() {
                     </ul>
                   )}
                   <p className="mt-3 text-xs text-muted-foreground">
-                    Die Geschäftsstelle wertet nicht mit. Kontakt:{" "}
-                    {[detail.vorname, detail.nachname].filter(Boolean).join(" ")} · {detail.email}
+                    Kontakt: {[detail.vorname, detail.nachname].filter(Boolean).join(" ")} ·{" "}
+                    {detail.email}
                     {detail.telefon ? ` · ${detail.telefon}` : ""}
                   </p>
                 </div>
               )}
 
               {darfWerten && (
-                <div className="rounded border p-3">
+                <div className="mt-4 rounded border p-3">
                   <Label className="text-xs">Meine Wertung</Label>
                   <div className="mt-2 flex flex-wrap gap-1">
                     {PUNKTE.map((p) => (
                       <button
                         key={p}
                         type="button"
+                        aria-pressed={detail.eigene?.punkte === p}
+                        aria-label={`${p} von 10 Punkten`}
                         onClick={() => werte(p, detail.eigene?.kommentar ?? "")}
                         className={`h-9 w-9 rounded border text-sm ${
                           detail.eigene?.punkte === p
@@ -710,12 +895,34 @@ function Jurybereich() {
                         {p}
                       </button>
                     ))}
+                    {detail.eigene?.punkte && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="ml-2"
+                        onClick={() => werte(null, detail.eigene?.kommentar ?? "")}
+                      >
+                        Wertung zurücknehmen
+                      </Button>
+                    )}
                   </div>
-                  <Label className="mt-3 block text-xs">Kommentar</Label>
+                  <Label className="mt-3 block text-xs" htmlFor="jury-kommentar">
+                    Kommentar
+                  </Label>
                   <Textarea
+                    id="jury-kommentar"
                     className="mt-1"
                     rows={3}
-                    defaultValue={detail.eigene?.kommentar ?? ""}
+                    value={detail.eigene?.kommentar ?? ""}
+                    onChange={(e) =>
+                      setDetail({
+                        ...detail,
+                        eigene: {
+                          punkte: detail.eigene?.punkte ?? null,
+                          kommentar: e.target.value,
+                        },
+                      })
+                    }
                     onBlur={(e) => werte(detail.eigene?.punkte ?? null, e.target.value)}
                     placeholder="Kurze Begründung – sieht nur die Geschäftsstelle."
                   />
@@ -724,7 +931,30 @@ function Jurybereich() {
                   </p>
                 </div>
               )}
-            </>
+
+              {/* Durch die gefilterte Liste blättern, ohne den Dialog zu schließen */}
+              <div className="mt-6 flex items-center justify-between gap-3 border-t pt-4">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={stelle <= 0}
+                  onClick={() => stelle > 0 && oeffne(gefiltert[stelle - 1].id)}
+                >
+                  Vorheriger
+                </Button>
+                <span className="text-xs text-muted-foreground">
+                  {stelle >= 0 ? `${stelle + 1} von ${gefiltert.length}` : ""}
+                </span>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={stelle < 0 || stelle >= gefiltert.length - 1}
+                  onClick={() => stelle < gefiltert.length - 1 && oeffne(gefiltert[stelle + 1].id)}
+                >
+                  Nächster
+                </Button>
+              </div>
+            </div>
           )}
         </DialogContent>
       </Dialog>
