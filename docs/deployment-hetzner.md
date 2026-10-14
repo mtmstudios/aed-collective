@@ -58,7 +58,8 @@ von den Supabase-Eigenheiten befreit.
 | `DATABASE_SSL` | `1` | nur, wenn die Datenbank Verschlüsselung verlangt |
 | `DATEI_ABLAGE` | `/usr/home/.../dateien` | Ordner für hochgeladene Bilder, **außerhalb** von `public/` |
 | `SITE_PASSWORD` | – | Zugang zu `/admin/*`, Jury-Einrichtung, Signatur der Dateilinks |
-| `SESSION_SECRET` | – | Signatur der Sitzungs-Cookies, lang und zufällig |
+| `SESSION_SECRET` | – | Sitzungs-Cookies, **mindestens 32 Zeichen** |
+| `SITE_URL` | `https://www.aed-stuttgart.de` | Ziel der Umleitungen und Adressen in der Sitemap; nur für Testumgebungen zu ändern |
 | `SMTP_HOST`, `SMTP_PORT` | `mail.your-server.de`, `587` | Mailversand |
 | `SMTP_USER`, `SMTP_PASS` | – | Postfach des Vereins |
 | `MAIL_VON` | `aed neuland <neuland@aed-stuttgart.de>` | Absender |
@@ -67,6 +68,11 @@ von den Supabase-Eigenheiten befreit.
 Fehlen die SMTP-Angaben, verschickt die Seite keine Mails und vermerkt das
 einmal im Log; Einreichungen funktionieren weiter. Fehlt `DATABASE_URL`, bleibt
 die Seite erreichbar, zeigt aber keine Daten aus der Datenbank.
+
+**`SESSION_SECRET` unter 32 Zeichen legt die Seite lahm.** Die Sitzungsbibliothek
+weist kürzere Werte ab, und zwar bei jedem Aufruf – jede Seite antwortet dann
+mit Fehler 500. Beim Start schreibt die Anwendung die fehlenden oder zu kurzen
+Werte ins Log (`[Start] …`), damit man nicht danach suchen muss.
 
 ### Beim Bauen
 
@@ -84,6 +90,38 @@ geschlossen, ein `npm install` auf dem Server entfällt.
 
 Ohne `NITRO_PRESET=node-server` baut das Projekt für Cloudflare – ein solcher
 Build startet auf Hetzner nicht.
+
+## Umleitungen beim Umzug
+
+Sobald alle drei Namen auf den neuen Server zeigen, beantwortet die Anwendung
+die alten Adressen selbst dauerhaft (301, `src/lib/umleitungen.ts`):
+
+- `aed-neuland.de/*` → die entsprechende Seite unter `www.aed-stuttgart.de/neuland/...`,
+  Unbekanntes auf `/neuland`
+- `aed-stuttgart.de/*` → `www.aed-stuttgart.de/*` mitsamt Pfad und Parametern
+- Die alten neuland-Adressen funktionieren auch auf der Hauptdomain
+
+Die Zuordnung stammt aus dem Crawl vom 28.07.2026 und steht als Tabelle
+`ALT_PFADE` im selben Modul; neue Fälle gehören dort hinein. In konsoleH muss
+für die Domains also keine eigene Weiterleitung eingerichtet werden.
+
+**Vor dem Umschalten prüfen:** Die Seite steht noch hinter der Passwortsperre
+(`/unlock`). Ob sie beim Umzug offen sein soll, ist eine Entscheidung des
+Vereins.
+
+## Skripte
+
+| Befehl | Wofür |
+|---|---|
+| `npm run build:node` | Produktionsbuild für Node |
+| `./scripts/ausspielen.sh` | bauen, per rsync übertragen, Neustart anstoßen |
+| `node scripts/sicherung.mjs` | Datenbank und Dateien sichern |
+| `node scripts/sicherung.mjs --einspielen <ordner>` | Sicherung zurückspielen |
+| `node scripts/umzug-von-supabase.mjs` | einmaliger Datenumzug |
+| `node scripts/umzug-pruefen.mjs` | Trockenlauf des Umzugs gegen eine nachgebaute Schnittstelle |
+| `node scripts/mail-pruefen.mjs [adresse]` | SMTP-Zugang prüfen, auf Wunsch Testmail |
+| `node scripts/db-pruefen.mjs` | Schema gegen echtes Postgres prüfen |
+| `node scripts/db-lokal.mjs` | Entwicklungsdatenbank ohne Installation |
 
 ## Entwickeln ohne Server
 

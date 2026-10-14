@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { umleitung } from "./lib/umleitungen";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -44,9 +45,47 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+/**
+ * Einmalige Prüfung der Umgebung beim ersten Aufruf.
+ *
+ * Fehlende oder zu kurze Werte fallen sonst erst im Betrieb auf – und zwar als
+ * Fehler 500 auf jeder Seite, ohne erkennbaren Grund.
+ */
+let umgebungGeprueft = false;
+function pruefeUmgebung(): void {
+  if (umgebungGeprueft) return;
+  umgebungGeprueft = true;
+
+  const geheimnis = process.env["SESSION_SECRET"] ?? "";
+  if (geheimnis.length < 32) {
+    console.error(
+      geheimnis
+        ? `[Start] SESSION_SECRET ist nur ${geheimnis.length} Zeichen lang. Verlangt sind mindestens 32 – sonst schlägt jede Seite mit Fehler 500 fehl.`
+        : "[Start] SESSION_SECRET fehlt. Ohne diesen Wert lässt sich keine Sitzung lesen und jede Seite schlägt mit Fehler 500 fehl.",
+    );
+  }
+  if (!process.env["SITE_PASSWORD"]) {
+    console.error(
+      "[Start] SITE_PASSWORD fehlt. Bildverzeichnis, Jurybereich und die signierten Bildlinks funktionieren damit nicht.",
+    );
+  }
+  if (!process.env["DATABASE_URL"]) {
+    console.error(
+      "[Start] DATABASE_URL fehlt. Die Seite läuft, zeigt aber keine Daten aus der Datenbank.",
+    );
+  }
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    pruefeUmgebung();
+
     try {
+      // Alte Adressen der beiden Vorgängerseiten dauerhaft weiterleiten,
+      // bevor die Anwendung überhaupt rendert.
+      const weiter = umleitung(request);
+      if (weiter) return weiter;
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

@@ -2,9 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { events } from "@/data/site";
 import { jahrgaenge, projekte } from "@/data/neuland";
+import { HAUPTDOMAIN } from "@/lib/umleitungen";
 
-// TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "";
+// Suchmaschinen verlangen in der Sitemap vollständige Adressen; relative Pfade
+// werden stillschweigend übergangen. Über SITE_URL umstellbar.
+const BASE_URL = HAUPTDOMAIN;
 
 interface SitemapEntry {
   path: string;
@@ -36,15 +38,22 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/neuland/gewinner", changefreq: "monthly", priority: "0.8" },
           { path: "/neuland/jury", changefreq: "monthly", priority: "0.6" },
           { path: "/neuland/presse", changefreq: "monthly", priority: "0.4" },
-          ...events.map((e) => ({ path: `/programm/${e.slug}`, changefreq: "monthly" as const, priority: "0.7" })),
-          ...jahrgaenge.map((j) => ({ path: `/neuland/gewinner/${j}`, changefreq: "yearly" as const, priority: "0.7" })),
+          ...events.map((e) => ({
+            path: `/programm/${e.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.7",
+          })),
+          ...jahrgaenge.map((j) => ({
+            path: `/neuland/gewinner/${j}`,
+            changefreq: "yearly" as const,
+            priority: "0.7",
+          })),
           ...projekte.map((p) => ({
             path: `/neuland/gewinner/${p.jahr}/${p.slug}`,
             changefreq: "yearly" as const,
             priority: "0.6",
           })),
         ];
-
 
         const urls = entries.map((e) =>
           [
