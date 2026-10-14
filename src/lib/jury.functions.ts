@@ -15,7 +15,6 @@ export const ROLLEN_LABEL: Record<string, string> = {
   geschaeftsstelle: "Geschäftsstelle",
 };
 
-const BUCKET = "neuland-einreichungen";
 const SITZUNGSDAUER_STD = 12;
 
 export type Sitzung = { id: string | null; name: string; rolle: Rolle; exp: number };
@@ -94,22 +93,8 @@ function geheimnis(): string {
   return wert;
 }
 
-/**
- * Die generierten Supabase-Typen kennen `jury_zugaenge` und `jury_wertungen` noch
- * nicht – sie entstehen erst, wenn Lovable die Typen nach der Migration neu baut.
- * Bis dahin greifen wir ungetypt zu.
- */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type LoserClient = { from: (t: string) => any; storage: { from: (b: string) => any } };
-
-async function admin(): Promise<LoserClient> {
-  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-  return supabaseAdmin as unknown as LoserClient;
-}
-
-/** Maskiert LIKE-Sonderzeichen, damit eine E-Mail exakt verglichen wird. */
-function alsMuster(wert: string): string {
-  return wert.trim().replace(/[\\%_]/g, (z) => `\\${z}`);
+async function db() {
+  return import("@/lib/db.server");
 }
 
 /* ---------- Passwörter ---------- */
@@ -174,19 +159,17 @@ export const anmelden = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const exp = Date.now() + SITZUNGSDAUER_STD * 3600 * 1000;
 
-    const db = await admin();
+    const { abfrage, ausfuehren, eineZeile } = await db();
 
     // Einstieg über das Seitenpasswort, aber nur solange es noch keinen echten
     // Zugang der Geschäftsstelle gibt. In den Einreichungen stecken
     // personenbezogene Daten – dafür ist ein geteiltes Passwort zu schwach.
     if (istSeitenpasswort(data.passwort)) {
-      const { data: vorhanden } = await db
-        .from("jury_zugaenge")
-        .select("id")
-        .eq("rolle", "geschaeftsstelle")
-        .eq("aktiv", true)
-        .limit(1);
-      if ((vorhanden ?? []).length > 0) {
+      const vorhanden = await abfrage<{ id: string }>(
+        `SELECT id FROM jury_zugaenge
+         WHERE rolle = 'geschaeftsstelle' AND aktiv = true LIMIT 1`,
+      );
+      if (vorhanden.length > 0) {
         throw new Error(
           "Das Seitenpasswort gilt nur für die Einrichtung. Bitte mit dem eigenen Zugang anmelden.",
         );
@@ -200,14 +183,18 @@ export const anmelden = createServerFn({ method: "POST" })
       return { token: signiere(sitzung), sitzung };
     }
 
-    const { data: zeilen, error } = await db
-      .from("jury_zugaenge")
-      .select("id, name, rolle, passwort_hash, aktiv")
-      .ilike("email", alsMuster(data.email))
-      .limit(1);
-    if (error) throw new Error(error.message);
+    const zugang = await eineZeile<{
+      id: string;
+      name: string;
+      rolle: string;
+      passwort_hash: string;
+      aktiv: boolean;
+    }>(
+      `SELECT id, name, rolle, passwort_hash, aktiv FROM jury_zugaenge
+       WHERE lower(email) = lower($1) LIMIT 1`,
+      [data.email.trim()],
+    );
 
-    const zugang = zeilen?.[0];
     if (!zugang || !zugang.aktiv || !zugang.passwort_hash) {
       throw new Error("E-Mail oder Passwort stimmt nicht");
     }
@@ -215,10 +202,7 @@ export const anmelden = createServerFn({ method: "POST" })
       throw new Error("E-Mail oder Passwort stimmt nicht");
     }
 
-    await db
-      .from("jury_zugaenge")
-      .update({ letzter_login: new Date().toISOString() })
-      .eq("id", zugang.id);
+    await ausfuehren(`UPDATE jury_zugaenge SET letzter_login = now() WHERE id = $1`, [zugang.id]);
 
     const sitzung: Sitzung = {
       id: zugang.id,
@@ -248,22 +232,18 @@ export const ladeBeitraege = createServerFn({ method: "POST" })
   .inputValidator((input: { token: string }) => input)
   .handler(async ({ data }) => {
     const sitzung = pruefeSitzung(data.token);
-    const db = await admin();
+    const { abfrage } = await db();
 
-    const { data: zeilen, error } = await db
-      .from("neuland_einreichungen")
-      .select(BEITRAG_SPALTEN)
-      .eq("status", "eingereicht")
-      .order("eingereicht_am");
-    if (error) throw new Error(error.message);
+    const zeilen = await abfrage<BeitragRow>(
+      `SELECT ${BEITRAG_SPALTEN} FROM neuland_einreichungen
+       WHERE status = 'eingereicht' ORDER BY eingereicht_am`,
+    );
 
-    const { data: wertungen, error: wFehler } = await db
-      .from("jury_wertungen")
-      .select("einreichung_id, juror_id, punkte, kommentar");
-    if (wFehler) throw new Error(wFehler.message);
+    const alle = await abfrage<WertungRow>(
+      `SELECT einreichung_id, juror_id, punkte, kommentar FROM jury_wertungen`,
+    );
 
-    const alle = (wertungen ?? []) as WertungRow[];
-    const beitraege: Beitrag[] = ((zeilen ?? []) as BeitragRow[]).map((z) => {
+    const beitraege: Beitrag[] = zeilen.map((z) => {
       const dazu = alle.filter((w) => w.einreichung_id === z.id);
       const eigeneZeile = sitzung.id ? dazu.find((w) => w.juror_id === sitzung.id) : undefined;
       const mitPunkten = dazu.filter((w) => typeof w.punkte === "number");
@@ -295,42 +275,49 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
   .inputValidator((input: { token: string; id: string }) => input)
   .handler(async ({ data }) => {
     const sitzung = pruefeSitzung(data.token);
-    const db = await admin();
+    const { abfrage, eineZeile } = await db();
 
-    const { data: z, error } = await db
-      .from("neuland_einreichungen")
-      .select(
-        `${BEITRAG_SPALTEN}, vorname, nachname, email, telefon, kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, video_link, titelbild, detailfotos`,
-      )
-      .eq("id", data.id)
-      .single();
-    if (error) throw new Error(error.message);
+    const z = await eineZeile<
+      BeitragRow & {
+        vorname: string | null;
+        nachname: string | null;
+        email: string | null;
+        telefon: string | null;
+        kurzbeschreibung: string | null;
+        idee: string | null;
+        umsetzung: string | null;
+        nutzen: string | null;
+        nachhaltigkeit: string | null;
+        video_link: string | null;
+        titelbild: { path: string; name: string } | null;
+        detailfotos: { path: string; name: string }[] | null;
+      }
+    >(
+      `SELECT ${BEITRAG_SPALTEN}, vorname, nachname, email, telefon, kurzbeschreibung,
+              idee, umsetzung, nutzen, nachhaltigkeit, video_link, titelbild, detailfotos
+       FROM neuland_einreichungen WHERE id = $1`,
+      [data.id],
+    );
+    if (!z) throw new Error("Einreichung nicht gefunden");
 
-    const { data: wertungen, error: wFehler } = await db
-      .from("jury_wertungen")
-      .select("juror_id, punkte, kommentar")
-      .eq("einreichung_id", data.id);
-    if (wFehler) throw new Error(wFehler.message);
+    const alle = await abfrage<WertungRow>(
+      `SELECT juror_id, punkte, kommentar FROM jury_wertungen WHERE einreichung_id = $1`,
+      [data.id],
+    );
 
-    // Bilder liegen in einem geschlossenen Bucket – kurzlebige Links erzeugen
-    const dateien = [
-      ...(z.titelbild ? [z.titelbild as { path: string; name: string }] : []),
-      ...((z.detailfotos ?? []) as { path: string; name: string }[]),
-    ];
-    const bilder: { name: string; url: string }[] = [];
-    for (const datei of dateien) {
-      if (!datei?.path) continue;
-      const { data: signiert } = await db.storage.from(BUCKET).createSignedUrl(datei.path, 3600);
-      if (signiert?.signedUrl) bilder.push({ name: datei.name ?? "", url: signiert.signedUrl });
-    }
+    // Die Dateien liegen außerhalb des öffentlichen Ordners – kurzlebige Links erzeugen
+    const { signierterLink } = await import("@/lib/dateien.server");
+    const dateien = [...(z.titelbild ? [z.titelbild] : []), ...(z.detailfotos ?? [])];
+    const bilder = dateien
+      .filter((datei) => datei?.path)
+      .map((datei) => ({ name: datei.name ?? "", url: signierterLink(datei.path) }));
 
-    const alle = (wertungen ?? []) as WertungRow[];
     const eigeneZeile = sitzung.id ? alle.find((w) => w.juror_id === sitzung.id) : undefined;
 
     let fremde: FremdWertung[] = [];
     if (sitzung.rolle === "geschaeftsstelle") {
-      const { data: personen } = await db.from("jury_zugaenge").select("id, name");
-      const namen = new Map(((personen ?? []) as PersonRow[]).map((p) => [p.id, p.name]));
+      const personen = await abfrage<PersonRow>(`SELECT id, name FROM jury_zugaenge`);
+      const namen = new Map(personen.map((p) => [p.id, p.name]));
       fremde = alle.map((w) => ({
         juror: namen.get(w.juror_id) ?? "unbekannt",
         punkte: w.punkte,
@@ -393,17 +380,14 @@ export const speichereWertung = createServerFn({ method: "POST" })
         "Mit dem Einrichtungs-Passwort lässt sich nicht werten. Bitte unter „Zugänge“ einen eigenen Zugang anlegen und damit anmelden.",
       );
     }
-    const db = await admin();
-    const { error } = await db.from("jury_wertungen").upsert(
-      {
-        einreichung_id: data.einreichungId,
-        juror_id: sitzung.id,
-        punkte: data.werte.punkte,
-        kommentar: data.werte.kommentar,
-      },
-      { onConflict: "einreichung_id,juror_id" },
+    const { ausfuehren } = await db();
+    await ausfuehren(
+      `INSERT INTO jury_wertungen (einreichung_id, juror_id, punkte, kommentar)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (einreichung_id, juror_id)
+       DO UPDATE SET punkte = EXCLUDED.punkte, kommentar = EXCLUDED.kommentar`,
+      [data.einreichungId, sitzung.id, data.werte.punkte, data.werte.kommentar],
     );
-    if (error) throw new Error(error.message);
     return { ok: true as const };
   });
 
@@ -413,14 +397,13 @@ export const ladeZugaenge = createServerFn({ method: "POST" })
   .inputValidator((input: { token: string }) => input)
   .handler(async ({ data }) => {
     nurGeschaeftsstelle(pruefeSitzung(data.token));
-    const db = await admin();
-    const { data: zeilen, error } = await db
-      .from("jury_zugaenge")
-      .select("id, name, email, rolle, aktiv, passwort_hash, letzter_login")
-      .order("name");
-    if (error) throw new Error(error.message);
+    const { abfrage } = await db();
+    const zeilen = await abfrage<ZugangRow>(
+      `SELECT id, name, email, rolle, aktiv, passwort_hash, letzter_login
+       FROM jury_zugaenge ORDER BY name`,
+    );
 
-    const zugaenge: Zugang[] = ((zeilen ?? []) as ZugangRow[]).map((z) => ({
+    const zugaenge: Zugang[] = zeilen.map((z) => ({
       id: z.id,
       name: z.name,
       email: z.email,
@@ -448,7 +431,7 @@ export const speichereZugang = createServerFn({ method: "POST" })
   }))
   .handler(async ({ data }) => {
     nurGeschaeftsstelle(pruefeSitzung(data.token));
-    const db = await admin();
+    const { ausfuehren, setzliste, istDoppelt } = await db();
 
     const werte: Record<string, unknown> = {
       name: data.werte.name,
@@ -459,20 +442,37 @@ export const speichereZugang = createServerFn({ method: "POST" })
     if (data.werte.passwort) werte["passwort_hash"] = hashPasswort(data.werte.passwort);
 
     // Die Datenbank meldet eine doppelte Adresse technisch – hier in Klartext
-    const lesbar = (meldung: string) =>
-      meldung.includes("jury_zugaenge_email_idx") || meldung.includes("duplicate key")
-        ? "Für diese E-Mail-Adresse gibt es bereits einen Zugang."
-        : meldung;
+    const melde = (fehler: unknown): never => {
+      if (istDoppelt(fehler)) {
+        throw new Error("Für diese E-Mail-Adresse gibt es bereits einen Zugang.");
+      }
+      throw fehler;
+    };
 
     if (data.id) {
-      const { error } = await db.from("jury_zugaenge").update(werte).eq("id", data.id);
-      if (error) throw new Error(lesbar(error.message));
+      const { sql, werte: parameter } = setzliste(werte);
+      try {
+        await ausfuehren(`UPDATE jury_zugaenge SET ${sql} WHERE id = $${parameter.length + 1}`, [
+          ...parameter,
+          data.id,
+        ]);
+      } catch (fehler) {
+        melde(fehler);
+      }
       return { ok: true as const };
     }
 
     if (!data.werte.passwort) throw new Error("Für einen neuen Zugang braucht es ein Passwort");
-    const { error } = await db.from("jury_zugaenge").insert(werte);
-    if (error) throw new Error(lesbar(error.message));
+    const felder = Object.keys(werte);
+    try {
+      await ausfuehren(
+        `INSERT INTO jury_zugaenge (${felder.map((f) => `"${f}"`).join(", ")})
+         VALUES (${felder.map((_, i) => `$${i + 1}`).join(", ")})`,
+        felder.map((f) => werte[f]),
+      );
+    } catch (fehler) {
+      melde(fehler);
+    }
     return { ok: true as const };
   });
 
@@ -480,9 +480,8 @@ export const loescheZugang = createServerFn({ method: "POST" })
   .inputValidator((input: { token: string; id: string }) => input)
   .handler(async ({ data }) => {
     nurGeschaeftsstelle(pruefeSitzung(data.token));
-    const db = await admin();
-    const { error } = await db.from("jury_zugaenge").delete().eq("id", data.id);
-    if (error) throw new Error(error.message);
+    const { ausfuehren } = await db();
+    await ausfuehren(`DELETE FROM jury_zugaenge WHERE id = $1`, [data.id]);
     return { ok: true as const };
   });
 
@@ -491,24 +490,19 @@ export const ladeAuswertung = createServerFn({ method: "POST" })
   .inputValidator((input: { token: string }) => input)
   .handler(async ({ data }) => {
     nurGeschaeftsstelle(pruefeSitzung(data.token));
-    const db = await admin();
+    const { abfrage } = await db();
 
-    const { data: beitraege, error } = await db
-      .from("neuland_einreichungen")
-      .select("id, einreichungs_id, projekttitel, kategorie, institution")
-      .eq("status", "eingereicht");
-    if (error) throw new Error(error.message);
+    const alleBeitraege = await abfrage<BeitragRow>(
+      `SELECT id, einreichungs_id, projekttitel, kategorie, institution
+       FROM neuland_einreichungen WHERE status = 'eingereicht'`,
+    );
 
-    const { data: wertungen, error: wFehler } = await db
-      .from("jury_wertungen")
-      .select("einreichung_id, juror_id, punkte, kommentar");
-    if (wFehler) throw new Error(wFehler.message);
+    const alleWertungen = await abfrage<WertungRow>(
+      `SELECT einreichung_id, juror_id, punkte, kommentar FROM jury_wertungen`,
+    );
 
-    const { data: personen } = await db.from("jury_zugaenge").select("id, name");
-    const namen = new Map(((personen ?? []) as PersonRow[]).map((p) => [p.id, p.name]));
-
-    const alleBeitraege = (beitraege ?? []) as BeitragRow[];
-    const alleWertungen = (wertungen ?? []) as WertungRow[];
+    const personen = await abfrage<PersonRow>(`SELECT id, name FROM jury_zugaenge`);
+    const namen = new Map(personen.map((p) => [p.id, p.name]));
 
     // Lange Form: eine Zeile je abgegebener Wertung
     const zeilen = alleWertungen.map((w) => {

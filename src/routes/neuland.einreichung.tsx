@@ -1,7 +1,6 @@
 import { cloneElement, isValidElement, useEffect, useId, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
-import { supabase } from "@/integrations/supabase/client";
 import {
   speichereEntwurf,
   ladeEinreichung,
@@ -93,11 +92,19 @@ async function uploadDatei(file: File): Promise<Datei> {
     throw new Error(`${file.name}: nur JPG oder PNG erlaubt.`);
   if (file.size > MAX_DATEIGROESSE_MB * 1024 * 1024)
     throw new Error(`${file.name}: größer als ${MAX_DATEIGROESSE_MB} MB.`);
-  const endung = file.name.split(".").pop() ?? "jpg";
-  const path = `${crypto.randomUUID()}.${endung}`;
-  const { error } = await supabase.storage.from("neuland-einreichungen").upload(path, file);
-  if (error) throw new Error(error.message);
-  return { path, name: file.name, size: file.size };
+  const formular = new FormData();
+  formular.append("datei", file);
+
+  const antwort = await fetch("/api/upload", { method: "POST", body: formular });
+  const ergebnis = (await antwort.json().catch(() => null)) as {
+    path?: string;
+    fehler?: string;
+  } | null;
+
+  if (!antwort.ok || !ergebnis?.path) {
+    throw new Error(ergebnis?.fehler ?? `${file.name}: Hochladen fehlgeschlagen.`);
+  }
+  return { path: ergebnis.path, name: file.name, size: file.size };
 }
 
 function EinreichungPage() {

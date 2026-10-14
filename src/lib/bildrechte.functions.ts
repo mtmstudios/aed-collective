@@ -49,13 +49,18 @@ function passwortOk(input: string): boolean {
   return timingSafeEqual(a, b);
 }
 
-async function admin() {
-  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-  return supabaseAdmin;
+async function db() {
+  return import("@/lib/db.server");
 }
 
 const SPALTEN =
   "pfad, dateiname, kategorie, jahrgang, status, urheber, rechteart, quelle, freigabedatum, notiz, verwendungen";
+
+/** Alle Einträge, sortiert wie im Verzeichnis angezeigt. */
+async function alleBilder(): Promise<BildrechtRow[]> {
+  const { abfrage } = await db();
+  return abfrage<BildrechtRow>(`SELECT ${SPALTEN} FROM bildrechte ORDER BY kategorie, dateiname`);
+}
 
 /** Prüft das interne Passwort. */
 export const pruefeAdminPasswort = createServerFn({ method: "POST" })
@@ -67,14 +72,13 @@ export const ladeBildverzeichnis = createServerFn({ method: "POST" })
   .inputValidator((input: { passwort: string }) => input)
   .handler(async ({ data }) => {
     if (!passwortOk(data.passwort)) throw new Error("Falsches Passwort");
-    const db = await admin();
+    const { abfrage, ausfuehren, einfuegeViele } = await db();
 
-    const { data: vorhandene, error: leseFehler } = await db
-      .from("bildrechte")
-      .select("pfad, verwendungen");
-    if (leseFehler) throw new Error(leseFehler.message);
+    const vorhandene = await abfrage<{ pfad: string; verwendungen: string[] | null }>(
+      `SELECT pfad, verwendungen FROM bildrechte`,
+    );
 
-    const bekannt = new Map((vorhandene ?? []).map((r) => [r.pfad, r.verwendungen ?? []]));
+    const bekannt = new Map(vorhandene.map((r) => [r.pfad, r.verwendungen ?? []]));
     const neue = BILD_MANIFEST.filter((b) => !bekannt.has(b.pfad)).map((b) => ({
       pfad: b.pfad,
       dateiname: b.dateiname,
@@ -83,30 +87,22 @@ export const ladeBildverzeichnis = createServerFn({ method: "POST" })
       verwendungen: b.verwendungen,
     }));
 
+    const SPALTENNAMEN = ["pfad", "dateiname", "kategorie", "jahrgang", "verwendungen"] as const;
     for (let i = 0; i < neue.length; i += 200) {
-      const { error } = await db.from("bildrechte").insert(neue.slice(i, i + 200));
-      if (error) throw new Error(error.message);
+      await einfuegeViele("bildrechte", SPALTENNAMEN, neue.slice(i, i + 200));
     }
 
     // Verwendungsorte bei jedem Laden aus dem Manifest aktualisieren (nur bei Abweichung)
     for (const b of BILD_MANIFEST) {
       const alt = bekannt.get(b.pfad);
       if (!alt || JSON.stringify(alt) === JSON.stringify(b.verwendungen)) continue;
-      const { error } = await db
-        .from("bildrechte")
-        .update({ verwendungen: b.verwendungen })
-        .eq("pfad", b.pfad);
-      if (error) throw new Error(error.message);
+      await ausfuehren(`UPDATE bildrechte SET verwendungen = $1 WHERE pfad = $2`, [
+        b.verwendungen,
+        b.pfad,
+      ]);
     }
 
-    const { data: rows, error } = await db
-      .from("bildrechte")
-      .select(SPALTEN)
-      .order("kategorie")
-      .order("dateiname");
-    if (error) throw new Error(error.message);
-
-    return { bilder: (rows ?? []) as BildrechtRow[] };
+    return { bilder: await alleBilder() };
   });
 
 const updateSchema = z.object({
@@ -127,19 +123,21 @@ export const speichereBildrechteGruppe = createServerFn({ method: "POST" })
   }))
   .handler(async ({ data }) => {
     if (!passwortOk(data.passwort)) throw new Error("Falsches Passwort");
-    const db = await admin();
+    const { ausfuehren, setzliste } = await db();
     const werte = {
       ...data.werte,
       ...(data.werte.freigabedatum !== undefined
         ? { freigabedatum: data.werte.freigabedatum || null }
         : {}),
     };
+    if (Object.keys(werte).length === 0) return { ok: true as const };
+
+    const { sql, werte: parameter } = setzliste(werte);
     for (let i = 0; i < data.pfade.length; i += 200) {
-      const { error } = await db
-        .from("bildrechte")
-        .update(werte)
-        .in("pfad", data.pfade.slice(i, i + 200));
-      if (error) throw new Error(error.message);
+      await ausfuehren(
+        `UPDATE bildrechte SET ${sql} WHERE pfad = ANY($${parameter.length + 1}::text[])`,
+        [...parameter, data.pfade.slice(i, i + 200)],
+      );
     }
     return { ok: true as const };
   });
@@ -183,16 +181,15 @@ export const uebernehmeProjektangaben = createServerFn({ method: "POST" })
   .inputValidator((input: { passwort: string }) => input)
   .handler(async ({ data }) => {
     if (!passwortOk(data.passwort)) throw new Error("Falsches Passwort");
-    const db = await admin();
+    const { abfrage, ausfuehren, setzliste } = await db();
     const angaben = projektAngaben();
 
-    const { data: rows, error: leseFehler } = await db
-      .from("bildrechte")
-      .select("pfad, urheber, status")
-      .eq("kategorie", "projekt");
-    if (leseFehler) throw new Error(leseFehler.message);
+    const rows = await abfrage<{ pfad: string; urheber: string | null; status: string }>(
+      `SELECT pfad, urheber, status FROM bildrechte WHERE kategorie = $1`,
+      ["projekt"],
+    );
 
-    const bestand = new Map((rows ?? []).map((r) => [r.pfad, r]));
+    const bestand = new Map(rows.map((r) => [r.pfad, r]));
 
     // Bilder mit gleichen Angaben in einem Rutsch schreiben
     type Uebernahme = {
@@ -224,26 +221,22 @@ export const uebernehmeProjektangaben = createServerFn({ method: "POST" })
 
     let geschrieben = 0;
     for (const gruppe of gruppen.values()) {
+      const { sql, werte: parameter } = setzliste(gruppe.werte as Record<string, unknown>);
       for (let i = 0; i < gruppe.pfade.length; i += 200) {
         const teil = gruppe.pfade.slice(i, i + 200);
-        const { error } = await db.from("bildrechte").update(gruppe.werte).in("pfad", teil);
-        if (error) throw new Error(error.message);
+        await ausfuehren(
+          `UPDATE bildrechte SET ${sql} WHERE pfad = ANY($${parameter.length + 1}::text[])`,
+          [...parameter, teil],
+        );
         geschrieben += teil.length;
       }
     }
-
-    const { data: neu, error } = await db
-      .from("bildrechte")
-      .select(SPALTEN)
-      .order("kategorie")
-      .order("dateiname");
-    if (error) throw new Error(error.message);
 
     return {
       geschrieben,
       uebersprungen,
       zuordenbar: angaben.size,
-      bilder: (neu ?? []) as BildrechtRow[],
+      bilder: await alleBilder(),
     };
   });
 
@@ -256,12 +249,15 @@ export const speichereBildrecht = createServerFn({ method: "POST" })
   }))
   .handler(async ({ data }) => {
     if (!passwortOk(data.passwort)) throw new Error("Falsches Passwort");
-    const db = await admin();
+    const { ausfuehren, setzliste } = await db();
     const werte = {
       ...data.werte,
       freigabedatum: data.werte.freigabedatum ? data.werte.freigabedatum : null,
     };
-    const { error } = await db.from("bildrechte").update(werte).eq("pfad", data.pfad);
-    if (error) throw new Error(error.message);
+    const { sql, werte: parameter } = setzliste(werte);
+    await ausfuehren(`UPDATE bildrechte SET ${sql} WHERE pfad = $${parameter.length + 1}`, [
+      ...parameter,
+      data.pfad,
+    ]);
     return { ok: true as const };
   });

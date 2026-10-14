@@ -30,3 +30,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# lokale Entwicklungsdatenbank und hochgeladene Dateien
+.pglite/
+dateien/

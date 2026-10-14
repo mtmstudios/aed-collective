@@ -29,12 +29,54 @@ const formSchema = z.object({
 
 export type EinreichungForm = z.infer<typeof formSchema>;
 
+export type Datei = z.infer<typeof dateiSchema>;
+
+/** Eine Zeile, wie sie die Abfragen unten zurückgeben (siehe SPALTEN). */
+export type EinreichungRow = {
+  einreichungs_id: string;
+  status: string;
+  vorname: string | null;
+  nachname: string | null;
+  email: string;
+  telefon: string | null;
+  institution: string | null;
+  kategorie: string | null;
+  projekttitel: string | null;
+  kurzbeschreibung: string | null;
+  idee: string | null;
+  umsetzung: string | null;
+  nutzen: string | null;
+  nachhaltigkeit: string | null;
+  titelbild: Datei | null;
+  detailfotos: Datei[];
+  video_link: string | null;
+  rechte_bestaetigt: boolean;
+  created_at: string;
+  updated_at: string;
+  eingereicht_am: string | null;
+};
+
 const SPALTEN =
   "einreichungs_id, status, vorname, nachname, email, telefon, institution, kategorie, projekttitel, kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, titelbild, detailfotos, video_link, rechte_bestaetigt, created_at, updated_at, eingereicht_am";
 
-async function admin() {
-  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-  return supabaseAdmin;
+async function db() {
+  return import("@/lib/db.server");
+}
+
+/**
+ * Bereitet die Formularwerte für die Datenbank auf.
+ *
+ * Titelbild und Detailfotos liegen als JSON in der Spalte. Listen müssen dafür
+ * ausdrücklich als JSON-Text übergeben werden – sonst macht der Treiber ein
+ * PostgreSQL-Array daraus und die Spalte lehnt es ab.
+ */
+function werteFuerDb(daten: EinreichungForm): Record<string, unknown> {
+  return {
+    ...daten,
+    email: daten.email.trim(),
+    titelbild: daten.titelbild ? JSON.stringify(daten.titelbild) : null,
+    detailfotos: JSON.stringify(daten.detailfotos ?? []),
+  };
 }
 
 export const getEinreichungsStatus = createServerFn({ method: "GET" }).handler(async () => ({
@@ -49,28 +91,30 @@ export const speichereEntwurf = createServerFn({ method: "POST" })
   }))
   .handler(async ({ data }) => {
     if (istGeschlossen()) throw new Error("Der Bewerbungsschluss für neuland 2027 ist erreicht.");
-    const db = await admin();
-    const werte = { ...data.daten, email: data.daten.email.trim() };
+    const { eineZeile, setzliste } = await db();
+    const werte = werteFuerDb(data.daten);
 
     if (data.einreichungsId) {
-      const { data: row, error } = await db
-        .from("neuland_einreichungen")
-        .update(werte)
-        .eq("einreichungs_id", data.einreichungsId)
-        .ilike("email", werte.email)
-        .select(SPALTEN)
-        .maybeSingle();
-      if (error) throw new Error(error.message);
+      const { sql, werte: parameter } = setzliste(werte);
+      const row = await eineZeile<EinreichungRow>(
+        `UPDATE neuland_einreichungen SET ${sql}
+         WHERE einreichungs_id = $${parameter.length + 1}
+           AND lower(email) = lower($${parameter.length + 2})
+         RETURNING ${SPALTEN}`,
+        [...parameter, data.einreichungsId, String(werte["email"])],
+      );
       if (!row) throw new Error("Einreichung nicht gefunden oder E-Mail stimmt nicht überein.");
       return { row, neu: false };
     }
 
-    const { data: row, error } = await db
-      .from("neuland_einreichungen")
-      .insert(werte)
-      .select(SPALTEN)
-      .single();
-    if (error) throw new Error(error.message);
+    const felder = Object.keys(werte);
+    const row = await eineZeile<EinreichungRow>(
+      `INSERT INTO neuland_einreichungen (${felder.map((f) => `"${f}"`).join(", ")})
+       VALUES (${felder.map((_, i) => `$${i + 1}`).join(", ")})
+       RETURNING ${SPALTEN}`,
+      felder.map((f) => werte[f]),
+    );
+    if (!row) throw new Error("Der Entwurf konnte nicht angelegt werden.");
     return { row, neu: true };
   });
 
@@ -80,14 +124,12 @@ export const ladeEinreichung = createServerFn({ method: "POST" })
     email: z.string().email().parse(input.email.trim()),
   }))
   .handler(async ({ data }) => {
-    const db = await admin();
-    const { data: row, error } = await db
-      .from("neuland_einreichungen")
-      .select(SPALTEN)
-      .eq("einreichungs_id", data.einreichungsId)
-      .ilike("email", data.email)
-      .maybeSingle();
-    if (error) throw new Error(error.message);
+    const { eineZeile } = await db();
+    const row = await eineZeile<EinreichungRow>(
+      `SELECT ${SPALTEN} FROM neuland_einreichungen
+       WHERE einreichungs_id = $1 AND lower(email) = lower($2)`,
+      [data.einreichungsId, data.email],
+    );
     if (!row) throw new Error("Keine Bewerbung zu dieser Einreichungs-Nummer und E-Mail gefunden.");
     return { row, geschlossen: istGeschlossen() };
   });
@@ -118,15 +160,19 @@ export const reicheEin = createServerFn({ method: "POST" })
     if (!data.daten.rechte_bestaetigt)
       throw new Error("Bitte die Einverständniserklärung bestätigen.");
 
-    const db = await admin();
-    const { data: row, error } = await db
-      .from("neuland_einreichungen")
-      .update({ ...data.daten, status: "eingereicht", eingereicht_am: new Date().toISOString() })
-      .eq("einreichungs_id", data.einreichungsId)
-      .ilike("email", data.email.trim())
-      .select(SPALTEN)
-      .maybeSingle();
-    if (error) throw new Error(error.message);
+    const { eineZeile, setzliste } = await db();
+    const { sql, werte: parameter } = setzliste({
+      ...werteFuerDb(data.daten),
+      status: "eingereicht",
+      eingereicht_am: new Date().toISOString(),
+    });
+    const row = await eineZeile<EinreichungRow>(
+      `UPDATE neuland_einreichungen SET ${sql}
+       WHERE einreichungs_id = $${parameter.length + 1}
+         AND lower(email) = lower($${parameter.length + 2})
+       RETURNING ${SPALTEN}`,
+      [...parameter, data.einreichungsId, data.email.trim()],
+    );
     if (!row) throw new Error("Einreichung nicht gefunden.");
 
     await benachrichtige(row as unknown as Record<string, unknown>);

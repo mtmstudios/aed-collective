@@ -29,16 +29,15 @@ export const ladeBildnachweise = createServerFn({ method: "GET" }).handler(
     }
 
     try {
-      const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-      const { data, error } = await supabaseAdmin
-        .from("bildrechte")
-        .select("pfad, urheber, status");
-      if (error) throw new Error(error.message);
+      const { abfrage } = await import("@/lib/db.server");
+      const data = await abfrage<{ pfad: string; urheber: string | null; status: string }>(
+        `SELECT pfad, urheber, status FROM bildrechte`,
+      );
 
       const nachweise: Nachweise = {};
       const gesperrt: string[] = [];
 
-      for (const zeile of data ?? []) {
+      for (const zeile of data) {
         // Im Verzeichnis steht "public/bilder/…", im Browser "/bilder/…"
         const url = zeile.pfad.replace(/^public/, "");
         const name = (zeile.urheber ?? "").trim();

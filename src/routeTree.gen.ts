@@ -24,6 +24,8 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as UnlockRouteImport } from './routes/unlock'
 import { Route as AdminBildverzeichnisRouteImport } from './routes/admin.bildverzeichnis'
 import { Route as AdminBildzuordnungRouteImport } from './routes/admin.bildzuordnung'
+import { Route as ApiDateiRouteImport } from './routes/api.datei'
+import { Route as ApiUploadRouteImport } from './routes/api.upload'
 import { Route as MitgliederFoerdermitgliederRouteImport } from './routes/mitglieder.foerdermitglieder'
 import { Route as Neuland1SplatRouteImport } from './routes/neuland-1.$'
 import { Route as NeulandIndexRouteImport } from './routes/neuland.index'
@@ -119,6 +121,16 @@ const AdminBildverzeichnisRoute = AdminBildverzeichnisRouteImport.update({
 const AdminBildzuordnungRoute = AdminBildzuordnungRouteImport.update({
   id: '/admin/bildzuordnung',
   path: '/admin/bildzuordnung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiDateiRoute = ApiDateiRouteImport.update({
+  id: '/api/datei',
+  path: '/api/datei',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiUploadRoute = ApiUploadRouteImport.update({
+  id: '/api/upload',
+  path: '/api/upload',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MitgliederFoerdermitgliederRoute =
@@ -246,6 +258,8 @@ export interface FileRoutesByFullPath {
   '/unlock': typeof UnlockRoute
   '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
   '/admin/bildzuordnung': typeof AdminBildzuordnungRoute
+  '/api/datei': typeof ApiDateiRoute
+  '/api/upload': typeof ApiUploadRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -283,6 +297,8 @@ export interface FileRoutesByTo {
   '/unlock': typeof UnlockRoute
   '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
   '/admin/bildzuordnung': typeof AdminBildzuordnungRoute
+  '/api/datei': typeof ApiDateiRoute
+  '/api/upload': typeof ApiUploadRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -320,6 +336,8 @@ export interface FileRoutesById {
   '/unlock': typeof UnlockRoute
   '/admin/bildverzeichnis': typeof AdminBildverzeichnisRoute
   '/admin/bildzuordnung': typeof AdminBildzuordnungRoute
+  '/api/datei': typeof ApiDateiRoute
+  '/api/upload': typeof ApiUploadRoute
   '/mitglieder/foerdermitglieder': typeof MitgliederFoerdermitgliederRoute
   '/neuland-1/$': typeof Neuland1SplatRoute
   '/neuland/einreichung': typeof NeulandEinreichungRoute
@@ -360,6 +378,8 @@ export interface FileRouteTypes {
     | '/unlock'
     | '/admin/bildverzeichnis'
     | '/admin/bildzuordnung'
+    | '/api/datei'
+    | '/api/upload'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -397,6 +417,8 @@ export interface FileRouteTypes {
     | '/unlock'
     | '/admin/bildverzeichnis'
     | '/admin/bildzuordnung'
+    | '/api/datei'
+    | '/api/upload'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -433,6 +455,8 @@ export interface FileRouteTypes {
     | '/unlock'
     | '/admin/bildverzeichnis'
     | '/admin/bildzuordnung'
+    | '/api/datei'
+    | '/api/upload'
     | '/mitglieder/foerdermitglieder'
     | '/neuland-1/$'
     | '/neuland/einreichung'
@@ -472,6 +496,8 @@ export interface RootRouteChildren {
   UnlockRoute: typeof UnlockRoute
   AdminBildverzeichnisRoute: typeof AdminBildverzeichnisRoute
   AdminBildzuordnungRoute: typeof AdminBildzuordnungRoute
+  ApiDateiRoute: typeof ApiDateiRoute
+  ApiUploadRoute: typeof ApiUploadRoute
   Neuland1SplatRoute: typeof Neuland1SplatRoute
   ProgrammSlugRoute: typeof ProgrammSlugRoute
   VereinBeiratRoute: typeof VereinBeiratRouteWithChildren
@@ -587,6 +613,20 @@ declare module '@tanstack/react-router' {
       path: '/admin/bildzuordnung'
       fullPath: '/admin/bildzuordnung'
       preLoaderRoute: typeof AdminBildzuordnungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/datei': {
+      id: '/api/datei'
+      path: '/api/datei'
+      fullPath: '/api/datei'
+      preLoaderRoute: typeof ApiDateiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/upload': {
+      id: '/api/upload'
+      path: '/api/upload'
+      fullPath: '/api/upload'
+      preLoaderRoute: typeof ApiUploadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mitglieder/foerdermitglieder': {
@@ -820,6 +860,8 @@ const rootRouteChildren: RootRouteChildren = {
   UnlockRoute: UnlockRoute,
   AdminBildverzeichnisRoute: AdminBildverzeichnisRoute,
   AdminBildzuordnungRoute: AdminBildzuordnungRoute,
+  ApiDateiRoute: ApiDateiRoute,
+  ApiUploadRoute: ApiUploadRoute,
   Neuland1SplatRoute: Neuland1SplatRoute,
   ProgrammSlugRoute: ProgrammSlugRoute,
   VereinBeiratRoute: VereinBeiratRouteWithChildren,
