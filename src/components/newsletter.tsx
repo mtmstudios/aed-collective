@@ -1,17 +1,43 @@
 import { useState, type FormEvent } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { anmeldenNewsletter } from "@/lib/newsletter.functions";
 
 export function Newsletter() {
-  const [done, setDone] = useState(false);
+  const anmelden = useServerFn(anmeldenNewsletter);
+  const [erledigt, setErledigt] = useState<string | null>(null);
+  const [fehler, setFehler] = useState<string | null>(null);
+  const [laeuft, setLaeuft] = useState(false);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setDone(true);
+    const felder = new FormData(e.currentTarget);
+    setFehler(null);
+    setLaeuft(true);
+    try {
+      const antwort = await anmelden({
+        data: {
+          vorname: String(felder.get("vorname") ?? ""),
+          nachname: String(felder.get("nachname") ?? ""),
+          email: String(felder.get("email") ?? ""),
+          neuland: felder.get("neuland") === "on",
+        },
+      });
+      if (antwort.ok) setErledigt(antwort.hinweis);
+      else setFehler(antwort.fehler);
+    } catch {
+      setFehler("Die Anmeldung hat nicht geklappt. Bitte später noch einmal versuchen.");
+    } finally {
+      setLaeuft(false);
+    }
   }
 
-  if (done) {
+  if (erledigt) {
     return (
-      <p role="status" className="mt-6 border border-footer-line bg-footer-input-bg p-4 text-sm text-footer-text">
-        Danke! Bitte bestätigen Sie die Anmeldung über den Link in der E-Mail.
+      <p
+        role="status"
+        className="mt-6 border border-footer-line bg-footer-input-bg p-4 text-sm text-footer-text"
+      >
+        {erledigt}
       </p>
     );
   }
@@ -19,7 +45,9 @@ export function Newsletter() {
   return (
     <form onSubmit={onSubmit} className="mt-6 grid gap-3 text-sm sm:grid-cols-2">
       <div className="sm:col-span-1">
-        <label htmlFor="nl-vorname" className="eyebrow text-footer-muted">Vorname</label>
+        <label htmlFor="nl-vorname" className="eyebrow text-footer-muted">
+          Vorname
+        </label>
         <input
           id="nl-vorname"
           name="vorname"
@@ -30,7 +58,9 @@ export function Newsletter() {
         />
       </div>
       <div className="sm:col-span-1">
-        <label htmlFor="nl-nachname" className="eyebrow text-footer-muted">Nachname</label>
+        <label htmlFor="nl-nachname" className="eyebrow text-footer-muted">
+          Nachname
+        </label>
         <input
           id="nl-nachname"
           name="nachname"
@@ -41,7 +71,9 @@ export function Newsletter() {
         />
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor="nl-email" className="eyebrow text-footer-muted">E-Mail</label>
+        <label htmlFor="nl-email" className="eyebrow text-footer-muted">
+          E-Mail
+        </label>
         <input
           id="nl-email"
           name="email"
@@ -56,12 +88,18 @@ export function Newsletter() {
         <input type="checkbox" name="neuland" className="mt-1 size-4 accent-brand" />
         <span>Zusätzlich Infos zum Nachwuchswettbewerb neuland erhalten</span>
       </label>
+      {fehler && (
+        <p role="alert" className="text-sm text-footer-text sm:col-span-2">
+          {fehler}
+        </p>
+      )}
       <div className="sm:col-span-2">
         <button
           type="submit"
-          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] rounded-full border border-brand bg-brand px-7 font-display text-[0.9375rem] font-medium text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)] w-full sm:w-auto"
+          disabled={laeuft}
+          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] rounded-full border border-brand bg-brand px-7 font-display text-[0.9375rem] font-medium text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)] disabled:opacity-60 w-full sm:w-auto"
         >
-          JETZT ANMELDEN
+          {laeuft ? "WIRD GESENDET …" : "JETZT ANMELDEN"}
         </button>
       </div>
     </form>

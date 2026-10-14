@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
+import { useServerFn } from "@tanstack/react-start";
 import { Check } from "lucide-react";
+import { sendeMitgliedsantrag } from "@/lib/mitgliedschaft.functions";
 import { eventBilder } from "@/data/bilder";
 import { CoverSlider } from "@/components/cover-slider";
-
 
 export const Route = createFileRoute("/mitglied-werden")({
   head: () => ({
@@ -15,7 +16,10 @@ export const Route = createFileRoute("/mitglied-werden")({
           "Mitglied im aed e.V. werden: Beiträge, Vorteile und Online-Beitrittsformular für Personen, Studierende und Fördermitglieder.",
       },
       { property: "og:title", content: "Mitglied werden – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Beiträge, Vorteile und Online-Beitritt beim aed e.V." },
+      {
+        property: "og:description",
+        content: "Beiträge, Vorteile und Online-Beitritt beim aed e.V.",
+      },
       { property: "og:url", content: "/mitglied-werden" },
     ],
     links: [{ rel: "canonical", href: "/mitglied-werden" }],
@@ -32,7 +36,8 @@ const nutzen = [
   "Unterstützung der Nachwuchsförderung – u.a. über den Wettbewerb neuland",
 ];
 
-const beitrittsPdf = "https://www.aed-stuttgart.de/app/download/8616515663/aed_Mitglied+werden+%282025%29.pdf";
+const beitrittsPdf =
+  "https://www.aed-stuttgart.de/app/download/8616515663/aed_Mitglied+werden+%282025%29.pdf";
 const heroBilder = Object.values(eventBilder).reverse();
 
 const beitraege = [
@@ -43,10 +48,12 @@ const beitraege = [
 ];
 
 function MitgliedWerdenPage() {
+  const absenden = useServerFn(sendeMitgliedsantrag);
   const [gesendet, setGesendet] = useState(false);
   const [fehler, setFehler] = useState<string | null>(null);
+  const [laeuft, setLaeuft] = useState(false);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const daten = new FormData(e.currentTarget);
     const email = String(daten.get("email") ?? "").trim();
@@ -54,8 +61,34 @@ function MitgliedWerdenPage() {
       setFehler("Bitte geben Sie eine gültige E-Mail-Adresse an.");
       return;
     }
+    if (daten.get("datenschutz") !== "on") {
+      setFehler("Bitte stimmen Sie der Verarbeitung Ihrer Daten zu.");
+      return;
+    }
+
     setFehler(null);
-    setGesendet(true);
+    setLaeuft(true);
+    try {
+      const antwort = await absenden({
+        data: {
+          vorname: String(daten.get("vorname") ?? ""),
+          nachname: String(daten.get("nachname") ?? ""),
+          email,
+          organisation: String(daten.get("organisation") ?? ""),
+          typ: String(daten.get("typ") ?? "Personenmitgliedschaft"),
+          nachricht: String(daten.get("nachricht") ?? ""),
+          datenschutz: true,
+        },
+      });
+      if (antwort.ok) setGesendet(true);
+      else setFehler(antwort.fehler);
+    } catch {
+      setFehler(
+        "Der Antrag lässt sich gerade nicht absenden. Bitte wenden Sie sich direkt an die Geschäftsstelle.",
+      );
+    } finally {
+      setLaeuft(false);
+    }
   }
 
   return (
@@ -80,8 +113,8 @@ function MitgliedWerdenPage() {
                 Sei ein Teil des Netzwerks
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
-                Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares Netzwerk
-                und die Förderung des gestalterischen Nachwuchses.
+                Eine Mitgliedschaft im aed e.V. bedeutet: ganzjährig Programm, ein belastbares
+                Netzwerk und die Förderung des gestalterischen Nachwuchses.
               </p>
             </div>
           </div>
@@ -116,8 +149,8 @@ function MitgliedWerdenPage() {
             <li key={b.typ} className="border border-line bg-card p-6">
               <h3 className="display-sm">{b.typ}</h3>
               <p className="mt-3 text-muted-foreground">
-                Mit einer Personenmitgliedschaft werden Sie Teil des aed-Netzwerks und ermöglichen ein
-                vielfältiges Programm aus Vorträgen, Ausstellungen und Exkursionen.
+                Mit einer Personenmitgliedschaft werden Sie Teil des aed-Netzwerks und ermöglichen
+                ein vielfältiges Programm aus Vorträgen, Ausstellungen und Exkursionen.
               </p>
               <a href="#formular" className="btn-solid mt-6 inline-flex">
                 Eine Personenmitgliedschaft beantragen
@@ -150,7 +183,6 @@ function MitgliedWerdenPage() {
         </p>
       </section>
 
-
       <section className="shell rule-t py-12" aria-labelledby="formular">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
@@ -165,40 +197,93 @@ function MitgliedWerdenPage() {
             ) : (
               <form onSubmit={onSubmit} noValidate className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="mw-vorname" className="eyebrow">Vorname</label>
-                  <input id="mw-vorname" name="vorname" required maxLength={60} autoComplete="given-name"
-                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                  <label htmlFor="mw-vorname" className="eyebrow">
+                    Vorname
+                  </label>
+                  <input
+                    id="mw-vorname"
+                    name="vorname"
+                    required
+                    maxLength={60}
+                    autoComplete="given-name"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="mw-nachname" className="eyebrow">Nachname</label>
-                  <input id="mw-nachname" name="nachname" required maxLength={60} autoComplete="family-name"
-                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                  <label htmlFor="mw-nachname" className="eyebrow">
+                    Nachname
+                  </label>
+                  <input
+                    id="mw-nachname"
+                    name="nachname"
+                    required
+                    maxLength={60}
+                    autoComplete="family-name"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+                  />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="mw-email" className="eyebrow">E-Mail</label>
-                  <input id="mw-email" name="email" type="email" required maxLength={255} autoComplete="email"
-                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                  <label htmlFor="mw-email" className="eyebrow">
+                    E-Mail
+                  </label>
+                  <input
+                    id="mw-email"
+                    name="email"
+                    type="email"
+                    required
+                    maxLength={255}
+                    autoComplete="email"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+                  />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="mw-org" className="eyebrow">Büro / Unternehmen (optional)</label>
-                  <input id="mw-org" name="organisation" maxLength={120} autoComplete="organization"
-                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                  <label htmlFor="mw-org" className="eyebrow">
+                    Büro / Unternehmen (optional)
+                  </label>
+                  <input
+                    id="mw-org"
+                    name="organisation"
+                    maxLength={120}
+                    autoComplete="organization"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+                  />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="mw-typ" className="eyebrow">Art der Mitgliedschaft</label>
-                <select id="mw-typ" name="typ" className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm">
-                  <option>Personenmitgliedschaft</option>
-                  <option>Fördermitgliedschaft</option>
-                </select>
+                  <label htmlFor="mw-typ" className="eyebrow">
+                    Art der Mitgliedschaft
+                  </label>
+                  <select
+                    id="mw-typ"
+                    name="typ"
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+                  >
+                    <option>Personenmitgliedschaft</option>
+                    <option>Fördermitgliedschaft</option>
+                  </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="mw-nachricht" className="eyebrow">Nachricht (optional)</label>
-                  <textarea id="mw-nachricht" name="nachricht" rows={4} maxLength={1000}
-                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm" />
+                  <label htmlFor="mw-nachricht" className="eyebrow">
+                    Nachricht (optional)
+                  </label>
+                  <textarea
+                    id="mw-nachricht"
+                    name="nachricht"
+                    rows={4}
+                    maxLength={1000}
+                    className="mt-1 w-full border border-line bg-card px-3 py-2.5 text-sm"
+                  />
                 </div>
                 <label className="flex items-start gap-2 text-sm sm:col-span-2">
-                  <input type="checkbox" name="datenschutz" required className="mt-1 size-4 accent-[var(--brand)]" />
-                  <span>Ich habe die Datenschutzhinweise gelesen und stimme der Verarbeitung meiner Daten zu.</span>
+                  <input
+                    type="checkbox"
+                    name="datenschutz"
+                    required
+                    className="mt-1 size-4 accent-[var(--brand)]"
+                  />
+                  <span>
+                    Ich habe die Datenschutzhinweise gelesen und stimme der Verarbeitung meiner
+                    Daten zu.
+                  </span>
                 </label>
                 {fehler && (
                   <p role="alert" className="sm:col-span-2 text-sm text-destructive">
@@ -206,7 +291,9 @@ function MitgliedWerdenPage() {
                   </p>
                 )}
                 <div className="sm:col-span-2">
-                  <button type="submit" className="btn-solid">Antrag senden</button>
+                  <button type="submit" disabled={laeuft} className="btn-solid disabled:opacity-60">
+                    {laeuft ? "Wird gesendet …" : "Antrag senden"}
+                  </button>
                 </div>
               </form>
             )}
@@ -215,10 +302,12 @@ function MitgliedWerdenPage() {
             <div className="border border-line bg-card p-6">
               <h2 className="eyebrow">Lieber auf Papier?</h2>
               <p className="mt-3 text-sm text-muted-foreground">
-                Das Beitrittsformular gibt es weiterhin als PDF zum Ausdrucken und Zurücksenden an die
-                Geschäftsstelle.
+                Das Beitrittsformular gibt es weiterhin als PDF zum Ausdrucken und Zurücksenden an
+                die Geschäftsstelle.
               </p>
-              <a href={beitrittsPdf} className="btn-outline mt-4 w-full">Beitrittserklärung (PDF)</a>
+              <a href={beitrittsPdf} className="btn-outline mt-4 w-full">
+                Beitrittserklärung (PDF)
+              </a>
             </div>
           </aside>
         </div>

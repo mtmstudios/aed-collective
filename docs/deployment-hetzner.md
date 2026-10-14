@@ -63,7 +63,9 @@ von den Supabase-Eigenheiten befreit.
 | `SMTP_HOST`, `SMTP_PORT` | `mail.your-server.de`, `587` | Mailversand |
 | `SMTP_USER`, `SMTP_PASS` | – | Postfach des Vereins |
 | `MAIL_VON` | `aed neuland <neuland@aed-stuttgart.de>` | Absender |
-| `MAIL_AN_VEREIN` | `neuland@aed-stuttgart.de` | Benachrichtigung über neue Einreichungen |
+| `MAIL_AN_VEREIN` | `neuland@aed-stuttgart.de` | Einreichungen und Mitgliedsanträge |
+| `MAILCHIMP_API_KEY` | `…-us21` | Newsletter-Anmeldung; der Teil hinter dem letzten Bindestrich ist der Serverstandort |
+| `MAILCHIMP_LIST_ID` | – | Zielgruppe („Audience") im Mailchimp-Konto des Vereins |
 
 Fehlen die SMTP-Angaben, verschickt die Seite keine Mails und vermerkt das
 einmal im Log; Einreichungen funktionieren weiter. Fehlt `DATABASE_URL`, bleibt
@@ -90,6 +92,31 @@ geschlossen, ein `npm install` auf dem Server entfällt.
 
 Ohne `NITRO_PRESET=node-server` baut das Projekt für Cloudflare – ein solcher
 Build startet auf Hetzner nicht.
+
+## Formulare
+
+Drei Formulare schicken Daten weg, jedes auf eigenem Weg:
+
+| Formular | Weg | Ohne Zugangsdaten |
+|---|---|---|
+| neuland-Einreichung | Datenbank, dazu Mail an Verein und einreichende Person | wird gespeichert, es gehen nur keine Mails raus |
+| Mitgliedsantrag | Mail an `MAIL_AN_VEREIN`, Bestätigung an die Person | Formular meldet offen, dass es nicht geht |
+| Newsletter | Mailchimp-API, Status `pending` (Double-Opt-in) | Formular meldet offen, dass es nicht geht |
+
+**Mailchimp bleibt, wo es ist.** Der Umzug betrifft nur die DNS-Zone; daraus
+müssen die DKIM-Einträge `k2`/`k3` und der SPF-Eintrag mitgenommen werden,
+damit Mailchimps eigener Versand authentifiziert bleibt. Die Anmeldung über die
+API ist davon unabhängig und funktioniert vor wie nach dem Umzug.
+
+Die Anmeldung wird mit Status `pending` eingetragen: Mailchimp verschickt die
+Bestätigungsmail, erst der Klick darin macht sie gültig. Wer das Häkchen für
+neuland setzt, bekommt in Mailchimp die Marke `neuland`.
+
+Zum Prüfen ohne echte Zugänge gibt es Nachbauten beider Gegenstellen:
+
+```bash
+node scripts/formulare-sinken.mjs      # Mailchimp auf 55435, SMTP auf 55436
+```
 
 ## Umleitungen beim Umzug
 
