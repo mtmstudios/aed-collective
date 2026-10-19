@@ -136,12 +136,17 @@
   --footer-input-border: oklch(0.36 0.013 255);
 }
 
-/* Bereichsfarbe neuland: Blau, sekundär Grün #6db553 */
+/* Bereichsfarbe neuland: Blau, auf das aed-Pink abgestimmt
+   (gleiche Helligkeit, etwas weniger Sättigung – kein reines Blau).
+   Ersetzt im neuland-Bereich alle Pink-Elemente; Gelb bleibt Hover-Farbe. */
 .theme-neuland {
-  --brand: oklch(0.53 0.19 255);
-  --brand-foreground: oklch(0.99 0 0);
-  --brand-deep: oklch(0.42 0.17 255);
+  --brand: oklch(0.72 0.13 262);
+  --brand-foreground: oklch(0 0 0);
+  --brand-deep: oklch(0.47 0.15 264);
   --brand-secondary: oklch(0.68 0.16 141);
+  --aed-pink: oklch(0.72 0.13 262);
+  --aed-pink-deep: oklch(0.47 0.15 264);
+  --aed-pink-foreground: oklch(0 0 0);
 }
 
 

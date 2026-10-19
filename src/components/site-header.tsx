@@ -40,7 +40,7 @@ export function SiteHeader() {
         {/* Logo links */}
         <Link to="/" className="flex-shrink-0" aria-label="aed e.V. – zur Startseite">
           <img
-            src={istNeuland ? "/aed-logo-white.png" : "/aed-logo.png"}
+            src="/aed-logo.png"
             alt="aed e.V."
             width={500}
             height={276}
