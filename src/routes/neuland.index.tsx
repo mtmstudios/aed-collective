@@ -57,7 +57,10 @@ export const Route = createFileRoute("/neuland/")({
 
 function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
-  const titelprojekt = highlights.find((p) => projektBild(p));
+  // Titelbild: Beitrag „Aquilo“ (Fallback: erster 1. Preis mit Bild)
+  const titelprojekt =
+    highlights.find((p) => p.slug === "aquilo" && projektBild(p)) ??
+    highlights.find((p) => projektBild(p));
   const titelbild = titelprojekt ? projektBild(titelprojekt) : undefined;
 
   return (
