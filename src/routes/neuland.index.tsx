@@ -69,12 +69,21 @@ function NeulandIndex() {
       <section className="bleed relative" aria-labelledby="neuland-titel-head">
         <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
           {titelbild && (
-            <Bild
-              src={titelbild}
-              alt={`${titelprojekt?.titel} – 1. Preis neuland 2025`}
-              className="h-full w-full object-cover"
-              fetchPriority="high"
-            />
+            <>
+              {/* Unscharfer Hintergrund füllt die Fläche, das Foto selbst bleibt vollständig sichtbar */}
+              <img
+                src={titelbild}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl"
+              />
+              <Bild
+                src={titelbild}
+                alt={`${titelprojekt?.titel} – 1. Preis neuland 2025`}
+                className="relative h-full w-full object-contain"
+                fetchPriority="high"
+              />
+            </>
           )}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
