@@ -2,22 +2,26 @@ import type { Person } from "@/data/site";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { AutoSlider } from "@/components/auto-slider";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 function Portraet({ person }: { person: Person }) {
   const bild = personenBild(person.name);
 
   const karte = (
     <>
-      <div className="img-zoom aspect-3/4 w-[168px] bg-muted md:w-[212px]">
+      <div className="img-zoom relative aspect-3/4 w-[168px] bg-muted md:w-[212px]">
         {bild ? (
-          <Bild
-            src={bild}
-            alt={`Porträt ${person.name}`}
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-            className="grayscale-hover h-full w-full object-cover"
-          />
+          <>
+            <Bild
+              src={bild}
+              alt={`Porträt ${person.name}`}
+              loading="lazy"
+              decoding="async"
+              draggable={false}
+              className="grayscale-hover h-full w-full object-cover"
+            />
+            <BildCredit src={bild} />
+          </>
         ) : (
           <div className="h-full w-full bg-muted" aria-hidden="true" />
         )}

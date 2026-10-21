@@ -4,6 +4,7 @@ import { juryImpressionen } from "@/data/bilder";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader, SectionTitle } from "@/components/ui-bits";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 export const Route = createFileRoute("/neuland/jury")({
   head: () => ({
@@ -55,6 +56,7 @@ function JuryPage() {
                   decoding="async"
                   className="grayscale-hover w-full bg-muted object-cover"
                 />
+                <BildCredit src={b} variant="caption" />
               </figure>
             ))}
           </div>

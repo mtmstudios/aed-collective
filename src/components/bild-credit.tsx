@@ -4,6 +4,8 @@ import { useBildnachweis } from "@/data/bildnachweise";
  * Unaufdringlicher Fotonachweis: "© Name / Stadt".
  * - variant "overlay": klein und halbtransparent in der Bildecke (für Hero-/Karten-Bilder)
  * - variant "caption": als feine Zeile unter dem Bild
+ * - variant "hell": helle Zeile ohne eigene Positionierung, für dunkle Flächen
+ *   wie den Verlauf unter einem Porträt
  * Rendert nichts, wenn kein Nachweis hinterlegt ist.
  */
 export function BildCredit({
@@ -14,12 +16,20 @@ export function BildCredit({
 }: {
   src?: string;
   text?: string;
-  variant?: "overlay" | "caption";
+  variant?: "overlay" | "caption" | "hell";
   className?: string;
 }) {
   const ausVerzeichnis = useBildnachweis(src);
   const nachweis = text ?? ausVerzeichnis;
   if (!nachweis) return null;
+
+  if (variant === "hell") {
+    return (
+      <p className={`font-sans text-[10px] leading-snug text-white/60 ${className}`}>
+        © {nachweis}
+      </p>
+    );
+  }
 
   if (variant === "caption") {
     return (
