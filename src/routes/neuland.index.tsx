@@ -61,7 +61,10 @@ export const Route = createFileRoute("/neuland/")({
 
 function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
-  const titelprojekt = highlights.find((p) => projektBild(p));
+  // Titelbild: Beitrag „Aquilo“ (Fallback: erster 1. Preis mit Bild)
+  const titelprojekt =
+    highlights.find((p) => p.slug === "aquilo" && projektBild(p)) ??
+    highlights.find((p) => projektBild(p));
   const titelbild = titelprojekt ? projektBild(titelprojekt) : undefined;
 
   return (
@@ -71,10 +74,17 @@ function NeulandIndex() {
         <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
           {titelbild && (
             <>
+              {/* Unscharfer Hintergrund füllt die Fläche, das Foto selbst bleibt vollständig sichtbar */}
+              <img
+                src={titelbild}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl"
+              />
               <Bild
                 src={titelbild}
                 alt={`${titelprojekt?.titel} – 1. Preis neuland 2025`}
-                className="h-full w-full object-cover"
+                className="relative h-full w-full object-contain"
                 fetchPriority="high"
               />
               <BildCredit src={titelbild} className="z-20" />

@@ -34,6 +34,10 @@ CREATE TABLE IF NOT EXISTS public.neuland_einreichungen (
   vorname text,
   nachname text,
   email text NOT NULL,
+  -- Teilnahmeberechtigt ist, wer zum Einsendeschluss höchstens 28 Jahre alt
+  -- ist. Ohne NOT NULL, damit ältere Einreichungen gültig bleiben; erzwungen
+  -- wird die Angabe beim Absenden.
+  geburtsdatum date,
   telefon text,
   institution text,
   kategorie text,

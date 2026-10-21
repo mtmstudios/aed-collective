@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
 import { useFreigegebeneBilder } from "@/data/bildnachweise";
@@ -34,6 +34,12 @@ export function CoverSlider({
   // mitten im laufenden Band sähe nach Fehler aus, nicht nach Absicht.
   const zeigbar = useFreigegebeneBilder(bilder);
 
+  // Der Nachweis gehört zu dem Bild, das gerade rechts unten steht – dort, wo
+  // er angezeigt wird. Er liegt bewusst außerhalb des Bandes: Das Band wird
+  // verschoben und bildet damit einen eigenen Stapelkontext, aus dem kein
+  // Kindelement über den Verlauf und die Überschrift des Heros käme.
+  const [sichtbares, setSichtbares] = useState(0);
+
   const wrapRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const offset = useRef(0);
@@ -42,6 +48,7 @@ export function CoverSlider({
   const dragging = useRef(false);
   const lastX = useRef(0);
   const nudge = useRef(0);
+  const letzterIndex = useRef(-1);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -71,11 +78,24 @@ export function CoverSlider({
         if (offset.current > 0) offset.current -= halb;
       }
       track.style.transform = `translate3d(${offset.current}px,0,0)`;
+
+      // Welches Bild steht gerade am rechten Rand?
+      const breite = (track.firstElementChild as HTMLElement | null)?.offsetWidth ?? 0;
+      const sichtbar = wrapRef.current?.clientWidth ?? 0;
+      if (breite > 0 && zeigbar.length > 0) {
+        const stelle = Math.floor((-offset.current + sichtbar - 1) / breite) % zeigbar.length;
+        const index = (stelle + zeigbar.length) % zeigbar.length;
+        if (index !== letzterIndex.current) {
+          letzterIndex.current = index;
+          setSichtbares(index);
+        }
+      }
+
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [zufall]);
+  }, [zufall, zeigbar.length]);
 
   const springe = (richtung: -1 | 1) => {
     const track = trackRef.current;
@@ -128,6 +148,8 @@ export function CoverSlider({
           </div>
         ))}
       </div>
+
+      <BildCredit src={zeigbar[sichtbares]} className="z-30" />
 
       {pfeile && (
         <>

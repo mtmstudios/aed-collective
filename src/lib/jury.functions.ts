@@ -76,6 +76,7 @@ export type BeitragDetail = Beitrag & {
   vorname: string;
   nachname: string;
   email: string;
+  geburtsdatum: string;
   telefon: string;
   kurzbeschreibung: string;
   idee: string;
@@ -282,6 +283,7 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
         vorname: string | null;
         nachname: string | null;
         email: string | null;
+        geburtsdatum: string | null;
         telefon: string | null;
         kurzbeschreibung: string | null;
         idee: string | null;
@@ -293,8 +295,9 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
         detailfotos: { path: string; name: string }[] | null;
       }
     >(
-      `SELECT ${BEITRAG_SPALTEN}, vorname, nachname, email, telefon, kurzbeschreibung,
-              idee, umsetzung, nutzen, nachhaltigkeit, video_link, titelbild, detailfotos
+      `SELECT ${BEITRAG_SPALTEN}, vorname, nachname, email, geburtsdatum, telefon,
+              kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, video_link,
+              titelbild, detailfotos
        FROM neuland_einreichungen WHERE id = $1`,
       [data.id],
     );
@@ -338,6 +341,7 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
       vorname: z.vorname ?? "",
       nachname: z.nachname ?? "",
       email: z.email ?? "",
+      geburtsdatum: String(z.geburtsdatum ?? "").slice(0, 10),
       telefon: z.telefon ?? "",
       kurzbeschreibung: z.kurzbeschreibung ?? "",
       idee: z.idee ?? "",

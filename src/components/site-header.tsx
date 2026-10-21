@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -16,9 +16,15 @@ const aktiv = { className: "underline decoration-1 underline-offset-[6px]" };
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  // Im neuland-Bereich übernimmt die Leiste die Bereichsfarbe Blau
+  const istNeuland = useRouterState({
+    select: (s) => s.location.pathname.startsWith("/neuland"),
+  });
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand bg-brand">
+    <header
+      className={`sticky top-0 z-50 border-b border-brand bg-brand transition-colors duration-300 ${istNeuland ? "theme-neuland" : ""}`}
+    >
       <div className="shell flex h-20 items-center justify-between gap-4 md:h-24">
         {/* Mobile Menü */}
         <button
