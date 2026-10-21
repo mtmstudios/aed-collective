@@ -7,6 +7,8 @@
  * anmelden zu müssen.
  */
 
+import { alterAmSchluss } from "@/config/neuland-einreichung";
+
 type Datei = { path?: string; name?: string; size?: number };
 
 export type EinreichungAngaben = Record<string, unknown>;
@@ -23,6 +25,19 @@ function dateien(row: EinreichungAngaben): string[] {
   if (titelbild?.name) namen.push(`${titelbild.name} (Titelbild)`);
   for (const foto of detailfotos) if (foto?.name) namen.push(foto.name);
   return namen;
+}
+
+/**
+ * Geburtsdatum in deutscher Schreibweise, dazu das Alter am Einsendeschluss –
+ * damit die Geschäftsstelle die Teilnahmeberechtigung ohne Nachrechnen sieht.
+ */
+function geburtsdatumMitAlter(row: EinreichungAngaben): string {
+  const roh = text(row, "geburtsdatum").slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(roh)) return "";
+  const [jahr, monat, tag] = roh.split("-");
+  const alter = alterAmSchluss(roh);
+  const deutsch = `${tag}.${monat}.${jahr}`;
+  return alter === null ? deutsch : `${deutsch} (${alter} Jahre zum Einsendeschluss)`;
 }
 
 /** Ein Abschnitt mit Überschrift; leere Felder werden weggelassen. */
@@ -56,6 +71,7 @@ export function fasseZusammen(row: EinreichungAngaben): string {
     ...abschnitt("Kontakt", [
       ["Name", name],
       ["E-Mail", text(row, "email")],
+      ["Geburtsdatum", geburtsdatumMitAlter(row)],
       ["Telefon", text(row, "telefon")],
       ["Institution", text(row, "institution")],
     ]),

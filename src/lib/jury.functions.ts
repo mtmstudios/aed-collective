@@ -77,6 +77,7 @@ export type BeitragDetail = Beitrag & {
   vorname: string;
   nachname: string;
   email: string;
+  geburtsdatum: string;
   telefon: string;
   kurzbeschreibung: string;
   idee: string;
@@ -300,7 +301,7 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
     const { data: z, error } = await db
       .from("neuland_einreichungen")
       .select(
-        `${BEITRAG_SPALTEN}, vorname, nachname, email, telefon, kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, video_link, titelbild, detailfotos`,
+        `${BEITRAG_SPALTEN}, vorname, nachname, email, geburtsdatum, telefon, kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, video_link, titelbild, detailfotos`,
       )
       .eq("id", data.id)
       .single();
@@ -351,6 +352,7 @@ export const ladeBeitrag = createServerFn({ method: "POST" })
       vorname: z.vorname ?? "",
       nachname: z.nachname ?? "",
       email: z.email ?? "",
+      geburtsdatum: String(z.geburtsdatum ?? "").slice(0, 10),
       telefon: z.telefon ?? "",
       kurzbeschreibung: z.kurzbeschreibung ?? "",
       idee: z.idee ?? "",

@@ -13,11 +13,16 @@ import {
   ERLAUBTE_TYPEN,
   KATEGORIEN,
   LIMITS,
+  MAX_ALTER,
   MAX_DATEIGROESSE_MB,
   MAX_DETAILFOTOS,
   istGeschlossen,
+  pruefeGeburtsdatum,
   schlussFormatiert,
 } from "@/config/neuland-einreichung";
+
+/** Heute als JJJJ-MM-TT – begrenzt die Datumsauswahl nach oben. */
+const HEUTE = new Date().toISOString().slice(0, 10);
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -58,6 +63,7 @@ const LEER: EinreichungForm = {
   vorname: "",
   nachname: "",
   email: "",
+  geburtsdatum: "",
   telefon: "",
   institution: "",
   kategorie: "",
@@ -153,6 +159,9 @@ function EinreichungPage() {
     if (i === 0) {
       if (!form.vorname.trim() || !form.nachname.trim()) return "Bitte Vor- und Nachname angeben.";
       if (!istEmail(form.email)) return "Bitte eine gültige E-Mail-Adresse angeben.";
+      if (!form.geburtsdatum) return "Bitte das Geburtsdatum angeben.";
+      const alterFehler = pruefeGeburtsdatum(form.geburtsdatum);
+      if (alterFehler) return alterFehler;
       if (!form.kategorie) return "Bitte eine Kategorie wählen.";
     }
     if (i === 1) {
@@ -341,6 +350,17 @@ function EinreichungPage() {
                       value={form.email}
                       disabled={!!einreichungsId}
                       onChange={(e) => set("email", e.target.value)}
+                    />
+                  </Feld>
+                  <Feld
+                    label="Geburtsdatum *"
+                    hinweis={`Teilnehmen kann, wer zum Einsendeschluss am ${schlussFormatiert().split(" um")[0]} höchstens ${MAX_ALTER} Jahre alt ist.`}
+                  >
+                    <Input
+                      type="date"
+                      max={HEUTE}
+                      value={form.geburtsdatum}
+                      onChange={(e) => set("geburtsdatum", e.target.value)}
                     />
                   </Feld>
                   <Feld label="Telefon (optional)">

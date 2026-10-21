@@ -1,6 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { istGeschlossen } from "@/config/neuland-einreichung";
+import { istGeschlossen, pruefeGeburtsdatum } from "@/config/neuland-einreichung";
 
 const dateiSchema = z.object({
   path: z.string(),
@@ -12,6 +12,7 @@ const formSchema = z.object({
   vorname: z.string().max(120).optional().default(""),
   nachname: z.string().max(120).optional().default(""),
   email: z.string().email().max(255),
+  geburtsdatum: z.string().max(10).optional().default(""),
   telefon: z.string().max(60).optional().default(""),
   institution: z.string().max(200).optional().default(""),
   kategorie: z.string().max(80).optional().default(""),
@@ -30,7 +31,7 @@ const formSchema = z.object({
 export type EinreichungForm = z.infer<typeof formSchema>;
 
 const SPALTEN =
-  "einreichungs_id, status, vorname, nachname, email, telefon, institution, kategorie, projekttitel, kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, titelbild, detailfotos, video_link, rechte_bestaetigt, created_at, updated_at, eingereicht_am";
+  "einreichungs_id, status, vorname, nachname, email, geburtsdatum, telefon, institution, kategorie, projekttitel, kurzbeschreibung, idee, umsetzung, nutzen, nachhaltigkeit, titelbild, detailfotos, video_link, rechte_bestaetigt, created_at, updated_at, eingereicht_am";
 
 async function admin() {
   const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
@@ -104,6 +105,7 @@ export const reicheEin = createServerFn({ method: "POST" })
       ["Vorname", data.daten.vorname],
       ["Nachname", data.daten.nachname],
       ["E-Mail", data.daten.email],
+      ["Geburtsdatum", data.daten.geburtsdatum],
       ["Kategorie", data.daten.kategorie],
       ["Projekttitel", data.daten.projekttitel],
       ["Kurzbeschreibung", data.daten.kurzbeschreibung],
@@ -115,6 +117,12 @@ export const reicheEin = createServerFn({ method: "POST" })
     ];
     const fehlt = pflicht.filter(([, v]) => !v || (typeof v === "string" && !v.trim()));
     if (fehlt.length) throw new Error(`Bitte ausfüllen: ${fehlt.map(([k]) => k).join(", ")}`);
+    // Die Altersgrenze gehört zu den Teilnahmevoraussetzungen und wird hier
+    // noch einmal geprüft – das Formular allein schützt nicht davor, dass
+    // jemand die Angabe umgeht.
+    const altersFehler = pruefeGeburtsdatum(data.daten.geburtsdatum);
+    if (altersFehler) throw new Error(altersFehler);
+
     if (!data.daten.rechte_bestaetigt)
       throw new Error("Bitte die Einverständniserklärung bestätigen.");
 

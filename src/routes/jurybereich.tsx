@@ -18,6 +18,7 @@ import {
   type Sitzung,
   type Zugang,
 } from "@/lib/jury.functions";
+import { MAX_ALTER, alterAmSchluss } from "@/config/neuland-einreichung";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -897,6 +898,20 @@ function Jurybereich() {
                     {detail.email}
                     {detail.telefon ? ` · ${detail.telefon}` : ""}
                   </p>
+                  {detail.geburtsdatum && (
+                    <p className="text-xs text-muted-foreground">
+                      Geboren am {detail.geburtsdatum.split("-").reverse().join(".")}
+                      {alterAmSchluss(detail.geburtsdatum) !== null && (
+                        <>
+                          {" "}
+                          · {alterAmSchluss(detail.geburtsdatum)} Jahre zum Einsendeschluss
+                          {(alterAmSchluss(detail.geburtsdatum) ?? 0) > MAX_ALTER && (
+                            <span className="text-destructive"> · über der Altersgrenze</span>
+                          )}
+                        </>
+                      )}
+                    </p>
+                  )}
                 </div>
               )}
 
