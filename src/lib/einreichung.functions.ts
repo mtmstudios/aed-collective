@@ -148,6 +148,9 @@ async function benachrichtige(row: Record<string, unknown>) {
     const name = [row["vorname"], row["nachname"]].filter(Boolean).join(" ");
     const email = String(row["email"] ?? "");
 
+    const { fasseZusammen } = await import("@/lib/einreichung-text");
+    const zusammenfassung = fasseZusammen(row);
+
     if (email) {
       await sendeMail(
         email,
@@ -155,14 +158,12 @@ async function benachrichtige(row: Record<string, unknown>) {
         [
           `Hallo ${name || "und herzlichen Dank"},`,
           ``,
-          `wir haben Deine Einreichung erhalten.`,
+          `Deine Einreichung ist bei uns eingegangen. Hier Deine Angaben zum Nachlesen:`,
           ``,
-          `Nummer: ${nummer}`,
-          `Projekt: ${titel}`,
-          `Kategorie: ${String(row["kategorie"] ?? "")}`,
+          zusammenfassung,
           ``,
-          `Mit dieser Nummer und Deiner E-Mail-Adresse kannst Du Deine Bewerbung bis zum`,
-          `Einsendeschluss jederzeit wieder aufrufen.`,
+          `Mit der Nummer ${nummer} und Deiner E-Mail-Adresse kannst Du Deine Bewerbung`,
+          `bis zum Einsendeschluss jederzeit wieder aufrufen und ändern.`,
           ``,
           `Viele Grüße`,
           `aed e.V. – neuland`,
@@ -176,14 +177,9 @@ async function benachrichtige(row: Record<string, unknown>) {
         anVerein,
         `Neue neuland-Einreichung: ${nummer} – ${titel}`,
         [
-          `Nummer: ${nummer}`,
-          `Projekt: ${titel}`,
-          `Kategorie: ${String(row["kategorie"] ?? "")}`,
-          `Einreichende Person: ${name}`,
-          `E-Mail: ${email}`,
-          `Hochschule: ${String(row["institution"] ?? "")}`,
+          zusammenfassung,
           ``,
-          `Alle Angaben stehen im Jurybereich unter /jurybereich.`,
+          `Die Bewerbung steht mitsamt Bildern im Jurybereich unter /jurybereich.`,
         ].join("\n"),
       );
     }
