@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792584159825,
+      "tag": "0000_add_geburtsdatum_neuland_einreichungen",
+      "breakpoints": true
+    }
+  ]
+}
