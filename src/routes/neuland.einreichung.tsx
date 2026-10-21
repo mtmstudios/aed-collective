@@ -413,7 +413,7 @@ function EinreichungPage() {
                     />
                   </Feld>
                   <ZaehlFeld
-                    label="Kurzbeschreibung *"
+                    label={`Kurzbeschreibung * (maximal ${LIMITS.kurzbeschreibung} Zeichen)`}
                     wert={form.kurzbeschreibung}
                     max={LIMITS.kurzbeschreibung}
                     onChange={(v) => set("kurzbeschreibung", v)}
