@@ -8,21 +8,25 @@ import { AutoSlider } from "@/components/auto-slider";
 
 import { NeulandSubnav } from "@/routes/neuland";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
   return (
     <PersonDialog person={person}>
       <article className="group w-full cursor-pointer text-left" role="button" tabIndex={0}>
-        <div className="img-zoom aspect-square bg-muted">
+        <div className="img-zoom relative aspect-square bg-muted">
           {bild ? (
-            <Bild
-              src={bild}
-              alt={`Porträt ${person.name}`}
-              loading="lazy"
-              decoding="async"
-              className="grayscale-hover h-full w-full object-cover"
-            />
+            <>
+              <Bild
+                src={bild}
+                alt={`Porträt ${person.name}`}
+                loading="lazy"
+                decoding="async"
+                className="grayscale-hover h-full w-full object-cover"
+              />
+              <BildCredit src={bild} />
+            </>
           ) : (
             <div className="h-full w-full bg-muted" aria-hidden="true" />
           )}
@@ -83,6 +87,7 @@ function NeulandIndex() {
                 className="relative h-full w-full object-contain"
                 fetchPriority="high"
               />
+              <BildCredit src={titelbild} className="z-20" />
             </>
           )}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />

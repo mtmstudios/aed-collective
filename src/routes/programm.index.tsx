@@ -9,6 +9,7 @@ import { CoverSlider } from "@/components/cover-slider";
 import { coverBilder } from "@/data/cover";
 import { eventBilder } from "@/data/bilder";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -116,7 +117,7 @@ function ProgrammPage() {
           <>
             <div className="mt-10 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               <article className="group">
-                <div className="img-zoom aspect-3/2 bg-muted">
+                <div className="img-zoom relative aspect-3/2 bg-muted">
                   <Bild
                     src={coverfotos[coverfotos.length - 1]}
                     alt="Aktuelles Programmheft des aed e.V."
@@ -124,6 +125,7 @@ function ProgrammPage() {
                     decoding="async"
                     className="grayscale-hover h-full w-full object-cover"
                   />
+                  <BildCredit src={coverfotos[coverfotos.length - 1]} />
                 </div>
                 <p className="eyebrow mt-4">Download</p>
                 <h3 className="display-sm mt-2">Aktueller Flyer</h3>
@@ -138,7 +140,7 @@ function ProgrammPage() {
               ))}
               <article className="group">
                 <Link to="/mitglied-werden" className="block">
-                  <div className="img-zoom aspect-3/2 bg-muted">
+                  <div className="img-zoom relative aspect-3/2 bg-muted">
                     <Bild
                       src={eventBilder["jung-und-hungrig-haus-otto"]}
                       alt="jung & hungrig – Studio-Besuch"
@@ -146,6 +148,7 @@ function ProgrammPage() {
                       decoding="async"
                       className="grayscale-hover h-full w-full object-cover"
                     />
+                    <BildCredit src={eventBilder["jung-und-hungrig-haus-otto"]} />
                   </div>
                   <p className="eyebrow mt-4">jung & hungrig</p>
                   <h3 className="display-sm mt-2">Reihe für die nächste Generation</h3>

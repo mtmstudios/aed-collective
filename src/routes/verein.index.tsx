@@ -5,6 +5,7 @@ import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { CoverSlider } from "@/components/cover-slider";
 import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 export const Route = createFileRoute("/verein/")({
   head: () => ({
@@ -149,13 +150,16 @@ function VereinPage() {
               <PersonDialog key={person.name} person={person} initials={isEhren ? "WS" : undefined}>
                 <div className="group block cursor-pointer" role="button" tabIndex={0}>
                   {bild ? (
-                    <Bild
-                      src={bild}
-                      alt={`Porträt ${person.name}`}
-                      loading="lazy"
-                      decoding="async"
-                      className="aspect-4/5 w-full bg-muted object-cover"
-                    />
+                    <div className="relative">
+                      <Bild
+                        src={bild}
+                        alt={`Porträt ${person.name}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="aspect-4/5 w-full bg-muted object-cover"
+                      />
+                      <BildCredit src={bild} />
+                    </div>
                   ) : (
                     <div
                       aria-hidden="true"
@@ -201,13 +205,16 @@ function VereinPage() {
               <PersonDialog key={person.name} person={person}>
                 <article className="group block cursor-pointer" role="button" tabIndex={0}>
                   {bild ? (
-                    <Bild
-                      src={bild}
-                      alt={`Porträt ${person.name}`}
-                      loading="lazy"
-                      decoding="async"
-                      className="aspect-4/5 w-full bg-card object-cover"
-                    />
+                    <div className="relative">
+                      <Bild
+                        src={bild}
+                        alt={`Porträt ${person.name}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="aspect-4/5 w-full bg-card object-cover"
+                      />
+                      <BildCredit src={bild} />
+                    </div>
                   ) : (
                     <div
                       aria-hidden="true"

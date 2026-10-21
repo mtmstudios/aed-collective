@@ -1,6 +1,7 @@
 import type { Person } from "@/data/site";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 export { personenBild };
 
@@ -10,15 +11,18 @@ export function PersonCard({ person }: { person: Person; basePath?: string }) {
   return (
     <PersonDialog person={person}>
       <article className="group w-full cursor-pointer text-left" role="button" tabIndex={0}>
-        <div className="img-zoom aspect-3/4 bg-muted">
+        <div className="img-zoom relative aspect-3/4 bg-muted">
           {bild ? (
-            <Bild
-              src={bild}
-              alt={`Porträt ${person.name}`}
-              loading="lazy"
-              decoding="async"
-              className="grayscale-hover h-full w-full object-cover"
-            />
+            <>
+              <Bild
+                src={bild}
+                alt={`Porträt ${person.name}`}
+                loading="lazy"
+                decoding="async"
+                className="grayscale-hover h-full w-full object-cover"
+              />
+              <BildCredit src={bild} />
+            </>
           ) : (
             <div className="h-full w-full bg-muted" aria-hidden="true" />
           )}

@@ -10,6 +10,7 @@ import {
 import type { Person } from "@/data/site";
 import { personenBilder } from "@/data/bilder";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 
 /** Porträt aus dem gesicherten Bildbestand der alten Website. */
 export function personenBild(name: string) {
@@ -75,6 +76,7 @@ export function PersonDialog({
             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-6">
               <h2 className="display-sm text-white">{person.name}</h2>
               <p className="meta mt-1 text-white/90">{person.rolle}</p>
+              <BildCredit src={bild} variant="hell" className="mt-2" />
             </div>
           </div>
           <div className="w-full p-6 sm:p-8">

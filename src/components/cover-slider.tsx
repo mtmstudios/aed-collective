@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Bild } from "@/components/bild";
+import { BildCredit } from "@/components/bild-credit";
 import { useFreigegebeneBilder } from "@/data/bildnachweise";
 
 /**
@@ -114,7 +115,7 @@ export function CoverSlider({
     >
       <div ref={trackRef} className="flex h-full will-change-transform">
         {[...zeigbar, ...zeigbar].map((src, i) => (
-          <div key={`${src}-${i}`} className={`h-full shrink-0 ${itemClassName}`}>
+          <div key={`${src}-${i}`} className={`relative h-full shrink-0 ${itemClassName}`}>
             <Bild
               src={src}
               alt={i === 0 ? alt : ""}
@@ -123,6 +124,7 @@ export function CoverSlider({
               className="h-full w-full object-cover"
               loading={i < 4 ? "eager" : "lazy"}
             />
+            <BildCredit src={src} />
           </div>
         ))}
       </div>
