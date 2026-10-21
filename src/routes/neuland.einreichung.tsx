@@ -208,6 +208,10 @@ function EinreichungPage() {
     setSchritt((s) => Math.max(s - 1, 0));
   }
 
+  // Rückmeldung direkt am Feld, sobald ein Datum dasteht – nicht erst beim
+  // Klick auf „Weiter". Wer zu alt ist, soll das sofort sehen.
+  const altersFehler = form.geburtsdatum ? pruefeGeburtsdatum(form.geburtsdatum) : null;
+
   const alleFelderOk = SCHRITTE.every((_, i) => i === 4 || !schrittValide(i));
   const absendbar = alleFelderOk && form.rechte_bestaetigt && !nurLesen;
 
@@ -362,6 +366,7 @@ function EinreichungPage() {
                   <Feld
                     label="Geburtsdatum *"
                     hinweis={`Teilnehmen kann, wer zum Einsendeschluss am ${schlussFormatiert().split(" um")[0]} höchstens ${MAX_ALTER} Jahre alt ist.`}
+                    fehler={altersFehler}
                   >
                     <Input
                       type="date"
@@ -733,20 +738,38 @@ function IdHinweis({
 function Feld({
   label,
   hinweis,
+  fehler,
   children,
 }: {
   label: string;
   hinweis?: string;
+  /** Steht hier etwas, wird das Feld rot umrandet und die Meldung darunter gezeigt. */
+  fehler?: string | null;
   children: React.ReactNode;
 }) {
   const id = useId();
   return (
     <div className="space-y-2">
-      <Label htmlFor={id}>{label}</Label>
+      <Label htmlFor={id} className={fehler ? "text-destructive" : undefined}>
+        {label}
+      </Label>
       {isValidElement(children)
-        ? cloneElement(children as React.ReactElement<{ id?: string }>, { id })
+        ? cloneElement(children as React.ReactElement<{ id?: string; className?: string }>, {
+            id,
+            ...(fehler
+              ? {
+                  className: `${(children.props as { className?: string }).className ?? ""} border-destructive ring-1 ring-destructive`,
+                }
+              : {}),
+          })
         : children}
-      {hinweis && <p className="text-xs text-muted-foreground">{hinweis}</p>}
+      {fehler ? (
+        <p role="alert" className="text-xs font-medium text-destructive">
+          {fehler}
+        </p>
+      ) : (
+        hinweis && <p className="text-xs text-muted-foreground">{hinweis}</p>
+      )}
     </div>
   );
 }

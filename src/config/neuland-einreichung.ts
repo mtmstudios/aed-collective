@@ -50,7 +50,7 @@ export function pruefeGeburtsdatum(geburtsdatum: string): string | null {
   if (alter === null) return "Bitte ein gültiges Geburtsdatum angeben.";
   if (alter < 10) return "Bitte das Geburtsdatum prüfen.";
   if (alter > MAX_ALTER) {
-    return `Teilnahmeberechtigt ist, wer zum Einsendeschluss höchstens ${MAX_ALTER} Jahre alt ist. Nach diesem Geburtsdatum wären es ${alter}.`;
+    return `Zu alt: Zum Einsendeschluss wären es ${alter} Jahre. Teilnehmen kann, wer höchstens ${MAX_ALTER} ist.`;
   }
   return null;
 }
