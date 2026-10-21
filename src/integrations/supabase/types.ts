@@ -222,7 +222,6 @@ export type Database = {
           eingereicht_am: string | null
           einreichungs_id: string
           email: string
-          geburtsdatum: string | null
           id: string
           idee: string | null
           institution: string | null
@@ -247,7 +246,6 @@ export type Database = {
           eingereicht_am?: string | null
           einreichungs_id?: string
           email: string
-          geburtsdatum?: string | null
           id?: string
           idee?: string | null
           institution?: string | null
@@ -272,7 +270,6 @@ export type Database = {
           eingereicht_am?: string | null
           einreichungs_id?: string
           email?: string
-          geburtsdatum?: string | null
           id?: string
           idee?: string | null
           institution?: string | null
