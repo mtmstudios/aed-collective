@@ -354,7 +354,7 @@ function EinreichungPage() {
                   </Feld>
                   <Feld
                     label="E-Mail-Adresse *"
-                    hinweis="Wird zusammen mit der Einreichungs-Nummer für die Rückkehr benötigt."
+                    hinweis="Zum späteren Weiterbearbeiten braucht ihr beides: diese E-Mail-Adresse und die Einreichungs-Nummer, die ihr nach dem ersten Speichern bekommt."
                   >
                     <Input
                       type="email"
