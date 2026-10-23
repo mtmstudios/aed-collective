@@ -11,6 +11,7 @@ import type { Person } from "@/data/site";
 import { personenBilder } from "@/data/bilder";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
+import { MailLink } from "@/components/mail-link";
 
 /** Porträt aus dem gesicherten Bildbestand der alten Website. */
 export function personenBild(name: string) {
@@ -95,9 +96,7 @@ export function PersonDialog({
               </p>
             )}
             {person.email && (
-              <a href={`mailto:${person.email}`} className="meta mt-6 inline-flex link-underline">
-                {person.email}
-              </a>
+              <MailLink adresse={person.email} className="meta mt-6 inline-flex link-underline" />
             )}
             {person.link && (
               <a

@@ -19,7 +19,6 @@ export function Newsletter() {
           vorname: String(felder.get("vorname") ?? ""),
           nachname: String(felder.get("nachname") ?? ""),
           email: String(felder.get("email") ?? ""),
-          neuland: felder.get("neuland") === "on",
         },
       });
       if (antwort.ok) setErledigt(antwort.hinweis);
@@ -84,10 +83,6 @@ export function Newsletter() {
           className="mt-1 w-full border border-footer-input-border bg-footer-input-bg px-3 py-2.5 text-sm text-footer-text"
         />
       </div>
-      <label className="flex items-start gap-2 text-sm text-footer-text sm:col-span-2">
-        <input type="checkbox" name="neuland" className="mt-1 size-4 accent-brand" />
-        <span>Zusätzlich Infos zum Nachwuchswettbewerb neuland erhalten</span>
-      </label>
       {fehler && (
         <p role="alert" className="text-sm text-footer-text sm:col-span-2">
           {fehler}

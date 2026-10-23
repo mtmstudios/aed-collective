@@ -16,6 +16,28 @@ function walk(dir) {
   return out;
 }
 
+/**
+ * Maße einer WebP-Datei aus dem Dateikopf lesen – ohne Zusatzpaket.
+ * Gebraucht werden sie, um für breite Laufbänder nur Bilder zu verwenden,
+ * die groß genug sind; die alten Jimdo-Thumbnails sind es nicht.
+ */
+function masse(datei) {
+  if (extname(datei).toLowerCase() !== ".webp") return null;
+  const b = readFileSync(datei);
+  if (b.length < 30) return null;
+  if (b.toString("ascii", 0, 4) !== "RIFF" || b.toString("ascii", 8, 12) !== "WEBP") return null;
+  const format = b.toString("ascii", 12, 16);
+  if (format === "VP8X")
+    return { breite: (b.readUIntLE(24, 3) & 0xffffff) + 1, hoehe: (b.readUIntLE(27, 3) & 0xffffff) + 1 };
+  if (format === "VP8 ")
+    return { breite: b.readUInt16LE(26) & 0x3fff, hoehe: b.readUInt16LE(28) & 0x3fff };
+  if (format === "VP8L") {
+    const n = b.readUInt32LE(21);
+    return { breite: (n & 0x3fff) + 1, hoehe: ((n >> 14) & 0x3fff) + 1 };
+  }
+  return null;
+}
+
 const bildTypen = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif"]);
 const eintraege = [];
 
@@ -39,6 +61,7 @@ for (const [ordner, kategorie, jahrgang] of publicOrdner) {
       kategorie,
       jahrgang: jahrgang ?? null,
       url: "/" + rel.replace(/^public\//, ""),
+      ...(masse(datei) ?? {}),
     });
   }
 }
@@ -155,6 +178,8 @@ export type BildManifestEintrag = {
   kategorie: "event" | "person" | "projekt" | "presse" | "cover";
   jahrgang: string | null;
   url: string;
+  breite?: number;
+  hoehe?: number;
   verwendungen: string[];
 };
 

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { MailLink } from "@/components/mail-link";
 import { kontakt } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
 
@@ -12,7 +13,10 @@ export const Route = createFileRoute("/kontakt")({
           "Geschäftsstelle des aed e.V. in der Olgastraße 138, 70180 Stuttgart. Ansprechpartnerin Iris Enderle, Geschäftszeiten 9–18 Uhr.",
       },
       { property: "og:title", content: "Kontakt – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Geschäftsstelle, Anfahrt und Ansprechpartnerin des aed e.V." },
+      {
+        property: "og:description",
+        content: "Geschäftsstelle, Anfahrt und Ansprechpartnerin des aed e.V.",
+      },
       { property: "og:url", content: "/kontakt" },
     ],
     links: [{ rel: "canonical", href: "/kontakt" }],
@@ -50,9 +54,7 @@ function KontaktPage() {
                 </a>
               </p>
               <p>
-                <a href={`mailto:${kontakt.email}`} className="underline link-brand">
-                  {kontakt.email}
-                </a>
+                <MailLink adresse={kontakt.email} className="underline link-brand" />
               </p>
             </div>
             <div className="rule-t pt-6">

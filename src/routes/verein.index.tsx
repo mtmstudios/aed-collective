@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, vorstand } from "@/data/site";
-import { eventBilder } from "@/data/bilder";
+import { breiteBilder, eventBilder } from "@/data/bilder";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { CoverSlider } from "@/components/cover-slider";
 import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
@@ -28,7 +28,8 @@ export const Route = createFileRoute("/verein/")({
   component: VereinPage,
 });
 
-const heroBilder = Object.values(eventBilder);
+// Nur ausreichend große Aufnahmen – sonst wirkt das Laufband grob (Hinweis Frank, 22.10.)
+const heroBilder = breiteBilder(Object.values(eventBilder));
 
 function VereinPage() {
   return (
@@ -53,7 +54,7 @@ function VereinPage() {
                 Veranstalten. Austauschen. Fördern.
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">
-                Der aed e.V. ist der Verein für Architecture, Engineering und Design in Stuttgart.
+                Der aed e.V. ist der Verein für Architektur, Engineering und Design in Stuttgart.
                 Wir verbinden Disziplinen, die gemeinsam die gebaute und gestaltete Umwelt prägen.
               </p>
             </div>

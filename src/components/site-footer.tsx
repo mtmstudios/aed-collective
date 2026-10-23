@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { MailLink } from "@/components/mail-link";
 import { Newsletter } from "./newsletter";
 import { kontakt } from "@/data/site";
 
@@ -30,8 +31,7 @@ export function SiteFooter() {
         <div className="md:col-span-5">
           <p className="eyebrow text-footer-muted">Newsletter</p>
           <p className="mt-4 max-w-md text-footer-text">
-            Veranstaltungen, Wettbewerbstermine und Neuigkeiten aus dem Verein – etwa einmal im
-            Monat.
+            Veranstaltungen, Wettbewerbstermine und Neuigkeiten aus dem Verein.
           </p>
           <Newsletter />
         </div>
@@ -46,25 +46,24 @@ export function SiteFooter() {
             <br />
             {kontakt.plz} {kontakt.ort}
           </address>
-          <p className="mt-4 leading-relaxed text-footer-text">
-            Geschäftszeiten 09:00 bis 18:00 Uhr
-            <br />
-            Besuche bitte anmelden.
-          </p>
           <p className="mt-4 leading-relaxed">
             {kontakt.geschaeftsstelle}
             <br />
             <span className="text-footer-muted">{kontakt.geschaeftsstelleRolle}</span>
           </p>
           <p className="mt-4 leading-relaxed">
-            <a href={`tel:${kontakt.telefonHref}`} className="underline underline-offset-4 hover:text-footer-muted">
+            <a
+              href={`tel:${kontakt.telefonHref}`}
+              className="underline underline-offset-4 hover:text-footer-muted"
+            >
               {kontakt.telefon}
             </a>
             <br />
             <br />
-            <a href={`mailto:${kontakt.email}`} className="underline underline-offset-4 hover:text-footer-muted">
-              {kontakt.email}
-            </a>
+            <MailLink
+              adresse={kontakt.email}
+              className="underline underline-offset-4 hover:text-footer-muted"
+            />
           </p>
         </div>
 
@@ -97,16 +96,28 @@ export function SiteFooter() {
       <div className="border-t border-footer-line">
         <div className="shell flex flex-wrap items-center justify-between gap-4 py-6">
           <div className="flex items-center gap-4">
-            <img src="/aed-logo-white.png" alt="aed e.V." width={500} height={276} className="h-5 w-auto" />
+            <img
+              src="/aed-logo-white.png"
+              alt="aed e.V."
+              width={500}
+              height={276}
+              className="h-5 w-auto"
+            />
             <p className="text-sm text-footer-muted">
               © {new Date().getFullYear()} aed e.V. – Architecture Engineering Design, Stuttgart
             </p>
           </div>
           <div className="flex gap-6 text-sm">
-            <Link to="/impressum" className="underline underline-offset-4 hover:text-footer-text text-footer-muted">
+            <Link
+              to="/impressum"
+              className="underline underline-offset-4 hover:text-footer-text text-footer-muted"
+            >
               Impressum
             </Link>
-            <Link to="/datenschutz" className="underline underline-offset-4 hover:text-footer-text text-footer-muted">
+            <Link
+              to="/datenschutz"
+              className="underline underline-offset-4 hover:text-footer-text text-footer-muted"
+            >
               Datenschutz
             </Link>
           </div>

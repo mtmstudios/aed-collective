@@ -94,7 +94,8 @@ export const events: EventItem[] = [
     uhrzeit: "17:30–20:00",
     ort: "Galerie Stihl Waiblingen / Galerie im Kameralamt",
     format: "Führung",
-    teaser: "Exklusive Preview: die Entstehung zeitgenössischer Kunst und einer Ausstellung aus nächster Nähe.",
+    teaser:
+      "Exklusive Preview: die Entstehung zeitgenössischer Kunst und einer Ausstellung aus nächster Nähe.",
     text: "Die künstlerischen Ergebnisse der Künstlerresidenz werden vom 25. Juli bis 18. Oktober 2026 in der Galerie Stihl Waiblingen und in der Galerie im Kameralamt präsentiert. Bei einer exklusiven Preview für den aed haben wir die seltene Möglichkeit, noch vor der Vernissage die Entstehung zeitgenössischer Kunst und die Entwicklung einer Ausstellung aus nächster Nähe mitzuerleben.",
   },
   {
@@ -117,7 +118,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–21:00",
     ort: "Stuttgart",
     format: "aed Drinks",
-    teaser: "Rosa Pöttinger präsentiert ihr mobiles Begrünungsmodul für urbane Räume – wir testen direkt vor Ort.",
+    teaser:
+      "Rosa Pöttinger präsentiert ihr mobiles Begrünungsmodul für urbane Räume – wir testen direkt vor Ort.",
     text: "Lust auf frische Ideen für die Stadt von morgen? Rosa Pöttinger präsentiert ihr innovatives mobiles Begrünungsmodul für urbane Räume. Der ecotrii, gefördert vom Stuttgarter Klima-Innovationsfonds, sorgt für mehr Grün, weniger Hitze und ein besseres Mikroklima in unseren Städten – nachhaltig, ressourcenschonend und wirtschaftlich.",
     anmeldung:
       "https://eventfrog.de/de/p/fuehrungen-vortraege/business-treff/aed-drinks-x-ecotrii-7473362797771901085.html",
@@ -129,7 +131,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Haus des Tourismus, Marktplatz Stuttgart",
     format: "Führung",
-    teaser: "Vom Modehaus Breitling zum neuen Stadtbaustein – umgebaut von asp Architekten und Ippolito Fleitz Group.",
+    teaser:
+      "Vom Modehaus Breitling zum neuen Stadtbaustein – umgebaut von asp Architekten und Ippolito Fleitz Group.",
     text: "Wo über viele Jahre gediegene Herrenmode verkauft wurde, findet sich nun Stuttgarts neues Haus des Tourismus. Das ehemalige Modehaus Breitling wurde von den Stuttgarter Büros asp Architekten und Ippolito Fleitz Group grundlegend umgestaltet – bei weitgehendem Erhalt der historischen Bausubstanz. Transparente Fassaden und Glaswände im Inneren schaffen eine helle Atmosphäre; die neue Dachterrasse und die Rooftopbar bieten einen ungewohnten Blick auf die Innenstadt.",
     anmeldung:
       "https://eventfrog.de/de/p/fuehrungen-vortraege/fuehrung/blickfang-am-marktplatz-das-haus-des-tourismus-7470371",
@@ -141,9 +144,11 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–20:00",
     ort: "Galerie Sammlung Amann, Stuttgart",
     format: "Führung",
-    teaser: "Unser diesjähriger Galerie-Termin: ein Projektraum für Kunst und Design zwischen Moderne und Gegenwart.",
+    teaser:
+      "Unser diesjähriger Galerie-Termin: ein Projektraum für Kunst und Design zwischen Moderne und Gegenwart.",
     text: "Stuttgart gilt nicht zufällig als „Stadt der Galerien“ – mehr als 50 Ausstellungsorte bereichern die Kunstlandschaft. Grund genug für den aed, einige dieser kulturellen Hotspots näher zu betrachten. Die Galerie Sammlung Amann versteht sich als Projektraum für Kunst und Design sowie als Plattform für künstlerische Positionen – aus der eigenen Sammlung wie von Gästen. Der Projektraum vereint Positionen der Moderne und der klassischen Moderne mit zeitgenössischen Künstler:innen.",
-    anmeldung: "https://eventfrog.de/de/p/kunst-ausstellungen/ausstellung/verborgenes-juwel-die-sammlung-amann-746033776669545",
+    anmeldung:
+      "https://eventfrog.de/de/p/kunst-ausstellungen/ausstellung/verborgenes-juwel-die-sammlung-amann-746033776669545",
   },
   {
     slug: "curious-career-club",
@@ -152,7 +157,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Experience Design wird zum entscheidenden Faktor – ein Abend über das neue Spielfeld für Talente, Studios und Agenturen.",
+    teaser:
+      "Experience Design wird zum entscheidenden Faktor – ein Abend über das neue Spielfeld für Talente, Studios und Agenturen.",
     text: "Die Kreativbranche hat sich verändert und Experience Design wird zum entscheidenden Faktor – nicht nur für Marken. In einer Welt voller Content entsteht Relevanz nicht mehr allein durch Sichtbarkeit, sondern durch Verbindungen. Mit „The Smart & The Curious“ entsteht eine Plattform, die den Bereich Experience Design sichtbar macht. Gemeinsam mit dem aed wird der Abend zum „Curious Career Club“.",
     anmeldung:
       "https://eventfrog.de/de/p/fuehrungen-vortraege/business-treff/the-curious-career-club-agenturen-talente-perspe",
@@ -164,7 +170,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Vins, Stuttgart-Mitte",
     format: "aed Drinks",
-    teaser: "An wechselnden Orten laden wir zum lockeren Austausch – offen für alle, Freund:innen willkommen.",
+    teaser:
+      "An wechselnden Orten laden wir zum lockeren Austausch – offen für alle, Freund:innen willkommen.",
     text: "Wir wollen ins Gespräch kommen: Welche Themen interessieren euch, welche Projekte stehen an, was bewegt Stuttgart? An wechselnden Orten laden wir zum lockeren „aed Drinks“ ein. Wir starten im Herzen Stuttgarts: im Vins. Sebastian Werning betreibt nicht nur das Restaurant „Im Künstlerhaus“, sondern auch den coolsten Weinladen der Innenstadt.",
   },
   {
@@ -174,7 +181,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Der Abend mit den GROUNDBREAKERS: Startups stellen ihre Innovationen für das Bauen von Morgen vor.",
+    teaser:
+      "Der Abend mit den GROUNDBREAKERS: Startups stellen ihre Innovationen für das Bauen von Morgen vor.",
     text: "Nachhaltige Lösungen, die das Bauen auf den Kopf stellen und die Transformation möglich machen: Der Abend mit den GROUNDBREAKERS gibt Einblicke in die Arbeit als Accelerator, und Startups stellen ihre Innovationen für das Bauen von Morgen vor.",
     anmeldung:
       "https://eventfrog.de/de/p/wissenschaft-und-technik/groundbreaking-future-startups-der-baubranche-7447738524038",
@@ -186,7 +194,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Abschluss der Reihe: Was ist möglich, was ist Best Practice – und was kann jede:r selbst tun?",
+    teaser:
+      "Abschluss der Reihe: Was ist möglich, was ist Best Practice – und was kann jede:r selbst tun?",
     text: "Architekt:innen und andere Planende haben eine besondere Verantwortung, wenn es um die Frage geht, wie wir unsere Gesellschaft vor den Folgen des Klimawandels schützen können. Beim Abschluss unserer Veranstaltungsreihe fragen wir: Welche Konzepte werden bereits erfolgreich umgesetzt, welche Ideen werden gerade entwickelt – und was kann (und sollte) jede:r von uns tun, um die Erde kommenden Generationen in einem besseren Zustand zu hinterlassen?",
     anmeldung:
       "https://eventfrog.de/de/p/fuehrungen-vortraege/vortrag/fuer-eine-bessere-welt-bauen-in-zeiten-des-klimawandels",
@@ -198,7 +207,8 @@ export const events: EventItem[] = [
     uhrzeit: "20:00–22:00",
     ort: "Arthaus Kino, Stuttgart",
     format: "Film",
-    teaser: "Filmabend mit Podiumsdiskussion über eine der wichtigsten Architektinnen des frühen 20. Jahrhunderts.",
+    teaser:
+      "Filmabend mit Podiumsdiskussion über eine der wichtigsten Architektinnen des frühen 20. Jahrhunderts.",
     text: "Eileen Gray gehörte zu den wichtigsten Architektinnen und Designerinnen des frühen 20. Jahrhunderts. 1929 baute sie sich ein Refugium an der Côte d’Azur – E.1027, ein diskretes, avantgardistisches Meisterwerk. Der Film, den wir in Kooperation mit dem Stuttgarter Haus für Film und Medien präsentieren, erzählt von der Macht des weiblichen Ausdrucks – und dem Wunsch der Männer, ihn zu kontrollieren. Im Anschluss beleuchten wir in einer Podiumsdiskussion die Herausforderungen von Gestalterinnen damals und heute.",
     anmeldung: "https://arthaus-kino.de/hfmxarthaus/",
   },
@@ -209,7 +219,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Tübinger Straße, Stuttgart-Süd",
     format: "Vortrag",
-    teaser: "Wie baut man einen kreativen Standort im Bestand? Über 100 Kreativschaffende rund um die Tübinger Straße.",
+    teaser:
+      "Wie baut man einen kreativen Standort im Bestand? Über 100 Kreativschaffende rund um die Tübinger Straße.",
     text: "Rund um die Tübinger Straße arbeiten bereits über 100 Kreativschaffende aus den verschiedenen Teilbranchen der Kultur- und Kreativwirtschaft. Wie baut man einen kreativen Standort im Bestand? Wie schafft man gemeinsame Identität, Austausch und Synergien – nach dem Motto „Kochen mit dem, was im Kühlschrank ist“, mit vorhandenen Räumen, Akteur:innen, Kompetenzen und Beziehungen?",
     anmeldung:
       "https://www.eventbrite.de/e/kreatives-stuttgart-standortentwicklung-im-bestand-das-projekt-areal-sud-tickets-1984860042819",
@@ -221,9 +232,11 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "jung & hungrig",
-    teaser: "Unsere Reihe für aufstrebende Studios – diesmal in Kooperation mit der Designmesse BLICKFANG.",
+    teaser:
+      "Unsere Reihe für aufstrebende Studios – diesmal in Kooperation mit der Designmesse BLICKFANG.",
     text: "Stuttgart ist eine heimliche Kreativmetropole – doch neben all den Namen mit internationaler Strahlkraft haben es junge Studios umso schwerer, aufzufallen. Das ändern wir mit unserer Veranstaltungsreihe „jung & hungrig“: Mit freundlicher Unterstützung des Förderprogramms „Creative Connection“ der Stadt Stuttgart besuchen wir aufstrebende Büros – diesmal in Kooperation mit der internationalen Designmesse BLICKFANG.",
-    anmeldung: "https://www.eventbrite.de/e/jung-hungrig-spezial-zu-gast-bei-johannes-breuer-tickets-1983728085103",
+    anmeldung:
+      "https://www.eventbrite.de/e/jung-hungrig-spezial-zu-gast-bei-johannes-breuer-tickets-1983728085103",
   },
   {
     slug: "jung-und-hungrig-haus-otto",
@@ -232,7 +245,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "jung & hungrig",
-    teaser: "Wir besuchen aufstrebende Büros der Region – gefördert von „Creative Connection“ der Stadt Stuttgart.",
+    teaser:
+      "Wir besuchen aufstrebende Büros der Region – gefördert von „Creative Connection“ der Stadt Stuttgart.",
     text: "Stuttgart ist eine heimliche Kreativmetropole – doch neben all den Namen mit internationaler Strahlkraft haben es junge Studios umso schwerer, aufzufallen. Mit freundlicher Unterstützung des Förderprogramms „Creative Connection“ der Stadt Stuttgart besuchen wir aufstrebende Büros.",
     anmeldung: "https://www.eventbrite.de/e/jung-hungrig-haus-otto-tickets-1982455479706",
   },
@@ -253,7 +267,8 @@ export const events: EventItem[] = [
     uhrzeit: "17:30–20:00",
     ort: "Burkhardt Leitner Modular Spaces, Olgastr. 138, 70180 Stuttgart",
     format: "aed Drinks",
-    teaser: "Der Sommer ist noch lange nicht vorbei – aber unsere Veranstaltungspause schon! Wer den Tag bei einem kühlen Getränk und interessanten Gesprächen über die Bedeutung von …",
+    teaser:
+      "Der Sommer ist noch lange nicht vorbei – aber unsere Veranstaltungspause schon! Wer den Tag bei einem kühlen Getränk und interessanten Gesprächen über die Bedeutung von …",
     text: "Der Sommer ist noch lange nicht vorbei – aber unsere Veranstaltungspause schon! Wer den Tag bei einem kühlen Getränk und interessanten Gesprächen über die Bedeutung von Büchern für gute Gestaltung ausklingen lassen will, ist bei der nächsten Ausgabe unserer „aed drinks“ genau richtig: Am 15.09.2026 treffen wir uns in den Räumen von Burkhardt Leitner (die zugleich auch unsere Geschäftsstelle sind…) zu einem Gespräch mit zwei renommierten Verlegerinnen, die über viele Jahre Bücher über Architektur, Engineering und Design (nicht nur) aus Stuttgart herausgebracht haben: Dr. Petra Kiedaisch und Bettina Klett von av edition. Hinzu kommt ein Überraschungsgast von einem kleinen, aber feinen Kunstbuch-Verlag aus der unmittelbaren Nachbarschaft... Für uns ist dieser Abend nicht nur eine gute Gelegenheit zum Wiedersehen nach der Sommerpause. Wir wollen ihn auch nutzen, um av edition für die jahrelange Unterstützung unserer Arbeit durch wunderschöne Buchgeschenke für unsere Referentinnen und Referenten zu danken. Und damit dieser Abend für alle Teilnehmer:innen ganz besonders wird, gibt es diesmal für alle Gäste ein besonderes Präsent aus der Kollektion des Verlags… Lasst Euch überraschen! Unser Programm für Dienstag, den 15.09.206: 17:30 – 18:00: Ankunft 18:00 – 18:30: Gespräch und offener Austausch über Gegenwart und Zukunft des Verlagswesens: Welche Bedeutung haben Bücher aktuell – und ",
   },
   {
@@ -263,7 +278,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Hospitalhof Stuttgart, Büchsenstr. 33, 70174 Stuttgart",
     format: "Vortrag",
-    teaser: "Wenn es um Nachhaltigkeit in der gebauten Umwelt geht, wird in vielen Fällen noch immer hauptsächlich über einzelne Gebäude geredet. Allzu oft steht dabei einzig und …",
+    teaser:
+      "Wenn es um Nachhaltigkeit in der gebauten Umwelt geht, wird in vielen Fällen noch immer hauptsächlich über einzelne Gebäude geredet. Allzu oft steht dabei einzig und …",
     text: "Wenn es um Nachhaltigkeit in der gebauten Umwelt geht, wird in vielen Fällen noch immer hauptsächlich über einzelne Gebäude geredet. Allzu oft steht dabei einzig und allein der Energieverbrauch im Gebäudebetrieb im Fokus. Ein Umstand, dem wir dringend begegnen müssen, denn die Zukunftsfähigkeit unserer Städte geht uns alle an. Gerade auf der Ebene des Städtebaus gibt es viele Möglichkeiten zum Schutz vor den Folgen des Klimawandels. Dazu werden drei beispielhafte Konzepte vorgestellt, die zeigen, was heute schon möglich ist.",
   },
   {
@@ -273,8 +289,9 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Gustav Epple Bauunternehmung GmbH, Tränkestr. 4, 70597 Stuttgart",
     format: "Führung",
-    teaser: "1909 als kleine Zimmerei gegründet, ist die Gustav Epple Bauunternehmung heute eine fest etablierte Größe im Stuttgarter Baugeschehen. Der Firmensitz befindet sich in …",
-    text: "1909 als kleine Zimmerei gegründet, ist die Gustav Epple Bauunternehmung heute eine fest etablierte Größe im Stuttgarter Baugeschehen. Der Firmensitz befindet sich in einem eigens für das Unternehmen errichteten Verwaltungsgebäude. Dieser \"kraftvolle Baukörper\" (Baunetz) im Degerlocher Gewerbegebiet soll in Form und Funktion die Firmenphilosophie von Gustav Epple - nämlich \"Anders.Bauen\" - widerspiegeln. Wie dies gelungen ist, wollen wir bei unserem Vor-Ort-Termin erkunden. Beim Entwurf des Stuttgarter Architekturbüros a+r spielten die Werkstoffe Beton und Holz eine zentrale Rolle. Die monolithische Außenwand besteht aus 60 cm starkem Leichtbeton - auf Dämmstoffe konnte hierdurch ganz verzichtet werden! Die Arbeitsplätze im Inneren sind als flexibler Open Space konzipiert. Spannend ist auch das Energiekonzept: Das Gebäude wird mittels Wärmepumpe, Rückkühlwerk und unterirdischem Eisspeicher mit Wärme bzw. Kälte versorgt. Auf dem Dach befindet sich zudem eine Photovoltaik-Anlage. Die Preisrichter des Hugo Häring Preises lobten das Bauwerk 2023 als \"anspruchsvollen, ästhetischen Beitrag inmitten seines vorstädtischen industriellen Kontextes\" und hoben das Arbeitsplima in den offen organisierten Büroetagen hervor. Wir sind gespannt auf den speziell für den aed arrangierten Blick hinter Entwurf und Technik dieses innovativen Neubaus.",
+    teaser:
+      "1909 als kleine Zimmerei gegründet, ist die Gustav Epple Bauunternehmung heute eine fest etablierte Größe im Stuttgarter Baugeschehen. Der Firmensitz befindet sich in …",
+    text: '1909 als kleine Zimmerei gegründet, ist die Gustav Epple Bauunternehmung heute eine fest etablierte Größe im Stuttgarter Baugeschehen. Der Firmensitz befindet sich in einem eigens für das Unternehmen errichteten Verwaltungsgebäude. Dieser "kraftvolle Baukörper" (Baunetz) im Degerlocher Gewerbegebiet soll in Form und Funktion die Firmenphilosophie von Gustav Epple - nämlich "Anders.Bauen" - widerspiegeln. Wie dies gelungen ist, wollen wir bei unserem Vor-Ort-Termin erkunden. Beim Entwurf des Stuttgarter Architekturbüros a+r spielten die Werkstoffe Beton und Holz eine zentrale Rolle. Die monolithische Außenwand besteht aus 60 cm starkem Leichtbeton - auf Dämmstoffe konnte hierdurch ganz verzichtet werden! Die Arbeitsplätze im Inneren sind als flexibler Open Space konzipiert. Spannend ist auch das Energiekonzept: Das Gebäude wird mittels Wärmepumpe, Rückkühlwerk und unterirdischem Eisspeicher mit Wärme bzw. Kälte versorgt. Auf dem Dach befindet sich zudem eine Photovoltaik-Anlage. Die Preisrichter des Hugo Häring Preises lobten das Bauwerk 2023 als "anspruchsvollen, ästhetischen Beitrag inmitten seines vorstädtischen industriellen Kontextes" und hoben das Arbeitsplima in den offen organisierten Büroetagen hervor. Wir sind gespannt auf den speziell für den aed arrangierten Blick hinter Entwurf und Technik dieses innovativen Neubaus.',
   },
   {
     slug: "ai-vs-creative-intelligence-die-zukunft-der-kreativbranche",
@@ -284,7 +301,7 @@ export const events: EventItem[] = [
     ort: "Jung von Matt NECKAR GmbH, Neckarstraße 155, 70190 Stuttgart",
     format: "Vortrag",
     teaser: "Künstliche Intelligenz verändert gerade die Spielregeln – radikal und rasant.",
-    text: "Künstliche Intelligenz verändert gerade die Spielregeln – radikal und rasant. Aber was heißt das konkret für Kreative? Brauchen wir morgen noch Kameraleute, Sprecher:innen, Komponist:innen, Designer:innen, Architekt:innen, Texter:innen, Coder:innen – braucht es uns überhaupt noch? Oder frisst KI die Kreativität schneller, als wir „Prompt“ sagen können? Lars \"Laser\" Reiners liefert keine Buzzwords, sondern Real Talk: Als Senior Creative Art & AI bei Jung von Matts „Artificial Craft“-Unit ist er seit Jahren an vorderster Front der spannendsten AI-Projekte der Branche. Er zeigt echte Cases, teilt harte Learnings und stellt die unbequemen Fragen: Was geht wirklich mit KI? Was (noch) nicht? Und wohin führt die Reise für die Kreativbranche? Freut euch auf einen Reality-Check statt Safe-Space – und auf eine offene Diskussion im Anschluss. Eure Fragen. Klare Worte. Keine Filter.",
+    text: 'Künstliche Intelligenz verändert gerade die Spielregeln – radikal und rasant. Aber was heißt das konkret für Kreative? Brauchen wir morgen noch Kameraleute, Sprecher:innen, Komponist:innen, Designer:innen, Architekt:innen, Texter:innen, Coder:innen – braucht es uns überhaupt noch? Oder frisst KI die Kreativität schneller, als wir „Prompt“ sagen können? Lars "Laser" Reiners liefert keine Buzzwords, sondern Real Talk: Als Senior Creative Art & AI bei Jung von Matts „Artificial Craft“-Unit ist er seit Jahren an vorderster Front der spannendsten AI-Projekte der Branche. Er zeigt echte Cases, teilt harte Learnings und stellt die unbequemen Fragen: Was geht wirklich mit KI? Was (noch) nicht? Und wohin führt die Reise für die Kreativbranche? Freut euch auf einen Reality-Check statt Safe-Space – und auf eine offene Diskussion im Anschluss. Eure Fragen. Klare Worte. Keine Filter.',
   },
   {
     slug: "japan-calling-stuttgarter-designer-auf-der-expo",
@@ -293,7 +310,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00",
     ort: "Atelier Brückner, Krefelder Str. 32, 70367 Stuttgart",
     format: "Vortrag",
-    teaser: "Hiermit laden wir Sie herzlich zu einem interessanten Blick hinter die Kulissen der diesjährigen Weltausstellung ein. Im Fokus stehen dabei die Beiträge Stuttgarter …",
+    teaser:
+      "Hiermit laden wir Sie herzlich zu einem interessanten Blick hinter die Kulissen der diesjährigen Weltausstellung ein. Im Fokus stehen dabei die Beiträge Stuttgarter …",
     text: "Hiermit laden wir Sie herzlich zu einem interessanten Blick hinter die Kulissen der diesjährigen Weltausstellung ein. Im Fokus stehen dabei die Beiträge Stuttgarter Gestalterinnen und Gestalter. Die Welt zu Gast in Osaka: Von April bis Oktober präsentierten sich auf der Expo 2025 in Japan 153 Nationen zum Thema „Designing Future Society for Our Lives“ und suchten gemeinsam Antworten auf die drängendsten Fragen unserer Zeit – architektonisch, technologisch und kulturell. Die Liste der Akteur:innen, die an den einzelnen Ausstellungsbauten mitgewirkt haben, liest sich wie das „Who’s Who“ der internationalen Architektur – allein diese geballte Baukunst ist schon eine Reise wert. Doch auch die deutsche Beteiligung, insbesondere bei der Szenografie, braucht sich nicht zu verstecken. Ganz im Gegenteil: Hier steckt viel Stuttgart drin! Nicht nur im Deutschen Pavillon, sondern auch in den Beiträgen Usbekistans, der Vereinigten Arabischen Emirate, Luxemburgs oder Singapurs – Inszenierungen, die von Stuttgarter Kreativschaffenden entwickelt, gebaut und mit einer ordentlichen Portion schwäbischem Perfektionismus und gestalterischem Feinsinn versehen wurden. Was treibt die Gestaltenden an, wenn sie nationale Identität in den Raum übersetzen? Wie entstehen Geschichten, die Menschen weltweit berühren – und was bleibt, wenn der letzte Pavillon abgebaut ist? Darüber sprechen wir mit den Macher:",
   },
   {
@@ -303,7 +321,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00",
     ort: "Wahl Showroom Stuttgart | Unter dem Birkenkopf 16 | 70197 Stuttgart",
     format: "Vortrag",
-    teaser: "Er gilt als Entdecker internationaler Designtalente, prägt seit Jahrzehnten die Welt des Interiordesigns und hat mit seiner Marke Cappellini Ikonen geschaffen: Giulio Cappellini.",
+    teaser:
+      "Er gilt als Entdecker internationaler Designtalente, prägt seit Jahrzehnten die Welt des Interiordesigns und hat mit seiner Marke Cappellini Ikonen geschaffen: Giulio Cappellini.",
     text: "Er gilt als Entdecker internationaler Designtalente, prägt seit Jahrzehnten die Welt des Interiordesigns und hat mit seiner Marke Cappellini Ikonen geschaffen: Giulio Cappellini. Geboren 1954 in Mailand, wuchs er in einer Designfamilie auf und studierte Architektur an der Politecnico di Milano. Sei es der “Proust Chair” von Alessandro Mendini, der “Thinking Man’s Chair” von Jasper Morrison oder der “Knotted Chair” von Marcel Wanders: Viele Cappellini-Möbel haben Kultstatus erreicht. Doch niemand baut ein derart erfolgreiches Designunternehmen auf, indem er seinen Blick ausschließlich auf Möbel richtet. Nun kommt Giulio Cappellini nach Stuttgart - und gemeinsam mit Wahl laden wir Sie herzlich ein, ihn beim Trendlabor unter derm Thema “Design für die Sinne. Neue Perspektiven im Bad- & Möbeldesign” persönlich zu erleben. In seinem Vortrag nimmt uns der italienische Vordenker mit auf eine Reise durch aktuelle Strömungen im Bad- und Möbeldesign. Dabei eröffnet er neue Sichtweisen auf Materialien, Farben und Formen – und zeigt, wie Design über die reine Funktion hinaus alle Sinne berührt. Seien Sie dabei, wenn einer der einflussreichsten Designunternehmer unserer Zeit exklusive Einblicke in seine Arbeit und seine Visionen gibt. Die Veranstaltung ist mit zwei Fortbildungspunkten der Architektenkammer Baden-Württemberg anerkannt. Wahl Trendlabor: Design für die Sinne. Neue Perspektiven",
   },
   {
@@ -313,7 +332,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Hospitalhof, Büchsenstr. 33, 70174 Stuttgart",
     format: "Vortrag",
-    teaser: "die Erde erwärmt sich. Jedes Jahr ein kleines bisschen mehr. Das hat konkrete Auswirkungen. Nicht nur auf die Natur oder auf weit entfernte Länder. Auch wir selbst sind …",
+    teaser:
+      "die Erde erwärmt sich. Jedes Jahr ein kleines bisschen mehr. Das hat konkrete Auswirkungen. Nicht nur auf die Natur oder auf weit entfernte Länder. Auch wir selbst sind …",
     text: "die Erde erwärmt sich. Jedes Jahr ein kleines bisschen mehr. Das hat konkrete Auswirkungen. Nicht nur auf die Natur oder auf weit entfernte Länder. Auch wir selbst sind immer öfter von Extremwetterereignissen und Hitzerekorden betroffen. Was genau bedeutet dies für unsere Gebäude, was heißt es für unsere Gesellschaft, wen betrifft diese Entwicklung besonders – und worauf müssen wir uns in den kommenden Jahren einstellen? Ein Blick voraus – nicht in die ferne Zukunft, sondern in die nächsten Jahre. In unsere eigene Zukunft. Diesem wichtigen Themenkomplex, der uns alle betrifft, gehen wir bei der Auftaktveranstaltung unserer Reihe “Architektur und Ethik: der Klimawandel” in Zusammenarbeit mit dem Hospitalhof und dem IZKT nach.",
   },
   {
@@ -333,8 +353,9 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Innenarchitektur & Werkstatt, Filderstraße 65, 70180 Stuttgart",
     format: "jung & hungrig",
-    teaser: "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern …",
-    text: "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern wir mit unserer neuen Veranstaltungsreihe \"jung & hungrig\": Mit freundlicher Unterstützung des Förderprogramms \"Creative Connection\" der Stadt Stuttgart besuchen wir aufstrebende Büros. Dieses Mal laden uns Inna Strokous und Marius Schwald ein, ihre Arbeit zu entdecken: Als Studio Bovti setzen sie auf unkonventionelle Materialkombinationen und experimentelle Fertigungsmethoden, sei es mit Stein, Holz oder Pappmaché. In den Räumlichkeiten von Florian Siegel inszenieren sie ihre ungewöhnlichen Möbel und Leuchten und geben im Dialog Einblick in ihre Entwurfsprozesse - wie üblich mit anschließendem Get Together. Besonders willkommen sind alle, die Lust haben, ihr Wissen, ihre Erfahrungen oder ihr Netzwerk einzubringen. Aber auch wer einfach nur schauen, staunen und sich inspirieren lassen möchte, ist bei \"jung & hungrig\" goldrichtig.",
+    teaser:
+      "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern …",
+    text: 'Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern wir mit unserer neuen Veranstaltungsreihe "jung & hungrig": Mit freundlicher Unterstützung des Förderprogramms "Creative Connection" der Stadt Stuttgart besuchen wir aufstrebende Büros. Dieses Mal laden uns Inna Strokous und Marius Schwald ein, ihre Arbeit zu entdecken: Als Studio Bovti setzen sie auf unkonventionelle Materialkombinationen und experimentelle Fertigungsmethoden, sei es mit Stein, Holz oder Pappmaché. In den Räumlichkeiten von Florian Siegel inszenieren sie ihre ungewöhnlichen Möbel und Leuchten und geben im Dialog Einblick in ihre Entwurfsprozesse - wie üblich mit anschließendem Get Together. Besonders willkommen sind alle, die Lust haben, ihr Wissen, ihre Erfahrungen oder ihr Netzwerk einzubringen. Aber auch wer einfach nur schauen, staunen und sich inspirieren lassen möchte, ist bei "jung & hungrig" goldrichtig.',
   },
   {
     slug: "aed-expert-dinner",
@@ -342,7 +363,8 @@ export const events: EventItem[] = [
     datum: "2025-09-18",
     ort: "Stuttgart",
     format: "Fest",
-    teaser: "Vor wenigen Tagen trafen sich Architekt:innen zum ersten aed Expert Dinner. Dieses neue Format soll es uns ermöglichen, bei gutem Essen (und gutem Wein) in einem …",
+    teaser:
+      "Vor wenigen Tagen trafen sich Architekt:innen zum ersten aed Expert Dinner. Dieses neue Format soll es uns ermöglichen, bei gutem Essen (und gutem Wein) in einem …",
     text: "Vor wenigen Tagen trafen sich Architekt:innen zum ersten aed Expert Dinner. Dieses neue Format soll es uns ermöglichen, bei gutem Essen (und gutem Wein) in einem kleinen, ausgewählten Teilnehmerkreis über aktuelle Themen rund um Architektur, Engineering und Design zu sprechen. Das Gespräch und das gegenseitige Kennenlernen stehen dabei im Fokus. Ein paar kurze Statements von Experten aus unterschiedlichen Bereichen geben uns die Impulse für unsere Diskussion und fördern den Blick über den Tellerrand. Welche Anforderungen und Zielsetzungen sind für andere Disziplinen und Arbeitsbereiche wichtig – und was bedeutet das für unser eigenes Tun? Bei unserem Treffen am 18.09.2025 stand das Thema „Energiegewinnung & Gebäude“ im Fokus: Welche Möglichkeiten der Energiegewinnung und -speicherung am und im Gebäude gibt es – und was bedeuten die technologischen und gesetzlichen Entwicklungen der letzten Jahre eigentlich für Bauherren, Planende, Ausführende und Hersteller? Wir bedanken uns bei unseren Förderern: Andreas Riedel, Nelskamp GmbH und bei Gerd Richter, NFG-Gruppe. Und natürlich für die inspirierenden Gespräche mit den Gästen und der wunderbaren Küche von Mario Ohno.",
   },
   {
@@ -352,8 +374,9 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Matter Of Visual Practice, Neckarstr. 237, 70190 Stuttgart",
     format: "jung & hungrig",
-    teaser: "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern …",
-    text: "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern wir mit unserer neuen Veranstaltungsreihe \"jung & hungrig\": Mit freundlicher Unterstützung des Förderprogramms \"Creative Connection\" der Stadt Stuttgart besuchen wir aufstrebende Büros. Unsere zweite Veranstaltung bringt uns zu Matter Of in den Stuttgarter Osten. Matter Of konzentriert sich auf den Aufbau grenzüberschreitender visueller Praktiken. Das Studio arbeitet sowohl praktisch im Bereich Gestaltung als auch konzeptionell beratend – mit einem Schwerpunkt auf Art- und Creative Direction – und setzt dabei auf offene Aushandlungsprozesse statt auf feste Lösungen und starre Grenzen. Neben Auftragsarbeiten initiiert Matter Of eigene Projekte und arbeitet in Kooperationen. Besonders willkommen sind alle, die Lust haben, ihr Wissen, ihre Erfahrungen oder ihr Netzwerk einzubringen. Aber auch wer einfach nur schauen, staunen und sich inspirieren lassen möchte, ist bei \"jung & hungrig\" goldrichtig.",
+    teaser:
+      "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern …",
+    text: 'Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern wir mit unserer neuen Veranstaltungsreihe "jung & hungrig": Mit freundlicher Unterstützung des Förderprogramms "Creative Connection" der Stadt Stuttgart besuchen wir aufstrebende Büros. Unsere zweite Veranstaltung bringt uns zu Matter Of in den Stuttgarter Osten. Matter Of konzentriert sich auf den Aufbau grenzüberschreitender visueller Praktiken. Das Studio arbeitet sowohl praktisch im Bereich Gestaltung als auch konzeptionell beratend – mit einem Schwerpunkt auf Art- und Creative Direction – und setzt dabei auf offene Aushandlungsprozesse statt auf feste Lösungen und starre Grenzen. Neben Auftragsarbeiten initiiert Matter Of eigene Projekte und arbeitet in Kooperationen. Besonders willkommen sind alle, die Lust haben, ihr Wissen, ihre Erfahrungen oder ihr Netzwerk einzubringen. Aber auch wer einfach nur schauen, staunen und sich inspirieren lassen möchte, ist bei "jung & hungrig" goldrichtig.',
   },
   {
     slug: "hinter-den-kulissen-das-literaturarchiv-marbach",
@@ -362,8 +385,9 @@ export const events: EventItem[] = [
     uhrzeit: "17:00–22:00",
     ort: "Deutsches Literaturarchiv, Schillerhöhe 8-10, 71672 Marbach am Neckar",
     format: "Führung",
-    teaser: "Deutschland, deine Dichter... Was sich hinter diesen Worten verbirgt, passt nicht zwischen zwei Buchdeckel, sondern braucht mehr Platz. Den bietet das Deutsche …",
-    text: "Deutschland, deine Dichter... Was sich hinter diesen Worten verbirgt, passt nicht zwischen zwei Buchdeckel, sondern braucht mehr Platz. Den bietet das Deutsche Literaturarchiv (DLA) in Marbach am Neckar reichlich: ein Hort des geschriebenen Wortes, der das Schiller-Nationalmuseum und das Literaturmuseum der Moderne unter einem Dach vereint. Ein spannender Ort, nicht nur für Literatur-Fans... Das DLA ist auch ein wichtiges Betätigungsfeld für Architekt:innen und Ausstellungsgestalter. Besonders spannend ist hierbei sicher der von David Chipperfield entworfene Neubau. Dieser hat es \"auf nichts weniger als die Seele der deutschen Literatur abgesehen\". Neben einer Dauerausstellung und einem virtuellen Museum des 21. Jahrhunderts gibt es hier immer wieder große Wechselausstellungen zu sehen, aktuell z.B. über Franz Kafka. Bei unserer speziell für den aed kuratierten Veranstaltung wollen wir nicht nur einen Blick hinter die Kulissen des Archiv- und Ausstellungsbetriebs werfen, sondern uns auch mit architektonischen und gestalterischen Fragestellungen beschäftigen. Welche Besonderheiten zeichnen das DLA aus, wie funktioniert eigentlich so ein Literaturarchiv, wie stellt man das geschriebene Wort aus - und was für Pläne gibt es für die Zukunft? Nach der Führung haben wir dann die Möglichkeit, das Gehörte bei einem Glas Wein mit den Referent:innen zu vertiefen und den Abend mit wunderba",
+    teaser:
+      "Deutschland, deine Dichter... Was sich hinter diesen Worten verbirgt, passt nicht zwischen zwei Buchdeckel, sondern braucht mehr Platz. Den bietet das Deutsche …",
+    text: 'Deutschland, deine Dichter... Was sich hinter diesen Worten verbirgt, passt nicht zwischen zwei Buchdeckel, sondern braucht mehr Platz. Den bietet das Deutsche Literaturarchiv (DLA) in Marbach am Neckar reichlich: ein Hort des geschriebenen Wortes, der das Schiller-Nationalmuseum und das Literaturmuseum der Moderne unter einem Dach vereint. Ein spannender Ort, nicht nur für Literatur-Fans... Das DLA ist auch ein wichtiges Betätigungsfeld für Architekt:innen und Ausstellungsgestalter. Besonders spannend ist hierbei sicher der von David Chipperfield entworfene Neubau. Dieser hat es "auf nichts weniger als die Seele der deutschen Literatur abgesehen". Neben einer Dauerausstellung und einem virtuellen Museum des 21. Jahrhunderts gibt es hier immer wieder große Wechselausstellungen zu sehen, aktuell z.B. über Franz Kafka. Bei unserer speziell für den aed kuratierten Veranstaltung wollen wir nicht nur einen Blick hinter die Kulissen des Archiv- und Ausstellungsbetriebs werfen, sondern uns auch mit architektonischen und gestalterischen Fragestellungen beschäftigen. Welche Besonderheiten zeichnen das DLA aus, wie funktioniert eigentlich so ein Literaturarchiv, wie stellt man das geschriebene Wort aus - und was für Pläne gibt es für die Zukunft? Nach der Führung haben wir dann die Möglichkeit, das Gehörte bei einem Glas Wein mit den Referent:innen zu vertiefen und den Abend mit wunderba',
   },
   {
     slug: "design-und-neue-arbeitskultur-zu-besuch-in-den-urban-spaces",
@@ -373,7 +397,7 @@ export const events: EventItem[] = [
     ort: "Urban Spaces, Schulze-Delitzsch-Straße 41, 70565 Stuttgart",
     format: "Führung",
     teaser: "Ist Anwesenheitspflicht der einzige Weg, um Mitarbeitende in Büros zu bringen?",
-    text: "Ist Anwesenheitspflicht der einzige Weg, um Mitarbeitende in Büros zu bringen? Coworkingspaces beweisen: Nein. Ihre Betreiber haben aus attraktiven Arbeitswelten ein Geschäftsmodell gemacht. Beim aed-Abend in den Urban Spaces Vaihingen bringen wir die Perspektive von Planern, Betreibern und Ausstattern zusammen. Gemeinsam diskutieren wir über neue Arbeitswelten, erkunden die Räumlichkeiten - und lassen den Abend beim Sundowner auf der Dachterrasse (oder bei schlechtem Wetter in den Eventräumen) ausklingen. Mit den Innenarchitekten von Studio Komo, den Fachhändlern und Möbelproduzenten von Unternehmen Form sowie den Urban-Spaces-Machern selbst tauchen wir fachkundig in das Thema ein und erschließen uns einen Rundumblick auf zukunftsfähige Arbeitswelten. md-Chefredakteurin und aed-Vorständin Johanna Neves Pimenta führt durch den Abend. Fotos: Philip Kottlorz Agenda 18:00 - 18:30: Ankunft & Get Together 18:30 - 19:30: Podiumsdiskussion \"Design für neue Arbeitskultur\" 19:30 - 22:00: Führung durch die Urban Spaces & Sundowner auf der Dachterrasse",
+    text: 'Ist Anwesenheitspflicht der einzige Weg, um Mitarbeitende in Büros zu bringen? Coworkingspaces beweisen: Nein. Ihre Betreiber haben aus attraktiven Arbeitswelten ein Geschäftsmodell gemacht. Beim aed-Abend in den Urban Spaces Vaihingen bringen wir die Perspektive von Planern, Betreibern und Ausstattern zusammen. Gemeinsam diskutieren wir über neue Arbeitswelten, erkunden die Räumlichkeiten - und lassen den Abend beim Sundowner auf der Dachterrasse (oder bei schlechtem Wetter in den Eventräumen) ausklingen. Mit den Innenarchitekten von Studio Komo, den Fachhändlern und Möbelproduzenten von Unternehmen Form sowie den Urban-Spaces-Machern selbst tauchen wir fachkundig in das Thema ein und erschließen uns einen Rundumblick auf zukunftsfähige Arbeitswelten. md-Chefredakteurin und aed-Vorständin Johanna Neves Pimenta führt durch den Abend. Fotos: Philip Kottlorz Agenda 18:00 - 18:30: Ankunft & Get Together 18:30 - 19:30: Podiumsdiskussion "Design für neue Arbeitskultur" 19:30 - 22:00: Führung durch die Urban Spaces & Sundowner auf der Dachterrasse',
   },
   {
     slug: "aed-eventreihe-jung-und-hungrig-zu-gast-bei-studio-creative",
@@ -382,8 +406,9 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Studio Creative Underdogs, Kolbstraße 21, 70180 Stuttgart",
     format: "jung & hungrig",
-    teaser: "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern …",
-    text: "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern wir mit unserer neuen Veranstaltungsreihe \"jung & hungrig\": Mit freundlicher Unterstützung des Förderprogramms \"Creative Connection\" der Stadt Stuttgart besuchen wir aufstrebende Büros. Den Auftakt macht Alex Klein vom Studio Creative Underdogs . Er öffnet sein Studio am Marienplatz, gibt Einblick in seine Arbeit – unter eigener Flagge sowie für namhafte Brands – und verwöhnt uns mit frischen Leckereien der Brotique. Besonders willkommen sind alle, die Lust haben, ihr Wissen, ihre Erfahrungen oder ihr Netzwerk einzubringen. Aber auch wer einfach nur schauen, staunen und sich inspirieren lassen möchte, ist bei \"jung & hungrig\" goldrichtig.",
+    teaser:
+      "Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern …",
+    text: 'Stuttgart ist eine heimliche Kreativmetropole - doch neben all den Namen mit internationaler Strahlkraft haben junge Studios es umso schwerer, aufzufallen. Das ändern wir mit unserer neuen Veranstaltungsreihe "jung & hungrig": Mit freundlicher Unterstützung des Förderprogramms "Creative Connection" der Stadt Stuttgart besuchen wir aufstrebende Büros. Den Auftakt macht Alex Klein vom Studio Creative Underdogs . Er öffnet sein Studio am Marienplatz, gibt Einblick in seine Arbeit – unter eigener Flagge sowie für namhafte Brands – und verwöhnt uns mit frischen Leckereien der Brotique. Besonders willkommen sind alle, die Lust haben, ihr Wissen, ihre Erfahrungen oder ihr Netzwerk einzubringen. Aber auch wer einfach nur schauen, staunen und sich inspirieren lassen möchte, ist bei "jung & hungrig" goldrichtig.',
   },
   {
     slug: "100-jahre-frei-otto-vergangenheit-gegenwart-und-zukunft-des",
@@ -392,7 +417,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Institut für Leichtbau Entwerfen und Konstruieren (ILEK), Pfaffenwaldring 14, 70569 Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie zu unserer Veranstaltung 100 Jahre Frei Otto - Vergangenheit, Gegenwart und Zukunft des Leichtbaus einladen zu dürfen.",
+    teaser:
+      "Wir freuen uns sehr, Sie zu unserer Veranstaltung 100 Jahre Frei Otto - Vergangenheit, Gegenwart und Zukunft des Leichtbaus einladen zu dürfen.",
     text: "Wir freuen uns sehr, Sie zu unserer Veranstaltung 100 Jahre Frei Otto - Vergangenheit, Gegenwart und Zukunft des Leichtbaus einladen zu dürfen. Am 31. Mai dieses Jahres hätte Frei Otto, der Vordenker des Leichtbaus, seinen 100. Geburtstag gefeiert. 10 Jahre nach seinem Tod und der Verleihung des renommierten Pritzker-Preises, der wichtigsten internationalen Auszeichnung im Bereich der Architektur, ist Frei Ottos intellektuelles Erbe bedeutsamer denn je. Am Institut für Leichtbau Entwerfen und Konstruieren (ILEK) der Universität Stuttgart findet deshalb im Juni 2025 ein internationales Symposium statt, bei dem renommierte Forschende sowie Konstrukteure aus vielen Ländern über das Erbe Frei Ottos sowie das Potenzial des Leichtbaus für künftige Generationen sprechen. In einer exklusiven Sneak-Preview für unseren Verein gibt uns aed-Mitglied Prof. Lucio Blandini (der heutige Leiter des ILEK und - nach Werner Sobek - Nachfolger von Frei Otto) einen Einblick in das, was im Rahmen des Symposiums besprochen und diskutiert wird. Wie hat Frei Otto in Stuttgart gewirkt? Warum ist sein Vermächtnis noch heute so wichtig? Und wie entwickelt sich der Leichtbau in der Zukunft? Ein wunderbarer Blick hinter die Kulissen. Wir freuen uns auf Ihre Anmeldung! 100 Jahre Frei Otto - Vergangenheit, Gegenwart und Zukunft des Leichtbaus",
   },
   {
@@ -402,7 +428,8 @@ export const events: EventItem[] = [
     uhrzeit: "17:00–19:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie zu unserer Veranstaltung Die Danneckerstraße - gestern und heute einladen zu dürfen.",
+    teaser:
+      "Wir freuen uns sehr, Sie zu unserer Veranstaltung Die Danneckerstraße - gestern und heute einladen zu dürfen.",
     text: "Wir freuen uns sehr, Sie zu unserer Veranstaltung Die Danneckerstraße - gestern und heute einladen zu dürfen. Welcher an Gestaltung interessierte Mitbürger hat sich nicht schon einmal die steile Danneckerstraße im Stuttgarter Süden hochgekämpft, um im Haus der Architektinnen und Architekten an einer Veranstaltung teilzunehmen (wie zum Beispiel der Preisverleihung für unseren Nachwuchswettbewerb aed neuland)? Auch wenn allein schon der faszinierende Ausblick auf die Dächer Stuttgarts den Weg lohnt - er ist zugegebenermaßen anstrengend. Aber wir versprechen: Bald vergessen Sie die müden Beine! Denn bei unserem architektur- und designhistorischen Stadtspaziergang zeigen wir Ihnen nicht nur viele bekannte und weniger bekannte Highlights dieser Straße - wir öffnen auch die Türen zum Minotti Haus, das von Kampe 54 aufwändig renoviert wurde. Gemeinsam entdecken wir dort ein Stück italienische Designkultur. Im Anschluss an unseren Stadtspaziergang und eine kurze Führung durch die Ausstellung findet dort ein kleines Get-Together mit Snacks und Drinks statt. Entdecken Sie mit den neuen aed-Vorständinnen Sara Dahme und Johanna Pimenta eine Straße, die (teilweise) so schön ist, dass sie selbst edelste italienische Designproduzenten anzieht. Die Veranstaltung ist leider schon ausverkauft.",
   },
   {
@@ -412,7 +439,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Automotive Design ist heute mehr als reine Form – es spiegelt Wandel, Verantwortung und neue Denkweisen. Zwischen globalen Märkten, Elektromobilität, Chinas Aufbruch und …",
+    teaser:
+      "Automotive Design ist heute mehr als reine Form – es spiegelt Wandel, Verantwortung und neue Denkweisen. Zwischen globalen Märkten, Elektromobilität, Chinas Aufbruch und …",
     text: "Automotive Design ist heute mehr als reine Form – es spiegelt Wandel, Verantwortung und neue Denkweisen. Zwischen globalen Märkten, Elektromobilität, Chinas Aufbruch und frischen Impulsen im Luxussegment entstehen neue Perspektiven. Wo Technologie und Ressourcen auf Kreativität treffen, wird entschieden, wie vielfältig und nachhaltig die Zukunft des Designs aussieht. Andreas Kurbos ist ein deutsch-französischer Designer und Gründer / CEO von studiokurbos, einem preisgekrönten Automobildesignstudio mit Sitz in Stuttgart und Shanghai. Der in Frankreich aufgewachsene Designer machte eine Ausbildung in Textildesign und studierte Transportation Design am Istituto Europeo di Design (IED) in Turin. Andreas Kurbos war 5 Jahre lang Designer bei smart und leitete ab 2005 das Designteam der MBtech Group (Daimler AG). Im Jahr 2013 gründete er studiokurbos und realisiert mit seinem globalen Team Mobilitäts-, Produkt- und UI/UX-Designprojekte. Andreas Kurbos ist Mitglied der Stiftung Rat für Formgebung und Mitglied des Beirats des aed e.V., Förderverein für Architektur, Technik und Design in Stuttgart. Sara Dahme mag auch alte Autos - sie ist seit diesem Jahr neu im Vorstand des aed e.V.",
   },
   {
@@ -422,8 +450,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Akademie des gesprochenen Wortes, Haußmannstr. 22, 70180 Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie zu unserer Veranstaltung \"",
-    text: "Wir freuen uns sehr, Sie zu unserer Veranstaltung \" Die Macht der Sprache: Gestaltung für Kunst und Kultur\" einladen zu dürfen. Sprache ist ein mächtiges Werkzeug, das Künstler und Gestalter nutzen, um ihre Botschaften zu vermitteln. Ob durch geschriebene Worte, gesprochene Dialoge oder visuelle Darstellungen: Sprache weckt Emotionen und hilft uns, komplexe Ideen zu vermitteln. Für uns umso mehr ein Grund, den Fokus auf Gestaltung für Kunst und Kultur zu richten - und der Frage nachzugehen, welche Rolle Sprache dabei spielen kann. Mit Grafikdesignerin Lisa Zech und Autor Mikael Vogel sprechen wir darüber, wie Sprache zur Form wird, welche Interaktion es zwischen Inhalten und Gestaltung gibt - und wie man Ideen am besten kommuniziert. Eine Abend rund um das Thema \"Sprache\" und ihre Bedeutung für Künstler und Gestalter. Denn: Sprache schafft Realität und beeinflusst unsere Wahrnehmung. Ort unserer Veranstaltung ist deshalb nicht zufällig die Akademie des gesprochenen Wortes ...",
+    teaser: 'Wir freuen uns sehr, Sie zu unserer Veranstaltung "',
+    text: 'Wir freuen uns sehr, Sie zu unserer Veranstaltung " Die Macht der Sprache: Gestaltung für Kunst und Kultur" einladen zu dürfen. Sprache ist ein mächtiges Werkzeug, das Künstler und Gestalter nutzen, um ihre Botschaften zu vermitteln. Ob durch geschriebene Worte, gesprochene Dialoge oder visuelle Darstellungen: Sprache weckt Emotionen und hilft uns, komplexe Ideen zu vermitteln. Für uns umso mehr ein Grund, den Fokus auf Gestaltung für Kunst und Kultur zu richten - und der Frage nachzugehen, welche Rolle Sprache dabei spielen kann. Mit Grafikdesignerin Lisa Zech und Autor Mikael Vogel sprechen wir darüber, wie Sprache zur Form wird, welche Interaktion es zwischen Inhalten und Gestaltung gibt - und wie man Ideen am besten kommuniziert. Eine Abend rund um das Thema "Sprache" und ihre Bedeutung für Künstler und Gestalter. Denn: Sprache schafft Realität und beeinflusst unsere Wahrnehmung. Ort unserer Veranstaltung ist deshalb nicht zufällig die Akademie des gesprochenen Wortes ...',
   },
   {
     slug: "wein-und-design-ein-praxistest",
@@ -432,8 +460,9 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie zu unserer Veranstaltung Wein & Design: ein Praxistest einladen zu dürfen. Ein Einblick in eine spannende Eventlocation im Stuttgarter Osten, …",
-    text: "Wir freuen uns sehr, Sie zu unserer Veranstaltung Wein & Design: ein Praxistest einladen zu dürfen. Ein Einblick in eine spannende Eventlocation im Stuttgarter Osten, die Wein und Design zusammenbringt. Alle pilgern zu neuen Projekten - so auch beim mittlerweile fast schon legendären \"club traube\", eine Location im Stuttgarter Osten, die nicht dem stationären und digitalen Weinhandel dient, sondern wo auch immer wieder spezielle Events stattfinden. Der club traube hat seit 2019 etliche Architekturpreise gewonnen und viel Aufmerksamkeit auf sich gezogen. Doch erst in der Nutzung bewährt sich Architektur wirklich. Wir laden deshalb zu einem Blick hinter die Kulissen. Marco Hippmann von Hippmann Architekten stellt gemeinsam mit Oliver Schmid, dem Macher des club traube, das Gebäude und die Idee dahinter vor. Was hat sich bewährt, was nicht? Welche Rolle spielt die Architektur für den Erfolg der Institution? Und gibt es etwas, das beide mit heutigem Wissen ändern würden? Diesen Fragen und vielen anderen wollen wir bei der extra für uns konzipierten Abendveranstaltung nachgehen. Wir freuen uns auf viele interessante Einblicke. Guten Wein und Gelegenheit zum Networken gibt es natürlich auch! Wein & Design: ein Praxistest",
+    teaser:
+      "Wir freuen uns sehr, Sie zu unserer Veranstaltung Wein & Design: ein Praxistest einladen zu dürfen. Ein Einblick in eine spannende Eventlocation im Stuttgarter Osten, …",
+    text: 'Wir freuen uns sehr, Sie zu unserer Veranstaltung Wein & Design: ein Praxistest einladen zu dürfen. Ein Einblick in eine spannende Eventlocation im Stuttgarter Osten, die Wein und Design zusammenbringt. Alle pilgern zu neuen Projekten - so auch beim mittlerweile fast schon legendären "club traube", eine Location im Stuttgarter Osten, die nicht dem stationären und digitalen Weinhandel dient, sondern wo auch immer wieder spezielle Events stattfinden. Der club traube hat seit 2019 etliche Architekturpreise gewonnen und viel Aufmerksamkeit auf sich gezogen. Doch erst in der Nutzung bewährt sich Architektur wirklich. Wir laden deshalb zu einem Blick hinter die Kulissen. Marco Hippmann von Hippmann Architekten stellt gemeinsam mit Oliver Schmid, dem Macher des club traube, das Gebäude und die Idee dahinter vor. Was hat sich bewährt, was nicht? Welche Rolle spielt die Architektur für den Erfolg der Institution? Und gibt es etwas, das beide mit heutigem Wissen ändern würden? Diesen Fragen und vielen anderen wollen wir bei der extra für uns konzipierten Abendveranstaltung nachgehen. Wir freuen uns auf viele interessante Einblicke. Guten Wein und Gelegenheit zum Networken gibt es natürlich auch! Wein & Design: ein Praxistest',
   },
   {
     slug: "aed-lebenswege-gabriele-fischer-brand-eins",
@@ -442,7 +471,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Material Bank Studio, Dieselstraße 32, 70469 Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie zu unserer Veranstaltung Lebenswege: Gabriele Fischer einladen zu dürfen. Ein Gespräch mit der Frau, die hinter einer Ikone der deutschen …",
+    teaser:
+      "Wir freuen uns sehr, Sie zu unserer Veranstaltung Lebenswege: Gabriele Fischer einladen zu dürfen. Ein Gespräch mit der Frau, die hinter einer Ikone der deutschen …",
     text: "Wir freuen uns sehr, Sie zu unserer Veranstaltung Lebenswege: Gabriele Fischer einladen zu dürfen. Ein Gespräch mit der Frau, die hinter einer Ikone der deutschen Magazinlandschaft steht. Rund 50.000 verkaufte Exemplare pro Ausgabe, sechs Mal so viele Leser:innen: Das Wirtschaftsmagazin brand eins steht seit 1999 für kluge Inhalte und exzellente Gestaltung gleichermaßen. Dass das Magazin auch in der Kreativbranche Kultstatus genießt, liegt maßgeblich an Mitbegründerin und Chefredakteurin Gabriele Fischer: Nun ist sie in unserer Reihe „Lebenswege“ zu Gast. Die Frau, die „Durchhaltevermögen“ als ihre größte Stärke (und „Durchhaltewillen“ als ihre größte Schwäche) bezeichnet, blickt mit uns zurück und voraus: Am 26. März um 19 Uhr gibt sie in der Material Bank Einblick in ihren Werdegang und ihre Haltung. brand eins porträtiert Unternehmen und deren Persönlichkeiten. Das Magazin beschäftigt sich auch mit wirtschafts- und gesellschaftspolitischen Themen sowie Berichten, Reportagen und Interviews aus der Praxis.",
   },
   {
@@ -452,7 +482,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Hospitalhof, Büchsenstr. 33, 70174 Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof, dem IZKT und der BLICKFANG Designmesse zu unserer Veranstaltung Politisches Design: Demokratie gestalten? …",
+    teaser:
+      "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof, dem IZKT und der BLICKFANG Designmesse zu unserer Veranstaltung Politisches Design: Demokratie gestalten? …",
     text: "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof, dem IZKT und der BLICKFANG Designmesse zu unserer Veranstaltung Politisches Design: Demokratie gestalten? einladen zu dürfen Kommunikations- und Industrie-Designer:innen gestalten unserer Umwelt – nicht nur im ästhetischen Sinne. Ihr Handeln hat konkrete Auswirkungen darauf, mit welchen Produkten wir leben, wie verständlich Formulare und Websiten sind - und wie unsere Gesellschaft organisiert ist, nicht zuletzt im demokratischen Miteinander. In der Veranstaltungsreihe „Design und Ethik“ befassen wir uns deshalb unter unterschiedlichen Gesichtspunkten mit der gesellschaftlichen Verantwortung der Gestaltenden. Wie wirkt sich ihr Handeln auf uns alle aus – und was können (und sollten) sie tun, um für eine zukunftssichere Gestaltung unserer Umwelt zu sorgen? Schwerpunkt dieses Abends ist die Frage, was gutes Design eigentlich mit Demokratie zu tun hat - und wie Gestalter:innen dazu beitragen können, das gesellschaftliche Miteinander ebenso wie den Einsatz für unser Gemeinwesen zu stärken und zu fördern. Vorträge und Diskussionen rund um ein Thema, das uns alle betrifft ...",
   },
   {
@@ -462,8 +493,9 @@ export const events: EventItem[] = [
     uhrzeit: "09:30–18:00",
     ort: "Stuttgart",
     format: "Führung",
-    teaser: "Wir freuen uns sehr, Sie auf die Kooperationsveranstaltung \"Circular Design Summit\" des Rats für Formgebung aufmerksam machen zu dürfen.",
-    text: "Wir freuen uns sehr, Sie auf die Kooperationsveranstaltung \"Circular Design Summit\" des Rats für Formgebung aufmerksam machen zu dürfen. Der Circular Design Summit des German Design Council bringt führende Köpfe aus Wirtschaft, Industrie und Design zusammen, die eine gemeinsame Vision verfolgen: wirtschaftlichen Erfolg im Einklang mit ökologischer Nachhaltigkeit. Erfahren Sie, wie Circular Design die Transformation der Wirtschaft vorantreibt und wie Sie Teil dieser Entwicklung werden können. Weitere Informationen: Website des Circular Design Summit",
+    teaser:
+      'Wir freuen uns sehr, Sie auf die Kooperationsveranstaltung "Circular Design Summit" des Rats für Formgebung aufmerksam machen zu dürfen.',
+    text: 'Wir freuen uns sehr, Sie auf die Kooperationsveranstaltung "Circular Design Summit" des Rats für Formgebung aufmerksam machen zu dürfen. Der Circular Design Summit des German Design Council bringt führende Köpfe aus Wirtschaft, Industrie und Design zusammen, die eine gemeinsame Vision verfolgen: wirtschaftlichen Erfolg im Einklang mit ökologischer Nachhaltigkeit. Erfahren Sie, wie Circular Design die Transformation der Wirtschaft vorantreibt und wie Sie Teil dieser Entwicklung werden können. Weitere Informationen: Website des Circular Design Summit',
   },
   {
     slug: "inklusives-design-gestaltung-ohne-barrieren",
@@ -472,7 +504,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof Stuttgart zu unserer Veranstaltung „Inklusives Design: Gestaltung ohne Barrieren?“ einladen zu dürfen.",
+    teaser:
+      "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof Stuttgart zu unserer Veranstaltung „Inklusives Design: Gestaltung ohne Barrieren?“ einladen zu dürfen.",
     text: "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof Stuttgart zu unserer Veranstaltung „Inklusives Design: Gestaltung ohne Barrieren?“ einladen zu dürfen. Produkt- und Kommunikationsdesigner:innen gestalten unserer Umwelt – nicht nur im ästhetischen Sinne. Ihr Handeln hat konkrete Auswirkungen darauf, mit welchen Produkten wir leben, wie verständlich Formulare und Webseiten sind - und wie langlebig all das ist, was wir an Gegenständen konsumieren. In der Veranstaltungsreihe „Design und Ethik“ befassen wir uns deshalb unter unterschiedlichen Gesichtspunkten mit der gesellschaftlichen Verantwortung der Gestaltenden. Wie wirkt sich ihr Handeln auf uns alle aus – und was können (und sollten) sie tun, um für eine zukunftssichere Gestaltung unserer Umwelt zu sorgen? Nicht alles, was gut aussieht, ist auch gut nutzbar … Gleiches gilt für die Verständlichkeit, für die „Lesbarkeit“ dieser Gegenstände oder Designs. Gutes Design bietet Orientierung und schließt niemanden aus. Wie aber können Designerinnen und Designer dazu beitragen, dass ihre Produkte nicht nur gut aussehen, sondern auch möglichst vielen Menschen zugänglich sind? Was ist inklusives Design – und welche Rolle spielen dabei die Schnittstellen zwischen den Gewerken?",
   },
   {
@@ -542,7 +575,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Hospitalhof Stuttgart, Büchsenstr. 33, 70174 Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof Stuttgart zu unserer Veranstaltung „Design und Ethik: Gesundheit gestalten“ einladen zu dürfen.",
+    teaser:
+      "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof Stuttgart zu unserer Veranstaltung „Design und Ethik: Gesundheit gestalten“ einladen zu dürfen.",
     text: "Wir freuen uns sehr, Sie in Kooperation mit dem Hospitalhof Stuttgart zu unserer Veranstaltung „Design und Ethik: Gesundheit gestalten“ einladen zu dürfen. Produkt- und Kommunikationsdesigner:innen gestalten unsere Umwelt, nicht nur im ästhetischen Sinne. Ihr Handeln hat konkrete Auswirkungen darauf, mit welchen Produkten wir leben, wie verständlich Formulare und Websites sind und wie langlebig all das ist, was wir an Gegenständen nutzen. In der Veranstaltungsreihe „Design und Ethik“ geht es unter unterschiedlichen Gesichtspunkten um die Frage nach der gesellschaftlichen Verantwortung der Gestaltenden. Wie wirkt sich ihr Handeln auf uns alle aus, und was können (und sollten) sie tun, um für eine zukunftssichere Gestaltung unserer Umwelt zu sorgen? Von der blendungsfreien OP-Lampe über die smarte Gehhilfe bis zum filigranen Gerät für minimalinvasive Eingriffe: Das Spektrum, in dem Designer:innen dazu beitragen, wichtige Aspekte rund um unsere Gesundheit zu gestalten, ist sehr groß. Bei dieser Veranstaltung werden gelungene Beispiele präsentiert und unter der Fragestellung diskutiert, welche Rolle gute Gestaltung für unsere Gesundheit in der Zukunft spielen kann.",
   },
   {
@@ -552,7 +586,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Wir freuen uns sehr, Sie zu unserer Veranstaltung „Die Architektur des Wassers“ einladen zu dürfen.",
+    teaser:
+      "Wir freuen uns sehr, Sie zu unserer Veranstaltung „Die Architektur des Wassers“ einladen zu dürfen.",
     text: "Wir freuen uns sehr, Sie zu unserer Veranstaltung „Die Architektur des Wassers“ einladen zu dürfen. Das sinnliche Erleben von Wasser in außergewöhnlicher Architektur ist heute in vielen Wellness-Hotels und öffentlichen Bädern selbstverständlich. Der Erholungseffekt wie auch Spaß und Sport stehen im Fokus. Hersteller machen sich Gedanken, wie wir mit der Ressource Wasser die Zukunft nachhaltiger und klimagerecht gestalten können. Der aed Abend bei der Wahl GmbH in Stuttgart bringt Architektur, Engineering und Design rund um Wasser auf den Punkt. Aus dem Innovationslabor von AXOR/Hansgrohe erfahren wir von neuen Technologien, die Nachhaltigkeit nicht mit Verzicht in Verbindung bringen, sondern mit Genuss, Qualität, Langlebigkeit und Design. Außergewöhnliche Bäderbauten präsentieren 4a Architekten – hier in Stuttgart uns allen bekannt: deren ReDesign vom Bad Berg. Und den Wellness-Aspekt vertritt des renommierte Büro Matteo Thun Milano: „die Architektur sollte unsere Gesundheit und unser Wohlbefinden beschützen“ – ein Zitat aus den Werten des Studios. Wir bedanken uns bereits heute für die Vorträge und die Zeit, die wir mit den Referenten verbringen werden. Dankeschön ebenso an die Marke AXOR für die Förderung dieses aed Abends und dem Team der Wahl GmbH für das Hosting.",
   },
   {
@@ -562,7 +597,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Kunstmuseum Stuttgart, Kleiner Schlossplatz 1, 70173 Stuttgart",
     format: "Vortrag",
-    teaser: "Geliebt, gehasst, ignoriert – der Kleine Schlossplatz ruft die unterschiedlichsten Emotionen hervor. Seine Gestaltung war in den vergangenen Jahren immer wieder …",
+    teaser:
+      "Geliebt, gehasst, ignoriert – der Kleine Schlossplatz ruft die unterschiedlichsten Emotionen hervor. Seine Gestaltung war in den vergangenen Jahren immer wieder …",
     text: "Geliebt, gehasst, ignoriert – der Kleine Schlossplatz ruft die unterschiedlichsten Emotionen hervor. Seine Gestaltung war in den vergangenen Jahren immer wieder Gegenstand heftiger Diskussionen. Warum dieses wichtige Stück Stadt heute so aussieht, wie wir es kennen, wie es im Vergleich mit anderen Plätzen abschneidet und was hier in Zukunft vielleicht Neues entstehen kann – all diesen Fragen wollen wir an unserem Vortrags- und Gesprächsabend nachgehen. Anlass unserer Veranstaltung ist die aktuelle Hajek-Ausstellung im Kunstmuseum. Hajek war davon überzeugt, dass „die bildende Kunst den Menschen in seinem Verhalten verändern kann“. Diese Überzeugung war auch Anstoß für sein Projekt „Platzmal“: Auf dem Kleinen Schlossplatz ließ Hajek den Boden großflächig mit geometrischen Formen bemalen und stellte Plastiken auf, die zum Sitzen und Verweilen einladen sollten. Auch die Wände der umliegenden Gebäude wurden bespielt. Die Betonwüste des damaligen Kleinen Schlossplatzes – auch „kalte Platte“ genannt – wurde nicht zuletzt durch die Interventionen von Hajek zum belebten Hotspot. Im Zuge des Neubaus des Kunstmuseums wurde dieser Bereich 2002 umgestaltet – zum Leidwesen vieler Stuttgarter. Mit dem Projekt „Platzprobe“ aktualisiert das Kunstmuseum nun Hajeks Vision einer sozialen, demokratischen und künstlerischen Gestaltung des öffentlichen Raums. Wie die Zukunft des Platzes aussehen mag",
   },
   {
@@ -572,7 +608,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Universität Stuttgart, Institut für Grundlagen moderner Architektur und Entwerfen (IGmA), Keplerstrasse 11 (Gebäude K1), 6. Stock, 70174 Stuttgart",
     format: "Vortrag",
-    teaser: "Das IGmA (Institut für Grundlagen moderner Architektur und Entwerfen) wurde 1967 an der damaligen TH Stuttgart als erstes Hochschulinstitut für Architekturtheorie in der …",
+    teaser:
+      "Das IGmA (Institut für Grundlagen moderner Architektur und Entwerfen) wurde 1967 an der damaligen TH Stuttgart als erstes Hochschulinstitut für Architekturtheorie in der …",
     text: "Das IGmA (Institut für Grundlagen moderner Architektur und Entwerfen) wurde 1967 an der damaligen TH Stuttgart als erstes Hochschulinstitut für Architekturtheorie in der Bundesrepublik gegründet. Der Gründungsdirektor Jürgen Joedicke leitete das Institut bis 1993 und prägte als Publizist, Wissenschaftler, Lehrer und praktizierender Architekt – unter anderem war er Teil des Planungsteams für die Olympiabauten in München 1972 – Generationen von Studierenden. Anlässlich des 99. Geburtstags Joedickes lädt das IGmA in die Institutsräume im denkmalgeschützten Kollegiengebäude 1 (K1) der Universität Stuttgart auf dem Campus Stadtmitte. Prof. Dr. Stephan Trüby – seit 2018 Lehrstuhlinhaber und Leiter des Instituts – und seine Mitarbeitenden blicken zurück auf beinahe sechs Jahrzehnte Reflexion moderner Architektur in Forschung, Lehre und Praxis und geben Einblick in aktuelle Projekte des IGmA. Eine offene Diskussionsrunde schließt den Abend ab.",
   },
   {
@@ -582,7 +619,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Nikolauspflege Stuttgart, Am Kräherwald 271, 70193 Stuttgart",
     format: "Führung",
-    teaser: "Die Nikolauspflege - eine Stuttgarter Institution, die auch weit über die Stadtgrenzen bekannt ist. Seit 1856 bietet sie blinden und sehbehinderten Menschen …",
+    teaser:
+      "Die Nikolauspflege - eine Stuttgarter Institution, die auch weit über die Stadtgrenzen bekannt ist. Seit 1856 bietet sie blinden und sehbehinderten Menschen …",
     text: "Die Nikolauspflege - eine Stuttgarter Institution, die auch weit über die Stadtgrenzen bekannt ist. Seit 1856 bietet sie blinden und sehbehinderten Menschen Hilfeleistungen an und fördert ihre schulische und berufliche Bildung. Der historische Campus der Stiftung am Kräherwald wurde nun durch einen beeindruckenden Neubau erweitert. Mit einem der Topographie sinnfällig folgenden Baukörper grenzt der Schulneubau des Architekturbüros Birk Heilmeyer und Frenzel das Areal schalltechnisch zur Krä­herwaldstraße ab. Die kompakte Gebäudeform schafft eine respektvolle Distanz zum Altbau. Der entstehende Zwischenraum zwischen Neu- und Altbau bildet die neue Campusmitte und lädt zum Verweilen ein. Bei der inneren Organisation folgt die Struktur den Gestaltungsprinzipien für blinde und sehbehinderte Menschen. Um den hellen Innenhof herum bindet eine Ringerschließung mit rechten Winkeln und kontrastreichen Orientierungsmöglich­keiten sämtliche Klassenzimmer an. Die Öffnungen der zweischaligen Klinkerfassade sind mit großflächigen Verglasungen (bei geringer Brüstungshöhe) so gesetzt, dass alle Nutzer:innen des Gebäudes, Rollstuhlfahrer und Fußgänger, Blickbezüge in die Landschaft haben. Die exklusive Führung für den aed ermöglicht – noch vor der Eröffnung – Einblicke in den neuen Campus und seine verschiedenen Gebäude.",
   },
   {
@@ -592,7 +630,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Stuttgart",
     format: "Vortrag",
-    teaser: "Podiumsdiskussion in Kooperation mit dem Hospitalhof Stuttgart sowie dem Internationalen Zentrum für Kultur- und Technikforschung Universität Stuttgart (IZKT) und der …",
+    teaser:
+      "Podiumsdiskussion in Kooperation mit dem Hospitalhof Stuttgart sowie dem Internationalen Zentrum für Kultur- und Technikforschung Universität Stuttgart (IZKT) und der …",
     text: "Podiumsdiskussion in Kooperation mit dem Hospitalhof Stuttgart sowie dem Internationalen Zentrum für Kultur- und Technikforschung Universität Stuttgart (IZKT) und der Hochschule für Technik Stuttgart Architekt:innen, Ingenieur:innen und andere Beteiligte des Bauwesens haben eine große Verantwortung für die Gestaltung unserer Umwelt. Ihr Handeln hat konkrete Auswirkungen darauf, wie lebenswert unsere Städte sind, welche Ressourcen der Erde entnommen werden und wie sich unser Klima künftig entwickelt. Was können und sollten sie tun, um für eine zukunftssichere Gestaltung unserer Umwelt zu sorgen? Im Mittelpunkt steht an diesem Abend die Frage nach der Gestaltung des öffentlichen Raums. Denn der öffentliche Raum betrifft uns alle. Er bestimmt, welche Räume der Begegnung es gibt, wie sicher wir uns fühlen, und wie das Mikroklima in unserer unmittelbaren Umgebung ist. Welche Möglichkeiten haben Architekt:innen ebenso wie Fachplaner:innen und Bauherren, um öffentlichen Raum lebenswert und nachhaltig zu gestalten – und welche Konsequenzen haben ihre jeweiligen Entscheidungen für uns alle? Referentinnen: Prof. Dr. Martina Baum (Städtebau-Institut, Universität Stuttgart), Dr. Kerstin Renz (Akademie Bad Boll)",
   },
   {
@@ -621,7 +660,8 @@ export const events: EventItem[] = [
     uhrzeit: "15:00–17:30",
     ort: "Bonatzbau, Treffpunkt: Zugang Z11 (Tür im Verbindungssteg zwischen Gleis 16 und Schlossgarten/Planetarium), 70173 Stuttgart",
     format: "Führung",
-    teaser: "Der Umbau des Stuttgarter Hauptbahnhofs ist eines von Deutschlands größten Infrastrukturprojekten. Herzstück des Umbaus ist – neben der unterirdischen Bahnhofshalle – …",
+    teaser:
+      "Der Umbau des Stuttgarter Hauptbahnhofs ist eines von Deutschlands größten Infrastrukturprojekten. Herzstück des Umbaus ist – neben der unterirdischen Bahnhofshalle – …",
     text: "Der Umbau des Stuttgarter Hauptbahnhofs ist eines von Deutschlands größten Infrastrukturprojekten. Herzstück des Umbaus ist – neben der unterirdischen Bahnhofshalle – die Revitalisierung des sogenannten Bonatzbaus. Dieses Gebäude geht auf einen Planungswettbewerb der königlichen Generaldirektion von 1914 zurück. Das 1923 eingeweihte Empfangsgebäude wurde nach einem Entwurf von Paul Bonatz und Friedrich Eugen Scholer errichtet. Es zählte seinerzeit zu den spektakulärsten Bauten der Weimarer Republik. Im Zuge des Umbaus des Stuttgarter Bahnhofs wird der Bonatzbau nun vollständig modernisiert. Das historische Empfangsgebäude erhält ein stabilisierendes Tragwerk. Der Eingang ist künftig ebenerdig – der Zugang zu den Gleisen der neuen Bahnsteighalle wird so erleichtert. Auf zwei neuen, lichtdurchfluteten Ebenen entstehen Flächen für den Einzelhandel, in den oberen Geschossen wird ein modernes Vier-Sterne Hotel mit Lounge und Meeting-Flächen untergebracht. Das stadtbildprägende Äußere des denkmalgeschützten Bauwerks bleibt erhalten. Im Rahmen der speziell für den aed arrangierten Baustellenführung können wir uns nicht nur einen persönlichen Eindruck der aktuellen Situation vor Ort verschaffen. Wir erhalten auch einen detaillierten Einblick in die Besonderheiten einer so kompakten Baustelle im Herzen der Stadt und all die besonderen Herausforderungen, die aus Lage und Zustand des Best",
   },
   {
@@ -656,7 +696,8 @@ export const events: EventItem[] = [
   },
   {
     slug: "aed-neujahrsempfang-2024-in-kooperation-mit-literaturhaus-st",
-    titel: "aed Neujahrsempfang 2024 in Kooperation mit Literaturhaus Stuttgart – eingebunden in die Veranstaltung:",
+    titel:
+      "aed Neujahrsempfang 2024 in Kooperation mit Literaturhaus Stuttgart – eingebunden in die Veranstaltung:",
     datum: "2024-01-24",
     uhrzeit: "24:01",
     ort: "Literaturhaus Stuttgart, Breitscheidstraße 4, 70174 Stuttgart",
@@ -691,7 +732,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Häfele Blackbox, Naststr. 15b, 70376 Stuttgart",
     format: "Vortrag",
-    teaser: "Hospitality Design vereint Gestalter:innen und Designer:innen aus ganz unterschiedlichen Bereichen in einer zentralen Aufgabe.",
+    teaser:
+      "Hospitality Design vereint Gestalter:innen und Designer:innen aus ganz unterschiedlichen Bereichen in einer zentralen Aufgabe.",
     text: "Hospitality Design vereint Gestalter:innen und Designer:innen aus ganz unterschiedlichen Bereichen in einer zentralen Aufgabe. Hospitality Design vereint Gestalter:innen und Designer:innen aus ganz unterschiedlichen Bereichen in einer zentralen Aufgabe: das Schaffen des perfekten Aufenthaltsorts für alle Gäste. Was aber bedeutet dies ganz praktisch, wenn es um die Gestaltung und Planung von Licht, Materialien und Oberflächen in einem modernen Hotel geht? Angesichts immer vielfältigerer Lebensstile und unterschiedlichster Interessen der Gäste steigen die Anforderungen an die Hotellerie. Durch verschiedene soziokulturelle Ausdifferenzierungen wird es dabei immer schwieriger, sich als Hotelmarke zu differenzieren. Das Hospitality Design rückt deshalb zunehmend ins Zentrum des Interesses aller Beteiligten. Gemeinsam mit Experten aus Projektentwicklung und Hotellerie möchten wir der Fragestellung nachgehen, wie Hotel-Marken künftig einen gemeinsamen Nenner finden und sich je nach Standort dennoch individuell präsentieren können. Beleuchten wollen wir dies anhand von Beispielen wie dem neuen Hotel im Gerber, Ruby Hanna. Im Anschluss an die Vorträge und die Podiumsdiskussion gibt es bei Getränken und Fingerfood die Möglichkeit, das Gehörte im Gespräch zu vertiefen – und in der Blackbox auch einige innovative Lösungen in Augenschein zu nehmen, die aktuell für die Hotellerie in Entwickl",
   },
   {
@@ -700,7 +742,8 @@ export const events: EventItem[] = [
     datum: "2023-11-09",
     ort: "Stuttgart",
     format: "Führung",
-    teaser: "Die wunderschöne Villa Berg im Stuttgarter Osten ist vielen unbekannt - das wollen wir ändern!",
+    teaser:
+      "Die wunderschöne Villa Berg im Stuttgarter Osten ist vielen unbekannt - das wollen wir ändern!",
     text: "Die wunderschöne Villa Berg im Stuttgarter Osten ist vielen unbekannt - das wollen wir ändern! Sind branchenübergreifende Zusammenarbeit und kollaborative Ansätze die Schlüsselfaktoren für erfolgreiche Innovationsprozesse in Unternehmen? Sieht so eine erfolgversprechende Arbeitskultur der Zukunft aus? Unter dem Leitmotiv „connect. collaborate. continue.“ geht der GDC Summit 2023 diesen Fragen nach. Gemeinsam mit Branchenexpert*innen, Markenspezialist*innen und Designer*innen wird auf dem Kongress diskutiert, welche Potenziale in wissensvernetzten und kollaborativen Ansätze für erfolgreiche Transformationsprozesse liegen. Informationen zum Programm und den Speakern werden in Kürze bekanntgegeben. Die Teilnahme für aed Mitglieder zu Konditionen der Stiftermitglieder des Rat für Formgebung.",
   },
   {
@@ -710,7 +753,8 @@ export const events: EventItem[] = [
     uhrzeit: "19:00–21:00",
     ort: "Evang. Bildungszentrum Hospitalhof, Büchsenstraße 33, 70174 Stuttgart",
     format: "Vortrag",
-    teaser: "Architekten und Ingenieure haben eine große gesellschaftliche Verantwortung. Was ist ihre Rolle in Bezug auf Klima und Emissionen?",
+    teaser:
+      "Architekten und Ingenieure haben eine große gesellschaftliche Verantwortung. Was ist ihre Rolle in Bezug auf Klima und Emissionen?",
     text: "Architekten und Ingenieure haben eine große gesellschaftliche Verantwortung. Was ist ihre Rolle in Bezug auf Klima und Emissionen? Architekten, Ingenieure und andere Beteiligte des Bauwesens haben eine große Verantwortung für die Gestaltung unserer Umwelt – nicht nur im ästhetischen Sinne. Ihr Handeln hat konkrete Auswirkungen darauf, wie lebenswert unsere Städte sind, welche Ressourcen der Erde entnommen werden und wie sich unser Klima künftig entwickelt. In der Veranstaltungsreihe „Architektur und Ethik“ wollen wir uns unterschiedlichen Gesichtspunkten mit der gesellschaftlichen Verantwortung des Bauwesens befassen. Wie wirkt sich das Handeln der Planenden auf uns alle aus – und was können (und sollten) sie tun, um für eine zukunftssichere Gestaltung unserer Umwelt zu sorgen? Der erste Abend unserer Reihe ist dem Klima gewidmet. Welche Rolle spielen Emissionen aus unserer gebauten Umwelt für den Klimawandel? Welche Ansätze gibt es für eine positive Veränderung - und wo steht dringender Handlungsbedarf? Was kann der Einzelne tun - und wo muss die Gesellschaft intervenieren? Was sind die Randbedingungen künftigen Handelns? Diesen und anderen Fragen wollen wir bei unserer Veranstaltung nachgehen.",
   },
   {
@@ -720,7 +764,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Villa Berg Park, Sickstraße 48 (Treffpunkt: Ecke Ostendstraße), 70190 Stuttgart",
     format: "Vortrag",
-    teaser: "Die wunderschöne Villa Berg im Stuttgarter Osten ist vielen unbekannt - das wollen wir ändern!",
+    teaser:
+      "Die wunderschöne Villa Berg im Stuttgarter Osten ist vielen unbekannt - das wollen wir ändern!",
     text: "Die wunderschöne Villa Berg im Stuttgarter Osten ist vielen unbekannt - das wollen wir ändern! Der wunderschöne Park hinter dem SWR-Gebäude im Stuttgarter Osten ist vielen Stuttgarter:innen ein Begriff – die namensgebende Villa Berg, die im Herzen dieses Parks steht, ist jedoch viel weniger bekannt. Die Mitte des 19. Jahrhunderts errichtete Sommerresidenz von König Karl und Königin Olga steht seit vielen Jahren leer – ist nun das Ende des Dornröschen-Schlafs gekommen? Bei unserem Rundgang durch den Park und um die Villa herum (ein Besuch des Inneren ist momentan leider – noch – nicht möglich) erfahren wir mehr über die wechselvolle Geschichte dieses bedeutenden Baudenkmals und über die Bemühungen interessierter Bürgerinnen und Bürger, für eine Neubelebung zu sorgen. Neben dem Blick zurück soll aber natürlich auch die Zukunft nicht zu kurz kommen. Was sind die Überlegungen für die künftige Nutzung und was wird sich voraussichtlich in den kommenden Jahren ändern? Vertreter des Ateliers Brückner geben uns einen ersten Einblick in die aktuellen Überlegungen. Wir sind gespannt auf diesen Blick hinter die Kulissen. Bitte beachten Sie, dass unsere Veranstaltung im Außenbereich stattfindet und dass deshalb auf der Witterung angepasste Kleidung geachtet werden sollte.",
   },
   {
@@ -730,7 +775,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Haußmannstr. 44, 70188 Stuttgart",
     format: "Führung",
-    teaser: "Die Waldorfschule an der Uhlandshöhe in Stuttgart wurde durch einen spektakulären Neubau ergänzt - wir schauen hinter die Kulissen!",
+    teaser:
+      "Die Waldorfschule an der Uhlandshöhe in Stuttgart wurde durch einen spektakulären Neubau ergänzt - wir schauen hinter die Kulissen!",
     text: "Die Waldorfschule an der Uhlandshöhe in Stuttgart wurde durch einen spektakulären Neubau ergänzt - wir schauen hinter die Kulissen! Die Freie Waldorfschule Uhlandshöhe wurde im September 1919 von Emil Molt und Rudolf Steiner als weltweit erste Waldorfschule gegründet und liegt in exponierter Halbhöhenlage unterhalb der Uhlandshöhe im Stuttgarter Osten. Die Gebäude auf dem durch ein starkes Gefälle geprägten Schulgelände wurden vorwiegend in der Nachkriegszeit errichtet. Machbarkeitsstudien ergaben 2014 einen dringlichen Raumbedarf für einen Oberstufenneubau, der den Schülerinnen und Schülern u.a. neue, dem aktuellen Stand der Technik entsprechende Fachräume für Naturwissenschaften und Kunst, einen Eurythmie- und einen neuen Speisesaal anbietet. Dieser im Juni 2023 eröffnete Neubau steht im Mittelpunkt der speziell für den aed konzipierten Architekturführung. Der Entwurfsarchitekt Stefan Behnisch führt uns zusammen mit einem Vertreter des für das innovative Klimakonzept zuständigen Büros Transsolar. Wir freuen uns auf diesen besonderen, im Dialog erfolgenden Blick hinter die Kulissen eines architektonisch, funktional und technisch bemerkenswerten Gebäudes. Der Neubau des Oberstufengebäudes wurde in einem integralen Planungs-prozess bearbeitet. Dabei arbeiteten Architekten, Bauphysiker, Energie- und HLSE-Planer gemeinsam mit Planern der anderen Gewerke sowie in enger Abstimmung m",
   },
   {
@@ -740,7 +786,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Prießnitzweg 18-22 (Treffpunkt: Baumannweg 14), 70374 Stuttgart",
     format: "Vortrag",
-    teaser: "Das neue Stadtquartier P18 in Stuttgart-Bad Cannstatt ist ein Leuchtturmprojekt für ressourcenschonendes und energieeffizientes Bauen.",
+    teaser:
+      "Das neue Stadtquartier P18 in Stuttgart-Bad Cannstatt ist ein Leuchtturmprojekt für ressourcenschonendes und energieeffizientes Bauen.",
     text: "Das neue Stadtquartier P18 in Stuttgart-Bad Cannstatt ist ein Leuchtturmprojekt für ressourcenschonendes und energieeffizientes Bauen. Das neue Stadtquartier P18 in Stuttgart-Bad Cannstatt ist ein Leuchtturmprojekt für ressourcenschonendes und energieeffizientes Bauen. In kürzester Zeit wurde hier ein vorbildliches Projekt realisiert, das wegweisend für den dringend notwendigen Paradigmenwechsel im Bauwesen sein kann. Es handelt sich um ein kleinteilig strukturiertes, hocheffizientes Gebäudeensemble mit hoher Wohnqualität und hervorragendem energetischen Standard. Die innerhalb weniger Monate errichteten Gebäude sind in Holz-Modul-Fertigbauweise gefertigt. Doch nicht nur die Bauweise und das verwendete Material sind zukunftsweisend. Auch das Energiesystem des Stadtquartiers ist beispielhaft. Alle Gebäude verfügen über PVT-Kollektoren, die sowohl Strom als auch Wärme erzeugen. Abluft-Wärmepumpen sorgen für zusätzliche Wärmerückgewinnung. Das Wohnheim für Personal des Klinikums Bad Cannstatt gewinnt so in der Jahresbilanz mehr Energie aus nachhaltigen Quellen gewinnen, als es benötigt. Bei unserer speziell für den aed konzipierten Architekturführung erfahren wir nicht nur, wie genau das neue Stadtquartier energetisch autark werden konnte und welche Entwurfsideen hinter der Umsetzung stehen. Ein besonderes Augenmerk wird auch auf der Frage liegen, wie künftig in kurzer Zeit hochwe",
   },
   {
@@ -750,7 +797,8 @@ export const events: EventItem[] = [
     uhrzeit: "18:00–20:00",
     ort: "Stuttgart",
     format: "Fest",
-    teaser: "Mitten in Stuttgarts Fußgängerzone lädt die IBA’27-Festivalzentrale ein, die Internationale Bauausstellung 2027 kennenzulernen.",
+    teaser:
+      "Mitten in Stuttgarts Fußgängerzone lädt die IBA’27-Festivalzentrale ein, die Internationale Bauausstellung 2027 kennenzulernen.",
     text: "Mitten in Stuttgarts Fußgängerzone lädt die IBA’27-Festivalzentrale ein, die Internationale Bauausstellung 2027 kennenzulernen. Mitten in Stuttgarts Fußgängerzone lädt die IBA’27-Festivalzentrale ein, die Internationale Bauausstellung 2027 StadtRegion Stuttgart (IBA’27) kennen-zulernen: Ein offener Ort zum Informieren, Austauschen und Einmischen – oder auch nur zum Hinsetzen und Plaudern. Auf rund 1.300 Quadratmetern einer ehemaligen Ladenfläche erprobt die IBA noch bis Ende September 2023 die Zukunft der Zentren, schafft einen Ort der Begegnung und kreiert einen Hybrid aus Ausstellungsraum und urbanem Wohnzimmer. Die Räume der Zukunft müssen viele Nutzungen ermöglichen und so steckt auch die Festivalzentrale voller Möglichkeiten: Die Hauptausstellung zur IBA’27 macht Lust, in die Themen und Projekte der IBA einzutauchen. Bei-spiele aus aller Welt ermöglichen einen Blick über den Kesselrand. Daneben gibt es einen Arbeitsbereich, eine Lounge, eine Foodsharing-Station, eine Werkbank, Kunstexponate, eine Materialausstellung, und, und, und. Der geführte Rundgang mit Fokus auf die Ausstellung verschafft – exklusiv für den aed – einen Überblick über die IBA und die Zentrale.",
   },
   {
@@ -771,7 +819,7 @@ export const events: EventItem[] = [
     ort: "Stuttgart",
     format: "Fest",
     teaser: "Mit Unterstützung der",
-    text: "Mit Unterstützung der Karl Schlecht Stiftung und weiterer Förder:innen lobt der aed 2023 zum neunten Mal den interdisziplinären Nachwuchswettbewerb „neuland“ aus. Zur Teilnahme berechtigt waren Studierende und Absolvent:innen von Universitäten, Akademien und Hochschulen, die zum Zeitpunkt des Einsendeschlusses am 31. März 2023 nicht älter als 28 Jahre waren. Je einen 1. Preis werden in jeder der fünf ausgelobten Kategorien prämiert, dieser ist mit einem Preisgeld in Höhe von 2.000 Euro dotiert. Die Preisgelder wurden gespendet von Atelier Brückner, PHOENIX , Rat für Formgebung, studiokurbos und Werner Sobek . Außerdem gibt es bis zu vier Anerkennungen pro Kategorie. Wir freuen ins sehr, Sie zu unserer Preisverleihung \"aed neuland 2023\" im Haus der Architekten in Stuttgart einladen zu dürfen. Ein großes Dankeschön gilt auch der hochprofessionellen Jury, sie hat aus 240 Einreichungen insgesamt 23 Preisträger:innen in den fünf Kategorien ausgewählt. Die Preisträger:innen werden bei der Preisverleihung das erste Mal der Öffentlichkeit präsentiert. Wir ehren an diesem Abend, mit Übergabe der Gewinner-Urkunden und Preisgelder, nicht nur die Preisträger:innen – die fünf 1. Preise stellen ihre Projekte auch persönlich in kurzen Vorträgen vor. Die ausgezeichneten Arbeiten werden ab diesem Zeitpunkt auf www.aed-neuland.de freigeschaltet. Im Anschluss laden wir Sie ein in den Garten der A",
+    text: 'Mit Unterstützung der Karl Schlecht Stiftung und weiterer Förder:innen lobt der aed 2023 zum neunten Mal den interdisziplinären Nachwuchswettbewerb „neuland“ aus. Zur Teilnahme berechtigt waren Studierende und Absolvent:innen von Universitäten, Akademien und Hochschulen, die zum Zeitpunkt des Einsendeschlusses am 31. März 2023 nicht älter als 28 Jahre waren. Je einen 1. Preis werden in jeder der fünf ausgelobten Kategorien prämiert, dieser ist mit einem Preisgeld in Höhe von 2.000 Euro dotiert. Die Preisgelder wurden gespendet von Atelier Brückner, PHOENIX , Rat für Formgebung, studiokurbos und Werner Sobek . Außerdem gibt es bis zu vier Anerkennungen pro Kategorie. Wir freuen ins sehr, Sie zu unserer Preisverleihung "aed neuland 2023" im Haus der Architekten in Stuttgart einladen zu dürfen. Ein großes Dankeschön gilt auch der hochprofessionellen Jury, sie hat aus 240 Einreichungen insgesamt 23 Preisträger:innen in den fünf Kategorien ausgewählt. Die Preisträger:innen werden bei der Preisverleihung das erste Mal der Öffentlichkeit präsentiert. Wir ehren an diesem Abend, mit Übergabe der Gewinner-Urkunden und Preisgelder, nicht nur die Preisträger:innen – die fünf 1. Preise stellen ihre Projekte auch persönlich in kurzen Vorträgen vor. Die ausgezeichneten Arbeiten werden ab diesem Zeitpunkt auf www.aed-neuland.de freigeschaltet. Im Anschluss laden wir Sie ein in den Garten der A',
   },
   {
     slug: "young-professionals-other-ways-of-working-as-an-architect",
@@ -781,7 +829,7 @@ export const events: EventItem[] = [
     ort: "Stuttgart",
     format: "Vortrag",
     teaser: "Vortrags- und Diskussionsveranstaltung",
-    text: "Vortrags- und Diskussionsveranstaltung Willkommen zur ersten Ausgabe unserer neuen Veranstaltungsreihe „Young Professionals: Other ways of ...“. Wir wollen zeigen, wie verschieden die Arbeitsbereiche junger Gestalter heute sein können. Unsere Reihe soll Impulse geben für andere (Lebens- und Arbeits-)Wege sowie einen Ort für den Austausch zwischen Disziplinen und Generationen schaffen. In Architektur, Engineering und Design ändern sich – wie auch in anderen Teilen der Gesellschaft – das Selbstverständnis der eigenen Profession ebenso wie die Sicht von außen. Agenturen und Planungsbüros werden interdisziplinärer und diverser. Wir wollen erfahren, wie sich Young Professionals aufstellen und was ihnen heute wichtig ist für den Beruf. Wie verändert sich ihr Arbeiten - und was bleibt gleich? In der ersten Ausgabe von \"Young Professionals\" sprechen wir mit Architekt:innen und Planer:innen, die ganz unterschiedliche Wege gehen – die aber alle das Gestalten nicht sein lassen wollen... Wir wollen erfahren, welche Möglichkeiten die neue Generation sieht (und nutzt), um eigene Interessen, Lebensentwürfe oder Engagements mit dem Berufsleben zu verbinden. Übrigens: Der Ort unserer Veranstaltung passt zum Thema - die Bar \"Studio Amore\", eine kreative Zwischennutzung des ehemaligen Foyers des Hotels am Schlossgarten. Auch wer nicht zur Veranstaltung kommen kann - es lohnt sich sicher, hier ein",
+    text: 'Vortrags- und Diskussionsveranstaltung Willkommen zur ersten Ausgabe unserer neuen Veranstaltungsreihe „Young Professionals: Other ways of ...“. Wir wollen zeigen, wie verschieden die Arbeitsbereiche junger Gestalter heute sein können. Unsere Reihe soll Impulse geben für andere (Lebens- und Arbeits-)Wege sowie einen Ort für den Austausch zwischen Disziplinen und Generationen schaffen. In Architektur, Engineering und Design ändern sich – wie auch in anderen Teilen der Gesellschaft – das Selbstverständnis der eigenen Profession ebenso wie die Sicht von außen. Agenturen und Planungsbüros werden interdisziplinärer und diverser. Wir wollen erfahren, wie sich Young Professionals aufstellen und was ihnen heute wichtig ist für den Beruf. Wie verändert sich ihr Arbeiten - und was bleibt gleich? In der ersten Ausgabe von "Young Professionals" sprechen wir mit Architekt:innen und Planer:innen, die ganz unterschiedliche Wege gehen – die aber alle das Gestalten nicht sein lassen wollen... Wir wollen erfahren, welche Möglichkeiten die neue Generation sieht (und nutzt), um eigene Interessen, Lebensentwürfe oder Engagements mit dem Berufsleben zu verbinden. Übrigens: Der Ort unserer Veranstaltung passt zum Thema - die Bar "Studio Amore", eine kreative Zwischennutzung des ehemaligen Foyers des Hotels am Schlossgarten. Auch wer nicht zur Veranstaltung kommen kann - es lohnt sich sicher, hier ein',
   },
   {
     slug: "aed-on-tour-venedig-architekturbiennale-und-mehr",
@@ -877,6 +925,7 @@ export const vorstand: Person[] = [
   {
     name: "Johanna Neves Pimenta",
     slug: "johanna-neves-pimenta",
+    email: "johanna.pimenta@aed-stuttgart.de",
     rolle: "Zweite Vorsitzende",
     statement:
       "„Kreativschaffende bauen von Berufs wegen Brücken: Der Austausch untereinander stärkt uns dabei. Mit dem aed bieten wir eine Plattform für einen offenen Dialog. Hier begegnen sich die verschiedenen Disziplinen auf Augenhöhe, unabhängig von der Karriereebene – von neuland-Newcomern bis zu Lebenswege-Legenden.“ – Johanna Neves Pimenta ist Chefredakteurin von md INTERIOR DESIGN ARCHITECTURE.",
@@ -884,6 +933,7 @@ export const vorstand: Person[] = [
   {
     name: "Sara Dahme",
     slug: "sara-dahme",
+    email: "sara.dahme@aed-stuttgart.de",
     rolle: "Vorstand Kommunikation",
     statement:
       "„Ein Leben ohne gute Gestaltung ist möglich, aber sinnlos! Ich liebe es, Menschen zusammenzubringen und einen offenen Austausch anzuregen, Ungewohntes miteinander zu verknüpfen und neue Netzwerke zu etablieren – für mich ist der aed ein echter Inkubator und der Beweis dafür, dass es im Stuttgarter Kessel nur so vor Kreativität brodelt.“ – Sara Dahme ist Kunst- und Kulturvermittlerin und freie Kuratorin.",

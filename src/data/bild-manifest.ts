@@ -5,6 +5,8 @@ export type BildManifestEintrag = {
   kategorie: "event" | "person" | "projekt" | "presse" | "cover";
   jahrgang: string | null;
   url: string;
+  breite?: number;
+  hoehe?: number;
   verwendungen: string[];
 };
 
@@ -15,6 +17,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/100-jahre-frei-otto-vergangenheit-gegenwart-und-zukunft-des.webp",
+    "breite": 462,
+    "hoehe": 347,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -26,6 +30,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/20-jahre-aed-ein-grund-zu-feiern.webp",
+    "breite": 462,
+    "hoehe": 654,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -37,6 +43,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/3d-druck-wohin-geht-die-reise.webp",
+    "breite": 462,
+    "hoehe": 280,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -48,6 +56,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-design-talk-was-ist-gut-the-power-of-design.webp",
+    "breite": 1600,
+    "hoehe": 900,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -59,6 +69,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-drinks-book-club-edition.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -70,6 +82,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-drinks-vins.webp",
+    "breite": 462,
+    "hoehe": 459,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -81,6 +95,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-drinks-x-ecotrii.webp",
+    "breite": 462,
+    "hoehe": 449,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -92,6 +108,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-eventreihe-jung-und-hungrig-zu-gast-bei-matter-of.webp",
+    "breite": 462,
+    "hoehe": 231,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -103,6 +121,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-eventreihe-jung-und-hungrig-zu-gast-bei-studio-bovti-x-f.webp",
+    "breite": 462,
+    "hoehe": 231,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -114,6 +134,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-eventreihe-jung-und-hungrig-zu-gast-bei-studio-creative.webp",
+    "breite": 462,
+    "hoehe": 231,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -125,6 +147,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-expert-dinner.webp",
+    "breite": 462,
+    "hoehe": 616,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -136,6 +160,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-lebenswege-gabriele-fischer-brand-eins.webp",
+    "breite": 462,
+    "hoehe": 189,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -147,6 +173,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-neujahrsempfang-2024-in-kooperation-mit-literaturhaus-st.webp",
+    "breite": 1080,
+    "hoehe": 721,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -158,6 +186,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-on-tour-die-sammlung-froehlich.webp",
+    "breite": 1280,
+    "hoehe": 960,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -169,6 +199,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-on-tour-hamburg.webp",
+    "breite": 1600,
+    "hoehe": 1115,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -180,6 +212,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/aed-on-tour-venedig-architekturbiennale-und-mehr.webp",
+    "breite": 1600,
+    "hoehe": 1280,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -191,6 +225,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/ai-vs-creative-intelligence-die-zukunft-der-kreativbranche.webp",
+    "breite": 462,
+    "hoehe": 289,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -202,6 +238,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/architektur-des-wassers.webp",
+    "breite": 1526,
+    "hoehe": 1014,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -213,6 +251,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/architektur-und-ethik-klima-und-emissionen.webp",
+    "breite": 1600,
+    "hoehe": 1066,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -224,6 +264,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/architektur-und-ethik-materialien.webp",
+    "breite": 1600,
+    "hoehe": 850,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -235,6 +277,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/architektur-und-ethik-oeffentlicher-raum.webp",
+    "breite": 940,
+    "hoehe": 470,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -246,6 +290,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/architektur-und-ethik-wohnen.webp",
+    "breite": 1600,
+    "hoehe": 1200,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -257,6 +303,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/areal-sued.webp",
+    "breite": 1600,
+    "hoehe": 1067,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -268,6 +316,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/automotive-design-was-bringt-die-zukunft.webp",
+    "breite": 462,
+    "hoehe": 370,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -279,6 +329,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/bauen-in-zeiten-des-klimawandels.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -290,6 +342,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/bello-e-possibile-die-villa-massimo-zu-gast.webp",
+    "breite": 1170,
+    "hoehe": 936,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -301,6 +355,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/biodiversitaet-begruenung-geometrien-nachhaltigkeit-im-staed.webp",
+    "breite": 462,
+    "hoehe": 259,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -312,6 +368,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/brenzkirche-iba27.webp",
+    "breite": 462,
+    "hoehe": 291,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -323,6 +381,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/circular-design-summit-rethinking-the-economy.webp",
+    "breite": 462,
+    "hoehe": 260,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -334,6 +394,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/curious-career-club.webp",
+    "breite": 462,
+    "hoehe": 578,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -345,6 +407,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/design-und-ethik-alles-fuer-die-tonne.webp",
+    "breite": 462,
+    "hoehe": 370,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -356,6 +420,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/design-und-ethik-gesundheit-gestalten.webp",
+    "breite": 581,
+    "hoehe": 465,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -367,6 +433,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/design-und-neue-arbeitskultur-zu-besuch-in-den-urban-spaces.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -378,6 +446,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/die-danneckerstrasse-gestern-und-heute.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -389,6 +459,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/die-macht-der-sprache-gestaltung-fuer-kunst-und-kultur.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -400,6 +472,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/e-1027-eileen-gray.webp",
+    "breite": 462,
+    "hoehe": 260,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -411,6 +485,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/einladung-zum-trendlabor-mit-giulio-cappellini.webp",
+    "breite": 462,
+    "hoehe": 632,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -422,6 +498,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/ende-des-dornroeschen-schlafs-die-zukunft-der-villa-berg.webp",
+    "breite": 793,
+    "hoehe": 529,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -433,6 +511,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/experimentierfeld-der-moderne-der-uni-campus-in-stuttgart-va.webp",
+    "breite": 940,
+    "hoehe": 470,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -444,6 +524,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/extremwetter-und-hitzerekorde-der-klimawandel-und-die-gebaut.webp",
+    "breite": 462,
+    "hoehe": 260,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -455,6 +537,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/gdc-summit-2023-im-porsche-museum-stuttgart.webp",
+    "breite": 1600,
+    "hoehe": 900,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -466,6 +550,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/gebaute-firmenphilosophie-ein-besuch-bei-gustav-epple.webp",
+    "breite": 462,
+    "hoehe": 430,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -477,6 +563,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/groundbreaking-future.webp",
+    "breite": 1600,
+    "hoehe": 1067,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -488,6 +576,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/gruener-bauen-geht-doch.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -499,6 +589,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/grundlagen-der-architektur-das-igma.webp",
+    "breite": 1600,
+    "hoehe": 490,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -510,6 +602,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/haus-des-tourismus.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -521,6 +615,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/hinter-den-kulissen-das-literaturarchiv-marbach.webp",
+    "breite": 462,
+    "hoehe": 320,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -532,6 +628,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/hinter-den-kulissen-der-neue-bonatz.webp",
+    "breite": 1600,
+    "hoehe": 900,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -543,6 +641,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/hinter-den-kulissen-die-neue-nikolauspflege.webp",
+    "breite": 940,
+    "hoehe": 470,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -554,6 +654,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/hospitality-design-trends-und-entwicklungen.webp",
+    "breite": 1600,
+    "hoehe": 1066,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -565,6 +667,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/hospitality-design-wie-wohlfuehlorte-entstehen-das-emilu.webp",
+    "breite": 1280,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -576,6 +680,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/inklusives-design-gestaltung-ohne-barrieren.webp",
+    "breite": 462,
+    "hoehe": 284,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -587,6 +693,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/japan-calling-stuttgarter-designer-auf-der-expo.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -598,6 +706,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/jung-und-hungrig-haus-otto.webp",
+    "breite": 462,
+    "hoehe": 331,
     "verwendungen": [
       "Daten bilder",
       "Daten site",
@@ -610,6 +720,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/jung-und-hungrig-johannes-breuer.webp",
+    "breite": 462,
+    "hoehe": 696,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -621,6 +733,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/kalte-platte-der-kleine-schlossplatz-gestern-heute-morgen.webp",
+    "breite": 1280,
+    "hoehe": 853,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -632,6 +746,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/komplexitaet-kommunizieren-das-non-nobis-projekt.webp",
+    "breite": 1600,
+    "hoehe": 1066,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -643,6 +759,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/kreislauffaehiges-design-eine-utopie.webp",
+    "breite": 1600,
+    "hoehe": 1068,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -654,6 +772,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/kultur-x-politik-kultursalon-mit-lisa-muehleisen.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -665,6 +785,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/lebenswege-hans-sommer.webp",
+    "breite": 500,
+    "hoehe": 400,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -676,6 +798,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/modulare-plusenergie-das-neue-stadtquartier-p18.webp",
+    "breite": 1600,
+    "hoehe": 1066,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -687,6 +811,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/neue-lernorte-die-waldorf-schule-uhlandshoehe.webp",
+    "breite": 1600,
+    "hoehe": 1165,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -698,6 +824,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/new-work-aufbruch-in-eine-neue-zeit-einmal-bitte-alles-ander.webp",
+    "breite": 462,
+    "hoehe": 330,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -709,6 +837,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/papierkunst-preview-waiblingen.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -720,6 +850,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/politisches-design-demokratie-gestalten.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -731,6 +863,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/preisverleihung-aed-neuland-2023.webp",
+    "breite": 1280,
+    "hoehe": 426,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -742,6 +876,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/quo-vadis-rosenstein-die-ausstellung.webp",
+    "breite": 1024,
+    "hoehe": 683,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -753,6 +889,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/recycling-karle.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -764,9 +902,10 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/sammlung-amann.webp",
+    "breite": 462,
+    "hoehe": 308,
     "verwendungen": [
       "Daten bilder",
-      "Daten bildnachweise",
       "Daten site"
     ]
   },
@@ -776,6 +915,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/shift-kunst-und-kuenstliche-intelligenz.webp",
+    "breite": 1024,
+    "hoehe": 681,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -787,6 +928,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/sommerfest-2026.webp",
+    "breite": 1600,
+    "hoehe": 1067,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -798,6 +941,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/stand-der-dinge-der-littmann-bau.webp",
+    "breite": 1600,
+    "hoehe": 1333,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -809,6 +954,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/stuttgarts-gruene-mitte-die-neue-calwer-passage.webp",
+    "breite": 1111,
+    "hoehe": 740,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -820,6 +967,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/wein-und-design-ein-praxistest.webp",
+    "breite": 462,
+    "hoehe": 231,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -831,6 +980,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/werner-sobek-die-randbedingungen-des-zukuenftigen.webp",
+    "breite": 320,
+    "hoehe": 240,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -842,6 +993,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/young-professionals-other-ways-of-working-as-an-architect.webp",
+    "breite": 1600,
+    "hoehe": 1067,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -853,6 +1006,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/zero-riehle-koeth.webp",
+    "breite": 462,
+    "hoehe": 288,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -864,6 +1019,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "event",
     "jahrgang": null,
     "url": "/bilder/event/zukunft-stadt-die-iba-27-festivalzentrale.webp",
+    "breite": 940,
+    "hoehe": 470,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -875,6 +1032,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/andreas-kurbos.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -886,6 +1045,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/ben-kauffmann.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -896,6 +1057,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/dina-gallo.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -906,6 +1069,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/dr-frank-heinlein.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -916,6 +1081,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/dr-katrin-schlecht.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -926,6 +1093,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/dr-petra-kiedaisch.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -936,6 +1105,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/dr-ulrike-groos.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -946,6 +1117,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/frank-seeger.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -957,6 +1130,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/joachim-stumpp.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -967,6 +1142,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/johanna-neves-pimenta.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -978,6 +1155,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/johannes-milla.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -989,6 +1168,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/kai-bierich.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -999,6 +1180,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/lisa-zech.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1009,6 +1192,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/lutz-dietzold.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -1020,6 +1205,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/markus-mueller.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -1031,6 +1218,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/may-britt-frank-grosse.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1041,6 +1230,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/moritz-kemper.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1051,6 +1242,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/nils-holger-moormann.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1061,6 +1254,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/olaf-barski.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1071,6 +1266,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/peter-scheerer.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1081,6 +1278,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/petra-stephan.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1091,6 +1290,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/prof-andreas-uebele.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1101,6 +1302,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/prof-dr-dr-e-h-dr-h-c-werner-sobek.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1111,6 +1314,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/prof-dr-phil-stephan-trueby.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1121,6 +1326,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/prof-juergen-spaeth.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1131,6 +1338,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/prof-lucio-blandini.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1141,6 +1350,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/prof-rahel-flechtner.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1151,6 +1362,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/sara-dahme.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -1162,6 +1375,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/silvia-olp.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -1173,6 +1388,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/stefan-behnisch.webp",
+    "breite": 900,
+    "hoehe": 1125,
     "verwendungen": [
       "Daten bilder",
       "Daten site"
@@ -1214,6 +1431,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/a-synaptic-trip-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1224,6 +1443,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/a-synaptic-trip-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1234,6 +1455,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/a-synaptic-trip-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1244,6 +1467,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/allreadymade-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1254,6 +1479,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/allreadymade-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1264,6 +1491,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/allreadymade-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1274,6 +1503,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1284,6 +1515,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1294,6 +1527,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1304,6 +1539,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/balkon3-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1314,6 +1551,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/comero-0.webp",
+    "breite": 1277,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1324,6 +1563,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/comero-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1334,6 +1575,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/comero-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1344,6 +1587,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/companion-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1354,6 +1599,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/companion-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1364,6 +1611,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/companion-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1374,6 +1623,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/craft-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1384,6 +1635,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/craft-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1394,6 +1647,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/craft-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1404,6 +1659,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/creative-space-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1414,6 +1671,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/creative-space-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1424,6 +1683,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/creative-space-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1434,6 +1695,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/escher-walk-app-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1444,6 +1707,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/escher-walk-app-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1454,6 +1719,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/escher-walk-app-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1464,6 +1731,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/gruemen-0.webp",
+    "breite": 1277,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1474,6 +1743,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/kokoni-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1484,6 +1755,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/kokoni-1.webp",
+    "breite": 1000,
+    "hoehe": 835,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1494,6 +1767,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/kokoni-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1504,6 +1779,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/ky-bo-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1514,6 +1791,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/lift-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1524,6 +1803,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/lift-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1534,6 +1815,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/lift-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1544,6 +1827,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1554,6 +1839,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1564,6 +1851,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1574,6 +1863,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/merimna-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1584,6 +1875,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-0.webp",
+    "breite": 1286,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1594,6 +1887,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-1.webp",
+    "breite": 1000,
+    "hoehe": 663,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1604,6 +1899,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-2.webp",
+    "breite": 1000,
+    "hoehe": 663,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1614,6 +1911,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/modern-ways-of-historic-printing-3.webp",
+    "breite": 1000,
+    "hoehe": 663,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1624,6 +1923,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/stgt-55-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1634,6 +1935,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/stgt-55-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1644,6 +1947,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/stgt-55-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1654,6 +1959,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-0.webp",
+    "breite": 1277,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1664,6 +1971,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1674,6 +1983,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1684,6 +1995,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/synesthesia-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1694,6 +2007,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1704,6 +2019,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-1.webp",
+    "breite": 1000,
+    "hoehe": 706,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1714,6 +2031,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1724,6 +2043,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/the-cell-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1734,6 +2055,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/to-the-points-0.webp",
+    "breite": 1282,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1744,6 +2067,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/to-the-points-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1754,6 +2079,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/to-the-points-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1764,6 +2091,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/type-550-0.webp",
+    "breite": 1276,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1774,6 +2103,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/type-550-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1784,6 +2115,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/type-550-2.webp",
+    "breite": 1000,
+    "hoehe": 708,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1794,6 +2127,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/wbm-0.webp",
+    "breite": 1277,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1804,6 +2139,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/wbm-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1814,6 +2151,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/wbm-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1824,6 +2163,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/zero-contact-sustainpedal-0.webp",
+    "breite": 1278,
+    "hoehe": 852,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1834,6 +2175,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/zero-contact-sustainpedal-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1844,6 +2187,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2019",
     "url": "/bilder/projekt/2019/zero-contact-sustainpedal-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1854,6 +2199,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-0.webp",
+    "breite": 1400,
+    "hoehe": 787,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1864,6 +2211,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-1.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1874,6 +2223,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1884,6 +2235,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/55-climate-center-sharjah-3.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1894,6 +2247,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1904,6 +2259,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1914,6 +2271,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-2.webp",
+    "breite": 1000,
+    "hoehe": 561,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1924,6 +2283,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/above-and-below-3.webp",
+    "breite": 1000,
+    "hoehe": 561,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1934,6 +2295,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-0.webp",
+    "breite": 1400,
+    "hoehe": 921,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1944,6 +2307,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-1.webp",
+    "breite": 1000,
+    "hoehe": 658,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1954,6 +2319,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-2.webp",
+    "breite": 1000,
+    "hoehe": 658,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1964,6 +2331,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/aliado-verbuendeter-im-kampf-gegen-krebs-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1974,6 +2343,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-0.webp",
+    "breite": 1400,
+    "hoehe": 849,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1984,6 +2355,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-1.webp",
+    "breite": 1000,
+    "hoehe": 749,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1994,6 +2367,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-2.webp",
+    "breite": 1000,
+    "hoehe": 658,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2004,6 +2379,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/alpha-app-spielerisch-lesen-und-schreiben-lernen-3.webp",
+    "breite": 1000,
+    "hoehe": 789,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2014,6 +2391,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2024,6 +2403,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-1.webp",
+    "breite": 1000,
+    "hoehe": 705,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2034,6 +2415,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2044,6 +2427,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/amplex-sea-rescue-buoy-3.webp",
+    "breite": 1000,
+    "hoehe": 714,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2054,6 +2439,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-0.webp",
+    "breite": 1400,
+    "hoehe": 990,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2064,6 +2451,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2074,6 +2463,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-2.webp",
+    "breite": 1000,
+    "hoehe": 636,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2084,6 +2475,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/anlegestelle-eine-neue-perspektive-fuer-wohnungs-suchende-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2094,6 +2487,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2104,6 +2499,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2114,6 +2511,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2124,6 +2523,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/archaeologisches-raetsel-unterregenbach-3.webp",
+    "breite": 1000,
+    "hoehe": 426,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2134,6 +2535,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/ava-augmented-auscultation-simulation-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2144,6 +2547,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/ava-augmented-auscultation-simulation-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2154,6 +2559,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/ava-augmented-auscultation-simulation-2.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2164,6 +2571,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2174,6 +2583,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2184,6 +2595,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2194,6 +2607,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/betaware-3.webp",
+    "breite": 1000,
+    "hoehe": 906,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2204,6 +2619,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2214,6 +2631,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-1.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2224,6 +2643,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-2.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2234,6 +2655,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bewear-achte-was-dich-kleidet-3.webp",
+    "breite": 1000,
+    "hoehe": 652,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2244,6 +2667,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2254,6 +2679,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2264,6 +2691,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2274,6 +2703,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bias-in-bias-out-wie-technologie-diskriminiert-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2284,6 +2715,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-0.webp",
+    "breite": 1400,
+    "hoehe": 1100,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2294,6 +2727,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-1.webp",
+    "breite": 846,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2304,6 +2739,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-2.webp",
+    "breite": 1000,
+    "hoehe": 866,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2314,6 +2751,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bis-sich-alles-bewegt-3.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2324,6 +2763,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bokashi-o2o-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2334,6 +2775,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bokashi-o2o-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2344,6 +2787,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/bokashi-o2o-2.webp",
+    "breite": 1000,
+    "hoehe": 741,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2354,6 +2799,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2364,6 +2811,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-1.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2374,6 +2823,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-2.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2384,6 +2835,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/collection-serife-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2394,6 +2847,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2404,6 +2859,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2414,6 +2871,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-2.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2424,6 +2883,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/concept-office-3.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2434,6 +2895,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2444,6 +2907,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-1.webp",
+    "breite": 1000,
+    "hoehe": 546,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2454,6 +2919,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-2.webp",
+    "breite": 1000,
+    "hoehe": 546,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2464,6 +2931,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-hitzeinsel-stuttgart-3.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2474,6 +2943,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-0.webp",
+    "breite": 990,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2484,6 +2955,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-1.webp",
+    "breite": 707,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2494,6 +2967,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-2.webp",
+    "breite": 707,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2504,6 +2979,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/die-scheibe-ein-architektur-forum-fuer-stuttgart-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2514,6 +2991,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2524,6 +3003,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2534,6 +3015,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-2.webp",
+    "breite": 1000,
+    "hoehe": 711,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2544,6 +3027,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/entlang-der-gleise-ein-umnutzungs-konzept-fuer-das-stellwerk-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2554,6 +3039,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-0.webp",
+    "breite": 640,
+    "hoehe": 480,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2564,6 +3051,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-1.webp",
+    "breite": 640,
+    "hoehe": 480,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2574,6 +3063,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-2.webp",
+    "breite": 640,
+    "hoehe": 469,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2584,6 +3075,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/fon-zeichen-ein-konzept-um-geschriebene-sprache-wirken-zu-la-3.webp",
+    "breite": 1000,
+    "hoehe": 848,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2594,6 +3087,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-0.webp",
+    "breite": 1400,
+    "hoehe": 1050,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2604,6 +3099,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-1.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2614,6 +3111,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-2.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2624,6 +3123,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hearo-werkzeugsatz-zur-erforschung-deiner-akustischen-raum-w-3.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2634,6 +3135,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2644,6 +3147,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-1.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2654,6 +3159,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-2.webp",
+    "breite": 1000,
+    "hoehe": 662,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2664,6 +3171,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/hello-again-black-letter-3.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2674,6 +3183,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-0.webp",
+    "breite": 1400,
+    "hoehe": 990,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2684,6 +3195,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2694,6 +3207,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2704,6 +3219,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/home-office-wie-arbeiten-wir-in-zukunft-von-zu-hause-aus-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2714,6 +3231,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2724,6 +3243,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-1.webp",
+    "breite": 1000,
+    "hoehe": 664,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2734,6 +3255,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2744,6 +3267,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/im-trueben-3.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2754,6 +3279,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-0.webp",
+    "breite": 1400,
+    "hoehe": 855,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2764,6 +3291,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2774,6 +3303,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-2.webp",
+    "breite": 1000,
+    "hoehe": 681,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2784,6 +3315,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/jjuma-optische-analysegeraete-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2794,6 +3327,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2804,6 +3339,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2814,6 +3351,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-2.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2824,6 +3363,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/journey-to-recovery-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2834,6 +3375,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-0.webp",
+    "breite": 1400,
+    "hoehe": 1061,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2844,6 +3387,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2854,6 +3399,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2864,6 +3411,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/kindergarten-mea-nork-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2874,6 +3423,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-0.webp",
+    "breite": 1400,
+    "hoehe": 856,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2884,6 +3435,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-1.webp",
+    "breite": 1000,
+    "hoehe": 612,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2894,6 +3447,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-2.webp",
+    "breite": 1000,
+    "hoehe": 612,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2904,6 +3459,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/land-gewinnen-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2914,6 +3471,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2924,6 +3483,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2934,6 +3495,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2944,6 +3507,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/linien-im-raum-3.webp",
+    "breite": 1000,
+    "hoehe": 762,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2954,6 +3519,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2964,6 +3531,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-1.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2974,6 +3543,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2984,6 +3555,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/lux-ovalis-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -2994,6 +3567,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-0.webp",
+    "breite": 1400,
+    "hoehe": 991,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3004,6 +3579,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-1.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3014,6 +3591,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-2.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3024,6 +3603,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/myamo-ein-pilzbasierter-akustikabsorber-3.webp",
+    "breite": 1000,
+    "hoehe": 752,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3034,6 +3615,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3044,6 +3627,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3054,6 +3639,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-2.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3064,6 +3651,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/nullwertarchiv-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3074,6 +3663,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-0.webp",
+    "breite": 1400,
+    "hoehe": 934,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3084,6 +3675,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3094,6 +3687,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3104,6 +3699,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/objekt-und-inszenierung-experimentelle-szenografie-convertib-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3114,6 +3711,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-0.webp",
+    "breite": 1400,
+    "hoehe": 560,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3124,6 +3723,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-1.webp",
+    "breite": 1000,
+    "hoehe": 400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3134,6 +3735,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-2.webp",
+    "breite": 1000,
+    "hoehe": 714,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3144,6 +3747,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/pionier-20-70-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3154,6 +3759,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3164,6 +3771,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3174,6 +3783,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3184,6 +3795,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/projekt-platzhalter-3.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3194,6 +3807,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/publikation-grundklasse-prof-gerwin-schmidt-17-18-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3204,6 +3819,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/publikation-grundklasse-prof-gerwin-schmidt-17-18-1.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3214,6 +3831,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-0.webp",
+    "breite": 1400,
+    "hoehe": 794,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3224,6 +3843,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-1.webp",
+    "breite": 1000,
+    "hoehe": 468,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3234,6 +3855,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-2.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3244,6 +3867,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/rudi-smarte-abfall-entsorgung-und-recycling-ecosystem-3.webp",
+    "breite": 1000,
+    "hoehe": 741,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3254,6 +3879,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/schlemmer-x-beats-0.webp",
+    "breite": 1400,
+    "hoehe": 820,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3264,6 +3891,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/schlemmer-x-beats-1.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3274,6 +3903,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/schlemmer-x-beats-2.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3284,6 +3915,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3294,6 +3927,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3304,6 +3939,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3314,6 +3951,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sci-mmary-when-science-makes-sense-3.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3324,6 +3963,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3334,6 +3975,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-1.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3344,6 +3987,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-2.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3354,6 +3999,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/seeds-kleidung-die-waechst-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3364,6 +4011,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--0.webp",
+    "breite": 1400,
+    "hoehe": 875,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3374,6 +4023,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--1.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3384,6 +4035,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3394,6 +4047,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sense-five-eine-intelligente-mobilitaetshilfe-fuer-menschen--3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3404,6 +4059,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3414,6 +4071,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-1.webp",
+    "breite": 1000,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3424,6 +4083,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3434,6 +4095,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/sneature-waste-based-footwear-3.webp",
+    "breite": 1000,
+    "hoehe": 772,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3444,6 +4107,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/structures-of-the-future-0.webp",
+    "breite": 1400,
+    "hoehe": 932,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3454,6 +4119,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/structures-of-the-future-1.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3464,6 +4131,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/structures-of-the-future-2.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3474,6 +4143,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-0.webp",
+    "breite": 1400,
+    "hoehe": 1050,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3484,6 +4155,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-1.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3494,6 +4167,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-2.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3504,6 +4179,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/team-afrikataterre-solar-decathlon-africa-2019-in-marokko-3.webp",
+    "breite": 1000,
+    "hoehe": 717,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3514,6 +4191,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-0.webp",
+    "breite": 1400,
+    "hoehe": 1350,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3524,6 +4203,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-1.webp",
+    "breite": 1000,
+    "hoehe": 613,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3534,6 +4215,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-2.webp",
+    "breite": 766,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3544,6 +4227,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-glo-cal-experience-3.webp",
+    "breite": 1000,
+    "hoehe": 559,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3554,6 +4239,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3564,6 +4251,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-1.webp",
+    "breite": 800,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3574,6 +4263,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3584,6 +4275,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/the-insight-gallery-3.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3594,6 +4287,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3604,6 +4299,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3614,6 +4311,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3624,6 +4323,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/uebergaenge-wie-kann-zeitgemaesses-bestatten-aussehen-3.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3634,6 +4335,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3644,6 +4347,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-1.webp",
+    "breite": 1000,
+    "hoehe": 613,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3654,6 +4359,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-2.webp",
+    "breite": 1000,
+    "hoehe": 624,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3664,6 +4371,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/urban-roots-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3674,6 +4383,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-0.webp",
+    "breite": 1400,
+    "hoehe": 875,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3684,6 +4395,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-1.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3694,6 +4407,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-2.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3704,6 +4419,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/vinote-link-notes-on-videos-3.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3714,6 +4431,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3724,6 +4443,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3734,6 +4455,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3744,6 +4467,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/when-you-have-depression-you-re-not-just-sad-3.webp",
+    "breite": 1000,
+    "hoehe": 751,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3754,6 +4479,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-0.webp",
+    "breite": 990,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3764,6 +4491,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-1.webp",
+    "breite": 707,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3774,6 +4503,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-2.webp",
+    "breite": 707,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3784,6 +4515,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2021",
     "url": "/bilder/projekt/2021/wind-digester-3.webp",
+    "breite": 707,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3794,6 +4527,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3804,6 +4539,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-1.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3814,6 +4551,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-2.webp",
+    "breite": 1000,
+    "hoehe": 561,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3824,6 +4563,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/576-seiten-alltaeglicher-rassismus-in-deutschland-3.webp",
+    "breite": 1000,
+    "hoehe": 560,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3834,6 +4575,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-0.webp",
+    "breite": 989,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3844,6 +4587,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-1.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3854,6 +4599,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-2.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3864,6 +4611,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/a-fish-odyssey-3.webp",
+    "breite": 1000,
+    "hoehe": 748,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3874,6 +4623,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3884,6 +4635,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3894,6 +4647,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3904,6 +4659,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/an-den-rand-gedraengt-die-marginalisierung-unserer-staedte-3.webp",
+    "breite": 1000,
+    "hoehe": 664,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3914,6 +4671,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-0.webp",
+    "breite": 1400,
+    "hoehe": 934,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3924,6 +4683,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-1.webp",
+    "breite": 1000,
+    "hoehe": 661,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3934,6 +4695,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3944,6 +4707,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/boxhorn-38-3.webp",
+    "breite": 1000,
+    "hoehe": 560,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3954,6 +4719,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-0.webp",
+    "breite": 1400,
+    "hoehe": 786,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3964,6 +4731,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-1.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3974,6 +4743,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-2.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3984,6 +4755,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/die-gedanken-sind-frei-3.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -3994,6 +4767,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-0.webp",
+    "breite": 990,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4004,6 +4779,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4014,6 +4791,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4024,6 +4803,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/drap-3.webp",
+    "breite": 707,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4034,6 +4815,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-0.webp",
+    "breite": 933,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4044,6 +4827,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-1.webp",
+    "breite": 687,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4054,6 +4839,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-2.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4064,6 +4851,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/first-aidot-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4074,6 +4863,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-0.webp",
+    "breite": 1400,
+    "hoehe": 840,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4084,6 +4875,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-1.webp",
+    "breite": 1000,
+    "hoehe": 600,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4094,6 +4887,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-2.webp",
+    "breite": 1000,
+    "hoehe": 600,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4104,6 +4899,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/floorens-autonomous-flooring-system-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4114,6 +4911,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4124,6 +4923,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4134,6 +4935,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4144,6 +4947,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kipp-punkte-des-klimasystems-3.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4154,6 +4959,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-0.webp",
+    "breite": 1400,
+    "hoehe": 985,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4164,6 +4971,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-1.webp",
+    "breite": 1000,
+    "hoehe": 652,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4174,6 +4983,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-2.webp",
+    "breite": 1000,
+    "hoehe": 657,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4184,6 +4995,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/kunstmuehle-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4194,6 +5007,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-0.webp",
+    "breite": 1400,
+    "hoehe": 1050,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4204,6 +5019,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4214,6 +5031,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-2.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4224,6 +5043,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/neozoon-3.webp",
+    "breite": 1000,
+    "hoehe": 706,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4234,6 +5055,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-0.webp",
+    "breite": 1400,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4244,6 +5067,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-1.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4254,6 +5079,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4264,6 +5091,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/postautomobile-3.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4274,6 +5103,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4284,6 +5115,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-1.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4294,6 +5127,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-2.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4304,6 +5139,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/pro-cess-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4314,6 +5151,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-0.webp",
+    "breite": 1400,
+    "hoehe": 927,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4324,6 +5163,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4334,6 +5175,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-2.webp",
+    "breite": 1000,
+    "hoehe": 647,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4344,6 +5187,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/propaganda-nutzen-3.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4354,6 +5199,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-0.webp",
+    "breite": 1400,
+    "hoehe": 990,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4364,6 +5211,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4374,6 +5223,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4384,6 +5235,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/qio-3.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4394,6 +5247,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-0.webp",
+    "breite": 1400,
+    "hoehe": 923,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4404,6 +5259,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-1.webp",
+    "breite": 1000,
+    "hoehe": 659,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4414,6 +5271,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-2.webp",
+    "breite": 1000,
+    "hoehe": 659,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4424,6 +5283,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/re-inventing-nature-3.webp",
+    "breite": 728,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4434,6 +5295,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-0.webp",
+    "breite": 1400,
+    "hoehe": 1050,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4444,6 +5307,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-1.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4454,6 +5319,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-2.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4464,6 +5331,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/revitalisierung-einer-industriebrache-die-gruene-werkstatt-i-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4474,6 +5343,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-0.webp",
+    "breite": 1400,
+    "hoehe": 629,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4484,6 +5355,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-1.webp",
+    "breite": 1000,
+    "hoehe": 785,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4494,6 +5367,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-2.webp",
+    "breite": 1000,
+    "hoehe": 614,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4504,6 +5379,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/symbiose-3.webp",
+    "breite": 1000,
+    "hoehe": 614,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4514,6 +5391,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4524,6 +5403,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-1.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4534,6 +5415,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-2.webp",
+    "breite": 1000,
+    "hoehe": 695,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4544,6 +5427,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/tonis-ladencaf-ellwangen-3.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4554,6 +5439,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-0.webp",
+    "breite": 1400,
+    "hoehe": 788,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4564,6 +5451,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4574,6 +5463,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4584,6 +5475,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/treibsel-strand-der-dinge-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4594,6 +5487,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-0.webp",
+    "breite": 1050,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4604,6 +5499,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-1.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4614,6 +5511,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-2.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4624,6 +5523,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/typeface-neue-ductus-3.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4634,6 +5535,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-0.webp",
+    "breite": 1400,
+    "hoehe": 875,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4644,6 +5547,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-1.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4654,6 +5559,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-2.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4664,6 +5571,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/ueberfuellte-und-ueberlastete-notaufnahmen-in-deutschland-ge-3.webp",
+    "breite": 1000,
+    "hoehe": 625,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4674,6 +5583,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-0.webp",
+    "breite": 1050,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4684,6 +5595,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-1.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4694,6 +5607,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-2.webp",
+    "breite": 1000,
+    "hoehe": 750,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4704,6 +5619,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2023",
     "url": "/bilder/projekt/2023/wave-3.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4714,6 +5631,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-0.webp",
+    "breite": 1400,
+    "hoehe": 990,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4724,6 +5643,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4734,6 +5655,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4744,6 +5667,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/aquilo-3.webp",
+    "breite": 750,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4754,6 +5679,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-0.webp",
+    "breite": 1400,
+    "hoehe": 874,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4764,6 +5691,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-1.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4774,6 +5703,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-2.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4784,6 +5715,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/baeume-besetzen-barrikadisch-wohnen-in-tuempeltown-3.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4794,6 +5727,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4804,6 +5739,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4814,6 +5751,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4824,6 +5763,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/burg-is-sooo-german-3.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4834,6 +5775,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-0.webp",
+    "breite": 1400,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4844,6 +5787,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4854,6 +5799,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4864,6 +5811,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/butterfly-3.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4874,6 +5823,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-0.webp",
+    "breite": 1400,
+    "hoehe": 990,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4884,6 +5835,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4894,6 +5847,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4904,6 +5859,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/cape-town-revisiting-the-past-3.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4914,6 +5871,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-0.webp",
+    "breite": 1400,
+    "hoehe": 904,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4924,6 +5883,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-1.webp",
+    "breite": 1000,
+    "hoehe": 560,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4934,6 +5895,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-2.webp",
+    "breite": 1000,
+    "hoehe": 566,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4944,6 +5907,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/echo-dein-medienassistent-3.webp",
+    "breite": 1000,
+    "hoehe": 555,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4954,6 +5919,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-0.webp",
+    "breite": 1400,
+    "hoehe": 874,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4964,6 +5931,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-1.webp",
+    "breite": 1000,
+    "hoehe": 681,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4974,6 +5943,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-2.webp",
+    "breite": 1000,
+    "hoehe": 674,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4984,6 +5955,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/kita-obstgarten-3.webp",
+    "breite": 1000,
+    "hoehe": 691,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -4994,6 +5967,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-0.webp",
+    "breite": 1400,
+    "hoehe": 934,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5004,6 +5979,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5014,6 +5991,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-2.webp",
+    "breite": 1000,
+    "hoehe": 515,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5024,6 +6003,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/matters-in-motion-exploring-urban-collectives-3.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5034,6 +6015,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-0.webp",
+    "breite": 1057,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5044,6 +6027,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-1.webp",
+    "breite": 755,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5054,6 +6039,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-2.webp",
+    "breite": 755,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5064,6 +6051,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ohne-3.webp",
+    "breite": 755,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5074,6 +6063,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5084,6 +6075,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5094,6 +6087,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5104,6 +6099,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/omex-3.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5114,6 +6111,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5124,6 +6123,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5134,6 +6135,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5144,6 +6147,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/on-radar-radiotracer-forschung-auf-apple-vision-pro-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5154,6 +6159,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-0.webp",
+    "breite": 1400,
+    "hoehe": 916,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5164,6 +6171,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-1.webp",
+    "breite": 1000,
+    "hoehe": 659,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5174,6 +6183,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-2.webp",
+    "breite": 1000,
+    "hoehe": 662,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5184,6 +6195,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/ovum-pollution-shaped-3.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5194,6 +6207,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--0.webp",
+    "breite": 640,
+    "hoehe": 522,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5204,6 +6219,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--1.webp",
+    "breite": 1000,
+    "hoehe": 806,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5214,6 +6231,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--2.webp",
+    "breite": 1000,
+    "hoehe": 774,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5224,6 +6243,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/paludi-erntemaschine-fu-r-eine-oekologische-und-nachhaltige--3.webp",
+    "breite": 1000,
+    "hoehe": 747,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5234,6 +6255,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-0.webp",
+    "breite": 1400,
+    "hoehe": 990,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5244,6 +6267,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-1.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5254,6 +6279,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-2.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5264,6 +6291,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/papierfabrik-zerkall-didaktisches-orientierungs-und-ausstell-3.webp",
+    "breite": 1000,
+    "hoehe": 707,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5274,6 +6303,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-0.webp",
+    "breite": 1400,
+    "hoehe": 1186,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5284,6 +6315,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-1.webp",
+    "breite": 1000,
+    "hoehe": 739,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5294,6 +6327,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-2.webp",
+    "breite": 1000,
+    "hoehe": 739,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5304,6 +6339,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/parkplatzhaus-3.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5314,6 +6351,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-0.webp",
+    "breite": 1400,
+    "hoehe": 989,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5324,6 +6363,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-1.webp",
+    "breite": 1000,
+    "hoehe": 706,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5334,6 +6375,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-2.webp",
+    "breite": 1000,
+    "hoehe": 706,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5344,6 +6387,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/period-point-der-moderne-ansatz-zur-menstruationsaufklaerung-3.webp",
+    "breite": 1000,
+    "hoehe": 706,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5354,6 +6399,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-0.webp",
+    "breite": 1400,
+    "hoehe": 929,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5364,6 +6411,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-1.webp",
+    "breite": 1000,
+    "hoehe": 664,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5374,6 +6423,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-2.webp",
+    "breite": 1000,
+    "hoehe": 664,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5384,6 +6435,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/pfin-das-inklusive-leitsystem-fu-r-pforzheim-3.webp",
+    "breite": 1000,
+    "hoehe": 664,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5394,6 +6447,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-0.webp",
+    "breite": 1400,
+    "hoehe": 813,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5404,6 +6459,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-1.webp",
+    "breite": 1000,
+    "hoehe": 673,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5414,6 +6471,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-2.webp",
+    "breite": 667,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5424,6 +6483,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/re-life-ukraine-blooming-towards-the-sun-3.webp",
+    "breite": 1000,
+    "hoehe": 759,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5434,6 +6495,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-0.webp",
+    "breite": 1400,
+    "hoehe": 1120,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5444,6 +6507,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-1.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5454,6 +6519,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-2.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5464,6 +6531,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/rey-3.webp",
+    "breite": 1000,
+    "hoehe": 563,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5474,6 +6543,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-0.webp",
+    "breite": 1400,
+    "hoehe": 787,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5484,6 +6555,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-1.webp",
+    "breite": 1000,
+    "hoehe": 564,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5494,6 +6567,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-2.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5504,6 +6579,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/saferseats-3.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5514,6 +6591,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-0.webp",
+    "breite": 1400,
+    "hoehe": 787,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5524,6 +6603,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-1.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5534,6 +6615,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-2.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5544,6 +6627,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/stroh-in-form-moebel-fu-r-eine-gesunde-zukunft-3.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5554,6 +6639,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-0.webp",
+    "breite": 849,
+    "hoehe": 1400,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5564,6 +6651,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-1.webp",
+    "breite": 1000,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5574,6 +6663,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-2.webp",
+    "breite": 800,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5584,6 +6675,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/sufes-symbiotic-urban-floating-energy-storage-3.webp",
+    "breite": 1000,
+    "hoehe": 775,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5594,6 +6687,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5604,6 +6699,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-1.webp",
+    "breite": 1000,
+    "hoehe": 715,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5614,6 +6711,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5624,6 +6723,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-lindemann-files-lindemann-love-letters-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5634,6 +6735,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-0.webp",
+    "breite": 1400,
+    "hoehe": 666,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5644,6 +6747,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-1.webp",
+    "breite": 594,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5654,6 +6759,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-2.webp",
+    "breite": 1000,
+    "hoehe": 562,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5664,6 +6771,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/the-river-and-the-risk-rethinking-spatial-entanglements-of-f-3.webp",
+    "breite": 871,
+    "hoehe": 1000,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5674,6 +6783,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-0.webp",
+    "breite": 1400,
+    "hoehe": 933,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5684,6 +6795,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-1.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5694,6 +6807,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-2.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -5704,6 +6819,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "projekt",
     "jahrgang": "2025",
     "url": "/bilder/projekt/2025/udo-unkown-driving-object-3.webp",
+    "breite": 1000,
+    "hoehe": 667,
     "verwendungen": [
       "Daten bilder"
     ]

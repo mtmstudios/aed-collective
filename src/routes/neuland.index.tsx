@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { jahrgaenge, jury2025, kennzahlen, projekte, wettbewerbStatus } from "@/data/neuland";
+import { jahrgaenge, jury2025, kennzahlen, projekte } from "@/data/neuland";
 import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
@@ -7,6 +7,7 @@ import { SectionTitle } from "@/components/ui-bits";
 import { AutoSlider } from "@/components/auto-slider";
 
 import { NeulandSubnav } from "@/routes/neuland";
+import { schlussFormatiert } from "@/config/neuland-einreichung";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
 
@@ -101,6 +102,14 @@ function NeulandIndex() {
                 Der interdisziplinäre Nachwuchswettbewerb des aed – für Studierende und
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
               </p>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link to="/neuland/einreichung" className="btn-solid">
+                  Jetzt bewerben
+                </Link>
+                <span className="meta text-white/80">
+                  Einsendeschluss {schlussFormatiert().split(" um")[0]}
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -117,9 +126,11 @@ function NeulandIndex() {
               aus – in fünf Kategorien, mit 2.000 € je 1. Preis, gefördert von der Karl Schlecht
               Stiftung.
             </p>
-            <p className="meta mt-5">{wettbewerbStatus.hinweis}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/neuland/wettbewerb" className="btn-solid">
+              <Link to="/neuland/einreichung" className="btn-solid">
+                Jetzt bewerben
+              </Link>
+              <Link to="/neuland/wettbewerb" className="btn-outline">
                 Wettbewerb im Detail
               </Link>
               <Link to="/neuland/teilnahme" className="btn-outline">
@@ -139,21 +150,6 @@ function NeulandIndex() {
               </div>
             ))}
           </dl>
-        </div>
-      </section>
-
-      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="gewinner-2025">
-        <SectionTitle
-          id="gewinner-2025"
-          titel="Die 1. Preise"
-          kicker="Preisträger:innen 2025"
-          href="/neuland/gewinner"
-          linkText="Alle Jahrgänge"
-        />
-        <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {highlights.map((p) => (
-            <ProjektCard key={p.slug} projekt={p} />
-          ))}
         </div>
       </section>
 
@@ -179,6 +175,21 @@ function NeulandIndex() {
           <Link to="/neuland/jury" className="btn-outline">
             Alle 21 Juroren:innen ansehen
           </Link>
+        </div>
+      </section>
+
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="gewinner-2025">
+        <SectionTitle
+          id="gewinner-2025"
+          titel="Die 1. Preise"
+          kicker="Preisträger:innen 2025"
+          href="/neuland/gewinner"
+          linkText="Alle Jahrgänge"
+        />
+        <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {highlights.map((p) => (
+            <ProjektCard key={p.slug} projekt={p} />
+          ))}
         </div>
       </section>
 
