@@ -98,7 +98,7 @@ function ListenAnsicht({
             <tr
               key={b.pfad}
               className={`border-b last:border-0 ${
-                b.status === "geklaert" ? "bg-[#fe7fff]/10" : ""
+                b.status === "geklaert" ? "bg-[var(--aed-pink)]/10" : ""
               }`}
             >
               <td className="p-2">
@@ -514,7 +514,7 @@ function Bildverzeichnis() {
       </div>
 
       <p className="mt-2 text-xs text-muted-foreground">
-        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · pinker Rahmen =
+        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · gelber Rahmen =
         Bildrechte geklärt
       </p>
 
@@ -547,7 +547,7 @@ function Bildverzeichnis() {
               <section
                 key={g.key}
                 className={`rounded p-3 ${
-                  alleGeklaert ? "border-[5px] border-[#fe7fff]" : "border-[5px] border-neutral-200"
+                  alleGeklaert ? "border-[5px] border-[var(--aed-pink)]" : "border-[5px] border-neutral-200"
                 }`}
               >
                 <div
@@ -592,9 +592,9 @@ function Bildverzeichnis() {
                     <button
                       key={b.pfad}
                       onClick={() => setOffen(b.pfad)}
-                      className={`rounded p-1 text-left hover:bg-muted ${
+                      className={`rounded p-1 text-left hover:bg-[var(--aed-hover)] ${
                         b.status === "geklaert"
-                          ? "border-2 border-[#fe7fff]"
+                          ? "border-2 border-[var(--aed-pink)]"
                           : "border-2 border-neutral-200"
                       }`}
                       title={`${b.dateiname} · ${STATUS_LABEL[b.status] ?? b.status}`}
