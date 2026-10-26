@@ -101,11 +101,11 @@
   --input: oklch(0.898 0 0);
   --ring: oklch(0 0 0);
   /* Bereichsfarbe: Verein = warmes Gelb (leicht orange, kein Zitronengelb) */
-  --brand: oklch(0.9 0.175 95);
+  --brand: oklch(0.80437 0.16531 80.08964);
   --brand-foreground: oklch(0 0 0);
   --brand-deep: oklch(0.6 0.14 70);
   /* Feste Hauptfarbe für CTA-Buttons */
-  --aed-pink: oklch(0.9 0.175 95);
+  --aed-pink: oklch(0.80437 0.16531 80.08964);
   --aed-pink-deep: oklch(0.6 0.14 70);
   /* Schrift auf der Hauptfarbe: immer Schwarz */
   --aed-pink-foreground: oklch(0 0 0);
@@ -114,7 +114,7 @@
   /* Hover-/Highlight-Farbe: Blau */
   --aed-hover: oklch(0.72 0.13 262);
   --aed-hover-foreground: oklch(0 0 0);
-  --chart-1: oklch(0.9 0.175 95);
+  --chart-1: oklch(0.80437 0.16531 80.08964);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
   --chart-4: oklch(0.828 0.189 84.429);
@@ -148,7 +148,7 @@
   --aed-pink-deep: oklch(0.47 0.15 264);
   --aed-pink-foreground: oklch(0 0 0);
   /* Auf blauen Flächen bleibt das warme Gelb die Hover-Farbe */
-  --aed-hover: oklch(0.9 0.175 95);
+  --aed-hover: oklch(0.80437 0.16531 80.08964);
 }
 
 
