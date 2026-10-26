@@ -98,7 +98,7 @@ function ListenAnsicht({
             <tr
               key={b.pfad}
               className={`border-b last:border-0 ${
-                b.status === "geklaert" ? "bg-[#fe7fff]/10" : ""
+                b.status === "geklaert" ? "bg-[var(--aed-pink)]/10" : ""
               }`}
             >
               <td className="p-2">
@@ -547,7 +547,7 @@ function Bildverzeichnis() {
               <section
                 key={g.key}
                 className={`rounded p-3 ${
-                  alleGeklaert ? "border-[5px] border-[#fe7fff]" : "border-[5px] border-neutral-200"
+                  alleGeklaert ? "border-[5px] border-[var(--aed-pink)]" : "border-[5px] border-neutral-200"
                 }`}
               >
                 <div
@@ -594,7 +594,7 @@ function Bildverzeichnis() {
                       onClick={() => setOffen(b.pfad)}
                       className={`rounded p-1 text-left hover:bg-muted ${
                         b.status === "geklaert"
-                          ? "border-2 border-[#fe7fff]"
+                          ? "border-2 border-[var(--aed-pink)]"
                           : "border-2 border-neutral-200"
                       }`}
                       title={`${b.dateiname} · ${STATUS_LABEL[b.status] ?? b.status}`}
