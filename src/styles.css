@@ -100,21 +100,21 @@
   --border: oklch(0.898 0 0);
   --input: oklch(0.898 0 0);
   --ring: oklch(0 0 0);
-  /* Bereichsfarbe: Verein = Pink #fe7fff */
-  --brand: oklch(0.775 0.207 320.5);
+  /* Bereichsfarbe: Verein = warmes Gelb (leicht orange, kein Zitronengelb) */
+  --brand: oklch(0.87 0.165 85);
   --brand-foreground: oklch(0 0 0);
-  --brand-deep: oklch(0.5 0.22 322);
-  /* Festes aed-Pink für CTA-Buttons – wird vom neuland-Theme NICHT überschrieben */
-  --aed-pink: oklch(0.775 0.207 320.5);
-  --aed-pink-deep: oklch(0.5 0.22 322);
-  /* Schrift auf Pink: immer Schwarz (auch im neuland-Bereich) */
+  --brand-deep: oklch(0.6 0.14 70);
+  /* Feste Hauptfarbe für CTA-Buttons */
+  --aed-pink: oklch(0.87 0.165 85);
+  --aed-pink-deep: oklch(0.6 0.14 70);
+  /* Schrift auf der Hauptfarbe: immer Schwarz */
   --aed-pink-foreground: oklch(0 0 0);
-  /* Outline-Button-Schrift: Schwarz auf hellem, Pink auf dunklem Hintergrund */
+  /* Outline-Button-Schrift: Schwarz auf hellem, Hauptfarbe auf dunklem Hintergrund */
   --aed-outline-fg: oklch(0 0 0);
-  /* Hover-Zustand auf Pink-Flächen: 100 % RGB-Gelb (#FFFF00) */
-  --aed-hover: oklch(0.965 0.211 110);
+  /* Hover-/Highlight-Farbe: Blau */
+  --aed-hover: oklch(0.72 0.13 262);
   --aed-hover-foreground: oklch(0 0 0);
-  --chart-1: oklch(0.775 0.207 320.5);
+  --chart-1: oklch(0.87 0.165 85);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
   --chart-4: oklch(0.828 0.189 84.429);
@@ -147,6 +147,8 @@
   --aed-pink: oklch(0.72 0.13 262);
   --aed-pink-deep: oklch(0.47 0.15 264);
   --aed-pink-foreground: oklch(0 0 0);
+  /* Auf blauen Flächen bleibt das warme Gelb die Hover-Farbe */
+  --aed-hover: oklch(0.87 0.165 85);
 }
 
 
