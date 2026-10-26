@@ -514,7 +514,7 @@ function Bildverzeichnis() {
       </div>
 
       <p className="mt-2 text-xs text-muted-foreground">
-        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · pinker Rahmen =
+        {gefiltert.length} Bilder in {gruppen.length} inhaltlichen Gruppen · gelber Rahmen =
         Bildrechte geklärt
       </p>
 
@@ -592,7 +592,7 @@ function Bildverzeichnis() {
                     <button
                       key={b.pfad}
                       onClick={() => setOffen(b.pfad)}
-                      className={`rounded p-1 text-left hover:bg-muted ${
+                      className={`rounded p-1 text-left hover:bg-[var(--aed-hover)] ${
                         b.status === "geklaert"
                           ? "border-2 border-[var(--aed-pink)]"
                           : "border-2 border-neutral-200"
