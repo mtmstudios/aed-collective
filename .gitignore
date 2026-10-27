@@ -34,3 +34,8 @@ dist-ssr
 # lokale Entwicklungsdatenbank und hochgeladene Dateien
 .pglite/
 dateien/
+
+# lokale Zugangsdaten, nie ins Repo
+.env.hetzner
+.env.local
+.env.*.local
