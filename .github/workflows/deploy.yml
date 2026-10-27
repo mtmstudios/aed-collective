@@ -1,0 +1,75 @@
+name: Deploy to Hetzner
+
+# Ausspielen der Seite auf das Webhosting des aed.
+#
+# Anders als bei Scharpf oder Krickl wird hier kein statisches Verzeichnis
+# abgelegt: Die Seite braucht einen laufenden Node-Prozess samt Datenbank
+# (Jurybereich, Einreichungen, Bildverzeichnis). Hochgeladen wird deshalb
+# der fertige Build aus .output, danach startet die Anwendung neu.
+#
+# Nötige Secrets im Repository (Settings -> Secrets -> Actions):
+#   HETZNER_HOST     Hostname des Pakets, z. B. wp12345678.server-he.de
+#   HETZNER_USER     SSH-Benutzer, z. B. u123456
+#   HETZNER_SSH_KEY  privater Schlüssel (ed25519), passend zum in konsoleH
+#                    hinterlegten öffentlichen Schlüssel
+#   HETZNER_PFAD     Zielverzeichnis, z. B. /usr/home/u123456/aed
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hetzner
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Für Node bauen
+        run: npm run build:node
+
+      - name: Build prüfen
+        # Ohne NITRO_PRESET entstünde ein Cloudflare-Build, der auf Hetzner
+        # nicht startet. Lieber hier abbrechen als eine tote Seite ausspielen.
+        run: |
+          grep -q '"preset": "node-server"' .output/nitro.json \
+            || { echo "Falscher Build – kein node-server-Preset"; exit 1; }
+
+      - name: SSH vorbereiten
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HETZNER_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.HETZNER_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Hochladen
+        # --delete räumt alte Dateien weg. Die Dateiablage der Einreichungen
+        # und die Umgebungswerte liegen außerhalb von .output und bleiben.
+        run: |
+          rsync -az --delete --stats \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            .output/ \
+            "${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:${{ secrets.HETZNER_PFAD }}/.output/"
+
+      - name: Anwendung neu starten
+        # konsoleH startet die Node-Anwendung nach einer Änderung an dieser
+        # Datei neu. Schlägt es fehl, ist der Upload trotzdem gelaufen.
+        continue-on-error: true
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes \
+            "${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}" \
+            "mkdir -p ${{ secrets.HETZNER_PFAD }}/tmp && touch ${{ secrets.HETZNER_PFAD }}/tmp/restart.txt"
