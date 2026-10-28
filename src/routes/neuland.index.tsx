@@ -107,7 +107,7 @@ function NeulandIndex() {
                   Jetzt bewerben
                 </Link>
                 <span className="meta text-white/80">
-                  Einsendeschluss {schlussFormatiert().split(" um")[0]}
+                  Einreichungsschluss {schlussFormatiert().split(" um")[0]}
                 </span>
               </div>
             </div>
