@@ -20,8 +20,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 347,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -59,8 +58,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 900,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -111,8 +109,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 231,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -124,8 +121,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 231,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -137,8 +133,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 231,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -163,8 +158,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 189,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -176,8 +170,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1080,
     "hoehe": 721,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -215,8 +208,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1280,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -228,8 +220,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 289,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -254,8 +245,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1066,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -280,8 +270,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 940,
     "hoehe": 470,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -319,8 +308,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 370,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -345,8 +333,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1170,
     "hoehe": 936,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -358,8 +345,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 259,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -384,8 +370,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 260,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -410,8 +395,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 370,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -423,8 +407,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 581,
     "hoehe": 465,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -436,8 +419,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 308,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -449,8 +431,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 308,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -462,8 +443,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 308,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -488,8 +468,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 632,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -501,8 +480,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 793,
     "hoehe": 529,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -514,8 +492,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 940,
     "hoehe": 470,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -527,8 +504,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 260,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -540,8 +516,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 900,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -553,8 +528,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 430,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -618,8 +592,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 320,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -644,8 +617,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 940,
     "hoehe": 470,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -657,8 +629,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1066,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -670,8 +641,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1280,
     "hoehe": 852,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -683,8 +653,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 284,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -696,8 +665,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 308,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -736,8 +704,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1280,
     "hoehe": 853,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -749,8 +716,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1066,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -775,8 +741,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 308,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -801,8 +766,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1066,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -814,8 +778,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1165,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -827,8 +790,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 330,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -853,8 +815,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 462,
     "hoehe": 308,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -918,8 +879,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1024,
     "hoehe": 681,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -957,8 +917,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1111,
     "hoehe": 740,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -983,8 +942,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 320,
     "hoehe": 240,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -996,8 +954,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 1600,
     "hoehe": 1067,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -1022,8 +979,7 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "breite": 940,
     "hoehe": 470,
     "verwendungen": [
-      "Daten bilder",
-      "Daten site"
+      "Daten bilder"
     ]
   },
   {
@@ -1210,6 +1166,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "verwendungen": [
       "Daten bilder",
       "Daten site"
+    ]
+  },
+  {
+    "pfad": "public/bilder/person/matthias-siegert.webp",
+    "dateiname": "matthias-siegert.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/matthias-siegert.webp",
+    "breite": 801,
+    "hoehe": 1200,
+    "verwendungen": [
+      "Daten bilder"
     ]
   },
   {
