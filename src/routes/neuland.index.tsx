@@ -160,8 +160,6 @@ function NeulandIndex() {
           id="jury-2025"
           titel="Jury 2027"
           kicker="Unabhängige Fachjury"
-          href="/neuland/jury"
-          linkText="Ganze Jury ansehen"
         />
         <AutoSlider
           className="mt-10"
