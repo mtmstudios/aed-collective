@@ -213,7 +213,7 @@ const ausJury2025 = (name: string) => {
 };
 
 export const jury2027: { name: string; rolle: string; link?: string }[] = [
-  { name: "Prof. Anna Bergner", rolle: "Staatliche Akademie der Bildenden Künste Stuttgart" },
+  { name: "Prof. Anne Bergner", rolle: "Staatliche Akademie der Bildenden Künste Stuttgart" },
   ausJury2025("Prof. Lucio Blandini"),
   { name: "Joachim Bosse", rolle: "Künstler & Mitgründer der Werbeagentur Dojo" },
   { name: "Shirin Brückner", rolle: "Geschäftsführerin ATELIER BRÜCKNER GMBH" },
