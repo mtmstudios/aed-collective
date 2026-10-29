@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 type LogoItem = string | { name: string; url?: string };
 
-export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
+export function LogoGrid({ items, solidYellow = false }: { items: readonly LogoItem[]; solidYellow?: boolean }) {
   return (
     <ul className="grid grid-cols-2 border-l border-t border-line sm:grid-cols-3 lg:grid-cols-4">
       {items.map((item) => {
@@ -12,7 +12,7 @@ export function LogoGrid({ items }: { items: readonly LogoItem[] }) {
         return (
           <li
             key={name}
-            className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+            className={`flex min-h-24 border-r border-b border-line text-center text-brand-foreground transition-colors ${solidYellow ? "bg-brand hover:bg-background hover:text-ink" : "bg-brand/50 hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"}`}
           >
             {url ? (
               <a

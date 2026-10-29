@@ -92,7 +92,7 @@ export function Newsletter() {
         <button
           type="submit"
           disabled={laeuft}
-          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] rounded-full border border-brand bg-brand px-7 font-display text-[0.9375rem] font-medium text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)] disabled:opacity-60 w-full sm:w-auto"
+          className="inline-flex items-center justify-center gap-2 min-h-[2.75rem] rounded-full border border-brand bg-brand px-7 font-display text-[0.9375rem] font-medium text-brand-foreground transition-colors hover:border-background hover:bg-background hover:text-ink disabled:opacity-60 w-full sm:w-auto"
         >
           {laeuft ? "WIRD GESENDET …" : "JETZT ANMELDEN"}
         </button>

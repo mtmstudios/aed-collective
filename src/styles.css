@@ -117,6 +117,8 @@
   --button-fill: var(--aed-pink);
   --button-text: var(--aed-pink-foreground);
   --button-border: var(--aed-pink);
+  --button-hover: var(--ink);
+  --button-hover-text: var(--background);
   --chart-1: oklch(0.80437 0.16531 80.08964);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
@@ -139,7 +141,7 @@
   --footer-input-border: oklch(0.36 0.013 255);
 }
 
-/* neuland: ausschließlich Blau als Bereichsfarbe, Schwarz/Weiß für Buttons. */
+/* neuland: blaue CTA-Flächen und Umrandungen, neutrale Mouseovers. */
 .theme-neuland {
   --brand: oklch(0.72 0.13 262);
   --brand-foreground: oklch(0 0 0);
@@ -150,13 +152,10 @@
   --aed-pink-foreground: oklch(0 0 0);
   --aed-hover: var(--brand);
   --aed-hover-foreground: var(--brand-foreground);
-  --button-fill: var(--background);
+  --button-fill: var(--brand);
   --button-text: var(--ink);
-  --button-border: var(--ink);
-  --button-outline-fill: var(--ink);
-  --aed-outline-fg: var(--background);
-  --button-outline-hover: var(--background);
-  --button-outline-hover-text: var(--ink);
+  --button-border: var(--brand);
+  --aed-outline-fg: var(--ink);
 }
 
 
@@ -424,8 +423,8 @@
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--ink);
-    color: var(--background);
+    background: var(--button-hover);
+    color: var(--button-hover-text);
   }
 }
 
@@ -443,25 +442,32 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   border: 1px solid var(--button-border);
-  background: var(--button-outline-fill, transparent);
+  background: transparent;
   color: var(--aed-outline-fg);
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 
   &:hover {
-    background: var(--button-outline-hover, var(--ink));
-    color: var(--button-outline-hover-text, var(--background));
+    background: var(--button-hover);
+    color: var(--button-hover-text);
+    border-color: var(--button-hover);
   }
 }
 
 /* Auf dunklem Hintergrund bleibt der Outline-Button gut lesbar. */
 @utility btn-outline-on-dark {
   --aed-outline-fg: var(--background);
-  --button-border: var(--background);
+  --button-hover: var(--background);
+  --button-hover-text: var(--ink);
 
   &:hover {
     background: var(--background);
     color: var(--ink);
   }
+}
+
+@utility btn-solid-on-dark {
+  --button-hover: var(--background);
+  --button-hover-text: var(--ink);
 }
 
 /* Button auf gelbem Archiv-Band: weißer Hover statt gelb */

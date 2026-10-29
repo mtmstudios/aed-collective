@@ -105,7 +105,7 @@ function NeulandIndex() {
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link to="/neuland/einreichung" className="btn-solid">
+                <Link to="/neuland/einreichung" className="btn-solid btn-solid-on-dark">
                   Jetzt bewerben
                 </Link>
                 <span className="meta text-white/80">
