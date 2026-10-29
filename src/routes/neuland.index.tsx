@@ -11,7 +11,7 @@ import { NeulandSubnav } from "@/routes/neuland";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
-import webteaser1 from "@/assets/webteaser-slider-1.png.asset.json";
+import webteaser1 from "@/assets/webteaser-slider-2.png.asset.json";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
