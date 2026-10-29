@@ -141,17 +141,6 @@ function NeulandIndex() {
             </div>
           </div>
 
-          <dl className="grid grid-cols-2 gap-8 self-start md:col-span-5">
-            {kennzahlen.map((k) => (
-              <div key={k.label}>
-                <dt className="sr-only">{k.label}</dt>
-                <dd>
-                  <span className="block display-md">{k.wert}</span>
-                  <span className="eyebrow-muted mt-3 block">{k.label}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
@@ -185,10 +174,23 @@ function NeulandIndex() {
         </div>
       </section>
 
+      <section className="shell pt-12 md:pt-16" aria-label="Zahlen und Fakten neuland 2025">
+        <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          {kennzahlen.map((k) => (
+            <div key={k.label}>
+              <dt className="sr-only">{k.label}</dt>
+              <dd>
+                <span className="block display-md">{k.wert}</span>
+                <span className="eyebrow-muted mt-3 block">{k.label}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
       <section className="shell py-12 md:py-16" aria-labelledby="gewinner-2025">
         <SectionTitle
           id="gewinner-2025"
-          noRule
           titel="Die 1. Preise"
           kicker="Preisträger:innen 2025"
           href="/neuland/gewinner"
