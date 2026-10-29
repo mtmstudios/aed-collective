@@ -5,6 +5,7 @@ import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { SectionTitle } from "@/components/ui-bits";
 import { AutoSlider } from "@/components/auto-slider";
+import { CoverSlider } from "@/components/cover-slider";
 
 import { NeulandSubnav } from "@/routes/neuland";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
@@ -64,35 +65,27 @@ export const Route = createFileRoute("/neuland/")({
 
 function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
-  // Titelbild: Beitrag „Aquilo“ (Fallback: erster 1. Preis mit Bild)
-  const titelprojekt =
-    highlights.find((p) => p.slug === "aquilo" && projektBild(p)) ??
-    highlights.find((p) => projektBild(p));
-  const titelbild = titelprojekt ? projektBild(titelprojekt) : undefined;
+  // Titel-Slider: Fotos der Preisträger:innen 2025 (weitere Slugs hier ergänzen)
+  const titelSlugs = ["on-radar-radiotracer-forschung-auf-apple-vision-pro", "aquilo", "parkplatzhaus"];
+  const titelbilder = titelSlugs
+    .map((slug) => projekte.find((p) => p.jahr === "2025" && p.slug === slug))
+    .map((p) => (p ? projektBild(p) : undefined))
+    .filter((b): b is string => Boolean(b));
 
   return (
     <>
       {/* Titelseite des Ressorts */}
       <section className="bleed relative" aria-labelledby="neuland-titel-head">
         <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
-          {titelbild && (
-            <>
-              {/* Unscharfer Hintergrund füllt die Fläche, das Foto selbst bleibt vollständig sichtbar */}
-              <img
-                src={titelbild}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl"
-              />
-              <Bild
-                src={titelbild}
-                alt={`${titelprojekt?.titel} – 1. Preis neuland 2025`}
-                className="relative h-full w-full object-contain"
-                fetchPriority="high"
-              />
-              <BildCredit src={titelbild} className="z-20" />
-            </>
-          )}
+          <CoverSlider
+            bilder={titelbilder}
+            alt="Preisträger:innen neuland 2025"
+            className="h-full w-full"
+            itemClassName="w-full"
+            zufall={false}
+            tempo={0.9}
+            hoverFaktor={6}
+          />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
