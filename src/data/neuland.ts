@@ -217,14 +217,17 @@ export const jury2027: { name: string; rolle: string; link?: string }[] = [
   ausJury2025("May-Britt Frank-Grosse"),
   { name: "Ulrike Kunkel", rolle: "AIT" },
   ausJury2025("Andreas Kurbos"),
+  { name: "Laurent Lacour", rolle: "Jurymitglied neuland 2027" },
   ausJury2025("Nils Holger Moormann"),
   ausJury2025("Johanna Neves Pimenta"),
   { name: "Gerd Richter", rolle: "Jurymitglied neuland 2027" },
   { name: "Hannes Riehle", rolle: "Riehle Köth Architekten" },
   ausJury2025("Dr. Katrin Schlecht"),
+  { name: "Carolin Schmitt", rolle: "Jurymitglied neuland 2027" },
   { name: "Matthias Siegert", rolle: "Jurymitglied neuland 2027" },
   ausJury2025("Prof. Jürgen Späth"),
   ausJury2025("Prof. Andreas Uebele"),
+  { name: "Julia Voigtländer", rolle: "German Design Council" },
 ];
 
 export const jahrgaenge = ["2025", "2023", "2021", "2019"];
