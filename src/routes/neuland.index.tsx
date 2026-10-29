@@ -162,7 +162,7 @@ function NeulandIndex() {
 
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
-            Alle 15 Juror:innen ansehen
+            Alle {jury2027.length} Juror:innen ansehen
           </Link>
         </div>
       </section>
