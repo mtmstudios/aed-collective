@@ -190,6 +190,7 @@ function NeulandIndex() {
       <section className="shell py-12 md:py-16" aria-labelledby="gewinner-2025">
         <SectionTitle
           id="gewinner-2025"
+          noRule
           titel="Die 1. Preise"
           kicker="Preisträger:innen 2025"
           href="/neuland/gewinner"
