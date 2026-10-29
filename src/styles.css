@@ -111,9 +111,9 @@
   --aed-pink-foreground: oklch(0 0 0);
   /* Outline-Button-Schrift: Schwarz auf hellem, Hauptfarbe auf dunklem Hintergrund */
   --aed-outline-fg: oklch(0 0 0);
-  /* Öffentliche Buttons wechseln ausschließlich zwischen Schwarz und Weiß. */
-  --aed-hover: var(--ink);
-  --aed-hover-foreground: var(--background);
+  /* Bereichs-Highlights bleiben blau; Buttons haben eigene neutrale Hovers. */
+  --aed-hover: oklch(0.72 0.13 262);
+  --aed-hover-foreground: oklch(0 0 0);
   --button-fill: var(--aed-pink);
   --button-text: var(--aed-pink-foreground);
   --button-border: var(--aed-pink);
@@ -153,6 +153,10 @@
   --button-fill: var(--background);
   --button-text: var(--ink);
   --button-border: var(--ink);
+  --button-outline-fill: var(--ink);
+  --aed-outline-fg: var(--background);
+  --button-outline-hover: var(--background);
+  --button-outline-hover-text: var(--ink);
 }
 
 
@@ -439,12 +443,13 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   border: 1px solid var(--button-border);
+  background: var(--button-outline-fill, transparent);
   color: var(--aed-outline-fg);
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--ink);
-    color: var(--background);
+    background: var(--button-outline-hover, var(--ink));
+    color: var(--button-outline-hover-text, var(--background));
   }
 }
 
