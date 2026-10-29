@@ -15,7 +15,7 @@ export const Route = createFileRoute("/neuland/jury")({
       { property: "og:title", content: "Jury 2027 – neuland | aed e.V." },
       {
         property: "og:description",
-        content: "Elf Fachleute entscheiden über die Preise des Wettbewerbs.",
+        content: "Zwölf Fachleute entscheiden über die Preise des Wettbewerbs.",
       },
       { property: "og:url", content: "/neuland/jury" },
     ],

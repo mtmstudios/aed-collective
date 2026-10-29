@@ -1081,6 +1081,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/gerd-richter.webp",
+    "dateiname": "gerd-richter.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/gerd-richter.webp",
+    "breite": 783,
+    "hoehe": 990,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/person/joachim-stumpp.webp",
     "dateiname": "joachim-stumpp.webp",
     "kategorie": "person",

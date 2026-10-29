@@ -22,6 +22,7 @@ export const personenBilder: Record<string, string> = {
   "moritz-kemper": "/bilder/person/moritz-kemper.webp",
   "nils-holger-moormann": "/bilder/person/nils-holger-moormann.webp",
   "matthias-siegert": "/bilder/person/matthias-siegert.webp",
+  "gerd-richter": "/bilder/person/gerd-richter.webp",
   "olaf-barski": "/bilder/person/olaf-barski.webp",
   "peter-scheerer": "/bilder/person/peter-scheerer.webp",
   "petra-stephan": "/bilder/person/petra-stephan.webp",
