@@ -3,7 +3,8 @@ import { jahrgaenge, jury2027, kennzahlen, projekte } from "@/data/neuland";
 import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
-import { SectionTitle } from "@/components/ui-bits";
+import { LogoGrid, SectionTitle } from "@/components/ui-bits";
+import { partner } from "@/data/site";
 import { AutoSlider } from "@/components/auto-slider";
 import { CoverSlider } from "@/components/cover-slider";
 
@@ -159,6 +160,13 @@ function NeulandIndex() {
           <Link to="/neuland/jury" className="btn-outline">
             Alle {jury2027.length} Juror:innen ansehen
           </Link>
+        </div>
+      </section>
+
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="partner-neuland">
+        <SectionTitle id="partner-neuland" titel="Kooperationspartner" />
+        <div className="mt-10">
+          <LogoGrid items={partner} solidYellow />
         </div>
       </section>
 
