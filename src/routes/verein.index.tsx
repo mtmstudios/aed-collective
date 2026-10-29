@@ -22,6 +22,8 @@ export const Route = createFileRoute("/verein/")({
         content: "Mission, Geschichte und Auszeichnungen des aed e.V.",
       },
       { property: "og:url", content: "/verein" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/verein" }],
   }),
@@ -62,7 +64,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell topic-rule py-16" aria-labelledby="mission">
+      <section className="shell topic-rule bg-brand text-brand-foreground py-16" aria-labelledby="mission">
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="mission" className="eyebrow md:col-span-3">
             Mission
@@ -88,7 +90,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="bleed bg-brand text-brand-foreground" aria-labelledby="geschichte">
+      <section className="bleed bg-background text-foreground" aria-labelledby="geschichte">
         <div className="shell py-16">
           <div className="grid gap-10 md:grid-cols-12">
             <h2 id="geschichte" className="eyebrow md:col-span-3">
@@ -114,7 +116,7 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="bleed bg-[var(--aed-hover)] text-ink" aria-labelledby="award">
+      <section className="bleed bg-brand text-brand-foreground" aria-labelledby="award">
         <div className="shell py-16">
           <div className="grid gap-10 md:grid-cols-12">
             <h2 id="award" className="eyebrow md:col-span-3">
@@ -255,7 +257,7 @@ function VereinPage() {
             return (
               <li
                 key={m.name}
-                className="flex min-h-24 border-r border-b border-line bg-brand/50 text-center text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+                className="flex min-h-24 border-r border-b border-line bg-brand text-center text-brand-foreground transition-colors hover:bg-background hover:text-ink"
               >
                 {m.url ? (
                   <a
