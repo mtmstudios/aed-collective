@@ -158,7 +158,7 @@ function NeulandIndex() {
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="jury-2025">
         <SectionTitle
           id="jury-2025"
-          titel="Jury 2025"
+          titel="Jury 2027"
           kicker="Unabhängige Fachjury"
           href="/neuland/jury"
           linkText="Ganze Jury ansehen"
@@ -199,6 +199,11 @@ function NeulandIndex() {
           {highlights.map((p) => (
             <ProjektCard key={p.slug} projekt={p} />
           ))}
+        </div>
+        <div className="mt-10">
+          <Link to="/neuland/jury-2025" className="btn-outline">
+            Jury 2025 ansehen
+          </Link>
         </div>
       </section>
 

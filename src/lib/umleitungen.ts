@@ -40,8 +40,8 @@ export const ALT_PFADE: Record<string, string> = {
   "/neuland-1/gewinner-innen-2021": "/neuland/gewinner/2021",
   "/neuland/gewinner-innen-2023": "/neuland/gewinner/2023",
   "/neuland/gewinner-innen-2025": "/neuland/gewinner/2025",
-  "/neuland/gewinner-innen-2023/impressionen-der-jury-2023": "/neuland/jury",
-  "/neuland/impressionen-der-jury-2025": "/neuland/jury",
+  "/neuland/gewinner-innen-2023/impressionen-der-jury-2023": "/neuland/jury-2025",
+  "/neuland/impressionen-der-jury-2025": "/neuland/jury-2025",
   "/neuland/impressionen-der-jury-2025/teilnahme-bedingungen-2025": "/neuland/teilnahme",
 };
 
