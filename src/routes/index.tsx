@@ -1,10 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, events, partner, vorstand } from "@/data/site";
-import { kennzahlen, projekte } from "@/data/neuland";
 import { editorialBilder } from "@/data/bilder";
 import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
-import { ProjektCard } from "@/components/projekt-card";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
 
@@ -48,7 +46,6 @@ function Index() {
   const koepfe = [...vorstand, ...beirat].filter(
     (p, i, alle) => alle.findIndex((a) => a.name === p.name) === i,
   );
-  const preistraeger = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
 
   return (
     <>
@@ -176,33 +173,13 @@ function Index() {
           id="neuland-titel"
           titel="neuland"
           kicker="Nachwuchswettbewerb"
-          href="/neuland/gewinner"
-          linkText="Alle Gewinner:innen"
           noRule
         />
 
         <p className="lead mt-8 max-w-3xl">
           Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
-          Kategorien, gefördert von der Karl Schlecht Stiftung, 2025 zum zehnten Mal ausgelobt.
+          Kategorien, gefördert von der Karl Schlecht Stiftung, 2027 zum elften Mal ausgelobt.
         </p>
-
-        <dl className="mt-10 grid grid-cols-2 gap-6 border-y border-ink py-8 md:grid-cols-4">
-          {kennzahlen.map((k) => (
-            <div key={k.label}>
-              <dt className="sr-only">{k.label}</dt>
-              <dd>
-                <span className="block display-md">{k.wert}</span>
-                <span className="eyebrow-muted mt-3 block">{k.label}</span>
-              </dd>
-            </div>
-          ))}
-        </dl>
-
-        <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-3">
-          {preistraeger.map((p) => (
-            <ProjektCard key={`${p.jahr}-${p.slug}`} projekt={p} />
-          ))}
-        </div>
 
         <div className="mt-12 flex flex-wrap gap-3">
           <Link to="/neuland" className="btn-solid">
