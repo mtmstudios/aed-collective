@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { MailLink } from "@/components/mail-link";
 import { Newsletter } from "./newsletter";
 import { kontakt } from "@/data/site";
@@ -24,9 +24,8 @@ const navLinksRechts = [
 ] as const;
 
 export function SiteFooter() {
-  const istNeuland = useRouterState({ select: (s) => s.location.pathname.startsWith("/neuland") });
   return (
-    <footer className={`mt-20 bg-footer-bg text-footer-text ${istNeuland ? "theme-neuland" : ""}`}>
+    <footer className="mt-20 bg-footer-bg text-footer-text">
       <div className="shell grid gap-12 py-16 md:grid-cols-12 md:py-20">
         {/* Newsletter */}
         <div className="md:col-span-5">

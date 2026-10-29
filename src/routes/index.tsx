@@ -215,7 +215,7 @@ function Index() {
       </section>
 
       {/* Partner */}
-      <section className="shell topic-rule bg-brand py-14 md:py-20" aria-labelledby="partner-titel">
+      <section className="shell topic-rule bg-background py-14 md:py-20" aria-labelledby="partner-titel">
         <SectionTitle id="partner-titel" titel="Kooperationspartner" />
         <div className="mt-10">
           <LogoGrid items={partner} solidYellow />

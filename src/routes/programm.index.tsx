@@ -23,6 +23,8 @@ export const Route = createFileRoute("/programm/")({
       { property: "og:title", content: "Programm – Veranstaltungen des aed e.V." },
       { property: "og:description", content: "Alle Veranstaltungen des aed e.V. in Stuttgart." },
       { property: "og:url", content: "/programm" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/programm" }],
   }),
@@ -168,7 +170,7 @@ function ProgrammPage() {
       </section>
 
       <section
-        className="bleed programm-archiv bg-[var(--aed-hover)]"
+        className="bleed programm-archiv bg-brand"
         aria-labelledby="archiv-titel"
       >
         <div className="shell py-14 md:py-20">
