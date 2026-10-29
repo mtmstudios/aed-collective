@@ -205,6 +205,26 @@ export const jury2025 = [
   { name: "Lisa Zech", rolle: "Kommunikationsdesignerin, STUDIO LZ", link: "https://studio-lz.de" },
 ];
 
+// Jury 2027 – übernommene Mitglieder aus 2025 plus neue Mitglieder
+const ausJury2025 = (name: string) => {
+  const p = jury2025.find((j) => j.name === name);
+  if (!p) throw new Error(`Jurymitglied fehlt: ${name}`);
+  return p;
+};
+
+export const jury2027: { name: string; rolle: string; link?: string }[] = [
+  ausJury2025("Prof. Lucio Blandini"),
+  ausJury2025("May-Britt Frank-Grosse"),
+  { name: "Ulrike Kunkel", rolle: "AIT" },
+  ausJury2025("Andreas Kurbos"),
+  ausJury2025("Nils Holger Moormann"),
+  ausJury2025("Johanna Neves Pimenta"),
+  { name: "Hannes Riehle", rolle: "Riehle Köth Architekten" },
+  ausJury2025("Dr. Katrin Schlecht"),
+  ausJury2025("Prof. Jürgen Späth"),
+  ausJury2025("Prof. Andreas Uebele"),
+];
+
 export const jahrgaenge = ["2025", "2023", "2021", "2019"];
 
 // Echte Kennzahlen des Jahrgangs 2025
