@@ -180,7 +180,14 @@ function NeulandIndex() {
         </div>
       </section>
 
-      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="gewinner-2025">
+      <section className="bleed bg-brand text-brand-foreground" aria-labelledby="rueckblick-2025">
+        <div className="shell py-12 md:py-16">
+          <p className="eyebrow">Rückblick auf den letzten Wettbewerb</p>
+          <h2 id="rueckblick-2025" className="display-lg mt-4">neuland 2025</h2>
+        </div>
+      </section>
+
+      <section className="shell py-12 md:py-16" aria-labelledby="gewinner-2025">
         <SectionTitle
           id="gewinner-2025"
           titel="Die 1. Preise"
