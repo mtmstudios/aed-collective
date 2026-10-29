@@ -23,6 +23,8 @@ export const Route = createFileRoute("/")({
         content: "Veranstaltungen, Austausch und Förderung für Gestaltung in Stuttgart.",
       },
       { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -169,7 +171,7 @@ function Index() {
       </section>
 
       {/* neuland als eigenes Ressort */}
-      <section className="theme-neuland shell py-14 md:py-20" aria-labelledby="neuland-titel">
+      <section className="theme-neuland shell bg-brand text-brand-foreground py-14 md:py-20" aria-labelledby="neuland-titel">
         <SectionTitle
           id="neuland-titel"
           titel="neuland"

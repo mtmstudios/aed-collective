@@ -54,6 +54,8 @@ export const Route = createFileRoute("/neuland/")({
         content: "Der interdisziplinäre Nachwuchswettbewerb für junge Gestalter:innen.",
       },
       { property: "og:url", content: "/neuland" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/neuland" }],
   }),
@@ -194,7 +196,7 @@ function NeulandIndex() {
       </section>
 
       <section
-        className="bleed neuland-archiv bg-[var(--aed-hover)]"
+        className="bleed neuland-archiv bg-brand"
         aria-labelledby="archiv-neuland"
       >
         <div className="shell py-14 md:py-20">
@@ -212,7 +214,7 @@ function NeulandIndex() {
                     <Link
                       to="/neuland/gewinner/$jahr"
                       params={{ jahr }}
-                      className="group flex flex-wrap items-baseline justify-between gap-4 rounded-full px-6 py-4 transition-colors hover:bg-white"
+                      className="group flex flex-wrap items-baseline justify-between gap-4 rounded-full px-6 py-4 transition-colors hover:bg-background"
                     >
                       <span className="display-sm">{jahr}</span>
                       <span className="text-sm text-muted-foreground">

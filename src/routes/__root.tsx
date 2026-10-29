@@ -32,7 +32,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-full bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+            className="inline-flex items-center justify-center rounded-full bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-colors hover:bg-ink hover:text-background"
           >
             Go home
           </Link>
@@ -64,13 +64,13 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-full bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+            className="inline-flex items-center justify-center rounded-full bg-brand px-4 py-2 text-sm font-medium text-brand-foreground transition-colors hover:bg-ink hover:text-background"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-full border border-brand bg-transparent px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-[var(--aed-hover)] hover:text-[var(--aed-hover-foreground)]"
+            className="inline-flex items-center justify-center rounded-full border border-brand bg-transparent px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-ink hover:text-background"
           >
             Go home
           </a>
