@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { jury2025 } from "@/data/neuland";
+import { jury2027 } from "@/data/neuland";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader } from "@/components/ui-bits";
 
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/neuland/jury")({
       { property: "og:title", content: "Jury 2027 – neuland | aed e.V." },
       {
         property: "og:description",
-        content: "21 Fachleute entscheiden über die Preise des Wettbewerbs.",
+        content: "Zehn Fachleute entscheiden über die Preise des Wettbewerbs.",
       },
       { property: "og:url", content: "/neuland/jury" },
     ],
@@ -24,7 +24,6 @@ export const Route = createFileRoute("/neuland/jury")({
   component: JuryPage,
 });
 
-// Zunächst Kopie der Jury 2025 – Besetzung 2027 folgt
 function JuryPage() {
   return (
     <>
@@ -35,7 +34,7 @@ function JuryPage() {
       />
       <section className="shell py-12 md:py-16">
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {jury2025.map((p) => (
+          {jury2027.map((p) => (
             <PersonCard key={p.name} person={p} />
           ))}
         </div>

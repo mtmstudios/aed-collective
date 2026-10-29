@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { jahrgaenge, jury2025, kennzahlen, projekte } from "@/data/neuland";
+import { jahrgaenge, jury2027, kennzahlen, projekte } from "@/data/neuland";
 import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
@@ -168,14 +168,14 @@ function NeulandIndex() {
           itemClassName="w-[10.25rem] pr-5 sm:w-[12.25rem]"
           pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
         >
-          {jury2025.map((p) => (
+          {jury2027.map((p) => (
             <JuryKarte key={p.name} person={p} />
           ))}
         </AutoSlider>
 
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
-            Alle 21 Juroren:innen ansehen
+            Alle 10 Juror:innen ansehen
           </Link>
         </div>
       </section>
