@@ -12,9 +12,9 @@ import { NeulandSubnav } from "@/routes/neuland";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
-import webteaserNeuland from "@/assets/neuland-teaser-neuland.png.asset.json";
-import webteaser2027 from "@/assets/neuland-teaser-2027.png.asset.json";
-import webteaserBewerben from "@/assets/neuland-teaser-bewerben.png.asset.json";
+import webteaserNeuland from "@/assets/neuland-teaser-neuland-v2.png.asset.json";
+import webteaser2027 from "@/assets/neuland-teaser-2027-v2.png.asset.json";
+import webteaserBewerben from "@/assets/neuland-teaser-bewerben-v2.png.asset.json";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
