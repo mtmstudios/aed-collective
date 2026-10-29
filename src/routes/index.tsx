@@ -5,6 +5,7 @@ import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
+import neulandTeaser from "@/assets/neuland-startseite-2027.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -176,18 +177,30 @@ function Index() {
           noRule
         />
 
-        <p className="lead mt-8 max-w-3xl">
-          Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
-          Kategorien, gefördert von der Karl Schlecht Stiftung, 2027 zum elften Mal ausgelobt.
-        </p>
+        <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
+          <div>
+            <p className="lead max-w-3xl">
+              Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
+              Kategorien, gefördert von der Karl Schlecht Stiftung, 2027 zum elften Mal ausgelobt.
+            </p>
 
-        <div className="mt-12 flex flex-wrap gap-3">
-          <Link to="/neuland" className="btn-solid">
-            Zum Wettbewerb
-          </Link>
-          <Link to="/neuland/jury" className="btn-outline">
-            Die Jury
-          </Link>
+            <div className="mt-12 flex flex-wrap gap-3">
+              <Link to="/neuland" className="btn-solid">
+                Zum Wettbewerb
+              </Link>
+              <Link to="/neuland/jury" className="btn-outline">
+                Die Jury
+              </Link>
+            </div>
+          </div>
+          <img
+            src={neulandTeaser.url}
+            alt="neuland 2027 – Nachwuchswettbewerb für Gestalter:innen, gefördert von der Karl Schlecht Stiftung"
+            width={1000}
+            height={600}
+            loading="lazy"
+            className="block h-auto w-full"
+          />
         </div>
       </section>
 
