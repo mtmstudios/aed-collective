@@ -221,6 +221,7 @@ export const jury2027: { name: string; rolle: string; link?: string }[] = [
   ausJury2025("Johanna Neves Pimenta"),
   { name: "Hannes Riehle", rolle: "Riehle Köth Architekten" },
   ausJury2025("Dr. Katrin Schlecht"),
+  { name: "Matthias Siegert", rolle: "Jurymitglied neuland 2027" },
   ausJury2025("Prof. Jürgen Späth"),
   ausJury2025("Prof. Andreas Uebele"),
 ];
