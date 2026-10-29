@@ -1105,6 +1105,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/hannes-riehle.webp",
+    "dateiname": "hannes-riehle.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/hannes-riehle.webp",
+    "breite": 640,
+    "hoehe": 427,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/person/joachim-stumpp.webp",
     "dateiname": "joachim-stumpp.webp",
     "kategorie": "person",
