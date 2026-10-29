@@ -81,7 +81,8 @@ function NeulandIndex() {
             bilder={titelbilder}
             alt="Preisträger:innen neuland 2025"
             className="h-full w-full"
-            itemClassName="w-full"
+            itemClassName="w-auto"
+            bildClassName="h-full w-auto max-w-none"
             zufall={false}
             tempo={0.9}
             hoverFaktor={6}
