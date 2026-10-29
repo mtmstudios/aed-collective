@@ -98,14 +98,9 @@ function NeulandIndex() {
                 Der interdisziplinäre Nachwuchswettbewerb des aed – für Studierende und
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link to="/neuland/einreichung" className="btn-solid btn-solid-on-dark">
-                  Jetzt bewerben
-                </Link>
-                <span className="meta text-white/80">
-                  Einreichungsschluss {schlussFormatiert().split(" um")[0]}
-                </span>
-              </div>
+              <p className="meta mt-8 text-left text-white/80">
+                Einreichungsschluss {schlussFormatiert().split(" um")[0]}
+              </p>
             </div>
           </div>
         </div>
