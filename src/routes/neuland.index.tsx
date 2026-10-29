@@ -11,7 +11,9 @@ import { NeulandSubnav } from "@/routes/neuland";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
-import webteaser1 from "@/assets/webteaser-slider-2.png.asset.json";
+import webteaserNeuland from "@/assets/neuland-teaser-neuland.png.asset.json";
+import webteaser2027 from "@/assets/neuland-teaser-2027.png.asset.json";
+import webteaserBewerben from "@/assets/neuland-teaser-bewerben.png.asset.json";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
@@ -66,15 +68,15 @@ export const Route = createFileRoute("/neuland/")({
 
 function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
-  // Titel-Slider: Fotos der Preisträger:innen 2025 (weitere Slugs hier ergänzen)
+  // Titel-Slider: Teaser und Projektfotos wechseln sich auch am Schleifenübergang ab.
   const titelSlugs = ["on-radar-radiotracer-forschung-auf-apple-vision-pro", "aquilo", "parkplatzhaus"];
-  const titelbilder = [
-    webteaser1.url,
-    ...titelSlugs
-      .map((slug) => projekte.find((p) => p.jahr === "2025" && p.slug === slug))
-      .map((p) => (p ? projektBild(p) : undefined))
-      .filter((b): b is string => Boolean(b)),
-  ];
+  const teaserbilder = [webteaserNeuland.url, webteaser2027.url, webteaserBewerben.url];
+  const titelbilder = titelSlugs.flatMap((slug, index) => {
+    const projekt = projekte.find((p) => p.jahr === "2025" && p.slug === slug);
+    const foto = projekt ? projektBild(projekt) : undefined;
+    const teaser = teaserbilder[index % teaserbilder.length];
+    return foto && teaser ? [teaser, foto] : [];
+  });
 
   return (
     <>
