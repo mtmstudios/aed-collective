@@ -11,6 +11,7 @@ import { NeulandSubnav } from "@/routes/neuland";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
+import webteaser1 from "@/assets/webteaser-slider-1.png.asset.json";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
@@ -67,10 +68,13 @@ function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
   // Titel-Slider: Fotos der Preisträger:innen 2025 (weitere Slugs hier ergänzen)
   const titelSlugs = ["on-radar-radiotracer-forschung-auf-apple-vision-pro", "aquilo", "parkplatzhaus"];
-  const titelbilder = titelSlugs
-    .map((slug) => projekte.find((p) => p.jahr === "2025" && p.slug === slug))
-    .map((p) => (p ? projektBild(p) : undefined))
-    .filter((b): b is string => Boolean(b));
+  const titelbilder = [
+    webteaser1.url,
+    ...titelSlugs
+      .map((slug) => projekte.find((p) => p.jahr === "2025" && p.slug === slug))
+      .map((p) => (p ? projektBild(p) : undefined))
+      .filter((b): b is string => Boolean(b)),
+  ];
 
   return (
     <>
