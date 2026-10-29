@@ -78,7 +78,7 @@ function Index() {
                 Seit 2004 bringt der aed zusammen, was sonst getrennt entwirft.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/programm" className="btn-solid">
+                <Link to="/programm" className="btn-solid btn-solid-on-dark">
                   Programm
                 </Link>
                 <Link to="/mitglied-werden" className="btn-outline btn-outline-on-dark">
@@ -171,7 +171,7 @@ function Index() {
       </section>
 
       {/* neuland als eigenes Ressort */}
-      <section className="theme-neuland shell bg-brand text-brand-foreground py-14 md:py-20" aria-labelledby="neuland-titel">
+      <section className="theme-neuland shell bg-background text-foreground py-14 md:py-20" aria-labelledby="neuland-titel">
         <SectionTitle
           id="neuland-titel"
           titel="neuland"
@@ -215,10 +215,10 @@ function Index() {
       </section>
 
       {/* Partner */}
-      <section className="shell topic-rule py-14 md:py-20" aria-labelledby="partner-titel">
+      <section className="shell topic-rule bg-brand py-14 md:py-20" aria-labelledby="partner-titel">
         <SectionTitle id="partner-titel" titel="Kooperationspartner" />
         <div className="mt-10">
-          <LogoGrid items={partner} />
+          <LogoGrid items={partner} solidYellow />
         </div>
         <p className="meta mt-8">
           Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.{" "}
