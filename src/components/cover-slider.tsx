@@ -17,6 +17,7 @@ export function CoverSlider({
   tempo = 0.35,
   hoverFaktor = 4,
   pfeile = true,
+  bildClassName = "h-full w-full object-cover",
 }: {
   bilder: readonly string[];
   alt?: string;
@@ -29,6 +30,8 @@ export function CoverSlider({
   /** Beschleunigung bei Mouseover */
   hoverFaktor?: number;
   pfeile?: boolean;
+  /** Klassen des Bildes selbst (Standard: füllt die Kachel per Beschnitt) */
+  bildClassName?: string;
 }) {
   // Bilder ohne geklärte Rechte fallen hier ganz heraus: Ein Platzhalter
   // mitten im laufenden Band sähe nach Fehler aus, nicht nach Absicht.
@@ -141,7 +144,7 @@ export function CoverSlider({
               alt={i === 0 ? alt : ""}
               aria-hidden={i === 0 ? undefined : true}
               draggable={false}
-              className="h-full w-full object-cover"
+              className={bildClassName}
               loading={i < 4 ? "eager" : "lazy"}
             />
             <BildCredit src={src} />

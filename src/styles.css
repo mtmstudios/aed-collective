@@ -111,9 +111,14 @@
   --aed-pink-foreground: oklch(0 0 0);
   /* Outline-Button-Schrift: Schwarz auf hellem, Hauptfarbe auf dunklem Hintergrund */
   --aed-outline-fg: oklch(0 0 0);
-  /* Hover-/Highlight-Farbe: Blau */
+  /* Bereichs-Highlights bleiben blau; Buttons haben eigene neutrale Hovers. */
   --aed-hover: oklch(0.72 0.13 262);
   --aed-hover-foreground: oklch(0 0 0);
+  --button-fill: var(--aed-pink);
+  --button-text: var(--aed-pink-foreground);
+  --button-border: var(--aed-pink);
+  --button-hover: var(--ink);
+  --button-hover-text: var(--background);
   --chart-1: oklch(0.80437 0.16531 80.08964);
   --chart-2: oklch(0.55 0.17 250);
   --chart-3: oklch(0.68 0.15 145);
@@ -136,9 +141,7 @@
   --footer-input-border: oklch(0.36 0.013 255);
 }
 
-/* Bereichsfarbe neuland: Blau, auf das aed-Pink abgestimmt
-   (gleiche Helligkeit, etwas weniger Sättigung – kein reines Blau).
-   Ersetzt im neuland-Bereich alle Pink-Elemente; Gelb bleibt Hover-Farbe. */
+/* neuland: blaue CTA-Flächen und Umrandungen, neutrale Mouseovers. */
 .theme-neuland {
   --brand: oklch(0.72 0.13 262);
   --brand-foreground: oklch(0 0 0);
@@ -147,8 +150,12 @@
   --aed-pink: oklch(0.72 0.13 262);
   --aed-pink-deep: oklch(0.47 0.15 264);
   --aed-pink-foreground: oklch(0 0 0);
-  /* Auf blauen Flächen bleibt das warme Gelb die Hover-Farbe */
-  --aed-hover: oklch(0.80437 0.16531 80.08964);
+  --aed-hover: var(--brand);
+  --aed-hover-foreground: var(--brand-foreground);
+  --button-fill: var(--brand);
+  --button-text: var(--ink);
+  --button-border: var(--brand);
+  --aed-outline-fg: var(--ink);
 }
 
 
@@ -411,13 +418,13 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  background: var(--aed-pink);
-  color: var(--aed-pink-foreground);
+  background: var(--button-fill);
+  color: var(--button-text);
   transition: background-color 150ms ease, color 150ms ease;
 
   &:hover {
-    background: var(--aed-hover);
-    color: var(--aed-hover-foreground);
+    background: var(--button-hover);
+    color: var(--button-hover-text);
   }
 }
 
@@ -434,25 +441,39 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  border: 1px solid var(--aed-pink);
+  border: 1px solid var(--button-border);
+  background: transparent;
   color: var(--aed-outline-fg);
-  transition: background-color 150ms ease, color 150ms ease;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 
   &:hover {
-    background: var(--aed-hover);
-    color: var(--aed-hover-foreground);
+    background: var(--button-hover);
+    color: var(--button-hover-text);
+    border-color: var(--button-hover);
   }
 }
 
-/* Outline-Button auf dunklem Hintergrund (Hero, Footer): rosa Schrift */
+/* Auf dunklem Hintergrund bleibt der Outline-Button gut lesbar. */
 @utility btn-outline-on-dark {
-  --aed-outline-fg: var(--aed-pink);
+  --aed-outline-fg: var(--background);
+  --button-hover: var(--background);
+  --button-hover-text: var(--ink);
+
+  &:hover {
+    background: var(--background);
+    color: var(--ink);
+  }
+}
+
+@utility btn-solid-on-dark {
+  --button-hover: var(--background);
+  --button-hover-text: var(--ink);
 }
 
 /* Button auf gelbem Archiv-Band: weißer Hover statt gelb */
 @utility btn-archiv-hover {
   &:hover {
-    background: #fff;
+    background: var(--background);
     color: var(--ink);
   }
 }

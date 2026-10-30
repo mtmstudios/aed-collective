@@ -205,6 +205,36 @@ export const jury2025 = [
   { name: "Lisa Zech", rolle: "Kommunikationsdesignerin, STUDIO LZ", link: "https://studio-lz.de" },
 ];
 
+// Jury 2027 – übernommene Mitglieder aus 2025 plus neue Mitglieder
+const ausJury2025 = (name: string) => {
+  const p = jury2025.find((j) => j.name === name);
+  if (!p) throw new Error(`Jurymitglied fehlt: ${name}`);
+  return p;
+};
+
+export const jury2027: { name: string; rolle: string; link?: string }[] = [
+  { name: "Prof. Anne Bergner", rolle: "Staatliche Akademie der Bildenden Künste Stuttgart" },
+  ausJury2025("Prof. Lucio Blandini"),
+  { name: "Joachim Bosse", rolle: "Künstler & Mitgründer der Werbeagentur Dojo" },
+  { name: "Shirin Brückner", rolle: "Geschäftsführerin ATELIER BRÜCKNER GMBH" },
+  { name: "Alexander Fehre", rolle: "Studio Alexander Fehre GmbH" },
+  ausJury2025("May-Britt Frank-Grosse"),
+  { name: "Ulrike Kunkel", rolle: "AIT" },
+  ausJury2025("Andreas Kurbos"),
+  { name: "Prof. Laurent Lacour", rolle: "Hauser Lacour/21TORR" },
+  { name: "Eva Marguerre", rolle: "Studio Besau Marguerre" },
+  ausJury2025("Nils Holger Moormann"),
+  ausJury2025("Johanna Neves Pimenta"),
+  { name: "Gerd Richter", rolle: "Bauwirtschaft bei NFG Gruppe" },
+  { name: "Hannes Riehle", rolle: "Riehle Köth Architekten" },
+  ausJury2025("Dr. Katrin Schlecht"),
+  { name: "Carolin Schmitt", rolle: "Principal Design Researcher at PHOENIX" },
+  { name: "Matthias Siegert", rolle: "Geschäftsführer VONM" },
+  ausJury2025("Prof. Jürgen Späth"),
+  ausJury2025("Prof. Andreas Uebele"),
+  { name: "Julia Voigtländer", rolle: "German Design Council" },
+];
+
 export const jahrgaenge = ["2025", "2023", "2021", "2019"];
 
 // Echte Kennzahlen des Jahrgangs 2025

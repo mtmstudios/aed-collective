@@ -11,7 +11,7 @@ const nav = [
 
 const navDanach = [{ to: "/kontakt", label: "Kontakt" }] as const;
 
-const linkKlasse = "font-sans text-base text-brand-foreground transition-colors hover:text-[var(--aed-hover)]";
+const linkKlasse = "font-sans text-base text-brand-foreground transition-colors hover:text-background";
 const aktiv = { className: "underline decoration-1 underline-offset-[6px]" };
 
 export function SiteHeader() {
@@ -23,7 +23,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-brand bg-brand transition-colors duration-300 ${istNeuland ? "theme-neuland" : ""}`}
+      className={`sticky top-0 z-50 border-b-[0.5px] border-foreground bg-brand transition-colors duration-300 ${istNeuland ? "theme-neuland" : ""}`}
     >
       <div className="shell flex h-20 items-center justify-between gap-4 md:h-24">
         {/* Mobile Menü */}
@@ -32,7 +32,7 @@ export function SiteHeader() {
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex min-h-11 min-w-11 items-center justify-center text-brand-foreground transition-colors hover:text-[var(--aed-hover)] lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center text-brand-foreground transition-colors hover:text-background lg:hidden"
         >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
@@ -61,7 +61,7 @@ export function SiteHeader() {
             <li>
               <Link
                 to="/neuland"
-                className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-base text-background transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-base text-background transition-colors hover:bg-background hover:text-ink"
               >
                 neuland
               </Link>
@@ -88,7 +88,7 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="border-b border-ink py-4 font-sans text-base text-brand-foreground transition-colors hover:text-[var(--aed-hover)]"
+                className="border-b border-ink py-4 font-sans text-base text-brand-foreground transition-colors hover:text-background"
               >
                 {item.label}
               </Link>
@@ -96,7 +96,7 @@ export function SiteHeader() {
             <Link
               to="/neuland"
               onClick={() => setOpen(false)}
-              className="mt-4 mb-2 inline-flex w-fit items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-base text-background"
+              className="mt-4 mb-2 inline-flex w-fit items-center justify-center rounded-full bg-ink px-5 py-2.5 font-sans text-base text-background transition-colors hover:bg-background hover:text-ink"
             >
               neuland
             </Link>

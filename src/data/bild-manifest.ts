@@ -1047,6 +1047,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/carolin-schmitt.webp",
+    "dateiname": "carolin-schmitt.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/carolin-schmitt.webp",
+    "breite": 900,
+    "hoehe": 603,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/person/dina-gallo.webp",
     "dateiname": "dina-gallo.webp",
     "kategorie": "person",
@@ -1120,6 +1132,30 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/gerd-richter.webp",
+    "dateiname": "gerd-richter.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/gerd-richter.webp",
+    "breite": 783,
+    "hoehe": 990,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
+    "pfad": "public/bilder/person/hannes-riehle.webp",
+    "dateiname": "hannes-riehle.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/hannes-riehle.webp",
+    "breite": 640,
+    "hoehe": 427,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/person/joachim-stumpp.webp",
     "dateiname": "joachim-stumpp.webp",
     "kategorie": "person",
@@ -1158,6 +1194,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/julia-voigtlaender.webp",
+    "dateiname": "julia-voigtlaender.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/julia-voigtlaender.webp",
+    "breite": 750,
+    "hoehe": 1000,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/person/kai-bierich.webp",
     "dateiname": "kai-bierich.webp",
     "kategorie": "person",
@@ -1165,6 +1213,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "url": "/bilder/person/kai-bierich.webp",
     "breite": 900,
     "hoehe": 1125,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
+    "pfad": "public/bilder/person/laurent-lacour.webp",
+    "dateiname": "laurent-lacour.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/laurent-lacour.webp",
+    "breite": 800,
+    "hoehe": 1200,
     "verwendungen": [
       "Daten bilder"
     ]
@@ -1205,6 +1265,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "verwendungen": [
       "Daten bilder",
       "Daten site"
+    ]
+  },
+  {
+    "pfad": "public/bilder/person/matthias-siegert.webp",
+    "dateiname": "matthias-siegert.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/matthias-siegert.webp",
+    "breite": 801,
+    "hoehe": 1200,
+    "verwendungen": [
+      "Daten bilder"
     ]
   },
   {

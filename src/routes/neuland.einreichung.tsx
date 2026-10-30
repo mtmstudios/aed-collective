@@ -51,6 +51,8 @@ export const Route = createFileRoute("/neuland/einreichung")({
         content: "Formular für die Einreichung zum Wettbewerb neuland 2027.",
       },
       { name: "robots", content: "noindex" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: EinreichungPage,
@@ -573,27 +575,27 @@ function EinreichungPage() {
             </fieldset>
 
             <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-line pt-6">
-              <Button variant="outline" onClick={zurueck} disabled={busy || schritt === 0}>
+              <Button variant="areaOutline" onClick={zurueck} disabled={busy || schritt === 0}>
                 Zurück
               </Button>
               {schritt < SCHRITTE.length - 1 && (
-                <Button onClick={weiter} disabled={busy}>
+                <Button variant="area" onClick={weiter} disabled={busy}>
                   Weiter
                 </Button>
               )}
               {schritt === SCHRITTE.length - 1 && (
-                <Button onClick={einreichen} disabled={busy || !absendbar}>
+                <Button variant="area" onClick={einreichen} disabled={busy || !absendbar}>
                   Bewerbung einreichen
                 </Button>
               )}
               <Button
-                variant="secondary"
+                variant="areaOutline"
                 onClick={() => zwischenspeichern(false)}
                 disabled={busy || nurLesen}
               >
                 Zwischenspeichern
               </Button>
-              <Button variant="ghost" onClick={() => setAnsicht("start")} disabled={busy}>
+              <Button variant="areaOutline" onClick={() => setAnsicht("start")} disabled={busy}>
                 Zur Übersicht
               </Button>
             </div>
@@ -609,10 +611,10 @@ function EinreichungPage() {
             </p>
             <IdHinweis id={einreichungsId} status="eingereicht" hervorheben />
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button variant="outline" onClick={() => setAnsicht("formular")}>
+              <Button variant="areaOutline" onClick={() => setAnsicht("formular")}>
                 Bewerbung weiter bearbeiten
               </Button>
-              <Button variant="ghost" onClick={() => setAnsicht("start")}>
+              <Button variant="areaOutline" onClick={() => setAnsicht("start")}>
                 Zur Übersicht
               </Button>
             </div>
@@ -639,7 +641,7 @@ function StartAnsicht({
         <p className="mt-3 text-sm text-muted-foreground">
           Formular in fünf Schritten ausfüllen. Der Zwischenstand kann jederzeit gespeichert werden.
         </p>
-        <Button className="mt-6 w-full" onClick={onNeu} disabled={geschlossen}>
+        <Button variant="area" className="mt-6 w-full" onClick={onNeu} disabled={geschlossen}>
           Neue Bewerbung starten
         </Button>
         {geschlossen && (
@@ -653,7 +655,7 @@ function StartAnsicht({
         <p className="mt-3 text-sm text-muted-foreground">
           Mit Einreichungs-Nummer (z. B. NL27-001) und der angegebenen E-Mail-Adresse.
         </p>
-        <Button variant="outline" className="mt-6 w-full" onClick={onFortsetzen}>
+        <Button variant="areaOutline" className="mt-6 w-full" onClick={onFortsetzen}>
           Bestehende Bewerbung fortsetzen
         </Button>
       </div>
@@ -685,12 +687,13 @@ function FortsetzenAnsicht({
       </div>
       <div className="mt-6 flex gap-3">
         <Button
+          variant="area"
           onClick={() => onLaden(id, email)}
           disabled={busy || !id.trim() || !istEmail(email)}
         >
           Bewerbung laden
         </Button>
-        <Button variant="ghost" onClick={onAbbrechen} disabled={busy}>
+        <Button variant="areaOutline" onClick={onAbbrechen} disabled={busy}>
           Abbrechen
         </Button>
       </div>
@@ -714,7 +717,7 @@ function IdHinweis({
       <div className="mt-2 flex flex-wrap items-center gap-4">
         <span className="display-sm">{id}</span>
         <Button
-          variant="outline"
+          variant="areaOutline"
           size="sm"
           onClick={async () => {
             await navigator.clipboard.writeText(id);

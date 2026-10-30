@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat, events, partner, vorstand } from "@/data/site";
-import { kennzahlen, projekte } from "@/data/neuland";
 import { editorialBilder } from "@/data/bilder";
 import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
-import { ProjektCard } from "@/components/projekt-card";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
+import neulandTeaser from "@/assets/neuland-startseite-2027-v3.png.asset.json";
+import { schlussFormatiert } from "@/config/neuland-einreichung";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,6 +23,8 @@ export const Route = createFileRoute("/")({
         content: "Veranstaltungen, Austausch und Förderung für Gestaltung in Stuttgart.",
       },
       { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -46,7 +48,6 @@ function Index() {
   const koepfe = [...vorstand, ...beirat].filter(
     (p, i, alle) => alle.findIndex((a) => a.name === p.name) === i,
   );
-  const preistraeger = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis").slice(0, 3);
 
   return (
     <>
@@ -76,7 +77,7 @@ function Index() {
                 Seit 2004 bringt der aed zusammen, was sonst getrennt entwirft.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/programm" className="btn-solid">
+                <Link to="/programm" className="btn-solid btn-solid-on-dark">
                   Programm
                 </Link>
                 <Link to="/mitglied-werden" className="btn-outline btn-outline-on-dark">
@@ -169,54 +170,50 @@ function Index() {
       </section>
 
       {/* neuland als eigenes Ressort */}
-      <section className="theme-neuland shell py-14 md:py-20" aria-labelledby="neuland-titel">
+      <section className="theme-neuland shell bg-background text-foreground py-14 md:py-20" aria-labelledby="neuland-titel">
         <SectionTitle
           id="neuland-titel"
           titel="neuland"
           kicker="Nachwuchswettbewerb"
-          href="/neuland/gewinner"
-          linkText="Alle Gewinner:innen"
           noRule
         />
 
-        <p className="lead mt-8 max-w-3xl">
-          Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
-          Kategorien, gefördert von der Karl Schlecht Stiftung, 2025 zum zehnten Mal ausgelobt.
-        </p>
-
-        <dl className="mt-10 grid grid-cols-2 gap-6 border-y border-ink py-8 md:grid-cols-4">
-          {kennzahlen.map((k) => (
-            <div key={k.label}>
-              <dt className="sr-only">{k.label}</dt>
-              <dd>
-                <span className="block display-md">{k.wert}</span>
-                <span className="eyebrow-muted mt-3 block">{k.label}</span>
-              </dd>
+        <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
+          <div>
+            <img
+              src={neulandTeaser.url}
+              alt="neuland 2027 – Nachwuchswettbewerb für Gestalter:innen, gefördert von der Karl Schlecht Stiftung"
+              width={1000}
+              height={600}
+              loading="lazy"
+              className="block h-auto w-full"
+            />
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/neuland" className="btn-solid">
+                Zum Wettbewerb
+              </Link>
+              <Link to="/neuland/jury" className="btn-outline">
+                Die Jury
+              </Link>
             </div>
-          ))}
-        </dl>
-
-        <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-3">
-          {preistraeger.map((p) => (
-            <ProjektCard key={`${p.jahr}-${p.slug}`} projekt={p} />
-          ))}
-        </div>
-
-        <div className="mt-12 flex flex-wrap gap-3">
-          <Link to="/neuland" className="btn-solid">
-            Zum Wettbewerb
-          </Link>
-          <Link to="/neuland/jury" className="btn-outline">
-            Die Jury
-          </Link>
+          </div>
+          <div>
+            <p className="lead max-w-3xl">
+              Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
+              Kategorien, gefördert von der Karl Schlecht Stiftung, 2027 zum elften Mal ausgelobt.
+            </p>
+            <p className="eyebrow mt-8">
+              Einreichungsschluss {schlussFormatiert().split(" um")[0]}
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Partner */}
-      <section className="shell topic-rule py-14 md:py-20" aria-labelledby="partner-titel">
+      <section className="shell topic-rule bg-background py-14 md:py-20" aria-labelledby="partner-titel">
         <SectionTitle id="partner-titel" titel="Kooperationspartner" />
         <div className="mt-10">
-          <LogoGrid items={partner} />
+          <LogoGrid items={partner} solidYellow />
         </div>
         <p className="meta mt-8">
           Dazu rund 80 Fördermitglieder und über 400 Personenmitglieder.{" "}

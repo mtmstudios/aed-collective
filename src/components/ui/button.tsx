@@ -9,6 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        area: "bg-[var(--button-fill)] text-[var(--button-text)] hover:bg-[var(--button-hover)] hover:text-[var(--button-hover-text)]",
+        areaOutline: "border border-[var(--button-border)] bg-transparent text-[var(--aed-outline-fg)] hover:border-[var(--button-hover)] hover:bg-[var(--button-hover)] hover:text-[var(--button-hover-text)]",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:

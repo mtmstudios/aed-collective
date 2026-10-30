@@ -32,6 +32,7 @@ import { Route as NeulandIndexRouteImport } from './routes/neuland.index'
 import { Route as NeulandEinreichungRouteImport } from './routes/neuland.einreichung'
 import { Route as NeulandGewinnerInnenJahrRouteImport } from './routes/neuland.gewinner-innen-$jahr'
 import { Route as NeulandJuryRouteImport } from './routes/neuland.jury'
+import { Route as NeulandJury2025RouteImport } from './routes/neuland.jury-2025'
 import { Route as NeulandPresseRouteImport } from './routes/neuland.presse'
 import { Route as NeulandTeilnahmeRouteImport } from './routes/neuland.teilnahme'
 import { Route as NeulandWettbewerbRouteImport } from './routes/neuland.wettbewerb'
@@ -165,6 +166,11 @@ const NeulandJuryRoute = NeulandJuryRouteImport.update({
   path: '/jury',
   getParentRoute: () => NeulandRoute,
 } as any)
+const NeulandJury2025Route = NeulandJury2025RouteImport.update({
+  id: '/jury-2025',
+  path: '/jury-2025',
+  getParentRoute: () => NeulandRoute,
+} as any)
 const NeulandPresseRoute = NeulandPresseRouteImport.update({
   id: '/presse',
   path: '/presse',
@@ -265,6 +271,7 @@ export interface FileRoutesByFullPath {
   '/neuland/einreichung': typeof NeulandEinreichungRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
+  '/neuland/jury-2025': typeof NeulandJury2025Route
   '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
@@ -304,6 +311,7 @@ export interface FileRoutesByTo {
   '/neuland/einreichung': typeof NeulandEinreichungRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
+  '/neuland/jury-2025': typeof NeulandJury2025Route
   '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
@@ -343,6 +351,7 @@ export interface FileRoutesById {
   '/neuland/einreichung': typeof NeulandEinreichungRoute
   '/neuland/gewinner-innen-$jahr': typeof NeulandGewinnerInnenJahrRoute
   '/neuland/jury': typeof NeulandJuryRoute
+  '/neuland/jury-2025': typeof NeulandJury2025Route
   '/neuland/presse': typeof NeulandPresseRoute
   '/neuland/teilnahme': typeof NeulandTeilnahmeRoute
   '/neuland/wettbewerb': typeof NeulandWettbewerbRoute
@@ -385,6 +394,7 @@ export interface FileRouteTypes {
     | '/neuland/einreichung'
     | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
+    | '/neuland/jury-2025'
     | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
@@ -424,6 +434,7 @@ export interface FileRouteTypes {
     | '/neuland/einreichung'
     | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
+    | '/neuland/jury-2025'
     | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
@@ -462,6 +473,7 @@ export interface FileRouteTypes {
     | '/neuland/einreichung'
     | '/neuland/gewinner-innen-$jahr'
     | '/neuland/jury'
+    | '/neuland/jury-2025'
     | '/neuland/presse'
     | '/neuland/teilnahme'
     | '/neuland/wettbewerb'
@@ -671,6 +683,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NeulandJuryRouteImport
       parentRoute: typeof NeulandRoute
     }
+    '/neuland/jury-2025': {
+      id: '/neuland/jury-2025'
+      path: '/jury-2025'
+      fullPath: '/neuland/jury-2025'
+      preLoaderRoute: typeof NeulandJury2025RouteImport
+      parentRoute: typeof NeulandRoute
+    }
     '/neuland/presse': {
       id: '/neuland/presse'
       path: '/presse'
@@ -795,6 +814,7 @@ interface NeulandRouteChildren {
   NeulandEinreichungRoute: typeof NeulandEinreichungRoute
   NeulandGewinnerInnenJahrRoute: typeof NeulandGewinnerInnenJahrRoute
   NeulandJuryRoute: typeof NeulandJuryRoute
+  NeulandJury2025Route: typeof NeulandJury2025Route
   NeulandPresseRoute: typeof NeulandPresseRoute
   NeulandTeilnahmeRoute: typeof NeulandTeilnahmeRoute
   NeulandWettbewerbRoute: typeof NeulandWettbewerbRoute
@@ -808,6 +828,7 @@ const NeulandRouteChildren: NeulandRouteChildren = {
   NeulandEinreichungRoute: NeulandEinreichungRoute,
   NeulandGewinnerInnenJahrRoute: NeulandGewinnerInnenJahrRoute,
   NeulandJuryRoute: NeulandJuryRoute,
+  NeulandJury2025Route: NeulandJury2025Route,
   NeulandPresseRoute: NeulandPresseRoute,
   NeulandTeilnahmeRoute: NeulandTeilnahmeRoute,
   NeulandWettbewerbRoute: NeulandWettbewerbRoute,

@@ -37,6 +37,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/neuland/teilnahme", changefreq: "monthly", priority: "0.8" },
           { path: "/neuland/gewinner", changefreq: "monthly", priority: "0.8" },
           { path: "/neuland/jury", changefreq: "monthly", priority: "0.6" },
+          { path: "/neuland/jury-2025", changefreq: "yearly", priority: "0.4" },
           { path: "/neuland/presse", changefreq: "monthly", priority: "0.4" },
           ...events.map((e) => ({
             path: `/programm/${e.slug}`,

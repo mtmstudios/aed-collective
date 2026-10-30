@@ -1,15 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { jahrgaenge, jury2025, kennzahlen, projekte } from "@/data/neuland";
+import { jahrgaenge, jury2027, kennzahlen, projekte } from "@/data/neuland";
 import type { Person } from "@/data/site";
 import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
-import { SectionTitle } from "@/components/ui-bits";
+import { LogoGrid, SectionTitle } from "@/components/ui-bits";
+import { partner } from "@/data/site";
 import { AutoSlider } from "@/components/auto-slider";
+import { CoverSlider } from "@/components/cover-slider";
 
 import { NeulandSubnav } from "@/routes/neuland";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
+import webteaserNeuland from "@/assets/neuland-teaser-neuland-v2.png.asset.json";
+import webteaser2027 from "@/assets/neuland-teaser-2027-v2.png.asset.json";
+import webteaserBewerben from "@/assets/neuland-teaser-bewerben-v2.png.asset.json";
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
@@ -54,6 +59,8 @@ export const Route = createFileRoute("/neuland/")({
         content: "Der interdisziplinäre Nachwuchswettbewerb für junge Gestalter:innen.",
       },
       { property: "og:url", content: "/neuland" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/neuland" }],
   }),
@@ -62,35 +69,31 @@ export const Route = createFileRoute("/neuland/")({
 
 function NeulandIndex() {
   const highlights = projekte.filter((p) => p.jahr === "2025" && p.preis === "1. Preis");
-  // Titelbild: Beitrag „Aquilo“ (Fallback: erster 1. Preis mit Bild)
-  const titelprojekt =
-    highlights.find((p) => p.slug === "aquilo" && projektBild(p)) ??
-    highlights.find((p) => projektBild(p));
-  const titelbild = titelprojekt ? projektBild(titelprojekt) : undefined;
+  // Titel-Slider: Teaser und Projektfotos wechseln sich auch am Schleifenübergang ab.
+  const titelSlugs = ["on-radar-radiotracer-forschung-auf-apple-vision-pro", "aquilo", "parkplatzhaus"];
+  const teaserbilder = [webteaserNeuland.url, webteaser2027.url, webteaserBewerben.url];
+  const titelbilder = titelSlugs.flatMap((slug, index) => {
+    const projekt = projekte.find((p) => p.jahr === "2025" && p.slug === slug);
+    const foto = projekt ? projektBild(projekt) : undefined;
+    const teaser = teaserbilder[index % teaserbilder.length];
+    return foto && teaser ? [teaser, foto] : [];
+  });
 
   return (
     <>
       {/* Titelseite des Ressorts */}
       <section className="bleed relative" aria-labelledby="neuland-titel-head">
         <div className="relative h-[clamp(380px,52vh,620px)] w-full overflow-hidden bg-muted">
-          {titelbild && (
-            <>
-              {/* Unscharfer Hintergrund füllt die Fläche, das Foto selbst bleibt vollständig sichtbar */}
-              <img
-                src={titelbild}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl"
-              />
-              <Bild
-                src={titelbild}
-                alt={`${titelprojekt?.titel} – 1. Preis neuland 2025`}
-                className="relative h-full w-full object-contain"
-                fetchPriority="high"
-              />
-              <BildCredit src={titelbild} className="z-20" />
-            </>
-          )}
+          <CoverSlider
+            bilder={titelbilder}
+            alt="Preisträger:innen neuland 2025"
+            className="h-full w-full"
+            itemClassName="w-auto"
+            bildClassName="h-full w-auto max-w-none"
+            zufall={false}
+            tempo={0.9}
+            hoverFaktor={6}
+          />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-14">
@@ -102,14 +105,9 @@ function NeulandIndex() {
                 Der interdisziplinäre Nachwuchswettbewerb des aed – für Studierende und
                 Absolvent:innen aller Hochschulen bis 28 Jahre.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link to="/neuland/einreichung" className="btn-solid">
-                  Jetzt bewerben
-                </Link>
-                <span className="meta text-white/80">
-                  Einsendeschluss {schlussFormatiert().split(" um")[0]}
-                </span>
-              </div>
+              <p className="meta mt-8 text-left text-white/80">
+                Einreichungsschluss {schlussFormatiert().split(" um")[0]}
+              </p>
             </div>
           </div>
         </div>
@@ -139,46 +137,61 @@ function NeulandIndex() {
             </div>
           </div>
 
-          <dl className="grid grid-cols-2 gap-8 self-start md:col-span-5">
-            {kennzahlen.map((k) => (
-              <div key={k.label}>
-                <dt className="sr-only">{k.label}</dt>
-                <dd>
-                  <span className="block display-md">{k.wert}</span>
-                  <span className="eyebrow-muted mt-3 block">{k.label}</span>
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="jury-2025">
         <SectionTitle
           id="jury-2025"
-          titel="Jury 2025"
+          titel="Jury 2027"
           kicker="Unabhängige Fachjury"
-          href="/neuland/jury"
-          linkText="Ganze Jury ansehen"
         />
         <AutoSlider
           className="mt-10"
           itemClassName="w-[10.25rem] pr-5 sm:w-[12.25rem]"
           pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
         >
-          {jury2025.map((p) => (
+          {jury2027.map((p) => (
             <JuryKarte key={p.name} person={p} />
           ))}
         </AutoSlider>
 
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
-            Alle 21 Juroren:innen ansehen
+            Alle {jury2027.length} Juror:innen ansehen
           </Link>
         </div>
       </section>
 
-      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="gewinner-2025">
+      <section className="shell topic-rule py-12 md:py-16" aria-labelledby="partner-neuland">
+        <SectionTitle id="partner-neuland" titel="Kooperationspartner" />
+        <div className="mt-10">
+          <LogoGrid items={partner} solidYellow />
+        </div>
+      </section>
+
+      <section className="bleed bg-brand text-brand-foreground" aria-labelledby="rueckblick-2025">
+        <div className="shell py-12 md:py-16">
+          <p className="eyebrow">Rückblick auf den letzten Wettbewerb</p>
+          <h2 id="rueckblick-2025" className="display-lg mt-4">neuland 2025</h2>
+        </div>
+      </section>
+
+      <section className="shell pt-12 md:pt-16" aria-label="Zahlen und Fakten neuland 2025">
+        <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          {kennzahlen.map((k) => (
+            <div key={k.label}>
+              <dt className="sr-only">{k.label}</dt>
+              <dd>
+                <span className="block display-md">{k.wert}</span>
+                <span className="eyebrow-muted mt-3 block">{k.label}</span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="shell py-12 md:py-16" aria-labelledby="gewinner-2025">
         <SectionTitle
           id="gewinner-2025"
           titel="Die 1. Preise"
@@ -191,10 +204,15 @@ function NeulandIndex() {
             <ProjektCard key={p.slug} projekt={p} />
           ))}
         </div>
+        <div className="mt-10">
+          <Link to="/neuland/jury-2025" className="btn-outline">
+            Jury 2025 ansehen
+          </Link>
+        </div>
       </section>
 
       <section
-        className="bleed neuland-archiv bg-[var(--aed-hover)]"
+        className="bleed neuland-archiv bg-brand"
         aria-labelledby="archiv-neuland"
       >
         <div className="shell py-14 md:py-20">
@@ -212,7 +230,7 @@ function NeulandIndex() {
                     <Link
                       to="/neuland/gewinner/$jahr"
                       params={{ jahr }}
-                      className="group flex flex-wrap items-baseline justify-between gap-4 rounded-full px-6 py-4 transition-colors hover:bg-white"
+                      className="group flex flex-wrap items-baseline justify-between gap-4 rounded-full px-6 py-4 transition-colors hover:bg-background"
                     >
                       <span className="display-sm">{jahr}</span>
                       <span className="text-sm text-muted-foreground">
