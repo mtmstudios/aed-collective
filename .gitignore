@@ -39,3 +39,10 @@ dateien/
 .env.hetzner
 .env.local
 .env.*.local
+
+# Von Lovables CDN geholte Bilder – gehören nicht ins Repo, siehe
+# scripts/cdn-assets-holen.mjs
+/public/__l5e/
+
+# Lokale Vorschau-Konfiguration dieser Sitzung
+/.claude/

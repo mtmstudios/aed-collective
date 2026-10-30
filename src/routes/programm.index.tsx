@@ -112,8 +112,13 @@ function ProgrammPage() {
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="kommend-titel">
         <SectionTitle id="kommend-titel" titel="Kommende Termine" />
         {kommend.length === 0 ? (
+          // Ohne Filter stimmt "für dieses Format" nicht – dann ist schlicht
+          // nichts angekündigt, und ein Hinweis auf den Newsletter ist
+          // nützlicher als eine Fehlmeldung.
           <p className="lead mt-8 text-muted-foreground">
-            Für dieses Format ist derzeit kein Termin geplant.
+            {filter === "Alle"
+              ? "Zurzeit ist kein Termin angekündigt. Neue Veranstaltungen geben wir über unseren Newsletter bekannt – im Archiv unten stehen die vergangenen."
+              : "Für dieses Format ist derzeit kein Termin geplant."}
           </p>
         ) : (
           <>
@@ -169,10 +174,7 @@ function ProgrammPage() {
         )}
       </section>
 
-      <section
-        className="bleed programm-archiv bg-brand"
-        aria-labelledby="archiv-titel"
-      >
+      <section className="bleed programm-archiv bg-brand" aria-labelledby="archiv-titel">
         <div className="shell py-14 md:py-20">
           <p id="archiv-titel" className="eyebrow-muted">
             Archiv

@@ -41,6 +41,11 @@ jobs:
       - name: Abhängigkeiten installieren
         run: npm ci
 
+      - name: Bilder aus Lovable holen
+        # In Lovable hochgeladene Bilder liegen auf deren CDN und nicht im
+        # Repository. Ohne diesen Schritt bleiben sie auf unserem Server leer.
+        run: npm run assets:holen
+
       - name: Für Node bauen
         run: npm run build:node
 
