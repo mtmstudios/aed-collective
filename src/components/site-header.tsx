@@ -23,7 +23,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-brand bg-brand transition-colors duration-300 ${istNeuland ? "theme-neuland" : ""}`}
+      className={`sticky top-0 z-50 border-b-[0.5px] border-foreground bg-brand transition-colors duration-300 ${istNeuland ? "theme-neuland" : ""}`}
     >
       <div className="shell flex h-20 items-center justify-between gap-4 md:h-24">
         {/* Mobile Menü */}
