@@ -37,6 +37,40 @@ export type EventItem = {
 
 export const events: EventItem[] = [
   {
+    slug: "barrierefreie-leitsysteme",
+    titel: "Vom Trennen und Verbinden – barrierefreie Leitsysteme",
+    datum: "2026-10-21",
+    uhrzeit: "19:00–21:00",
+    ort: "Hospitalhof Stuttgart, Büchsenstraße 33",
+    format: "Vortrag",
+    teaser:
+      "Auftakt der Reihe „Grenzen überwinden“: Was hilft Menschen, sich zu orientieren – und was steht im Weg?",
+    text: "Grenzen prägen unser Leben. Sie sind allgegenwärtig, zwischen Ländern, Menschen, Systemen oder Sprachen. In einigen Fällen bieten sie Schutz und Orientierung. In vielen anderen trennen sie. Durch die Definition von Grenzen werden Unterschiede und Differenzen festgeschrieben, oft im wahrsten Sinne des Wortes in Zement gegossen. In dieser Veranstaltungsreihe befassen wir uns mit Grenzen in unterschiedlichen Bereichen. Das Spektrum reicht dabei weit: Es geht um Barrierefreiheit, um den Umgang mit der Vergangenheit, um die Zukunft des Wohnens und um die unsichtbaren Grenzen in unseren Köpfen. Im Mittelpunkt steht dabei immer die Frage: Wie können sie überwunden werden? Wie können Gestaltung und Kommunikation dabei helfen? Welche Grenzen sind uns bekannt – und welche haben wir bisher noch gar nicht richtig wahrgenommen? Der erste Abend unserer Reihe „Grenzen überwinden“ widmet sich der Frage, was Menschen hilft, sich in einem Raum, einer Stadt oder einer Fülle an Informationen zu orientieren. Was ist dienlich, was hinderlich? An diesem Abend wollen wir die unterschiedlichen Herausforderungen beleuchten, denen sich Gestalterinnen und Gestalter dabei stellen müssen. Wie lassen sich diese am besten meistern? Und was sagen eigentlich die Nutzerinnen und Nutzer dazu? Referent:innen: Luk Bornhak (Inkluencer), Torsten Karl (typenraum gmbH & co. KG), Prof. Dipl.-Ing. Irene Lohhaus (TU Dresden), Thomas Mann (Inklusionsbeauftragter, Evangelische Landeskirche in Württemberg). Moderation: Dr. Frank Heinlein (aed e.V.). Eine Kooperationsveranstaltung des aed e.V. mit dem Internationalen Zentrum für Kultur- und Technikforschung der Universität Stuttgart (IZKT) und dem Evangelischen Bildungszentrum Hospitalhof Stuttgart. Eintritt gratis – bitte anmelden.",
+    anmeldung:
+      "https://eventfrog.de/de/p/fuehrungen-vortraege/vortrag/vom-trennen-und-verbinden-barrierefreie-leitsysteme-7511799140579318257.html",
+  },
+  {
+    slug: "fassaden-beschreiben",
+    titel: "Fassaden beschreiben – Kunst im öffentlichen Raum",
+    datum: "2026-10-01",
+    uhrzeit: "18:00–20:00",
+    ort: "Freie Tanz- und Theaterszene Stuttgart, Kriegsbergstraße 30",
+    format: "Vortrag",
+    teaser:
+      "Eine Fassade kann viel – aber kann sie auch erzählen? Claude Horstmann über ihre Arbeit „about architecture“.",
+    text: "Eine Fassade kann viel – aber kann sie auch erzählen? Wir denken: ja. Wie genau das geht, wollen wir uns bei diesem Event näher anschauen. Gemeinsam mit der Künstlerin Claude Horstmann schauen wir uns ihre Arbeit „about architecture“ in der Kriegsbergstraße an – eine sprachlich-zeichnerische Intervention, bei der zehn Wörter direkt auf die steinverkleidete Fassade gesetzt wurden. Architektur und Text treten dabei in einen unmittelbaren Dialog: Aus der Nähe wird gelesen, aus der Distanz betrachtet. Im anschließenden Talk gibt Claude Horstmann Einblicke in ihr künstlerisches Vorgehen und spricht über die Entstehung der Arbeit, von der ersten Idee über Konzeption und Planung bis zur Realisierung im öffentlichen Raum. Was bedeutet es, für einen konkreten Ort zu arbeiten? Wie verändert sich eine künstlerische Arbeit durch ihre Umgebung? Und wie viel Architektur steckt eigentlich in Kunst – und umgekehrt? Claude Horstmann, geboren 1960 in Minden, studierte Kunstwissenschaft und Bildhauerei in Osnabrück und Stuttgart. Sie lebt und arbeitet in Stuttgart und Marseille. In ihren Arbeiten verbindet sie Skulptur, Zeichnung, Text und Performance und beschäftigt sich immer wieder mit Sprache, Raum und den Spuren menschlicher Präsenz. Anschließend lassen wir den Abend bei Getränken und guten Gesprächen ausklingen. Moderation: Sara Dahme (aed e.V.). Eintritt inklusive Drinks und Snacks: 8 € für Mitglieder, 12 € für Gäste.",
+  },
+  {
+    slug: "hoelderlinhaus",
+    titel: "aed on Tour – ein Besuch im Hölderlinhaus",
+    datum: "2026-09-27",
+    uhrzeit: "15:00–17:00",
+    ort: "Hölderlinhaus, Nordheimer Straße 5, Lauffen am Neckar",
+    format: "Führung",
+    teaser: "Architektur. Literatur. Und ein Haus mit Geschichte.",
+    text: "Wir machen uns auf den Weg nach Lauffen am Neckar und schauen uns das Hölderlinhaus genauer an – gemeinsam mit Matthias Siegert vom Stuttgarter Büro VON M, das die Sanierung umgesetzt hat. Anlässlich des 250. Geburtstags von Friedrich Hölderlin wurde sein Geburtshaus zu einem Museum umgebaut und um einen Neubau ergänzt. Dabei ging es um weit mehr als die Sanierung eines denkmalgeschützten Gebäudes: Bestand, Neubau und Ausstellungsgestaltung wurden als zusammenhängende Aufgabe gedacht. Wie lässt sich ein historischer Ort zeitgemäß weiterbauen? Wie treffen Denkmalpflege, Architektur, Ausstellung und Möbeldesign aufeinander? Und wie wird Architektur selbst zum Teil einer atmosphärischen Inszenierung? Bei der speziell für den aed arrangierten Führung gibt Matthias Siegert Einblicke in die Planung und Umsetzung des Projekts und nimmt uns mit hinter die Kulissen – vom Umgang mit dem historischen Bestand über die Erweiterung bis zur Ausstellungskonzeption. Anschließend lassen wir den gemeinsamen Ausflug bei Wein und Snack gemütlich ausklingen. Moderation: Sara Dahme (aed e.V.). Eintritt inklusive Drinks und Snack: 8 € für Mitglieder, 12 € für Gäste.",
+  },
+  {
     slug: "sommerfest-2026",
     titel: "aed Sommerfest – Räume für alle!",
     datum: "2026-09-17",
