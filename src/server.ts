@@ -69,6 +69,16 @@ function pruefeUmgebung(): void {
       "[Start] SITE_PASSWORD fehlt. Bildverzeichnis, Jurybereich und die signierten Bildlinks funktionieren damit nicht.",
     );
   }
+  // Ob die Seite hinter der Passwortsperre liegt, ist beim Start das
+  // Wichtigste – siehe lib/gate.functions.ts.
+  const oeffentlich = ["1", "true", "ja"].includes(
+    (process.env["SITE_OEFFENTLICH"] ?? "").trim().toLowerCase(),
+  );
+  console.log(
+    oeffentlich
+      ? "[Start] Die Seite ist öffentlich. Keine Passwortsperre."
+      : "[Start] Die Seite liegt hinter der Passwortsperre. Zum Freischalten SITE_OEFFENTLICH=1 setzen.",
+  );
   // Die Zugangsdaten stehen entweder in DATABASE_URL oder einzeln in den
   // PG*-Variablen – siehe lib/db.server.ts.
   if (!process.env["DATABASE_URL"] && !(process.env["PGHOST"] && process.env["PGUSER"])) {

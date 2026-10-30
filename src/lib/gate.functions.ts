@@ -68,8 +68,20 @@ function isEditorHost(): boolean {
   );
 }
 
+/**
+ * Ist die Seite öffentlich, entfällt die Passwortsperre.
+ *
+ * Zum Start wird dafür SITE_OEFFENTLICH=1 gesetzt – in den Umgebungswerten,
+ * ohne neu ausspielen zu müssen. SITE_PASSWORD bleibt stehen: Bildverzeichnis,
+ * Bildzuordnung und die signierten Bildlinks brauchen es weiterhin.
+ */
+function istOeffentlich(): boolean {
+  const wert = (process.env["SITE_OEFFENTLICH"] ?? "").trim().toLowerCase();
+  return wert === "1" || wert === "true" || wert === "ja";
+}
+
 export const isUnlocked = createServerFn({ method: "GET" }).handler(async () => {
-  if (isEditorHost()) return { unlocked: true };
+  if (istOeffentlich() || isEditorHost()) return { unlocked: true };
   const { unlocked } = await readSession();
   return { unlocked };
 });
