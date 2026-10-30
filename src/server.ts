@@ -69,9 +69,27 @@ function pruefeUmgebung(): void {
       "[Start] SITE_PASSWORD fehlt. Bildverzeichnis, Jurybereich und die signierten Bildlinks funktionieren damit nicht.",
     );
   }
-  if (!process.env["DATABASE_URL"]) {
+  // Die Zugangsdaten stehen entweder in DATABASE_URL oder einzeln in den
+  // PG*-Variablen – siehe lib/db.server.ts.
+  if (!process.env["DATABASE_URL"] && !(process.env["PGHOST"] && process.env["PGUSER"])) {
     console.error(
-      "[Start] DATABASE_URL fehlt. Die Seite läuft, zeigt aber keine Daten aus der Datenbank.",
+      "[Start] Zugangsdaten zur Datenbank fehlen. Die Seite läuft, zeigt aber keine Daten aus der Datenbank.",
+    );
+  }
+
+  // Welcher Mailweg greift, steht im Log – sonst sucht man im Zweifel lange,
+  // warum eine Bestätigung nicht ankommt. Siehe lib/mail.server.ts.
+  const perApp = Boolean(
+    process.env["MS_TENANT_ID"] && process.env["MS_CLIENT_ID"] && process.env["MS_CLIENT_SECRET"],
+  );
+  const perSmtp = Boolean(process.env["SMTP_HOST"] && process.env["SMTP_USER"]);
+  if (!process.env["MAIL_VON"] || (!perApp && !perSmtp)) {
+    console.error(
+      "[Start] Kein Mailversand eingerichtet. Bewerbungen werden gespeichert, aber weder bestätigt noch gemeldet.",
+    );
+  } else {
+    console.log(
+      `[Start] Mailversand über ${perApp ? "Microsoft 365 (App-Identität)" : "SMTP mit Benutzername und Passwort"}.`,
     );
   }
 }

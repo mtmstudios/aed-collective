@@ -15,8 +15,14 @@ types.setTypeParser(1082, (wert) => wert); // date bleibt YYYY-MM-DD
 /**
  * Zugang zur PostgreSQL-Datenbank.
  *
- * Nötige Umgebungsvariable:
+ * Zwei Wege, die Zugangsdaten zu setzen:
+ *
  *   DATABASE_URL   postgres://benutzer:passwort@host:5432/datenbank
+ *
+ * oder einzeln, was bei von Hand vergebenen Passwörtern weniger fehleranfällig
+ * ist – Sonderzeichen wie ] / = müssten in einer Adresse sonst kodiert werden:
+ *
+ *   PGHOST, PGPORT, PGUSER, PGPASSWORD, PGDATABASE
  *
  * Optional:
  *   DATABASE_SSL   "1" oder "require", wenn der Datenbankserver eine
@@ -36,13 +42,17 @@ function verbindung(): Pool {
   if (pool) return pool;
 
   const url = process.env["DATABASE_URL"];
-  if (!url) {
-    throw new Error("DATABASE_URL fehlt. Ohne sie gibt es keine Verbindung zur Datenbank.");
+  const einzeln = Boolean(process.env["PGHOST"] && process.env["PGUSER"]);
+  if (!url && !einzeln) {
+    throw new Error(
+      "Zugangsdaten fehlen: entweder DATABASE_URL, oder PGHOST, PGUSER, PGPASSWORD und PGDATABASE.",
+    );
   }
 
   const ssl = process.env["DATABASE_SSL"];
   pool = new Pool({
-    connectionString: url,
+    // Ohne connectionString liest der Treiber die PG*-Variablen selbst.
+    ...(url ? { connectionString: url } : {}),
     // Hetzner stellt ein eigenes Zertifikat aus; die Prüfung gegen die
     // öffentlichen Wurzelzertifikate schlägt deshalb fehl.
     ssl: ssl === "1" || ssl === "require" ? { rejectUnauthorized: false } : undefined,
