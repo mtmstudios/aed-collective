@@ -8,11 +8,13 @@ name: Deploy to Hetzner
 # der fertige Build aus .output, danach startet die Anwendung neu.
 #
 # Nötige Secrets im Repository (Settings -> Secrets -> Actions):
-#   HETZNER_HOST     Hostname des Pakets, z. B. wp12345678.server-he.de
-#   HETZNER_USER     SSH-Benutzer, z. B. u123456
+#   HETZNER_HOST     Hostname des Pakets, z. B. www700.your-server.de
+#   HETZNER_USER     SSH-Benutzer, z. B. esx3xy
 #   HETZNER_SSH_KEY  privater Schlüssel (ed25519), passend zum in konsoleH
 #                    hinterlegten öffentlichen Schlüssel
-#   HETZNER_PFAD     Zielverzeichnis, z. B. /usr/home/u123456/aed
+#   HETZNER_PFAD     Zielverzeichnis, z. B. /usr/www/users/esx3xy/aed
+#
+# Hetzner nutzt für SSH den Port 222, nicht 22.
 
 on:
   push:
@@ -54,22 +56,46 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.HETZNER_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H "${{ secrets.HETZNER_HOST }}" >> ~/.ssh/known_hosts
+          ssh-keyscan -p 222 -H "${{ secrets.HETZNER_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Hochladen
         # --delete räumt alte Dateien weg. Die Dateiablage der Einreichungen
         # und die Umgebungswerte liegen außerhalb von .output und bleiben.
         run: |
           rsync -az --delete --stats \
-            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            -e "ssh -p 222 -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
             .output/ \
             "${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:${{ secrets.HETZNER_PFAD }}/.output/"
 
-      - name: Anwendung neu starten
-        # konsoleH startet die Node-Anwendung nach einer Änderung an dieser
-        # Datei neu. Schlägt es fehl, ist der Upload trotzdem gelaufen.
-        continue-on-error: true
+      - name: Neustart-Skript mitschicken
         run: |
-          ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes \
+          scp -P 222 -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes \
+            scripts/hetzner-neustart.sh \
+            "${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}:${{ secrets.HETZNER_PFAD }}/hetzner-neustart.sh"
+
+      - name: Anwendung neu starten
+        # Unverzichtbar: Der alte Prozess sucht sonst Dateien, die der Upload
+        # gerade ersetzt hat, und die Seite antwortet nur noch mit Fehler 500.
+        # Darum auch kein continue-on-error – lieber ein roter Lauf als eine
+        # tote Seite, von der niemand etwas merkt.
+        run: |
+          ssh -p 222 -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes \
             "${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_HOST }}" \
-            "mkdir -p ${{ secrets.HETZNER_PFAD }}/tmp && touch ${{ secrets.HETZNER_PFAD }}/tmp/restart.txt"
+            "sh ${{ secrets.HETZNER_PFAD }}/hetzner-neustart.sh"
+
+      - name: Seite antwortet wieder
+        # Die erste Anfrage startet die Anwendung und darf deshalb dauern.
+        # HETZNER_PRUEF_URL ist optional; ohne sie entfällt die Prüfung.
+        if: ${{ vars.HETZNER_PRUEF_URL != '' }}
+        run: |
+          for versuch in 1 2 3 4 5 6; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 \
+                   "${{ vars.HETZNER_PRUEF_URL }}" || echo 000)
+            echo "Versuch $versuch: $code"
+            case "$code" in
+              2*|3*) echo "Seite ist wieder da."; exit 0 ;;
+            esac
+            sleep 10
+          done
+          echo "Seite antwortet nach dem Neustart nicht." >&2
+          exit 1
