@@ -5,7 +5,7 @@ import { MitgliederSlider } from "@/components/mitglieder-slider";
 import { EventCard, formatDatum } from "@/components/event-card";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
-import neulandTeaser from "@/assets/neuland-startseite-2027-v3.png.asset.json";
+import neulandTeaser from "@/assets/neuland-startseite-2027-v4.png.asset.json";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
 
 export const Route = createFileRoute("/")({
@@ -188,14 +188,6 @@ function Index() {
               loading="lazy"
               className="block h-auto w-full"
             />
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/neuland" className="btn-solid">
-                Zum Wettbewerb
-              </Link>
-              <Link to="/neuland/jury" className="btn-outline">
-                Die Jury
-              </Link>
-            </div>
           </div>
           <div>
             <p className="lead max-w-3xl">
@@ -205,6 +197,14 @@ function Index() {
             <p className="eyebrow mt-8">
               Einreichungsschluss {schlussFormatiert().split(" um")[0]}
             </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/neuland" className="btn-solid">
+                Zum Wettbewerb
+              </Link>
+              <Link to="/neuland/jury" className="btn-outline">
+                Die Jury
+              </Link>
+            </div>
           </div>
         </div>
       </section>
