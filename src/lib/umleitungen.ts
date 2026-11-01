@@ -64,6 +64,12 @@ export function umleitung(request: Request): Response | null {
     return null;
   }
 
+  // Let's Encrypt prüft über eine Datei unter /.well-known/acme-challenge/ und
+  // ruft sie unverschlüsselt ab. Würde der Aufruf auf https umgeleitet, liefe
+  // die Prüfung ins Leere, solange es noch kein Zertifikat gibt – also genau
+  // dann, wenn das Zertifikat gebraucht wird.
+  if (url.pathname.startsWith("/.well-known/")) return null;
+
   const host = (request.headers.get("host") ?? url.host).toLowerCase().split(":")[0];
   const pfad = normalisiere(url.pathname);
 
