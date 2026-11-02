@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep public CTA fill, border, text, and hover tokens separate from area-highlight tokens so button changes cannot recolor editorial sections; override CTA tokens through the existing area theme and use the shared Button area/areaOutline variants for public form actions without changing internal tool variants.
+- Keep neuland cooperation partners in a dedicated data module, separate from the aed partner list, so neuland edits cannot alter the home page.
