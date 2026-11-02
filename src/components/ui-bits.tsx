@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 
 type LogoItem = string | { name: string; url?: string };
 
-export function LogoGrid({ items, solidYellow = false }: { items: readonly LogoItem[]; solidYellow?: boolean }) {
+export function LogoGrid({ items, solidYellow = false, gridClassName = "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4" }: { items: readonly LogoItem[]; solidYellow?: boolean; gridClassName?: string }) {
   return (
-    <ul className="grid grid-cols-2 border-l border-t border-line sm:grid-cols-3 lg:grid-cols-4">
+    <ul className={`grid border-l border-t border-line ${gridClassName}`}>
       {items.map((item) => {
         const name = typeof item === "string" ? item : item.name;
         const url = typeof item === "string" ? undefined : item.url;
