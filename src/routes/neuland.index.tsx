@@ -166,7 +166,7 @@ function NeulandIndex() {
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="partner-neuland">
         <SectionTitle id="partner-neuland" titel="Kooperationspartner" />
         <div className="mt-10">
-          <LogoGrid items={neulandPartner} solidYellow />
+          <LogoGrid items={neulandPartner} solidYellow gridClassName="grid-cols-1 sm:grid-cols-3" />
         </div>
       </section>
 
