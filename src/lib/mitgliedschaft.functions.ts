@@ -4,13 +4,14 @@ import { z } from "zod";
 /**
  * Mitgliedsantrag von der Seite „Mitglied werden".
  *
- * Der Antrag geht als Mail an die Geschäftsstelle, die einreichende Person
- * bekommt eine Bestätigung. Dieselbe Strecke wie bei den neuland-Einreichungen –
- * es braucht also kein weiteres System.
+ * Der Antrag wird zuerst in der Datenbank festgehalten und erst danach der
+ * Geschäftsstelle gemeldet. Diese Reihenfolge ist der Kern: Früher gab es den
+ * Antrag nur als Mail – schlug der Versand fehl, war er weg, und die
+ * absendende Person sah trotzdem eine Bestätigung.
  *
- * Ohne eingerichtetes Postfach wird nichts verschickt, und das Formular sagt
- * das auch. Eine stille Danke-Meldung wäre schlimmer als eine Fehlermeldung:
- * Der Antrag wäre verloren, ohne dass es jemand merkt.
+ * Lässt sich der Antrag nicht speichern, bekommt sie eine Fehlermeldung.
+ * Scheitert nur die Benachrichtigung, gilt der Antrag als angenommen; der
+ * Fehlschlag steht in der Zeile und die Geschäftsstelle kann ihn nachholen.
  */
 
 const schema = z.object({
@@ -25,6 +26,14 @@ const schema = z.object({
 
 export type AntragAntwort = { ok: true } | { ok: false; fehler: string };
 
+const NICHT_ABSENDBAR =
+  "Der Antrag lässt sich gerade nicht absenden. Bitte wenden Sie sich direkt an die Geschäftsstelle.";
+
+/** Kürzt die Fehlerursache auf das, was in die Spalte passt. */
+function grund(fehler: unknown): string {
+  return String(fehler instanceof Error ? fehler.message : fehler).slice(0, 500);
+}
+
 export const sendeMitgliedsantrag = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => schema.parse(input))
   .handler(async ({ data }): Promise<AntragAntwort> => {
@@ -32,20 +41,35 @@ export const sendeMitgliedsantrag = createServerFn({ method: "POST" })
       return { ok: false, fehler: "Bitte stimmen Sie der Verarbeitung Ihrer Daten zu." };
     }
 
-    const { sendeMail, empfaengerVerein } = await import("@/lib/mail.server");
-    const anVerein = empfaengerVerein();
-    if (!anVerein) {
-      console.error("[Mitgliedsantrag] Kein Postfach eingerichtet – der Antrag ging verloren.");
-      return {
-        ok: false,
-        fehler:
-          "Der Antrag lässt sich gerade nicht absenden. Bitte wenden Sie sich direkt an die Geschäftsstelle.",
-      };
+    const { eineZeile, ausfuehren } = await import("@/lib/db.server");
+
+    let antrag: { id: string } | null;
+    try {
+      antrag = await eineZeile<{ id: string }>(
+        `INSERT INTO mitgliedsantraege
+           (vorname, nachname, email, organisation, typ, nachricht, datenschutz_bestaetigt)
+         VALUES ($1, $2, $3, $4, $5, $6, true)
+         RETURNING id`,
+        [data.vorname, data.nachname, data.email, data.organisation, data.typ, data.nachricht],
+      );
+    } catch (fehler) {
+      console.error("[Mitgliedsantrag] Speichern fehlgeschlagen:", fehler);
+      return { ok: false, fehler: NICHT_ABSENDBAR };
+    }
+
+    if (!antrag) {
+      console.error("[Mitgliedsantrag] Speichern lieferte keine Zeile zurück.");
+      return { ok: false, fehler: NICHT_ABSENDBAR };
     }
 
     const name = `${data.vorname} ${data.nachname}`;
+    const { sendeMail, empfaengerVerein } = await import("@/lib/mail.server");
+    const anVerein = empfaengerVerein();
 
+    // Ab hier ist der Antrag sicher. Was noch schiefgeht, wird vermerkt,
+    // kostet die absendende Person aber nicht ihre Eingaben.
     try {
+      if (!anVerein) throw new Error("Kein Postfach eingerichtet");
       await sendeMail(
         anVerein,
         `Mitgliedsantrag: ${name} (${data.typ})`,
@@ -61,17 +85,21 @@ export const sendeMitgliedsantrag = createServerFn({ method: "POST" })
           `Der Datenschutzhinweis wurde bestätigt.`,
         ].join("\n"),
       );
+      await ausfuehren(
+        `UPDATE mitgliedsantraege SET gemeldet_am = now(), versandfehler = NULL
+                        WHERE id = $1`,
+        [antrag.id],
+      );
     } catch (fehler) {
-      console.error("[Mitgliedsantrag] Versand an den Verein fehlgeschlagen:", fehler);
-      return {
-        ok: false,
-        fehler:
-          "Der Antrag lässt sich gerade nicht absenden. Bitte wenden Sie sich direkt an die Geschäftsstelle.",
-      };
+      console.error("[Mitgliedsantrag] Meldung an den Verein fehlgeschlagen:", fehler);
+      await ausfuehren(`UPDATE mitgliedsantraege SET versandfehler = $2 WHERE id = $1`, [
+        antrag.id,
+        grund(fehler),
+      ]).catch(() => undefined);
     }
 
-    // Die Bestätigung an die antragstellende Person darf den Antrag nicht
-    // gefährden – er liegt beim Verein, auch wenn diese Mail scheitert.
+    // Die Bestätigung an die antragstellende Person ist nachrangig – der
+    // Antrag liegt beim Verein, auch wenn diese Mail scheitert.
     try {
       await sendeMail(
         data.email,

@@ -70,11 +70,16 @@ async function db() {
  * Titelbild und Detailfotos liegen als JSON in der Spalte. Listen müssen dafür
  * ausdrücklich als JSON-Text übergeben werden – sonst macht der Treiber ein
  * PostgreSQL-Array daraus und die Spalte lehnt es ab.
+ *
+ * geburtsdatum ist eine date-Spalte. Ein leeres Feld kommt als "" an, und
+ * damit kann PostgreSQL nichts anfangen – ohne die Umwandlung in NULL
+ * scheitert jedes Zwischenspeichern, solange das Datum noch fehlt.
  */
 function werteFuerDb(daten: EinreichungForm): Record<string, unknown> {
   return {
     ...daten,
     email: daten.email.trim(),
+    geburtsdatum: daten.geburtsdatum?.trim() ? daten.geburtsdatum.trim() : null,
     titelbild: daten.titelbild ? JSON.stringify(daten.titelbild) : null,
     detailfotos: JSON.stringify(daten.detailfotos ?? []),
   };
@@ -195,6 +200,18 @@ export const reicheEin = createServerFn({ method: "POST" })
  * Schlägt der Versand fehl, bleibt die Einreichung trotzdem gespeichert.
  */
 async function benachrichtige(row: Record<string, unknown>) {
+  /**
+   * Jede Mail für sich: Scheitert die Bestätigung an die bewerbende Person,
+   * muss die Meldung an die Geschäftsstelle trotzdem hinausgehen.
+   */
+  const versuche = async (zweck: string, tun: () => Promise<void>) => {
+    try {
+      await tun();
+    } catch (fehler) {
+      console.error(`[Einreichung] ${zweck} fehlgeschlagen:`, fehler);
+    }
+  };
+
   try {
     const { sendeMail, empfaengerVerein } = await import("@/lib/mail.server");
     const nummer = String(row["einreichungs_id"] ?? "");
@@ -206,35 +223,39 @@ async function benachrichtige(row: Record<string, unknown>) {
     const zusammenfassung = fasseZusammen(row);
 
     if (email) {
-      await sendeMail(
-        email,
-        `Deine Einreichung bei neuland 2027 ist eingegangen (${nummer})`,
-        [
-          `Hallo ${name || "und herzlichen Dank"},`,
-          ``,
-          `Deine Einreichung ist bei uns eingegangen. Hier Deine Angaben zum Nachlesen:`,
-          ``,
-          zusammenfassung,
-          ``,
-          `Mit der Nummer ${nummer} und Deiner E-Mail-Adresse kannst Du Deine Bewerbung`,
-          `bis zum Einsendeschluss jederzeit wieder aufrufen und ändern.`,
-          ``,
-          `Viele Grüße`,
-          `aed e.V. – neuland`,
-        ].join("\n"),
+      await versuche("Bestätigung an die bewerbende Person", () =>
+        sendeMail(
+          email,
+          `Deine Einreichung bei neuland 2027 ist eingegangen (${nummer})`,
+          [
+            `Hallo ${name || "und herzlichen Dank"},`,
+            ``,
+            `Deine Einreichung ist bei uns eingegangen. Hier Deine Angaben zum Nachlesen:`,
+            ``,
+            zusammenfassung,
+            ``,
+            `Mit der Nummer ${nummer} und Deiner E-Mail-Adresse kannst Du Deine Bewerbung`,
+            `bis zum Einsendeschluss jederzeit wieder aufrufen und ändern.`,
+            ``,
+            `Viele Grüße`,
+            `aed e.V. – neuland`,
+          ].join("\n"),
+        ),
       );
     }
 
     const anVerein = empfaengerVerein();
     if (anVerein) {
-      await sendeMail(
-        anVerein,
-        `Neue neuland-Einreichung: ${nummer} – ${titel}`,
-        [
-          zusammenfassung,
-          ``,
-          `Die Bewerbung steht mitsamt Bildern im Jurybereich unter /jurybereich.`,
-        ].join("\n"),
+      await versuche("Meldung an die Geschäftsstelle", () =>
+        sendeMail(
+          anVerein,
+          `Neue neuland-Einreichung: ${nummer} – ${titel}`,
+          [
+            zusammenfassung,
+            ``,
+            `Die Bewerbung steht mitsamt Bildern im Jurybereich unter /jurybereich.`,
+          ].join("\n"),
+        ),
       );
     }
   } catch (fehler) {

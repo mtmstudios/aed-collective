@@ -65,6 +65,41 @@ BEFORE UPDATE ON public.neuland_einreichungen
 FOR EACH ROW EXECUTE FUNCTION public.update_updated_at_column();
 
 -- ---------------------------------------------------------------------------
+-- Mitgliedsanträge
+-- ---------------------------------------------------------------------------
+--
+-- Der Antrag geht als Mail an die Geschäftsstelle, steht aber zuerst hier.
+-- Ohne diese Tabelle gäbe es den Antrag nur als Mail: Scheitert der Versand,
+-- wäre er ersatzlos weg, während die absendende Person eine Bestätigung sieht.
+-- gemeldet_am hält fest, ob die Benachrichtigung tatsächlich hinausging.
+
+CREATE TABLE IF NOT EXISTS public.mitgliedsantraege (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  vorname text NOT NULL,
+  nachname text NOT NULL,
+  email text NOT NULL,
+  organisation text NOT NULL DEFAULT '',
+  typ text NOT NULL DEFAULT 'Personenmitgliedschaft',
+  nachricht text NOT NULL DEFAULT '',
+  datenschutz_bestaetigt boolean NOT NULL DEFAULT false,
+  gemeldet_am timestamptz,
+  versandfehler text,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  updated_at timestamptz NOT NULL DEFAULT now()
+);
+
+-- Offene Anträge zuerst: danach sucht die Geschäftsstelle, wenn der Versand
+-- einmal gehakt hat.
+CREATE INDEX IF NOT EXISTS mitgliedsantraege_offen_idx
+  ON public.mitgliedsantraege (created_at DESC)
+  WHERE gemeldet_am IS NULL;
+
+DROP TRIGGER IF EXISTS mitgliedsantraege_updated_at ON public.mitgliedsantraege;
+CREATE TRIGGER mitgliedsantraege_updated_at
+BEFORE UPDATE ON public.mitgliedsantraege
+FOR EACH ROW EXECUTE FUNCTION public.update_updated_at_column();
+
+-- ---------------------------------------------------------------------------
 -- Jurybereich
 -- ---------------------------------------------------------------------------
 

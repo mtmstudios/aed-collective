@@ -24,8 +24,12 @@ import { createTransport } from "nodemailer";
  *
  *      MAIL_AN_VEREIN    Empfänger der Benachrichtigung
  *
- * Ist nichts davon gesetzt, wird nichts verschickt und einmal im Log vermerkt –
- * die Einreichung selbst darf daran nie scheitern.
+ * `sendeMail` meldet jeden Fehlschlag an den Aufrufer weiter, auch den Fall,
+ * dass überhaupt kein Versandweg eingerichtet ist. Wer eine Mail verschickt,
+ * muss selbst entscheiden, was ein Fehlschlag für den Vorgang bedeutet:
+ * Bei einer Einreichung ist er zu verschmerzen, denn sie steht in der
+ * Datenbank. Bei einem Vorgang, der nur als Mail existiert, ist er es nicht –
+ * dort darf niemand eine Bestätigung sehen, obwohl nichts angekommen ist.
  */
 
 let hinweisGezeigt = false;
@@ -126,6 +130,15 @@ async function sendeUeberGraph(
   }
 }
 
+/** Sagt, ob überhaupt ein Versandweg eingerichtet ist. */
+export function versandEingerichtet(): boolean {
+  return graphKonfiguration() !== null || smtpKonfiguration() !== null;
+}
+
+/**
+ * Verschickt eine Mail und wirft, wenn das nicht gelingt.
+ * Der Aufrufer entscheidet, was der Fehlschlag für seinen Vorgang bedeutet.
+ */
 export async function sendeMail(an: string, betreff: string, text: string): Promise<void> {
   const graph = graphKonfiguration();
   const smtp = graph ? null : smtpKonfiguration();
@@ -135,26 +148,21 @@ export async function sendeMail(an: string, betreff: string, text: string): Prom
       console.warn("[Mail] Kein Versandweg eingerichtet – es werden keine Mails verschickt.");
       hinweisGezeigt = true;
     }
+    throw new Error("Kein Versandweg eingerichtet");
+  }
+
+  if (graph) {
+    await sendeUeberGraph(graph, an, betreff, text);
     return;
   }
 
-  try {
-    if (graph) {
-      await sendeUeberGraph(graph, an, betreff, text);
-      return;
-    }
-
-    const transport = createTransport({
-      host: smtp!.host,
-      port: smtp!.port,
-      secure: smtp!.port === 465,
-      auth: { user: smtp!.user, pass: smtp!.pass },
-    });
-    await transport.sendMail({ from: smtp!.von, to: an, subject: betreff, text });
-  } catch (fehler) {
-    // Eine fehlgeschlagene Mail darf die Einreichung nicht kaputtmachen
-    console.error("[Mail] Versand fehlgeschlagen:", fehler);
-  }
+  const transport = createTransport({
+    host: smtp!.host,
+    port: smtp!.port,
+    secure: smtp!.port === 465,
+    auth: { user: smtp!.user, pass: smtp!.pass },
+  });
+  await transport.sendMail({ from: smtp!.von, to: an, subject: betreff, text });
 }
 
 export function empfaengerVerein(): string | null {
