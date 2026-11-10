@@ -653,7 +653,7 @@ function StartAnsicht({
       <div className="border border-line p-6">
         <h2 className="display-sm">Bewerbung fortsetzen</h2>
         <p className="mt-3 text-sm text-muted-foreground">
-          Mit Einreichungs-Nummer (z. B. NL27-001) und der angegebenen E-Mail-Adresse.
+          Mit Einreichungs-Nummer (z. B. NL27-001-A3F9C) und der angegebenen E-Mail-Adresse.
         </p>
         <Button variant="areaOutline" className="mt-6 w-full" onClick={onFortsetzen}>
           Bestehende Bewerbung fortsetzen
@@ -679,7 +679,7 @@ function FortsetzenAnsicht({
       <h2 className="display-sm">Bewerbung fortsetzen</h2>
       <div className="mt-6 space-y-4">
         <Feld label="Einreichungs-Nummer">
-          <Input placeholder="NL27-001" value={id} onChange={(e) => setId(e.target.value)} />
+          <Input placeholder="NL27-001-A3F9C" value={id} onChange={(e) => setId(e.target.value)} />
         </Feld>
         <Feld label="E-Mail-Adresse">
           <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />

@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { signaturSchluesselVorhanden } from "./lib/signatur.server";
 import { umleitung } from "./lib/umleitungen";
 
 type ServerEntry = {
@@ -66,7 +67,7 @@ function pruefeUmgebung(): void {
   }
   if (!process.env["SITE_PASSWORD"]) {
     console.error(
-      "[Start] SITE_PASSWORD fehlt. Bildverzeichnis, Jurybereich und die signierten Bildlinks funktionieren damit nicht.",
+      "[Start] SITE_PASSWORD fehlt. Die Anmeldung am Bildverzeichnis und am Jurybereich funktioniert damit nicht.",
     );
   }
   // Ob die Seite hinter der Passwortsperre liegt, ist beim Start das
@@ -84,6 +85,15 @@ function pruefeUmgebung(): void {
   if (!process.env["DATABASE_URL"] && !(process.env["PGHOST"] && process.env["PGUSER"])) {
     console.error(
       "[Start] Zugangsdaten zur Datenbank fehlen. Die Seite läuft, zeigt aber keine Daten aus der Datenbank.",
+    );
+  }
+
+  // Ohne eigenen Signaturschlüssel lassen sich Jurybereich und Dateilinks
+  // nicht betreiben – beides wird damit unterschrieben. Siehe
+  // lib/signatur.server.ts.
+  if (!signaturSchluesselVorhanden()) {
+    console.error(
+      "[Start] SIGNATUR_SCHLUESSEL fehlt oder ist zu kurz (32 Zeichen). Anmeldung am Jurybereich und Links auf hochgeladene Dateien funktionieren nicht.",
     );
   }
 

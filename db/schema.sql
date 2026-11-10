@@ -26,10 +26,33 @@ $$ LANGUAGE plpgsql SET search_path = public;
 
 CREATE SEQUENCE IF NOT EXISTS public.neuland_einreichung_nr_seq START 1;
 
+-- Die Nummer einer Einreichung, z. B. NL27-001-A3F9C.
+--
+-- Die laufende Zählung zeigt der Geschäftsstelle, die wievielte Bewerbung
+-- vorliegt. Die fünf Zufallszeichen sind der eigentliche Schutz: Nummer und
+-- E-Mail-Adresse genügen, um eine Bewerbung aufzurufen und zu ändern – eine
+-- rein fortlaufende Nummer wäre damit geschenkt gewesen.
+--
+-- lpad kürzt von rechts, sobald die Zahl länger ist als die Zielbreite; ab
+-- der 1000. Einreichung wäre aus 1000 die 100 geworden. Deshalb die Fallunter-
+-- scheidung statt eines blanken lpad.
+CREATE OR REPLACE FUNCTION public.neuland_einreichungs_kennung()
+RETURNS text AS $$
+DECLARE
+  nummer bigint := nextval('public.neuland_einreichung_nr_seq');
+  gezaehlt text;
+  zufall text;
+BEGIN
+  gezaehlt := CASE WHEN nummer < 1000 THEN lpad(nummer::text, 3, '0') ELSE nummer::text END;
+  zufall := upper(substr(replace(gen_random_uuid()::text, '-', ''), 1, 5));
+  RETURN 'NL27-' || gezaehlt || '-' || zufall;
+END;
+$$ LANGUAGE plpgsql VOLATILE SET search_path = public;
+
 CREATE TABLE IF NOT EXISTS public.neuland_einreichungen (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   einreichungs_id text NOT NULL UNIQUE
-    DEFAULT ('NL27-' || lpad(nextval('public.neuland_einreichung_nr_seq')::text, 3, '0')),
+    DEFAULT public.neuland_einreichungs_kennung(),
   status text NOT NULL DEFAULT 'entwurf',
   vorname text,
   nachname text,

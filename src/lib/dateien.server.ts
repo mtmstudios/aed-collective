@@ -1,6 +1,7 @@
 import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
 import { mkdir, readFile, writeFile, stat } from "node:fs/promises";
 import { join, resolve, extname } from "node:path";
+import { signaturSchluessel } from "@/lib/signatur.server";
 
 /**
  * Ablage für hochgeladene Dateien – die Bilder der neuland-Einreichungen.
@@ -25,12 +26,6 @@ const TYP_NACH_ENDUNG: Record<string, string> = {
 
 function wurzel(): string {
   return resolve(process.env["DATEI_ABLAGE"] ?? "./dateien");
-}
-
-function geheimnis(): string {
-  const wert = process.env["SITE_PASSWORD"];
-  if (!wert) throw new Error("SITE_PASSWORD ist nicht gesetzt");
-  return wert;
 }
 
 /**
@@ -71,7 +66,7 @@ export async function leseDatei(pfad: string): Promise<{ daten: Buffer; typ: str
 }
 
 function signatur(pfad: string, ablauf: number): string {
-  return createHmac("sha256", geheimnis()).update(`${pfad}.${ablauf}`).digest("base64url");
+  return createHmac("sha256", signaturSchluessel()).update(`${pfad}.${ablauf}`).digest("base64url");
 }
 
 /**
