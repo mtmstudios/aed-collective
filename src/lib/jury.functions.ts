@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { createHash, createHmac, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import { signaturSchluessel } from "@/lib/signatur.server";
 
 /**
  * Jurybereich: Zugänge mit Rolle, Wertung 1–10 je Einreichung.
@@ -88,7 +89,8 @@ export type BeitragDetail = Beitrag & {
   fremde: FremdWertung[];
 };
 
-function geheimnis(): string {
+/** Das geteilte Seitenpasswort – nur zum Vergleichen, nie zum Unterschreiben. */
+function seitenpasswort(): string {
   const wert = process.env["SITE_PASSWORD"];
   if (!wert) throw new Error("SITE_PASSWORD ist nicht gesetzt");
   return wert;
@@ -124,7 +126,7 @@ function istSeitenpasswort(passwort: string): boolean {
   const a = createHash("sha256")
     .update(passwort ?? "", "utf8")
     .digest();
-  const b = createHash("sha256").update(geheimnis(), "utf8").digest();
+  const b = createHash("sha256").update(seitenpasswort(), "utf8").digest();
   return timingSafeEqual(a, b);
 }
 
@@ -132,14 +134,14 @@ function istSeitenpasswort(passwort: string): boolean {
 
 function signiere(sitzung: Sitzung): string {
   const nutzlast = Buffer.from(JSON.stringify(sitzung), "utf8").toString("base64url");
-  const signatur = createHmac("sha256", geheimnis()).update(nutzlast).digest("base64url");
+  const signatur = createHmac("sha256", signaturSchluessel()).update(nutzlast).digest("base64url");
   return `${nutzlast}.${signatur}`;
 }
 
 function pruefeSitzung(token: string | undefined): Sitzung {
   if (!token || !token.includes(".")) throw new Error("Nicht angemeldet");
   const [nutzlast, signatur] = token.split(".");
-  const erwartet = createHmac("sha256", geheimnis()).update(nutzlast).digest("base64url");
+  const erwartet = createHmac("sha256", signaturSchluessel()).update(nutzlast).digest("base64url");
   const a = Buffer.from(signatur ?? "", "utf8");
   const b = Buffer.from(erwartet, "utf8");
   if (a.length !== b.length || !timingSafeEqual(a, b)) throw new Error("Nicht angemeldet");
