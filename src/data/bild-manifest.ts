@@ -1156,6 +1156,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/joachim-bosse.webp",
+    "dateiname": "joachim-bosse.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/joachim-bosse.webp",
+    "breite": 600,
+    "hoehe": 900,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/person/joachim-stumpp.webp",
     "dateiname": "joachim-stumpp.webp",
     "kategorie": "person",
