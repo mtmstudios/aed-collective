@@ -1480,8 +1480,8 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     "kategorie": "person",
     "jahrgang": null,
     "url": "/bilder/person/yijing-lu.webp",
-    "breite": 600,
-    "hoehe": 900,
+    "breite": 560,
+    "hoehe": 708,
     "verwendungen": [
       "Daten bilder"
     ]
