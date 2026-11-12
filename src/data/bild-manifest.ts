@@ -1475,6 +1475,18 @@ export const BILD_MANIFEST: BildManifestEintrag[] = [
     ]
   },
   {
+    "pfad": "public/bilder/person/yijing-lu.webp",
+    "dateiname": "yijing-lu.webp",
+    "kategorie": "person",
+    "jahrgang": null,
+    "url": "/bilder/person/yijing-lu.webp",
+    "breite": 600,
+    "hoehe": 900,
+    "verwendungen": [
+      "Daten bilder"
+    ]
+  },
+  {
     "pfad": "public/bilder/presse/aed-logo-presse.jpg",
     "dateiname": "aed-logo-presse.jpg",
     "kategorie": "presse",

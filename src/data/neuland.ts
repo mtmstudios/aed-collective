@@ -227,6 +227,12 @@ export const jury2027: { name: string; rolle: string; link?: string; statement?:
   { name: "Ulrike Kunkel", rolle: "AIT" },
   ausJury2025("Andreas Kurbos"),
   { name: "Prof. Laurent Lacour", rolle: "Hauser Lacour/21TORR" },
+  {
+    name: "Yijing Lu",
+    rolle: "Architektin, Mitglied der Geschäftsleitung ATELIER BRÜCKNER",
+    statement:
+      "Yijing Lu ist Architektin und Mitglied der Geschäftsleitung bei ATELIER BRÜCKNER. Ihre internationale Laufbahn führte sie von Wien über München bis nach Peking. Sie studierte Architektur an der Technischen Universität Wien und der Tongji University in Shanghai.\nSeit 2017 ist sie Teil von ATELIER BRÜCKNER und hat an zahlreichen internationalen Projekten mitgewirkt, darunter das Natural History Museum in Oslo, das Museum of the Future in Dubai und das Grand Egyptian Museum in Gizeh. Sie begegnet jeder neuen Aufgabe mit kreativen Lösungsansätzen und einer klaren Haltung zu Gestaltung und Umsetzung.\nNeben ihrer Tätigkeit bei ATELIER BRÜCKNER hält sie regelmäßig Vorträge und engagiert sie sich als Jurymitglied bei Designwettbewerben, unter anderem beim Designpreis Rheinland-Pfalz.\nBesonders am Herzen liegt ihr die Förderung junger Designtalente. Sie schätzt den frischen Blick der nächsten Generation, ihren Mut, Konventionen zu hinterfragen, und ihre Fähigkeit, mit neuen Perspektiven bestehende Denk- und Arbeitsweisen herauszufordern.\nStatement:\nIn einer Zeit, in der KI kreative Prozesse und Arbeitsweisen grundlegend verändert, ist es wichtiger denn je, junge Talente in ihrem eigenständigen kreativen Denken zu stärken, unkonventionelle Ideen zu fördern, sie zu ermutigen, Bestehendes zu hinterfragen, und den zwischenmenschlichen Austausch zu stärken.",
+  },
   { name: "Eva Marguerre", rolle: "Studio Besau Marguerre" },
   ausJury2025("Nils Holger Moormann"),
   ausJury2025("Johanna Neves Pimenta"),
