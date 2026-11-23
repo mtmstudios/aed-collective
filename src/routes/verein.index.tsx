@@ -52,7 +52,11 @@ function VereinPage() {
           <div className="absolute inset-x-0 bottom-0">
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">AED e.V.</p>
-              <h1 id="verein-titel-head" className="display-lg mt-4 whitespace-nowrap text-white">
+              {/* Einzeilig erst ab 768px – siehe Startseite. */}
+              <h1
+                id="verein-titel-head"
+                className="display-lg mt-4 text-white md:whitespace-nowrap"
+              >
                 Veranstalten. Austauschen. Fördern.
               </h1>
               <p className="lead mt-5 max-w-2xl text-white/90">

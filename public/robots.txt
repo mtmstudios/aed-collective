@@ -13,4 +13,12 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Interne Bereiche gehören nicht in den Suchindex: Anmeldung der Jury,
+# Bildverwaltung und die Passwortsperre. Sie sind ohnehin geschützt – im
+# Index aufzutauchen lädt nur zum Ausprobieren ein.
+Disallow: /jurybereich
+Disallow: /admin/
+Disallow: /unlock
+Disallow: /api/
+
 Sitemap: https://www.aed-stuttgart.de/sitemap.xml

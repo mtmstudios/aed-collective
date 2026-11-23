@@ -1092,37 +1092,38 @@ export const partner = [
   "Württembergischer Kunstverein",
 ];
 
-// Echte Dateien der Bestands-Website (Jimdo-CDN – vor Kündigung lokal sichern!)
+// Die Dateien liegen seit dem Umzug unter public/downloads/ – früher lagen sie
+// auf dem Jimdo-CDN der alten Seite und wären mit deren Abschaltung verschwunden.
 export const downloads = [
   {
     titel: "aed Programm 2. Halbjahr 2026",
     beschreibung: "Alle Veranstaltungen von Juli bis Dezember 2026 im Überblick.",
     typ: "PDF, 0,7 MB",
-    url: "https://www.aed-stuttgart.de/app/download/8594142763/2026_02_aed.pdf",
+    url: "/downloads/programmheft-2026-02.pdf",
   },
   {
     titel: "aed Programm 1. Halbjahr 2026",
     beschreibung: "Das Programm von Januar bis Juni 2026.",
     typ: "PDF, 0,9 MB",
-    url: "https://www.aed-stuttgart.de/app/download/8594138863/2026_01_aed_Programm.pdf",
+    url: "/downloads/programmheft-2026-01.pdf",
   },
   {
     titel: "aed Beitrittserklärung",
     beschreibung: "Mitglied werden per Formular – ausfüllen und an die Geschäftsstelle senden.",
     typ: "PDF, 0,4 MB",
-    url: "https://www.aed-stuttgart.de/app/download/8616515663/aed_Mitglied+werden+%282025%29.pdf",
+    url: "/downloads/aed-mitglied-werden.pdf",
   },
   {
     titel: "aed Info-Flyer (DE + EN)",
     beschreibung: "Kurzvorstellung des Vereins zum Weitergeben.",
     typ: "PDF, 5,5 MB",
-    url: "https://www.aed-stuttgart.de/app/download/8058920663/aed_Flyer+%282025%29.pdf",
+    url: "/downloads/aed-flyer.pdf",
   },
   {
     titel: "aed Publikation „12 Jahre aed“",
     beschreibung: "Rückblick auf zwölf Jahre Vereinsarbeit.",
     typ: "PDF, 15,2 MB",
-    url: "https://www.aed-stuttgart.de/app/download/7933351963/aed_Buch_12_Jahre.pdf",
+    url: "/downloads/aed-buch-12-jahre.pdf",
   },
   {
     titel: "aed Logo",

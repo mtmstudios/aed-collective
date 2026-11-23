@@ -20,6 +20,37 @@ async function getServerEntry(): Promise<ServerEntry> {
   return serverEntryPromise;
 }
 
+/**
+ * Schutzangaben, die jede Antwort mitbekommt.
+ *
+ * Der Webserver vor der Anwendung setzt nichts davon, und ohne diese Angaben
+ * fehlen drei einfache Absicherungen:
+ *
+ *   nosniff          Der Browser hält sich an den angegebenen Dateityp. Wichtig
+ *                    wegen /api/datei: dort werden hochgeladene Dateien
+ *                    ausgeliefert, deren Typ aus der Endung stammt.
+ *   frame-ancestors  Niemand kann die Seite – besonders den Jurybereich – in
+ *                    einen fremden Rahmen setzen und Klicks abfangen.
+ *   Referrer-Policy  Beim Wechsel auf fremde Seiten wandert nur noch die
+ *                    Herkunftsadresse mit, nicht der genaue Pfad.
+ *
+ * Bewusst nicht gesetzt: HSTS. Das erzwingt HTTPS für Monate im Voraus und
+ * gehört erst gesetzt, wenn das Zertifikat steht und sich bewährt hat.
+ */
+const SCHUTZ_ANGABEN: Record<string, string> = {
+  "X-Content-Type-Options": "nosniff",
+  "Content-Security-Policy": "frame-ancestors 'self'",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "X-Frame-Options": "SAMEORIGIN",
+};
+
+function mitSchutzAngaben(antwort: Response): Response {
+  for (const [name, wert] of Object.entries(SCHUTZ_ANGABEN)) {
+    if (!antwort.headers.has(name)) antwort.headers.set(name, wert);
+  }
+  return antwort;
+}
+
 // h3 swallows in-handler throws into a normal 500 Response with body
 // {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
@@ -122,17 +153,19 @@ export default {
       // Alte Adressen der beiden Vorgängerseiten dauerhaft weiterleiten,
       // bevor die Anwendung überhaupt rendert.
       const weiter = umleitung(request);
-      if (weiter) return weiter;
+      if (weiter) return mitSchutzAngaben(weiter);
 
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      return mitSchutzAngaben(await normalizeCatastrophicSsrResponse(response));
     } catch (error) {
       console.error(error);
-      return new Response(renderErrorPage(), {
-        status: 500,
-        headers: { "content-type": "text/html; charset=utf-8" },
-      });
+      return mitSchutzAngaben(
+        new Response(renderErrorPage(), {
+          status: 500,
+          headers: { "content-type": "text/html; charset=utf-8" },
+        }),
+      );
     }
   },
 };
