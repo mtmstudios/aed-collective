@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { jahrgaenge, projekte } from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/gewinner/")({
   head: () => ({
@@ -12,10 +13,13 @@ export const Route = createFileRoute("/neuland/gewinner/")({
           "Alle Preisträgerinnen und Preisträger des Nachwuchswettbewerbs neuland seit 2019 – nach Jahrgängen sortiert.",
       },
       { property: "og:title", content: "Gewinner:innen – neuland | aed e.V." },
-      { property: "og:description", content: "Die Jahrgänge 2025, 2023, 2021 und 2019 im Überblick." },
-      { property: "og:url", content: "/neuland/gewinner" },
+      {
+        property: "og:description",
+        content: "Die Jahrgänge 2025, 2023, 2021 und 2019 im Überblick.",
+      },
+      { property: "og:url", content: `${HAUPTADRESSE}/neuland/gewinner` },
     ],
-    links: [{ rel: "canonical", href: "/neuland/gewinner" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/gewinner` }],
   }),
   component: GewinnerIndex,
 });

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { vorstand } from "@/data/site";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/verein/vorstand/")({
   head: () => ({
@@ -14,9 +15,9 @@ export const Route = createFileRoute("/verein/vorstand/")({
       },
       { property: "og:title", content: "Vorstand – aed e.V. Stuttgart" },
       { property: "og:description", content: "Die fünf Personen im Vorstand des aed e.V." },
-      { property: "og:url", content: "/verein/vorstand" },
+      { property: "og:url", content: `${HAUPTADRESSE}/verein/vorstand` },
     ],
-    links: [{ rel: "canonical", href: "/verein/vorstand" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/verein/vorstand` }],
   }),
   component: VorstandPage,
 });

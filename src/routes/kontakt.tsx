@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { MailLink } from "@/components/mail-link";
 import { kontakt } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -17,9 +18,9 @@ export const Route = createFileRoute("/kontakt")({
         property: "og:description",
         content: "Geschäftsstelle, Anfahrt und Ansprechpartnerin des aed e.V.",
       },
-      { property: "og:url", content: "/kontakt" },
+      { property: "og:url", content: `${HAUPTADRESSE}/kontakt` },
     ],
-    links: [{ rel: "canonical", href: "/kontakt" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/kontakt` }],
   }),
   component: KontaktPage,
 });

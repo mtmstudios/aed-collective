@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { jury2027 } from "@/data/neuland";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/jury")({
   head: () => ({
@@ -17,9 +18,9 @@ export const Route = createFileRoute("/neuland/jury")({
         property: "og:description",
         content: `${jury2027.length} Fachleute entscheiden über die Preise des Wettbewerbs.`,
       },
-      { property: "og:url", content: "/neuland/jury" },
+      { property: "og:url", content: `${HAUPTADRESSE}/neuland/jury` },
     ],
-    links: [{ rel: "canonical", href: "/neuland/jury" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/jury` }],
   }),
   component: JuryPage,
 });
@@ -39,7 +40,6 @@ function JuryPage() {
           ))}
         </div>
       </section>
-
     </>
   );
 }

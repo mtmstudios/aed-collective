@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { referenten, type Referent } from "@/data/referenten";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/referenten")({
   head: () => ({
@@ -14,10 +15,13 @@ export const Route = createFileRoute("/referenten")({
           "Durchsuchbare Liste aller Referentinnen und Referenten, die beim aed e.V. gesprochen haben – von A bis Z.",
       },
       { property: "og:title", content: "Referent:innen – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Alle Referentinnen und Referenten des aed e.V. von A bis Z." },
-      { property: "og:url", content: "/referenten" },
+      {
+        property: "og:description",
+        content: "Alle Referentinnen und Referenten des aed e.V. von A bis Z.",
+      },
+      { property: "og:url", content: `${HAUPTADRESSE}/referenten` },
     ],
-    links: [{ rel: "canonical", href: "/referenten" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/referenten` }],
   }),
   component: ReferentenPage,
 });

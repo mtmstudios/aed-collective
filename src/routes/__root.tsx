@@ -126,8 +126,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
+          // Ohne url, logo und sameAs erkennen Suchmaschinen und Sprachmodelle
+          // den Verein nicht als dieselbe Einrichtung wieder, die auf anderen
+          // Seiten erwähnt wird. Genau daran hängt, ob der aed in einer Antwort
+          // namentlich genannt und verlinkt wird.
+          "@id": "https://www.aed-stuttgart.de/#organisation",
           name: "aed e.V.",
+          legalName:
+            "aed Verein zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.",
+          url: "https://www.aed-stuttgart.de",
+          logo: "https://www.aed-stuttgart.de/aed-logo.png",
+          image: "https://www.aed-stuttgart.de/teilen-vorschau.jpg",
           description: "Verein für Architektur, Engineering und Design in Stuttgart",
+          foundingDate: "2004",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Olgastraße 138",
@@ -136,6 +147,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressCountry: "DE",
           },
           telephone: "+49 160 8894377",
+          email: "info@aed-stuttgart.de",
+          sameAs: [
+            "https://www.facebook.com/aedStuttgart",
+            "https://www.instagram.com/aed_stuttgart/",
+            "https://www.linkedin.com/in/aed-stuttgart-e-v-421977101",
+          ],
         }),
       },
     ],

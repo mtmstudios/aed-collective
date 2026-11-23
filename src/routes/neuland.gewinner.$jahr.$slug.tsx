@@ -4,6 +4,7 @@ import { projekte } from "@/data/neuland";
 import { projektBilder } from "@/data/bilder";
 import { BildCredit } from "@/components/bild-credit";
 import { Bild } from "@/components/bild";
+import { absolut } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/gewinner/$jahr/$slug")({
   loader: ({ params }) => {
@@ -30,10 +31,12 @@ export const Route = createFileRoute("/neuland/gewinner/$jahr/$slug")({
         { property: "og:title", content: `${projekt.titel} – neuland ${projekt.jahr}` },
         { property: "og:description", content: beschreibung },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/neuland/gewinner/${params.jahr}/${params.slug}` },
-        ...(bild ? [{ property: "og:image", content: bild }] : []),
+        { property: "og:url", content: absolut(`/neuland/gewinner/${params.jahr}/${params.slug}`) },
+        ...(bild ? [{ property: "og:image", content: absolut(bild) }] : []),
       ],
-      links: [{ rel: "canonical", href: `/neuland/gewinner/${params.jahr}/${params.slug}` }],
+      links: [
+        { rel: "canonical", href: absolut(`/neuland/gewinner/${params.jahr}/${params.slug}`) },
+      ],
       scripts: [
         {
           type: "application/ld+json",

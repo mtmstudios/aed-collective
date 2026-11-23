@@ -2,6 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { jahrgaenge, kategorien, projekte, type Projekt } from "@/data/neuland";
 import { ProjektCard } from "@/components/projekt-card";
 import { PageHeader } from "@/components/ui-bits";
+import { absolut } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/gewinner/$jahr/")({
   loader: ({ params }) => {
@@ -11,7 +12,12 @@ export const Route = createFileRoute("/neuland/gewinner/$jahr/")({
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Jahrgang nicht gefunden – neuland" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [
+          { title: "Jahrgang nicht gefunden – neuland" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     }
     return {
       meta: [
@@ -21,10 +27,13 @@ export const Route = createFileRoute("/neuland/gewinner/$jahr/")({
           content: `Die ausgezeichneten Arbeiten des Nachwuchswettbewerbs neuland ${loaderData.jahr} in fünf Kategorien.`,
         },
         { property: "og:title", content: `Gewinner:innen ${loaderData.jahr} – neuland` },
-        { property: "og:description", content: `Alle Preisträger:innen des Jahrgangs ${loaderData.jahr}.` },
-        { property: "og:url", content: `/neuland/gewinner/${params.jahr}` },
+        {
+          property: "og:description",
+          content: `Alle Preisträger:innen des Jahrgangs ${loaderData.jahr}.`,
+        },
+        { property: "og:url", content: absolut(`/neuland/gewinner/${params.jahr}`) },
       ],
-      links: [{ rel: "canonical", href: `/neuland/gewinner/${params.jahr}` }],
+      links: [{ rel: "canonical", href: absolut(`/neuland/gewinner/${params.jahr}`) }],
     };
   },
   component: JahrgangPage,

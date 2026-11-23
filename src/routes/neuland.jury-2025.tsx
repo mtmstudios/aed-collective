@@ -5,6 +5,7 @@ import { PersonCard } from "@/components/person-card";
 import { PageHeader, SectionTitle } from "@/components/ui-bits";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/jury-2025")({
   head: () => ({
@@ -20,9 +21,9 @@ export const Route = createFileRoute("/neuland/jury-2025")({
         property: "og:description",
         content: "21 Fachleute entscheiden über die Preise des Wettbewerbs.",
       },
-      { property: "og:url", content: "/neuland/jury-2025" },
+      { property: "og:url", content: `${HAUPTADRESSE}/neuland/jury-2025` },
     ],
-    links: [{ rel: "canonical", href: "/neuland/jury-2025" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/jury-2025` }],
   }),
   component: JuryPage,
 });

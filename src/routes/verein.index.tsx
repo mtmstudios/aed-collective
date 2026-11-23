@@ -6,6 +6,7 @@ import { CoverSlider } from "@/components/cover-slider";
 import { PersonDialog, initialen, personenBild } from "@/components/person-dialog";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/verein/")({
   head: () => ({
@@ -21,11 +22,11 @@ export const Route = createFileRoute("/verein/")({
         property: "og:description",
         content: "Mission, Geschichte und Auszeichnungen des aed e.V.",
       },
-      { property: "og:url", content: "/verein" },
+      { property: "og:url", content: `${HAUPTADRESSE}/verein` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/verein" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/verein` }],
   }),
   component: VereinPage,
 });
@@ -68,7 +69,10 @@ function VereinPage() {
         </div>
       </section>
 
-      <section className="shell topic-rule bg-brand text-brand-foreground py-16" aria-labelledby="mission">
+      <section
+        className="shell topic-rule bg-brand text-brand-foreground py-16"
+        aria-labelledby="mission"
+      >
         <div className="grid gap-10 md:grid-cols-12">
           <h2 id="mission" className="eyebrow md:col-span-3">
             Mission

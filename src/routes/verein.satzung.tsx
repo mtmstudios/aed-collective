@@ -1,16 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/verein/satzung")({
   head: () => ({
     meta: [
       { title: "Satzung – aed e.V. Stuttgart" },
-      { name: "description", content: "Die Satzung des Vereins zur Förderung von Architektur, Engineering und Design in Stuttgart e.V." },
+      {
+        name: "description",
+        content:
+          "Die Satzung des Vereins zur Förderung von Architektur, Engineering und Design in Stuttgart e.V.",
+      },
       { property: "og:title", content: "Satzung – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Die aktuelle Fassung der Vereinssatzung des aed e.V." },
-      { property: "og:url", content: "/verein/satzung" },
+      {
+        property: "og:description",
+        content: "Die aktuelle Fassung der Vereinssatzung des aed e.V.",
+      },
+      { property: "og:url", content: `${HAUPTADRESSE}/verein/satzung` },
     ],
-    links: [{ rel: "canonical", href: "/verein/satzung" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/verein/satzung` }],
   }),
   component: SatzungPage,
 });

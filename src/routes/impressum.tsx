@@ -1,17 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { kontakt } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/impressum")({
   head: () => ({
     meta: [
       { title: "Impressum – aed e.V. Stuttgart" },
-      { name: "description", content: "Impressum und Anbieterkennzeichnung des aed e.V., Stuttgart." },
+      {
+        name: "description",
+        content: "Impressum und Anbieterkennzeichnung des aed e.V., Stuttgart.",
+      },
       { property: "og:title", content: "Impressum – aed e.V. Stuttgart" },
       { property: "og:description", content: "Anbieterkennzeichnung des aed e.V." },
-      { property: "og:url", content: "/impressum" },
+      { property: "og:url", content: `${HAUPTADRESSE}/impressum` },
     ],
-    links: [{ rel: "canonical", href: "/impressum" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/impressum` }],
   }),
   component: ImpressumPage,
 });
@@ -38,8 +42,8 @@ function ImpressumPage() {
         <div className="rule-t pt-6">
           <h2 className="display-sm">Vertretungsberechtigter Vorstand</h2>
           <p className="mt-3 leading-relaxed">
-            Dr. Frank Heinlein (1. Vorsitzender), Johanna Neves Pimenta (2. Vorsitzende), Sara
-            Dahme (Schriftführerin)
+            Dr. Frank Heinlein (1. Vorsitzender), Johanna Neves Pimenta (2. Vorsitzende), Sara Dahme
+            (Schriftführerin)
           </p>
         </div>
         <div className="rule-t pt-6">

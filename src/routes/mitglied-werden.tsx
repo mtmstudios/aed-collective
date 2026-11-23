@@ -5,6 +5,7 @@ import { Check } from "lucide-react";
 import { sendeMitgliedsantrag } from "@/lib/mitgliedschaft.functions";
 import { eventBilder } from "@/data/bilder";
 import { CoverSlider } from "@/components/cover-slider";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/mitglied-werden")({
   head: () => ({
@@ -20,9 +21,9 @@ export const Route = createFileRoute("/mitglied-werden")({
         property: "og:description",
         content: "Beiträge, Vorteile und Online-Beitritt beim aed e.V.",
       },
-      { property: "og:url", content: "/mitglied-werden" },
+      { property: "og:url", content: `${HAUPTADRESSE}/mitglied-werden` },
     ],
-    links: [{ rel: "canonical", href: "/mitglied-werden" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/mitglied-werden` }],
   }),
   component: MitgliedWerdenPage,
 });

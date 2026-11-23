@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { teilnahmebedingungen } from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/teilnahme")({
   head: () => ({
@@ -16,9 +17,9 @@ export const Route = createFileRoute("/neuland/teilnahme")({
         property: "og:description",
         content: "Alle zwölf Abschnitte der Teilnahmebedingungen im Überblick.",
       },
-      { property: "og:url", content: "/neuland/teilnahme" },
+      { property: "og:url", content: `${HAUPTADRESSE}/neuland/teilnahme` },
     ],
-    links: [{ rel: "canonical", href: "/neuland/teilnahme" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/teilnahme` }],
   }),
   component: TeilnahmePage,
 });
