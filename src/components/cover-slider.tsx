@@ -160,7 +160,7 @@ export function CoverSlider({
             type="button"
             aria-label="Vorheriges Bild"
             onClick={() => springe(1)}
-            className="absolute left-4 top-[15%] z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70"
+            className="absolute left-4 top-4 z-10 text-white md:top-[15%] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70"
           >
             <svg
               width="32"
@@ -178,7 +178,7 @@ export function CoverSlider({
             type="button"
             aria-label="Nächstes Bild"
             onClick={() => springe(-1)}
-            className="absolute right-4 top-[15%] z-10 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70"
+            className="absolute right-4 top-4 z-10 text-white md:top-[15%] drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] transition-opacity hover:opacity-70"
           >
             <svg
               width="32"

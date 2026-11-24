@@ -101,6 +101,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "de_DE" },
       { name: "twitter:card", content: "summary_large_image" },
+      // Vorschaubild beim Teilen in LinkedIn, Facebook und WhatsApp. Ohne
+      // dieses Bild zeigen die Dienste nur einen grauen Kasten – gerade für
+      // die Veranstaltungshinweise des Vereins der sichtbarste Unterschied.
+      // Die Adresse muss vollständig sein, relative Pfade werden ignoriert.
+      { property: "og:image", content: "https://www.aed-stuttgart.de/teilen-vorschau.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      {
+        property: "og:image:alt",
+        content: "Teilnehmende einer aed-Führung in Warnwesten auf einer Baustelle",
+      },
+      { name: "twitter:image", content: "https://www.aed-stuttgart.de/teilen-vorschau.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

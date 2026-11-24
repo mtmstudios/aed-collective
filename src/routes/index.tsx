@@ -70,7 +70,9 @@ function Index() {
 
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">Herzlich Willkommen beim aed Stuttgart</p>
-              <h1 id="cover-titel" className="display-lg mt-4 whitespace-nowrap text-white">
+              {/* Einzeilig erst ab 768px: darunter passt die Zeile nicht in den
+                  Bildschirm und wurde bisher rechts abgeschnitten. */}
+              <h1 id="cover-titel" className="display-lg mt-4 text-white md:whitespace-nowrap">
                 Architecture – Engineering – Design
               </h1>
               <p className="lead mt-5 max-w-xl text-white/90">

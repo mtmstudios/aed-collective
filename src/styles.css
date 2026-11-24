@@ -212,6 +212,21 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /*
+   * Randabfallende Abschnitte (.bleed) rechnen mit 100vw. Wo die Scrollleiste
+   * Platz wegnimmt – auf Windows die Regel, auf dem Mac nicht – ist 100vw um
+   * deren Breite groesser als das Sichtfeld, und die Seite laesst sich um rund
+   * 15 Pixel zur Seite schieben.
+   *
+   * Der Wert steht bewusst am body und nicht am html: Der Browser reicht ihn
+   * von dort an das Sichtfeld weiter, waehrend der body selbst "visible"
+   * bleibt. Es entsteht also kein eigener Scrollbereich, und der mitlaufende
+   * Seitenkopf klebt weiterhin. Am html gesetzt wirkt "clip" in Chrome nicht.
+   */
+  body {
+    overflow-x: hidden;
+  }
+
   h1,
   h2,
   h3,

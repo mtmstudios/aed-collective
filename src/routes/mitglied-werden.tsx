@@ -36,8 +36,7 @@ const nutzen = [
   "Unterstützung der Nachwuchsförderung – u.a. über den Wettbewerb neuland",
 ];
 
-const beitrittsPdf =
-  "https://www.aed-stuttgart.de/app/download/8616515663/aed_Mitglied+werden+%282025%29.pdf";
+const beitrittsPdf = "/downloads/aed-mitglied-werden.pdf";
 const heroBilder = Object.values(eventBilder).reverse();
 
 const beitraege = [

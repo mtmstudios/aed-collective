@@ -264,7 +264,7 @@ export const presseKit = [
   {
     titel: "Pressemitteilung Preisverleihung 2025",
     typ: "PDF, 0,4 MB",
-    url: "https://www.aed-neuland.de/app/download/6462715266/2025+PM+Preisverleihung+aed+neuland.pdf",
+    url: "/downloads/neuland-2025-pressemitteilung.pdf",
   },
   {
     titel: "Banner quadratisch, Farbe (PNG, RGB)",
@@ -279,16 +279,16 @@ export const presseKit = [
   {
     titel: "Anzeige DIN quer, schmal (PDF, CMYK)",
     typ: "PDF, 0,9 MB",
-    url: "https://www.aed-neuland.de/app/download/6462718266/aed_neuland_anzeige_DINquer_rz_ps_2025-schmal.pdf",
+    url: "/downloads/neuland-anzeige-dinquer-schmal.pdf",
   },
   {
     titel: "Anzeige DIN quer (PDF, CMYK)",
     typ: "PDF, 0,9 MB",
-    url: "https://www.aed-neuland.de/app/download/6462718866/aed_neuland_anzeige_DINquer_rz_ps_2025.pdf",
+    url: "/downloads/neuland-anzeige-dinquer.pdf",
   },
   {
     titel: "Anzeige groß, Hochformat (PDF, CMYK)",
     typ: "PDF, 0,7 MB",
-    url: "https://www.aed-neuland.de/app/download/6462720066/aed_neuland_anzeige_form_gro%C3%9F_rz_ps_2025_RZ_var4_cradle.pdf",
+    url: "/downloads/neuland-anzeige-form-gross.pdf",
   },
 ];
