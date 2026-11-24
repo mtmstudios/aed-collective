@@ -10,6 +10,7 @@ import { coverBilder } from "@/data/cover";
 import { eventBilder } from "@/data/bilder";
 import { Bild } from "@/components/bild";
 import { BildCredit } from "@/components/bild-credit";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/programm/")({
   head: () => ({
@@ -22,11 +23,11 @@ export const Route = createFileRoute("/programm/")({
       },
       { property: "og:title", content: "Programm – Veranstaltungen des aed e.V." },
       { property: "og:description", content: "Alle Veranstaltungen des aed e.V. in Stuttgart." },
-      { property: "og:url", content: "/programm" },
+      { property: "og:url", content: `${HAUPTADRESSE}/programm` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/programm" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/programm` }],
   }),
   component: ProgrammPage,
 });

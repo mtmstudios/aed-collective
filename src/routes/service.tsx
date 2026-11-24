@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { downloads } from "@/data/site";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/service")({
   head: () => ({
@@ -14,9 +15,9 @@ export const Route = createFileRoute("/service")({
       },
       { property: "og:title", content: "Service & Downloads – aed e.V. Stuttgart" },
       { property: "og:description", content: "Alle Downloads des aed e.V. an einem Ort." },
-      { property: "og:url", content: "/service" },
+      { property: "og:url", content: `${HAUPTADRESSE}/service` },
     ],
-    links: [{ rel: "canonical", href: "/service" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/service` }],
   }),
   component: ServicePage,
 });

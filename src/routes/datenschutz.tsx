@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Fragment } from "react";
 import { PageHeader } from "@/components/ui-bits";
 import { datenschutzKapitel, datenschutzStand } from "@/data/datenschutz";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/datenschutz")({
   head: () => ({
@@ -13,9 +14,9 @@ export const Route = createFileRoute("/datenschutz")({
       },
       { property: "og:title", content: "Datenschutz – aed e.V. Stuttgart" },
       { property: "og:description", content: "Datenschutzhinweise des aed e.V." },
-      { property: "og:url", content: "/datenschutz" },
+      { property: "og:url", content: `${HAUPTADRESSE}/datenschutz` },
     ],
-    links: [{ rel: "canonical", href: "/datenschutz" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/datenschutz` }],
   }),
   component: DatenschutzPage,
 });

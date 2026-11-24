@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { beirat } from "@/data/site";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/verein/beirat/")({
   head: () => ({
@@ -14,9 +15,9 @@ export const Route = createFileRoute("/verein/beirat/")({
       },
       { property: "og:title", content: "Beirat – aed e.V. Stuttgart" },
       { property: "og:description", content: "Zehn Beiratsmitglieder aus allen Disziplinen." },
-      { property: "og:url", content: "/verein/beirat" },
+      { property: "og:url", content: `${HAUPTADRESSE}/verein/beirat` },
     ],
-    links: [{ rel: "canonical", href: "/verein/beirat" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/verein/beirat` }],
   }),
   component: BeiratPage,
 });

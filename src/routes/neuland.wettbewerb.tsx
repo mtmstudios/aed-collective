@@ -1,6 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { kategorien, karlSchlechtText, kriterien, preise, sponsoren, termine } from "@/data/neuland";
+import {
+  kategorien,
+  karlSchlechtText,
+  kriterien,
+  preise,
+  sponsoren,
+  termine,
+} from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/wettbewerb")({
   head: () => ({
@@ -12,10 +20,13 @@ export const Route = createFileRoute("/neuland/wettbewerb")({
           "Konzept, Kategorien, Auswahlkriterien, Termine, Preise und Förderer des Nachwuchswettbewerbs neuland.",
       },
       { property: "og:title", content: "Der Wettbewerb – neuland | aed e.V." },
-      { property: "og:description", content: "Alles zu Kategorien, Kriterien, Terminen und Preisen." },
-      { property: "og:url", content: "/neuland/wettbewerb" },
+      {
+        property: "og:description",
+        content: "Alles zu Kategorien, Kriterien, Terminen und Preisen.",
+      },
+      { property: "og:url", content: `${HAUPTADRESSE}/neuland/wettbewerb` },
     ],
-    links: [{ rel: "canonical", href: "/neuland/wettbewerb" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/wettbewerb` }],
   }),
   component: WettbewerbPage,
 });

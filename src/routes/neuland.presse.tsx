@@ -3,6 +3,7 @@ import { Download } from "lucide-react";
 import { kontakt } from "@/data/site";
 import { presseKit } from "@/data/neuland";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/neuland/presse")({
   head: () => ({
@@ -15,9 +16,9 @@ export const Route = createFileRoute("/neuland/presse")({
       },
       { property: "og:title", content: "Presse – neuland | aed e.V." },
       { property: "og:description", content: "Pressematerial zum Wettbewerb neuland." },
-      { property: "og:url", content: "/neuland/presse" },
+      { property: "og:url", content: `${HAUPTADRESSE}/neuland/presse` },
     ],
-    links: [{ rel: "canonical", href: "/neuland/presse" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/presse` }],
   }),
   component: PressePage,
 });

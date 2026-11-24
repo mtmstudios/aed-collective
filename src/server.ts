@@ -51,6 +51,45 @@ function mitSchutzAngaben(antwort: Response): Response {
   return antwort;
 }
 
+/**
+ * Packt gerenderte Seiten, bevor sie den Server verlassen.
+ *
+ * Weder Nitro noch der Webserver davor komprimieren: Gemessen gingen 118 KB
+ * für die Startseite und 209 KB für die Referentenseite unkomprimiert über die
+ * Leitung. Das JavaScript liegt nach dem ersten Besuch ein Jahr im Browser,
+ * die Seite selbst wird bei jedem Aufruf neu geholt – hier liegt also der
+ * wiederkehrende Aufwand, und gzip nimmt davon rund drei Viertel weg.
+ *
+ * CompressionStream arbeitet den Datenstrom mit, statt ihn erst vollständig zu
+ * sammeln. Das serverseitige Rendern bleibt dadurch fließend; die erste
+ * Bildschirmseite steht weiterhin, bevor der Rest fertig ist.
+ */
+const PACKBARE_TYPEN = /^(text\/|application\/(json|javascript|xml)|image\/svg)/i;
+
+function nimmtGzipAn(request: Request): boolean {
+  return /\bgzip\b/i.test(request.headers.get("accept-encoding") ?? "");
+}
+
+function gepackt(request: Request, antwort: Response): Response {
+  if (!antwort.body) return antwort;
+  if (antwort.headers.has("content-encoding")) return antwort;
+  if (!nimmtGzipAn(request)) return antwort;
+  if (!PACKBARE_TYPEN.test(antwort.headers.get("content-type") ?? "")) return antwort;
+
+  const kopf = new Headers(antwort.headers);
+  kopf.set("content-encoding", "gzip");
+  // Die Länge gilt für den ungepackten Inhalt und wäre jetzt falsch.
+  kopf.delete("content-length");
+  // Zwischenspeicher müssen gepackte und ungepackte Fassung auseinanderhalten.
+  kopf.append("vary", "accept-encoding");
+
+  return new Response(antwort.body.pipeThrough(new CompressionStream("gzip")), {
+    status: antwort.status,
+    statusText: antwort.statusText,
+    headers: kopf,
+  });
+}
+
 // h3 swallows in-handler throws into a normal 500 Response with body
 // {"unhandled":true,"message":"HTTPError"} — try/catch alone never fires for those.
 async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
@@ -157,7 +196,7 @@ export default {
 
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return mitSchutzAngaben(await normalizeCatastrophicSsrResponse(response));
+      return gepackt(request, mitSchutzAngaben(await normalizeCatastrophicSsrResponse(response)));
     } catch (error) {
       console.error(error);
       return mitSchutzAngaben(

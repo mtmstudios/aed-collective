@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { foerdermitglieder } from "@/data/foerdermitglieder";
 import { MitgliederListe } from "@/components/mitglieder-liste";
 import { PageHeader } from "@/components/ui-bits";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/mitglieder")({
   head: () => ({
@@ -13,10 +14,13 @@ export const Route = createFileRoute("/mitglieder")({
           "Rund 80 Fördermitglieder und über 400 Personenmitglieder tragen den aed e.V. – Büros, Unternehmen und Institutionen aus der Region Stuttgart.",
       },
       { property: "og:title", content: "Mitglieder – aed e.V. Stuttgart" },
-      { property: "og:description", content: "Fördermitglieder und Personenmitglieder des aed e.V." },
-      { property: "og:url", content: "/mitglieder" },
+      {
+        property: "og:description",
+        content: "Fördermitglieder und Personenmitglieder des aed e.V.",
+      },
+      { property: "og:url", content: `${HAUPTADRESSE}/mitglieder` },
     ],
-    links: [{ rel: "canonical", href: "/mitglieder" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}/mitglieder` }],
   }),
   component: MitgliederPage,
 });
@@ -30,7 +34,9 @@ function MitgliederPage() {
         intro="Büros, Unternehmen und Institutionen, die den Verein und die Nachwuchsförderung tragen."
       />
       <section className="shell py-12" aria-label="Verzeichnis der Fördermitglieder">
-        <p className="eyebrow-muted mb-6">{foerdermitglieder.length} Unternehmen und Institutionen</p>
+        <p className="eyebrow-muted mb-6">
+          {foerdermitglieder.length} Unternehmen und Institutionen
+        </p>
         <MitgliederListe items={foerdermitglieder} />
       </section>
       <section className="shell pb-24">

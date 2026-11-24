@@ -5,6 +5,7 @@ import { eventBilder } from "@/data/bilder";
 import { formatDatum } from "@/components/event-card";
 import { BildCredit } from "@/components/bild-credit";
 import { Bild } from "@/components/bild";
+import { absolut } from "@/lib/adresse";
 
 function findEvent(slug: string) {
   return events.find((e) => e.slug === slug);
@@ -34,10 +35,10 @@ export const Route = createFileRoute("/programm/$slug")({
         { property: "og:title", content: `${event.titel} – aed e.V.` },
         { property: "og:description", content: event.teaser },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/programm/${params.slug}` },
-        ...(bild ? [{ property: "og:image", content: bild }] : []),
+        { property: "og:url", content: absolut(`/programm/${params.slug}`) },
+        ...(bild ? [{ property: "og:image", content: absolut(bild) }] : []),
       ],
-      links: [{ rel: "canonical", href: `/programm/${params.slug}` }],
+      links: [{ rel: "canonical", href: absolut(`/programm/${params.slug}`) }],
       scripts: [
         {
           type: "application/ld+json",

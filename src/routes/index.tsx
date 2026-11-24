@@ -7,6 +7,7 @@ import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 import { CoverSlider } from "@/components/cover-slider";
 import neulandTeaser from "@/assets/neuland-startseite-2027-v4.png.asset.json";
 import { schlussFormatiert } from "@/config/neuland-einreichung";
+import { HAUPTADRESSE } from "@/lib/adresse";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,11 +23,11 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Veranstaltungen, Austausch und Förderung für Gestaltung in Stuttgart.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${HAUPTADRESSE}` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${HAUPTADRESSE}` }],
   }),
   component: Index,
 });
@@ -67,7 +68,6 @@ function Index() {
           {/* möglichst schmaler vertikaler Verlauf – nur hinter der Schrift */}
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[52%] bg-gradient-to-t from-black/95 via-black/65 to-transparent" />
           <div className="absolute inset-x-0 bottom-0">
-
             <div className="shell pb-10 md:pb-16">
               <p className="eyebrow text-white/85">Herzlich Willkommen beim aed Stuttgart</p>
               {/* Einzeilig erst ab 768px: darunter passt die Zeile nicht in den
@@ -96,7 +96,9 @@ function Index() {
         <SectionTitle
           id="programm-titel"
           titel="Im Programm"
-          kicker={kommende.length > 0 ? `Nächster Termin: ${formatDatum(kommende[0].datum)}` : undefined}
+          kicker={
+            kommende.length > 0 ? `Nächster Termin: ${formatDatum(kommende[0].datum)}` : undefined
+          }
           href="/programm"
           linkText="Alle Termine"
           noRule
@@ -161,8 +163,8 @@ function Index() {
             <p className="prose-editorial mt-8 max-w-2xl">
               Der aed ist eine von seinen Mitgliedern getragene, gemeinnützige Initiative. Ihr Ziel:
               die große Gestaltungskompetenz der Region Stuttgart – vom Produkt- und Grafikdesign
-              über Multimedia und Engineering bis zur Architektur – zu fördern und der Öffentlichkeit
-              nahezubringen.
+              über Multimedia und Engineering bis zur Architektur – zu fördern und der
+              Öffentlichkeit nahezubringen.
             </p>
             <Link to="/verein" className="eyebrow mt-8 inline-block link-underline">
               Über den Verein
@@ -172,13 +174,11 @@ function Index() {
       </section>
 
       {/* neuland als eigenes Ressort */}
-      <section className="theme-neuland shell bg-background text-foreground py-14 md:py-20" aria-labelledby="neuland-titel">
-        <SectionTitle
-          id="neuland-titel"
-          titel="neuland"
-          kicker="Nachwuchswettbewerb"
-          noRule
-        />
+      <section
+        className="theme-neuland shell bg-background text-foreground py-14 md:py-20"
+        aria-labelledby="neuland-titel"
+      >
+        <SectionTitle id="neuland-titel" titel="neuland" kicker="Nachwuchswettbewerb" noRule />
 
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <div>
@@ -193,8 +193,9 @@ function Index() {
           </div>
           <div>
             <p className="lead max-w-3xl">
-              Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in fünf
-              Kategorien, gefördert von der Karl Schlecht Stiftung, 2027 zum elften Mal ausgelobt.
+              Der interdisziplinäre Wettbewerb für Studierende und Absolvent:innen bis 28 Jahre – in
+              fünf Kategorien, gefördert von der Karl Schlecht Stiftung, 2027 zum elften Mal
+              ausgelobt.
             </p>
             <p className="eyebrow mt-8">
               Einreichungsschluss {schlussFormatiert().split(" um")[0]}
@@ -212,7 +213,10 @@ function Index() {
       </section>
 
       {/* Partner */}
-      <section className="shell topic-rule bg-background py-14 md:py-20" aria-labelledby="partner-titel">
+      <section
+        className="shell topic-rule bg-background py-14 md:py-20"
+        aria-labelledby="partner-titel"
+      >
         <SectionTitle id="partner-titel" titel="Kooperationspartner" />
         <div className="mt-10">
           <LogoGrid items={partner} solidYellow />
