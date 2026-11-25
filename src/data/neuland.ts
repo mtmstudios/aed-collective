@@ -221,7 +221,6 @@ export const jury2027: { name: string; rolle: string; link?: string; statement?:
     statement:
       "Joachim Bosse (*1983, Bukarest) ist ein deutscher Konzeptkünstler, der zwischen Berlin und Zürich lebt und arbeitet.\nBosse arbeitet mit skulpturalen, typografischen und medienübergreifenden Ansätzen und nutzt Popkultur als zeitgenössisches Material. Ausgehend von Massenmedien, Werbung und Darstellungssystemen untersucht er, wie Bilder, Symbole und Narrative zirkulieren, Bedeutung erzeugen und kulturellen wie ökonomischen Wert gewinnen.\nSein partizipatives Projekt DIKTAT untersucht, wie digitale Inhalte unsere Wahrnehmung, Aufmerksamkeit und unser Denken prägen. Es wurde 2025 am Ernst Deutsch Theater und 2026 in den Deichtorhallen Hamburg präsentiert.\nBevor er sich vollständig der Kunst widmete, war Bosse rund 15 Jahre lang Mitgründer und Kreativgeschäftsführer der Berliner Kreativagentur DOJO.\nSeine Werke befinden sich unter anderem in der Boros Collection, der Yoram Roth Collection und der Sammlung der Galerie Johann König und werden in Medien wie Monopol, brand eins, Die Zeit, ARD, Highsnobiety und Hypebeast diskutiert.",
   },
-  { name: "Shirin Brückner", rolle: "Geschäftsführerin ATELIER BRÜCKNER GMBH" },
   { name: "Alexander Fehre", rolle: "Studio Alexander Fehre GmbH" },
   ausJury2025("May-Britt Frank-Grosse"),
   { name: "Ulrike Kunkel", rolle: "AIT" },
