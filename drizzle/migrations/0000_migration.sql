@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "neuland uploads insert" ON storage.objects;
