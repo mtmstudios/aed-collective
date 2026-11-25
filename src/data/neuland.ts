@@ -85,7 +85,7 @@ export const termine = [
 export const teilnahmebedingungen = [
   {
     titel: "1. Allgemeines",
-    text: "Der aed lobt mit Unterstützung der Karl Schlecht Stiftung und weiterer Förder:innen den „neuland“-Förderpreis aus, einen Nachwuchswettbewerb für junge Gestalter:innen. Ziel ist es, innovative und nachhaltige Gestaltung zu fördern, die sich durch größtmögliche ökonomische wie ökologische Qualität auszeichnet, funktional und nutzerfreundlich ist und höchsten ästhetischen Anforderungen entspricht. Im Mittelpunkt stehen immer der Mensch und der gesellschaftliche Nutzen. Der Wettbewerb ist bewusst disziplinübergreifend und nicht auf bestimmte Fachgebiete oder Hochschulen beschränkt.",
+    text: "Der aed lobt mit Unterstützung der Karl Schlecht Stiftung und weiterer Förder:innen den „neuland“-Förderpreis aus, einen Nachwuchswettbewerb für junge Gestalter:innen. Ziel ist es, innovative und nachhaltige Gestaltung zu fördern, die sich durch größtmögliche ökonomische wie ökologische Qualität auszeichnet, funktional und nutzerfreundlich ist und höchsten ästhetischen Anforderungen entspricht. Im Mittelpunkt stehen immer der Mensch und der gesellschaftliche Nutzen. Der Wettbewerb ist bewusst disziplinübergreifend und nicht auf bestimmte Fachgebiete oder Hochschulen beschränkt. Der Wettbewerb ist kostenfrei, digital und offen für Studierende und Absolvent:innen aller Hochschulen, Akademien und Universitäten – bis 28 Jahre, disziplinübergreifend.\nEbenso können Semesterarbeiten oder freie Arbeiten eingereicht werden.",
   },
   {
     titel: "2. Preise",
