@@ -5,4 +5,5 @@ export const neulandPartner = [
   { name: "NFG Gruppe", url: "https://www.nfg-gruppe.de/" },
   { name: "Werner Sobek", url: "https://www.wernersobek.com/de/" },
   { name: "Atelier Brückner", url: "https://www.atelier-brueckner.com/de" },
+  { name: "Phoenix Design", url: "https://www.phoenixdesign.com" },
 ] as const;
