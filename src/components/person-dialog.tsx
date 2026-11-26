@@ -81,7 +81,7 @@ export function PersonDialog({
             </div>
           </div>
           <div className="w-full p-6 sm:p-8">
-            {person.statement ? (
+            {person.statement && (
               <div className="space-y-4 leading-relaxed">
                 {person.statement
                   .split("\n")
@@ -90,10 +90,6 @@ export function PersonDialog({
                     <p key={i}>{p}</p>
                   ))}
               </div>
-            ) : (
-              <p className="text-sm text-muted-foreground">
-                Für diese Person liegt noch kein Statement vor.
-              </p>
             )}
             {person.email && (
               <MailLink adresse={person.email} className="meta mt-6 inline-flex link-underline" />
