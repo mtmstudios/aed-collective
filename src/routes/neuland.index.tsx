@@ -15,6 +15,7 @@ import { BildCredit } from "@/components/bild-credit";
 import webteaserNeuland from "@/assets/neuland-teaser-neuland-v2.png.asset.json";
 import webteaser2027 from "@/assets/neuland-teaser-2027-v2.png.asset.json";
 import webteaserBewerben from "@/assets/neuland-teaser-bewerben-v2.png.asset.json";
+import stiftungsLogo from "@/assets/karl-schlecht-stiftung-logo.png.asset.json";
 import { HAUPTADRESSE } from "@/lib/adresse";
 
 function JuryKarte({ person }: { person: Person }) {
@@ -169,7 +170,13 @@ function NeulandIndex() {
           <a href="https://www.ksg-stiftung.de/" target="_blank" rel="noreferrer" className="display-sm">
             KARL SCHLECHT STIFTUNG
           </a>
-          <div className="aspect-[2/1] w-full max-w-72 shrink-0 bg-background" aria-hidden="true" />
+          <img
+            src={stiftungsLogo.url}
+            alt="Karl Schlecht Stiftung"
+            width={1920}
+            height={701}
+            className="block h-auto w-full max-w-72 shrink-0"
+          />
         </div>
       </section>
 
