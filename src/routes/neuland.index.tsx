@@ -183,7 +183,7 @@ function NeulandIndex() {
       </section>
 
       <section className="shell pb-12 md:pb-16" aria-labelledby="weitere-foerderer-neuland">
-        <SectionTitle id="weitere-foerderer-neuland" titel="Weitere Förderer" noRule />
+        <SectionTitle id="weitere-foerderer-neuland" titel="Weitere Unterstützer" noRule />
         <div className="mt-10">
           <LogoGrid items={neulandPartner.filter((partner) => partner.name !== "Karl Schlecht Stiftung")} solidYellow gridClassName="grid-cols-1 sm:grid-cols-3" />
         </div>
