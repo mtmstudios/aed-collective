@@ -1,8 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { jury2027 } from "@/data/neuland";
+import { mitPortraet } from "@/data/jury-sichtbarkeit";
+import { personenBild } from "@/components/person-dialog";
 import { PersonCard } from "@/components/person-card";
 import { PageHeader } from "@/components/ui-bits";
 import { HAUPTADRESSE } from "@/lib/adresse";
+
+const sichtbareJury = mitPortraet(jury2027, personenBild);
 
 export const Route = createFileRoute("/neuland/jury")({
   head: () => ({
@@ -19,6 +23,8 @@ export const Route = createFileRoute("/neuland/jury")({
         content: `${jury2027.length} Fachleute entscheiden über die Preise des Wettbewerbs.`,
       },
       { property: "og:url", content: `${HAUPTADRESSE}/neuland/jury` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: `${HAUPTADRESSE}/neuland/jury` }],
   }),
@@ -35,7 +41,7 @@ function JuryPage() {
       />
       <section className="shell py-12 md:py-16">
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {jury2027.map((p) => (
+          {sichtbareJury.map((p) => (
             <PersonCard key={p.name} person={p} />
           ))}
         </div>

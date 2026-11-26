@@ -5,6 +5,7 @@ import { ProjektCard, projektBild } from "@/components/projekt-card";
 import { PersonDialog, personenBild } from "@/components/person-dialog";
 import { LogoGrid, SectionTitle } from "@/components/ui-bits";
 import { neulandPartner } from "@/data/neuland-partner";
+import { mitPortraet } from "@/data/jury-sichtbarkeit";
 import { AutoSlider } from "@/components/auto-slider";
 import { CoverSlider } from "@/components/cover-slider";
 
@@ -17,6 +18,8 @@ import webteaser2027 from "@/assets/neuland-teaser-2027-v2.png.asset.json";
 import webteaserBewerben from "@/assets/neuland-teaser-bewerben-v2.png.asset.json";
 import stiftungsLogo from "@/assets/karl-schlecht-stiftung-logo.png.asset.json";
 import { HAUPTADRESSE } from "@/lib/adresse";
+
+const sichtbareJury = mitPortraet(jury2027, personenBild);
 
 function JuryKarte({ person }: { person: Person }) {
   const bild = personenBild(person.name);
@@ -152,14 +155,14 @@ function NeulandIndex() {
           itemClassName="w-[10.25rem] pr-5 sm:w-[12.25rem]"
           pfeilKlasse="text-ink drop-shadow-[0_2px_4px_rgba(255,255,255,0.6)]"
         >
-          {jury2027.map((p) => (
+          {sichtbareJury.map((p) => (
             <JuryKarte key={p.name} person={p} />
           ))}
         </AutoSlider>
 
         <div className="mt-10">
           <Link to="/neuland/jury" className="btn-outline">
-            Alle {jury2027.length} Juror:innen ansehen
+            Alle {sichtbareJury.length} Juror:innen ansehen
           </Link>
         </div>
       </section>
