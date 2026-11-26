@@ -164,9 +164,19 @@ function NeulandIndex() {
       </section>
 
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="partner-neuland">
-        <SectionTitle id="partner-neuland" titel="Kooperationspartner" />
+        <SectionTitle id="partner-neuland" titel="Hauptförderer" />
+        <div className="mt-10 flex flex-col items-start justify-between gap-8 bg-brand px-6 py-8 text-brand-foreground sm:flex-row sm:items-center md:px-10">
+          <a href="https://www.ksg-stiftung.de/" target="_blank" rel="noreferrer" className="display-sm">
+            KARL SCHLECHT STIFTUNG
+          </a>
+          <div className="aspect-[2/1] w-full max-w-72 shrink-0 bg-background" aria-hidden="true" />
+        </div>
+      </section>
+
+      <section className="shell pb-12 md:pb-16" aria-labelledby="weitere-foerderer-neuland">
+        <SectionTitle id="weitere-foerderer-neuland" titel="Weitere Förderer" noRule />
         <div className="mt-10">
-          <LogoGrid items={neulandPartner} solidYellow gridClassName="grid-cols-1 sm:grid-cols-3" />
+          <LogoGrid items={neulandPartner.filter((partner) => partner.name !== "Karl Schlecht Stiftung")} solidYellow gridClassName="grid-cols-1 sm:grid-cols-3" />
         </div>
       </section>
 
