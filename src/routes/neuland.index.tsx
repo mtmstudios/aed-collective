@@ -169,7 +169,6 @@ function NeulandIndex() {
         <div className="mt-10 grid sm:grid-cols-3">
         <a href="https://www.ksg-stiftung.de/" target="_blank" rel="noreferrer" className="grid h-24 grid-cols-2 items-center border border-line bg-brand text-brand-foreground transition-colors hover:bg-background hover:text-ink focus-visible:bg-background focus-visible:text-ink sm:col-span-2">
           <div className="min-w-0 px-4 text-center font-sans text-xs">
-            <p className="mb-2">Der Wettbewerb wird gefördert von:</p>
             <p className="uppercase">KARL SCHLECHT STIFTUNG</p>
           </div>
           <img
