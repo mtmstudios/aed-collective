@@ -166,10 +166,11 @@ function NeulandIndex() {
 
       <section className="shell topic-rule py-12 md:py-16" aria-labelledby="partner-neuland">
         <SectionTitle id="partner-neuland" titel="Hauptförderer" />
-        <div className="mt-10 flex flex-col items-start justify-between gap-8 bg-brand px-6 py-8 text-brand-foreground sm:flex-row sm:items-center md:px-10">
-          <a href="https://www.ksg-stiftung.de/" target="_blank" rel="noreferrer" className="display-sm">
-            KARL SCHLECHT STIFTUNG
-          </a>
+        <a href="https://www.ksg-stiftung.de/" target="_blank" rel="noreferrer" className="mt-10 flex flex-col items-start justify-between gap-8 bg-brand px-6 py-8 text-brand-foreground sm:flex-row sm:items-center md:px-10">
+          <div>
+            <p className="mb-3 text-sm">Der Wettbewerb wird gefördert von:</p>
+            <p className="display-sm">KARL SCHLECHT STIFTUNG</p>
+          </div>
           <img
             src={stiftungsLogo.url}
             alt="Karl Schlecht Stiftung"
@@ -177,7 +178,7 @@ function NeulandIndex() {
             height={701}
             className="block h-auto w-full max-w-72 shrink-0"
           />
-        </div>
+        </a>
       </section>
 
       <section className="shell pb-12 md:pb-16" aria-labelledby="weitere-foerderer-neuland">
