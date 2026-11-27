@@ -46,3 +46,9 @@ dateien/
 
 # Lokale Vorschau-Konfiguration dieser Sitzung
 /.claude/
+
+# Dieses Projekt baut mit bun; bun.lock ist die einzige Lock-Datei.
+# Lovable pflegt sie beim Schreiben auf main automatisch mit.
+# Ein zweiter Lock aus npm läuft unweigerlich auseinander und hat
+# den Deploy bereits zweimal gebrochen.
+package-lock.json

@@ -34,20 +34,33 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Node einrichten
+        # Wird weiterhin gebraucht: assets:holen ruft `node` direkt auf.
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
+      - name: bun einrichten
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.4.2"
+
       - name: Abhängigkeiten installieren
-        run: npm ci
+        # bun statt npm, und das aus einem konkreten Grund: Lovable schreibt
+        # direkt auf main und pflegt dabei ausschließlich bun.lock. Solange
+        # hier `npm ci` stand, brach jede Abhängigkeitsänderung aus Lovable
+        # den Deploy – zweimal innerhalb von drei Tagen, beim ersten Mal lagen
+        # sechs Commits drei Tage lang unbemerkt auf main. Mit derselben
+        # Lock-Datei, die Lovable pflegt, kann dieser Bruch nicht mehr
+        # entstehen.
+        run: bun install --frozen-lockfile
 
       - name: Bilder aus Lovable holen
         # In Lovable hochgeladene Bilder liegen auf deren CDN und nicht im
         # Repository. Ohne diesen Schritt bleiben sie auf unserem Server leer.
-        run: npm run assets:holen
+        run: bun run assets:holen
 
       - name: Für Node bauen
-        run: npm run build:node
+        run: bun run build:node
 
       - name: Build prüfen
         # Ohne NITRO_PRESET entstünde ein Cloudflare-Build, der auf Hetzner
