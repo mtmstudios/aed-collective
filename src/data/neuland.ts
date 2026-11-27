@@ -236,7 +236,7 @@ export const jury2027: { name: string; rolle: string; link?: string; statement?:
   ausJury2025("Nils Holger Moormann"),
   ausJury2025("Johanna Neves Pimenta"),
   { name: "Gerd Richter", rolle: "Bauwirtschaft bei NFG Gruppe" },
-  { name: "Hannes Riehle", rolle: "Riehle Köth Architekten" },
+  { name: "Hannes Riehle", rolle: "RIEHLE KOETH Architekten" },
   ausJury2025("Dr. Katrin Schlecht"),
   { name: "Carolin Schmitt", rolle: "Principal Design Researcher at PHOENIX" },
   { name: "Matthias Siegert", rolle: "Geschäftsführer VONM" },
