@@ -14,6 +14,27 @@ export const kontakt = {
   zeiten: "Geschäftszeiten 09:00 bis 18:00 Uhr\nBesuche bitte anmelden.",
 };
 
+/**
+ * Die Auftritte des Vereins in den sozialen Netzwerken.
+ *
+ * Eine Quelle für die Fußzeile und für `sameAs` in den strukturierten Daten.
+ * Lagen die Adressen an zwei Stellen, liefen sie früher oder später
+ * auseinander – und `sameAs` ist genau die Angabe, an der Suchmaschinen den
+ * Verein über Seitengrenzen hinweg wiedererkennen.
+ *
+ * Die Adressen stehen so auch in der Datenschutzerklärung.
+ *
+ * LinkedIn läuft als persönliches Profil statt als Unternehmensseite: dort
+ * liegen sämtliche Beiträge. Die Unternehmensseite unter
+ * /company/aed-stuttgart-e-v hat eine Handvoll Follower und wird nicht
+ * bespielt – sie ist nicht die richtige Adresse.
+ */
+export const soziales = {
+  instagram: "https://www.instagram.com/aed_stuttgart/",
+  linkedin: "https://www.linkedin.com/in/aed-stuttgart-e-v-421977101",
+  facebook: "https://www.facebook.com/aedStuttgart",
+} as const;
+
 export const eventFormate = [
   "Vortrag",
   "Führung",

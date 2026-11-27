@@ -13,6 +13,7 @@ import {
 import { isUnlocked } from "@/lib/gate.functions";
 import { ladeBildnachweise } from "@/lib/bildnachweise.functions";
 import { BildnachweisProvider } from "@/data/bildnachweise";
+import { soziales } from "@/data/site";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
@@ -147,11 +148,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           },
           telephone: "+49 160 8894377",
           email: "info@aed-stuttgart.de",
-          sameAs: [
-            "https://www.facebook.com/aedStuttgart",
-            "https://www.instagram.com/aed_stuttgart/",
-            "https://www.linkedin.com/in/aed-stuttgart-e-v-421977101",
-          ],
+          sameAs: Object.values(soziales),
         }),
       },
     ],

@@ -1,7 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { MailLink } from "@/components/mail-link";
 import { Newsletter } from "./newsletter";
-import { kontakt } from "@/data/site";
+import { kontakt, soziales } from "@/data/site";
+
+// Nur die beiden Kanäle, die der Verein aktiv bespielt. Facebook liegt in
+// `soziales` für die strukturierten Daten, gehört aber nicht in die Fußzeile.
+const sozialeLinks = [
+  { label: "Instagram", url: soziales.instagram },
+  { label: "LinkedIn", url: soziales.linkedin },
+] as const;
 
 const navLinksLinks = [
   { to: "/programm", label: "Programm" },
@@ -65,6 +72,22 @@ export function SiteFooter() {
               className="underline underline-offset-4 hover:text-footer-muted"
             />
           </p>
+
+          <p className="eyebrow mt-8 text-footer-muted">Folgen</p>
+          <ul className="mt-4 space-y-3">
+            {sozialeLinks.map((s) => (
+              <li key={s.url}>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline underline-offset-4 hover:text-footer-muted"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Navigation */}
